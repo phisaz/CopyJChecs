@@ -1,0 +1,20 @@
+
+)fr.free.jchecs.core.Game#getMovesCount()I~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaª ª("1*£
+1~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.java« «(É
+Æ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.java« «(
+%0java.util.List"__id*(*&
+fr.free.jchecs.core.Game"
+_movesÆÃ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.java« «(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"ˆ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.java« «(
+""B
+fr.free.jchecs.core.Game

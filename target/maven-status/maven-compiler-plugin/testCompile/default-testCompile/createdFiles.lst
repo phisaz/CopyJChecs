@@ -1,0 +1,15 @@
+fr/free/jchecs/core/BoardBench.class
+fr/free/jchecs/core/MoveTest.class
+fr/free/jchecs/core/MoveGeneratorTest.class
+fr/free/jchecs/tools/CodingBench.class
+fr/free/jchecs/core/SANUtilsTest.class
+fr/free/jchecs/ai/HeuristicsBench.class
+fr/free/jchecs/core/BoardTest.class
+fr/free/jchecs/ai/EngineCompare.class
+fr/free/jchecs/ai/MoveSorterTest.class
+fr/free/jchecs/ai/OpeningsBench.class
+fr/free/jchecs/core/MoveGeneratorBench.class
+fr/free/jchecs/core/FENUtilsTest.class
+fr/free/jchecs/core/MoveGeneratorTest$PlayingThread.class
+fr/free/jchecs/ai/EngineBench.class
+fr/free/jchecs/core/PGNUtilsTest.class

@@ -1,0 +1,46 @@
+
+dfr.free.jchecs.core.MutableBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;("startingBlock*Á
+startingBlock„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;(/Û
+Ø
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java: :(
+%3"
+__annotate*
+java.lang.Override*%
+#
+pCasefr.free.jchecs.core.SquareÅ
+Â
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java;) ;(.#
+pCasefr.free.jchecs.core.Square"__annotation*
+
+%3*
+1*ã
+1„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(îë
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <()	
+%0int"%fr.free.jchecs.core.Square#getFile()I*%
+#
+pCasefr.free.jchecs.core.Square2	getFile()îë
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java<+ <(:	
+%1int"%fr.free.jchecs.core.Square#getRank()I*%
+#
+pCasefr.free.jchecs.core.Square2	getRank()ÇÄ
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(;
+%2fr.free.jchecs.core.Piece"Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;*$"
+ fr.free.jchecs.core.MutableBoard*
+	
+%0int*
+	
+%1int2getPieceAt(II)"ª
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(<!
+
+%2fr.free.jchecs.core.Piece:#
+pCasefr.free.jchecs.core.SquareB$"
+ fr.free.jchecs.core.MutableBoard

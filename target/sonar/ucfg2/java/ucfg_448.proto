@@ -1,0 +1,46 @@
+
+bfr.free.jchecs.core.ArrayBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaé é("startingBlock*Á
+startingBlock„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaé é(/Û
+Ø
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaè è(
+%3"
+__annotate*
+java.lang.Override*%
+#
+pCasefr.free.jchecs.core.SquareÅ
+Â
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaé) é(.#
+pCasefr.free.jchecs.core.Square"__annotation*
+
+%3*
+1*ß
+1„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê ê(îë
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê ê()	
+%0int"%fr.free.jchecs.core.Square#getFile()I*%
+#
+pCasefr.free.jchecs.core.Square2	getFile()îë
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê+ ê(:	
+%1int"%fr.free.jchecs.core.Square#getRank()I*%
+#
+pCasefr.free.jchecs.core.Square2	getRank()ÃÀ
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê ê(;
+%2fr.free.jchecs.core.Piece"Hfr.free.jchecs.core.ArrayBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;*" 
+fr.free.jchecs.core.ArrayBoard*
+	
+%0int*
+	
+%1int2getPieceAt(II)"ª
+„
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê ê(<!
+
+%2fr.free.jchecs.core.Piece:#
+pCasefr.free.jchecs.core.SquareB" 
+fr.free.jchecs.core.ArrayBoard

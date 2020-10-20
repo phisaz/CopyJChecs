@@ -1,0 +1,106 @@
+
+Yfr.free.jchecs.swg.PrintableBoard#print(Ljava/awt/Graphics;Ljava/awt/print/PageFormat;I)IÖ
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaP P("startingBlock*≈
+2Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaS S(§
+°
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaS S(	
+%0int"__id*
+"""ê
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaS S( 
+""*·
+startingBlockÖ
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaP Q(&‘
+—
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaO O(
+%8"
+__annotate*
+java.lang.Override*
+
+pGraphjava.awt.Graphicsæ
+ª
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaP$ P(*
+pGraphjava.awt.Graphics"__annotation*
+
+%8›
+⁄
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaO O(
+%9"
+__annotate*
+java.lang.Override*&
+$
+pFormatjava.awt.print.PageFormat«
+ƒ
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaP= P(D$
+pFormatjava.awt.print.PageFormat"__annotation*
+
+%9*
+2
+1*î
+1Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaV, V(2Ã
+…
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaV V(3
+g2djava.awt.Graphics2D"__id*
+
+pGraphjava.awt.GraphicsØ
+¨
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaW W( 
+%1java.awt.Color"__id*
+""öó
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaW W(!
+
+%2void"/java.awt.Graphics2D#setPaint(Ljava/awt/Paint;)V*
+
+g2djava.awt.Graphics2D*
+
+%1java.awt.Color2setPaint(Ljava/awt/Paint;)˛˚
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaX X(-
+%3double"*java.awt.print.PageFormat#getImageableX()D*&
+$
+pFormatjava.awt.print.PageFormat2getImageableX()˛˚
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaX/ X(F
+%4double"*java.awt.print.PageFormat#getImageableY()D*&
+$
+pFormatjava.awt.print.PageFormat2getImageableY()àÖ
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaX X(G
+
+%5void""java.awt.Graphics2D#translate(DD)V*
+
+g2djava.awt.Graphics2D*
+
+%3double*
+
+%4double2translate(DD)°
+û
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.javaZ Z(
+
+%6void"Cfr.free.jchecs.swg.PrintableBoard#drawBoard(Ljava/awt/Graphics2D;)V*%#
+!fr.free.jchecs.swg.PrintableBoard*
+
+g2djava.awt.Graphics2D§
+°
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.java\ \(	
+%7int"__id*
+"""ê
+Ö
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintableBoard.java\ \(
+"":
+pGraphjava.awt.Graphics:$
+pFormatjava.awt.print.PageFormat:
+""B%#
+!fr.free.jchecs.swg.PrintableBoard

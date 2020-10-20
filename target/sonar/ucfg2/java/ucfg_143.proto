@@ -1,0 +1,57 @@
+
+Jfr.free.jchecs.swg.AboutDialog$AboutModel#getValueAt(II)Ljava/lang/Object;Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaô ô( "3*ì
+2Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaù ù(Ù
+Ò
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaù ù(,
+%2java.util.Properties"6java.lang.System#getProperties()Ljava/util/Properties;*"
+java.lang.Systemƒ¡
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaù ù(=
+%3java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+%2java.util.Properties*
+
+resjava.lang.String2getProperty(Ljava/lang/String;)√
+¿
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaù ù(=
+resjava.lang.String"__id*
+
+%3java.lang.String*
+1*å
+3Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaö" ö('‡
+›
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaö" ö('
+%0java.util.List"__id*8*6+
+)fr.free.jchecs.swg.AboutDialog$AboutModel"
+_keysŒ
+À
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaö" ö(3
+%1java.lang.Object"
+__arrayGet*
+
+%0java.util.List*
+""√
+¿
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaö ö(4
+resjava.lang.String"__id*
+
+%1java.lang.Object*
+2
+1*Ø
+1Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java† †("¢
+Ñ
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java† †(
+
+resjava.lang.String:
+"":
+""B-+
+)fr.free.jchecs.swg.AboutDialog$AboutModel

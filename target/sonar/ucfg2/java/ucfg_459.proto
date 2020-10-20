@@ -1,0 +1,143 @@
+
+afr.free.jchecs.ai.StaticMoveSorter#compare(Lfr/free/jchecs/core/Move;Lfr/free/jchecs/core/Move;)I†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8 8("startingBlock* 
+2†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java@ @("‘
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java@ @(
+""*í
+startingBlock†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8 8(:Ü
+Ù
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java7 7(
+%12"
+__annotate*
+java.lang.Override*#
+!
+pMvt1fr.free.jchecs.core.MoveÆ
+Ã
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8" 8('!
+pMvt1fr.free.jchecs.core.Move"__annotation*
+
+%12Ü
+Ù
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java7 7(
+%13"
+__annotate*
+java.lang.Override*#
+!
+pMvt2fr.free.jchecs.core.MoveÆ
+Ã
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java84 8(9!
+pMvt2fr.free.jchecs.core.Move"__annotation*
+
+%13*
+8* 
+4†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java> >("‘
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java> >(
+""*ž
+6†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(ž›
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(#
+%2fr.free.jchecs.core.Piece">fr.free.jchecs.core.Move#getPiece()Lfr/free/jchecs/core/Piece;*#
+!
+pMvt2fr.free.jchecs.core.Move2
+getPiece()£ 
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(-#
+%3fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*!
+
+%2fr.free.jchecs.core.Piece2	getType()õò
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(8	
+%4int")fr.free.jchecs.core.PieceType#getValue()I*%
+#
+%3fr.free.jchecs.core.PieceType2
+getValue()ž›
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(K
+%5fr.free.jchecs.core.Piece">fr.free.jchecs.core.Move#getPiece()Lfr/free/jchecs/core/Piece;*#
+!
+pMvt1fr.free.jchecs.core.Move2
+getPiece()£ 
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(U#
+%6fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*!
+
+%5fr.free.jchecs.core.Piece2	getType()õò
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(`	
+%7int")fr.free.jchecs.core.PieceType#getValue()I*%
+#
+%6fr.free.jchecs.core.PieceType2
+getValue()"‘
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(a
+""*¢	
+8†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9("¤¡
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9(0
+%0fr.free.jchecs.core.Piece"Afr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;*#
+!
+pMvt1fr.free.jchecs.core.Move2getCaptured()Ú
+×
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9(1#
+prise1fr.free.jchecs.core.Piece"__id*!
+
+%0fr.free.jchecs.core.Piece¤¡
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java: :(0
+%1fr.free.jchecs.core.Piece"Afr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;*#
+!
+pMvt2fr.free.jchecs.core.Move2getCaptured()Ú
+×
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java: :(1#
+prise2fr.free.jchecs.core.Piece"__id*!
+
+%1fr.free.jchecs.core.Piece*
+2
+4
+6
+1*ç
+
+1†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(§¤
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(#
+%8fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*%
+#
+prise2fr.free.jchecs.core.Piece2	getType()õò
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(*	
+%9int")fr.free.jchecs.core.PieceType#getValue()I*%
+#
+%8fr.free.jchecs.core.PieceType2
+getValue()¨¥
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC- C(=$
+%10fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*%
+#
+prise1fr.free.jchecs.core.Piece2	getType()÷ô
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC- C(H
+
+%11int")fr.free.jchecs.core.PieceType#getValue()I*&
+$
+%10fr.free.jchecs.core.PieceType2
+getValue()"‘
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(I
+"":!
+pMvt1fr.free.jchecs.core.Move:!
+pMvt2fr.free.jchecs.core.MoveB&$
+"fr.free.jchecs.ai.StaticMoveSorter

@@ -1,0 +1,659 @@
+
+Pfr.free.jchecs.core.PGNUtils#toPGN(Lfr/free/jchecs/core/Game;)Ljava/lang/String;Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÅ Å("26"27*‚
+24Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaå å(>…
+∆
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaå å(>
+lhjava.net.InetAddress"__id*
+
+%11java.net.InetAddressÑÅ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaç ç(#
+%12java.lang.String"4java.net.InetAddress#getHostName()Ljava/lang/String;*
+
+lhjava.net.InetAddress2getHostName()*
+22*å
+25Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaå# å(.˙
+˜
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaå# å(=
+%11java.net.InetAddress"9java.net.InetAddress#getLocalHost()Ljava/net/InetAddress;*"
+java.net.InetAddress*
+24*æ
+26Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÜ! Ü(4¿Ω
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÜ% Ü(2
+%2java.lang.StringBuilder"java.lang.StringBuilder“
+œ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÜ! Ü(4
+%3"!java.lang.StringBuilder#<init>()V*
+
+%2java.lang.StringBuilderŒ
+À
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÜ Ü(5
+sbjava.lang.StringBuilder"__id*
+
+%2java.lang.StringBuilderÆ
+´
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà  à(0
+%4java.lang.String"__id*
+""”
+–
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà à(0
+%5java.lang.String"__concat*
+	[Event \"*
+
+%4java.lang.StringÃ
+…
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà à(7
+%6java.lang.String"__concat*
+
+%5java.lang.String*
+ vÆ
+´
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà: à(M
+%7java.lang.String"__id*
+""ﬁ
+€
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà à(M
+%8java.lang.String"__concat*
+
+%6java.lang.String*
+
+%7java.lang.String⁄
+◊
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà â($
+%9java.lang.String"__concat*
+
+%8java.lang.String*
+ chess game\"]\nÃ…
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaà â(%
+%10java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+%9java.lang.String2append(Ljava/lang/String;)Ø
+¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaä ä(
+sitejava.lang.String"__id*
+?*
+25*Ú
+27Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ+ É(EŒÀ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ É(*$
+%0java.lang.NullPointerException"java.lang.NullPointerExceptionê
+ç
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ É(F
+%1":java.lang.NullPointerException#<init>(Ljava/lang/String;)V*&
+$
+%0java.lang.NullPointerException*
+Missing game description*
+0*Ø
+10Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∑ ∑(«ƒ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∑ ∑((
+%54java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+[SetUp \"1\"]\n2append(Ljava/lang/String;)øº
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∏ ∏( 
+%55java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*	
+[FEN \"2append(Ljava/lang/String;)—Œ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∏ ∏(/
+%56java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%55java.lang.StringBuilder*
+
+departjava.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∏ ∏(?
+%57java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%56java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)*
+9*™
+11Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¥ ¥(
+¬ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¥ ¥(
+%48java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+[Result \"2append(Ljava/lang/String;)”–
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¥ ¥(0
+%49java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%48java.lang.StringBuilder*
+
+resultatjava.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¥ ¥(@
+%50java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%49java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)°û
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaµ µ(;
+%51java.lang.String"@fr.free.jchecs.core.Game#getStartingPosition()Ljava/lang/String;*%
+#
+pPartiefr.free.jchecs.core.Game2getStartingPosition()≈
+¬
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaµ µ(<
+departjava.lang.String"__id*
+
+%51java.lang.StringØ
+¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∂ ∂(0
+%52java.lang.String"__id*
+""õò
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∂ ∂(1
+%53boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
+
+departjava.lang.String*
+
+%52java.lang.String2equals(Ljava/lang/Object;)*
+9
+10*÷
+12Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(
+¡æ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(
+%38java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+	[Black \"2append(Ljava/lang/String;)ŒÀ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(*
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%38java.lang.StringBuilder*
+
+nomjava.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(:
+%40java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%39java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)¥
+±
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java† †(
+resultatjava.lang.String"__id*
+""ß§
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java° °("%
+%41fr.free.jchecs.core.Game$State"Cfr.free.jchecs.core.Game#getState()Lfr/free/jchecs/core/Game$State;*%
+#
+pPartiefr.free.jchecs.core.Game2
+getState()Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¢ ¢(%
+%42fr.free.jchecs.core.Game$State"__id*
+""Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java• •(&%
+%43fr.free.jchecs.core.Game$State"__id*
+""Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¶ ¶(+%
+%44fr.free.jchecs.core.Game$State"__id*
+""Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaß ß(%
+%45fr.free.jchecs.core.Game$State"__id*
+""Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java™ ™(%
+%46fr.free.jchecs.core.Game$State"__id*
+""Ω
+∫
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java≠ ≠(%
+%47fr.free.jchecs.core.Game$State"__id*
+""*
+13
+14
+15
+16
+17*≈
+13Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∞ ≤(≥
+∞
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java± ±(
+resultatjava.lang.String"__id*
+**
+11*≈
+14Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java≠ Ø(≥
+∞
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÆ Æ(
+resultatjava.lang.String"__id*
+**
+11*«
+15Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java™ ¨(µ
+≤
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java´ ´( 
+resultatjava.lang.String"__id*
+1-0*
+11*À
+16Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java• ©(π
+∂
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java® ®($
+resultatjava.lang.String"__id*	
+1/2-1/2*
+11*«
+17Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¢ §(µ
+≤
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java£ £( 
+resultatjava.lang.String"__id*
+0-1*
+11*ª
+18Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaù ù("Ø
+¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaù ù("
+%35java.lang.String"__id*
+""Œ
+À
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaù ù((
+%36java.lang.String"__concat*
+
+%35java.lang.String*
+""·
+ﬁ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaù ù(.
+%37java.lang.String"__concat*
+
+%36java.lang.String*
+
+nomjava.lang.String¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaù ù(.
+nomjava.lang.String"__id*
+
+%37java.lang.String*
+12*Í
+19Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaô ô(
+¡æ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaô ô(
+%29java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+	[White \"2append(Ljava/lang/String;)ŒÀ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaô ô(*
+%30java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%29java.lang.StringBuilder*
+
+nomjava.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaô ô(:
+%31java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%30java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)´®
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaö ö()!
+%32fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*%
+#
+pPartiefr.free.jchecs.core.Game*
+""2getPlayer(Z)Ÿ
+÷
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaö ö()$
+joueurfr.free.jchecs.core.Player"__id*#
+!
+%32fr.free.jchecs.core.Playeråâ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaõ õ(
+%33java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*&
+$
+joueurfr.free.jchecs.core.Player2	getName()¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaõ õ(
+nomjava.lang.String"__id*
+
+%33java.lang.String†ù
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaú ú(
+%34fr.free.jchecs.ai.Engine"@fr.free.jchecs.core.Player#getEngine()Lfr/free/jchecs/ai/Engine;*&
+$
+joueurfr.free.jchecs.core.Player2getEngine()*
+18
+12*¢
+0 "ö
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java“ “(
+implicit return*£	
+1Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaœ œ(
+“œ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaœ œ(
+%68java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+resultatjava.lang.String2append(Ljava/lang/String;)ôñ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaœ œ((
+%69java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+%68java.lang.StringBuilder*
+""2	append(C)ÑÅ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java— —(
+%70java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*
+
+sbjava.lang.StringBuilder2
+toString()"†
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java— —(
+
+%70java.lang.String*®
+2Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÕ Õ(òï
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÕ Õ(
+%67java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+""2	append(C)*
+1*Ì
+3Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÀ À(⁄◊
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaÀ À( 
+
+%66int"java.lang.String#length()I*
+
+resultatjava.lang.String2length()*
+2
+1*ó
+4Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaº º(Ø
+¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaº º(
+sanjava.lang.String"__id*
+""“
+œ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaº º(
+sanjava.lang.String"
+__arrayGet*
+
+%59java.lang.String[]*
+""*
+3
+7*›
+5Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java… …(Õ 
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java… …(
+%65java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+pgnjava.lang.String2append(Ljava/lang/String;)*
+4*®
+6Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∆ ∆(òï
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∆ ∆(
+%64java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+""2	append(C)*
+5*ˆ
+7Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaø ø(ÎË
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaø ø(6
+%60java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*
+
+sanjava.lang.String*	
+0-0-0*	
+O-O-O29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaø ø(7
+pgnjava.lang.String"__id*
+
+%60java.lang.StringÁ‰
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¿ ¿(+
+%61java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*
+
+pgnjava.lang.String*
+0-0*
+O-O29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¿ ¿(+
+pgnjava.lang.String"__id*
+
+%61java.lang.String‰·
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¬ ¬((
+%62java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*
+
+pgnjava.lang.String*
+++*
+#29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java¬ ¬((
+pgnjava.lang.String"__id*
+
+%62java.lang.String’“
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java√ √(&
+
+%63int"java.lang.String#length()I*
+
+pgnjava.lang.String2length()*
+5
+6*®
+8Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaº  º('òï
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaº  º(7
+%59java.lang.String[]";fr.free.jchecs.core.Game#getSANStrings()[Ljava/lang/String;*%
+#
+pPartiefr.free.jchecs.core.Game2getSANStrings()*
+4*®
+9Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∫ ∫(
+òï
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.java∫ ∫(
+%58java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+""2	append(C)*
+8*ª
+20Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaó ó("Ø
+¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaó ó("
+%26java.lang.String"__id*
+""Œ
+À
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaó ó((
+%27java.lang.String"__concat*
+
+%26java.lang.String*
+""·
+ﬁ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaó ó(.
+%28java.lang.String"__concat*
+
+%27java.lang.String*
+
+nomjava.lang.String¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaó ó(.
+nomjava.lang.String"__id*
+
+%28java.lang.String*
+19*Ø"
+21Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaë ë(
+¿Ω
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaë ë(
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+[Site \"2append(Ljava/lang/String;)œÃ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaë ë(*
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%13java.lang.StringBuilder*
+
+sitejava.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaë ë(:
+%15java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%14java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)¿Ω
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí í(
+%16java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+
+[Date \"2append(Ljava/lang/String;)Ø¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí7 í(;
+%17java.util.Date"java.util.Date¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí3 í(=
+%18"java.util.Date#<init>()V*
+
+%17java.util.Date¨
+©
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí% í(>
+%19java.lang.String"Nfr.free.jchecs.core.PGNUtils#formatPGNDate(Ljava/util/Date;)Ljava/lang/String;* "
+fr.free.jchecs.core.PGNUtils*
+
+%17java.util.DateŒÀ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí í(?
+%20java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%16java.lang.StringBuilder*
+
+%19java.lang.String2append(Ljava/lang/String;)æª
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaí í(O
+%21java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+%20java.lang.StringBuilder*	
+\"]\n2append(Ljava/lang/String;)«ƒ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaì ì($
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*
+
+sbjava.lang.StringBuilder*
+[Round \"-\"]\n2append(Ljava/lang/String;)´®
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaî î(/!
+%23fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*%
+#
+pPartiefr.free.jchecs.core.Game*
+""2getPlayer(Z)Ÿ
+÷
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaî î(0$
+joueurfr.free.jchecs.core.Player"__id*#
+!
+%23fr.free.jchecs.core.Playeråâ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaï ï(%
+%24java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*&
+$
+joueurfr.free.jchecs.core.Player2	getName()¬
+ø
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaï ï(&
+nomjava.lang.String"__id*
+
+%24java.lang.String†ù
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javañ ñ(
+%25fr.free.jchecs.ai.Engine"@fr.free.jchecs.core.Player#getEngine()Lfr/free/jchecs/ai/Engine;*&
+$
+joueurfr.free.jchecs.core.Player2getEngine()*
+19
+20*’
+22Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaç ç(#√
+¿
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/PGNUtils.javaç ç(#
+sitejava.lang.String"__id*
+
+%12java.lang.String*
+21:#
+pPartiefr.free.jchecs.core.GameB "
+fr.free.jchecs.core.PGNUtils

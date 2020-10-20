@@ -1,0 +1,55 @@
+
+2fr.free.jchecs.core.MutableBoard#getPiecesCount()IÑ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java\ \("7*“
+3Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaa a(Ë
+Â
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaa a(#
+%2fr.free.jchecs.core.Piece[][]"__id*1*/"
+ fr.free.jchecs.core.MutableBoard"	
+_piecesË
+Â
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaa a(!
+%3fr.free.jchecs.core.Piece[]"
+__arrayGet*%
+#
+%2fr.free.jchecs.core.Piece[][]*
+""‰
+·
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaa a(!
+%4fr.free.jchecs.core.Piece"
+__arrayGet*#
+!
+%3fr.free.jchecs.core.Piece[]*
+""*	
+3
+5
+1*ª
+5Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java` `(#£
+†
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java` `(#	
+%1int"__id*
+""*	
+3
+5
+1*∏
+7Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java] ](£
+†
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java_ _(	
+%0int"__id*
+""*
+5
+1*ú
+1Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javag g("è
+Ñ
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javag g(
+""B$"
+ fr.free.jchecs.core.MutableBoard

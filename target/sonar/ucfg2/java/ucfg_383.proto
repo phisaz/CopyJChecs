@@ -1,0 +1,62 @@
+
+Cfr.free.jchecs.core.Game#getCurrentMove()Lfr/free/jchecs/core/Move;~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaâ â("4*Ò
+2~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaç ç(…
+∆
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaç ç(
+%2java.util.List"__id*(*&
+fr.free.jchecs.core.Game"
+_movesÙÒ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaç ç(2	
+%3int"/fr.free.jchecs.core.Game#getCurrentMoveIndex()I*
+fr.free.jchecs.core.Game2getCurrentMoveIndex()‘
+—
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaç ç(3
+%4fr.free.jchecs.core.Move"
+__arrayGet*
+
+%2java.util.List*
+	
+%3intÃ
+…
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaç ç(3
+resfr.free.jchecs.core.Move"__id* 
+
+%4fr.free.jchecs.core.Move*
+1*†
+3~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaå# å(/…
+∆
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaå3 å(9
+%0java.util.List"__id*(*&
+fr.free.jchecs.core.Game"
+_moves∆√
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaå3 å(@	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()*
+2
+1*¿
+4~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaä ä(≤
+Ø
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaä ä(
+resfr.free.jchecs.core.Move"__id*
+""*
+3
+1*©
+1~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaê ê("£
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaê ê(!
+
+resfr.free.jchecs.core.MoveB
+fr.free.jchecs.core.Game

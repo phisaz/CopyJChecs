@@ -1,0 +1,124 @@
+
+Wfr.free.jchecs.ai.EnhancedMiniMaxEngine#findMax(Lfr/free/jchecs/core/MoveGenerator;II)Iå
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.java_ _("8"9*œ
+2å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javaj j(¡
+æ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javaj j(
+mvtfr.free.jchecs.core.Move"__id*
+""Ó
+Î
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javaj j(
+mvtfr.free.jchecs.core.Move"
+__arrayGet*%
+#
+coupsfr.free.jchecs.core.Move[]*
+""*
+6
+1*¨
+5å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javao o("ó
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javao o(
+""*î	
+6å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javak' k(,£†
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javak' k(>'
+%8!fr.free.jchecs.core.MoveGenerator"hfr.free.jchecs.core.MoveGenerator#derive(Lfr/free/jchecs/core/Move;Z)Lfr/free/jchecs/core/MoveGenerator;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+mvtfr.free.jchecs.core.Move*
+""2#derive(Lfr/free/jchecs/core/Move;Z)Ó
+Î
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javak k(?)
+etat!fr.free.jchecs.core.MoveGenerator"__id*)
+'
+%8!fr.free.jchecs.core.MoveGenerator‡
+›
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javal l(@	
+%9int"Wfr.free.jchecs.ai.EnhancedMiniMaxEngine#findMin(Lfr/free/jchecs/core/MoveGenerator;II)I*+)
+'fr.free.jchecs.ai.EnhancedMiniMaxEngine*+
+)
+etat!fr.free.jchecs.core.MoveGenerator*
+""*
+""*
+2
+5*ù
+8å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javae e(´
+®
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javae e(	
+%2int"__id*
+""åâ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javag1 g(F
+%3boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2isWhiteActive()‘—
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javag g(G 
+%4fr.free.jchecs.core.Move[]"Mfr.free.jchecs.core.MoveGenerator#getValidMoves(Z)[Lfr/free/jchecs/core/Move;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+
+%3boolean2getValidMoves(Z)·
+ﬁ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javag g(H#
+coupsfr.free.jchecs.core.Move[]"__id*"
+ 
+%4fr.free.jchecs.core.Move[]¥±
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javah h(*
+%5java.util.Comparator"Ffr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;*+)
+'fr.free.jchecs.ai.EnhancedMiniMaxEngine2getMoveSorter()º
+π
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javah h(+
+
+%6void"Ajava.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V*"
+java.util.Arrays*%
+#
+coupsfr.free.jchecs.core.Move[]*
+
+%5java.util.Comparatorïí
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javai i(!
+
+%7void"0fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V*+)
+'fr.free.jchecs.ai.EnhancedMiniMaxEngine*
+""2addHalfmove(I)*
+2*Á
+9å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javab b(¿Ω
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javab b(!!
+%0fr.free.jchecs.ai.Heuristic"Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*+)
+'fr.free.jchecs.ai.EnhancedMiniMaxEngine2getHeuristic()ıÚ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javab b(9	
+%1int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*#
+!
+%0fr.free.jchecs.ai.Heuristic*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"ó
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javab b(:
+""*¨
+1å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javav v("ó
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.javav v(
+"":*
+pEtat!fr.free.jchecs.core.MoveGenerator:
+"":
+""B+)
+'fr.free.jchecs.ai.EnhancedMiniMaxEngine

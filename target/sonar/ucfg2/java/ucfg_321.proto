@@ -1,0 +1,22 @@
+
+.fr.free.jchecs.core.MailboxBoard#isInCheck(Z)Z†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaß	 ß	("1*Ñ
+1†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaà	 à	(ÆÃ
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaà	 à	(1 
+%0fr.free.jchecs.core.Square"Vfr.free.jchecs.core.AbstractMoveGenerator#getKingSquare(Z)Lfr/free/jchecs/core/Square;*$"
+ fr.free.jchecs.core.MailboxBoard*
+""2getKingSquare(Z)åâ
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaà	 à	(=
+%1boolean"Kfr.free.jchecs.core.MailboxBoard#isAttacked(Lfr/free/jchecs/core/Square;Z)Z*$"
+ fr.free.jchecs.core.MailboxBoard*"
+ 
+%0fr.free.jchecs.core.Square*
+""2)isAttacked(Lfr/free/jchecs/core/Square;Z)"‘
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaà	 à	(>
+"":
+""B$"
+ fr.free.jchecs.core.MailboxBoard

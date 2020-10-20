@@ -1,0 +1,781 @@
+
+Sfr.free.jchecs.ai.MobilityHeuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)Iâ
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java≥ ≥("startingBlock*Í
+68â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaË" Ë(#…∆
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÈ  È(?!
+%22fr.free.jchecs.core.Move[]"Mfr.free.jchecs.core.MoveGenerator#getValidMoves(Z)[Lfr/free/jchecs/core/Move;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2getValidMoves(Z)*
+65
+10
+66*µ
+69â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÁ# Á((îë
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÁ# Á(>
+%21boolean"/fr.free.jchecs.core.MoveGenerator#isInCheck(Z)Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2isInCheck(Z)*
+68
+61
+62*≈
+27â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaµ" µ('¨©
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaµ" µ(F#
+%64fr.free.jchecs.core.Square[]"mfr.free.jchecs.core.MoveGenerator#getQueenTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2.getQueenTargets(Lfr/free/jchecs/core/Square;Z)*
+10*∆
+28â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¥7 ¥(?©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¥C ¥(N
+
+%63int"__id*
+""*
+27
+10*∆
+29â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java≥ ≥(&©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¥) ¥(1
+
+%62int"__id*
+""*
+28
+10*Ø
+70â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÂ â(éã
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÊ Ê(6
+
+%20int".fr.free.jchecs.core.Board#getFullmoveNumber()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getFullmoveNumber()*
+69
+61
+62*«
+73â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‡" ‡('Æ´
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‡" ‡(G#
+%19fr.free.jchecs.core.Square[]"nfr.free.jchecs.core.MoveGenerator#getBishopTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2/getBishopTargets(Lfr/free/jchecs/core/Square;Z)*
+10*∆
+74â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaﬂ ﬂ($©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaﬂ( ﬂ(3
+
+%18int"__id*
+""*
+73
+10*Ç	
+75â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‹" ‹(2´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‹" ‹(2
+%13int[]"__id*
+""©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‹5 ‹(?
+
+%14int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‹G ‹(R
+
+%15int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java›& ›(0
+
+%16int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java›3 ›(>
+
+%17int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+74*ã
+31â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaØ: Ø(;ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaØ: Ø(F
+
+%61int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+29*π
+76â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java⁄" ⁄(2´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java⁄" ⁄(2
+%11int[]"__id*
+""ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java⁄3 ⁄(?
+
+%12int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+74*è
+33â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÆ0 Æ(1ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÆ0 Æ(<
+
+%60int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+29
+31*á
+78â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java–  –(%ãà
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java–  –(3 
+%10fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)›
+⁄
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java– –(4"
+piecefr.free.jchecs.core.Piece"__id*"
+ 
+%10fr.free.jchecs.core.Piece*
+2
+11*≠
+79â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaœ œ($ï
+í
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaœ œ(-"
+%9fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+2*Ø
+35â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¨ ¨(!éã
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¨ ¨(5
+
+%59int".fr.free.jchecs.core.Board#getFullmoveNumber()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getFullmoveNumber()*
+29
+31
+33*Ç	
+36â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java©' ©(6´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java©' ©(6
+%54int[]"__id*
+""©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java©9 ©(C
+
+%55int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java©K ™(.
+
+%56int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java™2 ™(<
+
+%57int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java™? ™(J
+
+%58int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+35*π
+37â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaß' ß(6´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaß' ß(6
+%52int[]"__id*
+""ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaß7 ß(C
+
+%53int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+35*»
+80â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫(æ
+ª
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫(
+sfr.free.jchecs.core.Square"__id*
+""Í
+Á
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫(
+sfr.free.jchecs.core.Square"
+__arrayGet*$
+"
+%3fr.free.jchecs.core.Square[]*
+""*
+79
+87*Ä
+85â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaø$ ø(%ÔÏ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaø$ ø(/	
+%7int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()ıÚ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¿ ¿('
+%8boolean"$fr.free.jchecs.core.Piece#isWhite()Z*$
+"
+piecefr.free.jchecs.core.Piece2	isWhite()*
+80*ã
+86â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaΩ Ω(©¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæ æ(##
+%5fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*$
+"
+piecefr.free.jchecs.core.Piece2	getType()¬
+ø
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæ' æ(+#
+%6fr.free.jchecs.core.PieceType"__id*
+""*
+80
+85*¬
+42â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaû û($©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaû' û(/
+
+%51int"__id*
+""*
+10*Ü
+87â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaª  ª(%äá
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaª  ª(3
+%4fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)‹
+Ÿ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaª ª(4"
+piecefr.free.jchecs.core.Piece"__id*!
+
+%4fr.free.jchecs.core.Piece*
+80
+86*Ç	
+43â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaõ" õ(0´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaõ" õ(0
+%46int[]"__id*
+""©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaõ3 õ(=
+
+%47int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaõE õ(P
+
+%48int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaú& ú(0
+
+%49int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaú3 ú(>
+
+%50int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+42*Æ
+88â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫($ï
+í
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫(-"
+%3fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+80*π
+44â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaô" ô(0´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaô" ô(0
+%44int[]"__id*
+""ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaô1 ô(=
+
+%45int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+42*˙
+89â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¥) ¥(3®
+•
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¥) ¥(3	
+%0int"__id*
+""®
+•
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaµ. µ(8	
+%1int"__id*
+""ãà
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∑ ∑(+	
+%2int"-fr.free.jchecs.core.Board#getHalfmoveCount()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getHalfmoveCount()*
+88*«
+48â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaí" í('Æ´
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaí" í(G#
+%43fr.free.jchecs.core.Square[]"nfr.free.jchecs.core.MoveGenerator#getKnightTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2/getKnightTargets(Lfr/free/jchecs/core/Square;Z)*
+10*∆
+49â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaë ë($©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaë( ë(3
+
+%42int"__id*
+""*
+48
+10*Ç	
+50â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaé" é(2´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaé" é(2
+%37int[]"__id*
+""©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaé5 é(?
+
+%38int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaéG é(R
+
+%39int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaè& è(0
+
+%40int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaè3 è(>
+
+%41int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+49*π
+51â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaå" å(2´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaå" å(2
+%35int[]"__id*
+""ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaå3 å(?
+
+%36int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+49*ﬁ
+10â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java÷ ÷(√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java◊! ◊(%$
+%85fr.free.jchecs.core.PieceType"__id*
+""*
+2
+9*˚
+11â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java“+ “(0ˆÛ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java“+ “(:
+%76boolean"$fr.free.jchecs.core.Piece#isWhite()Z*$
+"
+piecefr.free.jchecs.core.Piece2	isWhite()™ß
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java”, ”(;$
+%77fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*$
+"
+piecefr.free.jchecs.core.Piece2	getType()È
+Ê
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java” ”(<*
+	typePiecefr.free.jchecs.core.PieceType"__id*&
+$
+%77fr.free.jchecs.core.PieceTypeÄ˝
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java‘  ‘(4
+
+%78int")fr.free.jchecs.core.PieceType#getValue()I*,
+*
+	typePiecefr.free.jchecs.core.PieceType2
+getValue()√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÿ ÿ($
+%79fr.free.jchecs.core.PieceType"__id*
+""√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÂ Â($
+%80fr.free.jchecs.core.PieceType"__id*
+""√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaä ä($
+%81fr.free.jchecs.core.PieceType"__id*
+""√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaó ó($
+%82fr.free.jchecs.core.PieceType"__id*
+""√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java§ §($
+%83fr.free.jchecs.core.PieceType"__id*
+""√
+¿
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∫ ∫($
+%84fr.free.jchecs.core.PieceType"__id*
+""*0
+36
+37
+70
+50
+51
+75
+76
+10
+43
+22
+44
+23*≠
+56â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÇ' Ç(,îë
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÇ' Ç(B
+%34boolean"/fr.free.jchecs.core.MoveGenerator#isCastled(Z)Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2isCastled(Z)*
+10*´
+57â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÅ! Å(&éã
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÅ! Å(:
+
+%33int".fr.free.jchecs.core.Board#getFullmoveNumber()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getFullmoveNumber()*
+10
+56*√
+14â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaŒ" Œ('™ß
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaŒ" Œ(E#
+%75fr.free.jchecs.core.Square[]"lfr.free.jchecs.core.MoveGenerator#getRookTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2-getRookTargets(Lfr/free/jchecs/core/Square;Z)*
+10*ƒ
+58â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaˇ& ˇ(8´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaˇ& ˇ(8
+%32int[]"__id*
+""*
+57*ƒ
+59â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˝& ˝(4´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˝& ˝(4
+%31int[]"__id*
+""*
+57*â
+18â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∆* ∆(9Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java∆: ∆(E
+
+%74int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+10*â
+19â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaƒ* ƒ(4Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaƒ5 ƒ(@
+
+%73int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+10*¶
+1â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaË Ë("î
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaË Ë(
+""*∆
+2â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaœ œ(æ
+ª
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaœ œ(
+sfr.free.jchecs.core.Square"__id*
+""Í
+Á
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaœ œ(
+sfr.free.jchecs.core.Square"
+__arrayGet*$
+"
+%9fr.free.jchecs.core.Square[]*
+""*
+1
+78*·
+startingBlockâ
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java≥ ≥(HË
+Â
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java≤ ≤(
+%88"
+__annotate*
+java.lang.Override*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator“
+œ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java≥, ≥(1*
+pEtat!fr.free.jchecs.core.MoveGenerator"__annotation*
+
+%88*
+89*à
+7â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java€ €(ÒÓ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java€ €(8
+%87boolean"Lfr.free.jchecs.core.MoveGenerator#isAttacked(Lfr/free/jchecs/core/Square;Z)Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2)isAttacked(Lfr/free/jchecs/core/Square;Z)*
+2*à
+9â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÿ ÿ(ÒÓ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÿ ÿ(7
+%86boolean"Lfr.free.jchecs.core.MoveGenerator#isAttacked(Lfr/free/jchecs/core/Square;Z)Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square*
+""2)isAttacked(Lfr/free/jchecs/core/Square;Z)*
+7*∆
+60â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¸  ¸((©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¸, ¸(4
+
+%30int"__id*
+""*
+58
+59*‘
+61â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˘( ˘(2©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˘( ˘(2
+
+%26int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˘: ˘(E
+
+%27int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˘I ˘(S
+
+%28int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˙* ˙(5
+
+%29int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+60*ã
+62â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˜& ˜('ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java˜& ˜(2
+
+%25int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+60* 
+21â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¡ ¡($©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java¡( ¡(0
+
+%72int"__id*
+""*
+14
+18
+19*”
+65â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÔ( Ô(2©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÔ( Ô(2
+
+%24int"__id*
+"""î
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÔ  Ô(3
+""*Ç	
+22â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæ" æ(0´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæ" æ(0
+%67int[]"__id*
+""©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæ3 æ(=
+
+%68int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaæE æ(P
+
+%69int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaø& ø(0
+
+%70int"__id*
+""Ì
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaø3 ø(>
+
+%71int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+21*”
+66â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÏ+ Ï(5©
+¶
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÏ+ Ï(5
+
+%23int"__id*
+"""î
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaÏ$ Ï(6
+""*π
+23â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaº" º(0´
+®
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaº" º(0
+%65int[]"__id*
+""ÚÔ
+â
+}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.javaº1 º(=
+
+%66int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+21:*
+pEtat!fr.free.jchecs.core.MoveGenerator:
+""B'%
+#fr.free.jchecs.ai.MobilityHeuristic

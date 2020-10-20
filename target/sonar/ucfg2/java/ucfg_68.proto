@@ -1,0 +1,26 @@
+
+Pfr.free.jchecs.swg.PieceUI#getImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;~
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaX
+ X("1*Ö
+1~
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaY Y(Ñ
+Î
+~
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaY Y(
+%0java.util.Map"__id*1*/
+fr.free.jchecs.swg.PieceUI"
+_pieceToImageá
+Þ
+~
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaY Y((
+%1java.awt.Image"__mapGet*
+
+%0java.util.Map*%
+#
+pPiecefr.free.jchecs.core.Piece"˜
+~
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaY Y()
+
+%1java.awt.Image:#
+pPiecefr.free.jchecs.core.PieceB
+fr.free.jchecs.swg.PieceUI

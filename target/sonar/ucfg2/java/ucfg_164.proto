@@ -1,0 +1,104 @@
+
+gfr.free.jchecs.core.X88Board#getPawnTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaç ç(""startingBlock*‰
+2Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaó ó(£
+†
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaó( ó(0
+%5int[]"__id*
+""£
+†
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaó1 ó(?
+%6int[]"__id*
+""ï
+í
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaó ó(D 
+%7fr.free.jchecs.core.Square"Afr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+""Ì
+Í
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaó ó(D
+%8"
+__arraySet*%
+#
+resfr.free.jchecs.core.Square[]*
+""*"
+ 
+%7fr.free.jchecs.core.Square*
+2
+1*¡
+startingBlockÇ
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaç" ç(O‹
+Ÿ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaå å(
+%9"
+__annotate*
+java.lang.Override*(
+&
+pOriginefr.free.jchecs.core.Square∆
+√
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaç0 ç(8&
+pOriginefr.free.jchecs.core.Square"__annotation*
+
+%9*
+5*ò
+
+4Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaë" ë(#ÔÏ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaì ì(-	
+%1int"%fr.free.jchecs.core.Square#getRank()I*(
+&
+pOriginefr.free.jchecs.core.Square2	getRank()ÔÏ
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaì5 ì(G	
+%2int"%fr.free.jchecs.core.Square#getFile()I*(
+&
+pOriginefr.free.jchecs.core.Square2	getFile()¯
+ı
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaì ì(P
+
+%3void"0fr.free.jchecs.core.X88Board#addPawnTargets(IZ)V* 
+fr.free.jchecs.core.X88Board*
+""*
+"" «
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaï ï(1"
+%4fr.free.jchecs.core.Square[]"fr.free.jchecs.core.Square[]Ÿ
+÷
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaï ï(1#
+resfr.free.jchecs.core.Square[]"__id*$
+"
+%4fr.free.jchecs.core.Square[]*
+2
+1*Ò
+5Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaé é(ª
+∏
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaé é(#
+resfr.free.jchecs.core.Square[]"__id*
+""£
+†
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaê ê($
+%0int[]"__id*
+""*
+4*∑
+1Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaõ õ("¨
+Ç
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.javaõ õ(%
+#
+resfr.free.jchecs.core.Square[]:&
+pOriginefr.free.jchecs.core.Square:
+""B 
+fr.free.jchecs.core.X88Board

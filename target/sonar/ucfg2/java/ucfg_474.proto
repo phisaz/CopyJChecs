@@ -1,0 +1,27 @@
+
+:fr.free.jchecs.core.Square#readResolve()Ljava/lang/Object;€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÀ À("1*¥
+1€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÁ Á(ãà
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÁ Á( 	
+%0int"%fr.free.jchecs.core.Square#getFile()I*
+fr.free.jchecs.core.Square2	getFile()ãà
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÁ" Á(+	
+%1int"%fr.free.jchecs.core.Square#getRank()I*
+fr.free.jchecs.core.Square2	getRank()¦
+£
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÁ Á(, 
+%2fr.free.jchecs.core.Square"Bfr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+	
+%0int*
+	
+%1int"§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Square.javaÁ Á(-"
+ 
+%2fr.free.jchecs.core.SquareB
+fr.free.jchecs.core.Square

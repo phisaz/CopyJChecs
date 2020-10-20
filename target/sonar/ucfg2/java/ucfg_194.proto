@@ -1,0 +1,101 @@
+
+>fr.free.jchecs.core.AbstractBoard#toString()Ljava/lang/String;á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˜ ˜( "10*µ
+2á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É(ùö
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É(
+%8java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+7
+1*±
+4á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(ˆÛ
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(/
+
+%6char")fr.free.jchecs.core.Piece#getFENLetter()C* 
+
+pfr.free.jchecs.core.Piece2getFENLetter()£†
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(0
+%7java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+
+
+%6char2	append(C)*
+7*≤
+5á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˛ ˛(ùö
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˛ ˛(#
+%5java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+7*´
+6á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸  ¸(*∫∑
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸  ¸(0
+%4fr.free.jchecs.core.Piece"Cfr.free.jchecs.core.Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;*%#
+!fr.free.jchecs.core.AbstractBoard*
+""*
+""2getPieceAt(II)÷
+”
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸ ¸(1
+pfr.free.jchecs.core.Piece"__id*!
+
+%4fr.free.jchecs.core.Piece*
+4
+5*æ
+7á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˚ ˚(¶
+£
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˚  ˚(*	
+%3int"__id*
+""*
+2
+6*∏
+10á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯" ¯(5≈¬
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯& ¯(3
+%0java.lang.StringBuilder"java.lang.StringBuilder◊
+‘
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯" ¯(5
+%1"!java.lang.StringBuilder#<init>()V*
+
+%0java.lang.StringBuilder‘
+—
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯ ¯(6
+resjava.lang.StringBuilder"__id*
+
+%0java.lang.StringBuilder¶
+£
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java˙ ˙(	
+%2int"__id*
+""*
+7
+1*¿
+1á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(âÜ
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+%9java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;* 
+
+resjava.lang.StringBuilder2
+toString()"§
+á
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+
+%9java.lang.StringB%#
+!fr.free.jchecs.core.AbstractBoard

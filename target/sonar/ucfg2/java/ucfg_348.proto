@@ -1,0 +1,61 @@
+
+`fr.free.jchecs.tools.OpeningsBuilderStart$1#compare(Ljava/util/Map$Entry;Ljava/util/Map$Entry;)Iê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í("startingBlock*á
+startingBlockê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí ì(B‡
+›
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(
+%3"
+__annotate*
+java.lang.Override*
+
+pMvt1java.util.Map$Entry 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí< í(A
+pMvt1java.util.Map$Entry"__annotation*
+
+%3‡
+›
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(
+%4"
+__annotate*
+java.lang.Override*
+
+pMvt2java.util.Map$Entry 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaì< ì(A
+pMvt2java.util.Map$Entry"__annotation*
+
+%4*
+1*Å	
+1ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaî î(çä
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaî î($
+%0java.lang.Integer"0java.util.Map$Entry#getValue()Ljava/lang/Object;*
+
+pMvt1java.util.Map$Entry2
+getValue()çä
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaî/ î(?
+%1java.lang.Integer"0java.util.Map$Entry#getValue()Ljava/lang/Object;*
+
+pMvt2java.util.Map$Entry2
+getValue()™ß
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaî î(@	
+%2int"1java.lang.Integer#compareTo(Ljava/lang/Integer;)I*
+
+%0java.lang.Integer*
+
+%1java.lang.Integer2compareTo(Ljava/lang/Integer;)"õ
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaî î(A
+"":
+pMvt1java.util.Map$Entry:
+pMvt2java.util.Map$EntryB/-
++fr.free.jchecs.tools.OpeningsBuilderStart$1

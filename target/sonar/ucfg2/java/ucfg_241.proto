@@ -1,0 +1,82 @@
+
+[fr.free.jchecs.ai.TranspositionTable#get(Lfr/free/jchecs/core/Board;III)Ljava/lang/Integer;à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javae e("16*˛
+16à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javag  g(%ÈÊ
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javag  g(0	
+%0int"java.lang.Object#hashCode()I*$
+"
+pEtatfr.free.jchecs.core.Board2
+hashCode()Õ
+ 
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javai i(2	
+%1int"java.lang.Math#abs(I)I*"
+java.lang.Math*
+""ß
+§
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javak k(#	
+%2int"__id*
+""*
+1
+12*§
+6à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javat t(""ì
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javat t(#
+""*¿
+8à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javas! s(%ß
+§
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javas) s(-	
+%7int"__id*
+""*
+6
+1*¡
+10à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javar- r(1ß
+§
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javar5 r(:	
+%6int"__id*
+""*
+6
+8*ù
+11à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javap% p(+ÿ
+’
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javap% p(+
+%4byte[]"__id*4*2&
+$fr.free.jchecs.ai.TranspositionTable"
+_typesß
+§
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javar! r(&	
+%5int"__id*
+""*
+6
+10*Ù
+12à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javao o(Ÿ
+÷
+à
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javao o(
+%3byte[]"__id*5*3&
+$fr.free.jchecs.ai.TranspositionTable"	
+_depths*
+11
+1*®
+1ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javaÄ Ä("ï
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/TranspositionTable.javaÄ Ä(
+"":"
+pEtatfr.free.jchecs.core.Board:
+"":
+"":
+""B(&
+$fr.free.jchecs.ai.TranspositionTable

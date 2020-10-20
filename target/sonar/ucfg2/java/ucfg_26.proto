@@ -1,0 +1,56 @@
+
+Tfr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javak k("3*è
+2„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javan n(Å
+Â
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javan n(
+resjava.lang.String"__id*
+
+pClejava.lang.String°
+­
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javao o(
+%2org.slf4j.Logger"__id*
+""ÛØ
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javao o(=
+
+%3void"<org.slf4j.Logger#warn(Ljava/lang/String;Ljava/lang/Object;)V*
+
+%2org.slf4j.Logger*#!
+String resource [{}] not found.*
+
+pClejava.lang.String2*warn(Ljava/lang/String;Ljava/lang/Object;)*
+1*×
+3„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javal l(´
+±
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javal l(
+%0java.util.Properties"__id*
+""ÅÂ
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javal l(1
+%1java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+%0java.util.Properties*
+
+pClejava.lang.String2getProperty(Ljava/lang/String;)Ã
+À
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javal l(2
+resjava.lang.String"__id*
+
+%1java.lang.String*
+2
+1*¯
+1„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javar r("¢
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/ResourceUtils.javar r(
+
+resjava.lang.String:
+pClejava.lang.StringB$""
+ fr.free.jchecs.swg.ResourceUtils

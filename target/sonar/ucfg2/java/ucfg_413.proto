@@ -1,0 +1,344 @@
+
+=fr.free.jchecs.swg.SwingUI#getToolBar()Ljavax/swing/JToolBar;€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java² ²("3*Âg
+2€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java´# ´(1¸µ
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java´' ´(/
+%1javax.swing.JToolBar"javax.swing.JToolBarÊ
+Ç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java´# ´(1
+%2"javax.swing.JToolBar#<init>()V*
+
+%1javax.swing.JToolBarÉ
+Æ
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java´ ´(2
+barrejavax.swing.JToolBar"__id*
+
+%1javax.swing.JToolBaróð
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaµ µ(%
+
+%3void"%javax.swing.JToolBar#setFloatable(Z)V*
+
+barrejavax.swing.JToolBar*
+""2setFloatable(Z)¬
+©
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¶  ¶(,
+%4java.lang.String"__id*
+""¨
+¥
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¶ ¶(-
+%5javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%4java.lang.String¾»
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¶ ¶(.
+%6javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%5javax.swing.Action2add(Ljavax/swing/Action;)éæ
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java· ·( 
+
+%7void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()¬
+©
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¸  ¸(0
+%8java.lang.String"__id*
+""¨
+¥
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¸ ¸(1
+%9javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%8java.lang.String¿¼
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¸ ¸(2
+%10javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%9javax.swing.Action2add(Ljavax/swing/Action;)­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¹  ¹(0
+%11java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¹ ¹(1
+%12javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%11java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¹ ¹(2
+%13javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%12javax.swing.Action2add(Ljavax/swing/Action;)­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaº  º(3
+%14java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaº º(4
+%15javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%14java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaº º(5
+%16javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%15javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java» »( 
+%17void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¼  ¼(,
+%18java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¼ ¼(-
+%19javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%18java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¼ ¼(.
+%20javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%19javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java½ ½( 
+%21void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¾  ¾(4
+%22java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¾ ¾(5
+%23javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%22java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¾ ¾(6
+%24javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%23javax.swing.Action2add(Ljavax/swing/Action;)­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¿  ¿(4
+%25java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¿ ¿(5
+%26javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%25java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java¿ ¿(6
+%27javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%26javax.swing.Action2add(Ljavax/swing/Action;)­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ  À(7
+%28java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ À(8
+%29javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%28java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ À(9
+%30javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%29javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÁ Á( 
+%31void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ  Â(+
+%32java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ Â(,
+%33javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%32java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ Â(-
+%34javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%33javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÃ Ã( 
+%35void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÄ  Ä(+
+%36java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÄ Ä(,
+%37javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%36java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÄ Ä(-
+%38javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%37javax.swing.Action2add(Ljavax/swing/Action;)­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÅ  Å(,
+%39java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÅ Å(-
+%40javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%39java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÅ Å(.
+%41javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%40javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÆ Æ( 
+%42void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÇ  Ç(+
+%43java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÇ Ç(,
+%44javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%43java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÇ Ç(-
+%45javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%44javax.swing.Action2add(Ljavax/swing/Action;)êç
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÈ È( 
+%46void"$javax.swing.JToolBar#addSeparator()V*
+
+barrejavax.swing.JToolBar2addSeparator()­
+ª
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÉ  É(,
+%47java.lang.String"__id*
+""ª
+§
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÉ É(-
+%48javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
+fr.free.jchecs.swg.SwingUI*
+
+%47java.lang.StringÀ½
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÉ É(.
+%49javax.swing.JButton"Cjavax.swing.JToolBar#add(Ljavax/swing/Action;)Ljavax/swing/JButton;*
+
+barrejavax.swing.JToolBar*
+
+%48javax.swing.Action2add(Ljavax/swing/Action;)Ù
+Ö
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(*
+fr.free.jchecs.swg.SwingUI"
+
+_toolBar"__id*
+
+barrejavax.swing.JToolBar*
+1*ç
+3€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java³ ³(Ö
+Ó
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.java³ ³(
+%0javax.swing.JToolBar"__id*,**
+fr.free.jchecs.swg.SwingUI"
+
+_toolBar*
+2
+1*…
+1€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÍ Í(×
+Ô
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÍ Í(
+%50javax.swing.JToolBar"__id*,**
+fr.free.jchecs.swg.SwingUI"
+
+_toolBar"¢
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaÍ Í(
+
+%50javax.swing.JToolBarB
+fr.free.jchecs.swg.SwingUI

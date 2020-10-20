@@ -1,0 +1,102 @@
+
+Nfr.free.jchecs.swg.PrintPreviewDialog#getOptionPane()Ljavax/swing/JOptionPane;‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java8, 8(9"3*È
+2‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java:  :(,½º
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java:$ :(*
+%1javax.swing.JPanel"javax.swing.JPanelÏ
+Ì
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java:  :(,
+%2"javax.swing.JPanel#<init>()V*
+
+%1javax.swing.JPanelÍ
+Ê
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java: :(-
+fondjavax.swing.JPanel"__id*
+
+%1javax.swing.JPanel½º
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java;& ;(/
+%3java.awt.Dimension"java.awt.Dimensionß
+Ü
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java;" ;(9
+%4"java.awt.Dimension#<init>(II)V*
+
+%3java.awt.Dimension*2Ò*2©½º
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java; ;(:
+
+%5void">javax.swing.JComponent#setPreferredSize(Ljava/awt/Dimension;)V*
+
+fondjavax.swing.JPanel*
+
+%3java.awt.Dimension2&setPreferredSize(Ljava/awt/Dimension;)¨
+¥
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java<1 <(J	
+%6int"__id*
+""ÇÄ
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java< <(*
+%7javax.swing.JOptionPane"javax.swing.JOptionPane—
+”
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java< <(K
+%8"4javax.swing.JOptionPane#<init>(Ljava/lang/Object;I)V*
+
+%7javax.swing.JOptionPane*
+
+fondjavax.swing.JPanel*
+	
+%6intñ
+î
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java< <(K9'
+%fr.free.jchecs.swg.PrintPreviewDialog"
+S_optionPane"__id*
+
+%7javax.swing.JOptionPaneñ
+î
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java= =(
+%9javax.swing.JOptionPane"__id*;*9'
+%fr.free.jchecs.swg.PrintPreviewDialog"
+S_optionPane¾»
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java=$ =(1
+%10java.lang.Object[]"java.lang.Object[]µ²
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java= =(2
+%11void"8javax.swing.JOptionPane#setOptions([Ljava/lang/Object;)V*
+
+%9javax.swing.JOptionPane*
+
+%10java.lang.Object[]2setOptions([Ljava/lang/Object;)*
+1*‹
+3‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java9 9(ñ
+î
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java9 9(
+%0javax.swing.JOptionPane"__id*;*9'
+%fr.free.jchecs.swg.PrintPreviewDialog"
+S_optionPane*
+2
+1*µ
+1‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java@ @(ò
+ï
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java@ @(
+%12javax.swing.JOptionPane"__id*;*9'
+%fr.free.jchecs.swg.PrintPreviewDialog"
+S_optionPane"®
+‰
+/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java@ @( 
+
+%12javax.swing.JOptionPaneB)"'
+%fr.free.jchecs.swg.PrintPreviewDialog

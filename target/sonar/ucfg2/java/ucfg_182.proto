@@ -1,0 +1,74 @@
+
+Nfr.free.jchecs.core.AbstractBoard#equalsInternal(Lfr/free/jchecs/core/Board;)Z‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä( "13*™
+13‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÅ Å(ÿü
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÇ Ç(1
+%0boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*$
+"
+pEtatfr.free.jchecs.core.Board2isWhiteActive()*
+11
+1* 
+3‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÑ Ñ($‹ˆ
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÑ( Ñ(B
+%6boolean",fr.free.jchecs.core.Board#canCastleShort(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleShort(Z)*
+1*¡
+5‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÏ Ï(#‰†
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÏ' Ï(@
+%5boolean"+fr.free.jchecs.core.Board#canCastleLong(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleLong(Z)*
+3
+1*£
+7‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÍ Í($‹ˆ
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÍ( Í(C
+%4boolean",fr.free.jchecs.core.Board#canCastleShort(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleShort(Z)*
+5
+1*¡
+9‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaË Ë(#‰†
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaË' Ë(A
+%3boolean"+fr.free.jchecs.core.Board#canCastleLong(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleLong(Z)*
+7
+1*³
+11‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É(ì
+é
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É( 
+%1fr.free.jchecs.core.Square"__id*5*3#
+!fr.free.jchecs.core.AbstractBoard"
+
+_enPassant«¨
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ! É(5 
+%2fr.free.jchecs.core.Square"Dfr.free.jchecs.core.Board#getEnPassant()Lfr/free/jchecs/core/Square;*$
+"
+pEtatfr.free.jchecs.core.Board2getEnPassant()*
+9
+1*¢
+1‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÕ Õ("’
+‡
+{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÕ Õ(
+"":"
+pEtatfr.free.jchecs.core.BoardB%#
+!fr.free.jchecs.core.AbstractBoard

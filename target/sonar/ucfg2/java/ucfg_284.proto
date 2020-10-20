@@ -1,0 +1,70 @@
+
+†fr.free.jchecs.ai.RandomEngine#searchMoveFor(Lfr/free/jchecs/core/MoveGenerator;[Lfr/free/jchecs/core/Move;)Lfr/free/jchecs/core/Move;‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java0 0( "startingBlock*í
+startingBlock‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java0  0(Pà
+Ý
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java/ /(
+%4"
+__annotate*
+java.lang.Override*,
+*
+pEtat!fr.free.jchecs.core.MoveGeneratorÊ
+Ç
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java05 0(:*
+pEtat!fr.free.jchecs.core.MoveGenerator"__annotation*
+
+%4Ú
+×
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java/ /(
+%5"
+__annotate*
+java.lang.Override*&
+$
+pCoupsfr.free.jchecs.core.Move[]Ä
+Á
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java0I 0(O$
+pCoupsfr.free.jchecs.core.Move[]"__annotation*
+
+%5*
+1*¶	
+1‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java1 1(‚ÿ
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java2 2(
+
+%0void"0fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V*" 
+fr.free.jchecs.ai.RandomEngine*
+""2addHalfmove(I)®
+«
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java4 4( 
+%1java.util.Random"__id*
+""ßÜ
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java4 4(+	
+%2int"java.util.Random#nextInt(I)I*
+
+%1java.util.Random*
+""2
+nextInt(I)é
+æ
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java4 4(,
+%3fr.free.jchecs.core.Move"
+__arrayGet*&
+$
+pCoupsfr.free.jchecs.core.Move[]*
+	
+%2int"§
+‚
+x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/RandomEngine.java4 4(- 
+
+%3fr.free.jchecs.core.Move:*
+pEtat!fr.free.jchecs.core.MoveGenerator:$
+pCoupsfr.free.jchecs.core.Move[]B" 
+fr.free.jchecs.ai.RandomEngine

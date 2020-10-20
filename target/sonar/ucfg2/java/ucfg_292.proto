@@ -1,0 +1,275 @@
+
+Wfr.free.jchecs.ai.BoardControlHeuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)Iå
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javal l("startingBlock*ü	
+13é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaê" ê(2∞
+≠
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaê" ê(2
+%10int[]"__id*
+""Æ
+´
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaê5 ê(?
+
+%11int"__id*
+""ıÚ
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaêG ê(R
+
+%12int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()Æ
+´
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaë& ë(0
+
+%13int"__id*
+""ıÚ
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaë3 ë(>
+
+%14int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+2*ø
+24å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaw {(≠
+™
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaz z(/
+%3int[]"__id*
+""ÙÒ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaz0 z(<	
+%4int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+2*≈
+14é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaé" é(2Ø
+¨
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaé" é(2
+%8int[]"__id*
+""ˆÛ
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaé3 é(?	
+%9int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+2*ç
+25å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javap  p(%çä
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javap  p(3
+%2fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*!
+
+sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)ﬂ
+‹
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javap p(4"
+piecefr.free.jchecs.core.Piece"__id*!
+
+%2fr.free.jchecs.core.Piece*
+2
+6*≥
+26å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javao o($ò
+ï
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javao o(-"
+%1fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+2*™
+27å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javam m(éã
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javam m(+	
+%0int"-fr.free.jchecs.core.Board#getHalfmoveCount()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getHalfmoveCount()*
+26*∞
+1é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java© ©("ô
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java© ©(
+""*œ
+2å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javao o(¡
+æ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javao o(
+sfr.free.jchecs.core.Square"__id*
+""Ì
+Í
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javao o(
+sfr.free.jchecs.core.Square"
+__arrayGet*$
+"
+%1fr.free.jchecs.core.Square[]*
+""*
+25
+1*Í
+startingBlockå
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javal l(HÎ
+Ë
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javak k(
+%31"
+__annotate*
+java.lang.Override*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator’
+“
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javal, l(1*
+pEtat!fr.free.jchecs.core.MoveGenerator"__annotation*
+
+%31*
+27*â
+6å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javar+ r(0˘ˆ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javar+ r(:
+%22boolean"$fr.free.jchecs.core.Piece#isWhite()Z*$
+"
+piecefr.free.jchecs.core.Piece2	isWhite()≠™
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javas, s(;$
+%23fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*$
+"
+piecefr.free.jchecs.core.Piece2	getType()Ï
+È
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javas s(<*
+	typePiecefr.free.jchecs.core.PieceType"__id*&
+$
+%23fr.free.jchecs.core.PieceTypeÉÄ
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javat  t(4
+
+%24int")fr.free.jchecs.core.PieceType#getValue()I*,
+*
+	typePiecefr.free.jchecs.core.PieceType2
+getValue()∆
+√
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaw w($
+%25fr.free.jchecs.core.PieceType"__id*
+""∆
+√
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javax x($
+%26fr.free.jchecs.core.PieceType"__id*
+""∆
+√
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javay y($
+%27fr.free.jchecs.core.PieceType"__id*
+""∆
+√
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java| |($
+%28fr.free.jchecs.core.PieceType"__id*
+""»
+≈
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaå å($
+%29fr.free.jchecs.core.PieceType"__id*
+""»
+≈
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaî î($
+%30fr.free.jchecs.core.PieceType"__id*
+""*
+24
+13
+2
+14
+9
+10
+22*û	
+9é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaò" ò(0∞
+≠
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaò" ò(0
+%17int[]"__id*
+""Æ
+´
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaò3 ò(=
+
+%18int"__id*
+""ıÚ
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaòE ò(P
+
+%19int"%fr.free.jchecs.core.Square#getRank()I*!
+
+sfr.free.jchecs.core.Square2	getRank()Æ
+´
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaô& ô(0
+
+%20int"__id*
+""ıÚ
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaô3 ô(>
+
+%21int"%fr.free.jchecs.core.Square#getFile()I*!
+
+sfr.free.jchecs.core.Square2	getFile()*
+2*Í
+20é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaÄ  Ä(%Õ 
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javaÄ  Ä(? 
+%7fr.free.jchecs.core.Move[]"Mfr.free.jchecs.core.MoveGenerator#getValidMoves(Z)[Lfr/free/jchecs/core/Move;*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2getValidMoves(Z)*
+2*µ
+21å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java# ((ñì
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java# (>
+%6boolean"/fr.free.jchecs.core.MoveGenerator#isInCheck(Z)Z*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator*
+""2isInCheck(Z)*
+2
+20*«
+10é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javañ" ñ(0∞
+≠
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javañ" ñ(0
+%15int[]"__id*
+""˜Ù
+é
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.javañ1 ñ(=
+
+%16int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+2*Ø
+22å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java~$ ~()êç
+å
+Å/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java~$ ~(=	
+%5int".fr.free.jchecs.core.Board#getFullmoveNumber()I*,
+*
+pEtat!fr.free.jchecs.core.MoveGenerator2getFullmoveNumber()*
+2
+21:*
+pEtat!fr.free.jchecs.core.MoveGenerator:
+""B+)
+'fr.free.jchecs.ai.BoardControlHeuristic

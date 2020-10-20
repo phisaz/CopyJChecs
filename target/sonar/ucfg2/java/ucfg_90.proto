@@ -1,0 +1,120 @@
+
+ fr.free.jchecs.core.Move#toId()I~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÊ Ê("7*Á
+2~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÔ Ô(¶
+³
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÔ Ô(#
+fr.free.jchecs.core.Move"
+_id"__id*
+""*
+1*À
+3~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÒ Ò(Ù
+Ö
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÒ Ò(  
+%11fr.free.jchecs.core.Piece"__id*,**
+fr.free.jchecs.core.Move"
+
+_promotionÙÖ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÒ Ò(*
+
+%12int"java.lang.Enum#ordinal()I*"
+ 
+%11fr.free.jchecs.core.Piece2	ordinal()*
+2*ç
+4~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÑ Ñ(Ù
+Ö
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÑ Ñ( 
+%10fr.free.jchecs.core.Piece"__id*,**
+fr.free.jchecs.core.Move"
+
+_promotion*
+2
+3*¼
+5~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÏ Ï(×
+Ô
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÏ Ï( 
+%8fr.free.jchecs.core.Piece"__id*+*)
+fr.free.jchecs.core.Move"
+	_captured×Ô
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÏ Ï(*	
+%9int"java.lang.Enum#ordinal()I*!
+
+%8fr.free.jchecs.core.Piece2	ordinal()*
+4*”
+6~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÌ Ì(Ô
+Ñ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÌ Ì(
+%1fr.free.jchecs.core.Piece"__id*(*&
+fr.free.jchecs.core.Move"
+_piece×Ô
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÌ Ì(&	
+%2int"java.lang.Enum#ordinal()I*!
+
+%1fr.free.jchecs.core.Piece2	ordinal()Ô
+Ñ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÌ1 Ì(6 
+%3fr.free.jchecs.core.Square"__id*'*%
+fr.free.jchecs.core.Move"
+_fromæã
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÌ1 Ì(A	
+%4int"&fr.free.jchecs.core.Square#getIndex()I*"
+ 
+%3fr.free.jchecs.core.Square2
+getIndex()Ò
+Ï
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÍ Í( 
+%5fr.free.jchecs.core.Square"__id*%*#
+fr.free.jchecs.core.Move"
+_toæã
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÍ Í(%	
+%6int"&fr.free.jchecs.core.Square#getIndex()I*"
+ 
+%5fr.free.jchecs.core.Square2
+getIndex()×
+Ô
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaÎ Î(
+%7fr.free.jchecs.core.Piece"__id*+*)
+fr.free.jchecs.core.Move"
+	_captured*
+4
+5*×
+7~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaË Ë(É
+Æ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaË Ë(
+%0java.lang.Integer"__id*%*#
+fr.free.jchecs.core.Move"
+_id*
+6
+1*Û
+1~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java× ×(Ê
+Ç
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java× ×(
+%13java.lang.Integer"__id*%*#
+fr.free.jchecs.core.Move"
+_id"ˆ
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java× ×(
+""B
+fr.free.jchecs.core.Move

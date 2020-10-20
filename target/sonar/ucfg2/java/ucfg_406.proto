@@ -1,0 +1,47 @@
+
+Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaå å(%"startingBlock*Ÿ
+startingBlock€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaå% å(8Ì
+É
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaä ä(
+%3"
+__annotate*
+java.lang.Override*
+
+pClejava.lang.String¶
+³
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaå3 å(7
+pClejava.lang.String"__annotation*
+
+%3*
+1*É
+1€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ æ(Ù
+Ö
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ æ(*
+%0java.util.Properties"__id*/*-
+fr.free.jchecs.swg.SwingUI"
+_propertiesÁ¾
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ æ(<
+%1java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+
+%0java.util.Properties*
+
+pClejava.lang.String2getProperty(Ljava/lang/String;)’
+
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ æ(=
+%2java.lang.Boolean"@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;*"
+java.lang.Boolean*
+
+%1java.lang.String"‹
+€
+t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ æ(>
+"":
+pClejava.lang.StringB
+fr.free.jchecs.swg.SwingUI

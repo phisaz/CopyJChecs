@@ -1,0 +1,313 @@
+
+Tfr.free.jchecs.core.FENUtils#toFENKey(Lfr/free/jchecs/core/Board;)Ljava/lang/String;‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java¨ ¨(!"32"33*¥
+24‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java» »(ñî
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java» »(/
+
+%9char")fr.free.jchecs.core.Piece#getFENLetter()C* 
+
+pfr.free.jchecs.core.Piece2getFENLetter()Ÿœ
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java» »(0
+%10java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+
+
+%9char2	append(C)*
+29*ª
+25‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java¸ ¸(˜•
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java¸ ¸(7
+%8java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+24*‹
+28‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java³  ³(%ž
+›
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java³1 ³(E 
+%6fr.free.jchecs.core.Square"Bfr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+""*
+""üù
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java³  ³(F
+%7fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*$
+"
+pEtatfr.free.jchecs.core.Board*"
+ 
+%6fr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)Ñ
+Î
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java³ ³(G
+pfr.free.jchecs.core.Piece"__id*!
+
+%7fr.free.jchecs.core.Piece*
+24
+25
+29*Ã
+29‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java² ²(¡
+ž
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java²  ²(*	
+%5int"__id*
+""*
+28
+17
+29
+19
+21*¡
+32‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java­" ­(5À½
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java­& ­(3
+%2java.lang.StringBuilder"java.lang.StringBuilderÒ
+Ï
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java­" ­(5
+%3"!java.lang.StringBuilder#<init>()V*
+
+%2java.lang.StringBuilderÏ
+Ì
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java­ ­(6
+resjava.lang.StringBuilder"__id*
+
+%2java.lang.StringBuilder¡
+ž
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java° °(	
+%4int"__id*
+""*
+17
+29*›
+10‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÙ Ù(‡„
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÙ Ù('
+%22boolean",fr.free.jchecs.core.Board#canCastleShort(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleShort(Z)*
+8
+9*ì
+33‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaª+ ª(?ÎË
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaª ª(*$
+%0java.lang.NullPointerException"java.lang.NullPointerExceptionŠ
+‡
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaª ª(@
+%1":java.lang.NullPointerException#<init>(Ljava/lang/String;)V*&
+$
+%0java.lang.NullPointerException*
+Missing game state*
+0*«
+11‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÖ Ö(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÖ Ö(
+%21java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+10*›
+12‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÕ Õ(…‚
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÕ Õ(%
+%20boolean"+fr.free.jchecs.core.Board#canCastleLong(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleLong(Z)*
+10
+11*«
+13‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÒ Ò(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÒ Ò(
+%19java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+12*¹
+14‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÍ Í(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÍ Í(
+%17java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)‡„
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÑ Ñ(&
+%18boolean",fr.free.jchecs.core.Board#canCastleShort(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleShort(Z)*
+13
+12*«
+15‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaË Ë(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaË Ë(
+%16java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+14*«
+16‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÉ É(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÉ É(
+%15java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+14*­
+17‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÅ Å(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÅ Å(
+%13java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)ûø
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÈ È(!
+%14boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*$
+"
+pEtatfr.free.jchecs.core.Board2isWhiteActive()*
+15
+16*¯
+19‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÂ Â(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÂ Â(
+%12java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+17
+29*¢
+0 "š
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaï ï(
+implicit return*³
+1‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaî î(…‚
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaî î(
+%32java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;* 
+
+resjava.lang.StringBuilder2
+toString()" 
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaî î(
+
+%32java.lang.String*©
+2‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaë ë(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaë ë(
+%31java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+1*ú
+3‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaé é(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaé é(/
+%29java.lang.String";fr.free.jchecs.core.Square#getFENString()Ljava/lang/String;*)
+'
+	enPassantfr.free.jchecs.core.Square2getFENString()ÎË
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaé é(0
+%30java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+
+%29java.lang.String2append(Ljava/lang/String;)*
+1*µ
+4‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaä ä(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaä ä(
+%27java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)§¤
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaç! ç(5!
+%28fr.free.jchecs.core.Square"Dfr.free.jchecs.core.Board#getEnPassant()Lfr/free/jchecs/core/Square;*$
+"
+pEtatfr.free.jchecs.core.Board2getEnPassant()Ü
+Ù
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaç ç(6'
+	enPassantfr.free.jchecs.core.Square"__id*#
+!
+%28fr.free.jchecs.core.Square*
+2
+3*©
+5‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaâ â(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaâ â(
+%26java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+4*¬
+7‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÞ Þ(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÞ Þ(
+%25java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+4
+5*›
+8‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÝ Ý(…‚
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÝ Ý(&
+%24boolean"+fr.free.jchecs.core.Board#canCastleLong(Z)Z*$
+"
+pEtatfr.free.jchecs.core.Board*
+""2canCastleLong(Z)*	
+4
+5
+7*©
+9‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÚ Ú(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.javaÚ Ú(
+%23java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+8*³
+21‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java¿ ¿(™–
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/FENUtils.java¿ ¿(/
+%11java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+""2	append(C)*
+17
+29
+19:"
+pEtatfr.free.jchecs.core.BoardB "
+fr.free.jchecs.core.FENUtils

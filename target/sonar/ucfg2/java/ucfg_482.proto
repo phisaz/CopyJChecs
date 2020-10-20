@@ -1,0 +1,464 @@
+
+$fr.free.jchecs.swg.GameLoader#run()VÅ
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java] ]("45*Ω
+24É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÅ  Å(&™ß
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÅ/ Å(=(
+%31!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;*!
+
+tmpfr.free.jchecs.core.Game2
+getBoard()*
+23*¸
+25É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÄ  Ä(#ÈÊ
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÄ  Ä(-
+%30void"#fr.free.jchecs.core.Game#goFirst()V*!
+
+tmpfr.free.jchecs.core.Game2	goFirst()*
+24*æ
+26Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java  (%≠™
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java  (5
+%29void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*%
+#
+noirsfr.free.jchecs.core.Player*
+""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
+25*ô
+27Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java}  }(M◊
+‘
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java}  }(M#
+noirsfr.free.jchecs.core.Player"__id*#
+!
+%27fr.free.jchecs.core.PlayerÆ´
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java~  ~(6
+%28void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
+$
+blancsfr.free.jchecs.core.Player*
+""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
+26*ï
+28Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java|  |(Mÿ
+’
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java|  |(M$
+blancsfr.free.jchecs.core.Player"__id*#
+!
+%26fr.free.jchecs.core.Player©¶
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java}5 }(L!
+%27fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*$
+"
+partiefr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+27*ë
+29Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java{  {(B‘
+—
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java{  {(B"
+partiefr.free.jchecs.core.Game"__id*!
+
+%25fr.free.jchecs.core.Game©¶
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java|6 |(L!
+%26fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*$
+"
+partiefr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+28*Õ
+30Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaz  z(<—
+Œ
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaz  z(<
+tmpfr.free.jchecs.core.Game"__id*!
+
+%23fr.free.jchecs.core.Game◊
+‘
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java{4 {(7
+%24fr.free.jchecs.swg.UI"__id***(
+fr.free.jchecs.swg.GameLoader"
+_uiéã
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java{4 {(A
+%25fr.free.jchecs.core.Game"9fr.free.jchecs.swg.UI#getGame()Lfr/free/jchecs/core/Game;*
+
+%24fr.free.jchecs.swg.UI2	getGame()*
+29*‘
+31Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaz1 z(7√
+¿
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaz1 z(;
+%23fr.free.jchecs.core.Game"Wfr.free.jchecs.core.PGNUtils#toGame(Ljava/io/BufferedReader;)Lfr/free/jchecs/core/Game;* "
+fr.free.jchecs.core.PGNUtils*
+
+injava.io.BufferedReader*
+30*¿
+10É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ  â(MÆ´
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ  â(M
+%44void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*%
+#
+noirsfr.free.jchecs.core.Player*
+
+%43java.lang.String2setName(Ljava/lang/String;)*
+9*ñ
+33Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javav  v("Å˛
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javav  v(-
+%22java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
+
+injava.io.BufferedReader2
+readLine()*
+31
+33*ù
+11É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ. â(Läá
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ. â(L
+%43java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*#
+!
+%42fr.free.jchecs.core.Player2	getName()*
+10*ª
+12É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ  â(%®•
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaâ. â(B!
+%42fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
+
+tmpfr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+11*ﬁ
+13É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá  à(5À»
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá  à(5
+%41void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
+$
+blancsfr.free.jchecs.core.Player*!
+
+%40fr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
+12*±
+14É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá1 à(4ûõ
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá1 à(4
+%40fr.free.jchecs.ai.Engine"@fr.free.jchecs.core.Player#getEngine()Lfr/free/jchecs/ai/Engine;*#
+!
+%39fr.free.jchecs.core.Player2getEngine()*
+13*ª
+15É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá  á(&®•
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaá1 á(D!
+%39fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
+
+tmpfr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+14*‰
+38Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak k(HÃ
+…
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak k(H
+injava.io.BufferedReader"__id*
+
+%19java.io.BufferedReader*
+31
+0
+33*¬
+16É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ  Ü(MØ¨
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ  Ü(M
+%38void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
+$
+blancsfr.free.jchecs.core.Player*
+
+%37java.lang.String2setName(Ljava/lang/String;)*
+15*ù
+17É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ/ Ü(Läá
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ/ Ü(L
+%37java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*#
+!
+%36fr.free.jchecs.core.Player2	getName()*
+16*ª
+18É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ  Ü(&®•
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÜ/ Ü(B!
+%36fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
+
+tmpfr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+17*µ
+19É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÉ% É(3∏
+µ
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÉ% É(3
+mvtfr.free.jchecs.core.Move"__id*
+""„
+‡
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÉ% É(3
+mvtfr.free.jchecs.core.Move"
+__arrayGet*#
+!
+%34fr.free.jchecs.core.Move[]*
+""*
+18
+20*£
+0 "õ
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaû û(
+implicit return*Ò
+5É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaê ê(‡›
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaê ê(&
+%49void"java.io.BufferedReader#close()V*
+
+injava.io.BufferedReader2close()*
+0*€
+7É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä  ã(5 «
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä  ã(5
+%47void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*%
+#
+noirsfr.free.jchecs.core.Player*!
+
+%46fr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
+5*Ø
+8É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä0 ã(4ûõ
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä0 ã(4
+%46fr.free.jchecs.ai.Engine"@fr.free.jchecs.core.Player#getEngine()Lfr/free/jchecs/ai/Engine;*#
+!
+%45fr.free.jchecs.core.Player2getEngine()*
+7*π
+9É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä  ä(%®•
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaä0 ä(D!
+%45fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
+
+tmpfr.free.jchecs.core.Game*
+""2getPlayer(Z)*
+8*–
+40Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak k(Hæª
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak! k(/
+%19java.io.BufferedReader"java.io.BufferedReader˛
+˚
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak k(H
+%20"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
+
+%19java.io.BufferedReader*
+
+%17java.io.FileReader*
+38*º
+41Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak? k(F∂≥
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak4 k(>
+%17java.io.FileReader"java.io.FileReaderÚ
+Ô
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javak0 k(G
+%18"*java.io.FileReader#<init>(Ljava/io/File;)V*
+
+%17java.io.FileReader*
+
+fichierjava.io.File*
+40*ƒ
+42Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javai( i(,≥
+∞
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javai i(-
+injava.io.BufferedReader"__id*
+""*
+41*Ê
+20É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÑ$ Ñ(*”–
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÑ$ Ñ(?
+%35void"Efr.free.jchecs.core.Game#moveFromCurrent(Lfr/free/jchecs/core/Move;)V*$
+"
+partiefr.free.jchecs.core.Game*!
+
+mvtfr.free.jchecs.core.Move2+moveFromCurrent(Lfr/free/jchecs/core/Move;)*
+19*ü	
+43Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javae' e(3»
+≈
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javae' e(31
+%13*fr.free.jchecs.swg.GameLoader$GameSelector"__id*
+""◊
+‘
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaf f(
+%14fr.free.jchecs.swg.UI"__id***(
+fr.free.jchecs.swg.GameLoader"
+_uiåâ
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaf f(*
+%15javax.swing.JFrame"8fr.free.jchecs.swg.UI#getMainFrame()Ljavax/swing/JFrame;*
+
+%14fr.free.jchecs.swg.UI2getMainFrame()◊
+‘
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javae' f(4
+
+%16int"Zfr.free.jchecs.swg.GameLoader$GameSelector#selectGame(Ljava/awt/Component;Ljava/io/File;)I*.",
+*fr.free.jchecs.swg.GameLoader$GameSelector*
+
+%15javax.swing.JFrame*
+
+fichierjava.io.File*
+42
+0*¿
+21É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÉ6 É(9≠™
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÉ6 É(M!
+%34fr.free.jchecs.core.Move[]"Gfr.free.jchecs.core.Game#getMovesToCurrent()[Lfr/free/jchecs/core/Move;*!
+
+tmpfr.free.jchecs.core.Game2getMovesToCurrent()*
+19*„
+44Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javac! c('èå
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javac! c(9
+%12java.io.File"8javax.swing.JFileChooser#getSelectedFile()Ljava/io/File;*$
+"
+dialogjavax.swing.JFileChooser2getSelectedFile()Ω
+∫
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javac c(:
+fichierjava.io.File"__id*
+
+%12java.io.File*
+43
+0*˙
+22É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÇ  Ç(#Á‰
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÇ  Ç(,
+%33void""fr.free.jchecs.core.Game#goLast()V*!
+
+tmpfr.free.jchecs.core.Game2goLast()*
+21*º
+45Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java^$ ^(6¡æ
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java^( ^(4
+%0javax.swing.JFileChooser"javax.swing.JFileChooser”
+–
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java^$ ^(6
+%1""javax.swing.JFileChooser#<init>()V* 
+
+%0javax.swing.JFileChooser”
+–
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java^ ^(7"
+dialogjavax.swing.JFileChooser"__id* 
+
+%0javax.swing.JFileChooserµ
+≤
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java_ _(C
+%2java.lang.String"Tfr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;*$""
+ fr.free.jchecs.swg.ResourceUtils*
+action.loadGame.nameµ≤
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java_ _(D
+
+%3void"<javax.swing.JFileChooser#setDialogTitle(Ljava/lang/String;)V*$
+"
+dialogjavax.swing.JFileChooser*
+
+%2java.lang.String2"setDialogTitle(Ljava/lang/String;)∑
+¥
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaa a(7
+%4java.lang.String"Tfr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;*$""
+ fr.free.jchecs.swg.ResourceUtils*
+action.loadGame.filterÔÏ
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java`* `(A5
+%5/javax.swing.filechooser.FileNameExtensionFilter"/javax.swing.filechooser.FileNameExtensionFilter…
+∆
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java`& a(?
+%6"^javax.swing.filechooser.FileNameExtensionFilter#<init>(Ljava/lang/String;[Ljava/lang/String;)V*7
+5
+%5/javax.swing.filechooser.FileNameExtensionFilter*
+
+%4java.lang.String*
+pgnàÖ
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.java` a(@
+
+%7void"Vjavax.swing.JFileChooser#addChoosableFileFilter(Ljavax/swing/filechooser/FileFilter;)V*$
+"
+dialogjavax.swing.JFileChooser*7
+5
+%5/javax.swing.filechooser.FileNameExtensionFilter2<addChoosableFileFilter(Ljavax/swing/filechooser/FileFilter;)÷
+”
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javab" b(%
+%8fr.free.jchecs.swg.UI"__id***(
+fr.free.jchecs.swg.GameLoader"
+_uiäá
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javab" b(4
+%9javax.swing.JFrame"8fr.free.jchecs.swg.UI#getMainFrame()Ljavax/swing/JFrame;*
+
+%8fr.free.jchecs.swg.UI2getMainFrame()ª∏
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javab b(5
+
+%10int">javax.swing.JFileChooser#showOpenDialog(Ljava/awt/Component;)I*$
+"
+dialogjavax.swing.JFileChooser*
+
+%9javax.swing.JFrame2$showOpenDialog(Ljava/awt/Component;)°
+û
+Å
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javab9 b(T
+
+%11int"__id*
+""*
+44
+0*Ò
+23É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÅ  Å(>ﬁ€
+É
+w/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/GameLoader.javaÅ  Å(>
+%32void"Ffr.free.jchecs.core.Game#resetTo(Lfr/free/jchecs/core/MoveGenerator;)V*$
+"
+partiefr.free.jchecs.core.Game**
+(
+%31!fr.free.jchecs.core.MoveGenerator2,resetTo(Lfr/free/jchecs/core/MoveGenerator;)*
+22B!
+fr.free.jchecs.swg.GameLoader

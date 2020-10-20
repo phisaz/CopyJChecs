@@ -1,0 +1,111 @@
+
+~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaK! K(,"18*Ò
+13„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaV! V(%¾
+»
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaV V(&$
+cstjava.lang.reflect.Constructor"__id*
+""*
+12*å
+3„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javac. c(/Ó
+Ð
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javac c(/(
+res!fr.free.jchecs.core.MoveGenerator"__id*
+
+ojava.lang.Object*
+1*Ø
+15„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+Á
+¾
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
+clsjava.lang.Class"__id*
+
+%0java.lang.Class*
+13
+1*Ï
+4„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6º
+·
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
+ojava.lang.Object"__id*
+
+%9	!capture!*
+3
+1*÷
+5„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(åâ
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
+%9	!capture!"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*&
+$
+cstjava.lang.reflect.Constructor*,
+*
+pInitialStatefr.free.jchecs.core.Board2 newInstance([Ljava/lang/Object;)*
+4*ª
+17„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(–
+“
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
+%0java.lang.Class"<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;*"
+java.lang.Class* 
+
+
+pClassNamejava.lang.String*
+15*Á
+6„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(¯
+¬
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(
+ojava.lang.Object"__id*
+""*
+5*‰
+18„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M( Â
+¿
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M(!(
+res!fr.free.jchecs.core.MoveGenerator"__id*
+""°
+­
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaO O(
+clsjava.lang.Class"__id*
+""*
+17*ò
+8„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=Ý
+Ú
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=$
+cstjava.lang.reflect.Constructor"__id*%
+#
+%3java.lang.reflect.Constructor*
+6
+1*ë
+12„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(ØÕ
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=#
+%3java.lang.reflect.Constructor"Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*
+
+clsjava.lang.Class*
+""2*getDeclaredConstructor([Ljava/lang/Class;)*
+8*À
+1„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javak k("³
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javak k(*
+(
+res!fr.free.jchecs.core.MoveGenerator:
+
+pClassNamejava.lang.String:*
+pInitialStatefr.free.jchecs.core.BoardB$""
+ fr.free.jchecs.core.BoardFactory

@@ -1,0 +1,34 @@
+
+Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaH H("1*ô
+1„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(è
+å
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(#
+%0fr.free.jchecs.core.Piece[][]"__id*1*/"
+ fr.free.jchecs.core.MutableBoard"	
+_piecesè
+å
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I( !
+%1fr.free.jchecs.core.Piece[]"
+__arrayGet*%
+#
+%0fr.free.jchecs.core.Piece[][]*
+""ä
+á
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I((
+%2fr.free.jchecs.core.Piece"
+__arrayGet*#
+!
+%1fr.free.jchecs.core.Piece[]*
+"""ª
+„
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I()!
+
+%2fr.free.jchecs.core.Piece:
+"":
+""B$"
+ fr.free.jchecs.core.MutableBoard

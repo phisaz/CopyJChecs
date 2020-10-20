@@ -1,0 +1,25 @@
+
+Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÄ Ä(!"1*‹
+1~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(Õ
+ 
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(
+%0java.util.List"__id*,**
+fr.free.jchecs.core.Game"
+
+_positionsÿ
+’
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(3'
+%1!fr.free.jchecs.core.MoveGenerator"
+__arrayGet*
+
+%0java.util.List*
+"""´
+~
+r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(4)
+'
+%1!fr.free.jchecs.core.MoveGeneratorB
+fr.free.jchecs.core.Game

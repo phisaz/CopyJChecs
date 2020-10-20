@@ -1,0 +1,52 @@
+
+ofr.free.jchecs.ai.AbstractEngine#getFromEndgames(Lfr/free/jchecs/core/MoveGenerator;)Lfr/free/jchecs/core/Move;†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÅ Å("4*‚
+3†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(îë
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(
+
+%3void"java.lang.Thread#join()V*2
+0
+	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest2join()*
+1*Ï
+
+4†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(»
+¸
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(
+resfr.free.jchecs.core.Move"__id*
+""ÜÙ
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ0 È(A)
+%0#fr.free.jchecs.ai.EndgamesWSRequest"#fr.free.jchecs.ai.EndgamesWSRequest·
+´
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ, È(H
+%1"Hfr.free.jchecs.ai.EndgamesWSRequest#<init>(Lfr/free/jchecs/core/Board;)V*+
+)
+%0#fr.free.jchecs.ai.EndgamesWSRequest*,
+*
+pEtat!fr.free.jchecs.core.MoveGeneratorñ
+î
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ È(I0
+	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest"__id*+
+)
+%0#fr.free.jchecs.ai.EndgamesWSRequestðí
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÉ É(
+
+%2void"java.lang.Thread#start()V*2
+0
+	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest2start()*
+3*»
+1†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð("¬
+†
+z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð(!
+
+resfr.free.jchecs.core.Move:*
+pEtat!fr.free.jchecs.core.MoveGeneratorB$"
+ fr.free.jchecs.ai.AbstractEngine

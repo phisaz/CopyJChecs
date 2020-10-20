@@ -1,0 +1,52 @@
+
+`fr.free.jchecs.core.X88Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¥ ¥("startingBlock*»
+startingBlock‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¥ ¥(/Ù
+Ö
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¤ ¤(
+%4"
+__annotate*
+java.lang.Override*%
+#
+pCasefr.free.jchecs.core.SquareÃ
+À
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¥) ¥(.#
+pCasefr.free.jchecs.core.Square"__annotation*
+
+%4*
+1*Ù	
+1‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦ ¦(à
+Ý
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦ ¦(!
+%0fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_piecesìé
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦ ¦(&	
+%1int"%fr.free.jchecs.core.Square#getRank()I*%
+#
+pCasefr.free.jchecs.core.Square2	getRank()ìé
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦. ¦(=	
+%2int"%fr.free.jchecs.core.Square#getFile()I*%
+#
+pCasefr.free.jchecs.core.Square2	getFile()â
+ß
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦ ¦(>
+%3fr.free.jchecs.core.Piece"
+__arrayGet*#
+!
+%0fr.free.jchecs.core.Piece[]*
+"""¨
+‚
+v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/X88Board.java¦ ¦(?!
+
+%3fr.free.jchecs.core.Piece:#
+pCasefr.free.jchecs.core.SquareB 
+fr.free.jchecs.core.X88Board
