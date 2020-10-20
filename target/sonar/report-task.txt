@@ -1,7 +1,7 @@
-organization=se2-polito
-projectKey=se2-polito_jchecs
+organization=se2
+projectKey=phisaz_CopyJChecs
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.12861
-dashboardUrl=https://sonarcloud.io/dashboard?id=se2-polito_jchecs
-ceTaskId=AXTkL6L6O_mn5F4KNqmt
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXTkL6L6O_mn5F4KNqmt
+serverVersion=8.0.0.13499
+dashboardUrl=https://sonarcloud.io/dashboard?id=phisaz_CopyJChecs
+ceTaskId=AXVGDMGO5QD-QPicrOh_
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXVGDMGO5QD-QPicrOh_

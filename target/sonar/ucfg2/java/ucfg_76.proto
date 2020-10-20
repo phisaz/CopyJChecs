@@ -1,88 +1,88 @@
 
-Rfr.free.jchecs.ai.MinimalHeuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java; ;("startingBlock*¼
-2†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(»
-¸
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(
+Rfr.free.jchecs.ai.MinimalHeuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java; ;("startingBlock*Ý
+2‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(Æ
+Ã
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(
 sfr.free.jchecs.core.Square"__id*
-""ç
-ä
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(
+""ò
+ï
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(
 sfr.free.jchecs.core.Square"
 __arrayGet*$
 "
 %0fr.free.jchecs.core.Square[]*
 ""*
 6
-1*Õ
-startingBlock†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java; ;(Hä
-á
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java: :(
+1*ö
+startingBlock‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java; ;(Hï
+ì
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java: :(
 %5"
 __annotate*
 java.lang.Override*,
 *
-pEtat!fr.free.jchecs.core.MoveGeneratorÎ
-Ë
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java;, ;(1*
+pEtat!fr.free.jchecs.core.MoveGeneratorÙ
+Ö
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java;, ;(1*
 pEtat!fr.free.jchecs.core.MoveGenerator"__annotation*
 
 %5*
-7*§
-5†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A((¦£
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A(2#
+7*Ó
+5‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A((±®
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A(2#
 %2fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*$
 "
-piecefr.free.jchecs.core.Piece2	getType()õò
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A(=	
+piecefr.free.jchecs.core.Piece2	getType()€ý
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaA# A(=	
 %3int")fr.free.jchecs.core.PieceType#getValue()I*%
 #
 %2fr.free.jchecs.core.PieceType2
-getValue()òï
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaB B(#
+getValue()ýú
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaB B(#
 %4boolean"$fr.free.jchecs.core.Piece#isWhite()Z*$
 "
 piecefr.free.jchecs.core.Piece2	isWhite()*
-2*ú
-6†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java?  ?(%‡„
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java?  ?(3
+2*›
+6‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java?  ?(%’
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java?  ?(3
 %1fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*!
 
-sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)Ù
-Ö
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java? ?(4"
+sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)ä
+á
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java? ?(4"
 piecefr.free.jchecs.core.Piece"__id*!
 
 %1fr.free.jchecs.core.Piece*
 2
-5*¦
-7†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >($’
-
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(-"
+5*¼
+7‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >($
+š
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java> >(-"
 %0fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
 fr.free.jchecs.core.Square*
-2* 
-1†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaJ J("‘
-†
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaJ J(
+2*¶
+1‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaJ J("œ
+‘
+†/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.javaJ J(
 "":*
 pEtat!fr.free.jchecs.core.MoveGenerator:
 ""B&$

@@ -1,38 +1,37 @@
 
-;fr.free.jchecs.core.Game#getSANStrings()[Ljava/lang/String;~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÐ Ð(!"1*ï
-
-1~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(Ì
-É
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(
+;fr.free.jchecs.core.Game#getSANStrings()[Ljava/lang/String;ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÐ Ð(!"1*¼
+1ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(×
+Ô
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(
 %0java.util.List"__id*+*)
 fr.free.jchecs.core.Game"
-	_sanMovesÌ
-É
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(5
+	_sanMoves×
+Ô
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(5
 %1java.util.List"__id*+*)
 fr.free.jchecs.core.Game"
-	_sanMovesÆÃ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(<	
+	_sanMovesÑÎ
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(<	
 %2int"java.util.List#size()I*
 
-%1java.util.List2size()±®
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ! Ñ(=
-%3java.lang.String[]"java.lang.String[]¯¬
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(>
+%1java.util.List2size()¼¹
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ! Ñ(=
+%3java.lang.String[]"java.lang.String[]º·
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(>
 %4java.lang.String[]">java.util.List#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*
 
 %0java.util.List*
 
-%3java.lang.String[]2toArray([Ljava/lang/Object;)"œ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(?
+%3java.lang.String[]2toArray([Ljava/lang/Object;)"§
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(?
 
 %4java.lang.String[]B
 fr.free.jchecs.core.Game

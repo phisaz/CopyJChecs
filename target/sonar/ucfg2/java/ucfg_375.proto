@@ -1,32 +1,32 @@
 
-Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaH H("1*Ù
-1Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(Ë
-Â
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(#
+Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaH H("1*´
+1è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(Û
+
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I(#
 %0fr.free.jchecs.core.Piece[][]"__id*1*/"
  fr.free.jchecs.core.MutableBoard"	
-_piecesË
-Â
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I( !
+_piecesÛ
+
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I( !
 %1fr.free.jchecs.core.Piece[]"
 __arrayGet*%
 #
 %0fr.free.jchecs.core.Piece[][]*
-""‰
-·
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I((
+""Ô
+Ï
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I((
 %2fr.free.jchecs.core.Piece"
 __arrayGet*#
 !
 %1fr.free.jchecs.core.Piece[]*
-"""™
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I()!
+"""µ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.javaI I()!
 
 %2fr.free.jchecs.core.Piece:
 "":

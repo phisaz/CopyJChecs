@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.free.jchecs.ai.EndgamesWSRequestTest" time="4.424" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.free.jchecs.ai.EndgamesWSRequestTest" time="0.665" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -47,9 +47,9 @@
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/bx/8hmj96dd6kv78y4m2w3dln3h0000gn/T/"/>
     <property name="java.version" value="11.0.5"/>
-    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -63,6 +63,6 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testEvaluationNotFound" classname="fr.free.jchecs.ai.EndgamesWSRequestTest" time="3.892"/>
-  <testcase name="testKnownPosition" classname="fr.free.jchecs.ai.EndgamesWSRequestTest" time="0.531"/>
+  <testcase name="testEvaluationNotFound" classname="fr.free.jchecs.ai.EndgamesWSRequestTest" time="0.203"/>
+  <testcase name="testKnownPosition" classname="fr.free.jchecs.ai.EndgamesWSRequestTest" time="0.462"/>
 </testsuite>

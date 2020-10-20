@@ -1,189 +1,189 @@
 
-6fr.free.jchecs.swg.BoardUI#paint(Ljava/awt/Graphics;)VÄ
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ Ï("startingBlock*”
-24Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(0
+6fr.free.jchecs.swg.BoardUI#paint(Ljava/awt/Graphics;)Vä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ Ï("startingBlock*Ò
+24ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(0
 %38java.awt.Color"__id*
-""ïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(1
+""üú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaì ì(1
 %39void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
 %38java.awt.Color2setColor(Ljava/awt/Color;)*
-23*”
-25Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(/
+23*Ò
+25ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(/
 %36java.awt.Color"__id*
-""ïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(0
+""üú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaë ë(0
 %37void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
 %36java.awt.Color2setColor(Ljava/awt/Color;)*
-23*ô
-26Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaê ê(#‡
-›
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaê$ ê(/!
+23*∑
+26ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaê ê(#Í
+Á
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaê$ ê(/!
 %34fr.free.jchecs.core.Square"__id*/*-
 fr.free.jchecs.swg.BoardUI"
-_overSquare¢
-ü
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaê ê(0
+_overSquare¨
+©
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaê ê(0
 %35boolean"Efr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)Z*
 fr.free.jchecs.swg.BoardUI*#
 !
 %34fr.free.jchecs.core.Square*
 24
-25*¸
-27Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaè5 è(FË
-Â
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaè5 è(F#
+25*ê
+27ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaè5 è(FÚ
+Ô
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaè5 è(F#
 %33fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
 _availableTargets*
 24
-26*¯
-28Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaè è('‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaè è('!
+26*å
+28ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaè è('Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaè è('!
 %32fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
 _selectedSquare*
 24
-27*”
-29Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(/
+27*Ò
+29ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(/
 %30java.awt.Color"__id*
-""ïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(0
+""üú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaé é(0
 %31void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
 %30java.awt.Color2setColor(Ljava/awt/Color;)*
-23*¸
-30Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç()Ë
-Â
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç()#
+23*ê
+30ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç()Ú
+Ô
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç()#
 %29fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
 _availableTargets*
 28
-29*¸
-31Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaå. å(?Ë
-Â
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaå. å(?#
+29*ê
+31ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaå. å(?Ú
+Ô
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaå. å(?#
 %28fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
 _availableTargets*
 28
-30*¯
-32Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaå å( ‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaå å( !
+30*å
+32ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaå å( Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaå å( !
 %27fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
 _selectedSquare*
 28
-31*≤
-10Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¡ ¡("†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¡ ¡(%
+31*∆
+10ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¡ ¡("™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¡ ¡(%
 %69boolean"Efr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)Z*
 fr.free.jchecs.swg.BoardUI*!
 
 cfr.free.jchecs.core.Square*
 6
-9*Ù
-33Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaã ã(‡
-›
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaã ã(!
+9*à
+33ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaã ã(Í
+Á
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaã ã(!
 %26fr.free.jchecs.core.Square"__id*/*-
 fr.free.jchecs.swg.BoardUI"
 _overSquare*
 17
-32*˚
-11Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¿% ¿(6Ë
-Â
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¿% ¿(6#
+32*è
+11ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¿% ¿(6Ú
+Ô
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¿% ¿(6#
 %68fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
 _availableTargets*
 6
-10*ä
-34Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ Å(ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ0 Å(=
+10*⁄
+34ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ Å(Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ0 Å(=
 
 %19int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-srcfr.free.jchecs.core.Square2	getFile()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÉ, É(6
+srcfr.free.jchecs.core.Square2	getFile()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÉ, É(6
 
 %20int"__id*
-""ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÉ9 É(F
+""Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÉ9 É(F
 
 %21int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-srcfr.free.jchecs.core.Square2	getRank()ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÖ+ Ö(8
+srcfr.free.jchecs.core.Square2	getRank()Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÖ+ Ö(8
 
 %22int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-dstfr.free.jchecs.core.Square2	getFile()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ, Ü(6
+dstfr.free.jchecs.core.Square2	getFile()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ, Ü(6
 
 %23int"__id*
-""ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ9 Ü(F
+""Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ9 Ü(F
 
 %24int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-dstfr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ á(6
+dstfr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÅ á(6
 %25void"!java.awt.Graphics#drawLine(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -191,55 +191,55 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2drawLine(IIII)*
-33*ú
-13Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø($ç
-ä
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(-#
+33*∞
+13ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø($ó
+î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(-#
 %67fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
 fr.free.jchecs.core.Square*
-1*ä
-35Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˘ ˘(†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˙# ˙(-
+1*⁄
+35ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˘ ˘(™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˙# ˙(-
 
 %12int"__id*
-""ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˙0 ˙(=
+""Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˙0 ˙(=
 
 %13int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-srcfr.free.jchecs.core.Square2	getFile()ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˚@ ˚(M
+srcfr.free.jchecs.core.Square2	getFile()Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˚@ ˚(M
 
 %14int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-srcfr.free.jchecs.core.Square2	getRank()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˝, ˝(6
+srcfr.free.jchecs.core.Square2	getRank()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˝, ˝(6
 
 %15int"__id*
-""ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˝9 ˝(F
+""Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˝9 ˝(F
 
 %16int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-dstfr.free.jchecs.core.Square2	getFile()ÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaˇ+ ˇ(8
+dstfr.free.jchecs.core.Square2	getFile()Û
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaˇ+ ˇ(8
 
 %17int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-dstfr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java˘ ˇ(O
+dstfr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java˘ ˇ(O
 %18void"!java.awt.Graphics#drawLine(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -247,105 +247,105 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2drawLine(IIII)*
-33*≈
-36Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(™
-ß
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(/
+33*≥
+36ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(¥
+±
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(/
 %4java.awt.Color"__id*
-""ìê
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(0
+""ùö
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÛ Û(0
 
 %5void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
-%4java.awt.Color2setColor(Ljava/awt/Color;)´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÙ Ù(1
+%4java.awt.Color2setColor(Ljava/awt/Color;)µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÙ Ù(1
 %6java.awt.Stroke"__id*
-""öó
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÙ Ù(2
+""§°
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÙ Ù(2
 
 %7void"1java.awt.Graphics2D#setStroke(Ljava/awt/Stroke;)V*
 
 g2djava.awt.Graphics2D*
 
-%6java.awt.Stroke2setStroke(Ljava/awt/Stroke;)‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(/
+%6java.awt.Stroke2setStroke(Ljava/awt/Stroke;)Ï
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(/
 %8fr.free.jchecs.core.Move"__id*4*2
 fr.free.jchecs.swg.BoardUI"
-_highLightedMoveïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(9 
+_highLightedMoveüú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(9 
 %9fr.free.jchecs.core.Square">fr.free.jchecs.core.Move#getFrom()Lfr/free/jchecs/core/Square;* 
 
-%8fr.free.jchecs.core.Move2	getFrom()”
-–
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(:!
+%8fr.free.jchecs.core.Move2	getFrom()›
+⁄
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaı ı(:!
 srcfr.free.jchecs.core.Square"__id*"
  
-%9fr.free.jchecs.core.Square„
-‡
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(/
+%9fr.free.jchecs.core.SquareÌ
+Í
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(/
 %10fr.free.jchecs.core.Move"__id*4*2
 fr.free.jchecs.swg.BoardUI"
-_highLightedMoveìê
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(7!
+_highLightedMoveùö
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(7!
 %11fr.free.jchecs.core.Square"<fr.free.jchecs.core.Move#getTo()Lfr/free/jchecs/core/Square;*!
 
-%10fr.free.jchecs.core.Move2getTo()‘
-—
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(8!
+%10fr.free.jchecs.core.Move2getTo()ﬁ
+€
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaˆ ˆ(8!
 dstfr.free.jchecs.core.Square"__id*#
 !
 %11fr.free.jchecs.core.Square*
 35
-34*›
-14Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∏ ∏(‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∏0 ∏(?!
+34*£
+14ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∏ ∏(Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∏0 ∏(?!
 %61fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
-_selectedSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∏0 ∏(I
+_selectedSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∏0 ∏(I
 
 %62int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-%61fr.free.jchecs.core.Square2	getFile()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∫ ∫(%
+%61fr.free.jchecs.core.Square2	getFile()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∫ ∫(%
 
 %63int"__id*
-""‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∫( ∫(7!
+""Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∫( ∫(7!
 %64fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
-_selectedSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∫( ∫(A
+_selectedSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∫( ∫(A
 
 %65int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-%64fr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∏ ª(@
+%64fr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∏ ª(@
 %66void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -353,51 +353,51 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-13*ˆ
-37Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÚ# Ú(3‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÚ# Ú(3
+13*ä
+37ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÚ# Ú(3Ï
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÚ# Ú(3
 %3fr.free.jchecs.core.Move"__id*4*2
 fr.free.jchecs.swg.BoardUI"
 _highLightedMove*
 36
-33*›
-15Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java± ±(†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java≥# ≥(-
+33*£
+15ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java± ±(™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java≥# ≥(-
 
 %55int"__id*
-""‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java≥0 ≥(?!
+""Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java≥0 ≥(?!
 %56fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
-_selectedSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java≥0 ≥(I
+_selectedSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java≥0 ≥(I
 
 %57int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-%56fr.free.jchecs.core.Square2	getFile()‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaµ" µ(1!
+%56fr.free.jchecs.core.Square2	getFile()Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaµ" µ(1!
 %58fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
-_selectedSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaµ" µ(;
+_selectedSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaµ" µ(;
 
 %59int"%fr.free.jchecs.core.Square#getRank()I*#
 !
-%58fr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java± ∂(1
+%58fr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java± ∂(1
 %60void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -405,65 +405,65 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-13*´	
-38Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÌ, Ì(2«
-ƒ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÌ Ì(3
+13*›	
+38ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÌ, Ì(2—
+Œ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÌ Ì(3
 g2djava.awt.Graphics2D"__id*
 
-pGraphjava.awt.Graphics˝
-˙
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÔ Ô(*
+pGraphjava.awt.Graphicsá
+Ñ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÔ Ô(*
 %0java.awt.Image"?fr.free.jchecs.swg.BoardUI#getBoardBackground()Ljava/awt/Image;*
-fr.free.jchecs.swg.BoardUIËÂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÔ Ô(7
+fr.free.jchecs.swg.BoardUIÚÔ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÔ Ô(7
 %1boolean"Njava.awt.Graphics#drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)Z*
 
 g2djava.awt.Graphics2D*
 
 %0java.awt.Image*2 *2 *
-""2;drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÒ Ò(/	
+""2;drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)Ï
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÒ Ò(/	
 %2int"/fr.free.jchecs.swg.BoardUI#getCellSideLength()I*
 fr.free.jchecs.swg.BoardUI*
 37
-33*◊
-16Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø(´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø('
+33*ı
+16ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø(µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø('
 %53java.awt.Color"__id*
-""ïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø((
+""üú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaØ Ø((
 %54void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
 %53java.awt.Color2setColor(Ljava/awt/Color;)*
 14
-15*¯
-17Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÆ Æ(‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÆ Æ(!
+15*å
+17ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÆ Æ(Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÆ Æ(!
 %52fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
 _selectedSquare*
 13
-16*î
-18Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java´ ´(ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java´ ´(:
+16*®
+18ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java´ ´(éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java´ ´(:
 %51void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -471,42 +471,42 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-17*á
-19Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¢! ¢(.ﬂ
-‹
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¢! ¢(0
+17*√
+19ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¢! ¢(.È
+Ê
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¢! ¢(0
 
 %46int"+fr.free.jchecs.swg.BoardUI#getSideLength()I*
-fr.free.jchecs.swg.BoardUIÇˇ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java£ £(F
+fr.free.jchecs.swg.BoardUIåâ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java£ £(F
 %47void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*2*
 ""*
 ""*
-""2fillRect(IIII)ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java§ •($
+""2fillRect(IIII)éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java§ •($
 %48void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
 ""*
 ""*
 ""*
-""2fillRect(IIII)Çˇ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¶ ¶(F
+""2fillRect(IIII)åâ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¶ ¶(F
 %49void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
 ""*2*
 ""*
-""2fillRect(IIII)ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaß ®(-
+""2fillRect(IIII)éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaß ®(-
 %50void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -514,21 +514,21 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-18*†
-0 "ò
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java‹ ‹(
-implicit return*Ø
-1Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(µ
-≤
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(
+18*™
+0 "¢
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java‹ ‹(
+implicit return*Õ
+1ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(ø
+º
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(
 cfr.free.jchecs.core.Square"__id*
-""‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(
+""Ï
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaø ø(
 cfr.free.jchecs.core.Square"
 __arrayGet*%
 #
@@ -537,43 +537,43 @@ __arrayGet*%
 
 6
 0
-11*∑
-2Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java’ ’(›
-⁄
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java’" ’(*!
+11*˝
+2ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java’ ’(Á
+‰
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java’" ’(*!
 %89fr.free.jchecs.swg.PieceUI"__id*,**
 fr.free.jchecs.swg.BoardUI"
 
-_pieceUI›⁄
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java’" ’(6
+_pieceUIÁ‰
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java’" ’(6
 %90java.awt.Image"Pfr.free.jchecs.swg.PieceUI#getImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;*#
 !
 %89fr.free.jchecs.swg.PieceUI* 
 
-pfr.free.jchecs.core.Piece2%getImage(Lfr/free/jchecs/core/Piece;)Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java÷/ ÷(:
+pfr.free.jchecs.core.Piece2%getImage(Lfr/free/jchecs/core/Piece;)ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java÷/ ÷(:
 
 %91int"%fr.free.jchecs.core.Square#getFile()I*!
 
-cfr.free.jchecs.core.Square2	getFile()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java◊0 ◊(:
+cfr.free.jchecs.core.Square2	getFile()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java◊0 ◊(:
 
 %92int"__id*
-""Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java◊= ◊(H
+""ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java◊= ◊(H
 
 %93int"%fr.free.jchecs.core.Square#getRank()I*!
 
-cfr.free.jchecs.core.Square2	getRank()ÚÔ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java’ ÿ(4
+cfr.free.jchecs.core.Square2	getRank()¸˘
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java’ ÿ(4
 %94boolean"Njava.awt.Graphics#drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)Z*
 
 g2djava.awt.Graphics2D*
@@ -582,43 +582,43 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2;drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)*
-1*∑
-3Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java— —(›
-⁄
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java—" —(*!
+1*˝
+3ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java— —(Á
+‰
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java—" —(*!
 %83fr.free.jchecs.swg.PieceUI"__id*,**
 fr.free.jchecs.swg.BoardUI"
 
-_pieceUI›⁄
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java—" —(6
+_pieceUIÁ‰
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java—" —(6
 %84java.awt.Image"Pfr.free.jchecs.swg.PieceUI#getImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;*#
 !
 %83fr.free.jchecs.swg.PieceUI* 
 
-pfr.free.jchecs.core.Piece2%getImage(Lfr/free/jchecs/core/Piece;)†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java“' “(1
+pfr.free.jchecs.core.Piece2%getImage(Lfr/free/jchecs/core/Piece;)™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java“' “(1
 
 %85int"__id*
-""Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java“4 “(?
+""ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java“4 “(?
 
 %86int"%fr.free.jchecs.core.Square#getFile()I*!
 
-cfr.free.jchecs.core.Square2	getFile()Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java”/ ”(:
+cfr.free.jchecs.core.Square2	getFile()ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java”/ ”(:
 
 %87int"%fr.free.jchecs.core.Square#getRank()I*!
 
-cfr.free.jchecs.core.Square2	getRank()ÚÔ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java— ”(K
+cfr.free.jchecs.core.Square2	getRank()¸˘
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java— ”(K
 %88boolean"Njava.awt.Graphics#drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)Z*
 
 g2djava.awt.Graphics2D*
@@ -627,80 +627,80 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2;drawImage(Ljava/awt/Image;IILjava/awt/image/ImageObserver;)*
-1*®
-startingBlockÄ
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ Ï(,–
-Õ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÎ Î(
+1*∆
+startingBlockä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ Ï(,⁄
+◊
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÎ Î(
 %95"
 __annotate*
 java.lang.Override*
 
-pGraphjava.awt.Graphics∫
-∑
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ% Ï(+
+pGraphjava.awt.Graphicsƒ
+¡
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÏ% Ï(+
 pGraphjava.awt.Graphics"__annotation*
 
 %95*
-38*¯
-5Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaœ  œ(!‰
-·
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaœ% œ(4!
+38*å
+5ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaœ  œ(!Ó
+Î
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaœ% œ(4!
 %82fr.free.jchecs.core.Square"__id*3*1
 fr.free.jchecs.swg.BoardUI"
 _selectedSquare*	
 2
 3
-1*…
-6Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ("‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ("(
+1*Ò
+6ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ("Ï
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ("(
 %80!fr.free.jchecs.core.MoveGenerator"__id***(
 fr.free.jchecs.swg.BoardUI"
-_boardÄ˝
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ(0 
+_boardäá
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ(0 
 %81fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;**
 (
 %80!fr.free.jchecs.core.MoveGenerator*!
 
-cfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)–
-Õ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ(1
+cfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)⁄
+◊
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaŒ Œ(1
 pfr.free.jchecs.core.Piece"__id*"
  
 %81fr.free.jchecs.core.Piece*
 5
-1*â
-7Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java… …(Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java…4 …(?
+1*ª
+7ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java… …(ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java…4 …(?
 
 %76int"%fr.free.jchecs.core.Square#getFile()I*!
 
-cfr.free.jchecs.core.Square2	getFile()†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java 0  (:
+cfr.free.jchecs.core.Square2	getFile()™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java 0  (:
 
 %77int"__id*
-""Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java =  (H
+""ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java =  (H
 
 %78int"%fr.free.jchecs.core.Square#getRank()I*!
 
-cfr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java… À(L
+cfr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java… À(L
 %79void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -708,29 +708,29 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-6*â
-8Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaƒ ƒ(†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java≈' ≈(1
+6*ª
+8ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaƒ ƒ(™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java≈' ≈(1
 
 %72int"__id*
-""Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java≈4 ≈(?
+""ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java≈4 ≈(?
 
 %73int"%fr.free.jchecs.core.Square#getFile()I*!
 
-cfr.free.jchecs.core.Square2	getFile()Á‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java∆/ ∆(:
+cfr.free.jchecs.core.Square2	getFile()ÒÓ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java∆/ ∆(:
 
 %74int"%fr.free.jchecs.core.Square#getRank()I*!
 
-cfr.free.jchecs.core.Square2	getRank()ÑÅ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaƒ «(5
+cfr.free.jchecs.core.Square2	getRank()éã
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaƒ «(5
 %75void"!java.awt.Graphics#fillRect(IIII)V*
 
 g2djava.awt.Graphics2D*
@@ -738,65 +738,65 @@ t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 ""*
 ""*
 ""2fillRect(IIII)*
-6*‘
-9Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(´
-®
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(,
+6*Ú
+9ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(µ
+≤
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(,
 %70java.awt.Color"__id*
-""ïí
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(-
+""üú
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java¬ ¬(-
 %71void"-java.awt.Graphics#setColor(Ljava/awt/Color;)V*
 
 g2djava.awt.Graphics2D*
 
 %70java.awt.Color2setColor(Ljava/awt/Color;)*
 7
-8*¥
-21Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaû û(%†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaü) ü(3
+8*»
+21ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaû û(%™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaü) ü(3
 
 %45int"__id*
 ""*
 18
-19*¥
-22Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaõ õ(%†
-ù
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaõ) õ(3
+19*»
+22ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaõ õ(%™
+ß
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaõ) õ(3
 
 %44int"__id*
 ""*
 18
-19*Ø
-23Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(&‡
-›
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(&!
+19*·
+23ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(&Í
+Á
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(&!
 %40fr.free.jchecs.core.Square"__id*/*-
 fr.free.jchecs.swg.BoardUI"
-_overSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(0
+_overSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javañ ñ(0
 
 %41int"%fr.free.jchecs.core.Square#getFile()I*#
 !
-%40fr.free.jchecs.core.Square2	getFile()‡
-›
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(&!
+%40fr.free.jchecs.core.Square2	getFile()Í
+Á
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(&!
 %42fr.free.jchecs.core.Square"__id*/*-
 fr.free.jchecs.swg.BoardUI"
-_overSquareÈÊ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(0
+_overSquareÛ
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(0
 
 %43int"%fr.free.jchecs.core.Square#getRank()I*#
 !

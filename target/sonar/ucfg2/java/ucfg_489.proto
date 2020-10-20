@@ -1,16 +1,16 @@
 
-@fr.free.jchecs.swg.MoveEvent#getMove()Lfr/free/jchecs/core/Move;€
-v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/MoveEvent.java8 8("1*Š
-1€
-v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(Ù
-Ö
-€
-v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(
+@fr.free.jchecs.swg.MoveEvent#getMove()Lfr/free/jchecs/core/Move;‹
+€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java8 8("1*«
+1‹
+€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(ä
+á
+‹
+€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(
 %0fr.free.jchecs.core.Move"__id*+*)
 fr.free.jchecs.swg.MoveEvent"
-_move"¥
-€
-v/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/MoveEvent.java9 9( 
+_move"°
+‹
+€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9 9( 
 
 %0fr.free.jchecs.core.MoveB 
 fr.free.jchecs.swg.MoveEvent

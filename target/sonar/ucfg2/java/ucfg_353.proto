@@ -1,214 +1,215 @@
 
-:fr.free.jchecs.tools.OpeningsBuilderStart#analyseGames(I)Vê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaè è($"37*ñ
-25ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû û(MÛ
-
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû û(M)
+:fr.free.jchecs.tools.OpeningsBuilderStart#analyseGames(I)Vö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaè è($"37*™
+25ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû û(M˝
+˙
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû û(M)
 etat!fr.free.jchecs.core.MoveGenerator"__id**
 (
 %17!fr.free.jchecs.core.MoveGenerator*
 5
-23*˛	
-26ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù ù(G 
-«
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù ù(G
+23*∞
+
+26ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù ù(G‘
+—
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù ù(G
 posjava.util.Map"__id*
 
-%14java.util.Map“
-œ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû: û(A,
+%14java.util.Map‹
+Ÿ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû: û(A,
 %15%fr.free.jchecs.core.BoardFactory$Type"__id*
-""”
-–
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaûC û(K-
+""›
+⁄
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaûC û(K-
 %16&fr.free.jchecs.core.BoardFactory$State"__id*
-""Ê
-„
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû% û(L(
+""
+Ì
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaû% û(L(
 %17!fr.free.jchecs.core.MoveGenerator"úfr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;*$""
  fr.free.jchecs.core.BoardFactory*.
 ,
 %15%fr.free.jchecs.core.BoardFactory$Type*/
 -
 %16&fr.free.jchecs.core.BoardFactory$State*
-25*ﬁ
-27ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö ö(<’
-“
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö ö(<
+25*ê
+27ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö ö(<ﬂ
+‹
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö ö(<
 mvtsjava.lang.String[]"__id*
 
-%11java.lang.String[]∫
-∑
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù+ ù(4
+%11java.lang.String[]ƒ
+¡
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù+ ù(4
 %12java.util.Map"__id*
-""Ω
-∫
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù9 ù(E
+""«
+ƒ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù9 ù(E
 %13java.lang.String"__id*
-""È
-Ê
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù+ ù(F
+""Û
+
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaù+ ù(F
 %14java.util.Map"__mapGet*
 
 %12java.util.Map*
 
 %13java.lang.String*
-26*ƒ
-28ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô ô(?ƒ
-¡
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö& ö(.
+26*‚
+28ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô ô(?Œ
+À
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö& ö(.
 %10java.util.regex.Pattern"__id*
-""›⁄
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö& ö(;
+""Á‰
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaö& ö(;
 %11java.lang.String[]"Jjava.util.regex.Pattern#split(Ljava/lang/CharSequence;)[Ljava/lang/String;* 
 
 %10java.util.regex.Pattern*
 
 lignejava.lang.String2split(Ljava/lang/CharSequence;)*
-27*∫
-29ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô( ô(-öó
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô( ô(>
+27*Œ
+29ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô( ô(-§°
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaô( ô(>
 %9boolean".java.lang.String#endsWith(Ljava/lang/String;)Z*
 
 lignejava.lang.String*
  1-02endsWith(Ljava/lang/String;)*
-28*Æ
-30ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(º
-π
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(
+28*Ã
+30ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(∆
+√
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(
 %7org.slf4j.Logger"__id*
-""œÃ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(M
+""Ÿ÷
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaó ó(M
 
 %8void"<org.slf4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*
 
 %7org.slf4j.Logger*
   ... {} games analysed ...*
 ""2*info(Ljava/lang/String;Ljava/lang/Object;)*
-29*∆
-10ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ> Ø(Bß§
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(C(
+29*⁄
+10ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ> Ø(B±Æ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(C(
 %25!fr.free.jchecs.core.MoveGenerator"hfr.free.jchecs.core.MoveGenerator#derive(Lfr/free/jchecs/core/Move;Z)Lfr/free/jchecs/core/MoveGenerator;*+
 )
 etat!fr.free.jchecs.core.MoveGenerator*!
 
 %24fr.free.jchecs.core.Move*
 ""2#derive(Lfr/free/jchecs/core/Move;Z)*
-9*¯
-33ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í()—
-Œ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í()
+9*å
+33ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í()€
+ÿ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í()
 lignejava.lang.String"__id*
 
 %6java.lang.String*
 3
 29
-30*∑
-11ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(#ó
-î
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ+ Ø(<
+30*À
+11ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(#°
+û
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ+ Ø(<
 %24fr.free.jchecs.core.Move"tfr.free.jchecs.core.SANUtils#toMove(Lfr/free/jchecs/core/MoveGenerator;Ljava/lang/String;)Lfr/free/jchecs/core/Move;* "
 fr.free.jchecs.core.SANUtils*+
 )
 etat!fr.free.jchecs.core.MoveGenerator*
 
 mvtjava.lang.String*
-10*å
-34ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(@⁄
-◊
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(@
+10*™
+34ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(@‰
+·
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë ë(@
 injava.io.BufferedReader"__id*
 
-%4java.io.BufferedReaderèå
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í((
+%4java.io.BufferedReaderôñ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaí í((
 %6java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
 
 injava.io.BufferedReader2
 readLine()*
-33*‘
-35ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê ê(G’
-“
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê ê(G
+33*¸
+35ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê ê(Gﬂ
+‹
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê ê(G
 ficInjava.io.FileReader"__id*
 
-%2java.io.FileReaderÃ…
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë+ ë(9
-%4java.io.BufferedReader"java.io.BufferedReaderç
-ä
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë' ë(@
+%2java.io.FileReader÷”
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë+ ë(9
+%4java.io.BufferedReader"java.io.BufferedReaderó
+î
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaë' ë(@
 %5"0java.io.BufferedReader#<init>(Ljava/io/Reader;)V*
 
 %4java.io.BufferedReader*
 
 ficInjava.io.FileReader*
-34*·
-36ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê& ê(Gƒ¡
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê* ê(4
-%2java.io.FileReader"java.io.FileReader˙
-˜
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê& ê(G
+34*ˇ
+36ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê& ê(GŒÀ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê* ê(4
+%2java.io.FileReader"java.io.FileReaderÑ
+Å
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê& ê(G
 %3"*java.io.FileReader#<init>(Ljava/io/File;)V*
 
 %2java.io.FileReader*
 
 %1java.io.File*
-35*Ø
-37ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(?∫
-∑
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(?
+35*Õ
+37ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(?ƒ
+¡
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(?
 %0java.util.List"__id*
-""“
-œ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(F
+""‹
+Ÿ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaê5 ê(F
 %1java.io.File"
 __arrayGet*
 
 %0java.util.List*2 *
-36*ò
-16ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java® ®(ı
-Ú
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java® ®(.
+36*¨
+16ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java® ®(ˇ
+¸
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java® ®(.
 %23java.lang.Integer"__mapSet*
 
 posjava.util.Map*
@@ -216,12 +217,12 @@ __arrayGet*
 mvtjava.lang.String*
 ""*
 5
-11*ò
-17ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java¶ ¶(ı
-Ú
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java¶ ¶(.
+11*¨
+17ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java¶ ¶(ˇ
+¸
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java¶ ¶(.
 %22java.lang.Integer"__mapSet*
 
 posjava.util.Map*
@@ -229,157 +230,157 @@ __arrayGet*
 mvtjava.lang.String*
 ""*
 5
-11*¥
-19ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java• •(êç
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java• •(,
+11*»
+19ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java• •(öó
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java• •(,
 %21boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*+
 )
 etat!fr.free.jchecs.core.MoveGenerator2isWhiteActive()*
 16
-17*∞
-0 "®
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaº º(
-implicit return*˝
-2ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏()ﬂ‹
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏()
+17*∫
+0 "≤
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaº º(
+implicit return*ë
+2ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏()ÈÊ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏()
 %33boolean"java.io.File#delete()Z*
 
 %32java.io.File2delete()*
-0*≥
-3ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏(ª
-∏
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏(
+0*—
+3ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏(≈
+¬
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏(
 %31java.util.List"__id*
-""◊
-‘
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏( 
+""·
+ﬁ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∏ ∏( 
 %32java.io.File"__arrayRemove*
 
 %31java.util.List*2 *
-2*¯
-4ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%“
-œ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%
+2*å
+4ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%‹
+Ÿ
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%
 lignejava.lang.String"__id*
 
 %30java.lang.String*
 3
 29
-30*Æ
-5ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(êç
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%
+30*¬
+5ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(öó
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∂ ∂(%
 %30java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*
 
 injava.io.BufferedReader2
 readLine()*
-4*Ï
-6ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R 
-«
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R
+4*Ä
+6ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R‘
+—
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R
 posjava.util.Map"__id*
 
 %28java.util.Map*
 5
-23*π
-8ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞ ∞(:–
-Õ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞ ∞(:
+23*·
+8ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞ ∞(:⁄
+◊
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞ ∞(:
 clejava.lang.String"__id*
 
-%26java.lang.String∫
-∑
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±('
+%26java.lang.Stringƒ
+¡
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±('
 %27java.util.Map"__id*
-""ãà
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R
+""ïí
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java± ±(R
 %28java.util.Map"`java.util.Map#computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;*
 
 %27java.util.Map*
 
 clejava.lang.String*
 ""2@computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)*
-6*Ë
-9ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(CÛ
-
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(C)
+6*Ü
+9ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(C˝
+˙
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaØ Ø(C)
 etat!fr.free.jchecs.core.MoveGenerator"__id**
 (
-%25!fr.free.jchecs.core.MoveGenerator‘
-—
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞+ ∞(9
+%25!fr.free.jchecs.core.MoveGeneratorﬁ
+€
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java∞+ ∞(9
 %26java.lang.String"Tfr.free.jchecs.core.FENUtils#toFENKey(Lfr/free/jchecs/core/Board;)Ljava/lang/String;* "
 fr.free.jchecs.core.FENUtils*+
 )
 etat!fr.free.jchecs.core.MoveGenerator*
-8*€
-20ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java£ £( ª
-∏
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java£ £( 
+8*Ô
+20ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java£ £( ≈
+¬
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java£ £( 
 notejava.lang.Integer"__id*2 *
-19*˜
-21ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java° °(0”
-–
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java° °(0
+19*ã
+21ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java° °(0›
+⁄
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java° °(0
 notejava.lang.Integer"__id*
 
 %20java.lang.Integer*
 19
-20*‡
-22ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java† †(@–
-Õ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java† †(@
+20*˛
+22ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java† †(@⁄
+◊
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java† †(@
 mvtjava.lang.String"__id*
 
-%19java.lang.StringÌ
-Í
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java°# °(/
+%19java.lang.String˜
+Ù
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java°# °(/
 %20java.lang.Integer"__mapGet*
 
 posjava.util.Map*
 
 mvtjava.lang.String*
-21*ƒ
-23ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†' †(6·
-ﬁ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†7 †(>
+21*‚
+23ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†' †(6Î
+Ë
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†7 †(>
 %18java.lang.String"
 __arrayGet*
 
 mvtsjava.lang.String[]*
-""¿
-Ω
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†' †(?
+"" 
+«
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java†' †(?
 %19java.lang.String"Rfr.free.jchecs.core.PGNUtils#toNormalizedSAN(Ljava/lang/String;)Ljava/lang/String;* "
 fr.free.jchecs.core.PGNUtils*
 

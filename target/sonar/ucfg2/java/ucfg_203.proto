@@ -1,108 +1,108 @@
 
-~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaK! K(,"18*“
-13Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaV! V(%æ
-ª
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaV V(&$
+~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaK! K(,"18*Ë
+13è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaV! V(%…
+∆
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaV V(&$
 cstjava.lang.reflect.Constructor"__id*
 ""*
-12*Â
-3Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javac. c(/”
-–
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javac c(/(
+12*˚
+3è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javac. c(/ﬁ
+€
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javac c(/(
 res!fr.free.jchecs.core.MoveGenerator"__id*
 
 ojava.lang.Object*
-1*ÿ
-15Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+¡
-æ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
+1*Ó
+15è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+Ã
+…
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
 clsjava.lang.Class"__id*
 
 %0java.lang.Class*
 13
-1*œ
-4Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6∫
-∑
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
+1*Â
+4è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6≈
+¬
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
 ojava.lang.Object"__id*
 
 %9	!capture!*
 3
-1*˜
-5Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(Â‚
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
+1*ç
+5è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(Ì
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
 %9	!capture!"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*&
 $
 cstjava.lang.reflect.Constructor*,
 *
 pInitialStatefr.free.jchecs.core.Board2 newInstance([Ljava/lang/Object;)*
-4*™
-17Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(ñ
-ì
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
+4*¿
+17è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(°
+û
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
 %0java.lang.Class"<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;*"
 java.lang.Class* 
 
 
 pClassNamejava.lang.String*
-15*¡
-6Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(Ø
-¨
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(
+15*◊
+6è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(∫
+∑
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(
 ojava.lang.Object"__id*
 ""*
-5*â
-18Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M( ¬
-ø
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M(!(
+5*™
+18è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M( Õ
+ 
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M(!(
 res!fr.free.jchecs.core.MoveGenerator"__id*
-""∞
-≠
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaO O(
+""ª
+∏
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaO O(
 clsjava.lang.Class"__id*
 ""*
-17*Ú
-8Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=›
-⁄
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=$
+17*à
+8è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=Ë
+Â
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=$
 cstjava.lang.reflect.Constructor"__id*%
 #
 %3java.lang.reflect.Constructor*
 6
-1*Î
-12Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(ÿ’
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=#
+1*Å
+12è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(„‡
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=#
 %3java.lang.reflect.Constructor"Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*
 
 clsjava.lang.Class*
 ""2*getDeclaredConstructor([Ljava/lang/Class;)*
-8*¿
-1Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javak k("≥
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/BoardFactory.javak k(*
+8*÷
+1è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javak k("æ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javak k(*
 (
 res!fr.free.jchecs.core.MoveGenerator:
 

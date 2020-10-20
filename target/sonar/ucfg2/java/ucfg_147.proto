@@ -1,19 +1,19 @@
 
-Ffr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;á
-}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaC C("1*Ï
-1á
-}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(†ù
-á
-}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(
+Ffr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;í
+á/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaC C("1*ò
+1í
+á/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(´®
+í
+á/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(
 %0fr.free.jchecs.swg.UI"Bfr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;*'%
-#fr.free.jchecs.swg.AbstractUIAction2getUI()êç
-á
-}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(%
+#fr.free.jchecs.swg.AbstractUIAction2getUI()õò
+í
+á/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(%
 %1javax.swing.JFrame"8fr.free.jchecs.swg.UI#getMainFrame()Ljavax/swing/JFrame;*
 
-%0fr.free.jchecs.swg.UI2getMainFrame()"¶
-á
-}/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(&
+%0fr.free.jchecs.swg.UI2getMainFrame()"±
+í
+á/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(&
 
 %1javax.swing.JFrameB'%
 #fr.free.jchecs.swg.AbstractUIAction

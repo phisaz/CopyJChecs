@@ -1,29 +1,29 @@
 
-Jfr.free.jchecs.core.MailboxBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÄ Ä("1*·
-1†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(è
-å
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(!
+Jfr.free.jchecs.core.MailboxBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÄ Ä("1*î
+1‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(ó
+ð
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(!
 %0fr.free.jchecs.core.Piece[]"__id*1*/"
  fr.free.jchecs.core.MailboxBoard"	
-_pieces¥
-¢
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ+ Å(5	
+_pieces°
+­
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ+ Å(5	
 %1int"__id*
-""æ
-ã
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(6
+""ñ
+î
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(6
 %2fr.free.jchecs.core.Piece"
 __arrayGet*#
 !
 %0fr.free.jchecs.core.Piece[]*
-"""¬
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(7!
+"""·
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÅ Å(7!
 
 %2fr.free.jchecs.core.Piece:
 "":

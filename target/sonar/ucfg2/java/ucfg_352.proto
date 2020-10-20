@@ -1,41 +1,41 @@
 
-áfr.free.jchecs.tools.OpeningsBuilderStart#addGameToSort(Ljava/io/BufferedWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˘ ˘('"7*ì
-3ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÅ Å(ıÚ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÅ Å(!
+áfr.free.jchecs.tools.OpeningsBuilderStart#addGameToSort(Ljava/io/BufferedWriter;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˘ ˘('"7*ß
+3ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÅ Å(ˇ¸
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÅ Å(!
 
 %2void"!java.io.BufferedWriter#newLine()V*#
 !
 pSortiejava.io.BufferedWriter2	newLine()*
-1* 
-4ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÄ Ä(¨©
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÄ Ä(&
+1*ﬁ
+4ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÄ Ä(∂≥
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaÄ Ä(&
 
 %1void")java.io.Writer#write(Ljava/lang/String;)V*#
 !
 pSortiejava.io.BufferedWriter*
 
 pPartiejava.lang.String2write(Ljava/lang/String;)*
-3*“
-7ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˚ ˚(±Æ
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˚ ˚('
+3*Ê
+7ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˚ ˚(ª∏
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java˚ ˚('
 %0boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
 
 pPartiejava.lang.String*!
 
 pPrecedentejava.lang.String2equals(Ljava/lang/Object;)*
 4
-1*À
-1ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaá á("≤
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaá á(
+1*ﬂ
+1ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaá á("º
+ö
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.javaá á(
 
 pPartiejava.lang.String:!
 pSortiejava.io.BufferedWriter:

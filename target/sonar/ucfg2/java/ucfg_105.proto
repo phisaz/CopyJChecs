@@ -1,139 +1,139 @@
 
-Tfr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)IÖ
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java3 3("17*Ä
-13Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaA A(§
-°
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaA A(	
+Tfr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)Iê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java3 3("17*∑
+13ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaA A(Ø
+¨
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaA A(	
 %6int"__id*
-""ß§
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaC% C(4
+""≤Ø
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaC% C(4
 %7java.util.Comparator"Ffr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;*%#
-!fr.free.jchecs.ai.AlphaBetaEngine2getMoveSorter()Ã
-…
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaC C(5
+!fr.free.jchecs.ai.AlphaBetaEngine2getMoveSorter()◊
+‘
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaC C(5
 trijava.util.Comparator"__id*
 
-%7java.util.Comparator«
-ƒ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaD D(&,
+%7java.util.Comparator“
+œ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaD D(&,
 killer"fr.free.jchecs.ai.KillerMoveSorter"__id*
 ""*
 11
-12*∆
-14Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(≥∞
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(!!
+12*Ú
+14ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(æª
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(!!
 %4fr.free.jchecs.ai.Heuristic"Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*%#
-!fr.free.jchecs.ai.AlphaBetaEngine2getHeuristic()ÓÎ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(8	
+!fr.free.jchecs.ai.AlphaBetaEngine2getHeuristic()˘ˆ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(8	
 %5int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*#
 !
 %4fr.free.jchecs.ai.Heuristic*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*
-""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"ê
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(9
-""*∫
-15Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;("ƒ¡
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;(7 
+""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"õ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java> >(9
+""*€
+15ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;("œÃ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;(7 
 %3fr.free.jchecs.core.Move[]"Mfr.free.jchecs.core.MoveGenerator#getValidMoves(Z)[Lfr/free/jchecs/core/Move;*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*
-""2getValidMoves(Z)⁄
-◊
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;(8#
+""2getValidMoves(Z)Â
+‚
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java; ;(8#
 coupsfr.free.jchecs.core.Move[]"__id*"
  
 %3fr.free.jchecs.core.Move[]*
 13
-14*∆
-16Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(≥∞
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(!!
+14*Ú
+16ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(æª
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(!!
 %1fr.free.jchecs.ai.Heuristic"Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*%#
-!fr.free.jchecs.ai.AlphaBetaEngine2getHeuristic()ÓÎ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(8	
+!fr.free.jchecs.ai.AlphaBetaEngine2getHeuristic()˘ˆ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(8	
 %2int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*#
 !
 %1fr.free.jchecs.ai.Heuristic*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*
-""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"ê
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(9
-""*û
-17Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java5 5(#ÖÇ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java5 5(3
+""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"õ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java8 8(9
+""*¥
+17ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java5 5(#êç
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java5 5(3
 %0boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator2isWhiteActive()*
 15
-16*û
-1Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java^ ^("ê
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java^ ^(
-""*∫
-2Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(∫
-∑
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(
+16*¥
+1ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java^ ^("õ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java^ ^(
+""*€
+2ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(≈
+¬
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(
 mvtfr.free.jchecs.core.Move"__id*
-""Á
-‰
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(
+""Ú
+Ô
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaM M(
 mvtfr.free.jchecs.core.Move"
 __arrayGet*%
 #
 coupsfr.free.jchecs.core.Move[]*
 ""*
 8
-1*û
-3Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaX X(""ê
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaX X(#
-""*‰
-4Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaV V("—Œ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaV V(+
+1*¥
+3ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaX X(""õ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaX X(#
+""*˙
+4ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaV V("‹Ÿ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaV V(+
 %12void"Cfr.free.jchecs.ai.KillerMoveSorter#put(Lfr/free/jchecs/core/Move;)V*.
 ,
 killer"fr.free.jchecs.ai.KillerMoveSorter*!
 
 mvtfr.free.jchecs.core.Move2put(Lfr/free/jchecs/core/Move;)*
-3*ë
-8Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN N('ùö
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN( N(?(
+3*≤
+8ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN N('®•
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN( N(?(
 %10!fr.free.jchecs.core.MoveGenerator"hfr.free.jchecs.core.MoveGenerator#derive(Lfr/free/jchecs/core/Move;Z)Lfr/free/jchecs/core/MoveGenerator;*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*!
 
 mvtfr.free.jchecs.core.Move*
-""2#derive(Lfr/free/jchecs/core/Move;Z)ÿ
-’
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN O(4
+""2#derive(Lfr/free/jchecs/core/Move;Z)„
+‡
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaN O(4
 
 %11int"Tfr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)I*%#
 !fr.free.jchecs.ai.AlphaBetaEngine**
@@ -144,39 +144,39 @@ __arrayGet*%
 ""*	
 2
 3
-4*’
-10Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaJ J(∂
-≥
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaJ J(
+4*ˆ
+10ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaJ J(¡
+æ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaJ J(
 
 %8void"Ajava.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V*"
 java.util.Arrays*%
 #
 coupsfr.free.jchecs.core.Move[]*
 
-trijava.util.ComparatoràÖ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaK K(
+trijava.util.Comparatorìê
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaK K(
 
 %9void"0fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V*%#
 !fr.free.jchecs.ai.AlphaBetaEngine*
 ""2addHalfmove(I)*
-2*‹
-11Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaH H(«
-ƒ
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaH H(,
+2*Ú
+11ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaH H(“
+œ
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaH H(,
 killer"fr.free.jchecs.ai.KillerMoveSorter"__id*
 ""*
-10*Û
-12Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaF( F(+ﬁ
-€
-Ö
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaF F(+,
+10*â
+12ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaF( F(+È
+Ê
+ê
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.javaF F(+,
 killer"fr.free.jchecs.ai.KillerMoveSorter"__id*
 
 trijava.util.Comparator*

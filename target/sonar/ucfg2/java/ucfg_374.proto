@@ -1,45 +1,45 @@
 
-dfr.free.jchecs.core.MutableBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;("startingBlock*¡
-startingBlockÑ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;(/€
-ÿ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java: :(
+dfr.free.jchecs.core.MutableBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;("startingBlock*‚
+startingBlockè
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;(/Ê
+„
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java: :(
 %3"
 __annotate*
 java.lang.Override*%
 #
-pCasefr.free.jchecs.core.Square≈
-¬
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java;) ;(.#
+pCasefr.free.jchecs.core.Square–
+Õ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java;) ;(.#
 pCasefr.free.jchecs.core.Square"__annotation*
 
 %3*
-1*„
-1Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(ÓÎ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <()	
+1*ö	
+1è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(˘ˆ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <()	
 %0int"%fr.free.jchecs.core.Square#getFile()I*%
 #
-pCasefr.free.jchecs.core.Square2	getFile()ÓÎ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java<+ <(:	
+pCasefr.free.jchecs.core.Square2	getFile()˘ˆ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java<+ <(:	
 %1int"%fr.free.jchecs.core.Square#getRank()I*%
 #
-pCasefr.free.jchecs.core.Square2	getRank()«ƒ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(;
+pCasefr.free.jchecs.core.Square2	getRank()“œ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(;
 %2fr.free.jchecs.core.Piece"Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;*$"
  fr.free.jchecs.core.MutableBoard*
 	
 %0int*
 	
-%1int2getPieceAt(II)"™
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(<!
+%1int2getPieceAt(II)"µ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(<!
 
 %2fr.free.jchecs.core.Piece:#
 pCasefr.free.jchecs.core.SquareB$"

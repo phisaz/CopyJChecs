@@ -1,102 +1,101 @@
 
-Nfr.free.jchecs.ai.MiniMaxEngine#findMin(Lfr/free/jchecs/core/MoveGenerator;I)IÉ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java3 3("6"7*¥
-2É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(∏
-µ
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(
+Nfr.free.jchecs.ai.MiniMaxEngine#findMin(Lfr/free/jchecs/core/MoveGenerator;I)Ié
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java3 3("6"7*’
+2é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(√
+¿
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(
 mvtfr.free.jchecs.core.Move"__id*
-""Â
-‚
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(
+""
+Ì
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java< <(
 mvtfr.free.jchecs.core.Move"
 __arrayGet*%
 #
 coupsfr.free.jchecs.core.Move[]*
 ""*
 4
-1*‘
-4É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java=' =(,öó
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java=' =(>'
+1*Ä	
+4é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java=' =(,•¢
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java=' =(>'
 %6!fr.free.jchecs.core.MoveGenerator"hfr.free.jchecs.core.MoveGenerator#derive(Lfr/free/jchecs/core/Move;Z)Lfr/free/jchecs/core/MoveGenerator;*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*!
 
 mvtfr.free.jchecs.core.Move*
-""2#derive(Lfr/free/jchecs/core/Move;Z)Â
-‚
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java= =(?)
+""2#derive(Lfr/free/jchecs/core/Move;Z)
+Ì
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java= =(?)
 etat!fr.free.jchecs.core.MoveGenerator"__id*)
 '
-%6!fr.free.jchecs.core.MoveGeneratoræ
-ª
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java> >(;	
+%6!fr.free.jchecs.core.MoveGenerator…
+∆
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java> >(;	
 %7int"Nfr.free.jchecs.ai.MiniMaxEngine#findMax(Lfr/free/jchecs/core/MoveGenerator;I)I*#!
 fr.free.jchecs.ai.MiniMaxEngine*+
 )
 etat!fr.free.jchecs.core.MoveGenerator*
 ""*
-2*È
-
-6É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java8 8(¢
-ü
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java8 8(	
+2*´
+6é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java8 8(≠
+™
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java8 8(	
 %2int"__id*
-""ÉÄ
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java:1 :(F
+""éã
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java:1 :(F
 %3boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
 *
-pEtat!fr.free.jchecs.core.MoveGenerator2isWhiteActive()À»
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java: :(G 
+pEtat!fr.free.jchecs.core.MoveGenerator2isWhiteActive()÷”
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java: :(G 
 %4fr.free.jchecs.core.Move[]"Mfr.free.jchecs.core.MoveGenerator#getValidMoves(Z)[Lfr/free/jchecs/core/Move;*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*
 
-%3boolean2getValidMoves(Z)ÿ
-’
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java: :(H#
+%3boolean2getValidMoves(Z)„
+‡
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java: :(H#
 coupsfr.free.jchecs.core.Move[]"__id*"
  
-%4fr.free.jchecs.core.Move[]ÑÅ
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java; ;(!
+%4fr.free.jchecs.core.Move[]èå
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java; ;(!
 
 %5void"0fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V*#!
 fr.free.jchecs.ai.MiniMaxEngine*
 ""2addHalfmove(I)*
-2*ª
-7É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(Ø¨
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(!!
+2*Á
+7é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(∫∑
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(!!
 %0fr.free.jchecs.ai.Heuristic"Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*#!
-fr.free.jchecs.ai.MiniMaxEngine2getHeuristic()ÏÈ
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(9	
+fr.free.jchecs.ai.MiniMaxEngine2getHeuristic()˜Ù
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(9	
 %1int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*#
 !
 %0fr.free.jchecs.ai.Heuristic*,
 *
 pEtat!fr.free.jchecs.core.MoveGenerator*
-""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"é
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(:
-""*ö
-1É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.javaD D("é
-É
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.javaD D(
+""2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)"ô
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java5 5(:
+""*∞
+1é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.javaD D("ô
+é
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.javaD D(
 "":*
 pEtat!fr.free.jchecs.core.MoveGenerator:
 ""B#!

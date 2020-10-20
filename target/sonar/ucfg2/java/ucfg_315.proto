@@ -1,22 +1,22 @@
 
-lfr.free.jchecs.core.MailboxBoard#getQueenTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰ ‰(#"startingBlock*Œ
-2Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java (ß
-§
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java( (6
+lfr.free.jchecs.core.MailboxBoard#getQueenTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰ ‰(#"startingBlock*˙
+2ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java (≤
+Ø
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java( (6
 %5int[]"__id*
-""ô
-ñ
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java (: 
+""§
+°
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java (: 
 %6fr.free.jchecs.core.Square"Afr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;*"
 fr.free.jchecs.core.Square*
-""Ò
-Ó
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java (:
+""¸
+˘
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java (:
 %7"
 __arraySet*%
 #
@@ -25,77 +25,76 @@ __arraySet*%
  
 %6fr.free.jchecs.core.Square*
 2
-1*Õ
-startingBlockÜ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰# ‰(P‡
-›
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java„ „(
+1*Ó
+startingBlockë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰# ‰(PÎ
+Ë
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java„ „(
 %8"
 __annotate*
 java.lang.Override*(
 &
-pOriginefr.free.jchecs.core.Square 
-«
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰1 ‰(9&
+pOriginefr.free.jchecs.core.Square’
+“
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java‰1 ‰(9&
 pOriginefr.free.jchecs.core.Square"__annotation*
 
 %8*
-5*Õ
-
-4Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaË" Ë(#ıÚ
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÍ Í(/	
+5*è
+4ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaË" Ë(#Ä˝
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÍ Í(/	
 %1int"&fr.free.jchecs.core.Square#getIndex()I*(
 &
 pOriginefr.free.jchecs.core.Square2
-getIndex()Ü
-É
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÎ Î()
+getIndex()ë
+é
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÎ Î()
 
 %2void"6fr.free.jchecs.core.MailboxBoard#addBishopTargets(IZ)V*$"
  fr.free.jchecs.core.MailboxBoard*
 ""*
-""Ñ
-Å
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÏ Ï('
+""è
+å
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÏ Ï('
 
 %3void"4fr.free.jchecs.core.MailboxBoard#addRookTargets(IZ)V*$"
  fr.free.jchecs.core.MailboxBoard*
 ""*
-""ŒÀ
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÓ Ó(1"
-%4fr.free.jchecs.core.Square[]"fr.free.jchecs.core.Square[]›
-⁄
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÓ Ó(1#
+""Ÿ÷
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÓ Ó(1"
+%4fr.free.jchecs.core.Square[]"fr.free.jchecs.core.Square[]Ë
+Â
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÓ Ó(1#
 resfr.free.jchecs.core.Square[]"__id*$
 "
 %4fr.free.jchecs.core.Square[]*
 2
-1*˝
-5Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÂ Â(ø
-º
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÂ Â(#
+1*û
+5ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÂ Â( 
+«
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÂ Â(#
 resfr.free.jchecs.core.Square[]"__id*
-""ß
-§
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÁ Á($
+""≤
+Ø
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÁ Á($
 %0int[]"__id*
 ""*
-4*ø
-1Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÙ Ù("∞
-Ü
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÙ Ù(%
+4*’
+1ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÙ Ù("ª
+ë
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaÙ Ù(%
 #
 resfr.free.jchecs.core.Square[]:&
 pOriginefr.free.jchecs.core.Square:

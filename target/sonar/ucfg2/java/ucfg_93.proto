@@ -1,52 +1,52 @@
 
-Ifr.free.jchecs.swg.CapturesPanel$1#getPreferredSize()Ljava/awt/Dimension;Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java^ ^(-"1*ﬂ
-1Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_" _((π
-∂
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_7 _(A
+Ifr.free.jchecs.swg.CapturesPanel$1#getPreferredSize()Ljava/awt/Dimension;è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java^ ^(-"1*¬
+1è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_" _((ƒ
+¡
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_7 _(A
 %0fr.free.jchecs.core.Piece"__id*
-""ŒÀ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_" _(B
+""Ÿ÷
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_" _(B
 %1java.awt.Image"Ufr.free.jchecs.swg.PieceUI#getSmallImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;*
 ""*!
 
-%0fr.free.jchecs.core.Piece2*getSmallImage(Lfr/free/jchecs/core/Piece;)ø
-º
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_ _(C
+%0fr.free.jchecs.core.Piece2*getSmallImage(Lfr/free/jchecs/core/Piece;) 
+«
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java_ _(C
 imgjava.awt.Image"__id*
 
-%1java.awt.Imageöó
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java`% `(7	
+%1java.awt.Image•¢
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java`% `(7	
 %2int"8java.awt.Image#getWidth(Ljava/awt/image/ImageObserver;)I*
 
 imgjava.awt.Image*
-""2(getWidth(Ljava/awt/image/ImageObserver;)úô
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java`9 `(L	
+""2(getWidth(Ljava/awt/image/ImageObserver;)ß§
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java`9 `(L	
 %3int"9java.awt.Image#getHeight(Ljava/awt/image/ImageObserver;)I*
 
 imgjava.awt.Image*
-""2)getHeight(Ljava/awt/image/ImageObserver;)∏µ
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `($
-%4java.awt.Dimension"java.awt.DimensionÊ
-„
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `(M
+""2)getHeight(Ljava/awt/image/ImageObserver;)√¿
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `($
+%4java.awt.Dimension"java.awt.DimensionÒ
+Ó
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `(M
 %5"java.awt.Dimension#<init>(II)V*
 
 %4java.awt.Dimension*
 	
 %2int*
 	
-%3int"£
-Ñ
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `(N
+%3int"Æ
+è
+Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java` `(N
 
 %4java.awt.DimensionB&$
 "fr.free.jchecs.swg.CapturesPanel$1

@@ -1,94 +1,94 @@
 
-4fr.free.jchecs.core.Move#equals(Ljava/lang/Object;)Z|
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java ("startingBlock*Ž
-2~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java† ˆ(4"ˆ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java† ˆ(4
-""*Á
-3~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaˆ ˆ("Ø
-Õ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaˆ ˆ("
+4fr.free.jchecs.core.Move#equals(Ljava/lang/Object;)Z†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java ("startingBlock*¤
+2ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java† ˆ(4"“
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java† ˆ(4
+""*â
+3ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.javaˆ ˆ("ã
+à
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.javaˆ ˆ("
 %8fr.free.jchecs.core.Piece"__id*,**
 fr.free.jchecs.core.Move"
 
-_promotionÛ
-Ø
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.javaˆ& ˆ(2
+_promotionæ
+ã
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.javaˆ& ˆ(2
 %9fr.free.jchecs.core.Piece"__id*/*-
 
 mfr.free.jchecs.core.Move"
 
 _promotion*
-2*ž
-startingBlock|
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java (.Ê
-Ç
-|
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java~ ~(
+2*¿
+startingBlock†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java (.Õ
+Ò
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java~ ~(
 %10"
 __annotate*
 java.lang.Override*
 
-pObjetjava.lang.Object´
-±
-|
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java' (-
+pObjetjava.lang.Object¿
+¼
+†
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java' (-
 pObjetjava.lang.Object"__annotation*
 
 %10*
 10
 12
-1*Â
-5~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java‡ ‡(!×
-Ô
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java‡ ‡(!
+1*ã
+5ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java‡ ‡(!â
+ß
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java‡ ‡(!
 %6fr.free.jchecs.core.Piece"__id*+*)
 fr.free.jchecs.core.Move"
-	_capturedÚ
-×
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java‡% ‡(0
+	_capturedå
+â
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java‡% ‡(0
 %7fr.free.jchecs.core.Piece"__id*.*,
 
 mfr.free.jchecs.core.Move"
 	_captured*
 2
-3*»
-7~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†B †(EÒ
-Ï
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†B †(E 
+3*Ü
+7ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†B †(EÝ
+Ú
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†B †(E 
 %4fr.free.jchecs.core.Square"__id*%*#
 fr.free.jchecs.core.Move"
-_toÕ
-Ò
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†I †(N 
+_toà
+Ý
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†I †(N 
 %5fr.free.jchecs.core.Square"__id*(*&
 
 mfr.free.jchecs.core.Move"
 _to*	
 2
 3
-5*Â
-9~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†* †(0Ô
-Ñ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†* †(0
+5*ã
+9ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†* †(0ß
+Ü
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†* †(0
 %2fr.free.jchecs.core.Piece"__id*(*&
 fr.free.jchecs.core.Move"
-_piece×
-Ô
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java†4 †(<
+_pieceâ
+ß
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java†4 †(<
 %3fr.free.jchecs.core.Piece"__id*+*)
 
 mfr.free.jchecs.core.Move"
@@ -96,24 +96,24 @@ r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 2
 3
 5
-7*
-10~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java…" …((Æ
-Ã
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java… …()
+7*»
+10ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java…" …((Ñ
+Î
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java… …()
 mfr.free.jchecs.core.Move"__id*
 
-pObjetjava.lang.ObjectÔ
-Ñ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java† †( 
+pObjetjava.lang.Objectß
+Ü
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java† †( 
 %0fr.free.jchecs.core.Square"__id*'*%
 fr.free.jchecs.core.Move"
-_from×
-Ô
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java† †($ 
+_fromâ
+ß
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java† †($ 
 %1fr.free.jchecs.core.Square"__id***(
 
 mfr.free.jchecs.core.Move"
@@ -122,16 +122,16 @@ r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 3
 5
 7
-9*
-12~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java ("ˆ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java (
-""*Ž
-1~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java‹ ‹("ˆ
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Move.java‹ ‹(
+9*¥
+12ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java ("“
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java (
+""*¤
+1ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java‹ ‹("“
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java‹ ‹(
 "":
 pObjetjava.lang.ObjectB
 fr.free.jchecs.core.Move

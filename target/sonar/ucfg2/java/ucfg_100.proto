@@ -1,41 +1,41 @@
 
-=fr.free.jchecs.ai.EngineFactory#getNames()[Ljava/lang/String;ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaB B(#"1*Ä
-1ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(0¬
-©
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(0
+=fr.free.jchecs.ai.EngineFactory#getNames()[Ljava/lang/String;Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaB B(#"1*œ
+1Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(0·
+´
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(0
 %0java.util.Map"__id*
-""æã
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(9
+""ñî
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC  C(9
 %1java.util.Set"%java.util.Map#keySet()Ljava/util/Set;*
 
-%0java.util.Map2keySet()¼
-¹
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC C(:
+%0java.util.Map2keySet()Ç
+Ä
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaC C(:
 lstjava.util.Set"__id*
 
-%1java.util.SetËÈ
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD& D(0	
+%1java.util.SetÖÓ
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD& D(0	
 %2int"java.util.Set#size()I*
 
-lstjava.util.Set2size()·´
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(1
-%3java.lang.String[]"java.lang.String[]´±
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(2
+lstjava.util.Set2size()Â¿
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(1
+%3java.lang.String[]"java.lang.String[]¿¼
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(2
 %4java.lang.String[]"=java.util.Set#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*
 
 lstjava.util.Set*
 
-%3java.lang.String[]2toArray([Ljava/lang/Object;)"¢
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(3
+%3java.lang.String[]2toArray([Ljava/lang/Object;)"­
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaD D(3
 
 %4java.lang.String[]B#"!
 fr.free.jchecs.ai.EngineFactory

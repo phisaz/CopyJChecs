@@ -1,28 +1,28 @@
 
-Vfr.free.jchecs.core.AbstractMoveGenerator#getKingSquare(Z)Lfr/free/jchecs/core/Square;é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javad d("2"1*–
-2é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(#Å
-˛
-é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(# 
+Vfr.free.jchecs.core.AbstractMoveGenerator#getKingSquare(Z)Lfr/free/jchecs/core/Square;ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javad d("2"1*Ó
+2ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(#ã
+à
+ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(# 
 %0fr.free.jchecs.core.Square"__id*C*A+
 )fr.free.jchecs.core.AbstractMoveGenerator"
-_whiteKingSquare"µ
-é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f($"
+_whiteKingSquare"ø
+ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f($"
  
-%0fr.free.jchecs.core.Square*–
-1é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i(Å
-˛
-é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( 
+%0fr.free.jchecs.core.Square*Ó
+1ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i(ã
+à
+ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( 
 %1fr.free.jchecs.core.Square"__id*C*A+
 )fr.free.jchecs.core.AbstractMoveGenerator"
-_blackKingSquare"µ
-é
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( "
+_blackKingSquare"ø
+ò
+ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( "
  
 %1fr.free.jchecs.core.Square:
 ""B-+

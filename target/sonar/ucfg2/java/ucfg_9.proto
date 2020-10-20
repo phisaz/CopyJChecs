@@ -1,17 +1,17 @@
 
-Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¥ ¥('"1*«
-1†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(ë
-è
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(!
+Lfr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¥ ¥('"1*Ì
+1‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(ö
+ó
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(!
 %0fr.free.jchecs.ai.Heuristic"__id*4*2"
  fr.free.jchecs.ai.AbstractEngine"
 
-_heuristic"®
-†
-z/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(#
+_heuristic"¹
+‘
+„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java¦ ¦(#
 !
 %0fr.free.jchecs.ai.HeuristicB$"
  fr.free.jchecs.ai.AbstractEngine

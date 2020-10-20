@@ -1,28 +1,28 @@
 
-Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÃ Ã("2"1*ˆ
-2~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(Û
-Ø
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( 
+Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÃ Ã("2"1*©
+2ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(æ
+ã
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( 
 %0fr.free.jchecs.core.Player"__id*.*,
 fr.free.jchecs.core.Game"
-_whitePlayer"¤
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( "
+_whitePlayer"¯
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( "
  
-%0fr.free.jchecs.core.Player*ˆ
-1~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÈ È(Û
-Ø
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÈ È( 
+%0fr.free.jchecs.core.Player*©
+1ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È(æ
+ã
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È( 
 %1fr.free.jchecs.core.Player"__id*.*,
 fr.free.jchecs.core.Game"
-_blackPlayer"¤
-~
-r/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/Game.javaÈ È("
+_blackPlayer"¯
+ˆ
+|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È("
  
 %1fr.free.jchecs.core.Player:
 ""B

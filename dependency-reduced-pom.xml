@@ -97,6 +97,11 @@
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
       </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.7-SNAPSHOT</version>
+      </plugin>
     </plugins>
   </build>
   <dependencies>
@@ -114,14 +119,16 @@
     </dependency>
   </dependencies>
   <properties>
-    <sonar.projectKey>se2-polito_jchecs</sonar.projectKey>
+    <sonar.projectKey>phisaz_CopyJChecs</sonar.projectKey>
     <slf4j.version>1.7.25</slf4j.version>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>4.12</junit.version>
-    <sonar.organization>se2-polito</sonar.organization>
+    <sonar.organization>se2</sonar.organization>
     <jdk.version>1.8</jdk.version>
+    <sonar.coverage.jacoco.xmlReportPaths>target/jacoco.exec</sonar.coverage.jacoco.xmlReportPaths>
     <logback.version>1.2.3</logback.version>
+    <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
   </properties>
 </project>
 

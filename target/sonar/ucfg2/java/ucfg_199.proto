@@ -1,58 +1,58 @@
 
-@fr.free.jchecs.ai.HistorySorter#get(Lfr/free/jchecs/core/Move;)Iƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p("startingBlock*Ä
-startingBlockƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p()Ý
-Ú
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javao o(
+@fr.free.jchecs.ai.HistorySorter#get(Lfr/free/jchecs/core/Move;)IŽ
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p("startingBlock*å
+startingBlockŽ
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p()è
+å
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javao o(
 %5"
 __annotate*
 java.lang.Override*(
 &
 
-pMouvementfr.free.jchecs.core.MoveÇ
-Ä
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p((&
+pMouvementfr.free.jchecs.core.MoveÒ
+Ï
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javap p((&
 
 pMouvementfr.free.jchecs.core.Move"__annotation*
 
 %5*
-1*ß
-1ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q( 
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q(, 
+1*¬
+1Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q(«¨
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q(, 
 %0fr.free.jchecs.core.Square">fr.free.jchecs.core.Move#getFrom()Lfr/free/jchecs/core/Square;*(
 &
 
-pMouvementfr.free.jchecs.core.Move2	getFrom()ìé
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q(7	
+pMouvementfr.free.jchecs.core.Move2	getFrom()÷ô
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq q(7	
 %1int"&fr.free.jchecs.core.Square#getIndex()I*"
  
 %0fr.free.jchecs.core.Square2
-getIndex()œ™
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javar r($ 
+getIndex()§¤
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javar r($ 
 %2fr.free.jchecs.core.Square"<fr.free.jchecs.core.Move#getTo()Lfr/free/jchecs/core/Square;*(
 &
 
-pMouvementfr.free.jchecs.core.Move2getTo()ìé
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javar r(/	
+pMouvementfr.free.jchecs.core.Move2getTo()÷ô
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javar r(/	
 %3int"&fr.free.jchecs.core.Square#getIndex()I*"
  
 %2fr.free.jchecs.core.Square2
-getIndex()¢
-Ÿ
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javas s('	
+getIndex()­
+ª
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javas s('	
 %4int"__id*
-"""Ž
-ƒ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq s((
+"""™
+Ž
+ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.javaq s((
 "":&
 
 pMouvementfr.free.jchecs.core.MoveB#!

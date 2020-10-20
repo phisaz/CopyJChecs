@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.free.jchecs.core.MoveGeneratorTest" time="5.278" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="fr.free.jchecs.core.MoveGeneratorTest" time="3.644" tests="15" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -47,9 +47,9 @@
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/bx/8hmj96dd6kv78y4m2w3dln3h0000gn/T/"/>
     <property name="java.version" value="11.0.5"/>
-    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -68,14 +68,14 @@
   <testcase name="testIsAttacked" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
   <testcase name="testGetValidTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
   <testcase name="testGetKingSquare" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
-  <testcase name="testPlaying" classname="fr.free.jchecs.core.MoveGeneratorTest" time="2.18"/>
+  <testcase name="testPlaying" classname="fr.free.jchecs.core.MoveGeneratorTest" time="1.551"/>
   <testcase name="testGetPawnTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0"/>
   <testcase name="testGetBishopTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
-  <testcase name="testThreadSafety" classname="fr.free.jchecs.core.MoveGeneratorTest" time="3.084"/>
-  <testcase name="testIsCastled" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0"/>
-  <testcase name="testGetKnightTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
+  <testcase name="testThreadSafety" classname="fr.free.jchecs.core.MoveGeneratorTest" time="2.081"/>
+  <testcase name="testIsCastled" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
+  <testcase name="testGetKnightTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0"/>
   <testcase name="testDerive" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0"/>
-  <testcase name="testGetQueenTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
+  <testcase name="testGetQueenTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0"/>
   <testcase name="testGetAllTargets" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
   <testcase name="testGetValidMoves" classname="fr.free.jchecs.core.MoveGeneratorTest" time="0.001"/>
 </testsuite>

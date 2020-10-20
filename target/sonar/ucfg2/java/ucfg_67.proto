@@ -1,24 +1,24 @@
 
-Rfr.free.jchecs.swg.PieceUI#getCursor(Lfr/free/jchecs/core/Piece;)Ljava/awt/Cursor;~
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaN N("1*Ù
-1~
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(Ò
-Ï
-~
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(
+Rfr.free.jchecs.swg.PieceUI#getCursor(Lfr/free/jchecs/core/Piece;)Ljava/awt/Cursor;ˆ
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.javaN N("1*…
+1ˆ
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(Ý
+Ú
+ˆ
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(
 %0java.util.Map"__id*2*0
 fr.free.jchecs.swg.PieceUI"
-_pieceToCursorâ
-ß
-~
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O()
+_pieceToCursorí
+ê
+ˆ
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O()
 %1java.awt.Cursor"__mapGet*
 
 %0java.util.Map*%
 #
-pPiecefr.free.jchecs.core.Piece"™
-~
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(*
+pPiecefr.free.jchecs.core.Piece"¤
+ˆ
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.javaO O(*
 
 %1java.awt.Cursor:#
 pPiecefr.free.jchecs.core.PieceB

@@ -47,9 +47,9 @@
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/bx/8hmj96dd6kv78y4m2w3dln3h0000gn/T/"/>
     <property name="java.version" value="11.0.5"/>
-    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="user.dir" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="sun.os.patch.level" value="unknown"/>

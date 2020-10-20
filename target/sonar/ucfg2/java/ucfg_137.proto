@@ -1,119 +1,119 @@
 
-Hfr.free.jchecs.swg.AboutDialog#getLicensePanel()Ljavax/swing/JComponent;Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaW+ W(:"3*∑
-2Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY# Y(4¿Ω
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY' Y(2
-%1javax.swing.JEditorPane"javax.swing.JEditorPane“
-œ
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY# Y(4
+Hfr.free.jchecs.swg.AboutDialog#getLicensePanel()Ljavax/swing/JComponent;ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaW+ W(:"3*Á
+2ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY# Y(4À»
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY' Y(2
+%1javax.swing.JEditorPane"javax.swing.JEditorPane›
+⁄
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY# Y(4
 %2"!javax.swing.JEditorPane#<init>()V*
 
-%1javax.swing.JEditorPaneŒ
-À
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY Y(5
+%1javax.swing.JEditorPaneŸ
+÷
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaY Y(5
 epjavax.swing.JEditorPane"__id*
 
-%1javax.swing.JEditorPane˛˚
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaZ Z(!
+%1javax.swing.JEditorPaneâÜ
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaZ Z(!
 
 %3void"/javax.swing.text.JTextComponent#setEditable(Z)V*
 
 epjavax.swing.JEditorPane*
-""2setEditable(Z)•¢
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java[ [(*
+""2setEditable(Z)∞≠
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java[ [(*
 
 %4void";javax.swing.JEditorPane#setContentType(Ljava/lang/String;)V*
 
 epjavax.swing.JEditorPane*
-	text/html2"setContentType(Ljava/lang/String;)∫
-∑
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java\" \(K
+	text/html2"setContentType(Ljava/lang/String;)≈
+¬
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java\" \(K
 %5java.lang.String"Tfr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;*$""
  fr.free.jchecs.swg.ResourceUtils*
-dialog.about.url.licenseƒ
-¡
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java\ \(L
+dialog.about.url.licenseœ
+Ã
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java\ \(L
 cheminjava.lang.String"__id*
 
-%5java.lang.String¢ü
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java^ ^(3
+%5java.lang.String≠™
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java^ ^(3
 %6java.net.URL"=java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;*
 ""*
 
-cheminjava.lang.String2getResource(Ljava/lang/String;)ÍÁ
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java]) ](62
-%7,fr.free.jchecs.swg.AboutDialog$LicenseLoader",fr.free.jchecs.swg.AboutDialog$LicenseLoader⁄
-◊
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java]% ^(4
+cheminjava.lang.String2getResource(Ljava/lang/String;)ıÚ
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java]) ](62
+%7,fr.free.jchecs.swg.AboutDialog$LicenseLoader",fr.free.jchecs.swg.AboutDialog$LicenseLoaderÂ
+‚
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java]% ^(4
 %8"]fr.free.jchecs.swg.AboutDialog$LicenseLoader#<init>(Ljavax/swing/JEditorPane;Ljava/net/URL;)V*4
 2
 %7,fr.free.jchecs.swg.AboutDialog$LicenseLoader*
 
 epjavax.swing.JEditorPane*
 
-%6java.net.URL¯
-ı
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java] ^(52
+%6java.net.URLÉ
+Ä
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java] ^(52
 ll,fr.free.jchecs.swg.AboutDialog$LicenseLoader"__id*4
 2
-%7,fr.free.jchecs.swg.AboutDialog$LicenseLoaderÓÎ
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.java_ _(
+%7,fr.free.jchecs.swg.AboutDialog$LicenseLoader˘ˆ
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java_ _(
 
 %9void"java.lang.Thread#start()V*4
 2
-ll,fr.free.jchecs.swg.AboutDialog$LicenseLoader2start()¡æ
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa! a(,
-%10javax.swing.JScrollPane"javax.swing.JScrollPaneâ
-Ü
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa a(0
+ll,fr.free.jchecs.swg.AboutDialog$LicenseLoader2start()Ã…
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa! a(,
+%10javax.swing.JScrollPane"javax.swing.JScrollPaneî
+ë
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa a(0
 %11"5javax.swing.JScrollPane#<init>(Ljava/awt/Component;)V* 
 
 %10javax.swing.JScrollPane*
 
-epjavax.swing.JEditorPaneÊ
-„
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa a(04 
+epjavax.swing.JEditorPaneÒ
+Ó
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaa a(04 
 fr.free.jchecs.swg.AboutDialog"
 S_licensePanel"__id* 
 
 %10javax.swing.JScrollPane*
-1*˜
-3Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaX X(‰
-·
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javaX X(
+1*ç
+3ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaX X(Ô
+Ï
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javaX X(
 %0javax.swing.JComponent"__id*6*4 
 fr.free.jchecs.swg.AboutDialog"
 S_licensePanel*
 2
-1*ô
-1Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(Â
-‚
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(
+1*∫
+1ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(
+Ì
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(
 %12javax.swing.JComponent"__id*6*4 
 fr.free.jchecs.swg.AboutDialog"
-S_licensePanel"¶
-Ç
-x/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(
+S_licensePanel"±
+ç
+Ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.javad d(
 
 %12javax.swing.JComponentB"" 
 fr.free.jchecs.swg.AboutDialog

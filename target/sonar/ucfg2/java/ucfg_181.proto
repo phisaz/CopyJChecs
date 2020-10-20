@@ -1,21 +1,21 @@
 
-=fr.free.jchecs.core.AbstractBoard#equals(Ljava/lang/Object;)Zá
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java§ §("startingBlock*¢
-2á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java∂ ∂( "í
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java∂ ∂(!
-""*ê
-3á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ µ(∫∑
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ µ($
+=fr.free.jchecs.core.AbstractBoard#equals(Ljava/lang/Object;)Zí
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java§ §("startingBlock*∏
+2í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java∂ ∂( "ù
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java∂ ∂(!
+""*±
+3í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ µ(≈¬
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ µ($
 %4fr.free.jchecs.core.Piece"Cfr.free.jchecs.core.Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;*%#
 !fr.free.jchecs.core.AbstractBoard*
 ""*
-""2getPieceAt(II)µ≤
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ( µ(:
+""2getPieceAt(II)¿Ω
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaµ( µ(:
 %5fr.free.jchecs.core.Piece"Cfr.free.jchecs.core.Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;* 
 
 ofr.free.jchecs.core.Board*
@@ -24,91 +24,91 @@
 2
 3
 5
-1*¿
-startingBlocká
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java§ §(.’
-“
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java£ £(
+1*·
+startingBlockí
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java§ §(.‡
+›
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java£ £(
 %7"
 __annotate*
 java.lang.Override*
 
-pObjetjava.lang.Objectø
-º
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java§' §(-
+pObjetjava.lang.Object 
+«
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java§' §(-
 pObjetjava.lang.Object"__annotation*
 
 %7*
 9
 10
-12*¡
-5á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¥ ¥(#¶
-£
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¥ ¥(#	
+12*◊
+5í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¥ ¥(#±
+Æ
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¥ ¥(#	
 %3int"__id*
 ""*	
 3
 5
-1*í
-7á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java±  ±(&—
-Œ
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java± ±('
+1*≥
+7í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java±  ±(&‹
+Ÿ
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java± ±('
 ofr.free.jchecs.core.Board"__id*
 
-pObjetjava.lang.Object¶
-£
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java≥ ≥(	
+pObjetjava.lang.Object±
+Æ
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java≥ ≥(	
 %2int"__id*
 ""*
 5
-1*¢
-8á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÆ Æ("í
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÆ Æ(
-""*ı
-9á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(˙˜
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(	
+1*∏
+8í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÆ Æ("ù
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÆ Æ(
+""*ñ
+9í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(ÖÇ
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(	
 %0int"-fr.free.jchecs.core.AbstractBoard#hashCode()I*%#
 !fr.free.jchecs.core.AbstractBoard2
-hashCode()‡›
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(+	
+hashCode()ÎË
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java≠ ≠(+	
 %1int"java.lang.Object#hashCode()I*
 
 pObjetjava.lang.Object2
 hashCode()*
 7
-8*£
-10á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java™ ™("í
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java™ ™(
-""*£
-12á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¶ ¶("í
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.java¶ ¶(
-""*á
-1á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª(‚ﬂ
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª( 
+8*π
+10í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java™ ™("ù
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java™ ™(
+""*π
+12í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¶ ¶("ù
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¶ ¶(
+""*®
+1í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª(ÌÍ
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª( 
 %6boolean"Nfr.free.jchecs.core.AbstractBoard#equalsInternal(Lfr/free/jchecs/core/Board;)Z*%#
 !fr.free.jchecs.core.AbstractBoard* 
 
-ofr.free.jchecs.core.Board2+equalsInternal(Lfr/free/jchecs/core/Board;)"í
-á
-{/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª(!
+ofr.free.jchecs.core.Board2+equalsInternal(Lfr/free/jchecs/core/Board;)"ù
+í
+Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaª ª(!
 "":
 pObjetjava.lang.ObjectB%#
 !fr.free.jchecs.core.AbstractBoard

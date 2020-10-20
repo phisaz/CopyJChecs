@@ -1,22 +1,22 @@
 
-Efr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)ZÄ
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ Ü("6*î
-3Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaâ â("ã
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaâ â(
-""*‡
-4Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à(!Á
-‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à(!"
+Efr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)Zä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaÜ Ü("6*®
+3ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaâ â("ï
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaâ â(
+""*˛
+4ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à(!Ò
+Ó
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à(!"
 %1fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
-_availableTargets‚
-ﬂ
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à($ 
+_availableTargetsÏ
+È
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaà à($ 
 %2fr.free.jchecs.core.Square"
 __arrayGet*$
 "
@@ -24,21 +24,21 @@ __arrayGet*$
 ""*	
 3
 4
-1*¯
-6Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaá á(&Á
-‰
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaá á(&"
+1*å
+6ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaá á(&Ò
+Ó
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaá á(&"
 %0fr.free.jchecs.core.Square[]"__id*5*3
 fr.free.jchecs.swg.BoardUI"
 _availableTargets*
 4
-1*î
-1Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç("ã
-Ä
-t/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç(
+1*®
+1ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç("ï
+ä
+~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaç ç(
 "":#
 pCasefr.free.jchecs.core.SquareB
 fr.free.jchecs.swg.BoardUI

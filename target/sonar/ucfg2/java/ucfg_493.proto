@@ -1,66 +1,66 @@
 
-.fr.free.jchecs.ai.XBoardAdapter#testResult(Z)ZÖ
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java„ „(%"4*Î
-2Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(µ
-≤
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(
+.fr.free.jchecs.ai.XBoardAdapter#testResult(Z)Zê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java„ „(%"4*å
+2ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(¿
+Ω
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(
 %24java.io.PrintStream"__id*
-""†ù
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(#
+""´®
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(#
 %25void"0java.io.PrintStream#println(Ljava/lang/String;)V*
 
 %24java.io.PrintStream*
 
 repjava.lang.String2println(Ljava/lang/String;)*
-1*Á
-14Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@–
-Õ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@
+1*˝
+14ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@€
+ÿ
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@
 repjava.lang.String"__id*$"
  1/2-1/2 {Drawn by 50 moves rule}*
 2
-1*ï
-15Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4π
-∂
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4
+1*É
+15ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4ƒ
+¡
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4
 %8fr.free.jchecs.core.Game"__id*
-""™ß
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(?'
+""µ≤
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(?'
 %9!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;* 
 
 %8fr.free.jchecs.core.Game2
-getBoard()Ë
-Â
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ Ô(@*
+getBoard()Û
+
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ Ô(@*
 dispo!fr.free.jchecs.core.MoveGenerator"__id*)
 '
-%9!fr.free.jchecs.core.MoveGenerator∫
-∑
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (
+%9!fr.free.jchecs.core.MoveGenerator≈
+¬
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (
 %10fr.free.jchecs.ai.Engine"__id*
-""®•
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (-"
+""≥∞
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (-"
 %11fr.free.jchecs.ai.Heuristic"Dfr.free.jchecs.ai.Engine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*!
 
-%10fr.free.jchecs.ai.Engine2getHeuristic()ÜÉ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒ- Ò(B
+%10fr.free.jchecs.ai.Engine2getHeuristic()ëé
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒ- Ò(B
 %12boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
 *
-dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()˙˜
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java Ò(C
+dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()ÖÇ
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java Ò(C
 
 %13int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*$
 "
@@ -68,14 +68,14 @@ y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 *
 dispo!fr.free.jchecs.core.MoveGenerator*
 
-%12boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ò(J$
+%12boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z) 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ò(J$
 %14fr.free.jchecs.core.PieceType"__id*
-""ˆÛ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ú('
+""Å˛
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ú('
 
 %15int")fr.free.jchecs.core.PieceType#getValue()I*&
 $
@@ -84,59 +84,59 @@ getValue()*
 
 2
 14
-1*≠
-4Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(≤
-Ø
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(
+1*¶
+4ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(Ω
+∫
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(
 repjava.lang.String"__id*
-""π
-∂
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(
+""ƒ
+¡
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(
 %0fr.free.jchecs.core.Game"__id*
-""§°
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(*$
+""Ø¨
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(*$
 %1fr.free.jchecs.core.Game$State"Cfr.free.jchecs.core.Game#getState()Lfr/free/jchecs/core/Game$State;* 
 
 %0fr.free.jchecs.core.Game2
-getState()·
-ﬁ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(+&
+getState()Ï
+È
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(+&
 etatfr.free.jchecs.core.Game$State"__id*&
 $
-%1fr.free.jchecs.core.Game$Stateø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Ë($
+%1fr.free.jchecs.core.Game$State 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Ë($
 %2fr.free.jchecs.core.Game$State"__id*
-""ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÎ Î(&$
+"" 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÎ Î(&$
 %3fr.free.jchecs.core.Game$State"__id*
-""ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˜ ˜(+$
+"" 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˜ ˜(+$
 %4fr.free.jchecs.core.Game$State"__id*
-""ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÑ Ñ($
+"" 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÑ Ñ($
 %5fr.free.jchecs.core.Game$State"__id*
-""ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ Ü($
+"" 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ Ü($
 %6fr.free.jchecs.core.Game$State"__id*
-""ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ â($
+"" 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ â($
 %7fr.free.jchecs.core.Game$State"__id*
 ""*
 2
@@ -145,79 +145,79 @@ y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 17
 7
 11
-1*ÿ
-17Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Í(¡
-æ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÈ È()
+1*Ó
+17ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Í(Ã
+…
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÈ È()
 repjava.lang.String"__id*
 0-1 {Black mates}*
 2
-1*◊
-6Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ ã(¡
-æ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaä ä()
+1*Ì
+6ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ ã(Ã
+…
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaä ä()
 repjava.lang.String"__id*
 1-0 {White mates}*
 2
-1*Ÿ
-7Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ à(√
-¿
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaá á(+
+1*Ô
+7ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ à(Œ
+À
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaá á(+
 repjava.lang.String"__id*
 1/2-1/2 {Stalemate}*
 2
-1*Î
-10Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(D‘
-—
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(D
+1*Å
+10ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(Dﬂ
+‹
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(D
 repjava.lang.String"__id*(&
 $1/2-1/2 {Drawn by triple repetition}*
 2
-1*ô
-11Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4∫
-∑
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4
+1*á
+11ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4≈
+¬
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4
 %16fr.free.jchecs.core.Game"__id*
-""¨©
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(?(
+""∑¥
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(?(
 %17!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;*!
 
 %16fr.free.jchecs.core.Game2
-getBoard()È
-Ê
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸ ¸(@*
+getBoard()Ù
+Ò
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸ ¸(@*
 dispo!fr.free.jchecs.core.MoveGenerator"__id**
 (
-%17!fr.free.jchecs.core.MoveGenerator∫
-∑
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(
+%17!fr.free.jchecs.core.MoveGenerator≈
+¬
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(
 %18fr.free.jchecs.ai.Engine"__id*
-""®•
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(-"
+""≥∞
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(-"
 %19fr.free.jchecs.ai.Heuristic"Dfr.free.jchecs.ai.Engine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*!
 
-%18fr.free.jchecs.ai.Engine2getHeuristic()ÜÉ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛- ˛(B
+%18fr.free.jchecs.ai.Engine2getHeuristic()ëé
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛- ˛(B
 %20boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
 *
-dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()˙˜
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˛(C
+dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()ÖÇ
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˛(C
 
 %21int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*$
 "
@@ -225,14 +225,14 @@ y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main
 *
 dispo!fr.free.jchecs.core.MoveGenerator*
 
-%20boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)ø
-º
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˛(M$
+%20boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z) 
+«
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˛(M$
 %22fr.free.jchecs.core.PieceType"__id*
-""ˆÛ
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˇ('
+""Å˛
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˇ('
 
 %23int")fr.free.jchecs.core.PieceType#getValue()I*&
 $
@@ -241,11 +241,11 @@ getValue()*
 
 2
 10
-1*û
-1Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î("ê
-Ö
-y/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/bitbucket/JCHECS/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î(
+1*¥
+1ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î("õ
+ê
+É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î(
 "":
 ""B#"!
 fr.free.jchecs.ai.XBoardAdapter
