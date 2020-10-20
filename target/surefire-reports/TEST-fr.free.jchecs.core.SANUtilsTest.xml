@@ -65,5 +65,5 @@
   </properties>
   <testcase name="testToSAN" classname="fr.free.jchecs.core.SANUtilsTest" time="0"/>
   <testcase name="testSANValidator" classname="fr.free.jchecs.core.SANUtilsTest" time="0"/>
-  <testcase name="testToMove" classname="fr.free.jchecs.core.SANUtilsTest" time="0.003"/>
+  <testcase name="testToMove" classname="fr.free.jchecs.core.SANUtilsTest" time="0.002"/>
 </testsuite>

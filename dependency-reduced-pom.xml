@@ -126,7 +126,7 @@
     <junit.version>4.12</junit.version>
     <sonar.organization>se2</sonar.organization>
     <jdk.version>1.8</jdk.version>
-    <sonar.coverage.jacoco.xmlReportPaths>target/jacoco.exec</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>target/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <logback.version>1.2.3</logback.version>
     <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
   </properties>
