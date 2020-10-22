@@ -1,0 +1,9 @@
+2020-10-21 15:46:01,783 WARN  [      main] fr.free.jchecs.swg.SwingUI                        :728  - Config unavailable.
+java.io.FileNotFoundException: /Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/jChecs.config (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at fr.free.jchecs.swg.SwingUI.initProperties(SwingUI.java:724)
+	at fr.free.jchecs.swg.SwingUI.<init>(SwingUI.java:421)
+	at fr.free.jchecs.swg.Start.main(Start.java:44)
