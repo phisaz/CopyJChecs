@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BoardUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">BoardUI.java</span></div><h1>BoardUI.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Stroke;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.awt.Image.SCALE_SMOOTH;
+import static java.awt.image.BufferedImage.TYPE_INT_RGB;
+
+import javax.swing.ImageIcon;
+import javax.swing.JComponent;
+
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+import fr.free.jchecs.core.Piece;
+import fr.free.jchecs.core.Square;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Composant graphique représentant un échiquier.
+ *
+ * @author David Cotton
+ */
+final class BoardUI extends JComponent {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = 6200021664655625524L;
+
+    /**
+     * Epaisseur par défaut de la bordure.
+     */
+    private static final int DEFAULT_BORDER_THICKNESS = 16;
+
+    /**
+     * Couleur de la case survolée par la souris, si activable.
+     */
+<span class="nc" id="L73">    private static final Color OVER_ENABLED_COLOR = new Color(0, 127, 0, 64);</span>
+
+    /**
+     * Couleur de la case survolée par la souris, si non activable.
+     */
+<span class="nc" id="L78">    private static final Color OVER_DISABLED_COLOR = new Color(127, 0, 0, 64);</span>
+
+    /**
+     * Couleur d'une case destination possible.
+     */
+<span class="nc" id="L83">    private static final Color AVAILABLE_COLOR = new Color(127, 127, 0, 64);</span>
+
+    /**
+     * Couleur d'une case destination sélectionnée.
+     */
+<span class="nc" id="L88">    private static final Color SELECTED_COLOR = new Color(0, 255, 0, 64);</span>
+
+    /**
+     * Couleur de mise en évidence d'un mouvement.
+     */
+<span class="nc" id="L93">    private static final Color HIGHLIGHTED_MOVE_COLOR = new Color(160, 160,</span>
+<span class="nc" id="L94">            216, 192);</span>
+
+    /**
+     * Type de ligne pour la mise en évidence d'un mouvement.
+     */
+<span class="nc" id="L99">    private static final Stroke HIGHLIGHTED_MOVE_STROKE = new BasicStroke(4,</span>
+<span class="nc" id="L100">            BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);</span>
+
+    /**
+     * Liste des objets à l'écoute des mouvements déclenchés par le composant.
+     */
+<span class="nc" id="L105">    private final List&lt;MoveListener&gt; _moveListeners = new ArrayList&lt;&gt;(</span>
+<span class="nc" id="L106">            2);</span>
+
+    /**
+     * Objet chargé du rendu des pièces.
+     */
+    private final PieceUI _pieceUI;
+
+    /**
+     * Buffer accueillant l'image composant le fond de l'échiquier.
+     */
+    private transient Image _boardBackground;
+
+    /**
+     * Longueur du côté d'une case.
+     */
+    private int _cellSideLength;
+
+    /**
+     * Epaisseur actuelle des bordures.
+     */
+<span class="nc" id="L126">    private int _borderThickness = DEFAULT_BORDER_THICKNESS;</span>
+
+    /**
+     * Etat de la partie représentée par le composant.
+     */
+    private MoveGenerator _board;
+
+    /**
+     * Numéro de l'apparence du plateau.
+     */
+    private int _boardLF;
+
+    /**
+     * Numéro de l'apparence des pièces.
+     */
+    private int _piecesLF;
+
+    /**
+     * Case sur laquelle se trouve la souris (peut être à null).
+     */
+    private Square _overSquare;
+
+    /**
+     * Case sélectionnée (peut être à null).
+     */
+    private Square _selectedSquare;
+
+    /**
+     * Mouvement mis en évidence (peut être à null).
+     */
+    private Move _highLightedMove;
+
+    /**
+     * Drapeau indiquant si le dernier mouvement doit être mis en évidence.
+     */
+<span class="nc" id="L161">    private boolean _highlightLastMove = true;</span>
+
+    /**
+     * Drapeau indiquant si les mouvements valides doivent être surlignés.
+     */
+<span class="nc" id="L166">    private boolean _highlightValids = true;</span>
+
+    /**
+     * Drapeau indiquant si la vue doit être inversée.
+     */
+    private boolean _flipView;
+
+    /**
+     * Liste des cases cibles valides à partir de la case survolée ou
+     * sélectionnée (peut être à null).
+     */
+    private Square[] _availableTargets;
+
+    /**
+     * Instancie un nouveau panneau d'affichage d'échiquier.
+     *
+     * @param pPartie Définition de partie liée au composant.
+     * @param pRendu  Objet chargé du rendu des pièces.
+     */
+<span class="nc" id="L185">    BoardUI(final Game pPartie, final PieceUI pRendu) {</span>
+<span class="nc" id="L186">        _pieceUI = pRendu;</span>
+<span class="nc" id="L187">        setCellSideLength(64);</span>
+
+<span class="nc" id="L189">        setBoard(pPartie.getBoard());</span>
+
+<span class="nc" id="L191">        final MouseAdapter ma = new BoardMouseAdapter(this);</span>
+<span class="nc" id="L192">        addMouseListener(ma);</span>
+<span class="nc" id="L193">        addMouseMotionListener(ma);</span>
+
+<span class="nc" id="L195">        pPartie.addPropertyChangeListener(&quot;position&quot;,</span>
+<span class="nc" id="L196">                new PropertyChangeListener() {</span>
+                    /**
+                     * Réagit au changement dans la définition de la partie.
+                     *
+                     * @param pEvt
+                     *            Evènement signalant le changement.
+                     */
+                    @Override
+                    public void propertyChange(final PropertyChangeEvent pEvt) {
+<span class="nc" id="L205">                        setBoard(pPartie.getBoard());</span>
+<span class="nc" id="L206">                        setHighlightedMove(pPartie.getCurrentMove());</span>
+<span class="nc" id="L207">                    }</span>
+                });
+
+<span class="nc" id="L210">        clearState();</span>
+<span class="nc" id="L211">    }</span>
+
+    /**
+     * Ajoute un objet à l'écoute des mouvements déclenchés par le composant.
+     *
+     * @param pEcouteur Objet à l'écoute des mouvements.
+     */
+    void addMoveListener(final MoveListener pEcouteur) {
+<span class="nc bnc" id="L219" title="All 2 branches missed.">        if (!_moveListeners.contains(pEcouteur)) {</span>
+<span class="nc" id="L220">            _moveListeners.add(pEcouteur);</span>
+        }
+<span class="nc" id="L222">    }</span>
+
+    /**
+     * Remet à zéro les états interne du composant.
+     */
+    private void clearState() {
+<span class="nc" id="L228">        _overSquare = null;</span>
+<span class="nc" id="L229">        _selectedSquare = null;</span>
+<span class="nc" id="L230">        _availableTargets = null;</span>
+
+<span class="nc" id="L232">        setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));</span>
+
+<span class="nc" id="L234">        repaint();</span>
+<span class="nc" id="L235">    }</span>
+
+    /**
+     * Emet un évènement signalant un mouvement.
+     *
+     * @param pMouvement Mouvement à signaler.
+     */
+    private void fireMoveEvent(final Move pMouvement) {
+<span class="nc" id="L243">        final MoveEvent evt = new MoveEvent(this, pMouvement);</span>
+<span class="nc bnc" id="L244" title="All 2 branches missed.">        for (final MoveListener l : _moveListeners) {</span>
+<span class="nc" id="L245">            l.moved(evt);</span>
+        }
+<span class="nc" id="L247">    }</span>
+
+    /**
+     * Renvoi l'image composant le fond de l'échiquier.
+     *
+     * @return Image représentant le fond de l'échiquier.
+     */
+    private Image getBoardBackground() {
+<span class="nc bnc" id="L255" title="All 2 branches missed.">        if (_boardBackground == null) {</span>
+<span class="nc" id="L256">            final String lf = &quot;lf&quot; + _boardLF + &quot;/&quot;;</span>
+<span class="nc" id="L257">            final int dimCase = getCellSideLength();</span>
+<span class="nc" id="L258">            Image tmpImg = getImageIcon(lf + &quot;bs.jpg&quot;).getImage();</span>
+            // getScaledInstance() est asynchrone : l'ImageIcon force une
+            // synchronisation.
+<span class="nc" id="L261">            final Image caseNoire = new ImageIcon(tmpImg.getScaledInstance(</span>
+<span class="nc" id="L262">                    dimCase, dimCase, SCALE_SMOOTH)).getImage();</span>
+<span class="nc" id="L263">            tmpImg = getImageIcon(lf + &quot;ws.jpg&quot;).getImage();</span>
+            // getScaledInstance() est asynchrone : l'ImageIcon force une
+            // synchronisation.
+<span class="nc" id="L266">            final Image caseBlanche = new ImageIcon(tmpImg.getScaledInstance(</span>
+<span class="nc" id="L267">                    dimCase, dimCase, SCALE_SMOOTH)).getImage();</span>
+<span class="nc" id="L268">            final int cote = getSideLength();</span>
+<span class="nc" id="L269">            final BufferedImage fond = new BufferedImage(cote, cote,</span>
+<span class="nc" id="L270">                    TYPE_INT_RGB);</span>
+<span class="nc" id="L271">            final Graphics2D g2d = fond.createGraphics();</span>
+<span class="nc bnc" id="L272" title="All 2 branches missed.">            if (_borderThickness &gt; 0) {</span>
+<span class="nc" id="L273">                g2d.drawImage(caseNoire, _borderThickness - dimCase,</span>
+<span class="nc" id="L274">                        _borderThickness - dimCase, null);</span>
+<span class="nc" id="L275">                g2d.drawImage(caseNoire, cote - _borderThickness, cote</span>
+<span class="nc" id="L276">                        - _borderThickness, null);</span>
+<span class="nc" id="L277">                g2d.drawImage(caseBlanche, cote - _borderThickness,</span>
+<span class="nc" id="L278">                        _borderThickness - dimCase, null);</span>
+<span class="nc" id="L279">                g2d.drawImage(caseBlanche, _borderThickness - dimCase, cote</span>
+<span class="nc" id="L280">                        - _borderThickness, null);</span>
+
+<span class="nc" id="L282">                g2d.setColor(Color.WHITE);</span>
+<span class="nc" id="L283">                g2d.fillRect(_borderThickness, 0, cote - 2 * _borderThickness,</span>
+<span class="nc" id="L284">                        _borderThickness);</span>
+<span class="nc" id="L285">                g2d.fillRect(_borderThickness, cote - _borderThickness, cote</span>
+<span class="nc" id="L286">                        - 2 * _borderThickness, _borderThickness);</span>
+<span class="nc" id="L287">                g2d.fillRect(0, _borderThickness, _borderThickness, cote - 2</span>
+<span class="nc" id="L288">                        * _borderThickness);</span>
+<span class="nc" id="L289">                g2d.fillRect(cote - _borderThickness, _borderThickness,</span>
+<span class="nc" id="L290">                        _borderThickness, cote - 2 * _borderThickness);</span>
+            }
+
+<span class="nc" id="L293">            boolean blanc = true;</span>
+<span class="nc bnc" id="L294" title="All 2 branches missed.">            for (int y = _borderThickness; y &lt; (cote - dimCase); y += dimCase) {</span>
+<span class="nc bnc" id="L295" title="All 2 branches missed.">                for (int x = _borderThickness; x &lt; (cote - dimCase); x += dimCase) {</span>
+<span class="nc bnc" id="L296" title="All 2 branches missed.">                    if (blanc) {</span>
+<span class="nc" id="L297">                        g2d.drawImage(caseBlanche, x, y, null);</span>
+<span class="nc" id="L298">                    } else {</span>
+<span class="nc" id="L299">                        g2d.drawImage(caseNoire, x, y, null);</span>
+                    }
+<span class="nc bnc" id="L301" title="All 2 branches missed.">                    blanc = !blanc;</span>
+                }
+<span class="nc bnc" id="L303" title="All 2 branches missed.">                blanc = !blanc;</span>
+            }
+
+<span class="nc" id="L306">            g2d.setColor(Color.BLACK);</span>
+<span class="nc" id="L307">            g2d.drawRect(0, 0, cote - 1, cote - 1);</span>
+<span class="nc bnc" id="L308" title="All 2 branches missed.">            for (int i = _borderThickness; i &lt; cote; i += dimCase) {</span>
+<span class="nc" id="L309">                g2d.drawLine(i, 0, i, cote);</span>
+<span class="nc" id="L310">                g2d.drawLine(0, i, cote, i);</span>
+            }
+
+<span class="nc bnc" id="L313" title="All 2 branches missed.">            if (_borderThickness &gt; 0) {</span>
+<span class="nc" id="L314">                final FontMetrics fm = g2d.getFontMetrics();</span>
+<span class="nc" id="L315">                final int hFonte = fm.getHeight();</span>
+<span class="nc" id="L316">                final int dyCol = (_borderThickness - hFonte) / 2;</span>
+<span class="nc bnc" id="L317" title="All 2 branches missed.">                for (int i = FILE_COUNT - 1; i &gt;= 0; i--) {</span>
+                    final char cCol;
+<span class="nc bnc" id="L319" title="All 2 branches missed.">                    if (_flipView) {</span>
+<span class="nc" id="L320">                        cCol = (char) ('h' - i);</span>
+<span class="nc" id="L321">                    } else {</span>
+<span class="nc" id="L322">                        cCol = (char) ('a' + i);</span>
+                    }
+<span class="nc" id="L324">                    final String col = Character.toString(cCol);</span>
+<span class="nc" id="L325">                    final int dxCol = _borderThickness</span>
+<span class="nc" id="L326">                            + (dimCase - fm.charWidth(cCol)) / 2;</span>
+<span class="nc" id="L327">                    g2d.drawString(col, i * dimCase + dxCol, _borderThickness</span>
+<span class="nc" id="L328">                            - dyCol - 3);</span>
+<span class="nc" id="L329">                    g2d.drawString(col, i * dimCase + dxCol, cote - dyCol - 4);</span>
+                }
+<span class="nc" id="L331">                final int dyLig = _borderThickness + (dimCase - hFonte) / 2</span>
+<span class="nc" id="L332">                        + hFonte - 1;</span>
+<span class="nc bnc" id="L333" title="All 2 branches missed.">                for (int i = RANK_COUNT - 1; i &gt;= 0; i--) {</span>
+                    final char cLig;
+<span class="nc bnc" id="L335" title="All 2 branches missed.">                    if (_flipView) {</span>
+<span class="nc" id="L336">                        cLig = (char) ('1' + i);</span>
+<span class="nc" id="L337">                    } else {</span>
+<span class="nc" id="L338">                        cLig = (char) (('0' + RANK_COUNT) - i);</span>
+                    }
+<span class="nc" id="L340">                    final String lig = Character.toString(cLig);</span>
+<span class="nc" id="L341">                    final int dxLig = (_borderThickness - fm.charWidth(cLig)) / 2;</span>
+<span class="nc" id="L342">                    g2d.drawString(lig, dxLig, i * dimCase + dyLig);</span>
+<span class="nc" id="L343">                    g2d.drawString(lig, cote - _borderThickness + dxLig, i</span>
+<span class="nc" id="L344">                            * dimCase + dyLig);</span>
+                }
+            }
+<span class="nc" id="L347">            g2d.dispose();</span>
+
+<span class="nc" id="L349">            _boardBackground = fond;</span>
+        }
+
+<span class="nc" id="L352">        return _boardBackground;</span>
+    }
+
+    /**
+     * Renvoi la longueur d'un côté de case.
+     *
+     * @return Longueur du côté d'une case.
+     */
+    private int getCellSideLength() {
+<span class="nc" id="L361">        return _cellSideLength;</span>
+    }
+
+    /**
+     * Renvoi la dimension préférée par le composant.
+     *
+     * @return Dimension par défaut.
+     */
+    @Override
+    public Dimension getPreferredSize() {
+<span class="nc" id="L371">        final int cote = getSideLength();</span>
+<span class="nc" id="L372">        return new Dimension(cote, cote);</span>
+    }
+
+    /**
+     * Renvoi la longueur d'un côté du composant.
+     *
+     * @return Longueur d'un côté du composant.
+     */
+    private int getSideLength() {
+<span class="nc" id="L381">        return 2 * _borderThickness + RANK_COUNT * getCellSideLength() + 1;</span>
+    }
+
+    /**
+     * Indique si une case est dans les cibles possibles.
+     *
+     * @param pCase Case à tester.
+     * @return Vrai si la case est une cible possible.
+     */
+    private boolean isAvailable(final Square pCase) {
+<span class="nc bnc" id="L391" title="All 2 branches missed.">        for (int i = _availableTargets.length - 1; i &gt;= 0; i--) {</span>
+<span class="nc bnc" id="L392" title="All 2 branches missed.">            if (_availableTargets[i] == pCase) {</span>
+<span class="nc" id="L393">                return true;</span>
+            }
+        }
+
+<span class="nc" id="L397">        return false;</span>
+    }
+
+    /**
+     * Réagit au clicks de la souris.
+     *
+     * @param pX Abscisse du point.
+     * @param pY Ordonnée du point.
+     */
+    private void mouseClicked(final int pX, final int pY) {
+<span class="nc bnc" id="L407" title="All 2 branches missed.">        if (!isEnabled()) {</span>
+<span class="nc" id="L408">            return;</span>
+        }
+
+<span class="nc bnc" id="L411" title="All 4 branches missed.">        if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
+<span class="nc bnc" id="L412" title="All 2 branches missed.">                &amp;&amp; (_availableTargets.length != 0)) {</span>
+<span class="nc" id="L413">            _selectedSquare = _overSquare;</span>
+<span class="nc" id="L414">            setCursor(_pieceUI.getCursor(_board.getPieceAt(_selectedSquare)));</span>
+<span class="nc" id="L415">            repaint();</span>
+<span class="nc" id="L416">        } else {</span>
+<span class="nc bnc" id="L417" title="All 2 branches missed.">            if (_selectedSquare != null) {</span>
+<span class="nc bnc" id="L418" title="All 4 branches missed.">                if ((_availableTargets != null) &amp;&amp; (isAvailable(_overSquare))) {</span>
+<span class="nc" id="L419">                    final Piece pieceSrc = _board.getPieceAt(_selectedSquare);</span>
+<span class="nc" id="L420">                    Piece promotion = null;</span>
+<span class="nc" id="L421">                    final int rankDst = _overSquare.getRank();</span>
+<span class="nc bnc" id="L422" title="All 4 branches missed.">                    if (((pieceSrc == Piece.WHITE_PAWN) &amp;&amp; (rankDst == RANK_COUNT - 1))</span>
+<span class="nc bnc" id="L423" title="All 4 branches missed.">                            || ((pieceSrc == Piece.BLACK_PAWN) &amp;&amp; (rankDst == 0))) {</span>
+<span class="nc" id="L424">                        promotion = PromotionDialog.showPromotionDialog(this,</span>
+<span class="nc" id="L425">                                pieceSrc, _pieceUI);</span>
+                    }
+<span class="nc" id="L427">                    final Move mvt = new Move(pieceSrc, _selectedSquare,</span>
+<span class="nc" id="L428">                            _overSquare, _board.getPieceAt(_overSquare),</span>
+<span class="nc" id="L429">                            promotion);</span>
+<span class="nc" id="L430">                    setBoard(_board.derive(mvt, true));</span>
+<span class="nc" id="L431">                    fireMoveEvent(mvt);</span>
+                }
+<span class="nc" id="L433">                setCursor(Cursor.getDefaultCursor());</span>
+<span class="nc" id="L434">                _selectedSquare = null;</span>
+<span class="nc" id="L435">                _overSquare = null;</span>
+<span class="nc" id="L436">                mouseOver(pX, pY);</span>
+            }
+        }
+<span class="nc" id="L439">    }</span>
+
+    /**
+     * Réagit au positionnement de la souris.
+     *
+     * @param pX Abscisse du point.
+     * @param pY Ordonnée du point.
+     */
+    private void mouseOver(final int pX, final int pY) {
+<span class="nc bnc" id="L448" title="All 2 branches missed.">        if (!isEnabled()) {</span>
+<span class="nc" id="L449">            return;</span>
+        }
+
+<span class="nc" id="L452">        Square cellule = null;</span>
+<span class="nc bnc" id="L453" title="All 4 branches missed.">        if ((pX &gt; _borderThickness) &amp;&amp; (pY &gt; _borderThickness)) {</span>
+<span class="nc" id="L454">            final int cote = getSideLength();</span>
+<span class="nc bnc" id="L455" title="All 2 branches missed.">            if ((pX &lt; cote - _borderThickness)</span>
+<span class="nc bnc" id="L456" title="All 2 branches missed.">                    &amp;&amp; (pY &lt; cote - _borderThickness)) {</span>
+<span class="nc" id="L457">                final int dimCase = getCellSideLength();</span>
+<span class="nc bnc" id="L458" title="All 2 branches missed.">                if (_flipView) {</span>
+<span class="nc" id="L459">                    cellule = Square.valueOf(FILE_COUNT</span>
+<span class="nc" id="L460">                            - (pX - _borderThickness - 1) / dimCase - 1, (pY</span>
+<span class="nc" id="L461">                            - _borderThickness - 1)</span>
+<span class="nc" id="L462">                            / dimCase);</span>
+<span class="nc" id="L463">                } else {</span>
+<span class="nc" id="L464">                    cellule = Square.valueOf((pX - _borderThickness - 1)</span>
+<span class="nc" id="L465">                            / dimCase, RANK_COUNT - (pY - _borderThickness - 1)</span>
+<span class="nc" id="L466">                            / dimCase - 1);</span>
+                }
+            }
+        }
+
+<span class="nc bnc" id="L471" title="All 2 branches missed.">        if (cellule != _overSquare) {</span>
+<span class="nc" id="L472">            _overSquare = cellule;</span>
+<span class="nc bnc" id="L473" title="All 2 branches missed.">            if (_selectedSquare == null) {</span>
+<span class="nc" id="L474">                _availableTargets = null;</span>
+<span class="nc bnc" id="L475" title="All 2 branches missed.">                if (_overSquare != null) {</span>
+<span class="nc" id="L476">                    final Piece p = _board.getPieceAt(_overSquare);</span>
+<span class="nc bnc" id="L477" title="All 4 branches missed.">                    if ((p != null) &amp;&amp; (p.isWhite() == _board.isWhiteActive())) {</span>
+<span class="nc" id="L478">                        _availableTargets = _board.getValidTargets(_overSquare);</span>
+                    }
+                }
+            }
+<span class="nc" id="L482">            repaint();</span>
+        }
+<span class="nc" id="L484">    }</span>
+
+    /**
+     * Dessine le composant.
+     *
+     * @param pGraph Contexte graphique à utiliser.
+     */
+    @Override
+    public void paint(final Graphics pGraph) {
+<span class="nc" id="L493">        final Graphics2D g2d = (Graphics2D) pGraph;</span>
+
+<span class="nc" id="L495">        g2d.drawImage(getBoardBackground(), 0, 0, null);</span>
+
+<span class="nc" id="L497">        final int dimCase = getCellSideLength();</span>
+<span class="nc bnc" id="L498" title="All 4 branches missed.">        if (_highlightLastMove &amp;&amp; (_highLightedMove != null)) {</span>
+<span class="nc" id="L499">            g2d.setColor(HIGHLIGHTED_MOVE_COLOR);</span>
+<span class="nc" id="L500">            g2d.setStroke(HIGHLIGHTED_MOVE_STROKE);</span>
+<span class="nc" id="L501">            final Square src = _highLightedMove.getFrom();</span>
+<span class="nc" id="L502">            final Square dst = _highLightedMove.getTo();</span>
+<span class="nc" id="L503">            final int demieCase = dimCase / 2;</span>
+<span class="nc bnc" id="L504" title="All 2 branches missed.">            if (_flipView) {</span>
+<span class="nc" id="L505">                g2d.drawLine(_borderThickness</span>
+<span class="nc" id="L506">                                + (FILE_COUNT - src.getFile() - 1) * dimCase</span>
+<span class="nc" id="L507">                                + demieCase, _borderThickness + src.getRank() * dimCase</span>
+<span class="nc" id="L508">                                + demieCase,</span>
+<span class="nc" id="L509">                        _borderThickness + (FILE_COUNT - dst.getFile() - 1)</span>
+<span class="nc" id="L510">                                * dimCase + demieCase,</span>
+<span class="nc" id="L511">                        _borderThickness + dst.getRank() * dimCase + demieCase);</span>
+<span class="nc" id="L512">            } else {</span>
+<span class="nc" id="L513">                g2d.drawLine(_borderThickness + src.getFile() * dimCase</span>
+<span class="nc" id="L514">                                + demieCase,</span>
+<span class="nc" id="L515">                        _borderThickness + (RANK_COUNT - src.getRank() - 1)</span>
+<span class="nc" id="L516">                                * dimCase + demieCase,</span>
+<span class="nc" id="L517">                        _borderThickness + dst.getFile() * dimCase + demieCase,</span>
+<span class="nc" id="L518">                        _borderThickness + (RANK_COUNT - dst.getRank() - 1)</span>
+<span class="nc" id="L519">                                * dimCase + demieCase);</span>
+            }
+        }
+
+<span class="nc bnc" id="L523" title="All 2 branches missed.">        if (_overSquare != null) {</span>
+<span class="nc bnc" id="L524" title="All 4 branches missed.">            if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
+<span class="nc bnc" id="L525" title="All 2 branches missed.">                    &amp;&amp; (_availableTargets.length != 0)) {</span>
+<span class="nc" id="L526">                g2d.setColor(OVER_ENABLED_COLOR);</span>
+<span class="nc bnc" id="L527" title="All 4 branches missed.">            } else if ((_selectedSquare != null) &amp;&amp; (_availableTargets != null)</span>
+<span class="nc bnc" id="L528" title="All 2 branches missed.">                    &amp;&amp; (isAvailable(_overSquare))) {</span>
+<span class="nc" id="L529">                g2d.setColor(OVER_ENABLED_COLOR);</span>
+<span class="nc" id="L530">            } else {</span>
+<span class="nc" id="L531">                g2d.setColor(OVER_DISABLED_COLOR);</span>
+            }
+
+<span class="nc" id="L534">            final int cX = _overSquare.getFile();</span>
+<span class="nc" id="L535">            final int cY = _overSquare.getRank();</span>
+            final int dx;
+            final int dy;
+<span class="nc bnc" id="L538" title="All 2 branches missed.">            if (_flipView) {</span>
+<span class="nc" id="L539">                dx = _borderThickness + (FILE_COUNT - cX - 1) * dimCase + 1;</span>
+<span class="nc" id="L540">                dy = _borderThickness + cY * dimCase + 1;</span>
+<span class="nc" id="L541">            } else {</span>
+<span class="nc" id="L542">                dx = _borderThickness + cX * dimCase + 1;</span>
+<span class="nc" id="L543">                dy = _borderThickness + (RANK_COUNT - cY - 1) * dimCase + 1;</span>
+            }
+<span class="nc bnc" id="L545" title="All 2 branches missed.">            if (_borderThickness &gt; 0) {</span>
+<span class="nc" id="L546">                final int cote = getSideLength();</span>
+<span class="nc" id="L547">                g2d.fillRect(1, dy, _borderThickness - 1, dimCase - 1);</span>
+<span class="nc" id="L548">                g2d.fillRect(cote - _borderThickness, dy, _borderThickness - 1,</span>
+<span class="nc" id="L549">                        dimCase - 1);</span>
+<span class="nc" id="L550">                g2d.fillRect(dx, 1, dimCase - 1, _borderThickness - 1);</span>
+<span class="nc" id="L551">                g2d.fillRect(dx, cote - _borderThickness, dimCase - 1,</span>
+<span class="nc" id="L552">                        _borderThickness - 1);</span>
+            }
+
+<span class="nc" id="L555">            g2d.fillRect(dx, dy, dimCase - 1, dimCase - 1);</span>
+        }
+
+<span class="nc bnc" id="L558" title="All 2 branches missed.">        if (_selectedSquare != null) {</span>
+<span class="nc" id="L559">            g2d.setColor(SELECTED_COLOR);</span>
+<span class="nc bnc" id="L560" title="All 2 branches missed.">            if (_flipView) {</span>
+<span class="nc" id="L561">                g2d.fillRect(</span>
+<span class="nc" id="L562">                        _borderThickness</span>
+<span class="nc" id="L563">                                + (FILE_COUNT - _selectedSquare.getFile() - 1)</span>
+<span class="nc" id="L564">                                * dimCase + 1, _borderThickness</span>
+<span class="nc" id="L565">                                + _selectedSquare.getRank() * dimCase + 1,</span>
+<span class="nc" id="L566">                        dimCase - 1, dimCase - 1);</span>
+<span class="nc" id="L567">            } else {</span>
+<span class="nc" id="L568">                g2d.fillRect(_borderThickness + _selectedSquare.getFile()</span>
+<span class="nc" id="L569">                        * dimCase + 1, _borderThickness</span>
+<span class="nc" id="L570">                        + (RANK_COUNT - _selectedSquare.getRank() - 1)</span>
+<span class="nc" id="L571">                        * dimCase + 1, dimCase - 1, dimCase - 1);</span>
+            }
+        }
+
+<span class="nc bnc" id="L575" title="All 2 branches missed.">        for (final Square c : Square.values()) {</span>
+<span class="nc bnc" id="L576" title="All 4 branches missed.">            if (_highlightValids &amp;&amp; (_availableTargets != null)</span>
+<span class="nc bnc" id="L577" title="All 2 branches missed.">                    &amp;&amp; isAvailable(c)) {</span>
+<span class="nc" id="L578">                g2d.setColor(AVAILABLE_COLOR);</span>
+<span class="nc bnc" id="L579" title="All 2 branches missed.">                if (_flipView) {</span>
+<span class="nc" id="L580">                    g2d.fillRect(_borderThickness</span>
+<span class="nc" id="L581">                                    + (FILE_COUNT - c.getFile() - 1) * dimCase + 1,</span>
+<span class="nc" id="L582">                            _borderThickness + c.getRank() * dimCase + 1,</span>
+<span class="nc" id="L583">                            dimCase - 1, dimCase - 1);</span>
+<span class="nc" id="L584">                } else {</span>
+<span class="nc" id="L585">                    g2d.fillRect(_borderThickness + c.getFile() * dimCase + 1,</span>
+<span class="nc" id="L586">                            _borderThickness + (RANK_COUNT - c.getRank() - 1)</span>
+<span class="nc" id="L587">                                    * dimCase + 1, dimCase - 1, dimCase - 1);</span>
+                }
+            }
+<span class="nc" id="L590">            final Piece p = _board.getPieceAt(c);</span>
+<span class="nc bnc" id="L591" title="All 4 branches missed.">            if ((p != null) &amp;&amp; (c != _selectedSquare)) {</span>
+<span class="nc bnc" id="L592" title="All 2 branches missed.">                if (_flipView) {</span>
+<span class="nc" id="L593">                    g2d.drawImage(_pieceUI.getImage(p), _borderThickness</span>
+<span class="nc" id="L594">                                    + (FILE_COUNT - c.getFile() - 1) * dimCase,</span>
+<span class="nc" id="L595">                            _borderThickness + c.getRank() * dimCase, null);</span>
+<span class="nc" id="L596">                } else {</span>
+<span class="nc" id="L597">                    g2d.drawImage(_pieceUI.getImage(p),</span>
+<span class="nc" id="L598">                            _borderThickness + c.getFile() * dimCase,</span>
+<span class="nc" id="L599">                            _borderThickness + (RANK_COUNT - c.getRank() - 1)</span>
+<span class="nc" id="L600">                                    * dimCase, null);</span>
+                }
+            }
+        }
+<span class="nc" id="L604">    }</span>
+
+    /**
+     * Change l'état de la partie affiché par le composant.
+     *
+     * @param pEtat Etat de la partie à afficher.
+     */
+    private void setBoard(final MoveGenerator pEtat) {
+<span class="nc" id="L612">        _board = pEtat;</span>
+<span class="nc" id="L613">    }</span>
+
+    /**
+     * Alimente le numéro de l'apparence utilisée pour rendre le plateau.
+     *
+     * @param pNumero Numero de l'apparence (&gt;= 0).
+     */
+    void setBoardLF(final int pNumero) {
+<span class="nc bnc" id="L621" title="All 2 branches missed.">        if (pNumero != _boardLF) {</span>
+<span class="nc" id="L622">            _boardLF = pNumero;</span>
+<span class="nc" id="L623">            _boardBackground = null;</span>
+<span class="nc" id="L624">            repaint();</span>
+        }
+<span class="nc" id="L626">    }</span>
+
+    /**
+     * Alimente la longueur d'un côté de case.
+     *
+     * @param pLongueur Longueur du côté d'une case (&gt;= 1).
+     */
+    void setCellSideLength(final int pLongueur) {
+<span class="nc bnc" id="L634" title="All 2 branches missed.">        if (pLongueur != _cellSideLength) {</span>
+<span class="nc" id="L635">            _cellSideLength = pLongueur;</span>
+<span class="nc" id="L636">            _boardBackground = null;</span>
+<span class="nc" id="L637">            _pieceUI.initialize(pLongueur, &quot;lf&quot; + _piecesLF + &quot;/&quot;);</span>
+        }
+<span class="nc" id="L639">    }</span>
+
+    /**
+     * Active / Désactive l'affichage des coordonnées.
+     *
+     * @param pAffiche A vrai si l'on veut afficher les coordonnées.
+     */
+    void setCoordinatesPainted(final boolean pAffiche) {
+<span class="nc bnc" id="L647" title="All 2 branches missed.">        if (pAffiche) {</span>
+<span class="nc" id="L648">            _borderThickness = DEFAULT_BORDER_THICKNESS;</span>
+<span class="nc" id="L649">        } else {</span>
+<span class="nc" id="L650">            _borderThickness = 0;</span>
+        }
+
+<span class="nc" id="L653">        _boardBackground = null;</span>
+<span class="nc" id="L654">        repaint();</span>
+<span class="nc" id="L655">    }</span>
+
+    /**
+     * Active/inactive le composant.
+     *
+     * @param pFlag Drapeau &quot;activé&quot;.
+     */
+    @Override
+    public void setEnabled(final boolean pFlag) {
+<span class="nc" id="L664">        super.setEnabled(pFlag);</span>
+
+<span class="nc" id="L666">        clearState();</span>
+<span class="nc" id="L667">    }</span>
+
+    /**
+     * Alimente le drapeau demandant l'inversion de la vue.
+     *
+     * @param pInverse A vrai si l'on souhaite inverser la vue.
+     */
+    void setFlipView(final boolean pInverse) {
+<span class="nc bnc" id="L675" title="All 2 branches missed.">        if (pInverse != _flipView) {</span>
+<span class="nc" id="L676">            _flipView = pInverse;</span>
+<span class="nc" id="L677">            _boardBackground = null;</span>
+<span class="nc" id="L678">            repaint();</span>
+        }
+<span class="nc" id="L680">    }</span>
+
+    /**
+     * Alimente le mouvement à mettre en évidence.
+     *
+     * @param pMouvement Mouvement à mettre en évidence (peut être à null)
+     */
+    private void setHighlightedMove(final Move pMouvement) {
+<span class="nc" id="L688">        _highLightedMove = pMouvement;</span>
+
+<span class="nc" id="L690">        clearState();</span>
+<span class="nc" id="L691">    }</span>
+
+    /**
+     * Indique si l'on souhaite mettre en évidence le dernier mouvement.
+     *
+     * @param pMontre A vrai pour indiquer le dernier mouvement.
+     */
+    void setHighlightLastMove(final boolean pMontre) {
+<span class="nc" id="L699">        _highlightLastMove = pMontre;</span>
+
+<span class="nc" id="L701">        repaint();</span>
+<span class="nc" id="L702">    }</span>
+
+    /**
+     * Indique si l'on souhaite surligner les mouvements valides.
+     *
+     * @param pSurligne A vrai pour surligner les mouvements valides.
+     */
+    void setHighlightValids(final boolean pSurligne) {
+<span class="nc" id="L710">        _highlightValids = pSurligne;</span>
+<span class="nc" id="L711">    }</span>
+
+    /**
+     * Alimente le numéro de l'apparence utilisée pour rendre les pièces.
+     *
+     * @param pNumero Numero de l'apparence (&gt;= 0).
+     */
+    void setPiecesLF(final int pNumero) {
+<span class="nc bnc" id="L719" title="All 2 branches missed.">        if (pNumero != _piecesLF) {</span>
+<span class="nc" id="L720">            _piecesLF = pNumero;</span>
+<span class="nc" id="L721">            _pieceUI.initialize(_cellSideLength, &quot;lf&quot; + _piecesLF + &quot;/&quot;);</span>
+<span class="nc" id="L722">            repaint();</span>
+        }
+<span class="nc" id="L724">    }</span>
+
+    /**
+     * Gestionnaire de souris lié au composant.
+     */
+    private static final class BoardMouseAdapter extends MouseAdapter {
+        /**
+         * Pointeur vers le composant graphique de l'échiquier.
+         */
+        private final BoardUI _boardUI;
+
+        /**
+         * Drapeau signalant que la souris est sur le composant.
+         */
+        private boolean _mouseOver;
+
+        /**
+         * Instancie le gestionnaire.
+         *
+         * @param pEchiquier Echiquier.
+         */
+<span class="nc" id="L745">        BoardMouseAdapter(final BoardUI pEchiquier) {</span>
+<span class="nc" id="L746">            _boardUI = pEchiquier;</span>
+<span class="nc" id="L747">        }</span>
+
+        /**
+         * Tient compte de l'entrée de la souris sur le composant.
+         *
+         * @param pEvent Evènement signalant l'arrivée de la souris.
+         */
+        @Override
+        public void mouseDragged(final MouseEvent pEvent) {
+<span class="nc bnc" id="L756" title="All 2 branches missed.">            if (_mouseOver) {</span>
+<span class="nc" id="L757">                _boardUI.mouseOver(pEvent.getX(), pEvent.getY());</span>
+            }
+<span class="nc" id="L759">        }</span>
+
+        /**
+         * Tient compte de l'entrée de la souris sur le composant.
+         *
+         * @param pEvent Evènement signalant l'arrivée de la souris.
+         */
+        @Override
+        public void mouseEntered(final MouseEvent pEvent) {
+<span class="nc" id="L768">            _mouseOver = true;</span>
+<span class="nc" id="L769">            _boardUI.mouseOver(pEvent.getX(), pEvent.getY());</span>
+<span class="nc" id="L770">        }</span>
+
+        /**
+         * Tient compte de la sortie de la souris du composant.
+         *
+         * @param pEvent Evènement signalant la sortie de la souris.
+         */
+        @Override
+        public void mouseExited(final MouseEvent pEvent) {
+<span class="nc" id="L779">            _mouseOver = false;</span>
+<span class="nc" id="L780">            _boardUI.mouseOver(-1, -1);</span>
+<span class="nc" id="L781">        }</span>
+
+        /**
+         * Tient compte des mouvements de la souris sur le composant.
+         *
+         * @param pEvent Evènement signalant un mouvement de la souris.
+         */
+        @Override
+        public void mouseMoved(final MouseEvent pEvent) {
+<span class="nc" id="L790">            _boardUI.mouseOver(pEvent.getX(), pEvent.getY());</span>
+<span class="nc" id="L791">        }</span>
+
+        /**
+         * Tient compte de l'appui sur un bouton de la souris.
+         *
+         * @param pEvent Evènement signalant le click.
+         */
+        @Override
+        public void mousePressed(final MouseEvent pEvent) {
+<span class="nc bnc" id="L800" title="All 2 branches missed.">            if (_mouseOver) {</span>
+<span class="nc" id="L801">                _boardUI.mouseClicked(pEvent.getX(), pEvent.getY());</span>
+            }
+<span class="nc" id="L803">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

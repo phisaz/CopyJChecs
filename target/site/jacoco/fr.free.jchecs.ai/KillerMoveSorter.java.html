@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>KillerMoveSorter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">KillerMoveSorter.java</span></div><h1>KillerMoveSorter.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.util.Arrays;
+
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.Piece;
+
+import static fr.free.jchecs.core.PieceType.QUEEN;
+
+/**
+ * Trie les mouvements en fonction de &quot;killer moves&quot;, puis par valeur des prises
+ * et valeur des pièces.
+ * 
+ * @author David Cotton
+ */
+final class KillerMoveSorter implements ContextSorter {
+	/** Identifiant de la classe pour la sérialisation. */
+	private static final long serialVersionUID = 1484760150439005473L;
+
+	/** Priorité donnée à un &quot;killer move&quot;. */
+<span class="fc" id="L39">	private static final int KILLER_MOVE_PRIORITY = 1000000 * QUEEN.getValue();</span>
+
+	/** Buffer des &quot;killer moves&quot;. */
+<span class="fc" id="L42">	private final Move[] _killerMoves = new Move[5];</span>
+
+	/** Indice du prochain emplacement pouvant accueillir un &quot;killer move&quot;. */
+	private int _nextIndex;
+
+	/**
+	 * Crée une nouvelle instance.
+	 */
+<span class="fc" id="L50">	KillerMoveSorter() {</span>
+		// Rien de spécifique...
+<span class="fc" id="L52">	}</span>
+
+	/**
+	 * Efface le buffer des &quot;killer moves&quot;.
+	 */
+	@Override
+	public void clear() {
+<span class="nc" id="L59">		Arrays.fill(_killerMoves, null);</span>
+<span class="nc" id="L60">		_nextIndex = 0;</span>
+<span class="nc" id="L61">	}</span>
+
+	/**
+	 * Tri des mouvements.
+	 * 
+	 * @param pMvt1
+	 *            Premier mouvement.
+	 * @param pMvt2
+	 *            Deuxième mouvement.
+	 * @return -1, 0, 1 en accord avec le contrat de compare().
+	 */
+	@Override
+	public int compare(final Move pMvt1, final Move pMvt2) {
+<span class="nc" id="L74">		int v1 = get(pMvt1);</span>
+<span class="nc" id="L75">		int v2 = get(pMvt2);</span>
+
+<span class="nc" id="L77">		final Piece prise1 = pMvt1.getCaptured();</span>
+<span class="nc" id="L78">		final int vPiece1 = pMvt1.getPiece().getType().getValue();</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">		if (prise1 == null) {</span>
+<span class="nc" id="L80">			v1 += vPiece1;</span>
+<span class="nc" id="L81">		} else {</span>
+<span class="nc" id="L82">			v1 += 1000 * prise1.getType().getValue();</span>
+<span class="nc" id="L83">			v1 -= vPiece1;</span>
+		}
+
+<span class="nc" id="L86">		final Piece prise2 = pMvt2.getCaptured();</span>
+<span class="nc" id="L87">		final int vPiece2 = pMvt2.getPiece().getType().getValue();</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">		if (prise2 == null) {</span>
+<span class="nc" id="L89">			v2 += vPiece2;</span>
+<span class="nc" id="L90">		} else {</span>
+<span class="nc" id="L91">			v2 += 1000 * prise2.getType().getValue();</span>
+<span class="nc" id="L92">			v2 -= vPiece2;</span>
+		}
+
+<span class="nc bnc" id="L95" title="All 2 branches missed.">		if (v1 &gt; v2) {</span>
+<span class="nc" id="L96">			return -1;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		} else if (v1 &lt; v2) {</span>
+<span class="nc" id="L98">			return 1;</span>
+		}
+
+<span class="nc" id="L101">		return 0;</span>
+	}
+
+	/**
+	 * Renvoie l'évaluation d'un mouvement.
+	 * 
+	 * @param pMouvement
+	 *            Mouvement à rechercher.
+	 * @return Valeur liée au mouvement (ou 0 si le mouvement n'est pas dans la
+	 *         liste).
+	 */
+	@Override
+	public int get(final Move pMouvement) {
+<span class="nc bnc" id="L114" title="All 2 branches missed.">		if (pMouvement.equals(_killerMoves[0])</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">				|| pMouvement.equals(_killerMoves[1])</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">				|| pMouvement.equals(_killerMoves[2])</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">				|| pMouvement.equals(_killerMoves[3])</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">				|| pMouvement.equals(_killerMoves[4])) {</span>
+<span class="nc" id="L119">			return KILLER_MOVE_PRIORITY;</span>
+		}
+
+<span class="nc" id="L122">		return 0;</span>
+	}
+
+	/**
+	 * Mémorise un &quot;killer move&quot;.
+	 * 
+	 * @param pMouvement
+	 *            Mouvement à mémoriser.
+	 */
+	@Override
+	public void put(final Move pMouvement) {
+<span class="nc" id="L133">		_killerMoves[_nextIndex++] = pMouvement;</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">		if (_nextIndex &gt;= 5) {</span>
+<span class="nc" id="L135">			_nextIndex = 0;</span>
+		}
+<span class="nc" id="L137">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

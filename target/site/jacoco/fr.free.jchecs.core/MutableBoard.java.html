@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MutableBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">MutableBoard.java</span></div><h1>MutableBoard.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+
+/**
+ * Version modifiable d'une description d'état du jeu.
+ * &lt;p&gt;
+ * Attention : cette classe a pour unique but de faciliter l'initialisation
+ * d'une première instance immuable de l'état. Elle ne dispose volontairement
+ * pas d'une implémentation pour les méthodes indispensables aux moteurs d'IA.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+final class MutableBoard extends AbstractBoard {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -3845129626288554731L;
+
+    /**
+     * Description du plateau.
+     */
+<span class="fc" id="L43">    private final Piece[][] _pieces = new Piece[FILE_COUNT][RANK_COUNT];</span>
+
+    /**
+     * Crée une nouvelle instance de description modifiable d'état de jeu.
+     */
+<span class="fc" id="L48">    MutableBoard() {</span>
+        // Rien de spécifique...
+<span class="fc" id="L50">    }</span>
+
+    /**
+     * Renvoi l'éventuelle pièce présente sur la case indiquée.
+     *
+     * @param pCase Case à tester.
+     * @return Pièce présente sur la case (ou null si aucune).
+     */
+    @Override
+    public Piece getPieceAt(final Square pCase) {
+<span class="fc" id="L60">        return getPieceAt(pCase.getFile(), pCase.getRank());</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle pièce présente sur la case dont les coordonnées sont
+     * indiquées.
+     *
+     * @param pColonne Colonne de la case à tester (de 0 à 7).
+     * @param pLigne   Ligne de la case à tester (de 0 à 7).
+     * @return Pièce présente sur la case (ou null).
+     */
+    @Override
+    public Piece getPieceAt(final int pColonne, final int pLigne) {
+<span class="fc" id="L73">        return _pieces[pColonne][pLigne];</span>
+    }
+
+    /**
+     * Alimente une case avec une (éventuelle) pièce.
+     *
+     * @param pPiece Pièce à mettre dans la case (ou null si aucune).
+     * @param pCase  Cellule cible.
+     */
+    void setPieceAt(final Piece pPiece, final Square pCase) {
+<span class="fc" id="L83">        _pieces[pCase.getFile()][pCase.getRank()] = pPiece;</span>
+<span class="fc" id="L84">    }</span>
+
+    /**
+     * Renvoie le nombre total des pièces présentes sur le plateau.
+     *
+     * @return Nombre total de pièces.
+     */
+    @Override
+    public int getPiecesCount() {
+<span class="nc" id="L93">        int res = 0;</span>
+
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        for (int x = FILE_COUNT; --x &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            for (int y = RANK_COUNT; --y &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">                if (_pieces[x][y] != null) {</span>
+<span class="nc" id="L98">                    res++;</span>
+                }
+            }
+        }
+
+<span class="nc" id="L103">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

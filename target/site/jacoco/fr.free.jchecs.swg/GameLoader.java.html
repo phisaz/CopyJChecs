@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GameLoader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">GameLoader.java</span></div><h1>GameLoader.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Component;
+import java.awt.Dimension;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.Icon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.PGNException;
+import fr.free.jchecs.core.Player;
+
+import static fr.free.jchecs.core.PGNUtils.toGame;
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Classe prenant en charge le chargement d'une partie contenue dans un fichier
+ * PGN.
+ *
+ * @author David Cotton
+ */
+final class GameLoader implements Runnable {
+    /**
+     * Grande icône, pour la boite de dialogue d'erreur.
+     */
+<span class="nc" id="L62">    private static final Icon ICON32 = getImageIcon(&quot;error32.png&quot;);</span>
+
+    /**
+     * Référence de l'interface graphique liée.
+     */
+    private final UI _ui;
+
+    /**
+     * Instancie un nouveau chargeur.
+     *
+     * @param pUI Interface graphique mêre.
+     */
+<span class="nc" id="L74">    GameLoader(final UI pUI) {</span>
+<span class="nc" id="L75">        _ui = pUI;</span>
+<span class="nc" id="L76">    }</span>
+
+    /**
+     * Affiche la boite de dialogue signalant l'impossibilité de lire le
+     * fichier.
+     */
+    private void errorDialog() {
+<span class="nc" id="L83">        JOptionPane.showMessageDialog(_ui.getMainFrame(),</span>
+<span class="nc" id="L84">                getI18NString(&quot;action.loadGame.error.message&quot;),</span>
+<span class="nc" id="L85">                getI18NString(&quot;action.loadGame.error.title&quot;),</span>
+<span class="nc" id="L86">                JOptionPane.ERROR_MESSAGE, ICON32);</span>
+<span class="nc" id="L87">    }</span>
+
+    /**
+     * Réalise le chargement.
+     */
+    @Override
+    public void run() {
+<span class="nc" id="L94">        final JFileChooser dialog = new JFileChooser();</span>
+<span class="nc" id="L95">        dialog.setDialogTitle(getI18NString(&quot;action.loadGame.name&quot;));</span>
+<span class="nc" id="L96">        dialog.addChoosableFileFilter(new FileNameExtensionFilter(</span>
+<span class="nc" id="L97">                getI18NString(&quot;action.loadGame.filter&quot;), &quot;pgn&quot;));</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">        if (dialog.showOpenDialog(_ui.getMainFrame()) == JFileChooser.APPROVE_OPTION) {</span>
+<span class="nc" id="L99">            final File fichier = dialog.getSelectedFile();</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">            if (fichier != null) {</span>
+<span class="nc" id="L101">                final int ligneDebut = GameSelector.selectGame(</span>
+<span class="nc" id="L102">                        _ui.getMainFrame(), fichier);</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">                if (ligneDebut &gt;= 0) {</span>
+
+<span class="nc" id="L105">                    BufferedReader in = null;</span>
+                    try {
+<span class="nc" id="L107">                        in = new BufferedReader(new FileReader(fichier));</span>
+<span class="nc" id="L108">                    } catch (final FileNotFoundException e) {</span>
+<span class="nc" id="L109">                        errorDialog();</span>
+                    }
+
+<span class="nc bnc" id="L112" title="All 2 branches missed.">                    if (in != null) {</span>
+                        try {
+                            // Se positionner au début de la définition de la
+                            // partie
+                            // sélectionnée...
+<span class="nc bnc" id="L117" title="All 2 branches missed.">                            for (int i = ligneDebut; --i &gt; 0; /* Pré-décrémenté */) {</span>
+<span class="nc" id="L118">                                in.readLine();</span>
+                            }
+
+                            try {
+<span class="nc" id="L122">                                final Game tmp = toGame(in);</span>
+<span class="nc" id="L123">                                final Game partie = _ui.getGame();</span>
+<span class="nc" id="L124">                                final Player blancs = partie.getPlayer(true);</span>
+<span class="nc" id="L125">                                final Player noirs = partie.getPlayer(false);</span>
+<span class="nc" id="L126">                                blancs.setEngine(null);</span>
+<span class="nc" id="L127">                                noirs.setEngine(null);</span>
+<span class="nc" id="L128">                                tmp.goFirst();</span>
+<span class="nc" id="L129">                                partie.resetTo(tmp.getBoard());</span>
+<span class="nc" id="L130">                                tmp.goLast();</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">                                for (final Move mvt : tmp.getMovesToCurrent()) {</span>
+<span class="nc" id="L132">                                    partie.moveFromCurrent(mvt);</span>
+                                }
+<span class="nc" id="L134">                                blancs.setName(tmp.getPlayer(true).getName());</span>
+<span class="nc" id="L135">                                blancs.setEngine(tmp.getPlayer(true)</span>
+<span class="nc" id="L136">                                        .getEngine());</span>
+<span class="nc" id="L137">                                noirs.setName(tmp.getPlayer(false).getName());</span>
+<span class="nc" id="L138">                                noirs.setEngine(tmp.getPlayer(false)</span>
+<span class="nc" id="L139">                                        .getEngine());</span>
+<span class="nc" id="L140">                            } catch (final PGNException e) {</span>
+<span class="nc" id="L141">                                errorDialog();</span>
+                            }
+
+<span class="nc" id="L144">                            in.close();</span>
+<span class="nc" id="L145">                        } catch (final IOException e) {</span>
+<span class="nc" id="L146">                            errorDialog();</span>
+                            try {
+<span class="nc" id="L148">                                in.close();</span>
+<span class="nc" id="L149">                            } catch (final IOException e1) {</span>
+                                // Tant pis, la fermeture de la JVM s'en
+                                // chargera.
+                            }
+                        }
+                    }
+                }
+            }
+        }
+<span class="nc" id="L158">    }</span>
+
+    /**
+     * Composant permettant de sélectionner une partie dans un fichier PGN.
+     */
+    private static final class GameSelector {
+        /**
+         * Classe utilitaire.
+         */
+        private GameSelector() {
+            // Rien de spécifique...
+        }
+
+        /**
+         * Affiche le composant et attend la sélection d'une partie.
+         *
+         * @param pParent  Composant parent de la boite de dialogue (peut être à
+         *                 null).
+         * @param pFichier Fichier PGN source.
+         * @return Numéro de la ligne, dans le fichier, où commence la partie
+         * sélectionnée (-1 si aucune).
+         */
+        static int selectGame(final Component pParent, final File pFichier) {
+<span class="nc" id="L181">            int res = -1;</span>
+
+<span class="nc" id="L183">            final TableModel modele = new HeadersModel(pFichier);</span>
+<span class="nc bnc" id="L184" title="All 2 branches missed.">            if (modele.getRowCount() &gt; 0) {</span>
+<span class="nc" id="L185">                final JTable liste = new JTable(modele);</span>
+<span class="nc" id="L186">                liste.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);</span>
+<span class="nc" id="L187">                liste.setRowSorter(new TableRowSorter&lt;&gt;(modele));</span>
+<span class="nc" id="L188">                liste.setShowHorizontalLines(false);</span>
+<span class="nc" id="L189">                final TableColumnModel cols = liste.getColumnModel();</span>
+<span class="nc" id="L190">                cols.getColumn(0).setPreferredWidth(45);</span>
+<span class="nc" id="L191">                cols.getColumn(1).setPreferredWidth(140);</span>
+<span class="nc" id="L192">                cols.getColumn(2).setPreferredWidth(110);</span>
+<span class="nc" id="L193">                cols.getColumn(3).setPreferredWidth(110);</span>
+<span class="nc" id="L194">                cols.getColumn(4).setPreferredWidth(45);</span>
+<span class="nc" id="L195">                cols.getColumn(5).setPreferredWidth(90);</span>
+<span class="nc" id="L196">                liste.setDefaultRenderer(Object.class,</span>
+<span class="nc" id="L197">                        new EvenOddRowsRenderer());</span>
+<span class="nc" id="L198">                liste.setColumnSelectionAllowed(false);</span>
+<span class="nc" id="L199">                liste.setRowSelectionAllowed(true);</span>
+<span class="nc" id="L200">                liste.setRowSelectionInterval(0, 0);</span>
+
+<span class="nc" id="L202">                final Component fond = new JScrollPane(liste);</span>
+<span class="nc" id="L203">                fond.setPreferredSize(new Dimension(540, 175));</span>
+<span class="nc bnc" id="L204" title="All 2 branches missed.">                if (JOptionPane</span>
+<span class="nc" id="L205">                        .showConfirmDialog(pParent, fond,</span>
+<span class="nc" id="L206">                                getI18NString(&quot;dialog.selectGame.title&quot;),</span>
+<span class="nc" id="L207">                                JOptionPane.OK_CANCEL_OPTION,</span>
+<span class="nc" id="L208">                                JOptionPane.PLAIN_MESSAGE) == JOptionPane.OK_OPTION) {</span>
+<span class="nc" id="L209">                    res = Integer.parseInt((String) modele.getValueAt(</span>
+<span class="nc" id="L210">                            liste.getSelectedRow(), 0));</span>
+                }
+            }
+
+<span class="nc" id="L214">            return res;</span>
+        }
+
+        /**
+         * Modèle de données interne pour le tableau des en-têtes de parties.
+         */
+        private static final class HeadersModel extends DefaultTableModel {
+            /**
+             * Identifiant de la classe pour la sérialisation.
+             */
+            private static final long serialVersionUID = -4442746008369938816L;
+
+            /**
+             * Données des en-têtes.
+             */
+            private final String[][] _datas;
+
+            /**
+             * Instancie un nouveau modèle à partir d'un fichier PGN.
+             *
+             * @param pFichier Fichier PGN source.
+             */
+<span class="nc" id="L236">            HeadersModel(final File pFichier) {</span>
+<span class="nc" id="L237">                final List&lt;String[]&gt; parties = new ArrayList&lt;&gt;();</span>
+
+<span class="nc" id="L239">                BufferedReader in = null;</span>
+                try {
+<span class="nc" id="L241">                    in = new BufferedReader(new FileReader(pFichier));</span>
+<span class="nc" id="L242">                } catch (final FileNotFoundException e) {</span>
+                    // Tant pis, on ne chargera rien...
+                }
+
+<span class="nc bnc" id="L246" title="All 2 branches missed.">                if (in != null) {</span>
+<span class="nc" id="L247">                    int numLigne = 0;</span>
+                    String ligne;
+<span class="nc" id="L249">                    String[] enreg = null;</span>
+                    try {
+<span class="nc" id="L251">                        ligne = in.readLine();</span>
+<span class="nc bnc" id="L252" title="All 2 branches missed.">                        while (ligne != null) {</span>
+<span class="nc" id="L253">                            numLigne++;</span>
+<span class="nc" id="L254">                            final String ligneEpuree = ligne.trim();</span>
+<span class="nc" id="L255">                            final int debTag = ligneEpuree.indexOf(&quot; \&quot;&quot;);</span>
+<span class="nc bnc" id="L256" title="All 4 branches missed.">                            if ((debTag &gt;= 0) &amp;&amp; ligneEpuree.endsWith(&quot;\&quot;]&quot;)) {</span>
+<span class="nc" id="L257">                                final String contenu = ligneEpuree.substring(</span>
+<span class="nc" id="L258">                                        debTag + 2, ligneEpuree.indexOf(&quot;\&quot;]&quot;));</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">                                if (enreg != null) {</span>
+<span class="nc bnc" id="L260" title="All 2 branches missed.">                                    if (ligneEpuree.startsWith(&quot;[Black \&quot;&quot;)) {</span>
+<span class="nc" id="L261">                                        enreg[3] = contenu;</span>
+<span class="nc" id="L262">                                    } else if (ligneEpuree</span>
+<span class="nc bnc" id="L263" title="All 2 branches missed.">                                            .startsWith(&quot;[Date \&quot;&quot;)) {</span>
+<span class="nc" id="L264">                                        enreg[5] = contenu;</span>
+<span class="nc" id="L265">                                    } else if (ligneEpuree</span>
+<span class="nc bnc" id="L266" title="All 2 branches missed.">                                            .startsWith(&quot;[Result \&quot;&quot;)) {</span>
+<span class="nc" id="L267">                                        enreg[4] = contenu;</span>
+<span class="nc" id="L268">                                    } else if (ligneEpuree</span>
+<span class="nc bnc" id="L269" title="All 2 branches missed.">                                            .startsWith(&quot;[White \&quot;&quot;)) {</span>
+<span class="nc" id="L270">                                        enreg[2] = contenu;</span>
+                                    }
+                                }
+<span class="nc bnc" id="L273" title="All 2 branches missed.">                                if (ligneEpuree.startsWith(&quot;[Event \&quot;&quot;)) {</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">                                    if (enreg != null) {</span>
+<span class="nc" id="L275">                                        parties.add(enreg);</span>
+                                    }
+<span class="nc" id="L277">                                    enreg = new String[6];</span>
+<span class="nc" id="L278">                                    enreg[0] = Integer.toString(numLigne);</span>
+<span class="nc" id="L279">                                    enreg[1] = contenu;</span>
+                                }
+                            }
+<span class="nc" id="L282">                            ligne = in.readLine();</span>
+                        }
+<span class="nc bnc" id="L284" title="All 2 branches missed.">                        if (enreg != null) {</span>
+<span class="nc" id="L285">                            parties.add(enreg);</span>
+                        }
+<span class="nc" id="L287">                        in.close();</span>
+<span class="nc" id="L288">                    } catch (final IOException e) {</span>
+                        // On peut quand même continuer avec ce qui a été lu
+                        // jusqu'à
+                        // l'erreur ...
+                        try {
+<span class="nc" id="L293">                            in.close();</span>
+<span class="nc" id="L294">                        } catch (final IOException e1) {</span>
+                            // Tant pis, la fermeture de la JVM s'en chargera.
+                        }
+                    }
+                }
+
+<span class="nc" id="L300">                _datas = parties.toArray(new String[parties.size()][]);</span>
+<span class="nc" id="L301">                setColumnCount(6);</span>
+<span class="nc" id="L302">                setRowCount(_datas.length);</span>
+
+<span class="nc" id="L304">                final String[] enTetes = {</span>
+<span class="nc" id="L305">                        getI18NString(&quot;dialog.selectGame.line&quot;),</span>
+<span class="nc" id="L306">                        getI18NString(&quot;dialog.selectGame.event&quot;),</span>
+<span class="nc" id="L307">                        getI18NString(&quot;dialog.selectGame.white&quot;),</span>
+<span class="nc" id="L308">                        getI18NString(&quot;dialog.selectGame.black&quot;),</span>
+<span class="nc" id="L309">                        getI18NString(&quot;dialog.selectGame.result&quot;),</span>
+<span class="nc" id="L310">                        getI18NString(&quot;dialog.selectGame.date&quot;),};</span>
+<span class="nc" id="L311">                setColumnIdentifiers(enTetes);</span>
+<span class="nc" id="L312">            }</span>
+
+            /**
+             * Renvoi le contenu d'une cellule.
+             *
+             * @param pLigne   Indice de la ligne.
+             * @param pColonne Indice de la colonne.
+             * @return Contenu de la cellule correspondante.
+             */
+            @Override
+            public Object getValueAt(final int pLigne, final int pColonne) {
+<span class="nc" id="L323">                return _datas[pLigne][pColonne];</span>
+            }
+
+            /**
+             * Indique si une cellule est modifiable.
+             *
+             * @param pLigne   Indice de la ligne.
+             * @param pColonne Indice de la colonne.
+             * @return &quot;Vrai&quot; si la cellule est éditable (jamais dans ce cas).
+             */
+            @Override
+            public boolean isCellEditable(final int pLigne, final int pColonne) {
+<span class="nc" id="L335">                return false;</span>
+            }
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

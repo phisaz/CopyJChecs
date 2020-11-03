@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SANUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">SANUtils.java</span></div><h1>SANUtils.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
+
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+import static fr.free.jchecs.core.Piece.BLACK_KING;
+import static fr.free.jchecs.core.Piece.BLACK_PAWN;
+import static fr.free.jchecs.core.Piece.WHITE_KING;
+import static fr.free.jchecs.core.Piece.WHITE_PAWN;
+import static fr.free.jchecs.core.PieceType.KING;
+import static fr.free.jchecs.core.PieceType.PAWN;
+import static fr.free.jchecs.core.PieceType.QUEEN;
+
+/**
+ * Classes fournissant des fonctions utilitaires pour gérer la notation PGN.
+ * &lt;p&gt;
+ * Classe sûre vis-à-vis des threads.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">public final class SANUtils {</span>
+    /**
+     * Expression régulière permettant de valider une chaîne SAN.
+     */
+    // Découpage du pattern :
+    // Mat/Pat/Nullité : (\\+{1,2}|#|\\(=\\))?
+    // Petit roque : 0-0&lt;Mat/Pat/Nullité&gt;
+    // Grand roque : 0-0-0&lt;Mat/Pat/Nullité&gt;
+    // Pion sans prise : [a-h]([1-8]|[18][BKNQR])&lt;Mat/Pat/Nullité&gt;
+    // Pion avec prise :
+    // [a-h]x[a-h]((([1-8]|[18][BKNQR])&lt;Mat/Pat/Nullité&gt;)|([36]&lt;Mat/Pat/Nullité&gt;
+    // e\\.p\\.))
+    // Pièces (sauf pion) : [BKNQR][a-h]?[1-8]?x?[a-h][1-8]&lt;Mat/Pat/Nullité&gt;
+<span class="fc" id="L56">    public static final Pattern SAN_VALIDATOR = Pattern</span>
+<span class="fc" id="L57">            .compile(&quot;^(0-0(\\+{1,2}|#|\\(=\\))?)|(0-0-0(\\+{1,2}|#|\\(=\\))?)|&quot;</span>
+                    + &quot;([a-h]([1-8]|[18][BKNQR])(\\+{1,2}|#|\\(=\\))?)|&quot;
+                    + &quot;([a-h]x[a-h]((([1-8]|[18][BKNQR])(\\+{1,2}|#|\\(=\\))?)|&quot;
+                    + &quot;([36](\\+{1,2}|#|\\(=\\))? e\\.p\\.)))|&quot;
+<span class="fc" id="L61">                    + &quot;([BKNQR][a-h]?[1-8]?x?[a-h][1-8](\\+{1,2}|#|\\(=\\))?)$&quot;);</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private SANUtils() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Renvoi le mouvement correspondant à une chaine SAN appliquée à un état
+     * d'échiquier.
+     *
+     * @param pEtat Etat de l'échiquier.
+     * @param pSAN  Chaine SAN.
+     * @return Mouvement correspondant.
+     * @throws SANException en cas d'erreur dans le format de la chaine SAN.
+     */
+    public static Move toMove(final MoveGenerator pEtat, final String pSAN)
+            throws SANException {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if (pEtat == null) {</span>
+<span class="nc" id="L82">            throw new NullPointerException(&quot;Missing game state&quot;);</span>
+        }
+<span class="pc bpc" id="L84" title="1 of 2 branches missed.">        if (pSAN == null) {</span>
+<span class="nc" id="L85">            throw new NullPointerException(&quot;Missing SAN string&quot;);</span>
+        }
+
+<span class="pc bpc" id="L88" title="1 of 2 branches missed.">        if (!SAN_VALIDATOR.matcher(pSAN).matches()) {</span>
+<span class="nc" id="L89">            throw new SANException(&quot;Invalid SAN string [&quot; + pSAN + ']', null);</span>
+        }
+
+<span class="fc" id="L92">        final boolean trait = pEtat.isWhiteActive();</span>
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">        if (&quot;0-0&quot;.equals(pSAN)) {</span>
+            // Gère les petits roques...
+<span class="nc bnc" id="L95" title="All 2 branches missed.">            if (trait) {</span>
+<span class="nc" id="L96">                return new Move(WHITE_KING, Square.valueOf(4),</span>
+<span class="nc" id="L97">                        Square.valueOf(6));</span>
+            }
+<span class="nc" id="L99">            return new Move(BLACK_KING, Square.valueOf(60), Square.valueOf(62));</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">        } else if (&quot;0-0-0&quot;.equals(pSAN)) {</span>
+            // ... les grands roques...
+<span class="nc bnc" id="L102" title="All 2 branches missed.">            if (trait) {</span>
+<span class="nc" id="L103">                return new Move(WHITE_KING, Square.valueOf(4),</span>
+<span class="nc" id="L104">                        Square.valueOf(2));</span>
+            }
+<span class="nc" id="L106">            return new Move(BLACK_KING, Square.valueOf(60), Square.valueOf(58));</span>
+        }
+
+        // Gère les coups normaux...
+        final Piece piece;
+<span class="fc" id="L111">        int posSrc = 0;</span>
+<span class="fc" id="L112">        char c = pSAN.charAt(posSrc);</span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">        if (Character.isLowerCase(c)) {</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">            if (trait) {</span>
+<span class="fc" id="L115">                piece = WHITE_PAWN;</span>
+<span class="fc" id="L116">            } else {</span>
+<span class="fc" id="L117">                piece = BLACK_PAWN;</span>
+            }
+<span class="fc" id="L119">        } else {</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">            if (trait) {</span>
+<span class="fc" id="L121">                piece = Piece.valueOf(c);</span>
+<span class="fc" id="L122">            } else {</span>
+<span class="fc" id="L123">                piece = Piece.valueOf(Character.toLowerCase(c));</span>
+            }
+<span class="fc" id="L125">            posSrc++;</span>
+        }
+
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        final boolean prise = pSAN.indexOf('x') &gt;= 0;</span>
+<span class="fc" id="L129">        final List&lt;Move&gt; mvts = new ArrayList&lt;&gt;(Arrays.asList(pEtat</span>
+<span class="fc" id="L130">                .getValidMoves(trait)));</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">        for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L132">            final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">            final boolean capture = m.getCaptured() != null;</span>
+<span class="fc bfc" id="L134" title="All 4 branches covered.">            if ((piece != m.getPiece()) || (prise != capture)) {</span>
+<span class="fc" id="L135">                mvts.remove(i);</span>
+            }
+        }
+
+<span class="fc" id="L139">        int posDst = pSAN.length() - 1;</span>
+<span class="pc bpc" id="L140" title="1 of 4 branches missed.">        while ((posDst &gt; 0) &amp;&amp; (!Character.isDigit(pSAN.charAt(posDst)))) {</span>
+<span class="fc" id="L141">            posDst--;</span>
+        }
+<span class="fc" id="L143">        final Square dst = Square.valueOf(pSAN</span>
+<span class="fc" id="L144">                .substring(posDst - 1, posDst + 1));</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">        for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L146">            final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">            if (dst != m.getTo()) {</span>
+<span class="fc" id="L148">                mvts.remove(i);</span>
+            }
+        }
+
+<span class="fc bfc" id="L152" title="All 2 branches covered.">        if (mvts.size() == 1) {</span>
+<span class="fc" id="L153">            return mvts.get(0);</span>
+        }
+
+<span class="pc bpc" id="L156" title="1 of 2 branches missed.">        if ((mvts.size() &gt; 1)</span>
+<span class="pc bpc" id="L157" title="1 of 6 branches missed.">                &amp;&amp; (((piece == BLACK_PAWN) &amp;&amp; (dst.getRank() == 0)) || ((piece == WHITE_PAWN) &amp;&amp; (dst</span>
+<span class="pc bpc" id="L158" title="1 of 2 branches missed.">                .getRank() == 7)))) {</span>
+            // Supprime les ambiguités dues aux promotions...
+<span class="fc" id="L160">            posDst = pSAN.length() - 1;</span>
+<span class="pc bpc" id="L161" title="2 of 4 branches missed.">            while ((posDst &gt; 0) &amp;&amp; (&quot;BNQR&quot;.indexOf(pSAN.charAt(posDst)) &lt; 0)) {</span>
+<span class="nc" id="L162">                posDst--;</span>
+            }
+<span class="pc bpc" id="L164" title="1 of 2 branches missed.">            if (posDst &gt; 0) {</span>
+<span class="fc" id="L165">                c = pSAN.charAt(posDst);</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L167">                    final Piece prom = mvts.get(i).getPromotion();</span>
+<span class="fc bfc" id="L168" title="All 2 branches covered.">                    if ((prom == null)</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">                            || (prom.getType().getSANLetter().charAt(0) != c)) {</span>
+<span class="fc" id="L170">                        mvts.remove(i);</span>
+                    }
+                }
+<span class="fc" id="L173">            } else {</span>
+<span class="nc bnc" id="L174" title="All 2 branches missed.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="nc bnc" id="L175" title="All 2 branches missed.">                    if (mvts.get(i).getPromotion() != null) {</span>
+<span class="nc" id="L176">                        mvts.remove(i);</span>
+                    }
+                }
+            }
+        }
+
+        // Supprime les éventuelles ambiguités restantes...
+<span class="fc bfc" id="L183" title="All 2 branches covered.">        if (mvts.size() &gt; 1) {</span>
+<span class="fc" id="L184">            c = pSAN.charAt(posSrc);</span>
+<span class="pc bpc" id="L185" title="1 of 2 branches missed.">            if (Character.isLowerCase(c)) {</span>
+<span class="fc" id="L186">                final int col = c - 'a';</span>
+<span class="fc bfc" id="L187" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L188">                    final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L189" title="All 2 branches covered.">                    if (col != m.getFrom().getFile()) {</span>
+<span class="fc" id="L190">                        mvts.remove(i);</span>
+                    }
+                }
+<span class="fc" id="L193">                posSrc++;</span>
+            }
+        }
+
+<span class="fc bfc" id="L197" title="All 2 branches covered.">        if (mvts.size() &gt; 1) {</span>
+<span class="fc" id="L198">            c = pSAN.charAt(posSrc);</span>
+<span class="pc bpc" id="L199" title="1 of 2 branches missed.">            if (Character.isDigit(c)) {</span>
+<span class="fc" id="L200">                final int lig = c - '1';</span>
+<span class="fc bfc" id="L201" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L202">                    final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L203" title="All 2 branches covered.">                    if (lig != m.getFrom().getRank()) {</span>
+<span class="fc" id="L204">                        mvts.remove(i);</span>
+                    }
+                }
+            }
+        }
+
+<span class="fc" id="L210">        final int l = mvts.size();</span>
+<span class="pc bpc" id="L211" title="1 of 2 branches missed.">        if (l &gt; 1) {</span>
+<span class="nc" id="L212">            throw new SANException(&quot;Ambiguous SAN string [&quot; + pSAN + ']', null);</span>
+<span class="pc bpc" id="L213" title="1 of 2 branches missed.">        } else if (l &lt; 1) {</span>
+<span class="nc" id="L214">            throw new SANException(&quot;Illegal SAN string context [&quot; + pSAN + ']',</span>
+<span class="nc" id="L215">                    null);</span>
+        }
+
+<span class="fc" id="L218">        return mvts.get(0);</span>
+    }
+
+    /**
+     * Renvoi la chaine SAN correspondant à un mouvement pour un état
+     * d'échiquier.
+     *
+     * @param pEtat      Etat de l'échiquier.
+     * @param pMouvement Mouvement à traduire.
+     * @return Chaine SAN correspondante.
+     */
+    public static String toSAN(final MoveGenerator pEtat, final Move pMouvement) {
+<span class="pc bpc" id="L230" title="1 of 2 branches missed.">        if (pEtat == null) {</span>
+<span class="nc" id="L231">            throw new NullPointerException(&quot;Missing game state&quot;);</span>
+        }
+<span class="pc bpc" id="L233" title="1 of 2 branches missed.">        if (pMouvement == null) {</span>
+<span class="nc" id="L234">            throw new NullPointerException(&quot;Missing move&quot;);</span>
+        }
+
+<span class="fc" id="L237">        final boolean trait = pEtat.isWhiteActive();</span>
+<span class="fc" id="L238">        final Piece piece = pMouvement.getPiece();</span>
+<span class="fc" id="L239">        final PieceType t = piece.getType();</span>
+<span class="fc" id="L240">        final StringBuilder sb = new StringBuilder();</span>
+<span class="fc" id="L241">        final Square src = pMouvement.getFrom();</span>
+<span class="fc" id="L242">        final Square dst = pMouvement.getTo();</span>
+<span class="fc" id="L243">        final MoveGenerator apres = pEtat.derive(pMouvement, false);</span>
+<span class="fc bfc" id="L244" title="All 2 branches covered.">        final int nbMvts = apres.getValidMoves(!trait).length;</span>
+
+<span class="fc" id="L246">        final int xSrc = src.getFile();</span>
+<span class="fc" id="L247">        final int xDst = dst.getFile();</span>
+<span class="pc bpc" id="L248" title="3 of 4 branches missed.">        if ((t == KING) &amp;&amp; (Math.abs(xSrc - xDst) &gt; 1)) {</span>
+            // Roques...
+<span class="nc" id="L250">            sb.append(&quot;0-0&quot;);</span>
+<span class="nc bnc" id="L251" title="All 2 branches missed.">            if (xSrc &gt; xDst) {</span>
+<span class="nc" id="L252">                sb.append(&quot;-0&quot;);</span>
+            }
+<span class="nc" id="L254">        } else {</span>
+            // Normal...
+<span class="fc" id="L256">            sb.append(t.getSANLetter());</span>
+
+            // Recherche et levée des éventuelles ambiguités...
+<span class="fc bfc" id="L259" title="All 2 branches covered.">            if (t != PAWN) {</span>
+<span class="fc" id="L260">                final List&lt;Move&gt; mvts = new ArrayList&lt;&gt;(Arrays.asList(pEtat</span>
+<span class="fc" id="L261">                        .getValidMoves(trait)));</span>
+<span class="fc bfc" id="L262" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L263">                    final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L264" title="All 4 branches covered.">                    if ((piece != m.getPiece()) || (dst != m.getTo())</span>
+<span class="fc bfc" id="L265" title="All 2 branches covered.">                            || (m.equals(pMouvement))) {</span>
+<span class="fc" id="L266">                        mvts.remove(i);</span>
+                    }
+                }
+<span class="fc" id="L269">                boolean preciser = true;</span>
+<span class="fc bfc" id="L270" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L271">                    final Move m = mvts.get(i);</span>
+<span class="fc bfc" id="L272" title="All 2 branches covered.">                    if (xSrc != m.getFrom().getFile()) {</span>
+<span class="fc" id="L273">                        mvts.remove(i);</span>
+<span class="pc bpc" id="L274" title="1 of 2 branches missed.">                        if (preciser) {</span>
+<span class="fc" id="L275">                            sb.append((char) ('a' + xSrc));</span>
+<span class="fc" id="L276">                            preciser = false;</span>
+                        }
+                    }
+                }
+<span class="fc" id="L280">                final int ySrc = src.getRank();</span>
+<span class="pc bfc" id="L281" title="All 2 branches covered.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L282">                    final Move m = mvts.get(i);</span>
+<span class="pc bpc" id="L283" title="1 of 2 branches missed.">                    if (ySrc != m.getFrom().getRank()) {</span>
+<span class="fc" id="L284">                        sb.append((char) ('1' + ySrc));</span>
+<span class="fc" id="L285">                        break;</span>
+                    }
+                }
+            }
+
+<span class="fc bfc" id="L290" title="All 2 branches covered.">            if ((pEtat.getPieceAt(dst) != null)</span>
+<span class="pc bpc" id="L291" title="3 of 4 branches missed.">                    || ((dst == pEtat.getEnPassant()) &amp;&amp; (t == PAWN))) {</span>
+                // Prise...
+<span class="fc bfc" id="L293" title="All 2 branches covered.">                if (t == PAWN) {</span>
+<span class="fc" id="L294">                    sb.append((char) ('a' + xSrc));</span>
+                }
+<span class="fc" id="L296">                sb.append('x');</span>
+            }
+
+<span class="fc" id="L299">            sb.append(dst.getFENString());</span>
+
+<span class="fc bfc" id="L301" title="All 2 branches covered.">            if (t == PAWN) {</span>
+                // Cas particuliers...
+<span class="pc bpc" id="L303" title="1 of 2 branches missed.">                if (dst == pEtat.getEnPassant()) {</span>
+                    // ... de la prise en passant...
+<span class="nc" id="L305">                    sb.append(&quot; e.p.&quot;);</span>
+<span class="nc" id="L306">                } else {</span>
+                    // ... ou de la promotion...
+<span class="fc" id="L308">                    final int yDst = dst.getRank();</span>
+<span class="pc bpc" id="L309" title="1 of 4 branches missed.">                    if ((trait &amp;&amp; (yDst == RANK_COUNT - 1))</span>
+<span class="fc bfc" id="L310" title="All 4 branches covered.">                            || ((!trait) &amp;&amp; (yDst == 0))) {</span>
+                        // Le '=' n'est pas dans la version de SAN de la FIDE :
+                        // sb.append('=');
+<span class="fc" id="L313">                        final Piece promotion = pMouvement.getPromotion();</span>
+<span class="pc bpc" id="L314" title="1 of 2 branches missed.">                        if (promotion == null) {</span>
+<span class="nc bnc" id="L315" title="All 2 branches missed.">                            assert false;</span>
+<span class="nc" id="L316">                            sb.append(QUEEN.getSANLetter());</span>
+<span class="nc" id="L317">                        } else {</span>
+<span class="fc" id="L318">                            final PieceType promotionType = promotion.getType();</span>
+<span class="pc bpc" id="L319" title="1 of 2 branches missed.">                            if (promotionType != PAWN) {</span>
+<span class="fc" id="L320">                                sb.append(promotionType.getSANLetter());</span>
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+<span class="fc bfc" id="L328" title="All 4 branches covered.">        if (apres.isInCheck(!trait)) {</span>
+            // Echec / Mat ...
+<span class="fc" id="L330">            sb.append('+');</span>
+<span class="pc bpc" id="L331" title="1 of 2 branches missed.">            if (nbMvts == 0) {</span>
+<span class="fc" id="L332">                sb.append('+');</span>
+            }
+<span class="fc bfc" id="L334" title="All 2 branches covered.">        } else if (nbMvts == 0) {</span>
+            // Pat ...
+<span class="fc" id="L336">            sb.append(&quot;(=)&quot;);</span>
+        }
+
+<span class="fc" id="L339">        return sb.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

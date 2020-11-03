@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CapturesPanel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">CapturesPanel.java</span></div><h1>CapturesPanel.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.Piece;
+
+import static fr.free.jchecs.core.Piece.BLACK_KING;
+
+/**
+ * Composant affichant la liste des pièces capturées pour une couleur.
+ *
+ * @author David Cotton
+ */
+final class CapturesPanel implements PropertyChangeListener {
+    /**
+     * Composant graphique externe.
+     */
+    private final JComponent _component;
+
+    /**
+     * Partie liée au composant.
+     */
+    private final Game _game;
+
+    /**
+     * Objet chargé du rendu des pièces.
+     */
+    private final PieceUI _pieceUI;
+
+    /**
+     * Liste des labels affichant les icônes des pièces prises.
+     */
+    private final JLabel[] _labels;
+
+    /**
+     * A vrai si le panel liste les pièces blanches prises.
+     */
+    private boolean _color;
+
+    /**
+     * Construit un nouveau composant d'affichage de la liste des pièces prises.
+     *
+     * @param pPartie Définition de partie liée au composant.
+     * @param pRendu  Objet chargé du rendu des pièces.
+     * @param pTrait  A vrai si l'on veut la liste des pièces blanches prises.
+     */
+<span class="nc" id="L77">    CapturesPanel(final Game pPartie, final PieceUI pRendu, final boolean pTrait) {</span>
+<span class="nc" id="L78">        _game = pPartie;</span>
+<span class="nc" id="L79">        _pieceUI = pRendu;</span>
+<span class="nc" id="L80">        _color = pTrait;</span>
+
+<span class="nc" id="L82">        _labels = new JLabel[16];</span>
+<span class="nc" id="L83">        final JPanel fond = new JPanel(new GridLayout(1, _labels.length)) {</span>
+            /** Identifiant de la classe pour la sérialisation. */
+            private static final long serialVersionUID = 6954553000735433951L;
+
+            /**
+             * Surcharge pour adapter la taille minimale du composant en
+             * fonction de la taille des pièces.
+             *
+             * @return Taille préférée du composant.
+             */
+            @Override
+            public Dimension getPreferredSize() {
+<span class="nc" id="L95">                final Image img = pRendu.getSmallImage(BLACK_KING);</span>
+<span class="nc" id="L96">                return new Dimension(img.getWidth(null), img.getHeight(null));</span>
+            }
+        };
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        for (int i = 0; i &lt; _labels.length; i++) {</span>
+<span class="nc" id="L100">            _labels[i] = new JLabel();</span>
+<span class="nc" id="L101">            fond.add(_labels[i]);</span>
+        }
+<span class="nc" id="L103">        fond.setBorder(BorderFactory.createLoweredBevelBorder());</span>
+
+<span class="nc" id="L105">        _component = fond;</span>
+
+<span class="nc" id="L107">        initCapturesPaint();</span>
+
+<span class="nc" id="L109">        pPartie.addPropertyChangeListener(&quot;position&quot;, this);</span>
+<span class="nc" id="L110">    }</span>
+
+    /**
+     * Renvoi le composant graphique affichable.
+     *
+     * @return Composant graphique.
+     */
+    JComponent getComponent() {
+<span class="nc" id="L118">        return _component;</span>
+    }
+
+    /**
+     * Initialise l'affichage de la liste de pièces.
+     */
+    void initCapturesPaint() {
+<span class="nc" id="L125">        int i = 0;</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">        for (final Move m : _game.getMovesToCurrent()) {</span>
+<span class="nc" id="L127">            final Piece prise = m.getCaptured();</span>
+<span class="nc bnc" id="L128" title="All 4 branches missed.">            if ((prise != null) &amp;&amp; (prise.isWhite() == _color)) {</span>
+<span class="nc" id="L129">                _labels[i]</span>
+<span class="nc" id="L130">                        .setIcon(new ImageIcon(_pieceUI.getSmallImage(prise)));</span>
+<span class="nc" id="L131">                _labels[i].setVisible(true);</span>
+<span class="nc" id="L132">                i++;</span>
+            }
+        }
+<span class="nc bnc" id="L135" title="All 2 branches missed.">        while (i &lt; _labels.length) {</span>
+<span class="nc" id="L136">            _labels[i].setVisible(false);</span>
+<span class="nc" id="L137">            i++;</span>
+        }
+<span class="nc" id="L139">    }</span>
+
+    /**
+     * Réagit au changement dans la définition de la partie.
+     *
+     * @param pEvt Evènement signalant le changement.
+     */
+    @Override
+    public void propertyChange(final PropertyChangeEvent pEvt) {
+<span class="nc" id="L148">        initCapturesPaint();</span>
+<span class="nc" id="L149">    }</span>
+
+    /**
+     * Indique si le panel doit afficher les pièces prises blanches.
+     *
+     * @param pCouleur A vrai pour afficher les pièces blanches prises.
+     */
+    void setWhite(final boolean pCouleur) {
+<span class="nc" id="L157">        _color = pCouleur;</span>
+
+<span class="nc" id="L159">        initCapturesPaint();</span>
+<span class="nc" id="L160">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

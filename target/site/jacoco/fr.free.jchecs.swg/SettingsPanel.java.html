@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SettingsPanel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">SettingsPanel.java</span></div><h1>SettingsPanel.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.swing.JCheckBox;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.SwingUI.CELLS_SIZE_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.ENABLE_SOUNDS_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.FLIP_VIEW_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.HIGHLIGHT_LAST_MOVE_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.HIGHLIGHT_VALIDS_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.SHOW_CAPTURES_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.SHOW_COORDS_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.SHOW_FEN_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.SHOW_MENUBAR_PROPERTY;
+import static fr.free.jchecs.swg.SwingUI.SHOW_TOOLBAR_PROPERTY;
+
+/**
+ * Composant permettant de modifier les paramètres de configuration.
+ *
+ * @author David Cotton
+ */
+final class SettingsPanel implements ChangeListener, ItemListener {
+    /**
+     * Interface utilisateur liée au panel.
+     */
+    private final UI _ui;
+
+    /**
+     * Composant graphique externe.
+     */
+    private final JComponent _component;
+
+    /**
+     * Liste des cases à cocher.
+     */
+    private final Map&lt;JCheckBox, String&gt; _checkBoxes;
+
+    /**
+     * Curseur permettant de règler la taille du plateau.
+     */
+    private final JSlider _cellSize;
+
+    /**
+     * Instancie un composant de configuration.
+     *
+     * @param pUI Interface graphique liée au panel.
+     */
+<span class="nc" id="L80">    SettingsPanel(final UI pUI) {</span>
+<span class="nc" id="L81">        _ui = pUI;</span>
+<span class="nc" id="L82">        _component = new JPanel(new GridLayout(-1, 1));</span>
+<span class="nc" id="L83">        _checkBoxes = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L84">        addCheckBox(&quot;panel.settings.showMenuBar&quot;, SHOW_MENUBAR_PROPERTY);</span>
+<span class="nc" id="L85">        addCheckBox(&quot;panel.settings.showToolBar&quot;, SHOW_TOOLBAR_PROPERTY);</span>
+<span class="nc" id="L86">        addCheckBox(&quot;panel.settings.showCaptures&quot;, SHOW_CAPTURES_PROPERTY);</span>
+<span class="nc" id="L87">        addCheckBox(&quot;panel.settings.showCoords&quot;, SHOW_COORDS_PROPERTY);</span>
+<span class="nc" id="L88">        addCheckBox(&quot;panel.settings.showFEN&quot;, SHOW_FEN_PROPERTY);</span>
+<span class="nc" id="L89">        addCheckBox(&quot;panel.settings.highlightValids&quot;, HIGHLIGHT_VALIDS_PROPERTY);</span>
+<span class="nc" id="L90">        addCheckBox(&quot;panel.settings.highlightLastMove&quot;,</span>
+<span class="nc" id="L91">                HIGHLIGHT_LAST_MOVE_PROPERTY);</span>
+<span class="nc" id="L92">        addCheckBox(&quot;panel.settings.flipView&quot;, FLIP_VIEW_PROPERTY);</span>
+<span class="nc" id="L93">        addCheckBox(&quot;panel.settings.enableSound&quot;, ENABLE_SOUNDS_PROPERTY);</span>
+
+<span class="nc" id="L95">        final JPanel modifTaille = new JPanel(new BorderLayout(4, 0));</span>
+<span class="nc" id="L96">        modifTaille.add(new JLabel(getI18NString(&quot;panel.settings.cellsSize&quot;)),</span>
+<span class="nc" id="L97">                BorderLayout.WEST);</span>
+<span class="nc" id="L98">        _cellSize = new JSlider(1, 5);</span>
+<span class="nc" id="L99">        _cellSize.setValue((Integer.parseInt(_ui</span>
+<span class="nc" id="L100">                .getProperty(CELLS_SIZE_PROPERTY)) - 40) / 8);</span>
+<span class="nc" id="L101">        _cellSize.setMajorTickSpacing(1);</span>
+<span class="nc" id="L102">        _cellSize.setSnapToTicks(true);</span>
+<span class="nc" id="L103">        _cellSize.setPreferredSize(new Dimension(50, _cellSize</span>
+<span class="nc" id="L104">                .getPreferredSize().height));</span>
+<span class="nc" id="L105">        modifTaille.add(_cellSize, BorderLayout.CENTER);</span>
+<span class="nc" id="L106">        _cellSize.addChangeListener(this);</span>
+<span class="nc" id="L107">        _component.add(modifTaille);</span>
+<span class="nc" id="L108">    }</span>
+
+    /**
+     * Ajoute une case à cocher au composant.
+     *
+     * @param pIdLabel   Clé identifiant le label de la case à cocher.
+     * @param pPropriete Propriété liée à la case à cocher.
+     */
+    private void addCheckBox(final String pIdLabel, final String pPropriete) {
+<span class="nc" id="L117">        final JCheckBox cb = new JCheckBox(getI18NString(pIdLabel),</span>
+<span class="nc" id="L118">                _ui.getBooleanProperty(pPropriete));</span>
+<span class="nc" id="L119">        _checkBoxes.put(cb, pPropriete);</span>
+<span class="nc" id="L120">        _component.add(cb);</span>
+<span class="nc" id="L121">        cb.addItemListener(this);</span>
+<span class="nc" id="L122">    }</span>
+
+    /**
+     * Renvoi le composant graphique affichable.
+     *
+     * @return Composant graphique.
+     */
+    JComponent getComponent() {
+<span class="nc" id="L130">        return _component;</span>
+    }
+
+    /**
+     * Réagit aux modifications des cases-à-cocher.
+     *
+     * @param pEvent Evènement signalant le changement d'état d'une case-à-cocher.
+     * @see ItemListener#itemStateChanged(ItemEvent)
+     */
+    @Override
+    public void itemStateChanged(final ItemEvent pEvent) {
+<span class="nc" id="L141">        final Object src = pEvent.getSource();</span>
+<span class="nc bnc" id="L142" title="All 2 branches missed.">        if (src instanceof JCheckBox) {</span>
+<span class="nc" id="L143">            final JCheckBox cb = (JCheckBox) src;</span>
+<span class="nc" id="L144">            final String propriete = _checkBoxes.get(cb);</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">            if (propriete != null) {</span>
+<span class="nc" id="L146">                _ui.setBooleanProperty(propriete, cb.isSelected());</span>
+            }
+        }
+<span class="nc" id="L149">    }</span>
+
+    /**
+     * Réagit aux modifications du curseur.
+     *
+     * @param pEvent Evènement signalant la modification.
+     * @see ChangeListener#stateChanged(ChangeEvent)
+     */
+    @Override
+    public void stateChanged(final ChangeEvent pEvent) {
+<span class="nc bnc" id="L159" title="All 2 branches missed.">        if (pEvent.getSource() == _cellSize) {</span>
+<span class="nc bnc" id="L160" title="All 2 branches missed.">            if (!_cellSize.getValueIsAdjusting()) {</span>
+<span class="nc" id="L161">                _ui.setProperty(CELLS_SIZE_PROPERTY,</span>
+<span class="nc" id="L162">                        Integer.toString(_cellSize.getValue() * 8 + 40));</span>
+            }
+        }
+<span class="nc" id="L165">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

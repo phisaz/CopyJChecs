@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SavePositionAsAction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">SavePositionAsAction.java</span></div><h1>SavePositionAsAction.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.util.Locale;
+
+import javax.swing.Action;
+import javax.swing.Icon;
+import javax.swing.JFileChooser;
+import javax.swing.SwingUtilities;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Action de l'option &quot;Enregistrer la position sous...&quot;.
+ *
+ * @author David Cotton
+ */
+final class SavePositionAsAction extends AbstractUIAction {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = 3176295779735665880L;
+
+    /**
+     * Petite icône.
+     */
+<span class="nc" id="L48">    private static final Icon ICON16 = getImageIcon(&quot;saveFENAs16.png&quot;);</span>
+
+    /**
+     * Icône moyenne.
+     */
+<span class="nc" id="L53">    private static final Icon ICON22 = getImageIcon(&quot;saveFENAs22.png&quot;);</span>
+
+    /**
+     * Crée une nouvelle instance de l'action.
+     *
+     * @param pUI Référence du composant maitre de l'interface.
+     */
+    SavePositionAsAction(final UI pUI) {
+<span class="nc" id="L61">        super(&quot;savePositionAs&quot;, pUI);</span>
+
+<span class="nc" id="L63">        putValue(Action.SMALL_ICON, ICON16);</span>
+<span class="nc" id="L64">        putValue(Action.LARGE_ICON_KEY, ICON22);</span>
+<span class="nc" id="L65">    }</span>
+
+    /**
+     * Réaction face au déclenchement de l'action.
+     *
+     * @param pEvent Evènement signalant le déclenchement.
+     */
+    @Override
+    public void actionPerformed(final ActionEvent pEvent) {
+<span class="nc" id="L74">        final JFileChooser dialog = new JFileChooser();</span>
+<span class="nc" id="L75">        dialog.setDialogTitle(getI18NString(&quot;action.savePosition.name&quot;));</span>
+<span class="nc" id="L76">        dialog.addChoosableFileFilter(new FileNameExtensionFilter(</span>
+<span class="nc" id="L77">                getI18NString(&quot;action.savePosition.filter&quot;), &quot;fen&quot;));</span>
+<span class="nc" id="L78">        final UI ui = getUI();</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">        if (dialog.showSaveDialog(ui.getMainFrame()) == JFileChooser.APPROVE_OPTION) {</span>
+<span class="nc" id="L80">            File fichier = dialog.getSelectedFile();</span>
+<span class="nc" id="L81">            if (!fichier.getName().toLowerCase(Locale.getDefault())</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">                    .endsWith(&quot;.fen&quot;)) {</span>
+<span class="nc" id="L83">                fichier = new File(fichier.getAbsolutePath() + &quot;.fen&quot;);</span>
+            }
+<span class="nc" id="L85">            ui.setPositionFile(fichier);</span>
+<span class="nc" id="L86">            SwingUtilities.invokeLater(new PositionSaver(ui));</span>
+        }
+<span class="nc" id="L88">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">AbstractBoard.java</span></div><h1>AbstractBoard.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.util.Random;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+
+/**
+ * Squelette de l'implémentation d'une classe représentant un état de la partie.
+ *
+ * @author David Cotton
+ */
+abstract class AbstractBoard implements Board {
+    /**
+     * Constantes de pièce / position pour le calcul de clés de hachage
+     * &quot;Zobrist&quot;.
+     */
+    static final int[][] ZOBRIST_PIECE_POSITION;
+
+    /**
+     * Constante de prise en passant pour le calcul de clés de hachage
+     * &quot;Zobrist&quot;.
+     */
+    static final int[] ZOBRIST_EN_PASSANT;
+
+    /**
+     * Constante de petit roque pour les noirs pour le calcul de clés de hachage
+     * &quot;Zobrist&quot;.
+     */
+    static final int ZOBRIST_BLACK_CASTLE_LONG;
+
+    /**
+     * Constante de grand roque pour les noirs pour le calcul de clés de hachage
+     * &quot;Zobrist&quot;.
+     */
+    static final int ZOBRIST_BLACK_CASTLE_SHORT;
+
+    /**
+     * Constante de trait aux blancs pour le calcul de clés de hachage
+     * &quot;Zobrist&quot;.
+     */
+    static final int ZOBRIST_WHITE_ACTIVE;
+
+    /**
+     * Constante de petit roque pour les blancs pour le calcul de clés de
+     * hachage &quot;Zobrist&quot;.
+     */
+    static final int ZOBRIST_WHITE_CASTLE_LONG;
+
+    /**
+     * Constante de grand roque pour les blancs pour le calcul de clés de
+     * hachage &quot;Zobrist&quot;.
+     */
+    static final int ZOBRIST_WHITE_CASTLE_SHORT;
+
+    /**
+     * Identifiant pour la sérialisation.
+     */
+    private static final long serialVersionUID = -8763248074719576457L;
+
+    static {
+<span class="fc" id="L80">        final Random rnd = new Random(123456789L);</span>
+<span class="fc" id="L81">        final int nbPieces = Piece.values().length;</span>
+<span class="fc" id="L82">        ZOBRIST_PIECE_POSITION = new int[nbPieces][FILE_COUNT * RANK_COUNT];</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        for (int i = nbPieces; --i &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">            for (int j = FILE_COUNT * RANK_COUNT; --j &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L85">                ZOBRIST_PIECE_POSITION[i][j] = rnd.nextInt();</span>
+            }
+        }
+<span class="fc" id="L88">        ZOBRIST_EN_PASSANT = new int[FILE_COUNT];</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">        for (int i = FILE_COUNT; --i &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L90">            ZOBRIST_EN_PASSANT[i] = rnd.nextInt();</span>
+        }
+<span class="fc" id="L92">        ZOBRIST_BLACK_CASTLE_LONG = rnd.nextInt();</span>
+<span class="fc" id="L93">        ZOBRIST_BLACK_CASTLE_SHORT = rnd.nextInt();</span>
+<span class="fc" id="L94">        ZOBRIST_WHITE_ACTIVE = rnd.nextInt();</span>
+<span class="fc" id="L95">        ZOBRIST_WHITE_CASTLE_LONG = rnd.nextInt();</span>
+<span class="fc" id="L96">        ZOBRIST_WHITE_CASTLE_SHORT = rnd.nextInt();</span>
+<span class="fc" id="L97">    }</span>
+
+    /**
+     * Drapeau indiquant le droit de roquer côté roi (petit roque) pour les
+     * noirs.
+     */
+<span class="fc" id="L103">    private boolean _blackCastleShort = true;</span>
+
+    /**
+     * Drapeau indiquant le droit de roquer côté reine (grand roque) pour les
+     * noirs.
+     */
+<span class="fc" id="L109">    private boolean _blackCastleLong = true;</span>
+
+    /**
+     * Case cible de l'éventuelle 'une prise &quot;en passant&quot; disponible (peut être
+     * à null).
+     */
+    private Square _enPassant;
+
+    /**
+     * Numéro du coup.
+     */
+<span class="fc" id="L120">    private int _fullmoveNumber = 1;</span>
+
+    /**
+     * Compteur des demi-coups depuis la dernière prise ou le dernier mouvement
+     * de pion.
+     */
+    private int _halfmoveCount;
+
+    /**
+     * Drapeau positionné à vrai si le trait est aux blancs.
+     */
+<span class="fc" id="L131">    private boolean _whiteActive = true;</span>
+
+    /**
+     * Drapeau indiquant le droit de roquer côté roi (petit roque) pour les
+     * blancs.
+     */
+<span class="fc" id="L137">    private boolean _whiteCastleShort = true;</span>
+
+    /**
+     * Drapeau indiquant le droit de roquer côté reine (grand roque) pour les
+     * blancs.
+     */
+<span class="fc" id="L143">    private boolean _whiteCastleLong = true;</span>
+
+    /**
+     * Crée une nouvelle instance.
+     */
+<span class="fc" id="L148">    AbstractBoard() {</span>
+        // Rien de spécifique...
+<span class="fc" id="L150">    }</span>
+
+    /**
+     * Crée une nouvelle instance, initialisée à partir de l'état reçu.
+     *
+     * @param pEtat Instance initiale.
+     */
+<span class="fc" id="L157">    AbstractBoard(final Board pEtat) {</span>
+<span class="fc" id="L158">        _blackCastleShort = pEtat.canCastleShort(false);</span>
+<span class="fc" id="L159">        _blackCastleLong = pEtat.canCastleLong(false);</span>
+<span class="fc" id="L160">        _enPassant = pEtat.getEnPassant();</span>
+<span class="fc" id="L161">        _fullmoveNumber = pEtat.getFullmoveNumber();</span>
+<span class="fc" id="L162">        _halfmoveCount = pEtat.getHalfmoveCount();</span>
+<span class="fc" id="L163">        _whiteActive = pEtat.isWhiteActive();</span>
+<span class="fc" id="L164">        _whiteCastleShort = pEtat.canCastleShort(true);</span>
+<span class="fc" id="L165">        _whiteCastleLong = pEtat.canCastleLong(true);</span>
+<span class="fc" id="L166">    }</span>
+
+    /**
+     * Crée une nouvelle instance, copiée à partir de l'instance reçue.
+     *
+     * @param pEtat Instance à copier.
+     */
+<span class="fc" id="L173">    AbstractBoard(final AbstractBoard pEtat) {</span>
+<span class="fc" id="L174">        _blackCastleShort = pEtat._blackCastleShort;</span>
+<span class="fc" id="L175">        _blackCastleLong = pEtat._blackCastleLong;</span>
+<span class="fc" id="L176">        _enPassant = pEtat._enPassant;</span>
+<span class="fc" id="L177">        _fullmoveNumber = pEtat._fullmoveNumber;</span>
+<span class="fc" id="L178">        _halfmoveCount = pEtat._halfmoveCount;</span>
+<span class="fc" id="L179">        _whiteActive = pEtat._whiteActive;</span>
+<span class="fc" id="L180">        _whiteCastleShort = pEtat._whiteCastleShort;</span>
+<span class="fc" id="L181">        _whiteCastleLong = pEtat._whiteCastleLong;</span>
+<span class="fc" id="L182">    }</span>
+
+    /**
+     * Renvoi l'état du droit de roquer côté roi (petit roque) pour une couleur.
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour obtenir l'état des blancs.
+     * @return Etat du droit de roquer côté roi pour la couleur.
+     */
+    @Override
+    public final boolean canCastleLong(final boolean pBlanc) {
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L193">            return _whiteCastleLong;</span>
+        }
+
+<span class="fc" id="L196">        return _blackCastleLong;</span>
+    }
+
+    /**
+     * Renvoi l'état du droit de roquer côté reine (grand roque) pour une
+     * couleur.
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour obtenir l'état des blancs.
+     * @return Etat du droit de roquer côté reine pour la couleur.
+     */
+    @Override
+    public final boolean canCastleShort(final boolean pBlanc) {
+<span class="fc bfc" id="L208" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L209">            return _whiteCastleShort;</span>
+        }
+
+<span class="fc" id="L212">        return _blackCastleShort;</span>
+    }
+
+    /**
+     * Fonction de comparaison entre échiquiers, pour permettre un tri.
+     *
+     * @param pEchiquier Echiquier avec lequel comparer.
+     * @return -1 si l'échiquier est plus &quot;petit&quot;, 0 s'ils sont égaux, 1 s'il
+     * est plus &quot;grand&quot;.
+     * @see Comparable#compareTo(Object)
+     */
+    @Override
+    public final int compareTo(final Board pEchiquier) {
+<span class="fc" id="L225">        int res = 0;</span>
+<span class="fc bfc" id="L226" title="All 2 branches covered.">        for (int y = RANK_COUNT; --y &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc bfc" id="L227" title="All 2 branches covered.">            for (int x = FILE_COUNT; --x &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L228">                final Piece p1 = getPieceAt(x, y);</span>
+<span class="fc" id="L229">                final Piece p2 = pEchiquier.getPieceAt(x, y);</span>
+<span class="pc bpc" id="L230" title="1 of 4 branches missed.">                if ((p1 != null) || (p2 != null)) {</span>
+<span class="pc bpc" id="L231" title="1 of 2 branches missed.">                    if (p1 == null) {</span>
+<span class="nc" id="L232">                        return -1;</span>
+<span class="pc bpc" id="L233" title="1 of 2 branches missed.">                    } else if (p2 == null) {</span>
+<span class="nc" id="L234">                        return 1;</span>
+                    } else {
+<span class="fc" id="L236">                        res = p1.compareTo(p2);</span>
+<span class="pc bpc" id="L237" title="1 of 2 branches missed.">                        if (res != 0) {</span>
+<span class="nc" id="L238">                            return res;</span>
+                        }
+                    }
+                }
+            }
+        }
+
+<span class="fc" id="L245">        final Square ep = pEchiquier.getEnPassant();</span>
+<span class="pc bpc" id="L246" title="3 of 4 branches missed.">        if ((_enPassant != null) || (ep != null)) {</span>
+<span class="pc bpc" id="L247" title="1 of 2 branches missed.">            if (_enPassant == null) {</span>
+<span class="nc" id="L248">                return -1;</span>
+<span class="pc bpc" id="L249" title="1 of 2 branches missed.">            } else if (ep == null) {</span>
+<span class="nc" id="L250">                return 1;</span>
+            } else {
+<span class="fc" id="L252">                res = _enPassant.compareTo(ep);</span>
+            }
+        }
+<span class="fc bfc" id="L255" title="All 2 branches covered.">        if (res == 0) {</span>
+<span class="fc" id="L256">            res = Boolean.valueOf(_whiteActive).compareTo(pEchiquier.isWhiteActive());</span>
+        }
+<span class="fc bfc" id="L258" title="All 2 branches covered.">        if (res == 0) {</span>
+<span class="fc" id="L259">            res = Boolean.valueOf(_blackCastleLong).compareTo(pEchiquier.canCastleLong(false));</span>
+        }
+<span class="fc bfc" id="L261" title="All 2 branches covered.">        if (res == 0) {</span>
+<span class="fc" id="L262">            res = Boolean.valueOf(_blackCastleShort).compareTo(pEchiquier.canCastleShort(false));</span>
+        }
+<span class="fc bfc" id="L264" title="All 2 branches covered.">        if (res == 0) {</span>
+<span class="fc" id="L265">            res = Boolean.valueOf(_whiteCastleLong).compareTo(pEchiquier.canCastleLong(true));</span>
+        }
+<span class="fc bfc" id="L267" title="All 2 branches covered.">        if (res == 0) {</span>
+<span class="fc" id="L268">            res = Boolean.valueOf(_whiteCastleShort).compareTo(pEchiquier.canCastleShort(true));</span>
+        }
+
+<span class="fc" id="L271">        return res;</span>
+    }
+
+    /**
+     * Teste l'égalité entre deux descriptions de partie.
+     * &lt;p&gt;
+     * Attention : le nombre de demi-coups depuis la dernière prise ainsi que le
+     * numéro du tour ne sont pas pris en compte dans la comparaison.
+     * &lt;/p&gt;
+     * &lt;p&gt;
+     * Pour des raisons de performance, il est préférable que les
+     * implémentations concrètes de cette classe prévoient une version
+     * spécialisée du test d'égalité. De plus, pour conserver
+     * l'interopérabilité, les implémentations doivent rester compatibles sur ce
+     * test.
+     * &lt;/p&gt;
+     *
+     * @param pObjet Objet avec lequel comparer.
+     * @return Vrai si les deux objets sont égaux.
+     */
+    @Override
+    public boolean equals(final Object pObjet) {
+<span class="fc bfc" id="L293" title="All 2 branches covered.">        if (pObjet == this) {</span>
+<span class="fc" id="L294">            return true;</span>
+        }
+
+<span class="fc bfc" id="L297" title="All 2 branches covered.">        if (!(pObjet instanceof Board)) {</span>
+<span class="fc" id="L298">            return false;</span>
+        }
+
+<span class="fc bfc" id="L301" title="All 2 branches covered.">        if (hashCode() != pObjet.hashCode()) {</span>
+<span class="fc" id="L302">            return false;</span>
+        }
+
+<span class="fc" id="L305">        final Board o = (Board) pObjet;</span>
+
+<span class="fc bfc" id="L307" title="All 2 branches covered.">        for (int y = RANK_COUNT; --y &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc bfc" id="L308" title="All 2 branches covered.">            for (int x = FILE_COUNT; --x &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="pc bpc" id="L309" title="1 of 2 branches missed.">                if (getPieceAt(x, y) != o.getPieceAt(x, y)) {</span>
+<span class="nc" id="L310">                    return false;</span>
+                }
+            }
+        }
+
+<span class="fc" id="L315">        return equalsInternal(o);</span>
+    }
+
+    /**
+     * Teste l'égalité sur les données internes de cette classe.
+     *
+     * @param pEtat Etat avec lequel comparer.
+     * @return Vrai si les données internes sont égales.
+     */
+    final boolean equalsInternal(final Board pEtat) {
+<span class="fc" id="L325">        boolean res = true;</span>
+
+<span class="pc bpc" id="L327" title="1 of 2 branches missed.">        if (_whiteActive != pEtat.isWhiteActive()) {</span>
+<span class="nc" id="L328">            res = false;</span>
+<span class="pc bpc" id="L329" title="1 of 2 branches missed.">        } else if (_enPassant != pEtat.getEnPassant()) {</span>
+<span class="nc" id="L330">            res = false;</span>
+<span class="pc bpc" id="L331" title="1 of 2 branches missed.">        } else if (_blackCastleLong != pEtat.canCastleLong(false)) {</span>
+<span class="nc" id="L332">            res = false;</span>
+<span class="pc bpc" id="L333" title="1 of 2 branches missed.">        } else if (_blackCastleShort != pEtat.canCastleShort(false)) {</span>
+<span class="nc" id="L334">            res = false;</span>
+<span class="pc bpc" id="L335" title="1 of 2 branches missed.">        } else if (_whiteCastleLong != pEtat.canCastleLong(true)) {</span>
+<span class="nc" id="L336">            res = false;</span>
+<span class="pc bpc" id="L337" title="1 of 2 branches missed.">        } else if (_whiteCastleShort != pEtat.canCastleShort(true)) {</span>
+<span class="nc" id="L338">            res = false;</span>
+        }
+
+<span class="fc" id="L341">        return res;</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle case cible de la prise &quot;en passant&quot; en cours.
+     *
+     * @return Case cible de la price &quot;en passant&quot; (peut être à null).
+     */
+    @Override
+    public final Square getEnPassant() {
+<span class="fc" id="L351">        return _enPassant;</span>
+    }
+
+    /**
+     * Renvoi le numéro du coup.
+     *
+     * @return Numéro de coup (&gt; 0).
+     */
+    @Override
+    public final int getFullmoveNumber() {
+<span class="fc" id="L361">        return _fullmoveNumber;</span>
+    }
+
+    /**
+     * Renvoi la valeur du compteur de demi-coups depuis la dernière prise ou le
+     * dernier mouvement de pion.
+     *
+     * @return Nombre de demi-coups (&gt;= 0).
+     */
+    @Override
+    public final int getHalfmoveCount() {
+<span class="fc" id="L372">        return _halfmoveCount;</span>
+    }
+
+    /**
+     * Implémentation par défaut du calcul des clés de hachage, suivant la
+     * méthode &quot;Zobrist&quot;.
+     * &lt;p&gt;
+     * Les implémentations concrètes devraient surcharger cette méthode pour des
+     * raisons de performance. Attention : les résultats produits par les
+     * différentes implémentations doivent rester compatibles si l'on souhaite
+     * l'interopérabilité.
+     * &lt;/p&gt;
+     *
+     * @return Clé de hachage.
+     */
+    @Override
+    public int hashCode() {
+<span class="fc" id="L389">        int res = zobristRoot();</span>
+<span class="fc bfc" id="L390" title="All 2 branches covered.">        for (final Square s : Square.values()) {</span>
+<span class="fc" id="L391">            final Piece p = getPieceAt(s);</span>
+<span class="fc bfc" id="L392" title="All 2 branches covered.">            if (p != null) {</span>
+<span class="fc" id="L393">                res ^= ZOBRIST_PIECE_POSITION[p.ordinal()][s.getIndex()];</span>
+            }
+        }
+
+<span class="fc" id="L397">        return res;</span>
+    }
+
+    /**
+     * Indique si le trait est aux blancs.
+     *
+     * @return &quot;true&quot; si le trait est aux blancs, &quot;false&quot; s'il est aux noirs.
+     */
+    @Override
+    public final boolean isWhiteActive() {
+<span class="fc" id="L407">        return _whiteActive;</span>
+    }
+
+    /**
+     * Alimente l'état du droit de roquer côté roi (petit roque) pour une
+     * couleur.
+     * &lt;p&gt;
+     * Potentiellement dangeureux : attention à ne pas casser le contrat qui
+     * veut que les implémentations se comportent comme des objets immuables.
+     * &lt;/p&gt;
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour alimenter l'état des blancs.
+     * @param pEtat  Etat du droit de roquer côté roi pour la couleur.
+     */
+    void setCastleLong(final boolean pBlanc, final boolean pEtat) {
+<span class="fc bfc" id="L422" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L423">            _whiteCastleLong = pEtat;</span>
+<span class="fc" id="L424">        } else {</span>
+<span class="fc" id="L425">            _blackCastleLong = pEtat;</span>
+        }
+<span class="fc" id="L427">    }</span>
+
+    /**
+     * Alimente l'état du droit de roquer côté reine (grand roque) pour une
+     * couleur.
+     * &lt;p&gt;
+     * Potentiellement dangeureux : attention à ne pas casser le contrat qui
+     * veut que les implémentations se comportent comme des objets immuables.
+     * &lt;/p&gt;
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour alimenter l'état des blancs.
+     * @param pEtat  Etat du droit de roquer côté reine pour la couleur.
+     */
+    void setCastleShort(final boolean pBlanc, final boolean pEtat) {
+<span class="fc bfc" id="L441" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L442">            _whiteCastleShort = pEtat;</span>
+<span class="fc" id="L443">        } else {</span>
+<span class="fc" id="L444">            _blackCastleShort = pEtat;</span>
+        }
+<span class="fc" id="L446">    }</span>
+
+    /**
+     * Alimente l'éventuelle case cible de la prise &quot;en passant&quot;.
+     * &lt;p&gt;
+     * Potentiellement dangeureux : attention à ne pas casser le contrat qui
+     * veut que les implémentations se comportent comme des objets immuables.
+     * &lt;/p&gt;
+     *
+     * @param pCase Case cible de la price &quot;en passant&quot; (peut être à null).
+     */
+    void setEnPassant(final Square pCase) {
+<span class="fc" id="L458">        _enPassant = pCase;</span>
+<span class="fc" id="L459">    }</span>
+
+    /**
+     * Alimente le numéro du coup.
+     * &lt;p&gt;
+     * Potentiellement dangeureux : attention à ne pas casser le contrat qui
+     * veut que les implémentations se comportent comme des objets immuables.
+     * &lt;/p&gt;
+     *
+     * @param pNumero Numéro de coup (&gt; 0).
+     */
+    void setFullmoveNumber(final int pNumero) {
+<span class="fc" id="L471">        _fullmoveNumber = pNumero;</span>
+<span class="fc" id="L472">    }</span>
+
+    /**
+     * Alimente la valeur du compteur de demi-coups depuis la dernière prise ou
+     * le dernier mouvement de pion.
+     * &lt;p&gt;
+     * Potentiellement dangeureux : attention à ne pas casser le contrat qui
+     * veut que les implémentations se comportent comme des objets immuables.
+     * &lt;/p&gt;
+     *
+     * @param pNombre Nombre de demi-coups (&gt;= 0).
+     */
+    void setHalfmoveCount(final int pNombre) {
+<span class="fc" id="L485">        _halfmoveCount = pNombre;</span>
+<span class="fc" id="L486">    }</span>
+
+    /**
+     * Alimente le drapeau du trait.
+     *
+     * @param pTrait &quot;true&quot; si le trait va aux blancs, &quot;false&quot; s'il va aux noirs.
+     */
+    void setWhiteActive(final boolean pTrait) {
+<span class="fc" id="L494">        _whiteActive = pTrait;</span>
+<span class="fc" id="L495">    }</span>
+
+    /**
+     * Renvoi une chaine représentant le plateau.
+     *
+     * @return Chaine représentant le plateau.
+     */
+    @Override
+    public final String toString() {
+<span class="fc" id="L504">        final StringBuilder res = new StringBuilder();</span>
+
+<span class="fc bfc" id="L506" title="All 2 branches covered.">        for (int y = RANK_COUNT; --y &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc bfc" id="L507" title="All 2 branches covered.">            for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="fc" id="L508">                final Piece p = getPieceAt(x, y);</span>
+<span class="fc bfc" id="L509" title="All 2 branches covered.">                if (p == null) {</span>
+<span class="fc" id="L510">                    res.append('+');</span>
+<span class="fc" id="L511">                } else {</span>
+<span class="fc" id="L512">                    res.append(p.getFENLetter());</span>
+                }
+            }
+<span class="fc" id="L515">            res.append('\n');</span>
+        }
+
+<span class="fc" id="L518">        return res.toString();</span>
+    }
+
+    /**
+     * Calcule le début de la clé de hachage &quot;Zobrist&quot;.
+     *
+     * @return Partie de la clé correspondant aux données internes de cette
+     * classe.
+     */
+    final int zobristRoot() {
+<span class="fc" id="L528">        int res = 0;</span>
+
+<span class="fc bfc" id="L530" title="All 2 branches covered.">        if (_blackCastleLong) {</span>
+<span class="fc" id="L531">            res ^= ZOBRIST_BLACK_CASTLE_LONG;</span>
+        }
+<span class="fc bfc" id="L533" title="All 2 branches covered.">        if (_blackCastleShort) {</span>
+<span class="fc" id="L534">            res ^= ZOBRIST_BLACK_CASTLE_SHORT;</span>
+        }
+<span class="fc bfc" id="L536" title="All 2 branches covered.">        if (_enPassant != null) {</span>
+<span class="fc" id="L537">            res ^= ZOBRIST_EN_PASSANT[_enPassant.getFile()];</span>
+        }
+<span class="fc bfc" id="L539" title="All 2 branches covered.">        if (_whiteActive) {</span>
+<span class="fc" id="L540">            res ^= ZOBRIST_WHITE_ACTIVE;</span>
+        }
+<span class="fc bfc" id="L542" title="All 2 branches covered.">        if (_whiteCastleLong) {</span>
+<span class="fc" id="L543">            res ^= ZOBRIST_WHITE_CASTLE_LONG;</span>
+        }
+<span class="fc bfc" id="L545" title="All 2 branches covered.">        if (_whiteCastleShort) {</span>
+<span class="fc" id="L546">            res ^= ZOBRIST_WHITE_CASTLE_SHORT;</span>
+        }
+
+<span class="fc" id="L549">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

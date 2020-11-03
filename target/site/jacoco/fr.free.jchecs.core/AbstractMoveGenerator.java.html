@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractMoveGenerator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">AbstractMoveGenerator.java</span></div><h1>AbstractMoveGenerator.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import static fr.free.jchecs.core.PieceType.KING;
+
+/**
+ * Squelette de l'implémentation d'une classe représentant un état de la partie
+ * permettant de générer des mouvements.
+ *
+ * @author David Cotton
+ */
+abstract class AbstractMoveGenerator extends AbstractBoard implements
+        MoveGenerator {
+    /**
+     * Identifiant pour la sérialisation.
+     */
+    private static final long serialVersionUID = 1524247729174535891L;
+
+    /**
+     * Position du roi noir.
+     */
+    private Square _blackKingSquare;
+
+    /**
+     * Drapeau indiquant si le roi noir à roqué.
+     */
+    private boolean _blackCastled;
+
+    /**
+     * Position du roi blanc.
+     */
+    private Square _whiteKingSquare;
+
+    /**
+     * Drapeau indiquant si le roi blanc à roqué.
+     */
+    private boolean _whiteCastled;
+
+    /**
+     * Crée une nouvelle instance.
+     */
+<span class="fc" id="L59">    AbstractMoveGenerator() {</span>
+        // Rien de spécifique...
+<span class="fc" id="L61">    }</span>
+
+    /**
+     * Crée une nouvelle instance, initialisée à partir de l'état reçu.
+     *
+     * @param pEtat Instance initiale.
+     */
+    AbstractMoveGenerator(final Board pEtat) {
+<span class="fc" id="L69">        super(pEtat);</span>
+
+<span class="fc bfc" id="L71" title="All 2 branches covered.">        for (final Square s : Square.values()) {</span>
+<span class="fc" id="L72">            final Piece p = pEtat.getPieceAt(s);</span>
+<span class="fc bfc" id="L73" title="All 4 branches covered.">            if ((p != null) &amp;&amp; (p.getType() == KING)) {</span>
+<span class="fc" id="L74">                setKingSquare(p.isWhite(), s);</span>
+            }
+        }
+<span class="fc" id="L77">    }</span>
+
+    /**
+     * Crée une nouvelle instance, copiée à partir de l'instance reçue.
+     *
+     * @param pEtat Instance à copier.
+     */
+    AbstractMoveGenerator(final AbstractMoveGenerator pEtat) {
+<span class="fc" id="L85">        super(pEtat);</span>
+
+<span class="fc" id="L87">        _blackKingSquare = pEtat._blackKingSquare;</span>
+<span class="fc" id="L88">        _blackCastled = pEtat._blackCastled;</span>
+<span class="fc" id="L89">        _whiteKingSquare = pEtat._whiteKingSquare;</span>
+<span class="fc" id="L90">        _whiteCastled = pEtat._whiteCastled;</span>
+<span class="fc" id="L91">    }</span>
+
+    /**
+     * Renvoi la case contenant le roi d'une couleur.
+     *
+     * @param pCouleur Mis à &quot;true&quot; si l'on recherche le roi blanc, à &quot;false&quot; sinon.
+     * @return Case contenant le roi.
+     */
+    @Override
+    public Square getKingSquare(final boolean pCouleur) {
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        if (pCouleur) {</span>
+<span class="fc" id="L102">            return _whiteKingSquare;</span>
+        }
+
+<span class="fc" id="L105">        return _blackKingSquare;</span>
+    }
+
+    /**
+     * Indique si le roi d'une couleur a roqué.
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour obtenir l'état des blancs.
+     * @return A &quot;vrai&quot; si le roi correspondant à roqué.
+     */
+    @Override
+    public final boolean isCastled(final boolean pBlanc) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L117">            return _whiteCastled;</span>
+        }
+
+<span class="fc" id="L120">        return _blackCastled;</span>
+    }
+
+    /**
+     * Alimente l'indicateur de roi ayant roqué pour une couleur.
+     *
+     * @param pBlanc Positionné à &quot;true&quot; pour alimenter l'état des blancs.
+     * @param pEtat  Etat de l'indicateur de roque effectué pour la couleur.
+     */
+    final void setCastled(final boolean pBlanc, final boolean pEtat) {
+<span class="fc bfc" id="L130" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc" id="L131">            _whiteCastled = pEtat;</span>
+<span class="fc" id="L132">        } else {</span>
+<span class="fc" id="L133">            _blackCastled = pEtat;</span>
+        }
+<span class="fc" id="L135">    }</span>
+
+    /**
+     * Alimente la case contenant le roi d'une couleur.
+     *
+     * @param pCouleur Mis à &quot;true&quot; si l'on alimente le roi blanc, à &quot;false&quot; sinon.
+     * @param pCase    Case contenant le roi.
+     */
+    final void setKingSquare(final boolean pCouleur, final Square pCase) {
+<span class="fc bfc" id="L144" title="All 2 branches covered.">        if (pCouleur) {</span>
+<span class="fc" id="L145">            _whiteKingSquare = pCase;</span>
+<span class="fc" id="L146">        } else {</span>
+<span class="fc" id="L147">            _blackKingSquare = pCase;</span>
+        }
+<span class="fc" id="L149">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

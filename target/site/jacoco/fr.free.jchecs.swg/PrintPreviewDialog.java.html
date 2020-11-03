@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PrintPreviewDialog.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PrintPreviewDialog.java</span></div><h1>PrintPreviewDialog.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Component;
+import java.awt.Dimension;
+
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+import fr.free.jchecs.core.Game;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+
+/**
+ * Boite de dialogue de l'option &quot;Imprimer&quot;.
+ *
+ * @author David Cotton
+ */
+final class PrintPreviewDialog {
+    /**
+     * Panel principal de la boite de dialogue.
+     */
+    private static JOptionPane S_optionPane;
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private PrintPreviewDialog() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Renvoi, après l'avoir construit si nécessaire, le panel principal de la
+     * boite de dialogue.
+     *
+     * @return Panel principal de la boite de dialogue.
+     */
+    private static synchronized JOptionPane getOptionPane() {
+<span class="nc bnc" id="L57" title="All 2 branches missed.">        if (S_optionPane == null) {</span>
+<span class="nc" id="L58">            final JPanel fond = new JPanel();</span>
+<span class="nc" id="L59">            fond.setPreferredSize(new Dimension(210, 297));</span>
+<span class="nc" id="L60">            S_optionPane = new JOptionPane(fond, JOptionPane.PLAIN_MESSAGE);</span>
+<span class="nc" id="L61">            S_optionPane.setOptions(new Object[0]);</span>
+        }
+
+<span class="nc" id="L64">        return S_optionPane;</span>
+    }
+
+    /**
+     * Affiche la boite de dialogue.
+     *
+     * @param pParent Composant parent de la boite de dialogue (peut être à null).
+     * @param pPartie Partie à imprimer.
+     */
+    static void showPrintPreviewDialog(final Component pParent,
+                                       final Game pPartie) {
+<span class="nc" id="L75">        final JDialog dlg = getOptionPane().createDialog(pParent,</span>
+<span class="nc" id="L76">                getI18NString(&quot;dialog.print.title&quot;));</span>
+<span class="nc" id="L77">        dlg.pack();</span>
+<span class="nc" id="L78">        dlg.setLocationRelativeTo(pParent);</span>
+<span class="nc" id="L79">        dlg.setVisible(true);</span>
+<span class="nc" id="L80">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

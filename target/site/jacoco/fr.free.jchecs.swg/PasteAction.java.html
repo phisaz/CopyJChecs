@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PasteAction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PasteAction.java</span></div><h1>PasteAction.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.event.ActionEvent;
+import java.io.IOException;
+
+import javax.swing.Action;
+import javax.swing.Icon;
+
+import fr.free.jchecs.core.Board;
+import fr.free.jchecs.core.BoardFactory;
+import fr.free.jchecs.core.FENException;
+import fr.free.jchecs.core.MoveGenerator;
+
+import static fr.free.jchecs.core.BoardFactory.State.EMPTY;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+import static fr.free.jchecs.core.FENUtils.toBoard;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Action de l'option &quot;Coller une position&quot;.
+ *
+ * @author David Cotton
+ */
+final class PasteAction extends AbstractUIAction {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = 2821129884839866355L;
+
+    /**
+     * Petite icône.
+     */
+<span class="nc" id="L56">    private static final Icon ICON16 = getImageIcon(&quot;paste16.png&quot;);</span>
+
+    /**
+     * Icône moyenne.
+     */
+<span class="nc" id="L61">    private static final Icon ICON22 = getImageIcon(&quot;paste22.png&quot;);</span>
+
+    /**
+     * Crée une nouvelle instance de l'action.
+     *
+     * @param pUI Référence du composant maitre de l'interface.
+     */
+    PasteAction(final UI pUI) {
+<span class="nc" id="L69">        super(&quot;paste&quot;, pUI);</span>
+
+<span class="nc" id="L71">        putValue(Action.SMALL_ICON, ICON16);</span>
+<span class="nc" id="L72">        putValue(Action.LARGE_ICON_KEY, ICON22);</span>
+<span class="nc" id="L73">    }</span>
+
+    /**
+     * Réaction face au déclenchement de l'action.
+     *
+     * @param pEvent Evènement signalant le déclenchement.
+     */
+    @Override
+    public void actionPerformed(final ActionEvent pEvent) {
+<span class="nc" id="L82">        final Clipboard clp = Toolkit.getDefaultToolkit().getSystemClipboard();</span>
+<span class="nc" id="L83">        final Transferable trs = clp.getContents(null);</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if ((trs != null)</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">                &amp;&amp; (trs.isDataFlavorSupported(DataFlavor.stringFlavor))) {</span>
+            try {
+<span class="nc" id="L87">                final String fen = (String) trs</span>
+<span class="nc" id="L88">                        .getTransferData(DataFlavor.stringFlavor);</span>
+                try {
+<span class="nc" id="L90">                    final Board plateau = toBoard(fen.trim());</span>
+<span class="nc" id="L91">                    final MoveGenerator etat = BoardFactory.valueOf(FASTEST,</span>
+<span class="nc" id="L92">                            EMPTY).derive(plateau);</span>
+<span class="nc" id="L93">                    getUI().getGame().resetTo(etat);</span>
+<span class="nc" id="L94">                } catch (final FENException e) {</span>
+                    // Pas grave, on ignore la demande...
+                }
+<span class="nc" id="L97">            } catch (final UnsupportedFlavorException | IOException e) {</span>
+                // Pas grave, on ignore la demande...
+            }
+        }
+<span class="nc" id="L101">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

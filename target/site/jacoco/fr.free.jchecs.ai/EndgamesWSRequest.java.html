@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EndgamesWSRequest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">EndgamesWSRequest.java</span></div><h1>EndgamesWSRequest.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.util.Random;
+
+import fr.free.jchecs.core.Board;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.Piece;
+import fr.free.jchecs.core.Square;
+
+import static fr.free.jchecs.core.Constants.ENDGAMES_WEB_SERVICE;
+import static fr.free.jchecs.core.FENUtils.toFEN;
+
+/**
+ * Thread prenant en charge l'accès au Web Service des fins de partie.
+ *
+ * @author David Cotton
+ */
+final class EndgamesWSRequest extends Thread {
+    /**
+     * Générateur de nombres aléatoires.
+     */
+<span class="fc" id="L46">    private static final Random RANDOMIZER = new Random();</span>
+
+    /**
+     * Etat du plateau.
+     */
+    private final Board _board;
+
+    /**
+     * Contenu de la réponse du Web Service.
+     */
+    private String _response;
+
+    /**
+     * Mouvement choisi dans la réponse.
+     */
+    private Move _move;
+
+    /**
+     * Instancie un nouveau processus d'accèsau Web Service des fins de partie.
+     *
+     * @param pEtat Etat du plateau de jeu.
+     */
+<span class="fc" id="L68">    EndgamesWSRequest(final Board pEtat) {</span>
+<span class="fc" id="L69">        _board = pEtat;</span>
+<span class="fc" id="L70">        _response = null;</span>
+<span class="fc" id="L71">        _move = null;</span>
+<span class="fc" id="L72">    }</span>
+
+    /**
+     * Renvoi la réponse (éventuelle) du Web Service des fins de parties.
+     *
+     * @return Réponse du Web Service (ou null).
+     */
+    String getResponse() {
+<span class="fc" id="L80">        return _response;</span>
+    }
+
+    /**
+     * Renvoi le mouvement choisi à partir de la réponse du Web Service des fins
+     * de parties.
+     *
+     * @return Mouvement choisi (ou null).
+     */
+    Move getMove() {
+<span class="pc bpc" id="L90" title="2 of 4 branches missed.">        if ((_move == null) &amp;&amp; (_response != null)) {</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">            if (!_response.startsWith(&quot;Error&quot;)) {</span>
+<span class="fc" id="L92">                final String[] evals = _response.split(&quot;;&quot;);</span>
+<span class="fc" id="L93">                final int choix = RANDOMIZER.nextInt(evals.length);</span>
+
+<span class="fc" id="L95">                final Square src = Square.valueOf(evals[choix].substring(0, 2));</span>
+<span class="fc" id="L96">                final Square dst = Square.valueOf(evals[choix].substring(3, 5));</span>
+<span class="fc" id="L97">                Piece promotion = null;</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">                if (evals[choix].length() &gt;= 7) {</span>
+<span class="fc" id="L99">                    final char c = evals[choix].charAt(6);</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">                    if (&quot;BNQR&quot;.indexOf(c) &gt;= 0) {</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">                        promotion = _board.getPieceAt(src).isWhite() ? Piece</span>
+<span class="pc" id="L102">                                .valueOf(c) : Piece.valueOf(Character</span>
+<span class="fc" id="L103">                                .toLowerCase(c));</span>
+                    }
+                }
+
+<span class="fc" id="L107">                _move = new Move(_board.getPieceAt(src), src, dst,</span>
+<span class="fc" id="L108">                        _board.getPieceAt(dst), promotion);</span>
+            }
+        }
+
+<span class="fc" id="L112">        return _move;</span>
+    }
+
+    /**
+     * Accède au Web Service des fins de partie.
+     *
+     * @see java.lang.Runnable#run()
+     */
+    @Override
+    public void run() {
+<span class="pc bpc" id="L122" title="1 of 2 branches missed.">        if (_response == null) {</span>
+<span class="fc" id="L123">            BufferedReader in = null;</span>
+            try {
+<span class="fc" id="L125">                final URL url = new URL(ENDGAMES_WEB_SERVICE</span>
+<span class="fc" id="L126">                        + URLEncoder.encode(toFEN(_board), &quot;UTF-8&quot;));</span>
+<span class="fc" id="L127">                final HttpURLConnection cnx = (HttpURLConnection) url</span>
+<span class="fc" id="L128">                        .openConnection();</span>
+<span class="fc" id="L129">                cnx.setConnectTimeout(7500);</span>
+<span class="fc" id="L130">                cnx.setReadTimeout(2500);</span>
+<span class="fc" id="L131">                in = new BufferedReader(new InputStreamReader(</span>
+<span class="fc" id="L132">                        cnx.getInputStream()));</span>
+<span class="fc" id="L133">                _response = in.readLine();</span>
+<span class="fc" id="L134">                cnx.disconnect();</span>
+<span class="pc" id="L135">            } catch (final IOException e) {</span>
+                // Pas grave, on peut se passer de la bibliothèque de fins de
+                // parties.
+            } finally {
+<span class="pc bpc" id="L139" title="1 of 2 branches missed.">                if (in != null) {</span>
+                    try {
+<span class="fc" id="L141">                        in.close();</span>
+<span class="pc" id="L142">                    } catch (final IOException e) {</span>
+                        // Quand ça ne veut pas...
+                    }
+                }
+            }
+        }
+<span class="fc" id="L148">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

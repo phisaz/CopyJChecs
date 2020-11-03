@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SwingUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">SwingUI.java</span></div><h1>SwingUI.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.BorderLayout;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.Line;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.Action;
+import javax.swing.Icon;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+import javax.swing.JToolBar;
+import javax.swing.WindowConstants;
+
+import fr.free.jchecs.ai.Engine;
+import fr.free.jchecs.ai.EngineFactory;
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+import fr.free.jchecs.core.Player;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static fr.free.jchecs.core.Constants.APPLICATION_NAME;
+import static fr.free.jchecs.core.Constants.APPLICATION_VERSION;
+import static fr.free.jchecs.core.Game.State.IN_PROGRESS;
+import static fr.free.jchecs.swg.ResourceUtils.getI18NChar;
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Classe principale de l'interface graphique Swing du jeu d'échecs.
+ *
+ * @author David Cotton
+ */
+final class SwingUI implements MoveListener, UI {
+    /**
+     * Clé de la propriété &quot;cellsSize&quot;.
+     */
+    static final String CELLS_SIZE_PROPERTY = &quot;cellsSize&quot;;
+
+    /**
+     * Clé de la propriété &quot;enableSounds&quot;.
+     */
+    static final String ENABLE_SOUNDS_PROPERTY = &quot;enableSounds&quot;;
+
+    /**
+     * Clé de la propriété &quot;flipView&quot;.
+     */
+    static final String FLIP_VIEW_PROPERTY = &quot;flipView&quot;;
+
+    /**
+     * Clé de la propriété &quot;highlightValid&quot;.
+     */
+    static final String HIGHLIGHT_LAST_MOVE_PROPERTY = &quot;highlightLastMove&quot;;
+
+    /**
+     * Clé de la propriété &quot;highlightValid&quot;.
+     */
+    static final String HIGHLIGHT_VALIDS_PROPERTY = &quot;highlightValids&quot;;
+
+    /**
+     * Clé de la propriété &quot;showCaptures&quot;.
+     */
+    static final String SHOW_CAPTURES_PROPERTY = &quot;showCaptures&quot;;
+
+    /**
+     * Clé de la propriété &quot;showCoords&quot;.
+     */
+    static final String SHOW_COORDS_PROPERTY = &quot;showCoords&quot;;
+
+    /**
+     * Clé de la propriété &quot;showFEN&quot;.
+     */
+    static final String SHOW_FEN_PROPERTY = &quot;showFEN&quot;;
+
+    /**
+     * Clé de la propriété &quot;showMenuBar&quot;.
+     */
+    static final String SHOW_MENUBAR_PROPERTY = &quot;showMenuBar&quot;;
+
+    /**
+     * Clé de la propriété &quot;showToolBar&quot;.
+     */
+    static final String SHOW_TOOLBAR_PROPERTY = &quot;showToolBar&quot;;
+
+    /**
+     * Clé de la propriété portant l'apparence des pièces.
+     */
+    static final String PIECES_LF_PROPERTY = &quot;lf.pieces&quot;;
+
+    /**
+     * Clé de la propriété portant l'apparence du plateau.
+     */
+    static final String BOARD_LF_PROPERTY = &quot;lf.board&quot;;
+
+    /**
+     * Identifiant du panel affichant les joueurs.
+     */
+    private static final String PLAYERS_PANEL_ID = &quot;panel.players&quot;;
+
+    /**
+     * Clé de la propriété indiquant si le joueur des noirs est humain.
+     */
+    private static final String PLAYER_BLACKS_HUMAN_PROPERTY = &quot;player.blacks.human&quot;;
+
+    /**
+     * Clé de la propriété portant le nom du joueur des noirs.
+     */
+    private static final String PLAYER_BLACKS_NAME_PROPERTY = &quot;player.blacks.name&quot;;
+
+    /**
+     * Clé de la propriété portant la profondeur de recherche du joueur des
+     * noirs.
+     */
+    private static final String PLAYER_BLACKS_DEPTH_PROPERTY = &quot;player.blacks.depth&quot;;
+
+    /**
+     * Clé de la propriété indiquant si le joueur des blancs est humain.
+     */
+    private static final String PLAYER_WHITES_HUMAN_PROPERTY = &quot;player.whites.human&quot;;
+
+    /**
+     * Clé de la propriété portant le nom du joueur des blancs.
+     */
+    private static final String PLAYER_WHITES_NAME_PROPERTY = &quot;player.whites.name&quot;;
+
+    /**
+     * Clé de la propriété portant la profondeur de recherche du joueur des
+     * blancs.
+     */
+    private static final String PLAYER_WHITES_DEPTH_PROPERTY = &quot;player.whites.depth&quot;;
+
+    /**
+     * Identifiant du panel affichant l'horloge.
+     */
+    private static final String CLOCK_PANEL_ID = &quot;panel.clock&quot;;
+
+    /**
+     * Identifiant du panel affichant la feuille de match.
+     */
+    private static final String SCORESHEET_PANEL_ID = &quot;panel.scoresheet&quot;;
+
+    /**
+     * Identifiant du panel affichant l'évaluation de la position.
+     */
+    private static final String EVAL_PANEL_ID = &quot;panel.eval&quot;;
+
+    /**
+     * Identifiant du panel affichant l'enregistreur.
+     */
+    private static final String RECORDER_PANEL_ID = &quot;panel.recorder&quot;;
+
+    /**
+     * Identifiant du panel affichant les préférences.
+     */
+    private static final String SETTINGS_PANEL_ID = &quot;panel.settings&quot;;
+
+    /**
+     * Identifiant du panel de sélection de l'apparence.
+     */
+    private static final String LF_PANEL_ID = &quot;panel.lf&quot;;
+
+    /**
+     * Icone de la fenêtre principale.
+     */
+<span class="nc" id="L203">    private static final Image MAIN_FRAME_ICON = getImageIcon(&quot;icon16.png&quot;)</span>
+<span class="nc" id="L204">            .getImage();</span>
+
+    /**
+     * Icone du panel des joueurs.
+     */
+<span class="nc" id="L209">    private static final Icon PLAYERS_ICON = getImageIcon(&quot;players16.png&quot;);</span>
+
+    /**
+     * Icone du panel de l'horloge.
+     */
+<span class="nc" id="L214">    private static final Icon CLOCK_ICON = getImageIcon(&quot;clock16.png&quot;);</span>
+
+    /**
+     * Icone du panel de la feuille de match.
+     */
+<span class="nc" id="L219">    private static final Icon SHEET_ICON = getImageIcon(&quot;sheet16.png&quot;);</span>
+
+    /**
+     * Icone du panel d'évaluation.
+     */
+<span class="nc" id="L224">    private static final Icon EVAL_ICON = getImageIcon(&quot;eval16.png&quot;);</span>
+
+    /**
+     * Icone du panel de l'enregistreur.
+     */
+<span class="nc" id="L229">    private static final Icon RECORD_ICON = getImageIcon(&quot;record16.png&quot;);</span>
+
+    /**
+     * Icone du panel de l'enregistreur.
+     */
+<span class="nc" id="L234">    private static final Icon CONFIG_ICON = getImageIcon(&quot;config16.png&quot;);</span>
+
+    /**
+     * Icone du panel de sélection de l'apparence.
+     */
+<span class="nc" id="L239">    private static final Icon LF_ICON = getImageIcon(&quot;lf16.png&quot;);</span>
+
+    /**
+     * Identifiant de l'action &quot;About&quot;.
+     */
+    private static final String ABOUT_ACTION = &quot;about&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Copy&quot;.
+     */
+    private static final String COPY_ACTION = &quot;copy&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Exit&quot;.
+     */
+    private static final String EXIT_ACTION = &quot;exit&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Help&quot;.
+     */
+    private static final String HELP_ACTION = &quot;help&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Load game&quot;.
+     */
+    private static final String LOAD_GAME_ACTION = &quot;loadGame&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Load position&quot;.
+     */
+    private static final String LOAD_POSITION_ACTION = &quot;loadPosition&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Paste&quot;.
+     */
+    private static final String PASTE_ACTION = &quot;paste&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Print&quot;.
+     */
+    private static final String PRINT_ACTION = &quot;print&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Reset&quot;.
+     */
+    private static final String RESET_ACTION = &quot;reset&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Save game&quot;.
+     */
+    private static final String SAVE_GAME_ACTION = &quot;saveGame&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Save game as&quot;.
+     */
+    private static final String SAVE_GAME_AS_ACTION = &quot;saveGameAs&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Save position&quot;.
+     */
+    private static final String SAVE_POSITION_ACTION = &quot;savePosition&quot;;
+
+    /**
+     * Identifiant de l'action &quot;Save position as&quot;.
+     */
+    private static final String SAVE_POSITION_AS_ACTION = &quot;savePositionAs&quot;;
+
+    /**
+     * Nom du fichier de configuration.
+     */
+    private static final String CONFIG_FILE_NAME = APPLICATION_NAME + &quot;.config&quot;;
+
+    /**
+     * Log de la classe.
+     */
+<span class="nc" id="L314">    private static final Logger LOG = LoggerFactory.getLogger(SwingUI.class);</span>
+
+    /**
+     * Son signalant un mouvement.
+     */
+    private static final Clip MOVE_SOUND;
+
+    static {
+<span class="nc" id="L322">        final URL url = Start.class.getResource(&quot;move.wav&quot;);</span>
+<span class="nc" id="L323">        Clip clip = null;</span>
+        try {
+<span class="nc" id="L325">            final Line.Info info = new Line.Info(Clip.class);</span>
+<span class="nc bnc" id="L326" title="All 2 branches missed.">            if (AudioSystem.isLineSupported(info)) {</span>
+<span class="nc" id="L327">                final AudioInputStream ficIn = AudioSystem</span>
+<span class="nc" id="L328">                        .getAudioInputStream(url);</span>
+<span class="nc" id="L329">                clip = (Clip) AudioSystem.getLine(info);</span>
+<span class="nc" id="L330">                clip.open(ficIn);</span>
+            }
+<span class="nc" id="L332">        } catch (final UnsupportedAudioFileException | IOException | LineUnavailableException e) {</span>
+<span class="nc" id="L333">            LOG.error(&quot;Audio failed:&quot;, e);</span>
+<span class="nc" id="L334">            clip = null;</span>
+        }
+<span class="nc" id="L336">        MOVE_SOUND = clip;</span>
+<span class="nc" id="L337">    }</span>
+
+    /**
+     * Propriétés de l'interface.
+     */
+    private final Properties _properties;
+
+    /**
+     * Actions liées à l'interface.
+     */
+    private final Map&lt;String, Action&gt; _actions;
+
+    /**
+     * Définition de la partie en cours.
+     */
+    private final Game _game;
+
+    /**
+     * Composant représentant l'échiquier.
+     */
+    private final BoardUI _boardUI;
+
+    /**
+     * Panneau d'affichage des prises du haut (noires par défaut).
+     */
+    private final CapturesPanel _capturesUp;
+
+    /**
+     * Panneau d'affichage des prises du bas (blancs par défaut).
+     */
+    private final CapturesPanel _capturesDown;
+
+    /**
+     * Panneau d'affichage de la chaine FEN.
+     */
+    private final FENPanel _fenPanel;
+
+    /**
+     * Fenêtre principale.
+     */
+    private JFrame _mainFrame;
+
+    /**
+     * Barre de menu.
+     */
+    private JMenuBar _menuBar;
+
+    /**
+     * Barre d'outils.
+     */
+    private JToolBar _toolBar;
+
+    /**
+     * Dernier mouvement reçu (peut être à null).
+     */
+    private Move _lastMove;
+
+    /**
+     * Eventuel fichier PGN contenant la partie (peut être à null).
+     */
+    private File _gameFile;
+
+    /**
+     * Eventuel fichier FEN contenant la position (peut être à null).
+     */
+    private File _positionFile;
+
+    /**
+     * Echantillon sonore en cours d'exécution.
+     */
+    private Clip _activeSample;
+
+    /**
+     * Drapeau indiquant si le son est activé.
+     */
+    private boolean _soundEnabled;
+
+    /**
+     * Crée une nouvelle instance.
+     */
+<span class="nc" id="L417">    SwingUI() {</span>
+<span class="nc bnc" id="L418" title="All 2 branches missed.">        _soundEnabled = MOVE_SOUND != null;</span>
+
+<span class="nc" id="L420">        _properties = new Properties();</span>
+<span class="nc" id="L421">        initProperties();</span>
+
+<span class="nc" id="L423">        _actions = new HashMap&lt;&gt;();</span>
+
+<span class="nc" id="L425">        _game = new Game();</span>
+<span class="nc" id="L426">        final PieceUI pieceUI = new PieceUI();</span>
+<span class="nc" id="L427">        _boardUI = new BoardUI(_game, pieceUI);</span>
+<span class="nc" id="L428">        _capturesUp = new CapturesPanel(_game, pieceUI, true);</span>
+<span class="nc" id="L429">        _capturesDown = new CapturesPanel(_game, pieceUI, false);</span>
+<span class="nc" id="L430">        _fenPanel = new FENPanel(_game);</span>
+<span class="nc" id="L431">    }</span>
+
+    /**
+     * Renvoi l'action correspondant à une clé, après l'avoir instanciée si
+     * nécessaire.
+     *
+     * @param pCle Clé identifiant l'action.
+     * @return Action correspondante (ou null).
+     */
+    private Action getAction(final String pCle) {
+<span class="nc" id="L441">        Action res = _actions.get(pCle);</span>
+<span class="nc bnc" id="L442" title="All 2 branches missed.">        if (res == null) {</span>
+<span class="nc bnc" id="L443" title="All 2 branches missed.">            if (ABOUT_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L444">                res = new AboutAction(this);</span>
+<span class="nc bnc" id="L445" title="All 2 branches missed.">            } else if (COPY_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L446">                res = new CopyAction(this);</span>
+<span class="nc bnc" id="L447" title="All 2 branches missed.">            } else if (EXIT_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L448">                res = new ExitAction(this);</span>
+<span class="nc bnc" id="L449" title="All 2 branches missed.">            } else if (HELP_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L450">                res = new HelpAction(this);</span>
+<span class="nc bnc" id="L451" title="All 2 branches missed.">            } else if (LOAD_GAME_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L452">                res = new LoadGameAction(this);</span>
+<span class="nc bnc" id="L453" title="All 2 branches missed.">            } else if (LOAD_POSITION_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L454">                res = new LoadPositionAction(this);</span>
+<span class="nc bnc" id="L455" title="All 2 branches missed.">            } else if (PASTE_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L456">                res = new PasteAction(this);</span>
+<span class="nc bnc" id="L457" title="All 2 branches missed.">            } else if (PRINT_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L458">                res = new PrintAction(this);</span>
+<span class="nc bnc" id="L459" title="All 2 branches missed.">            } else if (RESET_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L460">                res = new ResetAction(this);</span>
+<span class="nc bnc" id="L461" title="All 2 branches missed.">            } else if (SAVE_GAME_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L462">                res = new SaveGameAction(this);</span>
+<span class="nc bnc" id="L463" title="All 2 branches missed.">            } else if (SAVE_GAME_AS_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L464">                res = new SaveGameAsAction(this);</span>
+<span class="nc bnc" id="L465" title="All 2 branches missed.">            } else if (SAVE_POSITION_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L466">                res = new SavePositionAction(this);</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">            } else if (SAVE_POSITION_AS_ACTION.equals(pCle)) {</span>
+<span class="nc" id="L468">                res = new SavePositionAsAction(this);</span>
+<span class="nc" id="L469">            } else {</span>
+<span class="nc" id="L470">                LOG.warn(&quot;Unknown action [{}]&quot;, pCle);</span>
+            }
+<span class="nc" id="L472">            _actions.put(pCle, res);</span>
+        }
+
+<span class="nc" id="L475">        return res;</span>
+    }
+
+    /**
+     * Renvoi la valeur d'une propriété booléenne.
+     *
+     * @param pCle Cle identifiant la propriété.
+     * @return Valeur de la propriété.
+     */
+    @Override
+    public boolean getBooleanProperty(final String pCle) {
+<span class="nc" id="L486">        return Boolean.valueOf(_properties.getProperty(pCle));</span>
+    }
+
+    /**
+     * Renvoi une référence vers la partie en cours.
+     *
+     * @return Partie en cours.
+     */
+    @Override
+    public Game getGame() {
+<span class="nc" id="L496">        return _game;</span>
+    }
+
+    /**
+     * Renvoi une référence vers l'éventuel fichier PGN contenant la partie.
+     *
+     * @return Fichier PGN de la partie (peut être à null).
+     */
+    @Override
+    public File getGameFile() {
+<span class="nc" id="L506">        return _gameFile;</span>
+    }
+
+    /**
+     * Renvoi une référence vers la fenêtre principale.
+     *
+     * @return Fenêtre principale.
+     */
+    @Override
+    public JFrame getMainFrame() {
+<span class="nc bnc" id="L516" title="All 2 branches missed.">        if (_mainFrame == null) {</span>
+<span class="nc" id="L517">            Player joueur = _game.getPlayer(true);</span>
+<span class="nc" id="L518">            joueur.setName(_properties.getProperty(PLAYER_WHITES_NAME_PROPERTY));</span>
+<span class="nc bnc" id="L519" title="All 2 branches missed.">            if (getBooleanProperty(PLAYER_WHITES_HUMAN_PROPERTY)) {</span>
+<span class="nc" id="L520">                joueur.setEngine(null);</span>
+<span class="nc" id="L521">            } else {</span>
+<span class="nc" id="L522">                final Engine moteur = EngineFactory</span>
+<span class="nc" id="L523">                        .newInstance(APPLICATION_NAME + '.' + joueur.getName());</span>
+<span class="nc" id="L524">                moteur.setSearchDepthLimit(Integer.parseInt(_properties</span>
+<span class="nc" id="L525">                        .getProperty(PLAYER_WHITES_DEPTH_PROPERTY)));</span>
+<span class="nc" id="L526">                joueur.setEngine(moteur);</span>
+            }
+<span class="nc" id="L528">            joueur = _game.getPlayer(false);</span>
+<span class="nc" id="L529">            joueur.setName(_properties.getProperty(PLAYER_BLACKS_NAME_PROPERTY));</span>
+<span class="nc bnc" id="L530" title="All 2 branches missed.">            if (getBooleanProperty(PLAYER_BLACKS_HUMAN_PROPERTY)) {</span>
+<span class="nc" id="L531">                joueur.setEngine(null);</span>
+<span class="nc" id="L532">            } else {</span>
+<span class="nc" id="L533">                final Engine moteur = EngineFactory</span>
+<span class="nc" id="L534">                        .newInstance(APPLICATION_NAME + '.' + joueur.getName());</span>
+<span class="nc" id="L535">                moteur.setSearchDepthLimit(Integer.parseInt(_properties</span>
+<span class="nc" id="L536">                        .getProperty(PLAYER_BLACKS_DEPTH_PROPERTY)));</span>
+<span class="nc" id="L537">                joueur.setEngine(moteur);</span>
+            }
+
+<span class="nc" id="L540">            _mainFrame = new JFrame(APPLICATION_NAME + ' '</span>
+                    + APPLICATION_VERSION);
+<span class="nc" id="L542">            _mainFrame.setIconImage(MAIN_FRAME_ICON);</span>
+
+<span class="nc" id="L544">            getAction(SAVE_GAME_ACTION).setEnabled(false);</span>
+<span class="nc" id="L545">            getAction(SAVE_POSITION_ACTION).setEnabled(false);</span>
+
+<span class="nc" id="L547">            final JMenuBar menu = getMenuBar();</span>
+<span class="nc" id="L548">            _mainFrame.setJMenuBar(menu);</span>
+<span class="nc" id="L549">            menu.setVisible(getBooleanProperty(SHOW_MENUBAR_PROPERTY));</span>
+
+<span class="nc" id="L551">            final JPanel fond = new JPanel(new BorderLayout(4, 4));</span>
+
+<span class="nc" id="L553">            final JToolBar barre = getToolBar();</span>
+<span class="nc" id="L554">            barre.setVisible(getBooleanProperty(SHOW_TOOLBAR_PROPERTY));</span>
+<span class="nc" id="L555">            fond.add(barre, BorderLayout.NORTH);</span>
+
+<span class="nc" id="L557">            final JPanel cadreCentral = new JPanel(new BorderLayout());</span>
+<span class="nc" id="L558">            final boolean flip = getBooleanProperty(FLIP_VIEW_PROPERTY);</span>
+<span class="nc bnc" id="L559" title="All 2 branches missed.">            _capturesUp.setWhite(!flip);</span>
+<span class="nc" id="L560">            cadreCentral.add(_capturesUp.getComponent(), BorderLayout.NORTH);</span>
+<span class="nc" id="L561">            _boardUI.setFlipView(flip);</span>
+<span class="nc" id="L562">            cadreCentral.add(_boardUI, BorderLayout.CENTER);</span>
+<span class="nc" id="L563">            _capturesDown.setWhite(flip);</span>
+<span class="nc" id="L564">            cadreCentral.add(_capturesDown.getComponent(), BorderLayout.SOUTH);</span>
+
+<span class="nc" id="L566">            final boolean capturesVisibles = getBooleanProperty(SHOW_CAPTURES_PROPERTY);</span>
+<span class="nc" id="L567">            _capturesUp.getComponent().setVisible(capturesVisibles);</span>
+<span class="nc" id="L568">            _capturesDown.getComponent().setVisible(capturesVisibles);</span>
+
+<span class="nc" id="L570">            fond.add(cadreCentral, BorderLayout.CENTER);</span>
+
+<span class="nc" id="L572">            final TaskPanel tp = new TaskPanel();</span>
+<span class="nc" id="L573">            tp.add(new TaskItem(this, PLAYERS_PANEL_ID, new PlayersPanel(this)</span>
+<span class="nc" id="L574">                    .getComponent(), PLAYERS_ICON));</span>
+<span class="nc" id="L575">            tp.add(new TaskItem(this, CLOCK_PANEL_ID, new Clock(_game)</span>
+<span class="nc" id="L576">                    .getComponent(), CLOCK_ICON));</span>
+<span class="nc" id="L577">            tp.add(new TaskItem(this, SCORESHEET_PANEL_ID,</span>
+<span class="nc" id="L578">                    new ScoreSheet(_game).getComponent(), SHEET_ICON));</span>
+<span class="nc" id="L579">            tp.add(new TaskItem(this, EVAL_PANEL_ID, new EvalPanel(_game)</span>
+<span class="nc" id="L580">                    .getComponent(), EVAL_ICON));</span>
+<span class="nc" id="L581">            tp.add(new TaskItem(this, RECORDER_PANEL_ID, new Recorder(_game)</span>
+<span class="nc" id="L582">                    .getComponent(), RECORD_ICON));</span>
+<span class="nc" id="L583">            tp.add(new TaskItem(this, SETTINGS_PANEL_ID,</span>
+<span class="nc" id="L584">                    new SettingsPanel(this).getComponent(), CONFIG_ICON));</span>
+<span class="nc" id="L585">            tp.add(new TaskItem(this, LF_PANEL_ID, new LFPanel(this)</span>
+<span class="nc" id="L586">                    .getComponent(), LF_ICON));</span>
+<span class="nc" id="L587">            fond.add(tp.getComponent(), BorderLayout.EAST);</span>
+
+<span class="nc" id="L589">            _fenPanel.getComponent().setVisible(</span>
+<span class="nc" id="L590">                    getBooleanProperty(SHOW_FEN_PROPERTY));</span>
+<span class="nc" id="L591">            fond.add(_fenPanel.getComponent(), BorderLayout.SOUTH);</span>
+
+<span class="nc" id="L593">            _mainFrame.setContentPane(fond);</span>
+
+<span class="nc" id="L595">            _boardUI.setBoardLF(Integer.parseInt(_properties</span>
+<span class="nc" id="L596">                    .getProperty(BOARD_LF_PROPERTY)));</span>
+<span class="nc" id="L597">            _boardUI.setCellSideLength(Integer.parseInt(_properties</span>
+<span class="nc" id="L598">                    .getProperty(CELLS_SIZE_PROPERTY)));</span>
+<span class="nc" id="L599">            _boardUI.setCoordinatesPainted(getBooleanProperty(SHOW_COORDS_PROPERTY));</span>
+<span class="nc" id="L600">            _boardUI.setHighlightLastMove(getBooleanProperty(HIGHLIGHT_LAST_MOVE_PROPERTY));</span>
+<span class="nc" id="L601">            _boardUI.setHighlightValids(getBooleanProperty(HIGHLIGHT_VALIDS_PROPERTY));</span>
+<span class="nc" id="L602">            _boardUI.setPiecesLF(Integer.parseInt(_properties</span>
+<span class="nc" id="L603">                    .getProperty(PIECES_LF_PROPERTY)));</span>
+<span class="nc" id="L604">            _boardUI.addMoveListener(this);</span>
+
+<span class="nc" id="L606">            _mainFrame</span>
+<span class="nc" id="L607">                    .setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);</span>
+<span class="nc" id="L608">            _mainFrame.addWindowListener(new MainWindowAdapter(</span>
+<span class="nc" id="L609">                    getAction(EXIT_ACTION)));</span>
+<span class="nc" id="L610">            resizeFrame();</span>
+
+<span class="nc" id="L612">            getAction(RESET_ACTION).actionPerformed(</span>
+<span class="nc" id="L613">                    new ActionEvent(this, 0, null));</span>
+        }
+
+<span class="nc" id="L616">        return _mainFrame;</span>
+    }
+
+    /**
+     * Renvoi une référence vers la barre de menu.
+     *
+     * @return Barre de menu.
+     */
+    private JMenuBar getMenuBar() {
+<span class="nc bnc" id="L625" title="All 2 branches missed.">        if (_menuBar == null) {</span>
+<span class="nc" id="L626">            final JMenuBar menu = new JMenuBar();</span>
+<span class="nc" id="L627">            final JMenu menuFichier = new JMenu(getI18NString(&quot;menu.file.name&quot;));</span>
+<span class="nc" id="L628">            menuFichier.setMnemonic(getI18NChar(&quot;menu.file.mnemonic&quot;));</span>
+<span class="nc" id="L629">            menuFichier.add(getAction(RESET_ACTION));</span>
+<span class="nc" id="L630">            menuFichier.addSeparator();</span>
+<span class="nc" id="L631">            menuFichier.add(getAction(LOAD_GAME_ACTION));</span>
+<span class="nc" id="L632">            menuFichier.add(getAction(SAVE_GAME_ACTION));</span>
+<span class="nc" id="L633">            menuFichier.add(getAction(SAVE_GAME_AS_ACTION));</span>
+<span class="nc" id="L634">            menuFichier.addSeparator();</span>
+<span class="nc" id="L635">            getAction(PRINT_ACTION).setEnabled(false);</span>
+<span class="nc" id="L636">            menuFichier.add(getAction(PRINT_ACTION));</span>
+<span class="nc" id="L637">            menuFichier.addSeparator();</span>
+<span class="nc" id="L638">            menuFichier.add(getAction(LOAD_POSITION_ACTION));</span>
+<span class="nc" id="L639">            menuFichier.add(getAction(SAVE_POSITION_ACTION));</span>
+<span class="nc" id="L640">            menuFichier.add(getAction(SAVE_POSITION_AS_ACTION));</span>
+<span class="nc" id="L641">            menuFichier.addSeparator();</span>
+<span class="nc" id="L642">            menuFichier.add(getAction(EXIT_ACTION));</span>
+<span class="nc" id="L643">            menu.add(menuFichier);</span>
+
+<span class="nc" id="L645">            final JMenu menuEdition = new JMenu(getI18NString(&quot;menu.edit.name&quot;));</span>
+<span class="nc" id="L646">            menuEdition.setMnemonic(getI18NChar(&quot;menu.edit.mnemonic&quot;));</span>
+<span class="nc" id="L647">            menuEdition.add(getAction(COPY_ACTION));</span>
+<span class="nc" id="L648">            menuEdition.add(getAction(PASTE_ACTION));</span>
+<span class="nc" id="L649">            menu.add(menuEdition);</span>
+
+<span class="nc" id="L651">            final JMenu menuAide = new JMenu(getI18NString(&quot;menu.help.name&quot;));</span>
+<span class="nc" id="L652">            menuAide.setMnemonic(getI18NChar(&quot;menu.help.mnemonic&quot;));</span>
+<span class="nc" id="L653">            getAction(HELP_ACTION).setEnabled(false);</span>
+<span class="nc" id="L654">            menuAide.add(getAction(HELP_ACTION));</span>
+<span class="nc" id="L655">            menuAide.addSeparator();</span>
+<span class="nc" id="L656">            menuAide.add(getAction(ABOUT_ACTION));</span>
+<span class="nc" id="L657">            menu.add(menuAide);</span>
+<span class="nc" id="L658">            _menuBar = menu;</span>
+        }
+
+<span class="nc" id="L661">        return _menuBar;</span>
+    }
+
+    /**
+     * Renvoi une référence vers l'éventuel fichier FEN contenant la position.
+     *
+     * @return Fichier FEN de position (peut être à null).
+     */
+    @Override
+    public File getPositionFile() {
+<span class="nc" id="L671">        return _positionFile;</span>
+    }
+
+    /**
+     * Renvoi la valeur d'une propriété.
+     *
+     * @param pCle Cle identifiant la propriété.
+     * @return Valeur de la propriété.
+     */
+    @Override
+    public String getProperty(final String pCle) {
+<span class="nc" id="L682">        return _properties.getProperty(pCle);</span>
+    }
+
+    /**
+     * Renvoi une référence vers la barre d'outils.
+     *
+     * @return Barre d'outils.
+     */
+    private JToolBar getToolBar() {
+<span class="nc bnc" id="L691" title="All 2 branches missed.">        if (_toolBar == null) {</span>
+<span class="nc" id="L692">            final JToolBar barre = new JToolBar();</span>
+<span class="nc" id="L693">            barre.setFloatable(false);</span>
+<span class="nc" id="L694">            barre.add(getAction(RESET_ACTION));</span>
+<span class="nc" id="L695">            barre.addSeparator();</span>
+<span class="nc" id="L696">            barre.add(getAction(LOAD_GAME_ACTION));</span>
+<span class="nc" id="L697">            barre.add(getAction(SAVE_GAME_ACTION));</span>
+<span class="nc" id="L698">            barre.add(getAction(SAVE_GAME_AS_ACTION));</span>
+<span class="nc" id="L699">            barre.addSeparator();</span>
+<span class="nc" id="L700">            barre.add(getAction(PRINT_ACTION));</span>
+<span class="nc" id="L701">            barre.addSeparator();</span>
+<span class="nc" id="L702">            barre.add(getAction(LOAD_POSITION_ACTION));</span>
+<span class="nc" id="L703">            barre.add(getAction(SAVE_POSITION_ACTION));</span>
+<span class="nc" id="L704">            barre.add(getAction(SAVE_POSITION_AS_ACTION));</span>
+<span class="nc" id="L705">            barre.addSeparator();</span>
+<span class="nc" id="L706">            barre.add(getAction(EXIT_ACTION));</span>
+<span class="nc" id="L707">            barre.addSeparator();</span>
+<span class="nc" id="L708">            barre.add(getAction(COPY_ACTION));</span>
+<span class="nc" id="L709">            barre.add(getAction(PASTE_ACTION));</span>
+<span class="nc" id="L710">            barre.addSeparator();</span>
+<span class="nc" id="L711">            barre.add(getAction(HELP_ACTION));</span>
+<span class="nc" id="L712">            barre.addSeparator();</span>
+<span class="nc" id="L713">            barre.add(getAction(ABOUT_ACTION));</span>
+<span class="nc" id="L714">            _toolBar = barre;</span>
+        }
+
+<span class="nc" id="L717">        return _toolBar;</span>
+    }
+
+    /**
+     * Charge les propriétés.
+     */
+    private void initProperties() {
+<span class="nc" id="L724">        try (final FileInputStream fis = new FileInputStream(System.getProperty(&quot;user.dir&quot;) + File.separatorChar + CONFIG_FILE_NAME)) {</span>
+<span class="nc" id="L725">            _properties.load(fis);</span>
+<span class="nc" id="L726">        } catch (final IOException e) {</span>
+            // Pas grave, on continue avec les valeurs par défaut...
+<span class="nc" id="L728">            LOG.warn(&quot;Config unavailable.&quot;, e);</span>
+        }
+
+<span class="nc" id="L731">        final int hauteurEcran = Toolkit.getDefaultToolkit().getScreenSize().height;</span>
+        final String taille;
+<span class="nc bnc" id="L733" title="All 2 branches missed.">        if (hauteurEcran &lt; 675) {</span>
+<span class="nc" id="L734">            taille = &quot;48&quot;;</span>
+<span class="nc bnc" id="L735" title="All 2 branches missed.">        } else if (hauteurEcran &gt; 925) {</span>
+<span class="nc" id="L736">            taille = &quot;80&quot;;</span>
+<span class="nc" id="L737">        } else {</span>
+<span class="nc" id="L738">            taille = &quot;64&quot;;</span>
+        }
+<span class="nc" id="L740">        _properties.setProperty(CELLS_SIZE_PROPERTY, _properties.getProperty(CELLS_SIZE_PROPERTY, taille));</span>
+<span class="nc" id="L741">        _properties.setProperty(ENABLE_SOUNDS_PROPERTY, _properties.getProperty(ENABLE_SOUNDS_PROPERTY, Boolean.toString(_soundEnabled)));</span>
+<span class="nc" id="L742">        _soundEnabled = getBooleanProperty(ENABLE_SOUNDS_PROPERTY);</span>
+<span class="nc" id="L743">        _properties.setProperty(HIGHLIGHT_LAST_MOVE_PROPERTY, _properties.getProperty(HIGHLIGHT_LAST_MOVE_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L744">        _properties.setProperty(HIGHLIGHT_VALIDS_PROPERTY, _properties.getProperty(HIGHLIGHT_VALIDS_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L745">        String prop = PLAYERS_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L746">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;false&quot;));</span>
+<span class="nc" id="L747">        prop = CLOCK_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L748">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;false&quot;));</span>
+<span class="nc" id="L749">        prop = SCORESHEET_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L750">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;false&quot;));</span>
+<span class="nc" id="L751">        prop = EVAL_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L752">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;false&quot;));</span>
+<span class="nc" id="L753">        prop = RECORDER_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L754">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;false&quot;));</span>
+<span class="nc" id="L755">        prop = SETTINGS_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L756">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;true&quot;));</span>
+<span class="nc" id="L757">        prop = LF_PANEL_ID + &quot;.folded&quot;;</span>
+<span class="nc" id="L758">        _properties.setProperty(prop, _properties.getProperty(prop, &quot;true&quot;));</span>
+<span class="nc" id="L759">        _properties.setProperty(SHOW_CAPTURES_PROPERTY, _properties.getProperty(SHOW_CAPTURES_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L760">        _properties.setProperty(SHOW_COORDS_PROPERTY, _properties.getProperty(SHOW_COORDS_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L761">        _properties.setProperty(SHOW_FEN_PROPERTY, _properties.getProperty(SHOW_FEN_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L762">        _properties.setProperty(SHOW_MENUBAR_PROPERTY, _properties.getProperty(SHOW_MENUBAR_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L763">        _properties.setProperty(SHOW_TOOLBAR_PROPERTY, _properties.getProperty(SHOW_TOOLBAR_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L764">        _properties.setProperty(FLIP_VIEW_PROPERTY, _properties.getProperty(FLIP_VIEW_PROPERTY, &quot;false&quot;));</span>
+<span class="nc" id="L765">        _properties.setProperty(PLAYER_WHITES_HUMAN_PROPERTY, _properties.getProperty(PLAYER_WHITES_HUMAN_PROPERTY, &quot;true&quot;));</span>
+<span class="nc" id="L766">        _properties.setProperty(PLAYER_WHITES_NAME_PROPERTY, _properties.getProperty(PLAYER_WHITES_NAME_PROPERTY, getI18NString(&quot;label.player.human&quot;)));</span>
+<span class="nc" id="L767">        _properties.setProperty(PLAYER_WHITES_DEPTH_PROPERTY, _properties.getProperty(PLAYER_WHITES_DEPTH_PROPERTY, &quot;0&quot;));</span>
+<span class="nc" id="L768">        _properties.setProperty(PLAYER_BLACKS_HUMAN_PROPERTY, _properties.getProperty(PLAYER_BLACKS_HUMAN_PROPERTY, &quot;false&quot;));</span>
+<span class="nc" id="L769">        _properties.setProperty(PLAYER_BLACKS_NAME_PROPERTY, _properties.getProperty(PLAYER_BLACKS_NAME_PROPERTY, &quot;NegaScout&quot;));</span>
+<span class="nc" id="L770">        _properties.setProperty(PLAYER_BLACKS_DEPTH_PROPERTY, _properties.getProperty(PLAYER_BLACKS_DEPTH_PROPERTY, &quot;5&quot;));</span>
+<span class="nc" id="L771">        _properties.setProperty(BOARD_LF_PROPERTY, _properties.getProperty(BOARD_LF_PROPERTY, &quot;0&quot;));</span>
+<span class="nc" id="L772">        _properties.setProperty(PIECES_LF_PROPERTY, _properties.getProperty(PIECES_LF_PROPERTY, &quot;0&quot;));</span>
+<span class="nc" id="L773">    }</span>
+
+    /**
+     * Tient compte des évènements signalant un mouvement.
+     *
+     * @param pEvent Evènement signalant un mouvement.
+     */
+    @Override
+    public synchronized void moved(final MoveEvent pEvent) {
+<span class="nc" id="L782">        _lastMove = pEvent.getMove();</span>
+<span class="nc" id="L783">        notifyAll();</span>
+<span class="nc" id="L784">    }</span>
+
+    /**
+     * Redimensionne la fenetre.
+     */
+    private void resizeFrame() {
+<span class="nc" id="L790">        final JFrame fen = getMainFrame();</span>
+<span class="nc" id="L791">        fen.setResizable(true);</span>
+<span class="nc" id="L792">        _capturesUp.initCapturesPaint();</span>
+<span class="nc" id="L793">        _capturesDown.initCapturesPaint();</span>
+<span class="nc" id="L794">        fen.pack();</span>
+<span class="nc" id="L795">        fen.setResizable(false);</span>
+<span class="nc" id="L796">    }</span>
+
+    /**
+     * Enregistre les propriétés dans le fichier de configuration.
+     */
+    private void saveProperties() {
+<span class="nc" id="L802">        Player joueur = _game.getPlayer(true);</span>
+<span class="nc" id="L803">        Engine moteur = joueur.getEngine();</span>
+<span class="nc bnc" id="L804" title="All 2 branches missed.">        setBooleanProperty(PLAYER_WHITES_HUMAN_PROPERTY, moteur == null);</span>
+<span class="nc" id="L805">        _properties.setProperty(PLAYER_WHITES_NAME_PROPERTY, joueur.getName());</span>
+        String limite;
+<span class="nc bnc" id="L807" title="All 2 branches missed.">        if (moteur == null) {</span>
+<span class="nc" id="L808">            limite = &quot;0&quot;;</span>
+<span class="nc" id="L809">        } else {</span>
+<span class="nc" id="L810">            limite = Integer.toString(moteur.getSearchDepthLimit());</span>
+        }
+<span class="nc" id="L812">        _properties.setProperty(PLAYER_WHITES_DEPTH_PROPERTY, limite);</span>
+<span class="nc" id="L813">        joueur = _game.getPlayer(false);</span>
+<span class="nc" id="L814">        moteur = joueur.getEngine();</span>
+<span class="nc bnc" id="L815" title="All 2 branches missed.">        setBooleanProperty(PLAYER_BLACKS_HUMAN_PROPERTY, moteur == null);</span>
+<span class="nc" id="L816">        _properties.setProperty(PLAYER_BLACKS_NAME_PROPERTY, joueur.getName());</span>
+<span class="nc bnc" id="L817" title="All 2 branches missed.">        if (moteur == null) {</span>
+<span class="nc" id="L818">            limite = &quot;0&quot;;</span>
+<span class="nc" id="L819">        } else {</span>
+<span class="nc" id="L820">            limite = Integer.toString(moteur.getSearchDepthLimit());</span>
+        }
+<span class="nc" id="L822">        _properties.setProperty(PLAYER_BLACKS_DEPTH_PROPERTY, limite);</span>
+
+<span class="nc" id="L824">        try (final FileOutputStream fos = new FileOutputStream(System.getProperty(&quot;user.dir&quot;) + File.separatorChar + CONFIG_FILE_NAME)) {</span>
+<span class="nc" id="L825">            _properties.store(fos, APPLICATION_NAME + ' ' + APPLICATION_VERSION + &quot; configuration file&quot;);</span>
+<span class="nc" id="L826">        } catch (final IOException e) {</span>
+            // Pas grave, on peut s'en passer...
+<span class="nc" id="L828">            LOG.error(&quot;Config not saved.&quot;, e);</span>
+        }
+<span class="nc" id="L830">    }</span>
+
+    /**
+     * Alimente la valeur d'une propriété booléenne.
+     *
+     * @param pCle    Cle identifiant la propriété.
+     * @param pValeur Valeur de la propriété.
+     */
+    @Override
+    public void setBooleanProperty(final String pCle, final boolean pValeur) {
+<span class="nc" id="L840">        _properties.setProperty(pCle, Boolean.toString(pValeur));</span>
+<span class="nc bnc" id="L841" title="All 2 branches missed.">        if (ENABLE_SOUNDS_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L842">            _soundEnabled = pValeur;</span>
+<span class="nc bnc" id="L843" title="All 2 branches missed.">        } else if (HIGHLIGHT_LAST_MOVE_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L844">            _boardUI.setHighlightLastMove(pValeur);</span>
+<span class="nc bnc" id="L845" title="All 2 branches missed.">        } else if (HIGHLIGHT_VALIDS_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L846">            _boardUI.setHighlightValids(pValeur);</span>
+<span class="nc bnc" id="L847" title="All 2 branches missed.">        } else if (SHOW_CAPTURES_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L848">            _capturesUp.getComponent().setVisible(pValeur);</span>
+<span class="nc" id="L849">            _capturesDown.getComponent().setVisible(pValeur);</span>
+<span class="nc" id="L850">            resizeFrame();</span>
+<span class="nc bnc" id="L851" title="All 2 branches missed.">        } else if (SHOW_COORDS_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L852">            _boardUI.setCoordinatesPainted(pValeur);</span>
+<span class="nc" id="L853">            resizeFrame();</span>
+<span class="nc bnc" id="L854" title="All 2 branches missed.">        } else if (SHOW_FEN_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L855">            _fenPanel.getComponent().setVisible(pValeur);</span>
+<span class="nc" id="L856">            resizeFrame();</span>
+<span class="nc bnc" id="L857" title="All 2 branches missed.">        } else if (SHOW_MENUBAR_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L858">            getMenuBar().setVisible(pValeur);</span>
+<span class="nc" id="L859">            resizeFrame();</span>
+<span class="nc bnc" id="L860" title="All 2 branches missed.">        } else if (SHOW_TOOLBAR_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L861">            getToolBar().setVisible(pValeur);</span>
+<span class="nc" id="L862">            resizeFrame();</span>
+<span class="nc bnc" id="L863" title="All 2 branches missed.">        } else if (FLIP_VIEW_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L864">            _boardUI.setFlipView(pValeur);</span>
+<span class="nc bnc" id="L865" title="All 2 branches missed.">            _capturesUp.setWhite(!pValeur);</span>
+<span class="nc" id="L866">            _capturesDown.setWhite(pValeur);</span>
+        }
+<span class="nc" id="L868">    }</span>
+
+    /**
+     * Stocke la référence de l'éventuel fichier PGN de partie.
+     *
+     * @param pFichier Fichier PGN de partie (peut être à null).
+     */
+    @Override
+    public void setGameFile(final File pFichier) {
+<span class="nc" id="L877">        _gameFile = pFichier;</span>
+<span class="nc bnc" id="L878" title="All 2 branches missed.">        getAction(SAVE_GAME_ACTION).setEnabled(_gameFile != null);</span>
+<span class="nc" id="L879">    }</span>
+
+    /**
+     * Stocke la référence de l'éventuel fichier FEN de position.
+     *
+     * @param pFichier Fichier FEN de position (peut être à null).
+     */
+    @Override
+    public void setPositionFile(final File pFichier) {
+<span class="nc" id="L888">        _positionFile = pFichier;</span>
+<span class="nc bnc" id="L889" title="All 2 branches missed.">        getAction(SAVE_POSITION_ACTION).setEnabled(_positionFile != null);</span>
+<span class="nc" id="L890">    }</span>
+
+    /**
+     * Alimente la valeur d'une propriété.
+     *
+     * @param pCle    Cle identifiant la propriété.
+     * @param pValeur Valeur de la propriété.
+     */
+    @Override
+    public void setProperty(final String pCle, final String pValeur) {
+<span class="nc" id="L900">        _properties.setProperty(pCle, pValeur);</span>
+<span class="nc bnc" id="L901" title="All 2 branches missed.">        if (CELLS_SIZE_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L902">            _boardUI.setCellSideLength(Integer.parseInt(pValeur));</span>
+<span class="nc" id="L903">            resizeFrame();</span>
+<span class="nc bnc" id="L904" title="All 2 branches missed.">        } else if (BOARD_LF_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L905">            _boardUI.setBoardLF(Integer.parseInt(pValeur));</span>
+<span class="nc bnc" id="L906" title="All 2 branches missed.">        } else if (PIECES_LF_PROPERTY.equals(pCle)) {</span>
+<span class="nc" id="L907">            _boardUI.setPiecesLF(Integer.parseInt(pValeur));</span>
+        }
+<span class="nc" id="L909">    }</span>
+
+    /**
+     * Lance l'interface graphique.
+     *
+     * @see UI#start()
+     */
+    @Override
+    public void start() {
+<span class="nc" id="L918">        final JFrame fenetre = getMainFrame();</span>
+<span class="nc" id="L919">        fenetre.setLocationRelativeTo(null);</span>
+<span class="nc" id="L920">        fenetre.setVisible(true);</span>
+
+<span class="nc" id="L922">        while (true) {</span>
+<span class="nc bnc" id="L923" title="All 2 branches missed.">            while (_game.getState() == IN_PROGRESS) {</span>
+<span class="nc" id="L924">                _lastMove = null;</span>
+
+<span class="nc" id="L926">                final MoveGenerator plateau = _game.getBoard();</span>
+<span class="nc" id="L927">                final Engine ia = _game.getPlayer(plateau.isWhiteActive())</span>
+<span class="nc" id="L928">                        .getEngine();</span>
+<span class="nc bnc" id="L929" title="All 2 branches missed.">                if (ia == null) {</span>
+<span class="nc" id="L930">                    _boardUI.setEnabled(true);</span>
+<span class="nc" id="L931">                    waitForMove();</span>
+<span class="nc" id="L932">                } else {</span>
+<span class="nc" id="L933">                    _boardUI.setEnabled(false);</span>
+<span class="nc" id="L934">                    _lastMove = ia.getMoveFor(plateau);</span>
+                }
+
+<span class="nc bnc" id="L937" title="All 2 branches missed.">                if (_activeSample != null) {</span>
+<span class="nc" id="L938">                    _activeSample.stop();</span>
+<span class="nc" id="L939">                    _activeSample = null;</span>
+                }
+<span class="nc bnc" id="L941" title="All 2 branches missed.">                if (_soundEnabled) {</span>
+<span class="nc" id="L942">                    _activeSample = MOVE_SOUND;</span>
+<span class="nc bnc" id="L943" title="All 2 branches missed.">                    if (_activeSample != null) {</span>
+<span class="nc" id="L944">                        _activeSample.setFramePosition(0);</span>
+<span class="nc" id="L945">                        _activeSample.start();</span>
+                    }
+                }
+
+<span class="nc bnc" id="L949" title="All 2 branches missed.">                if (ia != null) {</span>
+<span class="nc" id="L950">                    final long etime = ia.getElapsedTime();</span>
+<span class="nc" id="L951">                    final int hmc = ia.getHalfmoveCount();</span>
+<span class="nc" id="L952">                    LOG.info(&quot;{} : {} nodes in {}ms &lt;=&gt; {} nodes/s&quot;, ia.getClass().getSimpleName(), hmc, etime, (int) (1000.0 / etime * hmc));</span>
+                }
+
+<span class="nc" id="L955">                _game.moveFromCurrent(_lastMove);</span>
+            }
+<span class="nc" id="L957">            _boardUI.setEnabled(false);</span>
+            try {
+<span class="nc" id="L959">                Thread.sleep(250);</span>
+<span class="nc" id="L960">            } catch (final InterruptedException e) {</span>
+<span class="nc" id="L961">                LOG.warn(&quot;UI thread interrupted.&quot;, e);</span>
+            }
+        }
+    }
+
+    /**
+     * Arrète l'interface utilisateur.
+     *
+     * @see UI#stop()
+     */
+    @Override
+    public void stop() {
+<span class="nc" id="L973">        saveProperties();</span>
+
+<span class="nc" id="L975">        System.exit(0);</span>
+<span class="nc" id="L976">    }</span>
+
+    /**
+     * Attend que le joueur humain ait fait un mouvement.
+     */
+    private synchronized void waitForMove() {
+        try {
+<span class="nc bnc" id="L983" title="All 2 branches missed.">            while (_lastMove == null) {</span>
+<span class="nc" id="L984">                wait();</span>
+            }
+<span class="nc" id="L986">        } catch (final InterruptedException e) {</span>
+<span class="nc" id="L987">            LOG.warn(&quot;Move wait interrupted.&quot;, e);</span>
+        }
+<span class="nc" id="L989">    }</span>
+
+    /**
+     * Classe gérant les actions sur la fenêtre principale.
+     */
+    private static final class MainWindowAdapter extends WindowAdapter {
+        /**
+         * Action prenant en charge la fermeture de l'application.
+         */
+        private final Action _exitAction;
+
+        /**
+         * Instancie un nouvel écouteur d'actions sur la fenêtre.
+         *
+         * @param pAction Action &quot;Quitter&quot;.
+         */
+<span class="nc" id="L1005">        MainWindowAdapter(final Action pAction) {</span>
+<span class="nc" id="L1006">            _exitAction = pAction;</span>
+<span class="nc" id="L1007">        }</span>
+
+        /**
+         * Gère les demandes de fermeture de la fenêtre.
+         *
+         * @param pEvent Evènement signalant la demande.
+         */
+        @Override
+        public void windowClosing(final WindowEvent pEvent) {
+<span class="nc" id="L1016">            final ActionEvent ev = new ActionEvent(pEvent.getSource(),</span>
+<span class="nc" id="L1017">                    pEvent.getID(), pEvent.toString());</span>
+<span class="nc" id="L1018">            _exitAction.actionPerformed(ev);</span>
+<span class="nc" id="L1019">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

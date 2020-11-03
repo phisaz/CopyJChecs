@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NegaScoutEngine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">NegaScoutEngine.java</span></div><h1>NegaScoutEngine.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+
+/**
+ * Moteur d'IA basé sur l'algorithme NegaScout (aussi appelé Principal Variation
+ * Search), avec table de transposition, sur 5 demi-coups.
+ *
+ * @author David Cotton
+ */
+final class NegaScoutEngine extends AbstractEngine {
+    /**
+     * Table de transposition.
+     */
+<span class="fc" id="L37">    private static final TranspositionTable TRANSPOSITIONS = new TranspositionTable(</span>
+<span class="fc" id="L38">            1000000);</span>
+
+    /**
+     * Instancie un nouveau moteur IA Negascout.
+     */
+    NegaScoutEngine() {
+<span class="fc" id="L44">        super(3, 6, 5);</span>
+
+<span class="fc" id="L46">        setMoveSorter(new KillerMoveSorter());</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * Recherche le meilleur coup évalué à partir d'une position.
+     *
+     * @param pEtat       Etat de l'échiquier.
+     * @param pProfondeur Profondeur d'évaluation actuelle.
+     * @param pAlpha      Seuil alpha.
+     * @param pBeta       Seuil beta.
+     * @param pLimite     Profondeur limite.
+     * @return Meilleure évaluation obtenue à ce niveau.
+     */
+    private int negascout(final MoveGenerator pEtat, final int pProfondeur,
+                          final int pAlpha, final int pBeta, final int pLimite) {
+<span class="nc" id="L61">        final Integer resultat = TRANSPOSITIONS.get(pEtat, pProfondeur, pAlpha,</span>
+<span class="nc" id="L62">                pBeta);</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">        if (resultat != null) {</span>
+<span class="nc" id="L64">            return resultat;</span>
+        }
+
+<span class="nc" id="L67">        final boolean trait = pEtat.isWhiteActive();</span>
+
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        if (pProfondeur &lt;= pLimite) {</span>
+<span class="nc" id="L70">            final int valeur = getHeuristic().evaluate(pEtat, trait);</span>
+<span class="nc" id="L71">            TRANSPOSITIONS.put(pEtat, pProfondeur, pAlpha, pBeta, valeur);</span>
+
+<span class="nc" id="L73">            return valeur;</span>
+        }
+
+<span class="nc" id="L76">        final Move[] coups = pEtat.getValidMoves(trait);</span>
+<span class="nc" id="L77">        final int l = coups.length;</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        if (l == 0) {</span>
+<span class="nc" id="L79">            final int valeur = getHeuristic().evaluate(pEtat, trait);</span>
+<span class="nc" id="L80">            TRANSPOSITIONS.put(pEtat, pProfondeur, pAlpha, pBeta, valeur);</span>
+
+<span class="nc" id="L82">            return valeur;</span>
+        }
+
+<span class="nc" id="L85">        int res = MATE_VALUE - 1;</span>
+
+<span class="nc" id="L87">        final Comparator&lt;Move&gt; tri = getMoveSorter();</span>
+        final ContextSorter ctx;
+<span class="nc bnc" id="L89" title="All 2 branches missed.">        if (tri instanceof ContextSorter) {</span>
+<span class="nc" id="L90">            ctx = (ContextSorter) tri;</span>
+<span class="nc" id="L91">        } else {</span>
+<span class="nc" id="L92">            ctx = null;</span>
+        }
+<span class="nc" id="L94">        Arrays.sort(coups, tri);</span>
+<span class="nc" id="L95">        addHalfmove(l);</span>
+<span class="nc" id="L96">        int alpha = pAlpha;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        for (int i = 0; i &lt; l; i++) {</span>
+<span class="nc" id="L98">            final Move mvt = coups[i];</span>
+<span class="nc" id="L99">            final MoveGenerator etat = pEtat.derive(mvt, true);</span>
+            final int limite;
+<span class="nc bnc" id="L101" title="All 6 branches missed.">            if (((pProfondeur == 1) &amp;&amp; ((l &lt;= 3) || (mvt.getCaptured() != null)))</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">                    || etat.isInCheck(etat.isWhiteActive())) {</span>
+<span class="nc" id="L103">                limite = -1;</span>
+<span class="nc" id="L104">            } else {</span>
+<span class="nc" id="L105">                limite = 0;</span>
+            }
+            int note;
+<span class="nc bnc" id="L108" title="All 2 branches missed.">            if (i == 0) {</span>
+<span class="nc" id="L109">                note = -negascout(etat, pProfondeur - 1, -pBeta, -alpha, limite);</span>
+<span class="nc" id="L110">            } else {</span>
+<span class="nc" id="L111">                note = -negascout(etat, pProfondeur - 1, -alpha - 1, -alpha,</span>
+<span class="nc" id="L112">                        limite);</span>
+            }
+<span class="nc bnc" id="L114" title="All 2 branches missed.">            if (note &gt; res) {</span>
+<span class="nc bnc" id="L115" title="All 6 branches missed.">                if ((i &gt; 0) &amp;&amp; (alpha &lt; note) &amp;&amp; (note &lt; pBeta)</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">                        &amp;&amp; (pProfondeur &gt; limite + 2)) {</span>
+<span class="nc" id="L117">                    note = -negascout(etat, pProfondeur - 1, -pBeta, -note,</span>
+<span class="nc" id="L118">                            limite);</span>
+                }
+<span class="nc" id="L120">                res = note;</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">                if (res &gt; alpha) {</span>
+<span class="nc" id="L122">                    alpha = res;</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">                    if (alpha &gt; pBeta) {</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">                        if (ctx != null) {</span>
+<span class="nc" id="L125">                            ctx.put(mvt);</span>
+                        }
+<span class="nc" id="L127">                        break;</span>
+                    }
+                }
+            }
+        }
+
+<span class="nc" id="L133">        TRANSPOSITIONS.put(pEtat, pProfondeur, alpha, pBeta, res);</span>
+<span class="nc" id="L134">        return res;</span>
+    }
+
+    /**
+     * Corps de la recherche du &quot;meilleur&quot; demi-coup pour un état de
+     * l'échiquier.
+     *
+     * @param pEtat  Etat de l'échiquier.
+     * @param pCoups Liste des mouvement initiaux valides.
+     * @return Mouvement trouvé.
+     */
+    @Override
+    protected Move searchMoveFor(final MoveGenerator pEtat, final Move[] pCoups) {
+<span class="nc" id="L147">        final int l = pCoups.length;</span>
+<span class="nc" id="L148">        addHalfmove(l);</span>
+<span class="nc" id="L149">        final Comparator&lt;Move&gt; tri = getMoveSorter();</span>
+<span class="nc" id="L150">        Arrays.sort(pCoups, tri);</span>
+<span class="nc" id="L151">        Move res = pCoups[0];</span>
+<span class="nc" id="L152">        int alpha = MATE_VALUE - 1;</span>
+<span class="nc bnc" id="L153" title="All 2 branches missed.">        for (final Move mvt : pCoups) {</span>
+<span class="nc" id="L154">            final MoveGenerator etat = pEtat.derive(mvt, true);</span>
+<span class="nc" id="L155">            final int note = -negascout(etat, getSearchDepthLimit() - 1,</span>
+<span class="nc" id="L156">                    MATE_VALUE, -alpha, 0);</span>
+<span class="nc bnc" id="L157" title="All 6 branches missed.">            if ((note &gt; alpha) || ((note == alpha) &amp;&amp; RANDOMIZER.nextBoolean())) {</span>
+                // Un peu de hasard sert à partager les évaluations identiques :
+                // jeu
+                // plus agréable.
+<span class="nc" id="L161">                alpha = note;</span>
+<span class="nc" id="L162">                res = mvt;</span>
+            }
+        }
+
+<span class="nc" id="L166">        setScore(alpha);</span>
+
+<span class="nc" id="L168">        TRANSPOSITIONS.clear();</span>
+<span class="nc bnc" id="L169" title="All 2 branches missed.">        if (tri instanceof ContextSorter) {</span>
+<span class="nc" id="L170">            ((ContextSorter) tri).clear();</span>
+        }
+
+<span class="nc" id="L173">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

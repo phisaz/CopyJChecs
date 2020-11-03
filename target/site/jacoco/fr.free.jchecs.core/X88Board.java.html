@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>X88Board.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">X88Board.java</span></div><h1>X88Board.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+import static fr.free.jchecs.core.Piece.BLACK_BISHOP;
+import static fr.free.jchecs.core.Piece.BLACK_KNIGHT;
+import static fr.free.jchecs.core.Piece.BLACK_PAWN;
+import static fr.free.jchecs.core.Piece.BLACK_QUEEN;
+import static fr.free.jchecs.core.Piece.BLACK_ROOK;
+import static fr.free.jchecs.core.Piece.WHITE_BISHOP;
+import static fr.free.jchecs.core.Piece.WHITE_KNIGHT;
+import static fr.free.jchecs.core.Piece.WHITE_PAWN;
+import static fr.free.jchecs.core.Piece.WHITE_QUEEN;
+import static fr.free.jchecs.core.Piece.WHITE_ROOK;
+import static fr.free.jchecs.core.PieceType.BISHOP;
+import static fr.free.jchecs.core.PieceType.KING;
+import static fr.free.jchecs.core.PieceType.KNIGHT;
+import static fr.free.jchecs.core.PieceType.PAWN;
+import static fr.free.jchecs.core.PieceType.QUEEN;
+import static fr.free.jchecs.core.PieceType.ROOK;
+
+/**
+ * Représentation d'un état de la partie basée sur un tableau à une dimension
+ * accédé à travers le masque hexadécimal x88.
+ * &lt;p&gt;
+ * Cette représentation est plus performante que la représentation naturelle
+ * avec un tableau à deux dimensions, tout en restant moins complexe que les
+ * BitBoards.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">final class X88Board extends AbstractMoveGenerator {</span>
+    /**
+     * Indice du dernier élément valide dans les buffer de travail des cases.
+     */
+    private static int S_nbBufferedSquares;
+
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = 7427708516011286821L;
+
+    /**
+     * Filtre appliqué sur les indices du tableau.
+     */
+    private static final int X88 = 0x88;
+
+    /**
+     * Equivalences entre les indices x88 et les indices normaux des cases.
+     */
+<span class="fc" id="L70">    private static final int[] FROM_X88 = {0, 1, 2, 3, 4, 5, 6, 7, -1, -1, -1,</span>
+<span class="fc" id="L71">            -1, -1, -1, -1, -1, 8, 9, 10, 11, 12, 13, 14, 15, -1, -1, -1, -1,</span>
+<span class="fc" id="L72">            -1, -1, -1, -1, 16, 17, 18, 19, 20, 21, 22, 23, -1, -1, -1, -1, -1,</span>
+<span class="fc" id="L73">            -1, -1, -1, 24, 25, 26, 27, 28, 29, 30, 31, -1, -1, -1, -1, -1, -1,</span>
+<span class="fc" id="L74">            -1, -1, 32, 33, 34, 35, 36, 37, 38, 39, -1, -1, -1, -1, -1, -1, -1,</span>
+<span class="fc" id="L75">            -1, 40, 41, 42, 43, 44, 45, 46, 47, -1, -1, -1, -1, -1, -1, -1, -1,</span>
+<span class="fc" id="L76">            48, 49, 50, 51, 52, 53, 54, 55, -1, -1, -1, -1, -1, -1, -1, -1, 56,</span>
+<span class="fc" id="L77">            57, 58, 59, 60, 61, 62, 63, -1, -1, -1, -1, -1, -1, -1, -1,};</span>
+
+    /**
+     * Liste des modificateurs pour les mouvements d'un roi.
+     */
+<span class="fc" id="L82">    private static final int[] KING_MOVES = {-17, -16, -15, -1, 1, 15, 16, 17,};</span>
+
+    /**
+     * Liste des modificateurs pour les mouvements d'un cavalier.
+     */
+<span class="fc" id="L87">    private static final int[] KNIGHT_MOVES = {-33, -31, -18, -14, 14, 18, 31,</span>
+<span class="fc" id="L88">            33,};</span>
+
+    /**
+     * Liste de cases cibles vides.
+     */
+<span class="fc" id="L93">    private static final Square[] NO_SQUARE = new Square[0];</span>
+
+    /**
+     * Buffer de travail pour optimiser la recherche des cibles de mouvements.
+     * &lt;p&gt;
+     * L'utilisation d'un buffer statique optimise les performances mais
+     * nécessite de faire très attention à la synchronisation pour que la classe
+     * reste sûre vis-à-vis des threads.
+     * &lt;/p&gt;
+     */
+    // 27 est le nombre maximum de cases cibles pour une pièce (une dame, dans
+    // le
+    // meilleur des cas).
+<span class="fc" id="L106">    private static final int[] SQUARES_BUFFER = new int[27];</span>
+
+    /**
+     * Description du plateau.
+     */
+<span class="fc" id="L111">    private final Piece[] _pieces = new Piece[FILE_COUNT * RANK_COUNT * 2</span>
+            - FILE_COUNT];
+
+    /**
+     * Clé de hachage.
+     */
+    private int _hashCode;
+
+    /**
+     * Crée une nouvelle instance, initialisée à partir de l'état reçu en
+     * paramètre.
+     *
+     * @param pEtat Instance initial.
+     */
+    @SuppressWarnings(&quot;WeakerAccess&quot;)
+    X88Board(final Board pEtat) {
+<span class="fc" id="L127">        super(pEtat);</span>
+
+<span class="fc bfc" id="L129" title="All 2 branches covered.">        for (final Square s : Square.values()) {</span>
+<span class="fc" id="L130">            _pieces[s.getRank() * 16 + s.getFile()] = pEtat.getPieceAt(s);</span>
+        }
+<span class="fc" id="L132">        _hashCode = super.hashCode();</span>
+<span class="fc" id="L133">    }</span>
+
+    /**
+     * Crée une nouvelle instance, copie conforme de l'instance reçue.
+     *
+     * @param pEtat Instance à copier.
+     */
+    private X88Board(final X88Board pEtat) {
+<span class="fc" id="L141">        super(pEtat);</span>
+
+<span class="fc" id="L143">        System.arraycopy(pEtat._pieces, 0, _pieces, 0, _pieces.length);</span>
+<span class="fc" id="L144">        _hashCode = pEtat._hashCode;</span>
+<span class="fc" id="L145">    }</span>
+
+    /**
+     * Ajoute au buffer interne toutes les cases cibles des mouvements possibles
+     * (y compris ceux mettant le roi en échec) pour la pièce contenue par une
+     * case.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     */
+    private void addAllTargets(final int pOrigine) {
+<span class="fc" id="L155">        final Piece piece = _pieces[pOrigine];</span>
+<span class="pc bpc" id="L156" title="1 of 2 branches missed.">        if (piece != null) {</span>
+<span class="fc" id="L157">            final boolean trait = piece.isWhite();</span>
+<span class="pc bpc" id="L158" title="1 of 7 branches missed.">            switch (piece.getType()) {</span>
+                case BISHOP:
+<span class="fc" id="L160">                    addBishopTargets(pOrigine, trait);</span>
+<span class="fc" id="L161">                    break;</span>
+                case KING:
+<span class="fc" id="L163">                    addKingTargets(pOrigine, trait);</span>
+<span class="fc" id="L164">                    break;</span>
+                case KNIGHT:
+<span class="fc" id="L166">                    addKnightTargets(pOrigine, trait);</span>
+<span class="fc" id="L167">                    break;</span>
+                case PAWN:
+<span class="fc" id="L169">                    addPawnTargets(pOrigine, trait);</span>
+<span class="fc" id="L170">                    break;</span>
+                case QUEEN:
+<span class="fc" id="L172">                    addBishopTargets(pOrigine, trait);</span>
+<span class="fc" id="L173">                    addRookTargets(pOrigine, trait);</span>
+<span class="fc" id="L174">                    break;</span>
+                case ROOK:
+<span class="fc" id="L176">                    addRookTargets(pOrigine, trait);</span>
+<span class="fc" id="L177">                    break;</span>
+                default:
+<span class="nc bnc" id="L179" title="All 2 branches missed.">                    assert false;</span>
+            }
+        }
+<span class="fc" id="L182">    }</span>
+
+    /**
+     * Ajoute au buffer interne toutes les cases cibles possibles d'un mouvement
+     * de type &quot;fou&quot; d'une certaine couleur (y compris ceux mettant le roi en
+     * échec) à partir d'une case.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     * @param pBlanc   Positionné à vrai si la recherche concerne les blancs.
+     */
+    private void addBishopTargets(final int pOrigine, final boolean pBlanc) {
+        // Mouvements / prise vers le haut/gauche...
+<span class="fc" id="L194">        int dst = pOrigine + 15;</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L196">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L197" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L198">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L199">            } else {</span>
+<span class="fc bfc" id="L200" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L201">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L203">                break;</span>
+            }
+<span class="fc" id="L205">            dst += 15;</span>
+        }
+
+        // Mouvements / prise vers le haut/droit...
+<span class="fc" id="L209">        dst = pOrigine + 17;</span>
+<span class="fc bfc" id="L210" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L211">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L212" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L213">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L214">            } else {</span>
+<span class="fc bfc" id="L215" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L216">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L218">                break;</span>
+            }
+<span class="fc" id="L220">            dst += 17;</span>
+        }
+
+        // Mouvements / prise vers le bas/gauche...
+<span class="fc" id="L224">        dst = pOrigine - 17;</span>
+<span class="fc bfc" id="L225" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L226">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L227" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L228">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L229">            } else {</span>
+<span class="fc bfc" id="L230" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L231">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L233">                break;</span>
+            }
+<span class="fc" id="L235">            dst -= 17;</span>
+        }
+
+        // Mouvements / prise vers le bas/droit...
+<span class="fc" id="L239">        dst = pOrigine - 15;</span>
+<span class="fc bfc" id="L240" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L241">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L242" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L243">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L244">            } else {</span>
+<span class="fc bfc" id="L245" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L246">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L248">                break;</span>
+            }
+<span class="fc" id="L250">            dst -= 15;</span>
+        }
+<span class="fc" id="L252">    }</span>
+
+    /**
+     * Ajoute au buffer interne la liste des cases pouvant être atteintes par un
+     * mouvement de type roi.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     */
+    private void addKingTargets(final int pOrigine, final boolean pBlanc) {
+<span class="fc" id="L262">        boolean testerRoque = false;</span>
+<span class="fc bfc" id="L263" title="All 2 branches covered.">        for (final int km : KING_MOVES) {</span>
+<span class="fc" id="L264">            final int dst = pOrigine + km;</span>
+<span class="fc bfc" id="L265" title="All 2 branches covered.">            if ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L266">                final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L267" title="All 4 branches covered.">                if ((p == null) || (p.isWhite() != pBlanc)) {</span>
+<span class="fc" id="L268">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L269">                    testerRoque = true;</span>
+                }
+            }
+        }
+<span class="fc bfc" id="L273" title="All 4 branches covered.">        if (testerRoque &amp;&amp; ((pOrigine &amp; 0xF) == 4)) {</span>
+<span class="fc bfc" id="L274" title="All 4 branches covered.">            if (canCastleShort(pBlanc) &amp;&amp; (_pieces[pOrigine + 1] == null)</span>
+<span class="fc bfc" id="L275" title="All 2 branches covered.">                    &amp;&amp; (_pieces[pOrigine + 2] == null)) {</span>
+<span class="fc" id="L276">                final Piece t = _pieces[pOrigine + 3];</span>
+<span class="pc bpc" id="L277" title="1 of 4 branches missed.">                if ((t != null) &amp;&amp; (t.getType() == ROOK)</span>
+<span class="pc bpc" id="L278" title="1 of 2 branches missed.">                        &amp;&amp; (t.isWhite() == pBlanc)) {</span>
+<span class="fc" id="L279">                    SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine + 2;</span>
+                }
+            }
+<span class="fc bfc" id="L282" title="All 4 branches covered.">            if (canCastleLong(pBlanc) &amp;&amp; (_pieces[pOrigine - 1] == null)</span>
+<span class="fc bfc" id="L283" title="All 2 branches covered.">                    &amp;&amp; (_pieces[pOrigine - 2] == null)</span>
+<span class="fc bfc" id="L284" title="All 2 branches covered.">                    &amp;&amp; (_pieces[pOrigine - 3] == null)) {</span>
+<span class="fc" id="L285">                final Piece t = _pieces[pOrigine - 4];</span>
+<span class="pc bpc" id="L286" title="1 of 4 branches missed.">                if ((t != null) &amp;&amp; (t.getType() == ROOK)</span>
+<span class="pc bpc" id="L287" title="1 of 2 branches missed.">                        &amp;&amp; (t.isWhite() == pBlanc)) {</span>
+<span class="fc" id="L288">                    SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine - 2;</span>
+                }
+            }
+        }
+<span class="fc" id="L292">    }</span>
+
+    /**
+     * Ajoute au buffer interne la liste des cases pouvant être atteintes par un
+     * mouvement de type cavalier.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     */
+    private void addKnightTargets(final int pOrigine, final boolean pBlanc) {
+<span class="fc bfc" id="L302" title="All 2 branches covered.">        for (final int km : KNIGHT_MOVES) {</span>
+<span class="fc" id="L303">            final int dst = pOrigine + km;</span>
+<span class="fc bfc" id="L304" title="All 2 branches covered.">            if ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L305">                final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L306" title="All 4 branches covered.">                if ((p == null) || (p.isWhite() != pBlanc)) {</span>
+<span class="fc" id="L307">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+            }
+        }
+<span class="fc" id="L311">    }</span>
+
+    /**
+     * Ajoute au buffer interne la liste des cases pouvant être atteintes par un
+     * mouvement de type pion.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     */
+    private void addPawnTargets(final int pOrigine, final boolean pBlanc) {
+<span class="fc" id="L321">        final int ySrc = pOrigine &gt;&gt;&gt; 4;</span>
+<span class="fc bfc" id="L322" title="All 2 branches covered.">        if (pBlanc) {</span>
+<span class="fc bfc" id="L323" title="All 2 branches covered.">            if (ySrc &lt; RANK_COUNT - 1) {</span>
+                // Mouvement de 1...
+<span class="fc bfc" id="L325" title="All 2 branches covered.">                if (_pieces[pOrigine + 16] == null) {</span>
+<span class="fc" id="L326">                    SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine + 16;</span>
+                    // Mouvement initial de 2
+<span class="fc bfc" id="L328" title="All 4 branches covered.">                    if ((ySrc == 1) &amp;&amp; (_pieces[pOrigine + 32] == null)) {</span>
+<span class="fc" id="L329">                        SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine + 32;</span>
+                    }
+                }
+<span class="fc" id="L332">                final int xSrc = pOrigine &amp; 0xF;</span>
+<span class="fc bfc" id="L333" title="All 2 branches covered.">                if (xSrc &gt; 0) {</span>
+                    // Prise à gauche (y compris en passant)...
+<span class="fc" id="L335">                    final int iDest = pOrigine + 15;</span>
+<span class="fc" id="L336">                    final Piece pDest = _pieces[iDest];</span>
+<span class="fc bfc" id="L337" title="All 4 branches covered.">                    if (((pDest != null) &amp;&amp; (!pDest.isWhite()))</span>
+<span class="fc bfc" id="L338" title="All 2 branches covered.">                            || (Square.valueOf(FROM_X88[iDest]) == getEnPassant())) {</span>
+<span class="fc" id="L339">                        SQUARES_BUFFER[S_nbBufferedSquares++] = iDest;</span>
+                    }
+                }
+<span class="fc bfc" id="L342" title="All 2 branches covered.">                if (xSrc &lt; FILE_COUNT - 1) {</span>
+                    // Prise à droite (y compris en passant)...
+<span class="fc" id="L344">                    final int iDest = pOrigine + 17;</span>
+<span class="fc" id="L345">                    final Piece pDest = _pieces[iDest];</span>
+<span class="fc bfc" id="L346" title="All 4 branches covered.">                    if (((pDest != null) &amp;&amp; (!pDest.isWhite()))</span>
+<span class="fc bfc" id="L347" title="All 2 branches covered.">                            || (Square.valueOf(FROM_X88[iDest]) == getEnPassant())) {</span>
+<span class="fc" id="L348">                        SQUARES_BUFFER[S_nbBufferedSquares++] = iDest;</span>
+                    }
+                }
+            }
+<span class="fc" id="L352">        } else {</span>
+<span class="fc bfc" id="L353" title="All 2 branches covered.">            if (ySrc &gt; 0) {</span>
+                // Mouvement de 1...
+<span class="fc bfc" id="L355" title="All 2 branches covered.">                if (_pieces[pOrigine - 16] == null) {</span>
+<span class="fc" id="L356">                    SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine - 16;</span>
+                    // Mouvement initial de 2
+<span class="fc bfc" id="L358" title="All 2 branches covered.">                    if ((ySrc == RANK_COUNT - 2)</span>
+<span class="fc bfc" id="L359" title="All 2 branches covered.">                            &amp;&amp; (_pieces[pOrigine - 32] == null)) {</span>
+<span class="fc" id="L360">                        SQUARES_BUFFER[S_nbBufferedSquares++] = pOrigine - 32;</span>
+                    }
+                }
+<span class="fc" id="L363">                final int xSrc = pOrigine &amp; 0xF;</span>
+<span class="fc bfc" id="L364" title="All 2 branches covered.">                if (xSrc &gt; 0) {</span>
+                    // Prise à gauche (y compris en passant)...
+<span class="fc" id="L366">                    final int iDest = pOrigine - 17;</span>
+<span class="fc" id="L367">                    final Piece pDest = _pieces[iDest];</span>
+<span class="fc bfc" id="L368" title="All 4 branches covered.">                    if (((pDest != null) &amp;&amp; pDest.isWhite())</span>
+<span class="fc bfc" id="L369" title="All 2 branches covered.">                            || (Square.valueOf(FROM_X88[iDest]) == getEnPassant())) {</span>
+<span class="fc" id="L370">                        SQUARES_BUFFER[S_nbBufferedSquares++] = iDest;</span>
+                    }
+                }
+<span class="fc bfc" id="L373" title="All 2 branches covered.">                if (xSrc &lt; FILE_COUNT - 1) {</span>
+                    // Prise à droite (y compris en passant)...
+<span class="fc" id="L375">                    final int iDest = pOrigine - 15;</span>
+<span class="fc" id="L376">                    final Piece pDest = _pieces[iDest];</span>
+<span class="fc bfc" id="L377" title="All 4 branches covered.">                    if (((pDest != null) &amp;&amp; pDest.isWhite())</span>
+<span class="fc bfc" id="L378" title="All 2 branches covered.">                            || (Square.valueOf(FROM_X88[iDest]) == getEnPassant())) {</span>
+<span class="fc" id="L379">                        SQUARES_BUFFER[S_nbBufferedSquares++] = iDest;</span>
+                    }
+                }
+            }
+        }
+<span class="fc" id="L384">    }</span>
+
+    /**
+     * Ajoute au buffer interne toutes les cases cibles possibles d'un mouvement
+     * de type &quot;tour&quot; d'une certaine couleur (y compris ceux mettant le roi en
+     * échec) à partir d'une case.
+     *
+     * @param pOrigine Indice de la case à l'origine du mouvement.
+     * @param pBlanc   Mis à vrai pour rechercher pour les blancs.
+     */
+    private void addRookTargets(final int pOrigine, final boolean pBlanc) {
+        // Mouvements / prise vers la gauche...
+<span class="fc" id="L396">        int dst = pOrigine - 1;</span>
+<span class="fc bfc" id="L397" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L398">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L399" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L400">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L401">            } else {</span>
+<span class="fc bfc" id="L402" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L403">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L405">                break;</span>
+            }
+<span class="fc" id="L407">            dst--;</span>
+        }
+
+        // Mouvements / prise vers la droite...
+<span class="fc" id="L411">        dst = pOrigine + 1;</span>
+<span class="fc bfc" id="L412" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L413">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L414" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L415">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L416">            } else {</span>
+<span class="fc bfc" id="L417" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L418">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L420">                break;</span>
+            }
+<span class="fc" id="L422">            dst++;</span>
+        }
+
+        // Mouvements / prise vers le haut...
+<span class="fc" id="L426">        dst = pOrigine + 16;</span>
+<span class="fc bfc" id="L427" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L428">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L429" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L430">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L431">            } else {</span>
+<span class="fc bfc" id="L432" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L433">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L435">                break;</span>
+            }
+<span class="fc" id="L437">            dst += 16;</span>
+        }
+
+        // Mouvements / prise vers le bas...
+<span class="fc" id="L441">        dst = pOrigine - 16;</span>
+<span class="fc bfc" id="L442" title="All 2 branches covered.">        while ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L443">            final Piece p = _pieces[dst];</span>
+<span class="fc bfc" id="L444" title="All 2 branches covered.">            if (p == null) {</span>
+<span class="fc" id="L445">                SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+<span class="fc" id="L446">            } else {</span>
+<span class="fc bfc" id="L447" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
+<span class="fc" id="L448">                    SQUARES_BUFFER[S_nbBufferedSquares++] = dst;</span>
+                }
+<span class="fc" id="L450">                break;</span>
+            }
+<span class="fc" id="L452">            dst -= 16;</span>
+        }
+<span class="fc" id="L454">    }</span>
+
+    /**
+     * Renvoi une nouvelle instance, initialisée à partir d'un état quelconque.
+     *
+     * @param pEtat Etat de départ.
+     * @return Copie de l'état.
+     */
+    @Override
+    public MoveGenerator derive(final Board pEtat) {
+<span class="fc" id="L464">        return new X88Board(pEtat);</span>
+    }
+
+    /**
+     * Renvoi une nouvelle instance décrivant l'état du jeu après application
+     * d'un mouvement.
+     *
+     * @param pMouvement Description de mouvement.
+     * @param pSuivant   Drapeau positionné si l'on souhaite que le trait soit modifié.
+     * @return Instance dérivée.
+     */
+    @Override
+    public MoveGenerator derive(final Move pMouvement, final boolean pSuivant) {
+<span class="fc" id="L477">        final X88Board res = new X88Board(this);</span>
+
+        // Ajuste les compteurs...
+<span class="fc bfc" id="L480" title="All 2 branches covered.">        if (pSuivant) {</span>
+<span class="fc bfc" id="L481" title="All 2 branches covered.">            final boolean t = !isWhiteActive();</span>
+<span class="fc" id="L482">            res.setWhiteActive(t);</span>
+<span class="fc" id="L483">            res._hashCode ^= ZOBRIST_WHITE_ACTIVE;</span>
+<span class="fc bfc" id="L484" title="All 2 branches covered.">            if (t) {</span>
+<span class="fc" id="L485">                res.setFullmoveNumber(getFullmoveNumber() + 1);</span>
+            }
+<span class="fc bfc" id="L487" title="All 2 branches covered.">            if (pMouvement.getCaptured() == null) {</span>
+<span class="fc" id="L488">                res.setHalfmoveCount(getHalfmoveCount() + 1);</span>
+<span class="fc" id="L489">            } else {</span>
+<span class="fc" id="L490">                res.setHalfmoveCount(0);</span>
+            }
+        }
+        // Déplace la pièce...
+<span class="fc" id="L494">        final Piece piece = pMouvement.getPiece();</span>
+<span class="fc" id="L495">        final PieceType typePiece = piece.getType();</span>
+<span class="fc" id="L496">        final boolean trait = piece.isWhite();</span>
+<span class="fc" id="L497">        final Square src = pMouvement.getFrom();</span>
+<span class="fc" id="L498">        final int iSrc = src.getIndex();</span>
+<span class="fc" id="L499">        final int xSrc = src.getFile();</span>
+<span class="fc" id="L500">        final int i88Src = src.getRank() * 16 + xSrc;</span>
+<span class="fc" id="L501">        res._pieces[i88Src] = null;</span>
+<span class="fc" id="L502">        final int pieceOrdinal = piece.ordinal();</span>
+<span class="fc" id="L503">        res._hashCode ^= ZOBRIST_PIECE_POSITION[pieceOrdinal][iSrc];</span>
+<span class="fc" id="L504">        final Square dst = pMouvement.getTo();</span>
+<span class="fc" id="L505">        final int iDst = dst.getIndex();</span>
+<span class="fc" id="L506">        final int xDst = dst.getFile();</span>
+<span class="fc" id="L507">        final int yDst = dst.getRank();</span>
+<span class="fc" id="L508">        final int i88Dst = yDst * 16 + xDst;</span>
+<span class="fc" id="L509">        final Piece pieceDst = _pieces[i88Dst];</span>
+<span class="fc bfc" id="L510" title="All 2 branches covered.">        if (pieceDst != null) {</span>
+<span class="fc" id="L511">            res._hashCode ^= ZOBRIST_PIECE_POSITION[pieceDst.ordinal()][iDst];</span>
+        }
+<span class="fc" id="L513">        res._pieces[i88Dst] = piece;</span>
+<span class="fc" id="L514">        res._hashCode ^= ZOBRIST_PIECE_POSITION[pieceOrdinal][iDst];</span>
+        // ... éxécute un mouvement spécifique de type &quot;roque&quot; et gère le suivi
+        // des
+        // rois ...
+<span class="fc bfc" id="L518" title="All 2 branches covered.">        if (typePiece == KING) {</span>
+<span class="fc" id="L519">            res.setKingSquare(trait, dst);</span>
+<span class="fc bfc" id="L520" title="All 2 branches covered.">            if (xSrc == 4) {</span>
+<span class="fc bfc" id="L521" title="All 2 branches covered.">                if (xDst == 2) {</span>
+                    // ... côté reine...
+<span class="fc" id="L523">                    final int i = yDst * FILE_COUNT;</span>
+<span class="fc" id="L524">                    final int i88 = i * 2;</span>
+<span class="fc" id="L525">                    final Piece tour = res._pieces[i88];</span>
+<span class="fc" id="L526">                    res._pieces[i88] = null;</span>
+<span class="fc" id="L527">                    final int tourOrdinal = tour.ordinal();</span>
+<span class="fc" id="L528">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[tourOrdinal][i];</span>
+<span class="fc" id="L529">                    res._pieces[i88 + 3] = tour;</span>
+<span class="fc" id="L530">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[tourOrdinal][i + 3];</span>
+<span class="fc" id="L531">                    res.setCastled(trait, true);</span>
+<span class="fc bfc" id="L532" title="All 2 branches covered.">                } else if (xDst == 6) {</span>
+                    // ... côté roi...
+<span class="fc" id="L534">                    final int i = FILE_COUNT - 1 + yDst * FILE_COUNT;</span>
+<span class="fc" id="L535">                    final int i88 = i + yDst * FILE_COUNT;</span>
+<span class="fc" id="L536">                    final Piece tour = res._pieces[i88];</span>
+<span class="fc" id="L537">                    res._pieces[i88] = null;</span>
+<span class="fc" id="L538">                    final int tourOrdinal = tour.ordinal();</span>
+<span class="fc" id="L539">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[tourOrdinal][i];</span>
+<span class="fc" id="L540">                    res._pieces[i88 - 2] = tour;</span>
+<span class="fc" id="L541">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[tourOrdinal][i - 2];</span>
+<span class="fc" id="L542">                    res.setCastled(trait, true);</span>
+                }
+            }
+        }
+        // Tient compte des interdictions de roquer que le mouvement peut
+        // provoquer...
+<span class="fc bfc" id="L548" title="All 2 branches covered.">        if (canCastleShort(trait)) {</span>
+<span class="fc bfc" id="L549" title="All 2 branches covered.">            if ((typePiece == KING)</span>
+<span class="fc bfc" id="L550" title="All 4 branches covered.">                    || ((typePiece == ROOK) &amp;&amp; (xSrc == FILE_COUNT - 1))) {</span>
+<span class="fc" id="L551">                res.setCastleShort(trait, false);</span>
+<span class="fc bfc" id="L552" title="All 2 branches covered.">                res._hashCode ^= trait ? ZOBRIST_WHITE_CASTLE_SHORT</span>
+<span class="fc" id="L553">                        : ZOBRIST_BLACK_CASTLE_SHORT;</span>
+            }
+        }
+<span class="fc bfc" id="L556" title="All 2 branches covered.">        if (canCastleLong(trait)) {</span>
+<span class="fc bfc" id="L557" title="All 6 branches covered.">            if ((typePiece == KING) || ((typePiece == ROOK) &amp;&amp; (xSrc == 0))) {</span>
+<span class="fc" id="L558">                res.setCastleLong(trait, false);</span>
+<span class="fc bfc" id="L559" title="All 2 branches covered.">                res._hashCode ^= trait ? ZOBRIST_WHITE_CASTLE_LONG</span>
+<span class="fc" id="L560">                        : ZOBRIST_BLACK_CASTLE_LONG;</span>
+            }
+        }
+        // Détecte si une prise &quot;en passant&quot; doit être effectuée ou signalée et
+        // gère
+        // la promotion...
+<span class="fc" id="L566">        final Square epOrig = getEnPassant();</span>
+<span class="fc" id="L567">        res.setEnPassant(null);</span>
+<span class="fc bfc" id="L568" title="All 2 branches covered.">        if (typePiece == PAWN) {</span>
+<span class="fc" id="L569">            final int ySrc = src.getRank();</span>
+            // En profite pour aussi gérer le compteur de demis coups...
+<span class="fc bfc" id="L571" title="All 2 branches covered.">            if (pSuivant) {</span>
+<span class="fc" id="L572">                res.setHalfmoveCount(0);</span>
+            }
+<span class="fc bfc" id="L574" title="All 2 branches covered.">            if (trait) {</span>
+<span class="fc bfc" id="L575" title="All 2 branches covered.">                if (yDst == RANK_COUNT - 1) {</span>
+<span class="fc" id="L576">                    final Piece promotion = pMouvement.getPromotion();</span>
+<span class="fc bfc" id="L577" title="All 2 branches covered.">                    res._pieces[i88Dst] = promotion == null ? WHITE_QUEEN</span>
+<span class="fc" id="L578">                            : promotion;</span>
+<span class="fc" id="L579">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[pieceOrdinal][iDst];</span>
+<span class="fc" id="L580">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[res._pieces[i88Dst]</span>
+<span class="fc" id="L581">                            .ordinal()][iDst];</span>
+<span class="fc bfc" id="L582" title="All 4 branches covered.">                } else if ((ySrc == 1) &amp;&amp; (yDst == 3)) {</span>
+<span class="fc" id="L583">                    res.setEnPassant(Square.valueOf(xDst, 2));</span>
+<span class="fc bfc" id="L584" title="All 2 branches covered.">                } else if (dst == epOrig) {</span>
+<span class="fc" id="L585">                    final int epDst = iDst - FILE_COUNT;</span>
+<span class="fc" id="L586">                    final int ep88Dst = i88Dst - 16;</span>
+<span class="fc" id="L587">                    res._pieces[ep88Dst] = null;</span>
+<span class="fc" id="L588">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[_pieces[ep88Dst]</span>
+<span class="fc" id="L589">                            .ordinal()][epDst];</span>
+                }
+<span class="fc" id="L591">            } else {</span>
+<span class="fc bfc" id="L592" title="All 2 branches covered.">                if (yDst == 0) {</span>
+<span class="fc" id="L593">                    final Piece promotion = pMouvement.getPromotion();</span>
+<span class="fc bfc" id="L594" title="All 2 branches covered.">                    res._pieces[i88Dst] = promotion == null ? BLACK_QUEEN</span>
+<span class="fc" id="L595">                            : promotion;</span>
+<span class="fc" id="L596">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[pieceOrdinal][iDst];</span>
+<span class="fc" id="L597">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[res._pieces[i88Dst]</span>
+<span class="fc" id="L598">                            .ordinal()][iDst];</span>
+<span class="fc bfc" id="L599" title="All 4 branches covered.">                } else if ((ySrc == RANK_COUNT - 2) &amp;&amp; (yDst == RANK_COUNT - 4)) {</span>
+<span class="fc" id="L600">                    res.setEnPassant(Square.valueOf(xDst, RANK_COUNT - 3));</span>
+<span class="fc bfc" id="L601" title="All 2 branches covered.">                } else if (dst == epOrig) {</span>
+<span class="fc" id="L602">                    final int epDst = iDst + FILE_COUNT;</span>
+<span class="fc" id="L603">                    final int ep88Dst = i88Dst + 16;</span>
+<span class="fc" id="L604">                    res._pieces[ep88Dst] = null;</span>
+<span class="fc" id="L605">                    res._hashCode ^= ZOBRIST_PIECE_POSITION[_pieces[ep88Dst]</span>
+<span class="fc" id="L606">                            .ordinal()][epDst];</span>
+                }
+            }
+        }
+
+<span class="fc" id="L611">        final Square epFinal = res.getEnPassant();</span>
+<span class="fc bfc" id="L612" title="All 2 branches covered.">        if ((epOrig != null)</span>
+<span class="pc bpc" id="L613" title="1 of 4 branches missed.">                &amp;&amp; ((epFinal == null) || (!epOrig.equals(epFinal)))) {</span>
+<span class="fc" id="L614">            res._hashCode ^= ZOBRIST_EN_PASSANT[epOrig.getFile()];</span>
+        }
+<span class="fc bfc" id="L616" title="All 2 branches covered.">        if ((epFinal != null)</span>
+<span class="pc bpc" id="L617" title="1 of 4 branches missed.">                &amp;&amp; ((epOrig == null) || (!epFinal.equals(epOrig)))) {</span>
+<span class="fc" id="L618">            res._hashCode ^= ZOBRIST_EN_PASSANT[epFinal.getFile()];</span>
+        }
+
+<span class="fc" id="L621">        return res;</span>
+    }
+
+    /**
+     * Méthode spécialisée pour tester l'égalité entre deux descriptions de ce
+     * type.
+     *
+     * @param pObjet Objet avec lequel comparer.
+     * @return Vrai si les deux objets sont égaux.
+     */
+    @Override
+    public boolean equals(final Object pObjet) {
+<span class="fc bfc" id="L633" title="All 2 branches covered.">        if (pObjet == this) {</span>
+<span class="fc" id="L634">            return true;</span>
+        }
+
+<span class="fc bfc" id="L637" title="All 2 branches covered.">        if (pObjet instanceof X88Board) {</span>
+<span class="pc bpc" id="L638" title="1 of 2 branches missed.">            if (hashCode() != pObjet.hashCode()) {</span>
+<span class="fc" id="L639">                return false;</span>
+            }
+
+<span class="nc" id="L642">            final X88Board o = (X88Board) pObjet;</span>
+
+<span class="nc" id="L644">            int i = 0;</span>
+<span class="nc bnc" id="L645" title="All 2 branches missed.">            for (int y = 0; y &lt; RANK_COUNT; y++) {</span>
+<span class="nc bnc" id="L646" title="All 2 branches missed.">                for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="nc bnc" id="L647" title="All 2 branches missed.">                    if (_pieces[i] != o._pieces[i++]) {</span>
+<span class="nc" id="L648">                        return false;</span>
+                    }
+                }
+<span class="nc" id="L651">                i += 8;</span>
+            }
+
+<span class="nc" id="L654">            return equalsInternal(o);</span>
+        }
+
+<span class="fc" id="L657">        return super.equals(pObjet);</span>
+    }
+
+    /**
+     * Renvoi toutes les cases cibles des mouvements possibles (y compris ceux
+     * mettant le roi en échec) pour la pièce contenue par une case.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getAllTargets(final Square pOrigine) {
+<span class="fc" id="L669">        final int idx = pOrigine.getRank() * 16 + pOrigine.getFile();</span>
+<span class="fc" id="L670">        final Piece piece = _pieces[idx];</span>
+<span class="fc bfc" id="L671" title="All 2 branches covered.">        if (piece != null) {</span>
+            final Square[] res;
+
+<span class="fc" id="L674">            synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L675">                S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L677">                addAllTargets(idx);</span>
+
+<span class="fc" id="L679">                res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L680" title="All 2 branches covered.">                for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L681">                    res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+                }
+            }
+
+<span class="fc" id="L685">            return res;</span>
+        }
+
+<span class="fc" id="L688">        return NO_SQUARE;</span>
+    }
+
+    /**
+     * Renvoi toutes les cases cibles possibles d'un mouvement de type &quot;fou&quot;
+     * d'une certaine couleur (y compris ceux mettant le roi en échec) à partir
+     * d'une case.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   Positionné à vrai si la recherche concerne les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getBishopTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L704">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L705">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L707">            addBishopTargets(pOrigine.getRank() * 16 + pOrigine.getFile(),</span>
+<span class="fc" id="L708">                    pBlanc);</span>
+
+<span class="fc" id="L710">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L711" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L712">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L716">        return res;</span>
+    }
+
+    /**
+     * Renvoi la liste des cases pouvant être atteintes par un mouvement de type
+     * roi.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getKingTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L731">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L732">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L734">            addKingTargets(pOrigine.getRank() * 16 + pOrigine.getFile(), pBlanc);</span>
+
+<span class="fc" id="L736">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L737" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L738">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L742">        return res;</span>
+    }
+
+    /**
+     * Renvoi la liste des cases pouvant être atteintes par un mouvement de type
+     * cavalier.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getKnightTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L757">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L758">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L760">            addKnightTargets(pOrigine.getRank() * 16 + pOrigine.getFile(),</span>
+<span class="fc" id="L761">                    pBlanc);</span>
+
+<span class="fc" id="L763">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L764" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L765">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L769">        return res;</span>
+    }
+
+    /**
+     * Renvoi la liste des cases pouvant être atteintes par un mouvement de type
+     * pion.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   A vrai pour indiquer une recherche sur les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getPawnTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L784">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L785">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L787">            addPawnTargets(pOrigine.getRank() * 16 + pOrigine.getFile(), pBlanc);</span>
+
+<span class="fc" id="L789">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L790" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L791">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L795">        return res;</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle pièce présente sur la case indiquée.
+     *
+     * @param pCase Case à tester.
+     * @return Pièce présente sur la case (ou null si aucune).
+     */
+    @Override
+    public Piece getPieceAt(final Square pCase) {
+<span class="fc" id="L806">        return _pieces[pCase.getRank() * 16 + pCase.getFile()];</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle pièce présente sur la case dont les coordonnées sont
+     * indiquées.
+     *
+     * @param pColonne Colonne de la case à tester (de 0 à 7).
+     * @param pLigne   Ligne de la case à tester (de 0 à 7).
+     * @return Pièce présente sur la case (ou null).
+     */
+    @Override
+    public Piece getPieceAt(final int pColonne, final int pLigne) {
+<span class="fc" id="L819">        return _pieces[pLigne * 16 + pColonne];</span>
+    }
+
+    /**
+     * Renvoie le nombre total des pièces présentes sur le plateau.
+     *
+     * @return Nombre total de pièces.
+     */
+    @Override
+    public int getPiecesCount() {
+<span class="fc" id="L829">        int res = 0;</span>
+
+<span class="fc" id="L831">        int i = 0;</span>
+<span class="fc bfc" id="L832" title="All 2 branches covered.">        for (int y = 0; y &lt; RANK_COUNT; y++) {</span>
+<span class="fc bfc" id="L833" title="All 2 branches covered.">            for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="fc bfc" id="L834" title="All 2 branches covered.">                if (_pieces[i++] != null) {</span>
+<span class="fc" id="L835">                    res++;</span>
+                }
+            }
+<span class="fc" id="L838">            i += 8;</span>
+        }
+
+<span class="fc" id="L841">        return res;</span>
+    }
+
+    /**
+     * Renvoi toutes les cases cibles possibles d'un mouvement de type &quot;dame&quot;
+     * d'une certaine couleur (y compris ceux mettant le roi en échec) à partir
+     * d'une case.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   Mis à vrai pour rechercher pour les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getQueenTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L857">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L858">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L860">            final int idx = pOrigine.getRank() * 16 + pOrigine.getFile();</span>
+<span class="fc" id="L861">            addBishopTargets(idx, pBlanc);</span>
+<span class="fc" id="L862">            addRookTargets(idx, pBlanc);</span>
+
+<span class="fc" id="L864">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L865" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L866">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L870">        return res;</span>
+    }
+
+    /**
+     * Renvoi toutes les cases cibles possibles d'un mouvement de type &quot;tour&quot;
+     * d'une certaine couleur (y compris ceux mettant le roi en échec) à partir
+     * d'une case.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @param pBlanc   Mis à vrai pour rechercher pour les blancs.
+     * @return Liste des cases cibles (y compris celles conduisant à un échec).
+     */
+    @Override
+    public Square[] getRookTargets(final Square pOrigine, final boolean pBlanc) {
+        final Square[] res;
+
+<span class="fc" id="L886">        synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L887">            S_nbBufferedSquares = 0;</span>
+
+<span class="fc" id="L889">            addRookTargets(pOrigine.getRank() * 16 + pOrigine.getFile(), pBlanc);</span>
+
+<span class="fc" id="L891">            res = new Square[S_nbBufferedSquares];</span>
+<span class="fc bfc" id="L892" title="All 2 branches covered.">            for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L893">                res[t] = Square.valueOf(FROM_X88[SQUARES_BUFFER[t]]);</span>
+            }
+        }
+
+<span class="fc" id="L897">        return res;</span>
+    }
+
+    /**
+     * Renvoi tous les mouvements valides pour une couleur.
+     *
+     * @param pTrait Positionné à &quot;true&quot; pour indiquer une recherche pour les
+     *               blancs.
+     * @return Liste des mouvements valides.
+     */
+    @Override
+    public Move[] getValidMoves(final boolean pTrait) {
+<span class="fc" id="L909">        Move[] tmp = new Move[45];</span>
+<span class="fc" id="L910">        int nb = 0;</span>
+<span class="fc" id="L911">        int lTmp = tmp.length;</span>
+<span class="fc" id="L912">        int i88 = 0;</span>
+<span class="fc bfc" id="L913" title="All 2 branches covered.">        for (int y = 0; y &lt; RANK_COUNT; y++) {</span>
+<span class="fc bfc" id="L914" title="All 2 branches covered.">            for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="fc" id="L915">                final Piece p = _pieces[i88];</span>
+<span class="fc bfc" id="L916" title="All 4 branches covered.">                if ((p != null) &amp;&amp; (p.isWhite() == pTrait)) {</span>
+<span class="fc" id="L917">                    final Square orig = Square.valueOf(FROM_X88[i88]);</span>
+<span class="fc bfc" id="L918" title="All 2 branches covered.">                    for (final Square dst : getValidTargets(orig)) {</span>
+                        final Piece prise;
+<span class="fc" id="L920">                        final PieceType pieceType = p.getType();</span>
+<span class="fc bfc" id="L921" title="All 4 branches covered.">                        if ((pieceType != PAWN) || (dst != getEnPassant())) {</span>
+<span class="fc" id="L922">                            prise = _pieces[dst.getRank() * 16 + dst.getFile()];</span>
+<span class="fc" id="L923">                        } else {</span>
+<span class="fc bfc" id="L924" title="All 2 branches covered.">                            prise = pTrait ? _pieces[dst.getRank() * 16</span>
+<span class="fc" id="L925">                                    + dst.getFile() - 16] : _pieces[dst</span>
+<span class="fc" id="L926">                                    .getRank() * 16 + dst.getFile() + 16];</span>
+                        }
+<span class="fc" id="L928">                        tmp[nb++] = new Move(p, orig, dst, prise);</span>
+                        // Cas particulier des promotions...
+<span class="fc bfc" id="L930" title="All 2 branches covered.">                        if (pieceType == PAWN) {</span>
+<span class="fc bfc" id="L931" title="All 4 branches covered.">                            if (pTrait &amp;&amp; (dst.getRank() == 7)) {</span>
+<span class="fc" id="L932">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L933">                                        WHITE_QUEEN);</span>
+<span class="fc" id="L934">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L935">                                        WHITE_ROOK);</span>
+<span class="fc" id="L936">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L937">                                        WHITE_BISHOP);</span>
+<span class="fc" id="L938">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L939">                                        WHITE_KNIGHT);</span>
+<span class="fc bfc" id="L940" title="All 4 branches covered.">                            } else if ((!pTrait) &amp;&amp; (dst.getRank() == 0)) {</span>
+<span class="fc" id="L941">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L942">                                        BLACK_QUEEN);</span>
+<span class="fc" id="L943">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L944">                                        BLACK_ROOK);</span>
+<span class="fc" id="L945">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L946">                                        BLACK_BISHOP);</span>
+<span class="fc" id="L947">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
+<span class="fc" id="L948">                                        BLACK_KNIGHT);</span>
+                            }
+                        }
+<span class="fc bfc" id="L951" title="All 2 branches covered.">                        if (nb &gt;= (lTmp - 5)) {</span>
+<span class="fc" id="L952">                            final Move[] extension = new Move[lTmp + 15];</span>
+<span class="fc" id="L953">                            System.arraycopy(tmp, 0, extension, 0, lTmp);</span>
+<span class="fc" id="L954">                            tmp = extension;</span>
+<span class="fc" id="L955">                            lTmp = tmp.length;</span>
+                        }
+                    }
+                }
+<span class="fc" id="L959">                i88++;</span>
+            }
+<span class="fc" id="L961">            i88 += 8;</span>
+        }
+
+<span class="fc" id="L964">        final Move[] res = new Move[nb];</span>
+<span class="fc" id="L965">        System.arraycopy(tmp, 0, res, 0, nb);</span>
+
+<span class="fc" id="L967">        return res;</span>
+    }
+
+    /**
+     * Renvoi toutes les cases cibles des mouvements valides à partir d'une
+     * case.
+     *
+     * @param pOrigine Case à l'origine du mouvement.
+     * @return Liste des cases cibles.
+     */
+    @Override
+    public Square[] getValidTargets(final Square pOrigine) {
+<span class="fc" id="L979">        final int iSrc = pOrigine.getRank() * 16 + pOrigine.getFile();</span>
+<span class="fc" id="L980">        final Piece piece = _pieces[iSrc];</span>
+<span class="fc bfc" id="L981" title="All 2 branches covered.">        if (piece != null) {</span>
+<span class="fc" id="L982">            synchronized (SQUARES_BUFFER) {</span>
+<span class="fc" id="L983">                S_nbBufferedSquares = 0;</span>
+<span class="fc" id="L984">                addAllTargets(iSrc);</span>
+<span class="fc" id="L985">                int nbFinal = S_nbBufferedSquares;</span>
+<span class="fc" id="L986">                final boolean trait = piece.isWhite();</span>
+<span class="fc bfc" id="L987" title="All 2 branches covered.">                for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L988">                    final int idxCible = SQUARES_BUFFER[t];</span>
+<span class="fc" id="L989">                    final Square cible = Square.valueOf(FROM_X88[idxCible]);</span>
+<span class="fc" id="L990">                    final Piece prise = _pieces[idxCible];</span>
+<span class="fc" id="L991">                    if (derive(new Move(piece, pOrigine, cible, prise), false)</span>
+<span class="fc bfc" id="L992" title="All 2 branches covered.">                            .isInCheck(trait)) {</span>
+<span class="fc" id="L993">                        SQUARES_BUFFER[t] = -1;</span>
+<span class="fc" id="L994">                        nbFinal--;</span>
+<span class="fc bfc" id="L995" title="All 2 branches covered.">                    } else if ((piece.getType() == KING)</span>
+<span class="fc bfc" id="L996" title="All 2 branches covered.">                            &amp;&amp; (pOrigine.getFile() == 4)) {</span>
+<span class="fc" id="L997">                        final int delta = 4 - cible.getFile();</span>
+<span class="fc bfc" id="L998" title="All 4 branches covered.">                        if ((delta == 2) || (delta == -2)) {</span>
+                            // Elimine le roque si le roi est en échec ou s'il
+                            // le serait sur
+                            // la case
+                            // intermédiaire...
+<span class="fc bfc" id="L1003" title="All 2 branches covered.">                            if (isInCheck(trait)</span>
+<span class="fc" id="L1004">                                    || derive(</span>
+<span class="fc" id="L1005">                                    new Move(piece, pOrigine,</span>
+<span class="fc" id="L1006">                                            Square.valueOf(</span>
+<span class="fc" id="L1007">                                                    4 - (delta / 2),</span>
+<span class="fc" id="L1008">                                                    cible.getRank())),</span>
+<span class="fc bfc" id="L1009" title="All 2 branches covered.">                                    false).isInCheck(trait)) {</span>
+<span class="fc" id="L1010">                                SQUARES_BUFFER[t] = -1;</span>
+<span class="fc" id="L1011">                                nbFinal--;</span>
+                            }
+                        }
+                    }
+                }
+
+<span class="fc bfc" id="L1017" title="All 2 branches covered.">                if (nbFinal == 0) {</span>
+<span class="fc" id="L1018">                    return NO_SQUARE;</span>
+                }
+
+<span class="fc" id="L1021">                final Square[] res = new Square[nbFinal];</span>
+<span class="fc bfc" id="L1022" title="All 2 branches covered.">                for (int t = S_nbBufferedSquares; --t &gt;= 0; /* Pré-décrémenté */) {</span>
+<span class="fc" id="L1023">                    final int idx = SQUARES_BUFFER[t];</span>
+<span class="fc bfc" id="L1024" title="All 2 branches covered.">                    if (idx &gt;= 0) {</span>
+<span class="fc" id="L1025">                        res[--nbFinal] = Square.valueOf(FROM_X88[idx]);</span>
+                    }
+                }
+
+<span class="fc" id="L1029">                return res;</span>
+            }
+        }
+
+<span class="fc" id="L1033">        return NO_SQUARE;</span>
+    }
+
+    /**
+     * Surcharge du calcul des clés de hachage, pour optimisation.
+     *
+     * @return Clé de hachage.
+     */
+    @Override
+    public int hashCode() {
+<span class="fc" id="L1043">        return _hashCode;</span>
+    }
+
+    /**
+     * Indique si une case est attaquée par une couleur.
+     *
+     * @param pCible   Case cible.
+     * @param pCouleur Positionné à &quot;true&quot; pour tester l'attaque par les blancs.
+     * @return Vrai si la case est attaquée.
+     */
+    @Override
+    public boolean isAttacked(final Square pCible, final boolean pCouleur) {
+<span class="fc" id="L1055">        final int iSrc = pCible.getRank() * 16 + pCible.getFile();</span>
+<span class="fc" id="L1056">        Piece p = null;</span>
+<span class="fc" id="L1057">        int dst = iSrc - 1;</span>
+        // Gauche
+<span class="fc bfc" id="L1059" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1060">            p = _pieces[dst];</span>
+<span class="fc" id="L1061">            dst--;</span>
+        }
+<span class="fc bfc" id="L1063" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1064">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1065" title="All 4 branches covered.">            if ((t == ROOK) || (t == QUEEN)) {</span>
+<span class="fc" id="L1066">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1070">        p = null;</span>
+<span class="fc" id="L1071">        dst = iSrc + 1;</span>
+        // Droite
+<span class="fc bfc" id="L1073" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1074">            p = _pieces[dst];</span>
+<span class="fc" id="L1075">            dst++;</span>
+        }
+<span class="fc bfc" id="L1077" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1078">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1079" title="All 4 branches covered.">            if ((t == ROOK) || (t == QUEEN)) {</span>
+<span class="fc" id="L1080">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1084">        p = null;</span>
+<span class="fc" id="L1085">        dst = iSrc - 16;</span>
+        // Bas
+<span class="fc bfc" id="L1087" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1088">            p = _pieces[dst];</span>
+<span class="fc" id="L1089">            dst -= 16;</span>
+        }
+<span class="fc bfc" id="L1091" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1092">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1093" title="All 4 branches covered.">            if ((t == ROOK) || (t == QUEEN)) {</span>
+<span class="fc" id="L1094">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1098">        p = null;</span>
+<span class="fc" id="L1099">        dst = iSrc + 16;</span>
+        // Haut
+<span class="fc bfc" id="L1101" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1102">            p = _pieces[dst];</span>
+<span class="fc" id="L1103">            dst += 16;</span>
+        }
+<span class="fc bfc" id="L1105" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1106">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1107" title="All 4 branches covered.">            if ((t == ROOK) || (t == QUEEN)) {</span>
+<span class="fc" id="L1108">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1112">        p = null;</span>
+<span class="fc" id="L1113">        dst = iSrc - 17;</span>
+        // Bas / Gauche
+<span class="fc bfc" id="L1115" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1116">            p = _pieces[dst];</span>
+<span class="fc" id="L1117">            dst -= 17;</span>
+        }
+<span class="fc bfc" id="L1119" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1120">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1121" title="All 4 branches covered.">            if ((t == BISHOP) || (t == QUEEN)) {</span>
+<span class="fc" id="L1122">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1126">        p = null;</span>
+<span class="fc" id="L1127">        dst = iSrc + 15;</span>
+        // Haut / Gauche
+<span class="fc bfc" id="L1129" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1130">            p = _pieces[dst];</span>
+<span class="fc" id="L1131">            dst += 15;</span>
+        }
+<span class="fc bfc" id="L1133" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1134">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1135" title="All 4 branches covered.">            if ((t == BISHOP) || (t == QUEEN)) {</span>
+<span class="fc" id="L1136">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1140">        p = null;</span>
+<span class="fc" id="L1141">        dst = iSrc + 17;</span>
+        // Haut / Droit
+<span class="fc bfc" id="L1143" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1144">            p = _pieces[dst];</span>
+<span class="fc" id="L1145">            dst += 17;</span>
+        }
+<span class="fc bfc" id="L1147" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1148">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1149" title="All 4 branches covered.">            if ((t == BISHOP) || (t == QUEEN)) {</span>
+<span class="fc" id="L1150">                return true;</span>
+            }
+        }
+
+<span class="fc" id="L1154">        p = null;</span>
+<span class="fc" id="L1155">        dst = iSrc - 15;</span>
+        // Bas / Droit
+<span class="fc bfc" id="L1157" title="All 4 branches covered.">        while ((p == null) &amp;&amp; ((dst &amp; X88) == 0)) {</span>
+<span class="fc" id="L1158">            p = _pieces[dst];</span>
+<span class="fc" id="L1159">            dst -= 15;</span>
+        }
+<span class="fc bfc" id="L1161" title="All 4 branches covered.">        if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)) {</span>
+<span class="fc" id="L1162">            final PieceType t = p.getType();</span>
+<span class="fc bfc" id="L1163" title="All 4 branches covered.">            if ((t == BISHOP) || (t == QUEEN)) {</span>
+<span class="fc" id="L1164">                return true;</span>
+            }
+        }
+
+        // Cavalier
+<span class="fc bfc" id="L1169" title="All 2 branches covered.">        for (final int km : KNIGHT_MOVES) {</span>
+<span class="fc" id="L1170">            dst = iSrc + km;</span>
+<span class="fc bfc" id="L1171" title="All 2 branches covered.">            if ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L1172">                p = _pieces[dst];</span>
+<span class="fc bfc" id="L1173" title="All 4 branches covered.">                if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)</span>
+<span class="fc bfc" id="L1174" title="All 2 branches covered.">                        &amp;&amp; (p.getType() == KNIGHT)) {</span>
+<span class="fc" id="L1175">                    return true;</span>
+                }
+            }
+        }
+
+        // Roi
+<span class="fc bfc" id="L1181" title="All 2 branches covered.">        for (final int km : KING_MOVES) {</span>
+<span class="fc" id="L1182">            dst = iSrc + km;</span>
+<span class="fc bfc" id="L1183" title="All 2 branches covered.">            if ((dst &amp; X88) == 0) {</span>
+<span class="fc" id="L1184">                p = _pieces[dst];</span>
+<span class="fc bfc" id="L1185" title="All 4 branches covered.">                if ((p != null) &amp;&amp; (p.isWhite() == pCouleur)</span>
+<span class="fc bfc" id="L1186" title="All 2 branches covered.">                        &amp;&amp; (p.getType() == KING)) {</span>
+<span class="fc" id="L1187">                    return true;</span>
+                }
+            }
+        }
+
+        // Pions...
+<span class="fc bfc" id="L1193" title="All 2 branches covered.">        if (pCouleur) {</span>
+<span class="fc" id="L1194">            final int ySrc = pCible.getRank();</span>
+<span class="fc bfc" id="L1195" title="All 2 branches covered.">            if (ySrc &gt; 1) {</span>
+<span class="fc" id="L1196">                final int xSrc = pCible.getFile();</span>
+<span class="fc bfc" id="L1197" title="All 4 branches covered.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[iSrc - 17] == WHITE_PAWN))</span>
+<span class="fc bfc" id="L1198" title="All 4 branches covered.">                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[iSrc - 15] == WHITE_PAWN))) {</span>
+<span class="fc" id="L1199">                    return true;</span>
+                }
+            }
+        } else {
+<span class="fc" id="L1203">            final int ySrc = pCible.getRank();</span>
+<span class="fc bfc" id="L1204" title="All 2 branches covered.">            if (ySrc &lt; RANK_COUNT - 2) {</span>
+<span class="fc" id="L1205">                final int xSrc = pCible.getFile();</span>
+<span class="fc bfc" id="L1206" title="All 4 branches covered.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[iSrc + 15] == BLACK_PAWN))</span>
+<span class="fc bfc" id="L1207" title="All 4 branches covered.">                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[iSrc + 17] == BLACK_PAWN))) {</span>
+<span class="fc" id="L1208">                    return true;</span>
+                }
+            }
+        }
+
+<span class="fc" id="L1213">        return false;</span>
+    }
+
+    /**
+     * Indique si le roi d'une couleur est en échec.
+     *
+     * @param pCouleur Positionné à &quot;true&quot; pour tester l'échec sur les blancs, à
+     *                 &quot;false&quot; sinon.
+     * @return Vrai si le roi est en échec.
+     */
+    @Override
+    public boolean isInCheck(final boolean pCouleur) {
+<span class="fc bfc" id="L1225" title="All 2 branches covered.">        return isAttacked(getKingSquare(pCouleur), !pCouleur);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

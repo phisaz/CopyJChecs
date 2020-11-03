@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PromotionDialog.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PromotionDialog.java</span></div><h1>PromotionDialog.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Component;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
+
+import fr.free.jchecs.core.Piece;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+
+/**
+ * Boite de dialogue permettant de choisir la pièce cible en cas de promotion
+ * d'un pion.
+ *
+ * @author David Cotton
+ */
+final class PromotionDialog {
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private PromotionDialog() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Affiche la boite de dialogue.
+     *
+     * @param pParent Composant parent de la boite de dialogue (peut être à null).
+     * @param pPiece  Pion à promouvoir.
+     * @param pRendu  Objet chargé du rendu des pièces.
+     * @return Pièce après promotion.
+     */
+    static Piece showPromotionDialog(final Component pParent,
+                                     final Piece pPiece, final PieceUI pRendu) {
+<span class="nc" id="L60">        Component parent = pParent;</span>
+<span class="nc bnc" id="L61" title="All 4 branches missed.">        while ((parent != null) &amp;&amp; !(parent instanceof Frame)) {</span>
+<span class="nc" id="L62">            parent = parent.getParent();</span>
+        }
+<span class="nc" id="L64">        final JDialog dlg = new JDialog((Frame) parent, true);</span>
+<span class="nc" id="L65">        dlg.setTitle(getI18NString(&quot;dialog.promotion.title&quot;));</span>
+<span class="nc" id="L66">        final JPanel fond = new JPanel();</span>
+        final JButton queenBtn;
+        final JButton rookBtn;
+        final JButton bishopBtn;
+        final JButton knightBtn;
+<span class="nc bnc" id="L71" title="All 2 branches missed.">        if (pPiece.isWhite()) {</span>
+<span class="nc" id="L72">            queenBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L73">                    pRendu.getImage(Piece.WHITE_QUEEN)));</span>
+<span class="nc" id="L74">            rookBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L75">                    pRendu.getImage(Piece.WHITE_ROOK)));</span>
+<span class="nc" id="L76">            bishopBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L77">                    pRendu.getImage(Piece.WHITE_BISHOP)));</span>
+<span class="nc" id="L78">            knightBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L79">                    pRendu.getImage(Piece.WHITE_KNIGHT)));</span>
+<span class="nc" id="L80">        } else {</span>
+<span class="nc" id="L81">            queenBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L82">                    pRendu.getImage(Piece.BLACK_QUEEN)));</span>
+<span class="nc" id="L83">            rookBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L84">                    pRendu.getImage(Piece.BLACK_ROOK)));</span>
+<span class="nc" id="L85">            bishopBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L86">                    pRendu.getImage(Piece.BLACK_BISHOP)));</span>
+<span class="nc" id="L87">            knightBtn = new JButton(new ImageIcon(</span>
+<span class="nc" id="L88">                    pRendu.getImage(Piece.BLACK_KNIGHT)));</span>
+        }
+<span class="nc" id="L90">        final ActionEvent choix = new ActionEvent(queenBtn, 0, &quot;&quot;);</span>
+<span class="nc" id="L91">        final BoxLayout bl = new BoxLayout(fond, BoxLayout.LINE_AXIS);</span>
+<span class="nc" id="L92">        fond.setLayout(bl);</span>
+<span class="nc" id="L93">        final ActionListener listener = pEvent -&gt; {</span>
+<span class="nc" id="L94">            choix.setSource(pEvent.getSource());</span>
+<span class="nc" id="L95">            dlg.dispose();</span>
+<span class="nc" id="L96">        };</span>
+<span class="nc" id="L97">        queenBtn.addActionListener(listener);</span>
+<span class="nc" id="L98">        rookBtn.addActionListener(listener);</span>
+<span class="nc" id="L99">        bishopBtn.addActionListener(listener);</span>
+<span class="nc" id="L100">        knightBtn.addActionListener(listener);</span>
+<span class="nc" id="L101">        fond.add(queenBtn);</span>
+<span class="nc" id="L102">        fond.add(rookBtn);</span>
+<span class="nc" id="L103">        fond.add(bishopBtn);</span>
+<span class="nc" id="L104">        fond.add(knightBtn);</span>
+<span class="nc" id="L105">        dlg.add(fond);</span>
+<span class="nc" id="L106">        dlg.pack();</span>
+<span class="nc" id="L107">        dlg.setLocationRelativeTo(parent);</span>
+<span class="nc" id="L108">        dlg.setResizable(false);</span>
+<span class="nc" id="L109">        dlg.setVisible(true);</span>
+
+        final Piece res;
+
+<span class="nc bnc" id="L113" title="All 2 branches missed.">        if (choix.getSource() == queenBtn) {</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">            res = pPiece.isWhite() ? Piece.WHITE_QUEEN : Piece.BLACK_QUEEN;</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">        } else if (choix.getSource() == rookBtn) {</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">            res = pPiece.isWhite() ? Piece.WHITE_ROOK : Piece.BLACK_ROOK;</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">        } else if (choix.getSource() == bishopBtn) {</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">            res = pPiece.isWhite() ? Piece.WHITE_BISHOP : Piece.BLACK_BISHOP;</span>
+<span class="nc bnc" id="L119" title="All 2 branches missed.">        } else if (choix.getSource() == knightBtn) {</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">            res = pPiece.isWhite() ? Piece.WHITE_KNIGHT : Piece.BLACK_KNIGHT;</span>
+<span class="nc" id="L121">        } else {</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">            res = pPiece.isWhite() ? Piece.WHITE_QUEEN : Piece.BLACK_QUEEN;</span>
+        }
+
+<span class="nc" id="L125">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

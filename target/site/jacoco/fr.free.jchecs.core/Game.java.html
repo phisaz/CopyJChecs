@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Game.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">Game.java</span></div><h1>Game.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import static fr.free.jchecs.core.BoardFactory.State.STARTING;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+import static fr.free.jchecs.core.FENUtils.toFEN;
+import static fr.free.jchecs.core.SANUtils.toSAN;
+
+/**
+ * Description d'une partie en cours.
+ *
+ * @author David Cotton
+ */
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">public final class Game {</span>
+    /**
+     * Temps (en ms) alloué à un joueur, pour une partie.
+     */
+<span class="fc" id="L42">    private static final long GAME_DURATION = 15 * 60 * 1000;</span>
+
+    /**
+     * Valeur courante du compteur de temps des noirs.
+     */
+    private long _blackTimer;
+
+    /**
+     * Valeur du dernier relevé du timer.
+     */
+    private long _lastTimerTick;
+
+    /**
+     * Support des propriétés liées.
+     */
+<span class="fc" id="L57">    private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(</span>
+<span class="fc" id="L58">            this);</span>
+
+    /**
+     * Valeur courante du compteur de temps des blancs.
+     */
+    private long _whiteTimer;
+
+    /**
+     * Description du joueur noir.
+     */
+<span class="fc" id="L68">    private final Player _blackPlayer = new Player(false);</span>
+
+    /**
+     * Liste des positions de l'échiquier.
+     */
+<span class="fc" id="L73">    private final List&lt;MoveGenerator&gt; _positions = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Liste des mouvements éxécutés.
+     */
+<span class="fc" id="L78">    private final List&lt;Move&gt; _moves = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Liste des notations SAN des mouvements.
+     */
+<span class="fc" id="L83">    private final List&lt;String&gt; _sanMoves = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Description du joueur blanc.
+     */
+<span class="fc" id="L88">    private final Player _whitePlayer = new Player(true);</span>
+
+    /**
+     * Mouvement courant (&gt;= 0).
+     */
+    private int _currentMove;
+
+    /**
+     * Position courante (&gt; 0).
+     */
+    private int _currentPosition;
+
+    /**
+     * Timer de l'horloge.
+     */
+    private Timer _timer;
+
+    /**
+     * Instancie une nouvelle partie.
+     */
+<span class="fc" id="L108">    public Game() {</span>
+<span class="fc" id="L109">        resetTo(BoardFactory.valueOf(FASTEST, STARTING));</span>
+<span class="fc" id="L110">    }</span>
+
+    /**
+     * Ajoute un objet à l'écoute des changements de propriétés.
+     *
+     * @param pPropriete Propriété à écouter.
+     * @param pEcouteur  Objet à ajouter à l'écoute.
+     */
+    public void addPropertyChangeListener(final String pPropriete,
+                                          final PropertyChangeListener pEcouteur) {
+<span class="nc" id="L120">        _propertyChangeSupport.addPropertyChangeListener(pPropriete, pEcouteur);</span>
+<span class="nc" id="L121">    }</span>
+
+    /**
+     * Renvoi la description courante de l'échiquier.
+     *
+     * @return Description courante de l'échiquier.
+     */
+    public MoveGenerator getBoard() {
+<span class="fc" id="L129">        return _positions.get(_currentPosition - 1);</span>
+    }
+
+    /**
+     * Renvoi l'éventuel mouvement en cours.
+     *
+     * @return Mouvement courant (ou null si aucun).
+     */
+    public Move getCurrentMove() {
+<span class="nc" id="L138">        Move res = null;</span>
+
+<span class="nc bnc" id="L140" title="All 4 branches missed.">        if ((_currentMove &gt; 0) &amp;&amp; (_currentMove &lt;= _moves.size())) {</span>
+<span class="nc" id="L141">            res = _moves.get(getCurrentMoveIndex());</span>
+        }
+
+<span class="nc" id="L144">        return res;</span>
+    }
+
+    /**
+     * Renvoi l'indice du mouvement courant.
+     *
+     * @return Index du mouvement actuel.
+     */
+    public int getCurrentMoveIndex() {
+<span class="nc" id="L153">        return _currentMove - 1;</span>
+    }
+
+    /**
+     * Renvoi la chaine FEN correspondant à la position courante.
+     *
+     * @return Chaîne FEN de la position courante.
+     */
+    public String getFENPosition() {
+<span class="nc" id="L162">        return toFEN(getBoard());</span>
+    }
+
+    /**
+     * Renvoi le nombre de mouvements stocké.
+     *
+     * @return Nombre de mouvements.
+     */
+    public int getMovesCount() {
+<span class="nc" id="L171">        return _moves.size();</span>
+    }
+
+    /**
+     * Renvoi l'ensemble des mouvements juqu'au mouvement courant.
+     *
+     * @return Liste des mouvements jusqu'au mouvement courant.
+     */
+    public Move[] getMovesToCurrent() {
+<span class="nc" id="L180">        final Move[] res = new Move[_currentMove];</span>
+
+<span class="nc bnc" id="L182" title="All 2 branches missed.">        for (int i = 0; i &lt; _currentMove; i++) {</span>
+<span class="nc" id="L183">            res[i] = _moves.get(i);</span>
+        }
+
+<span class="nc" id="L186">        return res;</span>
+    }
+
+    /**
+     * Renvoi la définition de joueur correspondant à une couleur.
+     *
+     * @param pCouleur A &quot;true&quot; pour les joueur blanc, &quot;false&quot; pour le noir.
+     * @return Joueur correspondant.
+     */
+    public Player getPlayer(final boolean pCouleur) {
+<span class="fc bfc" id="L196" title="All 2 branches covered.">        if (pCouleur) {</span>
+<span class="fc" id="L197">            return _whitePlayer;</span>
+        }
+
+<span class="fc" id="L200">        return _blackPlayer;</span>
+    }
+
+    /**
+     * Renvoi la liste des chaînes SAN correspondant aux mouvements.
+     *
+     * @return Liste des chaînes SAN.
+     */
+    public String[] getSANStrings() {
+<span class="fc" id="L209">        return _sanMoves.toArray(new String[_sanMoves.size()]);</span>
+    }
+
+    /**
+     * Renvoi la chaîne FEN de la position de départ.
+     *
+     * @return Chaîne FEN de la position de départ.
+     */
+    public String getStartingPosition() {
+<span class="fc" id="L218">        return toFEN(_positions.get(0));</span>
+    }
+
+    /**
+     * Renvoi l'état de la partie en cours.
+     *
+     * @return Etat de la partie.
+     */
+    public State getState() {
+        final State res;
+
+<span class="fc" id="L229">        final MoveGenerator etat = getBoard();</span>
+<span class="fc" id="L230">        final boolean trait = etat.isWhiteActive();</span>
+<span class="pc bpc" id="L231" title="1 of 2 branches missed.">        if (etat.getValidMoves(trait).length == 0) {</span>
+<span class="nc bnc" id="L232" title="All 2 branches missed.">            if (etat.isInCheck(trait)) {</span>
+<span class="nc bnc" id="L233" title="All 2 branches missed.">                if (trait) {</span>
+<span class="nc" id="L234">                    res = State.BLACK_MATES;</span>
+<span class="nc" id="L235">                } else {</span>
+<span class="nc" id="L236">                    res = State.WHITE_MATES;</span>
+                }
+<span class="nc" id="L238">            } else {</span>
+<span class="nc" id="L239">                res = State.STALEMATE;</span>
+            }
+<span class="pc bpc" id="L241" title="1 of 2 branches missed.">        } else if (etat.getHalfmoveCount() &gt; 50) {</span>
+<span class="nc" id="L242">            res = State.DRAWN_BY_50_MOVE_RULE;</span>
+<span class="nc" id="L243">        } else {</span>
+<span class="fc" id="L244">            final MoveGenerator enCours = getBoard();</span>
+<span class="fc" id="L245">            int rep = 0;</span>
+<span class="fc bfc" id="L246" title="All 2 branches covered.">            for (int i = 0; i &lt; _currentPosition; i++) {</span>
+<span class="fc bfc" id="L247" title="All 2 branches covered.">                if (enCours.equals(_positions.get(i))) {</span>
+<span class="fc" id="L248">                    rep++;</span>
+<span class="pc bpc" id="L249" title="1 of 2 branches missed.">                    if (rep &gt;= 3) {</span>
+<span class="nc" id="L250">                        return State.DRAWN_BY_TRIPLE_REPETITION;</span>
+                    }
+                }
+            }
+
+<span class="fc" id="L255">            res = State.IN_PROGRESS;</span>
+        }
+
+<span class="fc" id="L258">        return res;</span>
+    }
+
+    /**
+     * Renvoi la valeur courante d'un timer pour un joueur.
+     *
+     * @param pCouleur A &quot;true&quot; pour le timer des blancs, à &quot;false&quot; pour les noirs.
+     * @return Valeur courante du timer correspondant.
+     */
+    public long getTimer(final boolean pCouleur) {
+<span class="nc bnc" id="L268" title="All 2 branches missed.">        if (pCouleur) {</span>
+<span class="nc" id="L269">            return _whiteTimer;</span>
+        }
+
+<span class="nc" id="L272">        return _blackTimer;</span>
+    }
+
+    /**
+     * Aller au premier mouvement.
+     */
+    public void goFirst() {
+<span class="nc bnc" id="L279" title="All 2 branches missed.">        if (_currentMove &gt; 0) {</span>
+<span class="nc" id="L280">            _currentMove = 0;</span>
+<span class="nc" id="L281">            _currentPosition = 1;</span>
+<span class="nc" id="L282">            _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+        }
+<span class="nc" id="L284">    }</span>
+
+    /**
+     * Aller au dernier mouvement.
+     */
+    public void goLast() {
+<span class="nc" id="L290">        final int s = _moves.size();</span>
+<span class="nc bnc" id="L291" title="All 2 branches missed.">        if (_currentMove &lt; s) {</span>
+<span class="nc" id="L292">            _currentMove = s;</span>
+<span class="nc" id="L293">            _currentPosition = _positions.size();</span>
+<span class="nc" id="L294">            _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+        }
+<span class="nc" id="L296">    }</span>
+
+    /**
+     * Aller au mouvement suivant.
+     */
+    public void goNext() {
+<span class="nc bnc" id="L302" title="All 2 branches missed.">        if (_currentMove &lt; _moves.size()) {</span>
+<span class="nc" id="L303">            _currentMove++;</span>
+<span class="nc" id="L304">            _currentPosition++;</span>
+<span class="nc" id="L305">            _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+        }
+<span class="nc" id="L307">    }</span>
+
+    /**
+     * Aller au mouvement précédent.
+     */
+    public void goPrevious() {
+<span class="nc bnc" id="L313" title="All 2 branches missed.">        if (_currentMove &gt; 0) {</span>
+<span class="nc" id="L314">            _currentMove--;</span>
+<span class="nc" id="L315">            _currentPosition--;</span>
+<span class="nc" id="L316">            _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+        }
+<span class="nc" id="L318">    }</span>
+
+    /**
+     * Ajoute un mouvement à partir de la position courante.
+     *
+     * @param pMouvement Mouvement à ajouter.
+     */
+    public void moveFromCurrent(final Move pMouvement) {
+<span class="pc bpc" id="L326" title="1 of 2 branches missed.">        while (_moves.size() &gt; _currentMove) {</span>
+<span class="nc" id="L327">            _moves.remove(_moves.size() - 1);</span>
+<span class="nc" id="L328">            _sanMoves.remove(_sanMoves.size() - 1);</span>
+        }
+<span class="pc bpc" id="L330" title="1 of 2 branches missed.">        while (_positions.size() &gt; _currentPosition) {</span>
+<span class="nc" id="L331">            _positions.remove(_positions.size() - 1);</span>
+        }
+
+<span class="fc" id="L334">        MoveGenerator etat = getBoard();</span>
+<span class="fc" id="L335">        final boolean trait = etat.isWhiteActive();</span>
+<span class="fc" id="L336">        final StringBuilder san = new StringBuilder();</span>
+<span class="fc bfc" id="L337" title="All 2 branches covered.">        if (trait) {</span>
+<span class="fc" id="L338">            san.append(etat.getFullmoveNumber()).append(&quot;. &quot;);</span>
+        }
+<span class="fc" id="L340">        san.append(toSAN(etat, pMouvement));</span>
+<span class="fc" id="L341">        san.append(' ');</span>
+<span class="fc" id="L342">        etat = etat.derive(pMouvement, true);</span>
+<span class="fc" id="L343">        _positions.add(etat);</span>
+<span class="fc" id="L344">        _currentPosition = _positions.size();</span>
+<span class="fc" id="L345">        _moves.add(pMouvement);</span>
+<span class="fc" id="L346">        _currentMove = _moves.size();</span>
+
+<span class="pc bpc" id="L348" title="5 of 6 branches missed.">        switch (getState()) {</span>
+            case IN_PROGRESS:
+<span class="fc" id="L350">                break;</span>
+            case WHITE_MATES:
+<span class="nc" id="L352">                san.append(&quot;1-0&quot;);</span>
+<span class="nc" id="L353">                break;</span>
+            case BLACK_MATES:
+<span class="nc" id="L355">                san.append(&quot;0-1&quot;);</span>
+<span class="nc" id="L356">                break;</span>
+            case STALEMATE:
+<span class="nc" id="L358">                san.append(&quot;1/2-1/2&quot;);</span>
+<span class="nc" id="L359">                break;</span>
+            case DRAWN_BY_50_MOVE_RULE:
+            case DRAWN_BY_TRIPLE_REPETITION:
+<span class="nc" id="L362">                san.append(&quot;1/2-1/2 {Repetition}&quot;);</span>
+<span class="nc" id="L363">                break;</span>
+            default:
+<span class="nc bnc" id="L365" title="All 2 branches missed.">                assert false;</span>
+        }
+<span class="fc" id="L367">        _sanMoves.add(san.toString());</span>
+
+<span class="fc" id="L369">        _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+<span class="fc" id="L370">    }</span>
+
+    /**
+     * Supprime un objet à l'écoute des changements de propriétés.
+     *
+     * @param pPropriete Propriété à écouter.
+     * @param pEcouteur  Objet à ajouter à l'écoute.
+     */
+    public void removePropertyChangeListener(final String pPropriete,
+                                             final PropertyChangeListener pEcouteur) {
+<span class="nc" id="L380">        _propertyChangeSupport.removePropertyChangeListener(pPropriete,</span>
+<span class="nc" id="L381">                pEcouteur);</span>
+<span class="nc" id="L382">    }</span>
+
+    /**
+     * Ré-initialise la description de la partie à la position transmise.
+     *
+     * @param pEtat Nouvel état de l'échiquier.
+     */
+    public void resetTo(final MoveGenerator pEtat) {
+<span class="fc" id="L390">        _moves.clear();</span>
+<span class="fc" id="L391">        _sanMoves.clear();</span>
+<span class="fc" id="L392">        _currentMove = _moves.size();</span>
+<span class="fc" id="L393">        _positions.clear();</span>
+<span class="fc" id="L394">        _positions.add(pEtat);</span>
+<span class="fc" id="L395">        _currentPosition = _positions.size();</span>
+<span class="fc bfc" id="L396" title="All 2 branches covered.">        if (_timer != null) {</span>
+<span class="fc" id="L397">            _timer.cancel();</span>
+        }
+<span class="fc" id="L399">        _blackTimer = GAME_DURATION;</span>
+<span class="fc" id="L400">        _whiteTimer = GAME_DURATION;</span>
+<span class="fc" id="L401">        _lastTimerTick = System.currentTimeMillis();</span>
+<span class="fc" id="L402">        _timer = new Timer();</span>
+
+<span class="fc" id="L404">        _propertyChangeSupport.firePropertyChange(&quot;position&quot;, null, null);</span>
+<span class="fc" id="L405">        _timer.scheduleAtFixedRate(new TimerTask() {</span>
+            /**
+             * Action déclenchée périodiquement par le timer gérant l'horloge.
+             */
+            @Override
+            public void run() {
+<span class="pc bpc" id="L411" title="1 of 2 branches missed.">                if (getState() == State.IN_PROGRESS) {</span>
+<span class="fc" id="L412">                    final long time = System.currentTimeMillis();</span>
+<span class="pc bpc" id="L413" title="1 of 2 branches missed.">                    if (getBoard().isWhiteActive()) {</span>
+<span class="nc" id="L414">                        _whiteTimer -= time - _lastTimerTick;</span>
+<span class="nc" id="L415">                    } else {</span>
+<span class="fc" id="L416">                        _blackTimer -= time - _lastTimerTick;</span>
+                    }
+<span class="fc" id="L418">                    _lastTimerTick = time;</span>
+<span class="fc" id="L419">                    _propertyChangeSupport.firePropertyChange(&quot;timer&quot;, null,</span>
+<span class="fc" id="L420">                            null);</span>
+                }
+<span class="fc" id="L422">            }</span>
+<span class="fc" id="L423">        }, 250, 1000);</span>
+<span class="fc" id="L424">    }</span>
+
+    /**
+     * Enumération des états possibles d'une partie.
+     */
+<span class="fc" id="L429">    public enum State {</span>
+<span class="fc" id="L430">        /**</span>
+         * En cours.
+         */
+<span class="fc" id="L433">        IN_PROGRESS,</span>
+
+<span class="fc" id="L435">        /**</span>
+         * Victoire des noirs.
+         */
+<span class="fc" id="L438">        BLACK_MATES,</span>
+
+<span class="fc" id="L440">        /**</span>
+         * Victoire des blancs.
+         */
+<span class="fc" id="L443">        WHITE_MATES,</span>
+
+<span class="fc" id="L445">        /**</span>
+         * Pat.
+         */
+<span class="fc" id="L448">        STALEMATE,</span>
+
+<span class="fc" id="L450">        /**</span>
+         * Terminée suite à la répétition de la même position 3 fois ou plus.
+         */
+<span class="fc" id="L453">        DRAWN_BY_TRIPLE_REPETITION,</span>
+
+<span class="fc" id="L455">        /**</span>
+         * Terminée par la règle des 50 coups.
+         */
+<span class="fc" id="L458">        DRAWN_BY_50_MOVE_RULE</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

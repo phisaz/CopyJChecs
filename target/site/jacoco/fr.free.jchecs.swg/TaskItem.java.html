@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaskItem.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">TaskItem.java</span></div><h1>TaskItem.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.BorderFactory;
+import javax.swing.Icon;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.UIManager;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Composant d'affichage d'une tâche.
+ *
+ * @author David Cotton
+ */
+final class TaskItem {
+    /**
+     * Icone permettant de replier (masquer) la tâche.
+     */
+<span class="nc" id="L45">    private static final Icon FOLD_ICON = getImageIcon(&quot;fold.png&quot;);</span>
+
+    /**
+     * Icone permettant de déplier (afficher) la tâche.
+     */
+<span class="nc" id="L50">    private static final Icon UNFOLD_ICON = getImageIcon(&quot;unfold.png&quot;);</span>
+
+    /**
+     * Interface utilisateur liée à la tâche.
+     */
+    private final UI _ui;
+
+    /**
+     * Composant graphique externe.
+     */
+    private final JComponent _component;
+
+    /**
+     * Barre de titre.
+     */
+    private final JPanel _titleBar;
+
+    /**
+     * Titre.
+     */
+    private final JLabel _title;
+
+    /**
+     * Icône d'état plié/déplié.
+     */
+    private final JLabel _foldingIcon;
+
+    /**
+     * Corps de la tâche.
+     */
+    private final JPanel _body;
+
+    /**
+     * Largeur optimale du composant.
+     */
+    private final int _bestWidth;
+
+    /**
+     * Identifiant de la propriété &quot;plié&quot;.
+     */
+    private final String _foldedProperty;
+
+    /**
+     * Etat plié/déplié.
+     */
+    private boolean _folded;
+
+    /**
+     * Instancie un nouveau composant de tâche.
+     *
+     * @param pUI        Interface graphique liée à la tâche.
+     * @param pIdTache   Clé identifiant la tâche.
+     * @param pComposant Composant spécifique de la tâche.
+     * @param pIcone     Icône représentant la tâche (peut être à null)
+     */
+<span class="nc" id="L105">    TaskItem(final UI pUI, final String pIdTache, final JComponent pComposant,</span>
+             final Icon pIcone) {
+<span class="nc" id="L107">        _ui = pUI;</span>
+<span class="nc" id="L108">        _titleBar = new JPanel(new BorderLayout(8, 0));</span>
+<span class="nc" id="L109">        _titleBar.setBorder(BorderFactory.createEmptyBorder(2, 4, 2, 4));</span>
+<span class="nc" id="L110">        _title = new JLabel(getI18NString(pIdTache + &quot;.title&quot;));</span>
+<span class="nc" id="L111">        _title.setFont(UIManager.getFont(&quot;InternalFrame.titleFont&quot;));</span>
+<span class="nc" id="L112">        _title.setIcon(pIcone);</span>
+<span class="nc" id="L113">        _titleBar.add(_title, BorderLayout.WEST);</span>
+<span class="nc" id="L114">        _body = new JPanel(new BorderLayout());</span>
+<span class="nc" id="L115">        _body.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));</span>
+<span class="nc" id="L116">        _body.add(pComposant, BorderLayout.CENTER);</span>
+<span class="nc" id="L117">        _foldingIcon = new JLabel();</span>
+<span class="nc" id="L118">        _foldedProperty = pIdTache + &quot;.folded&quot;;</span>
+<span class="nc" id="L119">        setFolded(_ui.getBooleanProperty(_foldedProperty));</span>
+<span class="nc" id="L120">        _titleBar.add(_foldingIcon, BorderLayout.EAST);</span>
+
+<span class="nc" id="L122">        setMouseOver(false);</span>
+
+<span class="nc" id="L124">        _component = new JPanel(new BorderLayout());</span>
+<span class="nc" id="L125">        _component.add(_titleBar, BorderLayout.NORTH);</span>
+<span class="nc" id="L126">        _component.add(_body, BorderLayout.CENTER);</span>
+
+<span class="nc" id="L128">        Dimension dim = _titleBar.getPreferredSize();</span>
+<span class="nc" id="L129">        int largeur = dim.width;</span>
+<span class="nc" id="L130">        dim = _body.getPreferredSize();</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">        if (dim.width &gt; largeur) {</span>
+<span class="nc" id="L132">            largeur = dim.width;</span>
+        }
+<span class="nc" id="L134">        _bestWidth = largeur;</span>
+
+<span class="nc" id="L136">        _titleBar.addMouseListener(new TaskItemListener());</span>
+<span class="nc" id="L137">    }</span>
+
+    /**
+     * Renvoi la largeur optimale du composant.
+     *
+     * @return Largeur optimale du composant.
+     */
+    int getBestWidth() {
+<span class="nc" id="L145">        return _bestWidth;</span>
+    }
+
+    /**
+     * Renvoi le composant graphique affichable.
+     *
+     * @return Composant graphique.
+     */
+    JComponent getComponent() {
+<span class="nc" id="L154">        return _component;</span>
+    }
+
+    /**
+     * Renvoi l'état du drapeau plié/déplié.
+     *
+     * @return Etat du drapeau &quot;plié&quot;.
+     */
+    private boolean isFolded() {
+<span class="nc" id="L163">        return _folded;</span>
+    }
+
+    /**
+     * Modifié l'état plié/déplié.
+     *
+     * @param pPlie A &quot;true&quot; pour indiquer que la tâche est repliée.
+     */
+    private void setFolded(final boolean pPlie) {
+<span class="nc" id="L172">        _folded = pPlie;</span>
+
+<span class="nc bnc" id="L174" title="All 2 branches missed.">        if (_folded) {</span>
+<span class="nc" id="L175">            _foldingIcon.setIcon(UNFOLD_ICON);</span>
+<span class="nc" id="L176">            _body.setVisible(false);</span>
+<span class="nc" id="L177">        } else {</span>
+<span class="nc" id="L178">            _foldingIcon.setIcon(FOLD_ICON);</span>
+<span class="nc" id="L179">            _body.setVisible(true);</span>
+        }
+
+<span class="nc" id="L182">        _ui.setBooleanProperty(_foldedProperty, _folded);</span>
+<span class="nc" id="L183">    }</span>
+
+    /**
+     * Modifie l'indicateur de survol du composant par la souris.
+     *
+     * @param pSurvol Drapeau à &quot;vrai&quot; pour indiquer le survol du composant par la
+     *                souris.
+     */
+    private void setMouseOver(final boolean pSurvol) {
+<span class="nc bnc" id="L192" title="All 2 branches missed.">        if (pSurvol) {</span>
+<span class="nc" id="L193">            _titleBar.setBackground(UIManager</span>
+<span class="nc" id="L194">                    .getColor(&quot;InternalFrame.activeTitleBackground&quot;));</span>
+<span class="nc" id="L195">            _title.setForeground(UIManager</span>
+<span class="nc" id="L196">                    .getColor(&quot;InternalFrame.activeTitleForeground&quot;));</span>
+<span class="nc" id="L197">        } else {</span>
+<span class="nc" id="L198">            _titleBar.setBackground(UIManager</span>
+<span class="nc" id="L199">                    .getColor(&quot;InternalFrame.inactiveTitleBackground&quot;));</span>
+<span class="nc" id="L200">            _title.setForeground(UIManager</span>
+<span class="nc" id="L201">                    .getColor(&quot;InternalFrame.inactiveTitleForeground&quot;));</span>
+        }
+<span class="nc" id="L203">    }</span>
+
+    /**
+     * Gestionnaire d'évènement lié au composant.
+     */
+    private final class TaskItemListener extends MouseAdapter {
+        /**
+         * Instancie un nouveau gestionnaire.
+         */
+<span class="nc" id="L212">        TaskItemListener() {</span>
+            // Rien de spécifique...
+<span class="nc" id="L214">        }</span>
+
+        /**
+         * Tient compte de l'entrée de la souris sur la barre de titre.
+         *
+         * @param pEvent Evènement signalant l'entrée de la souris.
+         */
+        @Override
+        public void mouseEntered(final MouseEvent pEvent) {
+<span class="nc" id="L223">            setMouseOver(true);</span>
+<span class="nc" id="L224">        }</span>
+
+        /**
+         * Tient compte de la sortie de la souris de sur la barre de titre.
+         *
+         * @param pEvent Evènement signalant la sortie de la souris.
+         */
+        @Override
+        public void mouseExited(final MouseEvent pEvent) {
+<span class="nc" id="L233">            setMouseOver(false);</span>
+<span class="nc" id="L234">        }</span>
+
+        /**
+         * Tient compte du déclenchement de la souris sur la barre de titre.
+         *
+         * @param pEvent Evènement signalant l'appuie sur un bouton.
+         */
+        @Override
+        public void mousePressed(final MouseEvent pEvent) {
+<span class="nc bnc" id="L243" title="All 2 branches missed.">            setFolded(!isFolded());</span>
+<span class="nc" id="L244">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

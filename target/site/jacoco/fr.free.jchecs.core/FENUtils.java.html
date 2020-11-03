@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FENUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">FENUtils.java</span></div><h1>FENUtils.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+
+/**
+ * Classes fournissant des fonctions utilitaires pour gérer la notation FEN.
+ * &lt;p&gt;
+ * Classe sûre vis-à-vis des threads.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+public final class FENUtils {
+    /**
+     * Chaine FEN de la position de départ.
+     */
+    public static final String STANDART_STARTING_FEN = &quot;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&quot;;
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private FENUtils() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Evalue le champ de notation du trait d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN du trait.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENActiveColor(final String pChamp,
+                                            final MutableBoard pEtat) throws FENException {
+<span class="pc bpc" id="L54" title="1 of 4 branches missed.">        if ((pChamp.length() != 1) || (&quot;bw&quot;.indexOf(pChamp.charAt(0)) &lt; 0)) {</span>
+<span class="fc" id="L55">            throw new FENException(&quot;Invalid FEN active color [&quot; + pChamp + ']',</span>
+<span class="fc" id="L56">                    null);</span>
+        }
+
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        pEtat.setWhiteActive(pChamp.charAt(0) == 'w');</span>
+<span class="fc" id="L60">    }</span>
+
+    /**
+     * Evalue le champ de notation des possiblités de roque d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN du roque.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENCastling(final String pChamp,
+                                         final MutableBoard pEtat) throws FENException {
+<span class="fc" id="L71">        final int l = pChamp.length();</span>
+<span class="pc bpc" id="L72" title="1 of 4 branches missed.">        if ((l &lt; 1) || (l &gt; 4)) {</span>
+<span class="fc" id="L73">            throw new FENException(&quot;Invalid FEN castling field [&quot; + pChamp</span>
+<span class="fc" id="L74">                    + ']', null);</span>
+        }
+
+<span class="fc" id="L77">        pEtat.setCastleLong(false, false);</span>
+<span class="fc" id="L78">        pEtat.setCastleLong(true, false);</span>
+<span class="fc" id="L79">        pEtat.setCastleShort(false, false);</span>
+<span class="fc" id="L80">        pEtat.setCastleShort(true, false);</span>
+
+<span class="pc bpc" id="L82" title="1 of 4 branches missed.">        if ((l == 1) &amp;&amp; (pChamp.charAt(0) == '-')) {</span>
+<span class="fc" id="L83">            return;</span>
+        }
+
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        for (int i = l - 1; i &gt;= 0; i--) {</span>
+<span class="fc bfc" id="L87" title="All 5 branches covered.">            switch (pChamp.charAt(i)) {</span>
+                case 'k':
+<span class="fc" id="L89">                    pEtat.setCastleShort(false, true);</span>
+<span class="fc" id="L90">                    break;</span>
+                case 'K':
+<span class="fc" id="L92">                    pEtat.setCastleShort(true, true);</span>
+<span class="fc" id="L93">                    break;</span>
+                case 'q':
+<span class="fc" id="L95">                    pEtat.setCastleLong(false, true);</span>
+<span class="fc" id="L96">                    break;</span>
+                case 'Q':
+<span class="fc" id="L98">                    pEtat.setCastleLong(true, true);</span>
+<span class="fc" id="L99">                    break;</span>
+                default:
+<span class="fc" id="L101">                    throw new FENException(&quot;Invalid FEN castling field [&quot; + pChamp</span>
+<span class="fc" id="L102">                            + ']', null);</span>
+            }
+        }
+<span class="fc" id="L105">    }</span>
+
+    /**
+     * Evalue le champ &quot;En passant&quot; d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN &quot;En passant&quot;.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENEnPassant(final String pChamp,
+                                          final MutableBoard pEtat) throws FENException {
+<span class="fc" id="L116">        final int l = pChamp.length();</span>
+<span class="pc bpc" id="L117" title="1 of 4 branches missed.">        if ((l &lt; 1) || (l &gt; 2)) {</span>
+<span class="fc" id="L118">            throw new FENException(&quot;Invalid FEN 'en passant' field [&quot; + pChamp</span>
+<span class="fc" id="L119">                    + ']', null);</span>
+        }
+
+<span class="pc bpc" id="L122" title="1 of 4 branches missed.">        if ((l != 1) || (pChamp.charAt(0) != '-')) {</span>
+            try {
+<span class="fc" id="L124">                pEtat.setEnPassant(Square.valueOf(pChamp));</span>
+<span class="fc" id="L125">            } catch (final IllegalArgumentException e) {</span>
+<span class="fc" id="L126">                throw new FENException(&quot;Invalid FEN 'en passant' field [&quot;</span>
+<span class="fc" id="L127">                        + pChamp + ']', e);</span>
+            }
+        }
+<span class="fc" id="L130">    }</span>
+
+    /**
+     * Evalue le champ &quot;numéro de coup&quot; d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN stockant le numéro du coup.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENFullmove(final String pChamp,
+                                         final MutableBoard pEtat) throws FENException {
+        try {
+<span class="fc" id="L142">            final int num = Integer.parseInt(pChamp);</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">            if (num &lt;= 0) {</span>
+<span class="fc" id="L144">                throw new FENException(&quot;Invalid FEN fullmove number field [&quot;</span>
+<span class="fc" id="L145">                        + pChamp + ']', null);</span>
+            }
+<span class="fc" id="L147">            pEtat.setFullmoveNumber(num);</span>
+<span class="fc" id="L148">        } catch (final NumberFormatException e) {</span>
+<span class="fc" id="L149">            throw new FENException(&quot;Invalid FEN fullmove number field [&quot;</span>
+<span class="fc" id="L150">                    + pChamp + ']', e);</span>
+        }
+<span class="fc" id="L152">    }</span>
+
+    /**
+     * Evalue le champ &quot;nombre de demi-coups&quot; d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN stockant le nombre de demi-coups depuis
+     *               la dernière prise ou mouvement de pion.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENHalfmove(final String pChamp,
+                                         final MutableBoard pEtat) throws FENException {
+        try {
+<span class="fc" id="L165">            final int nb = Integer.parseInt(pChamp);</span>
+<span class="pc bpc" id="L166" title="1 of 4 branches missed.">            if ((nb &lt; 0) || (pChamp.length() == 0)) {</span>
+<span class="fc" id="L167">                throw new FENException(&quot;Invalid FEN halfmove clock field [&quot;</span>
+<span class="fc" id="L168">                        + pChamp + ']', null);</span>
+            }
+<span class="fc" id="L170">            pEtat.setHalfmoveCount(nb);</span>
+<span class="fc" id="L171">        } catch (final NumberFormatException e) {</span>
+<span class="fc" id="L172">            throw new FENException(&quot;Invalid FEN halfmove clock field [&quot;</span>
+<span class="fc" id="L173">                    + pChamp + ']', e);</span>
+        }
+<span class="fc" id="L175">    }</span>
+
+    /**
+     * Evalue le champ de positionnement des pièces d'une chaine FEN.
+     *
+     * @param pChamp Contenu du champ FEN de positionnement des pièces.
+     * @param pEtat  Etat du jeu à paramètrer en fonction.
+     * @throws FENException en cas d'erreur dans le champ.
+     */
+    private static void parseFENPlacement(final String pChamp,
+                                          final MutableBoard pEtat) throws FENException {
+<span class="fc" id="L186">        int rang = RANK_COUNT - 1;</span>
+<span class="fc" id="L187">        int col = 0;</span>
+<span class="fc bfc" id="L188" title="All 2 branches covered.">        for (int i = 0; i &lt; pChamp.length(); i++) {</span>
+<span class="fc" id="L189">            final char c = pChamp.charAt(i);</span>
+<span class="fc bfc" id="L190" title="All 2 branches covered.">            if (c == '/') {</span>
+<span class="pc bpc" id="L191" title="1 of 4 branches missed.">                if ((col != FILE_COUNT) || (rang &lt;= 0)) {</span>
+<span class="fc" id="L192">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
+<span class="fc" id="L193">                            + pChamp + ']', null);</span>
+                }
+<span class="fc" id="L195">                rang--;</span>
+<span class="fc" id="L196">                col = 0;</span>
+<span class="fc bfc" id="L197" title="All 2 branches covered.">            } else if (&quot;12345678&quot;.indexOf(c) &gt;= 0) {</span>
+<span class="fc" id="L198">                final int rep = c - '0';</span>
+<span class="fc bfc" id="L199" title="All 2 branches covered.">                for (int j = 0; j &lt; rep; j++) {</span>
+                    try {
+<span class="fc" id="L201">                        pEtat.setPieceAt(null, Square.valueOf(col++, rang));</span>
+<span class="fc" id="L202">                    } catch (final IllegalArgumentException e) {</span>
+<span class="fc" id="L203">                        throw new FENException(</span>
+<span class="fc" id="L204">                                &quot;Invalid piece placement field [&quot; + pChamp</span>
+<span class="fc" id="L205">                                        + ']', e);</span>
+                    }
+                }
+<span class="fc" id="L208">            } else {</span>
+<span class="fc" id="L209">                final Piece p = Piece.valueOf(c);</span>
+<span class="fc bfc" id="L210" title="All 2 branches covered.">                if (p == null) {</span>
+<span class="fc" id="L211">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
+<span class="fc" id="L212">                            + pChamp + ']', null);</span>
+                }
+                try {
+<span class="fc" id="L215">                    pEtat.setPieceAt(p, Square.valueOf(col, rang));</span>
+<span class="pc" id="L216">                } catch (final IllegalArgumentException e) {</span>
+<span class="nc" id="L217">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
+<span class="nc" id="L218">                            + pChamp + ']', e);</span>
+                }
+<span class="fc" id="L220">                col++;</span>
+            }
+<span class="pc bpc" id="L222" title="1 of 2 branches missed.">            if (col &gt; FILE_COUNT) {</span>
+<span class="nc" id="L223">                throw new FENException(&quot;Invalid piece placement field [&quot;</span>
+<span class="nc" id="L224">                        + pChamp + ']', null);</span>
+            }
+        }
+<span class="pc bpc" id="L227" title="2 of 4 branches missed.">        if ((col != FILE_COUNT) || (rang != 0)) {</span>
+<span class="nc" id="L228">            throw new FENException(&quot;Invalid piece placement field [&quot; + pChamp</span>
+<span class="nc" id="L229">                    + ']', null);</span>
+        }
+<span class="fc" id="L231">    }</span>
+
+    /**
+     * Renvoi la description d'état de jeu correspondant à une chaine FEN
+     * particulière.
+     *
+     * @param pFEN Chaine FEN décrivant un état.
+     * @return Instance correspondante de description d'état du jeu.
+     * @throws FENException en cas d'erreur dans le format de la chaine FEN.
+     */
+
+    public static Board toBoard(final String pFEN) throws FENException {
+<span class="fc bfc" id="L243" title="All 2 branches covered.">        if (pFEN == null) {</span>
+<span class="fc" id="L244">            throw new NullPointerException(&quot;Missing FEN string&quot;);</span>
+        }
+
+<span class="fc" id="L247">        final String[] fields = pFEN.split(&quot; &quot;);</span>
+<span class="fc bfc" id="L248" title="All 2 branches covered.">        if (fields.length != 6) {</span>
+<span class="fc" id="L249">            throw new FENException(&quot;Invalid FEN string [&quot; + pFEN + ']', null);</span>
+        }
+
+<span class="fc" id="L252">        final MutableBoard res = new MutableBoard();</span>
+
+<span class="fc" id="L254">        parseFENPlacement(fields[0], res);</span>
+<span class="fc" id="L255">        parseFENActiveColor(fields[1], res);</span>
+<span class="fc" id="L256">        parseFENCastling(fields[2], res);</span>
+<span class="fc" id="L257">        parseFENEnPassant(fields[3], res);</span>
+<span class="fc" id="L258">        parseFENHalfmove(fields[4], res);</span>
+<span class="fc" id="L259">        parseFENFullmove(fields[5], res);</span>
+
+<span class="fc" id="L261">        return res;</span>
+    }
+
+    /**
+     * Renvoi la chaine FEN correspondant à un état du jeu.
+     *
+     * @param pEtat Etat du jeu.
+     * @return Chaine FEN décrivant l'état.
+     */
+    public static String toFEN(final Board pEtat) {
+<span class="fc bfc" id="L271" title="All 2 branches covered.">        if (pEtat == null) {</span>
+<span class="fc" id="L272">            throw new NullPointerException(&quot;Missing game state&quot;);</span>
+        }
+
+<span class="fc" id="L275">        final StringBuilder res = new StringBuilder(toFENKey(pEtat));</span>
+<span class="fc" id="L276">        res.append(' ');</span>
+
+        // Champ du compteur de demi-coups...
+<span class="fc" id="L279">        res.append(Integer.toString(pEtat.getHalfmoveCount()));</span>
+<span class="fc" id="L280">        res.append(' ');</span>
+
+        // Champ du numéro de coup...
+<span class="fc" id="L283">        res.append(Integer.toString(pEtat.getFullmoveNumber()));</span>
+
+<span class="fc" id="L285">        return res.toString();</span>
+    }
+
+    /**
+     * Renvoi le début de la chaine FEN (4 premiers champs), utilisable comme
+     * clé identifiant un etat (sans tenir compte du numéro du coup et de la
+     * règle des 50 demi-coups).
+     *
+     * @param pEtat Etat du jeu.
+     * @return Chaine FEN décrivant l'état.
+     */
+    public static String toFENKey(final Board pEtat) {
+<span class="fc bfc" id="L297" title="All 2 branches covered.">        if (pEtat == null) {</span>
+<span class="fc" id="L298">            throw new NullPointerException(&quot;Missing game state&quot;);</span>
+        }
+
+<span class="fc" id="L301">        final StringBuilder res = new StringBuilder();</span>
+
+        // Champ des positions...
+<span class="fc bfc" id="L304" title="All 2 branches covered.">        for (int y = RANK_COUNT - 1; y &gt;= 0; y--) {</span>
+<span class="fc" id="L305">            int vide = 0;</span>
+<span class="fc bfc" id="L306" title="All 2 branches covered.">            for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="fc" id="L307">                final Piece p = pEtat.getPieceAt(Square.valueOf(x, y));</span>
+<span class="fc bfc" id="L308" title="All 2 branches covered.">                if (p == null) {</span>
+<span class="fc" id="L309">                    vide++;</span>
+<span class="fc" id="L310">                } else {</span>
+<span class="fc bfc" id="L311" title="All 2 branches covered.">                    if (vide &gt; 0) {</span>
+<span class="fc" id="L312">                        res.append((char) ('0' + vide));</span>
+<span class="fc" id="L313">                        vide = 0;</span>
+                    }
+<span class="fc" id="L315">                    res.append(p.getFENLetter());</span>
+                }
+            }
+<span class="fc bfc" id="L318" title="All 2 branches covered.">            if (vide &gt; 0) {</span>
+<span class="fc" id="L319">                res.append((char) ('0' + vide));</span>
+            }
+<span class="fc bfc" id="L321" title="All 2 branches covered.">            if (y != 0) {</span>
+<span class="fc" id="L322">                res.append('/');</span>
+            }
+        }
+<span class="fc" id="L325">        res.append(' ');</span>
+
+        // Champ du trait
+<span class="fc bfc" id="L328" title="All 2 branches covered.">        if (pEtat.isWhiteActive()) {</span>
+<span class="fc" id="L329">            res.append('w');</span>
+<span class="fc" id="L330">        } else {</span>
+<span class="fc" id="L331">            res.append('b');</span>
+        }
+<span class="fc" id="L333">        res.append(' ');</span>
+
+        // Champ des roques...
+<span class="fc" id="L336">        boolean roque = false;</span>
+<span class="fc bfc" id="L337" title="All 2 branches covered.">        if (pEtat.canCastleShort(true)) {</span>
+<span class="fc" id="L338">            res.append('K');</span>
+<span class="fc" id="L339">            roque = true;</span>
+        }
+<span class="fc bfc" id="L341" title="All 2 branches covered.">        if (pEtat.canCastleLong(true)) {</span>
+<span class="fc" id="L342">            res.append('Q');</span>
+<span class="fc" id="L343">            roque = true;</span>
+        }
+<span class="fc bfc" id="L345" title="All 2 branches covered.">        if (pEtat.canCastleShort(false)) {</span>
+<span class="fc" id="L346">            res.append('k');</span>
+<span class="fc" id="L347">            roque = true;</span>
+        }
+<span class="fc bfc" id="L349" title="All 2 branches covered.">        if (pEtat.canCastleLong(false)) {</span>
+<span class="fc" id="L350">            res.append('q');</span>
+<span class="fc" id="L351">            roque = true;</span>
+        }
+<span class="fc bfc" id="L353" title="All 2 branches covered.">        if (!roque) {</span>
+<span class="fc" id="L354">            res.append('-');</span>
+        }
+<span class="fc" id="L356">        res.append(' ');</span>
+
+        // Champ de la prise ne passant...
+<span class="fc" id="L359">        final Square enPassant = pEtat.getEnPassant();</span>
+<span class="fc bfc" id="L360" title="All 2 branches covered.">        if (enPassant != null) {</span>
+<span class="fc" id="L361">            res.append(enPassant.getFENString());</span>
+<span class="fc" id="L362">        } else {</span>
+<span class="fc" id="L363">            res.append('-');</span>
+        }
+
+<span class="fc" id="L366">        return res.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

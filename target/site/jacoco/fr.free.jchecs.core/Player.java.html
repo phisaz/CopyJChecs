@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Player.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">Player.java</span></div><h1>Player.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+import fr.free.jchecs.ai.Engine;
+
+/**
+ * Description d'un joueur.
+ *
+ * @author David Cotton
+ */
+public final class Player {
+    /**
+     * Support des propriétés liées.
+     */
+<span class="fc" id="L35">    private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(</span>
+<span class="fc" id="L36">            this);</span>
+
+    /**
+     * Indicateur de la couleur du joueur.
+     */
+    private final boolean _white;
+
+    /**
+     * Moteur d'IA lié au joueur (peut être à null).
+     */
+    private Engine _engine;
+
+    /**
+     * Nom du joueur.
+     */
+    private String _name;
+
+    /**
+     * Instancie un nouveau joueur.
+     *
+     * @param pCouleur A vrai si le joueur joue les blancs, à faux sinon.
+     */
+<span class="fc" id="L58">    public Player(final boolean pCouleur) {</span>
+<span class="fc" id="L59">        _white = pCouleur;</span>
+<span class="fc" id="L60">        _name = &quot;&quot;;</span>
+<span class="fc" id="L61">    }</span>
+
+    /**
+     * Ajoute un objet à l'écoute des changements de propriétés.
+     *
+     * @param pPropriete Propriété à écouter.
+     * @param pEcouteur  Objet à ajouter à l'écoute.
+     */
+    public void addPropertyChangeListener(final String pPropriete,
+                                          final PropertyChangeListener pEcouteur) {
+<span class="nc" id="L71">        _propertyChangeSupport.addPropertyChangeListener(pPropriete, pEcouteur);</span>
+<span class="nc" id="L72">    }</span>
+
+    /**
+     * Renvoi le moteur d'IA lié au joueur.
+     *
+     * @return Moteur d'IA (peut être à null).
+     */
+    public Engine getEngine() {
+<span class="fc" id="L80">        return _engine;</span>
+    }
+
+    /**
+     * Renvoi le nom du joueur.
+     *
+     * @return Nom du joueur.
+     */
+    public String getName() {
+<span class="fc" id="L89">        return _name;</span>
+    }
+
+    /**
+     * Renvoi l'indicateur de la couleur jouée.
+     *
+     * @return indicateur de couleur.
+     */
+    public boolean isWhite() {
+<span class="nc" id="L98">        return _white;</span>
+    }
+
+    /**
+     * Alimente le moteur d'IA lié au joueur.
+     *
+     * @param pIA Moteur d'IA (peut être à null).
+     */
+    public void setEngine(final Engine pIA) {
+<span class="fc bfc" id="L107" title="All 2 branches covered.">        if (_engine != pIA) {</span>
+<span class="fc" id="L108">            final Engine prec = _engine;</span>
+<span class="fc" id="L109">            _engine = pIA;</span>
+<span class="fc" id="L110">            _propertyChangeSupport.firePropertyChange(&quot;engine&quot;, prec, _engine);</span>
+        }
+<span class="fc" id="L112">    }</span>
+
+    /**
+     * Alimente le nom du joueur.
+     *
+     * @param pNom Nom du joueur.
+     */
+    public void setName(final String pNom) {
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        if (!_name.equals(pNom)) {</span>
+<span class="fc" id="L121">            final String prec = _name;</span>
+<span class="fc" id="L122">            _name = pNom;</span>
+<span class="fc" id="L123">            _propertyChangeSupport.firePropertyChange(&quot;name&quot;, prec, _name);</span>
+        }
+<span class="fc" id="L125">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

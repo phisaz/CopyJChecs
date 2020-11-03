@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LoadPositionAction.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">LoadPositionAction.java</span></div><h1>LoadPositionAction.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.event.ActionEvent;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import javax.swing.Action;
+import javax.swing.Icon;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+import fr.free.jchecs.core.BoardFactory;
+import fr.free.jchecs.core.FENException;
+import fr.free.jchecs.core.MoveGenerator;
+
+import static fr.free.jchecs.core.BoardFactory.State.EMPTY;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+import static fr.free.jchecs.core.FENUtils.toBoard;
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Action de l'option &quot;Charger une position&quot;.
+ *
+ * @author David Cotton
+ */
+final class LoadPositionAction extends AbstractUIAction {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -6984312640581693931L;
+
+    /**
+     * Petite icône.
+     */
+<span class="nc" id="L59">    private static final Icon ICON16 = getImageIcon(&quot;loadFEN16.png&quot;);</span>
+
+    /**
+     * Icône moyenne.
+     */
+<span class="nc" id="L64">    private static final Icon ICON22 = getImageIcon(&quot;loadFEN22.png&quot;);</span>
+
+    /**
+     * Crée une nouvelle instance de l'action.
+     *
+     * @param pUI Référence du composant maitre de l'interface.
+     */
+    LoadPositionAction(final UI pUI) {
+<span class="nc" id="L72">        super(&quot;loadPosition&quot;, pUI);</span>
+
+<span class="nc" id="L74">        putValue(Action.SMALL_ICON, ICON16);</span>
+<span class="nc" id="L75">        putValue(Action.LARGE_ICON_KEY, ICON22);</span>
+<span class="nc" id="L76">    }</span>
+
+    /**
+     * Réaction face au déclenchement de l'action.
+     *
+     * @param pEvent Evènement signalant le déclenchement.
+     */
+    @Override
+    public void actionPerformed(final ActionEvent pEvent) {
+<span class="nc" id="L85">        SwingUtilities.invokeLater(new PositionLoader(getUI()));</span>
+<span class="nc" id="L86">    }</span>
+
+    /**
+     * Classe prenant en charge le chargement de la position.
+     */
+    private static final class PositionLoader implements Runnable {
+        /**
+         * Grande icône, pour la boite de dialogue d'erreur.
+         */
+<span class="nc" id="L95">        private static final Icon ICON32 = getImageIcon(&quot;error32.png&quot;);</span>
+
+        /**
+         * Référence de l'interface graphique liée.
+         */
+        private final UI _ui;
+
+        /**
+         * Instancie un nouveau chargeur.
+         *
+         * @param pUI Interface graphique mêre.
+         */
+<span class="nc" id="L107">        PositionLoader(final UI pUI) {</span>
+<span class="nc" id="L108">            _ui = pUI;</span>
+<span class="nc" id="L109">        }</span>
+
+        /**
+         * Affiche la boite de dialogue signalant l'impossibilité de lire le
+         * fichier.
+         */
+        private void errorDialog() {
+<span class="nc" id="L116">            JOptionPane.showMessageDialog(_ui.getMainFrame(),</span>
+<span class="nc" id="L117">                    getI18NString(&quot;action.loadPosition.error.message&quot;),</span>
+<span class="nc" id="L118">                    getI18NString(&quot;action.loadPosition.error.title&quot;),</span>
+<span class="nc" id="L119">                    JOptionPane.ERROR_MESSAGE, ICON32);</span>
+<span class="nc" id="L120">        }</span>
+
+        /**
+         * Réalise le chargement.
+         */
+        @Override
+        public void run() {
+<span class="nc" id="L127">            final JFileChooser dialog = new JFileChooser();</span>
+<span class="nc" id="L128">            dialog.setDialogTitle(getI18NString(&quot;action.loadPosition.name&quot;));</span>
+<span class="nc" id="L129">            dialog.addChoosableFileFilter(new FileNameExtensionFilter(</span>
+<span class="nc" id="L130">                    getI18NString(&quot;action.loadPosition.filter&quot;), &quot;fen&quot;));</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">            if (dialog.showOpenDialog(_ui.getMainFrame()) == JFileChooser.APPROVE_OPTION) {</span>
+<span class="nc" id="L132">                final File fichier = dialog.getSelectedFile();</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">                if (fichier != null) {</span>
+<span class="nc" id="L134">                    BufferedReader in = null;</span>
+                    try {
+<span class="nc" id="L136">                        in = new BufferedReader(new FileReader(fichier));</span>
+<span class="nc" id="L137">                    } catch (final FileNotFoundException e) {</span>
+<span class="nc" id="L138">                        errorDialog();</span>
+                    }
+
+<span class="nc bnc" id="L141" title="All 2 branches missed.">                    if (in != null) {</span>
+<span class="nc" id="L142">                        String ligne = null;</span>
+                        try {
+<span class="nc" id="L144">                            ligne = in.readLine();</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">                            while ((ligne != null)</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">                                    &amp;&amp; (ligne.trim().length() == 0)) {</span>
+<span class="nc" id="L147">                                ligne = in.readLine();</span>
+                            }
+<span class="nc" id="L149">                            in.close();</span>
+<span class="nc" id="L150">                        } catch (final IOException e) {</span>
+<span class="nc" id="L151">                            errorDialog();</span>
+                            try {
+<span class="nc" id="L153">                                in.close();</span>
+<span class="nc" id="L154">                            } catch (final IOException e1) {</span>
+                                // Tant pis, la fermeture de la JVM s'en
+                                // chargera.
+                            }
+                        }
+
+<span class="nc bnc" id="L160" title="All 2 branches missed.">                        if (ligne != null) {</span>
+                            try {
+<span class="nc" id="L162">                                final MoveGenerator etat = BoardFactory</span>
+<span class="nc" id="L163">                                        .valueOf(FASTEST, EMPTY).derive(</span>
+<span class="nc" id="L164">                                                toBoard(ligne));</span>
+<span class="nc" id="L165">                                _ui.getGame().resetTo(etat);</span>
+<span class="nc" id="L166">                                _ui.setPositionFile(fichier);</span>
+<span class="nc" id="L167">                            } catch (final FENException e) {</span>
+<span class="nc" id="L168">                                errorDialog();</span>
+                            }
+                        }
+                    }
+                }
+            }
+<span class="nc" id="L174">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

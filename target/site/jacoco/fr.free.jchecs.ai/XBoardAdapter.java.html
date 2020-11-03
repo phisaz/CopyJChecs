@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>XBoardAdapter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">XBoardAdapter.java</span></div><h1>XBoardAdapter.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import fr.free.jchecs.core.Board;
+import fr.free.jchecs.core.BoardFactory;
+import fr.free.jchecs.core.FENException;
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.Game.State;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+import fr.free.jchecs.core.SANException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static fr.free.jchecs.core.BoardFactory.State.EMPTY;
+import static fr.free.jchecs.core.BoardFactory.State.STARTING;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+import static fr.free.jchecs.core.Constants.APPLICATION_NAME;
+import static fr.free.jchecs.core.Constants.APPLICATION_VERSION;
+import static fr.free.jchecs.core.FENUtils.toBoard;
+import static fr.free.jchecs.core.PieceType.BISHOP;
+import static fr.free.jchecs.core.PieceType.PAWN;
+import static fr.free.jchecs.core.SANUtils.toMove;
+import static fr.free.jchecs.core.SANUtils.toSAN;
+
+/**
+ * Classe utilitaire assurant l'interface entre l'I.A. et une I.H.M. utilisant
+ * le protocole XBoard/WinBoard.
+ *
+ * @author David Cotton
+ */
+<span class="nc bnc" id="L53" title="All 2 branches missed.">final class XBoardAdapter {</span>
+    /**
+     * Chaine identifiant l'application.
+     */
+    private static final String APPLICATION_STRING = APPLICATION_NAME + &quot; &quot; + APPLICATION_VERSION;
+
+    /**
+     * Chaine listant les capacités du moteur.
+     */
+    private static final String FEATURES_STRING = &quot;feature analyze=0 colors=0 myname=\&quot;&quot;
+            + APPLICATION_STRING
+            + &quot;\&quot; pause=0 ping=1 playother=0 san=1 setboard=1 sigint=0 sigterm=0 &quot;
+            + &quot;time=0 usermove=1 variants=\&quot;normal\&quot; done=1&quot;;
+
+    /**
+     * Log de la classe.
+     */
+<span class="nc" id="L70">    private static final Logger LOG = LoggerFactory.getLogger(XBoardAdapter.class);</span>
+
+    /**
+     * Moteur d'I.A. utilisé.
+     */
+<span class="nc" id="L75">    private static final Engine ENGINE = EngineFactory.newInstance();</span>
+
+    /**
+     * Etat de la partie.
+     */
+<span class="nc" id="L80">    private static final Game GAME = new Game();</span>
+
+    /**
+     * Etat du mode &quot;force&quot;.
+     */
+    private static boolean S_forceMode;
+
+    /**
+     * Etat du mode de jeu faible/fort.
+     */
+    private static boolean S_hardMode;
+
+    /**
+     * Indicateur de position illegale.
+     */
+<span class="nc" id="L95">    private static boolean S_illegalPosition;</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private XBoardAdapter() {
+        // Rien de particulier...
+    }
+
+    /**
+     * Lance l'interface.
+     *
+     * @param pArgs Arguments de la ligne de commande : ignorés.
+     */
+    public static void main(final String[] pArgs) {
+<span class="nc" id="L110">        final BufferedReader in = new BufferedReader(new InputStreamReader(</span>
+<span class="nc" id="L111">                System.in));</span>
+
+<span class="nc" id="L113">        while (true) {</span>
+<span class="nc" id="L114">            String commande = null;</span>
+            try {
+<span class="nc" id="L116">                commande = in.readLine();</span>
+<span class="nc" id="L117">            } catch (final IOException e) {</span>
+<span class="nc" id="L118">                LOG.error(e.toString());</span>
+            }
+<span class="nc bnc" id="L120" title="All 2 branches missed.">            if (commande == null) {</span>
+<span class="nc" id="L121">                LOG.error(&quot;Communication error.&quot;);</span>
+<span class="nc" id="L122">                System.exit(-1);</span>
+<span class="nc" id="L123">            } else {</span>
+<span class="nc" id="L124">                parseCommand(commande.trim());</span>
+            }
+        }
+    }
+
+    /**
+     * Interprète les commandes reçues.
+     *
+     * @param pCommande Commande reçue.
+     */
+    private static void parseCommand(final String pCommande) {
+<span class="nc bnc" id="L135" title="All 2 branches missed.">        if (pCommande.startsWith(&quot;accepted &quot;)) {</span>
+            // Tant mieux, mais il n'y a rien à faire.
+<span class="nc bnc" id="L137" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;level &quot;)) {</span>
+            // Non impléméntée...
+<span class="nc bnc" id="L139" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;ping &quot;)) {</span>
+<span class="nc" id="L140">            System.out.println(&quot;pong&quot; + pCommande.substring(4));</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;protover &quot;)) {</span>
+<span class="nc" id="L142">            System.out.println(FEATURES_STRING);</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;rejected &quot;)) {</span>
+<span class="nc" id="L144">            System.out.println(&quot;tellusererror Missing feature &quot;</span>
+<span class="nc" id="L145">                    + pCommande.substring(9));</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;result &quot;)) {</span>
+            // Non impléméntée...
+<span class="nc bnc" id="L148" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;setboard &quot;)) {</span>
+<span class="nc" id="L149">            final String fen = pCommande.substring(9);</span>
+
+<span class="nc" id="L151">            Board etat = null;</span>
+            try {
+<span class="nc" id="L153">                etat = toBoard(fen);</span>
+<span class="nc" id="L154">            } catch (final FENException e) {</span>
+                // Géré par la suite...
+            }
+<span class="nc bnc" id="L157" title="All 2 branches missed.">            if (etat == null) {</span>
+<span class="nc" id="L158">                S_illegalPosition = true;</span>
+<span class="nc" id="L159">                System.out.println(&quot;tellusererror Illegal position&quot;);</span>
+<span class="nc" id="L160">            } else {</span>
+<span class="nc" id="L161">                S_illegalPosition = false;</span>
+<span class="nc" id="L162">                GAME.resetTo(BoardFactory.valueOf(FASTEST, EMPTY)</span>
+<span class="nc" id="L163">                        .derive(etat));</span>
+            }
+<span class="nc bnc" id="L165" title="All 2 branches missed.">        } else if (pCommande.startsWith(&quot;usermove &quot;)) {</span>
+<span class="nc" id="L166">            final String xbSAN = pCommande.substring(9);</span>
+            // Filtre les '=' que certains programmes peuvent en cas de
+            // promotion de
+            // pion...
+            // ... et transforme les &quot;o&quot; majuscules utilisés par XBoard pour les
+            // roques en zéros.
+<span class="nc" id="L172">            final String san = xbSAN.replace(&quot;=&quot;, &quot;&quot;).replace('O', '0');</span>
+<span class="nc" id="L173">            Move mvt = null;</span>
+            try {
+<span class="nc" id="L175">                mvt = toMove(GAME.getBoard(), san);</span>
+<span class="nc" id="L176">            } catch (final SANException e) {</span>
+                // géré par la suite...
+            }
+<span class="nc bnc" id="L179" title="All 4 branches missed.">            if ((mvt == null) || S_illegalPosition) {</span>
+<span class="nc" id="L180">                System.out.println(&quot;Illegal move: &quot; + xbSAN);</span>
+<span class="nc" id="L181">            } else {</span>
+<span class="nc" id="L182">                GAME.moveFromCurrent(mvt);</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">                if (!S_forceMode) {</span>
+<span class="nc" id="L184">                    think();</span>
+                }
+            }
+<span class="nc bnc" id="L187" title="All 2 branches missed.">        } else if (&quot;computer&quot;.equals(pCommande)) {</span>
+            // Non impléméntée...
+<span class="nc bnc" id="L189" title="All 2 branches missed.">        } else if (&quot;easy&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L190">            S_hardMode = false;</span>
+<span class="nc bnc" id="L191" title="All 2 branches missed.">        } else if (&quot;force&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L192">            S_forceMode = true;</span>
+<span class="nc bnc" id="L193" title="All 2 branches missed.">        } else if (&quot;go&quot;.equals(pCommande)) {</span>
+<span class="nc bnc" id="L194" title="All 2 branches missed.">            if (S_illegalPosition) {</span>
+<span class="nc" id="L195">                System.out.println(&quot;Error (illegal position): go&quot;);</span>
+<span class="nc" id="L196">            } else {</span>
+<span class="nc" id="L197">                S_forceMode = false;</span>
+<span class="nc" id="L198">                think();</span>
+            }
+<span class="nc bnc" id="L200" title="All 2 branches missed.">        } else if (&quot;hard&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L201">            S_hardMode = true;</span>
+<span class="nc bnc" id="L202" title="All 2 branches missed.">        } else if (&quot;new&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L203">            GAME.resetTo(BoardFactory.valueOf(FASTEST, STARTING));</span>
+<span class="nc" id="L204">            S_forceMode = false;</span>
+<span class="nc" id="L205">            S_illegalPosition = false;</span>
+<span class="nc bnc" id="L206" title="All 2 branches missed.">        } else if (&quot;nopost&quot;.equals(pCommande)) {</span>
+            // Non impléméntée...
+<span class="nc bnc" id="L208" title="All 2 branches missed.">        } else if (&quot;post&quot;.equals(pCommande)) {</span>
+            // Non impléméntée...
+<span class="nc bnc" id="L210" title="All 2 branches missed.">        } else if (&quot;quit&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L211">            System.exit(0);</span>
+<span class="nc bnc" id="L212" title="All 2 branches missed.">        } else if (&quot;random&quot;.equals(pCommande)) {</span>
+            // Rien à faire.
+<span class="nc bnc" id="L214" title="All 2 branches missed.">        } else if (&quot;xboard&quot;.equals(pCommande)) {</span>
+<span class="nc" id="L215">            System.out.println(APPLICATION_STRING + &quot; started in xboard mode.&quot;);</span>
+<span class="nc" id="L216">        } else {</span>
+<span class="nc" id="L217">            System.out.println(&quot;Error (unknown command): &quot; + pCommande);</span>
+        }
+<span class="nc" id="L219">    }</span>
+
+    /**
+     * Teste la fin de partie.
+     *
+     * @param pAbandon Positionné à vrai si l'on souhaite tester l'abandon.
+     * @return Vrai si la partie n'est pas terminée.
+     */
+    private static boolean testResult(final boolean pAbandon) {
+<span class="nc" id="L228">        String rep = null;</span>
+
+<span class="nc" id="L230">        final State etat = GAME.getState();</span>
+<span class="nc bnc" id="L231" title="All 7 branches missed.">        switch (etat) {</span>
+            case BLACK_MATES:
+<span class="nc" id="L233">                rep = &quot;0-1 {Black mates}&quot;;</span>
+<span class="nc" id="L234">                break;</span>
+            case DRAWN_BY_50_MOVE_RULE:
+<span class="nc bnc" id="L236" title="All 2 branches missed.">                if (pAbandon) {</span>
+                    // Ne chercher l'abandon que si l'on n'a pas l'avantage (un pion
+                    // d'avance)...
+<span class="nc" id="L239">                    final MoveGenerator dispo = GAME.getBoard();</span>
+<span class="nc" id="L240">                    if (ENGINE.getHeuristic()</span>
+<span class="nc" id="L241">                            .evaluate(dispo, dispo.isWhiteActive()) &lt; PAWN</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">                            .getValue()) {</span>
+<span class="nc" id="L243">                        rep = &quot;1/2-1/2 {Drawn by 50 moves rule}&quot;;</span>
+                    }
+                }
+<span class="nc" id="L246">                break;</span>
+            case DRAWN_BY_TRIPLE_REPETITION:
+<span class="nc bnc" id="L248" title="All 2 branches missed.">                if (pAbandon) {</span>
+                    // Ne chercher l'abandon que si l'on est en difficulté (une tour
+                    // de
+                    // retard)...
+<span class="nc" id="L252">                    final MoveGenerator dispo = GAME.getBoard();</span>
+<span class="nc" id="L253">                    if (ENGINE.getHeuristic()</span>
+<span class="nc" id="L254">                            .evaluate(dispo, dispo.isWhiteActive()) &lt; -BISHOP</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">                            .getValue()) {</span>
+<span class="nc" id="L256">                        rep = &quot;1/2-1/2 {Drawn by triple repetition}&quot;;</span>
+                    }
+                }
+<span class="nc" id="L259">                break;</span>
+            case IN_PROGRESS:
+<span class="nc" id="L261">                break;</span>
+            case STALEMATE:
+<span class="nc" id="L263">                rep = &quot;1/2-1/2 {Stalemate}&quot;;</span>
+<span class="nc" id="L264">                break;</span>
+            case WHITE_MATES:
+<span class="nc" id="L266">                rep = &quot;1-0 {White mates}&quot;;</span>
+<span class="nc" id="L267">                break;</span>
+            default:
+<span class="nc bnc" id="L269" title="All 2 branches missed.">                assert false;</span>
+        }
+
+<span class="nc bnc" id="L272" title="All 2 branches missed.">        if (rep != null) {</span>
+<span class="nc" id="L273">            System.out.println(rep);</span>
+        }
+
+<span class="nc bnc" id="L276" title="All 2 branches missed.">        return rep == null;</span>
+    }
+
+    /**
+     * Recherche et renvoi le meilleur coup à partir de la position en cours.
+     */
+    private static void think() {
+<span class="nc bnc" id="L283" title="All 2 branches missed.">        if (testResult(true)) {</span>
+<span class="nc" id="L284">            final MoveGenerator etat = BoardFactory.valueOf(FASTEST, EMPTY)</span>
+<span class="nc" id="L285">                    .derive(GAME.getBoard());</span>
+
+<span class="nc" id="L287">            int profondeur = 5;</span>
+<span class="nc bnc" id="L288" title="All 2 branches missed.">            if (S_hardMode) {</span>
+<span class="nc bnc" id="L289" title="All 2 branches missed.">                if (etat.getPiecesCount() &lt;= 6) {</span>
+<span class="nc" id="L290">                    profondeur++;</span>
+                }
+            }
+<span class="nc" id="L293">            ENGINE.setSearchDepthLimit(profondeur);</span>
+
+<span class="nc" id="L295">            final Move mvt = ENGINE.getMoveFor(etat);</span>
+
+<span class="nc" id="L297">            final String san = toSAN(etat, mvt);</span>
+<span class="nc" id="L298">            GAME.moveFromCurrent(mvt);</span>
+            // Transforme les zéros en &quot;o&quot; majuscules utilisés par XBoard pour
+            // les
+            // roques...
+            // ... et supprime les marques de prise &quot;en passant&quot; inconnues de
+            // XBoard.
+<span class="nc" id="L304">            final String xbSAN = san.replace(&quot; e.p.&quot;, &quot;&quot;).replace(&quot;O&quot;, &quot;0&quot;);</span>
+<span class="nc" id="L305">            System.out.println(&quot;move &quot; + xbSAN);</span>
+
+<span class="nc" id="L307">            testResult(false);</span>
+        }
+<span class="nc" id="L309">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

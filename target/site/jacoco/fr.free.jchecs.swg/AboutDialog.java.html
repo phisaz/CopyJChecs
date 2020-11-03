@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AboutDialog.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">AboutDialog.java</span></div><h1>AboutDialog.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Desktop;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+
+import static fr.free.jchecs.core.Constants.APPLICATION_AUTHOR;
+import static fr.free.jchecs.core.Constants.APPLICATION_NAME;
+import static fr.free.jchecs.core.Constants.APPLICATION_VERSION;
+import static fr.free.jchecs.core.Constants.APPLICATION_WEB;
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Boite de dialogue de l'option &quot;A propos...&quot;.
+ *
+ * @author David Cotton
+ */
+final class AboutDialog {
+    /**
+     * Panel principal de la boite de dialogue.
+     */
+    private static JOptionPane S_optionPane;
+
+    /**
+     * Composant affichant la licence.
+     */
+    private static JComponent S_licensePanel;
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private AboutDialog() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Renvoi le composant affichant la licence.
+     *
+     * @return Zone affichant la licence.
+     */
+    private static synchronized JComponent getLicensePanel() {
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if (S_licensePanel == null) {</span>
+<span class="nc" id="L89">            final JEditorPane ep = new JEditorPane();</span>
+<span class="nc" id="L90">            ep.setEditable(false);</span>
+<span class="nc" id="L91">            ep.setContentType(&quot;text/html&quot;);</span>
+<span class="nc" id="L92">            final String chemin = getI18NString(&quot;dialog.about.url.license&quot;);</span>
+<span class="nc" id="L93">            final LicenseLoader ll = new LicenseLoader(ep,</span>
+<span class="nc" id="L94">                    Start.class.getResource(chemin));</span>
+<span class="nc" id="L95">            ll.start();</span>
+
+<span class="nc" id="L97">            S_licensePanel = new JScrollPane(ep);</span>
+        }
+
+<span class="nc" id="L100">        return S_licensePanel;</span>
+    }
+
+    /**
+     * Renvoi, après l'avoir construit si nécessaire, le panel principal de la
+     * boite de dialogue.
+     *
+     * @return Panel principal de la boite de dialogue.
+     */
+    private static synchronized JOptionPane getOptionPane() {
+<span class="nc bnc" id="L110" title="All 2 branches missed.">        if (S_optionPane == null) {</span>
+<span class="nc" id="L111">            final JTabbedPane onglets = new JTabbedPane(SwingConstants.TOP,</span>
+<span class="nc" id="L112">                    JTabbedPane.SCROLL_TAB_LAYOUT);</span>
+
+<span class="nc" id="L114">            final JPanel auteur = new JPanel(new BorderLayout());</span>
+<span class="nc" id="L115">            final JLabel app = new JLabel(APPLICATION_NAME,</span>
+<span class="nc" id="L116">                    getImageIcon(&quot;icon64.png&quot;), SwingConstants.CENTER);</span>
+<span class="nc" id="L117">            final Font ft = app.getFont();</span>
+<span class="nc" id="L118">            app.setFont(ft.deriveFont(Font.BOLD, ft.getSize() * 2.5F));</span>
+<span class="nc" id="L119">            auteur.add(app, BorderLayout.NORTH);</span>
+<span class="nc" id="L120">            final JPanel centre = new JPanel(new GridLayout(4, 1));</span>
+<span class="nc" id="L121">            final JLabel ver = new JLabel(&quot;v &quot; + APPLICATION_VERSION,</span>
+<span class="nc" id="L122">                    SwingConstants.CENTER);</span>
+<span class="nc" id="L123">            ver.setFont(ft.deriveFont(Font.BOLD, ft.getSize() * 1.5F));</span>
+<span class="nc" id="L124">            centre.add(ver);</span>
+<span class="nc" id="L125">            centre.add(new JLabel(&quot;© 2006-2017 - &quot; + APPLICATION_AUTHOR,</span>
+<span class="nc" id="L126">                    SwingConstants.CENTER));</span>
+<span class="nc" id="L127">            final JLabel traducteur = new JLabel(</span>
+<span class="nc" id="L128">                    getI18NString(&quot;dialog.about.translater&quot;),</span>
+<span class="nc" id="L129">                    SwingConstants.CENTER);</span>
+<span class="nc" id="L130">            traducteur.setFont(ft.deriveFont(Font.ITALIC));</span>
+<span class="nc" id="L131">            centre.add(traducteur);</span>
+<span class="nc bnc" id="L132" title="All 2 branches missed.">            if (Desktop.isDesktopSupported()</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">                    &amp;&amp; Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {</span>
+<span class="nc" id="L134">                final JPanel panelWeb = new JPanel();</span>
+<span class="nc" id="L135">                final JButton boutonWeb = new JButton(APPLICATION_WEB);</span>
+<span class="nc" id="L136">                boutonWeb</span>
+<span class="nc" id="L137">                        .setToolTipText(getI18NString(&quot;dialog.about.web.tooltip&quot;));</span>
+<span class="nc" id="L138">                boutonWeb.addActionListener(pEvt -&gt; {</span>
+                    try {
+<span class="nc" id="L140">                        Desktop.getDesktop().browse(</span>
+<span class="nc" id="L141">                                new URI(APPLICATION_WEB));</span>
+<span class="nc" id="L142">                    } catch (final IOException | URISyntaxException e) {</span>
+                        // Pas grave : on peut se passer de l'accès au site Web...
+                    }
+<span class="nc" id="L145">                });</span>
+<span class="nc" id="L146">                panelWeb.add(boutonWeb);</span>
+<span class="nc" id="L147">                centre.add(panelWeb);</span>
+<span class="nc" id="L148">            } else {</span>
+<span class="nc" id="L149">                centre.add(new JLabel(APPLICATION_WEB, SwingConstants.CENTER));</span>
+            }
+<span class="nc" id="L151">            auteur.add(centre, BorderLayout.CENTER);</span>
+<span class="nc" id="L152">            final JTextArea remerciements = new JTextArea(</span>
+<span class="nc" id="L153">                    getI18NString(&quot;dialog.about.thanks&quot;));</span>
+<span class="nc" id="L154">            remerciements.setFont(ft.deriveFont(Font.ITALIC,</span>
+<span class="nc" id="L155">                    ft.getSize() * 0.9F));</span>
+<span class="nc" id="L156">            remerciements.setLineWrap(true);</span>
+<span class="nc" id="L157">            remerciements.setWrapStyleWord(true);</span>
+<span class="nc" id="L158">            remerciements.setOpaque(false);</span>
+<span class="nc" id="L159">            remerciements.setForeground(Color.DARK_GRAY);</span>
+<span class="nc" id="L160">            remerciements.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0,</span>
+<span class="nc" id="L161">                    Color.LIGHT_GRAY));</span>
+<span class="nc" id="L162">            auteur.add(remerciements, BorderLayout.SOUTH);</span>
+<span class="nc" id="L163">            onglets.add(getI18NString(&quot;dialog.about.author&quot;), auteur);</span>
+
+<span class="nc" id="L165">            onglets.add(getI18NString(&quot;dialog.about.license&quot;),</span>
+<span class="nc" id="L166">                    getLicensePanel());</span>
+
+<span class="nc" id="L168">            final TableModel modele = new AboutModel();</span>
+<span class="nc" id="L169">            final JTable proprietes = new JTable(modele);</span>
+<span class="nc" id="L170">            proprietes.getTableHeader().setReorderingAllowed(false);</span>
+<span class="nc" id="L171">            proprietes.setEnabled(false);</span>
+<span class="nc" id="L172">            proprietes.setRowSelectionAllowed(false);</span>
+<span class="nc" id="L173">            proprietes.setRowSorter(new TableRowSorter&lt;&gt;(modele));</span>
+<span class="nc" id="L174">            proprietes.setShowHorizontalLines(false);</span>
+<span class="nc" id="L175">            proprietes.setDefaultRenderer(Object.class,</span>
+<span class="nc" id="L176">                    new EvenOddRowsRenderer());</span>
+<span class="nc" id="L177">            onglets.add(getI18NString(&quot;dialog.about.system&quot;), new JScrollPane(</span>
+<span class="nc" id="L178">                    proprietes));</span>
+<span class="nc" id="L179">            onglets.setPreferredSize(new Dimension(450, 300));</span>
+
+<span class="nc" id="L181">            S_optionPane = new JOptionPane(onglets, JOptionPane.PLAIN_MESSAGE);</span>
+        }
+
+<span class="nc" id="L184">        return S_optionPane;</span>
+    }
+
+    /**
+     * Affiche la boite de dialogue.
+     *
+     * @param pParent Composant parent de la boite de dialogue (peut être à null).
+     */
+    static void showAboutDialog(final Component pParent) {
+<span class="nc" id="L193">        final JDialog dlg = getOptionPane().createDialog(pParent,</span>
+<span class="nc" id="L194">                getI18NString(&quot;dialog.about.title&quot;));</span>
+<span class="nc" id="L195">        dlg.pack();</span>
+<span class="nc" id="L196">        dlg.setResizable(false);</span>
+<span class="nc" id="L197">        dlg.setLocationRelativeTo(pParent);</span>
+<span class="nc" id="L198">        dlg.setVisible(true);</span>
+<span class="nc" id="L199">    }</span>
+
+    /**
+     * Processus de chargement de la licence en tâche de fond.
+     */
+    private static final class LicenseLoader extends Thread {
+        /**
+         * Zone texte accueillant la licence.
+         */
+        private final JEditorPane _editorPane;
+
+        /**
+         * URL de la licence.
+         */
+        private final URL _url;
+
+        /**
+         * Construit le processus.
+         *
+         * @param pZoneTexte Zone texte accueillant la licence.
+         * @param pURL       URL de la licence.
+         */
+        LicenseLoader(final JEditorPane pZoneTexte, final URL pURL) {
+<span class="nc" id="L222">            super(&quot;loadLicense&quot;);</span>
+
+<span class="nc" id="L224">            _editorPane = pZoneTexte;</span>
+<span class="nc" id="L225">            _url = pURL;</span>
+
+<span class="nc" id="L227">            setDaemon(true);</span>
+<span class="nc" id="L228">        }</span>
+
+        /**
+         * Charge le texte de la licence en tâche de fond.
+         */
+        @Override
+        public void run() {
+            try {
+<span class="nc" id="L236">                _editorPane.setPage(_url);</span>
+<span class="nc" id="L237">            } catch (final IOException e) {</span>
+<span class="nc" id="L238">                _editorPane</span>
+<span class="nc" id="L239">                        .setText(&quot;&lt;center&gt;&lt;h3&gt;This program is under GPL.&lt;/h3&gt;&lt;/center&gt;&quot;);</span>
+            }
+<span class="nc" id="L241">        }</span>
+    }
+
+    /**
+     * Modèle de données interne pour le tableau des propriétés.
+     */
+    private static final class AboutModel extends DefaultTableModel {
+        /**
+         * Identifiant de la classe pour la sérialisation.
+         */
+        private static final long serialVersionUID = -5557358361119743070L;
+
+        /**
+         * Liste des clés des propriétés système.
+         */
+        private final List&lt;Object&gt; _keys;
+
+        /**
+         * Constructeur par défaut.
+         */
+<span class="nc" id="L261">        AboutModel() {</span>
+<span class="nc" id="L262">            _keys = new ArrayList&lt;&gt;(System.getProperties().keySet());</span>
+
+<span class="nc" id="L264">            setColumnCount(2);</span>
+<span class="nc" id="L265">            setRowCount(_keys.size());</span>
+
+<span class="nc" id="L267">            final String[] enTetes = {</span>
+<span class="nc" id="L268">                    getI18NString(&quot;dialog.about.properties&quot;),</span>
+<span class="nc" id="L269">                    getI18NString(&quot;dialog.about.values&quot;),};</span>
+<span class="nc" id="L270">            setColumnIdentifiers(enTetes);</span>
+<span class="nc" id="L271">        }</span>
+
+        /**
+         * Renvoi le contenu d'une cellule.
+         *
+         * @param pLigne   Indice de la ligne.
+         * @param pColonne Indice de la colonne.
+         * @return Contenu de la cellule correspondante.
+         */
+        @Override
+        public Object getValueAt(final int pLigne, final int pColonne) {
+<span class="nc" id="L282">            String res = (String) _keys.get(pLigne);</span>
+
+<span class="nc bnc" id="L284" title="All 2 branches missed.">            if (pColonne == 1) {</span>
+<span class="nc" id="L285">                res = System.getProperties().getProperty(res);</span>
+            }
+
+<span class="nc" id="L288">            return res;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

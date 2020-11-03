@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BoardFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">BoardFactory.java</span></div><h1>BoardFactory.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
+/**
+ * Classe utilitaire délivrant des instances de représentation d'un état de jeu.
+ *
+ * @author David Cotton
+ */
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">public final class BoardFactory {</span>
+    /**
+     * Log de la classe.
+     */
+<span class="fc" id="L36">    private static final Logger LOG = LoggerFactory.getLogger(BoardFactory.class);</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private BoardFactory() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Renvoi une instance de description de l'état d'une partie.
+     *
+     * @param pType Type de la méthode de représentation de l'instance souhaitée.
+     * @param pEtat Etat de la partie.
+     * @return Instance correspondante.
+     */
+    public static MoveGenerator valueOf(final Type pType, final State pEtat) {
+<span class="fc" id="L53">        MoveGenerator res = null;</span>
+<span class="pc bpc" id="L54" title="1 of 3 branches missed.">        switch (pEtat) {</span>
+            case EMPTY:
+<span class="fc" id="L56">                res = newInstance(pType.getClassName(), ArrayBoard.EMPTY);</span>
+<span class="fc" id="L57">                break;</span>
+            case STARTING:
+<span class="fc" id="L59">                res = newInstance(pType.getClassName(), ArrayBoard.STARTING);</span>
+<span class="fc" id="L60">                break;</span>
+            default:
+<span class="nc bnc" id="L62" title="All 2 branches missed.">                assert false;</span>
+        }
+
+<span class="fc" id="L65">        return res;</span>
+    }
+
+    /**
+     * Renvoi une instance de générateur de mouvements, obtenue par réflexion.
+     *
+     * @param pClassName    Nom de la classe.
+     * @param pInitialState Etat initial.
+     * @return Nouvelle instance (ou null en cas d'erreur).
+     */
+    private static MoveGenerator newInstance(final String pClassName,
+                                             final Board pInitialState) {
+<span class="fc" id="L77">        MoveGenerator res = null;</span>
+
+<span class="fc" id="L79">        Class&lt;?&gt; cls = null;</span>
+        try {
+<span class="fc" id="L81">            cls = Class.forName(pClassName);</span>
+<span class="pc" id="L82">        } catch (final ClassNotFoundException e1) {</span>
+<span class="nc" id="L83">            LOG.warn(&quot;Board class [{}] not found.&quot;, pClassName);</span>
+        }
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (cls != null) {</span>
+<span class="fc" id="L86">            Constructor&lt;?&gt; cst = null;</span>
+            try {
+<span class="fc" id="L88">                cst = cls.getDeclaredConstructor(Board.class);</span>
+<span class="pc" id="L89">            } catch (final SecurityException e) {</span>
+<span class="nc" id="L90">                LOG.warn(&quot;Security exception on class [[}].&quot;, pClassName);</span>
+<span class="nc" id="L91">            } catch (final NoSuchMethodException e) {</span>
+<span class="nc" id="L92">                LOG.warn(&quot;No such method: {}&quot;, e.getLocalizedMessage());</span>
+            }
+<span class="pc bpc" id="L94" title="1 of 2 branches missed.">            if (cst != null) {</span>
+                Object o;
+                try {
+<span class="fc" id="L97">                    o = cst.newInstance(pInitialState);</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">                    if (o instanceof MoveGenerator) {</span>
+<span class="fc" id="L99">                        res = (MoveGenerator) o;</span>
+                    }
+<span class="pc" id="L101">                } catch (final IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException e) {</span>
+<span class="nc" id="L102">                    LOG.warn(&quot;New instance creation failure.&quot;, e);</span>
+                }
+            }
+        }
+
+<span class="fc" id="L107">        return res;</span>
+    }
+
+    /**
+     * Enumération des états initiaux reconnus.
+     */
+<span class="fc" id="L113">    public enum State {</span>
+<span class="fc" id="L114">        /**</span>
+         * Etat initial, sans pièces.
+         */
+<span class="fc" id="L117">        EMPTY,</span>
+
+<span class="fc" id="L119">        /**</span>
+         * Etat initial standard.
+         */
+<span class="fc" id="L122">        STARTING</span>
+    }
+
+    /**
+     * Enumération des types de représentation d'une partie disponibles.
+     */
+<span class="fc" id="L128">    public enum Type {</span>
+<span class="fc" id="L129">        /**</span>
+         * Description basée sur un tableau à deux dimensions.
+         */
+<span class="fc" id="L132">        ARRAY(&quot;fr.free.jchecs.core.ArrayBoard&quot;),</span>
+
+<span class="fc" id="L134">        /**</span>
+         * Description basée sur un tableau bordé, à une dimension.
+         */
+<span class="fc" id="L137">        MAILBOX(&quot;fr.free.jchecs.core.MailboxBoard&quot;),</span>
+
+<span class="fc" id="L139">        /**</span>
+         * Description la plus rapide : actuellement équivalent à MAILBOX.
+         */
+<span class="fc" id="L142">        FASTEST(&quot;fr.free.jchecs.core.MailboxBoard&quot;),</span>
+
+<span class="fc" id="L144">        /**</span>
+         * Description basée sur un tableau à une dimension avec indice filtré
+         * par la valeur 0x88.
+         */
+<span class="fc" id="L148">        X88(&quot;fr.free.jchecs.core.X88Board&quot;);</span>
+
+        /**
+         * Nom de la classe d'implémentation.
+         */
+        private final String _className;
+
+        /**
+         * Instancie une nouvelle constante de type de MoveGenerator.
+         *
+         * @param pClassName Nom de la classe d'implémentation.
+         */
+<span class="fc" id="L160">        Type(final String pClassName) {</span>
+<span class="fc" id="L161">            _className = pClassName;</span>
+<span class="fc" id="L162">        }</span>
+
+        /**
+         * Renvoi le nom de la classe.
+         *
+         * @return Nom de la classe implémentant ce type.
+         */
+        String getClassName() {
+<span class="fc" id="L170">            return _className;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

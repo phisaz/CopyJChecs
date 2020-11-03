@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Move.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">Move.java</span></div><h1>Move.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.io.Serializable;
+
+/**
+ * Description d'un mouvement d'une pièce.
+ * &lt;p&gt;
+ * Les instances de cette classe sont &lt;b&gt;immuables&lt;/b&gt;, donc sûres vis-à-vis des
+ * threads.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+public final class Move implements Serializable {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = 8372326813848101389L;
+
+    /**
+     * Pièce déplacée.
+     */
+    private final Piece _piece;
+
+    /**
+     * Case de départ.
+     */
+    private final Square _from;
+
+    /**
+     * Case d'arrivée.
+     */
+    private final Square _to;
+
+    /**
+     * Eventuelle pièce capturée.
+     */
+    private final Piece _captured;
+
+    /**
+     * Eventuelle promotion.
+     */
+    private final Piece _promotion;
+
+    /**
+     * Buffer stockant l'entier identifiant un mouvement.
+     */
+    private Integer _id;
+
+    /**
+     * Instancie une nouvelle description de mouvement, sans prise.
+     *
+     * @param pPiece       Pièce à bouger.
+     * @param pOrigine     Case à l'origine du mouvement.
+     * @param pDestination Case finale du mouvement.
+     */
+<span class="fc" id="L75">    public Move(final Piece pPiece, final Square pOrigine,</span>
+                final Square pDestination) {
+<span class="fc" id="L77">        _piece = pPiece;</span>
+<span class="fc" id="L78">        _from = pOrigine;</span>
+<span class="fc" id="L79">        _to = pDestination;</span>
+<span class="fc" id="L80">        _captured = null;</span>
+<span class="fc" id="L81">        _promotion = null;</span>
+<span class="fc" id="L82">    }</span>
+
+    /**
+     * Instancie une nouvelle description de mouvement.
+     *
+     * @param pPiece       Pièce à bouger.
+     * @param pOrigine     Case à l'origine du mouvement.
+     * @param pDestination Case finale du mouvement.
+     * @param pPrise       Pièce prise (ou null si aucune).
+     */
+<span class="fc" id="L92">    public Move(final Piece pPiece, final Square pOrigine,</span>
+                final Square pDestination, final Piece pPrise) {
+<span class="fc" id="L94">        _piece = pPiece;</span>
+<span class="fc" id="L95">        _from = pOrigine;</span>
+<span class="fc" id="L96">        _to = pDestination;</span>
+<span class="fc" id="L97">        _captured = pPrise;</span>
+<span class="fc" id="L98">        _promotion = null;</span>
+<span class="fc" id="L99">    }</span>
+
+    /**
+     * Instancie une nouvelle description de mouvement.
+     *
+     * @param pPiece       Pièce à bouger.
+     * @param pOrigine     Case à l'origine du mouvement.
+     * @param pDestination Case finale du mouvement.
+     * @param pPrise       Pièce prise (ou null si aucune).
+     * @param pPromotion   Promotion (ou null si aucune).
+     */
+<span class="fc" id="L110">    public Move(final Piece pPiece, final Square pOrigine,</span>
+                final Square pDestination, final Piece pPrise,
+                final Piece pPromotion) {
+<span class="fc" id="L113">        _piece = pPiece;</span>
+<span class="fc" id="L114">        _from = pOrigine;</span>
+<span class="fc" id="L115">        _to = pDestination;</span>
+<span class="fc" id="L116">        _captured = pPrise;</span>
+<span class="fc" id="L117">        _promotion = pPromotion;</span>
+<span class="fc" id="L118">    }</span>
+
+    /**
+     * Teste l'égalité entre deux mouvements.
+     *
+     * @param pObjet Objet avec lequel comparer le mouvement (peut être à null).
+     * @return &quot;true&quot; si l'on a deux mouvements identiques.
+     */
+    @Override
+    public boolean equals(final Object pObjet) {
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if (this == pObjet) {</span>
+<span class="fc" id="L129">            return true;</span>
+        }
+
+<span class="fc bfc" id="L132" title="All 2 branches covered.">        if (pObjet instanceof Move) {</span>
+<span class="fc" id="L133">            final Move m = (Move) pObjet;</span>
+<span class="pc bpc" id="L134" title="1 of 6 branches missed.">            return (_from == m._from) &amp;&amp; (_piece == m._piece) &amp;&amp; (_to == m._to)</span>
+<span class="pc bpc" id="L135" title="1 of 2 branches missed.">                    &amp;&amp; (_captured == m._captured)</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">                    &amp;&amp; (_promotion == m._promotion);</span>
+        }
+
+<span class="fc" id="L139">        return false;</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle pièce capturée.
+     *
+     * @return Pièce capturée (ou null si aucune).
+     */
+    public Piece getCaptured() {
+<span class="fc" id="L148">        return _captured;</span>
+    }
+
+    /**
+     * Renvoi la case de départ du mouvement.
+     *
+     * @return Case de départ.
+     */
+    public Square getFrom() {
+<span class="fc" id="L157">        return _from;</span>
+    }
+
+    /**
+     * Renvoi la pièce déplacée.
+     *
+     * @return Pièce déplacée.
+     */
+    public Piece getPiece() {
+<span class="fc" id="L166">        return _piece;</span>
+    }
+
+    /**
+     * Renvoi l'éventuelle promotion.
+     *
+     * @return Promotion (ou null si aucune).
+     */
+    public Piece getPromotion() {
+<span class="fc" id="L175">        return _promotion;</span>
+    }
+
+    /**
+     * Renvoi la case d'arrivée du mouvement.
+     *
+     * @return Case d'arrivée.
+     */
+    public Square getTo() {
+<span class="fc" id="L184">        return _to;</span>
+    }
+
+    /**
+     * Renvoi le code de hachage du mouvement.
+     *
+     * @return Code de hachage.
+     */
+    @Override
+    public int hashCode() {
+<span class="fc" id="L194">        return toId();</span>
+    }
+
+    /**
+     * Renvoi l'entier identifiant un mouvement.
+     *
+     * @return Entier identifiant un mouvement.
+     */
+    public int toId() {
+<span class="fc bfc" id="L203" title="All 2 branches covered.">        if (_id == null) {</span>
+<span class="fc" id="L204">            int id = (_piece.ordinal() &lt;&lt; 20) + (_from.getIndex() &lt;&lt; 14)</span>
+<span class="fc" id="L205">                    + (_to.getIndex() &lt;&lt; 8);</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">            if (_captured != null) {</span>
+<span class="fc" id="L207">                id += (_captured.ordinal() + 1) &lt;&lt; 4;</span>
+            }
+<span class="fc bfc" id="L209" title="All 2 branches covered.">            if (_promotion != null) {</span>
+<span class="fc" id="L210">                id += _promotion.ordinal() + 1;</span>
+            }
+<span class="fc" id="L212">            _id = id;</span>
+        }
+
+<span class="fc" id="L215">        return _id;</span>
+    }
+
+    /**
+     * Renvoi une chaine représentant le mouvement.
+     *
+     * @return Chaine décrivant le mouvement.
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L225">        return getClass().getSimpleName() + &quot;[piece=&quot; + _piece + &quot;,from=&quot; + _from +</span>
+<span class="fc" id="L226">                &quot;,to=&quot; + _to + &quot;,captured=&quot; + _captured + &quot;,promotion=&quot; + _promotion + ']';</span>
+    }
+
+    /**
+     * Renvoi une instance de mouvement correspondant à l'entier identifiant
+     * reçu.
+     *
+     * @param pId Entier identifiant un mouvement.
+     * @return Instance du mouvement correspondant.
+     */
+    public static Move valueOf(final int pId) {
+<span class="fc" id="L237">        final Piece pce = Piece.values()[(pId &gt;&gt; 20) &amp; 0xF];</span>
+<span class="fc" id="L238">        final Square src = Square.valueOf((pId &gt;&gt; 14) &amp; 0x3F);</span>
+<span class="fc" id="L239">        final Square dst = Square.valueOf((pId &gt;&gt; 8) &amp; 0x3F);</span>
+<span class="fc" id="L240">        final int idCpt = (pId &gt;&gt; 4) &amp; 0xF;</span>
+        final Piece cpt;
+<span class="fc bfc" id="L242" title="All 2 branches covered.">        if (idCpt &lt;= 0) {</span>
+<span class="fc" id="L243">            cpt = null;</span>
+<span class="fc" id="L244">        } else {</span>
+<span class="fc" id="L245">            cpt = Piece.values()[idCpt - 1];</span>
+        }
+<span class="fc" id="L247">        final int idProm = pId &amp; 0xF;</span>
+        final Piece prom;
+<span class="pc bpc" id="L249" title="1 of 2 branches missed.">        if (idProm &lt;= 0) {</span>
+<span class="fc" id="L250">            prom = null;</span>
+<span class="fc" id="L251">        } else {</span>
+<span class="nc" id="L252">            prom = Piece.values()[idProm - 1];</span>
+        }
+
+<span class="fc" id="L255">        return new Move(pce, src, dst, cpt, prom);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

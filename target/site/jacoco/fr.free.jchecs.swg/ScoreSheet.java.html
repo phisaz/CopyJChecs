@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ScoreSheet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">ScoreSheet.java</span></div><h1>ScoreSheet.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Dimension;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+import javax.swing.JComponent;
+import javax.swing.JEditorPane;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingUtilities;
+
+import fr.free.jchecs.core.Game;
+
+/**
+ * Composant graphique chargé d'afficher la feuille de la partie.
+ *
+ * @author David Cotton
+ */
+final class ScoreSheet {
+    /**
+     * Composant graphique externe.
+     */
+    private final JComponent _component;
+
+    /**
+     * Construit un nouveau composant d'affichage de la notation.
+     *
+     * @param pPartie Définition de partie liée au composant.
+     */
+<span class="nc" id="L49">    ScoreSheet(final Game pPartie) {</span>
+<span class="nc" id="L50">        final JEditorPane champ = new JEditorPane();</span>
+<span class="nc" id="L51">        champ.setContentType(&quot;text/html&quot;);</span>
+<span class="nc" id="L52">        champ.setEditable(false);</span>
+<span class="nc" id="L53">        final JScrollPane fond = new JScrollPane(champ,</span>
+<span class="nc" id="L54">                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,</span>
+<span class="nc" id="L55">                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
+<span class="nc" id="L56">        _component = fond;</span>
+<span class="nc" id="L57">        fond.getViewport().setPreferredSize(new Dimension(175, 250));</span>
+<span class="nc" id="L58">        pPartie.addPropertyChangeListener(&quot;position&quot;, new ScoreSheetListener(</span>
+<span class="nc" id="L59">                pPartie, champ));</span>
+<span class="nc" id="L60">    }</span>
+
+    /**
+     * Renvoi le composant graphique affichable.
+     *
+     * @return Composant graphique.
+     */
+    JComponent getComponent() {
+<span class="nc" id="L68">        return _component;</span>
+    }
+
+    /**
+     * Classe à l'écoute des évènements de la feuille de score.
+     */
+    private static final class ScoreSheetListener implements
+            PropertyChangeListener {
+        /**
+         * Référence du champ affichant le score.
+         */
+        final JEditorPane _editorPane;
+
+        /**
+         * Référence de la partie liée à la feuille de score.
+         */
+        private final Game _game;
+
+        /**
+         * Instancie un nouvel écouteur.
+         *
+         * @param pPartie Partie liée.
+         * @param pChamp  Champ affichant le score.
+         */
+<span class="nc" id="L92">        ScoreSheetListener(final Game pPartie, final JEditorPane pChamp) {</span>
+<span class="nc" id="L93">            _game = pPartie;</span>
+<span class="nc" id="L94">            _editorPane = pChamp;</span>
+<span class="nc" id="L95">        }</span>
+
+        /**
+         * Réagit au changement dans la définition de la partie.
+         *
+         * @param pEvt Evènement signalant le changement.
+         */
+        @Override
+        public void propertyChange(final PropertyChangeEvent pEvt) {
+<span class="nc" id="L104">            final StringBuilder sb = new StringBuilder(&quot;&lt;html&gt;&quot;);</span>
+<span class="nc" id="L105">            final String[] sans = _game.getSANStrings();</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">            for (int i = 0; i &lt; sans.length; i++) {</span>
+                final String debImp;
+                final String finImp;
+<span class="nc bnc" id="L109" title="All 2 branches missed.">                if (i % 2 == 0) {</span>
+<span class="nc" id="L110">                    debImp = &quot;&lt;b&gt;&quot;;</span>
+<span class="nc" id="L111">                    finImp = &quot;&lt;/b&gt;&quot;;</span>
+<span class="nc" id="L112">                } else {</span>
+<span class="nc" id="L113">                    debImp = &quot;&quot;;</span>
+<span class="nc" id="L114">                    finImp = &quot;&quot;;</span>
+                }
+                final String debShow;
+                final String finShow;
+<span class="nc bnc" id="L118" title="All 2 branches missed.">                if (i == _game.getCurrentMoveIndex()) {</span>
+<span class="nc" id="L119">                    debShow = &quot;&lt;font bgcolor=#E0E0FF&gt;&lt;a name=\&quot;show\&quot;&gt;&quot;;</span>
+<span class="nc" id="L120">                    finShow = &quot;&lt;/a&gt;&lt;/font&gt;&quot;;</span>
+<span class="nc" id="L121">                } else {</span>
+<span class="nc" id="L122">                    debShow = &quot;&quot;;</span>
+<span class="nc" id="L123">                    finShow = &quot;&quot;;</span>
+                }
+<span class="nc" id="L125">                sb.append(debImp).append(debShow);</span>
+<span class="nc" id="L126">                sb.append(&quot;&amp;nbsp;&quot;).append(sans[i]);</span>
+<span class="nc" id="L127">                sb.append(finShow).append(finImp);</span>
+            }
+<span class="nc" id="L129">            sb.append(&quot;&lt;/html&gt;&quot;);</span>
+<span class="nc" id="L130">            SwingUtilities.invokeLater(new Runnable() {</span>
+                /**
+                 * Lance la mise à jour dans le thread Swing, pour rester
+                 * synchrone.
+                 */
+                @Override
+                public void run() {
+<span class="nc" id="L137">                    _editorPane.setText(sb.toString());</span>
+<span class="nc" id="L138">                    _editorPane.scrollToReference(&quot;show&quot;);</span>
+<span class="nc" id="L139">                }</span>
+            });
+<span class="nc" id="L141">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PieceUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PieceUI.java</span></div><h1>PieceUI.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
+import java.util.EnumMap;
+import java.util.Map;
+
+import static java.awt.Image.SCALE_SMOOTH;
+import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
+
+import javax.swing.ImageIcon;
+
+import fr.free.jchecs.core.Piece;
+
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Classe renvoyant la représentation graphique d'une pièce.
+ *
+ * @author David Cotton
+ */
+final class PieceUI {
+
+    /**
+     * Correspondances pièce / curseur.
+     */
+<span class="nc" id="L50">    private final Map&lt;Piece, Cursor&gt; _pieceToCursor = new EnumMap&lt;&gt;(</span>
+<span class="nc" id="L51">            Piece.class);</span>
+
+    /**
+     * Correspondances pièce / image.
+     */
+<span class="nc" id="L56">    private final Map&lt;Piece, Image&gt; _pieceToImage = new EnumMap&lt;&gt;(</span>
+<span class="nc" id="L57">            Piece.class);</span>
+
+    /**
+     * Correspondances pièce / image.
+     */
+<span class="nc" id="L62">    private final Map&lt;Piece, Image&gt; _pieceToSmallImage = new EnumMap&lt;&gt;(</span>
+<span class="nc" id="L63">            Piece.class);</span>
+
+    /**
+     * Créé une nouvelle instance.
+     */
+<span class="nc" id="L68">    PieceUI() {</span>
+        // Rien de spécifique...
+<span class="nc" id="L70">    }</span>
+
+    /**
+     * Renvoi le curseur représentant une pièce.
+     *
+     * @param pPiece Pièce dont on veut le curseur.
+     * @return Curseur représentant la pièce.
+     */
+    Cursor getCursor(final Piece pPiece) {
+<span class="nc" id="L79">        return _pieceToCursor.get(pPiece);</span>
+    }
+
+    /**
+     * Renvoi l'image représentant une pièce.
+     *
+     * @param pPiece Pièce dont on veut l'image.
+     * @return Image de la pièce.
+     */
+    Image getImage(final Piece pPiece) {
+<span class="nc" id="L89">        return _pieceToImage.get(pPiece);</span>
+    }
+
+    /**
+     * Renvoi l'image réduite représentant une pièce.
+     *
+     * @param pPiece Pièce dont on veut l'image réduite.
+     * @return Image réduite de la pièce.
+     */
+    Image getSmallImage(final Piece pPiece) {
+<span class="nc" id="L99">        return _pieceToSmallImage.get(pPiece);</span>
+    }
+
+    /**
+     * Initialise les sprites.
+     *
+     * @param pLongueur Longueur d'un côté des pièces (&gt;= 1).
+     * @param pLF       Préfixe de l'apparence, à ajouter au chemin d'accès des
+     *                  images.
+     */
+    void initialize(final int pLongueur, final String pLF) {
+<span class="nc" id="L110">        final Toolkit tk = Toolkit.getDefaultToolkit();</span>
+<span class="nc" id="L111">        final int demiLongueur = pLongueur / 2;</span>
+<span class="nc" id="L112">        final Dimension d = tk.getBestCursorSize(pLongueur, pLongueur);</span>
+<span class="nc" id="L113">        final Point centre = new Point(d.width / 2, d.height / 2);</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        for (final Piece p : Piece.values()) {</span>
+<span class="nc" id="L115">            final StringBuilder sb = new StringBuilder(pLF);</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">            if (p.isWhite()) {</span>
+<span class="nc" id="L117">                sb.append('w');</span>
+<span class="nc" id="L118">            } else {</span>
+<span class="nc" id="L119">                sb.append('b');</span>
+            }
+<span class="nc" id="L121">            sb.append(p.getFENLetter()).append(&quot;.png&quot;);</span>
+<span class="nc" id="L122">            final Image imgTmp = getImageIcon(sb.toString()).getImage();</span>
+<span class="nc" id="L123">            final BufferedImage img = new BufferedImage(pLongueur, pLongueur,</span>
+<span class="nc" id="L124">                    TYPE_INT_ARGB);</span>
+<span class="nc" id="L125">            final Graphics2D g2d = img.createGraphics();</span>
+            // getScaledInstance() est asynchrone : l'ImageIcon force une
+            // synchronisation.
+<span class="nc" id="L128">            g2d.drawImage(</span>
+<span class="nc" id="L129">                    new ImageIcon(imgTmp.getScaledInstance(pLongueur,</span>
+<span class="nc" id="L130">                            pLongueur, SCALE_SMOOTH)).getImage(), 0, 0, null);</span>
+<span class="nc" id="L131">            g2d.dispose();</span>
+<span class="nc" id="L132">            _pieceToCursor.put(p, tk.createCustomCursor(</span>
+<span class="nc" id="L133">                    new ImageIcon(imgTmp.getScaledInstance(d.width, d.height,</span>
+<span class="nc" id="L134">                            SCALE_SMOOTH)).getImage(), centre, Character</span>
+<span class="nc" id="L135">                            .toString(p.getFENLetter())));</span>
+<span class="nc" id="L136">            _pieceToImage.put(p, img);</span>
+<span class="nc" id="L137">            _pieceToSmallImage.put(</span>
+<span class="nc" id="L138">                    p,</span>
+<span class="nc" id="L139">                    new ImageIcon(imgTmp.getScaledInstance(demiLongueur,</span>
+<span class="nc" id="L140">                            demiLongueur, SCALE_SMOOTH)).getImage());</span>
+        }
+<span class="nc" id="L142">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PrintableBoard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PrintableBoard.java</span></div><h1>PrintableBoard.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+
+import javax.swing.*;
+
+/**
+ * Composant graphique dédié à l'impression d'un plateau de jeu.
+ *
+ * @author David Cotton
+ */
+final class PrintableBoard extends JPanel implements Printable {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -5113657285135508189L;
+
+    /**
+     * Instancie un nouveau composant d'impression d'un plateau.
+     */
+<span class="nc" id="L43">    PrintableBoard() {</span>
+        // Rien de spécifique...
+<span class="nc" id="L45">    }</span>
+
+    /**
+     * Dessine le composant.
+     *
+     * @param pGraph Contexte graphique à utiliser.
+     */
+    private void drawBoard(final Graphics2D pGraph) {
+        // TODO: à implémenter...
+<span class="nc" id="L54">        pGraph.getClass();</span>
+<span class="nc" id="L55">    }</span>
+
+    /**
+     * Dessine le composant, pour prévisualisation.
+     *
+     * @param pGraph Contexte graphique de dessin du composant.
+     * @see JComponent#paintComponent(Graphics)
+     */
+    @Override
+    public void paintComponent(final Graphics pGraph) {
+<span class="nc" id="L65">        super.paintComponent(pGraph);</span>
+
+<span class="nc" id="L67">        drawBoard((Graphics2D) pGraph);</span>
+<span class="nc" id="L68">    }</span>
+
+    /**
+     * Imprime une page.
+     *
+     * @param pGraph  Contexte graphique d'impression.
+     * @param pFormat Format de page de l'édition.
+     * @param pIndex  Numéro de page.
+     * @return PAGE_EXISTS si la page a été imprimée, NO_SUCH_PAGE sinon.
+     * @see Printable#print(Graphics, PageFormat, int)
+     */
+    @Override
+    public int print(final Graphics pGraph, final PageFormat pFormat,
+                     final int pIndex) {
+<span class="nc bnc" id="L82" title="All 2 branches missed.">        if (pIndex != 0) {</span>
+<span class="nc" id="L83">            return NO_SUCH_PAGE;</span>
+        }
+
+<span class="nc" id="L86">        final Graphics2D g2d = (Graphics2D) pGraph;</span>
+<span class="nc" id="L87">        g2d.setPaint(Color.BLACK);</span>
+<span class="nc" id="L88">        g2d.translate(pFormat.getImageableX(), pFormat.getImageableY());</span>
+
+<span class="nc" id="L90">        drawBoard(g2d);</span>
+
+<span class="nc" id="L92">        return PAGE_EXISTS;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EngineFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">EngineFactory.java</span></div><h1>EngineFactory.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * Classe fabrique des instances de moteurs d'IA.
+ *
+ * @author David Cotton
+ */
+public final class EngineFactory {
+    /**
+     * Log de la classe.
+     */
+<span class="fc" id="L37">    private static final Logger LOG = LoggerFactory.getLogger(EngineFactory.class);</span>
+
+    /**
+     * Liste des moteurs d'IA internes.
+     */
+<span class="fc" id="L42">    private static final Map&lt;String, Class&lt;? extends Engine&gt;&gt; INTERNAL_ENGINES = new HashMap&lt;&gt;();</span>
+
+    static {
+<span class="fc" id="L45">        registerEngine(&quot;jChecs.AlphaBeta&quot;, &quot;fr.free.jchecs.ai.AlphaBetaEngine&quot;);</span>
+<span class="fc" id="L46">        registerEngine(&quot;jChecs.Debug&quot;, &quot;fr.free.jchecs.ai.DebugEngine&quot;);</span>
+<span class="fc" id="L47">        registerEngine(&quot;jChecs.MiniMax&quot;, &quot;fr.free.jchecs.ai.MiniMaxEngine&quot;);</span>
+<span class="fc" id="L48">        registerEngine(&quot;jChecs.MiniMax++&quot;,</span>
+<span class="fc" id="L49">                &quot;fr.free.jchecs.ai.EnhancedMiniMaxEngine&quot;);</span>
+<span class="fc" id="L50">        registerEngine(&quot;jChecs.NegaScout&quot;, &quot;fr.free.jchecs.ai.NegaScoutEngine&quot;);</span>
+<span class="fc" id="L51">        registerEngine(&quot;jChecs.Random&quot;, &quot;fr.free.jchecs.ai.RandomEngine&quot;);</span>
+<span class="fc" id="L52">    }</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private EngineFactory() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Renvoi la liste des moteurs IA disponibles.
+     *
+     * @return Liste des noms des moteurs d'IA disponibles.
+     */
+    public static String[] getNames() {
+<span class="nc" id="L67">        final Set&lt;String&gt; lst = INTERNAL_ENGINES.keySet();</span>
+<span class="nc" id="L68">        return lst.toArray(new String[lst.size()]);</span>
+    }
+
+    /**
+     * Renvoi une nouvelle instance du moteur d'IA par défaut.
+     *
+     * @return Nouvelle instance du moteur d'IA par défaut.
+     */
+    public static Engine newInstance() {
+<span class="nc" id="L77">        return newInstance(&quot;jChecs.NegaScout&quot;);</span>
+    }
+
+    /**
+     * Renvoi une nouvelle instance du moteur d'IA dont le nom identifiant est
+     * transmis.
+     *
+     * @param pNom Nom identifiant le moteur IA.
+     * @return Nouvelle instance du moteur d'IA correspondant (ou null si aucune
+     * correspondance).
+     */
+    public static Engine newInstance(final String pNom) {
+<span class="fc" id="L89">        Engine res = null;</span>
+
+<span class="fc" id="L91">        final Class&lt;? extends Engine&gt; cls = INTERNAL_ENGINES.get(pNom);</span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">        if (cls != null) {</span>
+            try {
+<span class="fc" id="L94">                res = cls.newInstance();</span>
+<span class="pc" id="L95">            } catch (final InstantiationException | IllegalAccessException e) {</span>
+<span class="nc" id="L96">                LOG.trace(e.toString());</span>
+            }
+        }
+
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">        if (res == null) {</span>
+<span class="nc" id="L101">            LOG.warn(&quot;Invalid engine [{}]&quot;, pNom);</span>
+        }
+
+<span class="fc" id="L104">        return res;</span>
+    }
+
+    /**
+     * Ajoute, si possible, un moteur d'IA à la liste des moteurs disponibles.
+     *
+     * @param pNom    Nom identifiant le moteur IA.
+     * @param pClasse Nom complet de la classe implémentant le moteur d'IA.
+     */
+    private static void registerEngine(final String pNom, final String pClasse) {
+        Class&lt;?&gt; classe;
+        try {
+<span class="fc" id="L116">            classe = Class.forName(pClasse);</span>
+<span class="pc bpc" id="L117" title="2 of 4 branches missed.">            if ((classe != null) &amp;&amp; (Engine.class.isAssignableFrom(classe))) {</span>
+<span class="fc" id="L118">                INTERNAL_ENGINES.put(pNom, classe.asSubclass(Engine.class));</span>
+            }
+<span class="pc" id="L120">        } catch (final ClassNotFoundException e) {</span>
+<span class="nc" id="L121">            LOG.warn(&quot;Class [{}] not found for engine [{}].&quot;, pClasse, pNom);</span>
+<span class="nc" id="L122">        } catch (final ClassFormatError e) {</span>
+            // Exception launched when a custom 404 HTTP error code is defined
+            // on the applet's server.
+<span class="nc" id="L125">            LOG.warn(&quot;Class [{}] format error.&quot;, pClasse);</span>
+        }
+<span class="fc" id="L127">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

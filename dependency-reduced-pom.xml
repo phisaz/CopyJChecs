@@ -100,7 +100,24 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.7-SNAPSHOT</version>
+        <version>0.8.4</version>
+        <executions>
+          <execution>
+            <id>start-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>generate-report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <title>Coverage with JaCoCo</title>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
@@ -126,7 +143,7 @@
     <junit.version>4.12</junit.version>
     <sonar.organization>se2</sonar.organization>
     <jdk.version>1.8</jdk.version>
-    <sonar.coverage.jacoco.xmlReportPaths>target/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     <logback.version>1.2.3</logback.version>
     <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
   </properties>

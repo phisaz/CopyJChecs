@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StaticMoveSorter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">StaticMoveSorter.java</span></div><h1>StaticMoveSorter.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.io.Serializable;
+import java.util.Comparator;
+
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.Piece;
+
+/**
+ * Propose un tri statique des mouvements, classant les mouvements avec prise
+ * devant les mouvements sans prise. Les mouvements avec prise sont classés de
+ * la prise la plus forte à la pris la plus faible.
+ *
+ * @author David Cotton
+ */
+final class StaticMoveSorter implements Comparator&lt;Move&gt;, Serializable {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -1345309675511434759L;
+
+    /**
+     * Crée une nouvelle instance.
+     */
+<span class="fc" id="L43">    StaticMoveSorter() {</span>
+        // Rien de spécifique...
+<span class="fc" id="L45">    }</span>
+
+    /**
+     * Tri des mouvements.
+     *
+     * @param pMvt1 Premier mouvement.
+     * @param pMvt2 Deuxième mouvement.
+     * @return -1, 0, 1 en accord avec le contrat de compare().
+     * @see Comparator#compare(Object, Object)
+     */
+    @Override
+    public int compare(final Move pMvt1, final Move pMvt2) {
+<span class="fc" id="L57">        final Piece prise1 = pMvt1.getCaptured();</span>
+<span class="fc" id="L58">        final Piece prise2 = pMvt2.getCaptured();</span>
+<span class="fc bfc" id="L59" title="All 4 branches covered.">        if ((prise1 == null) &amp;&amp; (prise2 == null)) {</span>
+<span class="fc" id="L60">            return pMvt2.getPiece().getType().getValue() - pMvt1.getPiece().getType().getValue();</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        } else if (prise1 == null) {</span>
+<span class="fc" id="L62">            return 1;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        } else if (prise2 == null) {</span>
+<span class="fc" id="L64">            return -1;</span>
+        }
+
+<span class="fc" id="L67">        return prise2.getType().getValue() - prise1.getType().getValue();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

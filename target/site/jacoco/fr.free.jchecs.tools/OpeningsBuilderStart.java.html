@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OpeningsBuilderStart.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.tools</a> &gt; <span class="el_source">OpeningsBuilderStart.java</span></div><h1>OpeningsBuilderStart.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.tools;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.regex.Pattern;
+import java.util.zip.GZIPOutputStream;
+
+import fr.free.jchecs.core.Board;
+import fr.free.jchecs.core.BoardFactory;
+import fr.free.jchecs.core.FENException;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+import fr.free.jchecs.core.SANException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static fr.free.jchecs.core.BoardFactory.State.EMPTY;
+import static fr.free.jchecs.core.BoardFactory.State.STARTING;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+import static fr.free.jchecs.core.FENUtils.toBoard;
+import static fr.free.jchecs.core.FENUtils.toFENKey;
+import static fr.free.jchecs.core.PGNUtils.toNormalizedSAN;
+import static fr.free.jchecs.core.SANUtils.toMove;
+
+/**
+ * Classe utilitaire permettant de créer :
+ * &lt;ul&gt;
+ * &lt;li&gt;une liste des meilleurs coups au format EPD à partir d'un fichier de
+ * parties au format PGN, ou&lt;/li&gt;
+ * &lt;li&gt;une liste intermédiaire, épurée, des parties utilisables à partir d'un
+ * fichier PGN, ou&lt;/li&gt;
+ * &lt;li&gt;un fichier EPD des ouvertures à partir d'une liste épurée des parties
+ * utilisables, ou&lt;/li&gt;
+ * &lt;li&gt;une bibliothèque d'ouvertures à partir d'un fichier EPD des meilleurs
+ * coups.&lt;/li&gt;
+ * &lt;/ul&gt;
+ * &lt;p&gt;
+ * Syntaxe d'appel : java fr.free.jchecs.tools.OpeningsBuilderStart
+ * &amp;lt;chemin_fichier_pgn&amp;gt; &amp;lt;profondeur_analyse&amp;gt; &lt;br&gt;
+ * ou : java fr.free.jchecs.tools.OpeningsBuilderStart -cln
+ * &amp;lt;chemin_fichier_pgn&amp;gt; &lt;br&gt;
+ * ou : java fr.free.jchecs.tools.OpeningsBuilderStart -epd
+ * &amp;lt;chemin_fichier_cln&amp;gt; &amp;lt;profondeur_analyse&amp;gt;&lt;br&gt;
+ * ou : java fr.free.jchecs.tools.OpeningsBuilderStart -opn
+ * &amp;lt;chemin_fichier_epd&amp;gt;
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+<span class="nc bnc" id="L85" title="All 2 branches missed.">final class OpeningsBuilderStart {</span>
+    /**
+     * Nombre de lignes maximum du buffer de tri interne.
+     */
+    private static final int MAX_LINE_COUNT = 50000;
+
+    /**
+     * Log de la classe.
+     */
+<span class="nc" id="L94">    private static final Logger LOG = LoggerFactory.getLogger(OpeningsBuilderStart.class);</span>
+
+    /**
+     * Plateau vide servant de référence.
+     */
+<span class="nc" id="L99">    private static final MoveGenerator EMPTY_BOARD = BoardFactory.valueOf(</span>
+<span class="nc" id="L100">            FASTEST, EMPTY);</span>
+
+    /**
+     * Liste des fichiers de travail.
+     */
+<span class="nc" id="L105">    private static final List&lt;File&gt; TEMP_FILES = new ArrayList&lt;&gt;();</span>
+
+    /**
+     * Buffer servant à pré-trier les enregistrements des fichiers de travail.
+     */
+<span class="nc" id="L110">    private static final Set&lt;String&gt; INTERNAL_SORT = new TreeSet&lt;&gt;();</span>
+
+    /**
+     * Modèle de découpage de chaines suivant les espaces.
+     */
+<span class="nc" id="L115">    private static final Pattern SPLITTER = Pattern.compile(&quot;[ ]+&quot;);</span>
+
+    /**
+     * Clé de la position initiale.
+     */
+<span class="nc" id="L120">    private static final String STARTING_KEY = toFENKey(BoardFactory.valueOf(FASTEST, STARTING));</span>
+
+    /**
+     * Ensemble des positions analysées.
+     */
+<span class="nc" id="L125">    private static final Map&lt;String, Map&lt;String, Integer&gt;&gt; POSITIONS = new TreeMap&lt;&gt;();</span>
+
+    static {
+<span class="nc" id="L128">        POSITIONS.put(STARTING_KEY, new TreeMap&lt;&gt;());</span>
+    }
+
+    /**
+     * Tri les mouvements du meilleur au plus mauvais ( dans l'ordre inverse de
+     * leurs scores).
+     */
+<span class="nc" id="L135">    private static final Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt; BEST_MOVE_SORTER = new Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt;() {</span>
+        /**
+         * Tri les mouvements du meilleur au plus mauvais.
+         *
+         * @param pMvt1
+         *            Premier mouvement.
+         * @param pMvt2
+         *            Deuxième mouvement.
+         * @return Cf contrat de Comparator().
+         */
+        @Override
+        public int compare(final Map.Entry&lt;String, Integer&gt; pMvt1,
+                           final Map.Entry&lt;String, Integer&gt; pMvt2) {
+<span class="nc" id="L148">            return -pMvt1.getValue().compareTo(pMvt2.getValue());</span>
+        }
+    };
+
+    /**
+     * Tri les mouvements dans l'ordre alphanumérique.
+     */
+<span class="nc" id="L155">    private static final Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt; ALPHA_MOVE_SORTER = new Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt;() {</span>
+        /**
+         * Tri les mouvements suivant l'ordre alphanumérique.
+         *
+         * @param pMvt1
+         *            Premier mouvement.
+         * @param pMvt2
+         *            Deuxième mouvement.
+         * @return Cf contrat de Comparator().
+         */
+        @Override
+        public int compare(final Map.Entry&lt;String, Integer&gt; pMvt1,
+                           final Map.Entry&lt;String, Integer&gt; pMvt2) {
+<span class="nc" id="L168">            return pMvt1.getKey().compareTo(pMvt2.getKey());</span>
+        }
+    };
+
+    /**
+     * Compteur des parties lues.
+     */
+    private static int S_read;
+
+    /**
+     * Compteur des parties non valides.
+     */
+    private static int S_invalid;
+
+    /**
+     * Compteur des parties incomplètes.
+     */
+    private static int S_incomplete;
+
+    /**
+     * Compteur des parties nulles.
+     */
+    private static int S_drawn;
+
+    /**
+     * Compteur des parties terminées sur autre chose qu'un vrai mat (timeout ?
+     * rédition ?).
+     */
+    private static int S_notRealMat;
+
+    /**
+     * Compteur des parties stockées temporairement.
+     */
+    private static int S_temporary;
+
+    /**
+     * Compteur des parties en double.
+     */
+    private static int S_duplicate;
+
+    /**
+     * Compteur des parties uniques.
+     */
+    private static int S_unique;
+
+    /**
+     * Compteur des positions d'ouverture obtenues.
+     */
+<span class="nc" id="L216">    private static int S_openingsPositions;</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private OpeningsBuilderStart() {
+        // Rien à faire de spécifique...
+    }
+
+    /**
+     * Conserve temporairement une partie valide.
+     *
+     * @param pPartie Chaine SAN des mouvements composant la partie.
+     */
+    private static void addGameToTemp(final String pPartie) {
+<span class="nc bnc" id="L231" title="All 2 branches missed.">        if (INTERNAL_SORT.add(pPartie)) {</span>
+<span class="nc" id="L232">            S_temporary++;</span>
+<span class="nc bnc" id="L233" title="All 2 branches missed.">            if (INTERNAL_SORT.size() &gt;= MAX_LINE_COUNT) {</span>
+<span class="nc" id="L234">                flushTemp();</span>
+            }
+<span class="nc" id="L236">        } else {</span>
+<span class="nc" id="L237">            S_duplicate++;</span>
+        }
+<span class="nc" id="L239">    }</span>
+
+    /**
+     * Conserve une partie lors du tri.
+     *
+     * @param pSortie     Buffer de sortie du tri.
+     * @param pPartie     Chaine SAN des mouvements composant la partie.
+     * @param pPrecedente Partie précédemment écrite (peut être à null).
+     * @return Renvoi la dernière partie écrite.
+     */
+    private static String addGameToSort(final BufferedWriter pSortie,
+                                        final String pPartie, final String pPrecedente) {
+<span class="nc bnc" id="L251" title="All 2 branches missed.">        if (pPartie.equals(pPrecedente)) {</span>
+<span class="nc" id="L252">            S_duplicate++;</span>
+<span class="nc" id="L253">        } else {</span>
+<span class="nc" id="L254">            S_unique++;</span>
+            try {
+<span class="nc" id="L256">                pSortie.write(pPartie);</span>
+<span class="nc" id="L257">                pSortie.newLine();</span>
+<span class="nc" id="L258">            } catch (final IOException e) {</span>
+<span class="nc" id="L259">                error(e);</span>
+            }
+        }
+
+<span class="nc" id="L263">        return pPartie;</span>
+    }
+
+    /**
+     * Analyse la liste des parties.
+     *
+     * @param pProfondeur Profondeur d'analyse (&gt;= 0).
+     */
+    private static void analyseGames(final int pProfondeur) {
+<span class="nc" id="L272">        try (final FileReader ficIn = new FileReader(TEMP_FILES.get(0));</span>
+<span class="nc" id="L273">             final BufferedReader in = new BufferedReader(ficIn)) {</span>
+<span class="nc" id="L274">            String ligne = in.readLine();</span>
+<span class="nc" id="L275">            int partiesAnalysees = 0;</span>
+<span class="nc bnc" id="L276" title="All 2 branches missed.">            while (ligne != null) {</span>
+<span class="nc" id="L277">                partiesAnalysees++;</span>
+<span class="nc bnc" id="L278" title="All 2 branches missed.">                if (partiesAnalysees % 10000 == 0) {</span>
+<span class="nc" id="L279">                    LOG.info(&quot;  ... {} games analysed ...&quot;, partiesAnalysees);</span>
+                }
+<span class="nc" id="L281">                final boolean gagnant = ligne.endsWith(&quot; 1-0&quot;);</span>
+<span class="nc" id="L282">                final String[] mvts = SPLITTER.split(ligne);</span>
+<span class="nc" id="L283">                final int l = mvts.length - 1;</span>
+<span class="nc" id="L284">                int i = 0;</span>
+<span class="nc" id="L285">                Map&lt;String, Integer&gt; pos = POSITIONS.get(STARTING_KEY);</span>
+<span class="nc" id="L286">                MoveGenerator etat = BoardFactory.valueOf(FASTEST, STARTING);</span>
+<span class="nc" id="L287">                while (true) {</span>
+<span class="nc" id="L288">                    final String mvt = toNormalizedSAN(mvts[i]);</span>
+<span class="nc" id="L289">                    Integer note = pos.get(mvt);</span>
+<span class="nc bnc" id="L290" title="All 2 branches missed.">                    if (note == null) {</span>
+<span class="nc" id="L291">                        note = 0;</span>
+                    }
+<span class="nc bnc" id="L293" title="All 2 branches missed.">                    if (etat.isWhiteActive() == gagnant) {</span>
+<span class="nc" id="L294">                        pos.put(mvt, note + 1);</span>
+<span class="nc" id="L295">                    } else {</span>
+<span class="nc" id="L296">                        pos.put(mvt, note - 1);</span>
+                    }
+<span class="nc" id="L298">                    i++;</span>
+<span class="nc bnc" id="L299" title="All 4 branches missed.">                    if ((i &gt;= pProfondeur) || (i &gt;= l)) {</span>
+<span class="nc" id="L300">                        break;</span>
+                    }
+                    try {
+<span class="nc" id="L303">                        etat = etat.derive(toMove(etat, mvt), true);</span>
+<span class="nc" id="L304">                        final String cle = toFENKey(etat);</span>
+<span class="nc" id="L305">                        pos = POSITIONS.computeIfAbsent(cle, k -&gt; new TreeMap&lt;&gt;());</span>
+<span class="nc" id="L306">                    } catch (final SANException e) {</span>
+<span class="nc" id="L307">                        error(e);</span>
+                    }
+                }
+<span class="nc" id="L310">                ligne = in.readLine();</span>
+            }
+<span class="nc" id="L312">            TEMP_FILES.remove(0).delete();</span>
+<span class="nc" id="L313">        } catch (final IOException e) {</span>
+<span class="nc" id="L314">            error(e);</span>
+        }
+<span class="nc" id="L316">    }</span>
+
+    /**
+     * Transforme un fichier épuré des parties utilisables en fichier
+     * d'ouvertures EPD.
+     *
+     * @param pFichier    Chemin du fichier épuré.
+     * @param pProfondeur Profondeur de mouvement à prendre en compte.
+     */
+
+    private static void cln2epd(final String pFichier, final int pProfondeur) {
+<span class="nc" id="L327">        LOG.info(&quot;Analysing games (depth=[})...&quot;, pProfondeur);</span>
+<span class="nc" id="L328">        analyseGames(pProfondeur);</span>
+<span class="nc" id="L329">        LOG.info(&quot;  Analysed positions = {}&quot;, POSITIONS.size());</span>
+
+<span class="nc" id="L331">        LOG.info(&quot;Writing openings file...&quot;);</span>
+<span class="nc" id="L332">        writeOpenings(pFichier);</span>
+<span class="nc" id="L333">        LOG.info(&quot;  Openings positions = {}&quot;, S_openingsPositions);</span>
+
+<span class="nc" id="L335">        LOG.info(&quot;Openings builded.&quot;);</span>
+<span class="nc" id="L336">    }</span>
+
+    /**
+     * Copie un fichier vers un autre.
+     *
+     * @param pSource Fichier source.
+     * @param pCible  Fichier cible.
+     */
+    private static void copy(final File pSource, final File pCible) {
+<span class="nc" id="L345">        try (final FileInputStream src = new FileInputStream(pSource);</span>
+<span class="nc" id="L346">             final FileOutputStream dst = new FileOutputStream(pCible)) {</span>
+<span class="nc" id="L347">            final byte[] buffer = new byte[4096];</span>
+<span class="nc" id="L348">            int l = src.read(buffer);</span>
+<span class="nc bnc" id="L349" title="All 2 branches missed.">            while (l &gt; 0) {</span>
+<span class="nc" id="L350">                dst.write(buffer, 0, l);</span>
+<span class="nc" id="L351">                l = src.read(buffer);</span>
+            }
+<span class="nc" id="L353">            src.close();</span>
+<span class="nc" id="L354">            dst.close();</span>
+<span class="nc" id="L355">        } catch (final IOException e) {</span>
+<span class="nc" id="L356">            error(e);</span>
+        }
+<span class="nc" id="L358">    }</span>
+
+    /**
+     * Termine le programme sur une erreur.
+     *
+     * @param pError Erreur fatale.
+     */
+    private static void error(final Throwable pError) {
+<span class="nc" id="L366">        LOG.error(&quot;Fatal error.&quot;, pError);</span>
+<span class="nc" id="L367">        System.exit(-1);</span>
+<span class="nc" id="L368">    }</span>
+
+    /**
+     * Termine le programme sur une erreur.
+     *
+     * @param pMessage Message d'erreur.
+     */
+    private static void error(final String pMessage) {
+<span class="nc" id="L376">        LOG.error(&quot;{}&quot;, pMessage);</span>
+<span class="nc" id="L377">        System.exit(-1);</span>
+<span class="nc" id="L378">    }</span>
+
+    /**
+     * Vide le buffer interne vers un fichier temporaire.
+     */
+    private static void flushTemp() {
+<span class="nc bnc" id="L384" title="All 2 branches missed.">        if (!INTERNAL_SORT.isEmpty()) {</span>
+<span class="nc" id="L385">            FileWriter ficOut = null;</span>
+            try {
+<span class="nc" id="L387">                final File ficTmp = File.createTempFile(</span>
+<span class="nc" id="L388">                        &quot;obs&quot; + TEMP_FILES.size() + &quot;t&quot;, null);</span>
+<span class="nc" id="L389">                ficTmp.deleteOnExit();</span>
+<span class="nc" id="L390">                TEMP_FILES.add(ficTmp);</span>
+<span class="nc" id="L391">                ficOut = new FileWriter(ficTmp);</span>
+<span class="nc" id="L392">            } catch (final IOException e) {</span>
+<span class="nc" id="L393">                error(e);</span>
+            }
+
+<span class="nc" id="L396">            try (final BufferedWriter out = new BufferedWriter(ficOut)) {</span>
+<span class="nc bnc" id="L397" title="All 2 branches missed.">                for (final String s : INTERNAL_SORT) {</span>
+<span class="nc" id="L398">                    out.write(s);</span>
+<span class="nc" id="L399">                    out.newLine();</span>
+                }
+<span class="nc" id="L401">                out.close();</span>
+<span class="nc" id="L402">            } catch (final IOException e) {</span>
+<span class="nc" id="L403">                error(e);</span>
+            }
+
+<span class="nc" id="L406">            S_unique = INTERNAL_SORT.size();</span>
+<span class="nc" id="L407">            INTERNAL_SORT.clear();</span>
+        }
+<span class="nc" id="L409">    }</span>
+
+    /**
+     * Lance la construction d'une bibliothèque d'ouverture à partir d'un
+     * fichier PGN.
+     *
+     * @param pArgs Liste des arguments en ligne de commande.
+     */
+    public static void main(final String[] pArgs) {
+<span class="nc bnc" id="L418" title="All 2 branches missed.">        if ((pArgs.length != 2)</span>
+<span class="nc bnc" id="L419" title="All 4 branches missed.">                &amp;&amp; ((pArgs.length != 3) || (!&quot;-epd&quot;.equals(pArgs[0])))) {</span>
+<span class="nc" id="L420">            error(&quot;Usage: java fr.free.jchecs.tools.OpeningsBuilderStart &lt;path_to_pgn&gt; &lt;depth&gt;\n&quot;</span>
+                    + &quot;   or: java fr.free.jchecs.tools.OpeningsBuilderStart -cln &lt;path_to_pgn&gt;\n&quot;
+                    + &quot;   or: java fr.free.jchecs.tools.OpeningsBuilderStart -epd &lt;path_to_cln&gt; &lt;depth&gt;\n&quot;
+                    + &quot;   or: java fr.free.jchecs.tools.OpeningsBuilderStart -opn &lt;path_to_epd&gt;&quot;);
+        }
+
+<span class="nc bnc" id="L426" title="All 2 branches missed.">        if (&quot;-opn&quot;.equals(pArgs[0])) {</span>
+<span class="nc" id="L427">            LOG.info(&quot;Parsing EPD file...&quot;);</span>
+<span class="nc" id="L428">            parseEPDFile(pArgs[1]);</span>
+<span class="nc" id="L429">            LOG.info(&quot;  Positions read     = {}&quot;, S_read);</span>
+<span class="nc" id="L430">            LOG.info(&quot;  Invalid positions  = {}&quot;, S_invalid);</span>
+<span class="nc" id="L431">            LOG.info(&quot;  Unique refs writed = {}&quot;, S_unique);</span>
+<span class="nc bnc" id="L432" title="All 2 branches missed.">            if (S_read != S_unique) {</span>
+<span class="nc" id="L433">                LOG.info(&quot;RESULT IS NOT SAFE : HASHCODE CLASH ?&quot;);</span>
+            }
+<span class="nc bnc" id="L435" title="All 2 branches missed.">        } else if (&quot;-cln&quot;.equals(pArgs[0])) {</span>
+<span class="nc" id="L436">            pgn2cln(pArgs[1]);</span>
+
+<span class="nc" id="L438">            copy(TEMP_FILES.get(0), new File(pArgs[1] + &quot;.cln&quot;));</span>
+<span class="nc bnc" id="L439" title="All 2 branches missed.">        } else if (&quot;-epd&quot;.equals(pArgs[0])) {</span>
+<span class="nc" id="L440">            File ficTmp = null;</span>
+            try {
+<span class="nc" id="L442">                ficTmp = File.createTempFile(&quot;obs&quot; + TEMP_FILES.size() + &quot;c&quot;,</span>
+<span class="nc" id="L443">                        null);</span>
+<span class="nc" id="L444">            } catch (final IOException e) {</span>
+<span class="nc" id="L445">                error(e.toString());</span>
+            }
+
+<span class="nc bnc" id="L448" title="All 2 branches missed.">            if (ficTmp != null) {</span>
+<span class="nc" id="L449">                ficTmp.deleteOnExit();</span>
+<span class="nc" id="L450">                TEMP_FILES.add(ficTmp);</span>
+<span class="nc" id="L451">                copy(new File(pArgs[1]), ficTmp);</span>
+
+<span class="nc" id="L453">                cln2epd(pArgs[1], Integer.parseInt(pArgs[2]));</span>
+            }
+<span class="nc" id="L455">        } else {</span>
+<span class="nc" id="L456">            pgn2cln(pArgs[0]);</span>
+
+<span class="nc" id="L458">            cln2epd(pArgs[0], Integer.parseInt(pArgs[1]));</span>
+        }
+
+<span class="nc" id="L461">        TEMP_FILES.clear();</span>
+
+<span class="nc" id="L463">        System.exit(0);</span>
+<span class="nc" id="L464">    }</span>
+
+    /**
+     * Interprète le fichier EPD en entrée.
+     *
+     * @param pChemin Chemin du fichier EPD en entrée.
+     */
+    private static void parseEPDFile(final String pChemin) {
+<span class="nc" id="L472">        try (final FileReader ficIn = new FileReader(pChemin);</span>
+<span class="nc" id="L473">             final BufferedReader in = new BufferedReader(ficIn);</span>
+<span class="nc" id="L474">             final DataOutputStream ficOut = new DataOutputStream(new GZIPOutputStream(new FileOutputStream(pChemin + &quot;.opn&quot;)))) {</span>
+<span class="nc" id="L475">            final Map&lt;Integer, int[]&gt; infos = new HashMap&lt;&gt;();</span>
+
+<span class="nc" id="L477">            String ligneLue = in.readLine();</span>
+<span class="nc bnc" id="L478" title="All 2 branches missed.">            while (ligneLue != null) {</span>
+<span class="nc" id="L479">                S_read++;</span>
+<span class="nc" id="L480">                final String ligne = ligneLue.trim();</span>
+<span class="nc" id="L481">                int finCle = ligne.indexOf(' ');</span>
+<span class="nc" id="L482">                finCle = ligne.indexOf(' ', finCle + 1);</span>
+<span class="nc" id="L483">                finCle = ligne.indexOf(' ', finCle + 1);</span>
+<span class="nc" id="L484">                finCle = ligne.indexOf(' ', finCle + 1);</span>
+<span class="nc" id="L485">                final String cle = ligne.substring(0, finCle);</span>
+<span class="nc" id="L486">                final int debutBm = ligne.indexOf(&quot;bm &quot;, cle.length());</span>
+<span class="nc" id="L487">                final int finBm = ligne.indexOf(';', debutBm);</span>
+<span class="nc" id="L488">                final String[] mvtsSAN = SPLITTER.split(ligne.substring(</span>
+<span class="nc" id="L489">                        debutBm + 3, finBm));</span>
+<span class="nc" id="L490">                final int l = mvtsSAN.length;</span>
+<span class="nc bnc" id="L491" title="All 2 branches missed.">                if (l &gt; 0) {</span>
+<span class="nc" id="L492">                    final int[] mvtsId = new int[l];</span>
+                    try {
+<span class="nc" id="L494">                        final Board etat = toBoard(cle + &quot; 0 1&quot;);</span>
+<span class="nc bnc" id="L495" title="All 2 branches missed.">                        for (int i = 0; i &lt; l; i++) {</span>
+                            try {
+<span class="nc" id="L497">                                final Move mvt = toMove(</span>
+<span class="nc" id="L498">                                        EMPTY_BOARD.derive(etat),</span>
+<span class="nc" id="L499">                                        toNormalizedSAN(mvtsSAN[i]));</span>
+<span class="nc" id="L500">                                mvtsId[i] = mvt.toId();</span>
+<span class="nc" id="L501">                            } catch (final SANException e) {</span>
+<span class="nc" id="L502">                                S_invalid++;</span>
+<span class="nc" id="L503">                                LOG.trace(e.toString());</span>
+                            }
+                        }
+<span class="nc" id="L506">                        infos.put(etat.hashCode(), mvtsId);</span>
+<span class="nc" id="L507">                    } catch (final FENException e) {</span>
+<span class="nc" id="L508">                        S_invalid++;</span>
+<span class="nc" id="L509">                        LOG.trace(e.toString());</span>
+                    }
+                }
+<span class="nc bnc" id="L512" title="All 2 branches missed.">                if (S_read % 25000 == 0) {</span>
+<span class="nc" id="L513">                    LOG.info(&quot;  ... {} positions read ({} invalid) ...&quot;, S_read, S_invalid);</span>
+                }
+
+<span class="nc" id="L516">                ligneLue = in.readLine();</span>
+            }
+<span class="nc bnc" id="L518" title="All 2 branches missed.">            for (final Map.Entry&lt;Integer, int[]&gt; entree : infos.entrySet()) {</span>
+<span class="nc" id="L519">                final int nb = entree.getValue().length;</span>
+<span class="nc" id="L520">                ficOut.writeByte(nb);</span>
+<span class="nc" id="L521">                ficOut.writeInt(entree.getKey());</span>
+<span class="nc bnc" id="L522" title="All 2 branches missed.">                for (final int id : entree.getValue()) {</span>
+                    // Les Id de mouvement sont actuellement sur 24 bits...
+<span class="nc" id="L524">                    ficOut.writeShort((id &gt;&gt;&gt; 8) &amp; 0xFFFF);</span>
+<span class="nc" id="L525">                    ficOut.writeByte(id &amp; 0xFF);</span>
+                }
+<span class="nc" id="L527">                S_unique++;</span>
+            }
+<span class="nc" id="L529">            ficOut.close();</span>
+<span class="nc" id="L530">        } catch (final IOException e) {</span>
+<span class="nc" id="L531">            error(e.toString());</span>
+        }
+<span class="nc" id="L533">    }</span>
+
+    /**
+     * Interprète une liste de mouvements d'une partie du fichier PGN en entrée.
+     * &lt;p&gt;
+     * Seuls les marqueurs des mouvements sont conservés, épurés des
+     * commentaires et autres marqueurs sans intérêt pour le traitement.
+     * &lt;/p&gt;
+     *
+     * @param pEntree Lecteur du fichier PGN.
+     * @param pLigne  Première ligne de la liste de mouvements.
+     */
+
+    private static void parseGame(final BufferedReader pEntree,
+                                  final String pLigne) {
+<span class="nc" id="L548">        S_read++;</span>
+<span class="nc bnc" id="L549" title="All 2 branches missed.">        if (S_read % 250000 == 0) {</span>
+<span class="nc" id="L550">            LOG.info(&quot;  ... {} games read ({} kept) ...&quot;, S_read, S_temporary);</span>
+        }
+<span class="nc" id="L552">        final StringBuilder sb = new StringBuilder(pLigne);</span>
+        String sanLue;
+        try {
+<span class="nc" id="L555">            sanLue = pEntree.readLine();</span>
+<span class="nc bnc" id="L556" title="All 2 branches missed.">            while (sanLue != null) {</span>
+<span class="nc" id="L557">                final String san = sanLue.trim();</span>
+<span class="nc bnc" id="L558" title="All 4 branches missed.">                if ((san.length() == 0) || san.startsWith(&quot;[Event&quot;)) {</span>
+<span class="nc" id="L559">                    break;</span>
+                }
+<span class="nc" id="L561">                sb.append(' ').append(san);</span>
+<span class="nc" id="L562">                sanLue = pEntree.readLine();</span>
+            }
+<span class="nc" id="L564">        } catch (final IOException e) {</span>
+<span class="nc" id="L565">            error(e.toString());</span>
+        }
+
+<span class="nc" id="L568">        final String partie = sb.toString();</span>
+<span class="nc bnc" id="L569" title="All 4 branches missed.">        if (partie.endsWith(&quot; 1-0&quot;) || partie.endsWith(&quot; 0-1&quot;)) {</span>
+<span class="nc" id="L570">            int p = 0;</span>
+<span class="nc" id="L571">            int prof = 0;</span>
+<span class="nc bnc" id="L572" title="All 2 branches missed.">            while (p &lt; sb.length()) {</span>
+<span class="nc" id="L573">                final char c = sb.charAt(p);</span>
+<span class="nc bnc" id="L574" title="All 4 branches missed.">                if ((c == '(') || (c == '{')) {</span>
+                    // Supprime les commentaires, et les propositions de nul...
+<span class="nc" id="L576">                    prof++;</span>
+                }
+<span class="nc bnc" id="L578" title="All 6 branches missed.">                if ((prof != 0) || (c == '+') || (c == '#')) {</span>
+                    // Supprime les marqueurs d'échecs et de mat.
+<span class="nc" id="L580">                    sb.deleteCharAt(p);</span>
+<span class="nc" id="L581">                } else {</span>
+<span class="nc bnc" id="L582" title="All 2 branches missed.">                    if (c == 'O') {</span>
+                        // Convertir les &quot;o&quot; majuscules en zéro...
+<span class="nc" id="L584">                        sb.setCharAt(p, '0');</span>
+                    }
+<span class="nc" id="L586">                    p++;</span>
+                }
+<span class="nc bnc" id="L588" title="All 4 branches missed.">                if ((c == '}') || (c == ')')) {</span>
+<span class="nc" id="L589">                    prof--;</span>
+                }
+            }
+<span class="nc bnc" id="L592" title="All 2 branches missed.">            if (prof != 0) {</span>
+<span class="nc" id="L593">                S_invalid++;</span>
+<span class="nc" id="L594">            } else {</span>
+<span class="nc" id="L595">                p = 0;</span>
+<span class="nc bnc" id="L596" title="All 2 branches missed.">                while (p &lt; sb.length()) {</span>
+<span class="nc" id="L597">                    final char c = sb.charAt(p);</span>
+<span class="nc bnc" id="L598" title="All 2 branches missed.">                    if (c == '.') {</span>
+                        // Supprime les numéros de coups...
+<span class="nc" id="L600">                        int deb = p - 1;</span>
+<span class="nc bnc" id="L601" title="All 4 branches missed.">                        while ((deb &gt;= 0) &amp;&amp; Character.isDigit(sb.charAt(deb))) {</span>
+<span class="nc" id="L602">                            deb--;</span>
+                        }
+<span class="nc" id="L604">                        int fin = p + 1;</span>
+<span class="nc bnc" id="L605" title="All 4 branches missed.">                        while ((fin &lt; sb.length())</span>
+<span class="nc" id="L606">                                &amp;&amp; ((&quot; .&quot;.indexOf(sb.charAt(fin))) &gt;= 0)) {</span>
+<span class="nc" id="L607">                            fin++;</span>
+                        }
+<span class="nc" id="L609">                        sb.delete(deb + 1, fin);</span>
+<span class="nc bnc" id="L610" title="All 2 branches missed.">                    } else if (c == '$') {</span>
+                        // Supprime les annotations numériques...
+<span class="nc" id="L612">                        int fin = p + 1;</span>
+<span class="nc bnc" id="L613" title="All 2 branches missed.">                        while ((fin &lt; sb.length())</span>
+<span class="nc bnc" id="L614" title="All 2 branches missed.">                                &amp;&amp; Character.isDigit(sb.charAt(fin))) {</span>
+<span class="nc" id="L615">                            fin++;</span>
+                        }
+<span class="nc" id="L617">                        sb.delete(p, fin + 1);</span>
+<span class="nc" id="L618">                    } else {</span>
+<span class="nc" id="L619">                        p++;</span>
+                    }
+                }
+<span class="nc" id="L622">                addGameToTemp(sb.toString());</span>
+            }
+<span class="nc bnc" id="L624" title="All 2 branches missed.">        } else if (partie.endsWith(&quot; 1/2-1/2&quot;)) {</span>
+<span class="nc" id="L625">            S_drawn++;</span>
+<span class="nc bnc" id="L626" title="All 2 branches missed.">        } else if (partie.endsWith(&quot; *&quot;)) {</span>
+<span class="nc" id="L627">            S_incomplete++;</span>
+<span class="nc" id="L628">        } else {</span>
+<span class="nc" id="L629">            S_invalid++;</span>
+        }
+<span class="nc" id="L631">    }</span>
+
+    /**
+     * Interprète le fichier PGN en entrée.
+     *
+     * @param pChemin Chemin du fichier PGN en entrée.
+     */
+    private static void parsePGNFile(final String pChemin) {
+<span class="nc" id="L639">        try (final FileReader ficIn = new FileReader(pChemin);</span>
+<span class="nc" id="L640">             final BufferedReader in = new BufferedReader(ficIn)) {</span>
+<span class="nc" id="L641">            String ligneLue = in.readLine();</span>
+<span class="nc bnc" id="L642" title="All 2 branches missed.">            while (ligneLue != null) {</span>
+<span class="nc" id="L643">                final String ligne = ligneLue.trim();</span>
+<span class="nc bnc" id="L644" title="All 2 branches missed.">                if (ligne.startsWith(&quot;1.&quot;)) {</span>
+<span class="nc" id="L645">                    parseGame(in, ligne);</span>
+                }
+<span class="nc" id="L647">                ligneLue = in.readLine();</span>
+            }
+<span class="nc" id="L649">            flushTemp();</span>
+<span class="nc" id="L650">            in.close();</span>
+<span class="nc" id="L651">        } catch (final IOException e) {</span>
+<span class="nc" id="L652">            error(e);</span>
+        }
+<span class="nc" id="L654">    }</span>
+
+    /**
+     * Transforme un fichier PGN en une liste épurée des parties utilisables.
+     *
+     * @param pFichier Chemin du fichier PGN.
+     */
+    private static void pgn2cln(final String pFichier) {
+<span class="nc" id="L662">        LOG.info(&quot;Parsing PGN file...&quot;);</span>
+<span class="nc" id="L663">        parsePGNFile(pFichier);</span>
+<span class="nc" id="L664">        LOG.info(&quot;  Games read       = {}&quot;, S_read);</span>
+<span class="nc" id="L665">        LOG.info(&quot;  Incomplete games = {}&quot;, S_incomplete);</span>
+<span class="nc" id="L666">        LOG.info(&quot;  Drawn games      = {}&quot;, S_drawn);</span>
+<span class="nc" id="L667">        LOG.info(&quot;  Invalid games    = {}&quot;, S_invalid);</span>
+<span class="nc" id="L668">        LOG.info(&quot;  Duplicate games  = {}&quot;, S_duplicate);</span>
+<span class="nc" id="L669">        LOG.info(&quot;  =&gt; Games kept    = {}&quot;, S_temporary);</span>
+<span class="nc bnc" id="L670" title="All 4 branches missed.">        assert S_read == (S_incomplete + S_drawn + S_invalid + S_duplicate + S_temporary);</span>
+
+<span class="nc" id="L672">        LOG.info(&quot;Searching duplicate games...&quot;);</span>
+<span class="nc" id="L673">        searchDuplicateGames();</span>
+<span class="nc" id="L674">        LOG.info(&quot;  Duplicate games = {}&quot;, S_duplicate);</span>
+<span class="nc" id="L675">        LOG.info(&quot;  =&gt; Unique games = {}&quot;, S_unique);</span>
+<span class="nc bnc" id="L676" title="All 4 branches missed.">        assert S_temporary == (S_unique + S_duplicate);</span>
+
+<span class="nc" id="L678">        LOG.info(&quot;Searching valid mat games...&quot;);</span>
+<span class="nc" id="L679">        searchMatGames();</span>
+<span class="nc" id="L680">        LOG.info(&quot;  Invalid games  = {}&quot;, S_invalid);</span>
+<span class="nc" id="L681">        LOG.info(&quot;  Not mat games  = {}&quot;, S_notRealMat);</span>
+<span class="nc" id="L682">        LOG.info(&quot;  =&gt; Valid games = {}&quot;, S_temporary);</span>
+<span class="nc bnc" id="L683" title="All 4 branches missed.">        assert S_unique == (S_invalid + S_notRealMat + S_temporary);</span>
+<span class="nc" id="L684">    }</span>
+
+    /**
+     * Tri fusion des fichiers temporaires permettant d'éliminer les doublons.
+     */
+    private static void searchDuplicateGames() {
+<span class="nc" id="L690">        S_duplicate = 0;</span>
+<span class="nc bnc" id="L691" title="All 2 branches missed.">        if (TEMP_FILES.size() &gt; 1) {</span>
+<span class="nc" id="L692">            S_unique = 0;</span>
+<span class="nc bnc" id="L693" title="All 2 branches missed.">            while (TEMP_FILES.size() &gt; 1) {</span>
+<span class="nc" id="L694">                FileReader ficIn1 = null;</span>
+<span class="nc" id="L695">                FileReader ficIn2 = null;</span>
+                try {
+<span class="nc" id="L697">                    ficIn1 = new FileReader(TEMP_FILES.get(0));</span>
+<span class="nc" id="L698">                    ficIn2 = new FileReader(TEMP_FILES.get(1));</span>
+<span class="nc" id="L699">                } catch (final FileNotFoundException e) {</span>
+<span class="nc" id="L700">                    error(e.toString());</span>
+                }
+
+<span class="nc" id="L703">                FileWriter ficOut = null;</span>
+                try {
+<span class="nc" id="L705">                    final File ficTmp = File.createTempFile(</span>
+<span class="nc" id="L706">                            &quot;obs&quot; + TEMP_FILES.size() + &quot;s&quot;, null);</span>
+<span class="nc" id="L707">                    ficTmp.deleteOnExit();</span>
+<span class="nc" id="L708">                    TEMP_FILES.add(ficTmp);</span>
+<span class="nc" id="L709">                    ficOut = new FileWriter(ficTmp);</span>
+<span class="nc" id="L710">                } catch (final IOException e) {</span>
+<span class="nc" id="L711">                    error(e.toString());</span>
+                }
+
+<span class="nc" id="L714">                S_unique = 0;</span>
+<span class="nc" id="L715">                final BufferedReader in1 = new BufferedReader(ficIn1);</span>
+<span class="nc" id="L716">                final BufferedReader in2 = new BufferedReader(ficIn2);</span>
+<span class="nc" id="L717">                final BufferedWriter out = new BufferedWriter(ficOut);</span>
+<span class="nc" id="L718">                String precedente = null;</span>
+                try {
+<span class="nc" id="L720">                    String ligne1 = in1.readLine();</span>
+<span class="nc" id="L721">                    String ligne2 = in2.readLine();</span>
+<span class="nc bnc" id="L722" title="All 4 branches missed.">                    while ((ligne1 != null) || (ligne2 != null)) {</span>
+<span class="nc bnc" id="L723" title="All 2 branches missed.">                        if (ligne1 == null) {</span>
+<span class="nc" id="L724">                            precedente = addGameToSort(out, ligne2, precedente);</span>
+<span class="nc" id="L725">                            ligne2 = in2.readLine();</span>
+<span class="nc bnc" id="L726" title="All 2 branches missed.">                        } else if (ligne2 == null) {</span>
+<span class="nc" id="L727">                            precedente = addGameToSort(out, ligne1, precedente);</span>
+<span class="nc" id="L728">                            ligne1 = in1.readLine();</span>
+<span class="nc" id="L729">                        } else {</span>
+<span class="nc" id="L730">                            final int comp = ligne1.compareTo(ligne2);</span>
+<span class="nc bnc" id="L731" title="All 2 branches missed.">                            if (comp &lt; 0) {</span>
+<span class="nc" id="L732">                                precedente = addGameToSort(out, ligne1,</span>
+<span class="nc" id="L733">                                        precedente);</span>
+<span class="nc" id="L734">                                ligne1 = in1.readLine();</span>
+<span class="nc bnc" id="L735" title="All 2 branches missed.">                            } else if (comp &gt; 0) {</span>
+<span class="nc" id="L736">                                precedente = addGameToSort(out, ligne2,</span>
+<span class="nc" id="L737">                                        precedente);</span>
+<span class="nc" id="L738">                                ligne2 = in2.readLine();</span>
+<span class="nc" id="L739">                            } else {</span>
+<span class="nc" id="L740">                                ligne1 = in1.readLine();</span>
+<span class="nc" id="L741">                                S_duplicate++;</span>
+                            }
+                        }
+                    }
+
+<span class="nc" id="L746">                    in1.close();</span>
+<span class="nc" id="L747">                    in2.close();</span>
+<span class="nc" id="L748">                    out.close();</span>
+
+<span class="nc" id="L750">                    TEMP_FILES.remove(1).delete();</span>
+<span class="nc" id="L751">                    TEMP_FILES.remove(0).delete();</span>
+<span class="nc" id="L752">                } catch (final IOException e) {</span>
+                    try {
+<span class="nc" id="L754">                        in1.close();</span>
+<span class="nc" id="L755">                    } catch (final IOException e1) {</span>
+<span class="nc" id="L756">                        LOG.trace(e1.toString());</span>
+                    }
+                    try {
+<span class="nc" id="L759">                        in2.close();</span>
+<span class="nc" id="L760">                    } catch (final IOException e1) {</span>
+<span class="nc" id="L761">                        LOG.trace(e1.toString());</span>
+                    }
+                    try {
+<span class="nc" id="L764">                        out.close();</span>
+<span class="nc" id="L765">                    } catch (final IOException e1) {</span>
+<span class="nc" id="L766">                        LOG.trace(e1.toString());</span>
+                    }
+<span class="nc" id="L768">                    error(e);</span>
+                }
+            }
+        }
+<span class="nc" id="L772">    }</span>
+
+    /**
+     * Recherche des parties terminées par un véritable mat.
+     */
+    private static void searchMatGames() {
+<span class="nc" id="L778">        S_read = 0;</span>
+<span class="nc" id="L779">        S_invalid = 0;</span>
+<span class="nc" id="L780">        S_temporary = 0;</span>
+
+<span class="nc" id="L782">        FileReader ficIn = null;</span>
+        try {
+<span class="nc" id="L784">            ficIn = new FileReader(TEMP_FILES.get(0));</span>
+<span class="nc" id="L785">        } catch (final FileNotFoundException e) {</span>
+<span class="nc" id="L786">            error(e.toString());</span>
+        }
+
+<span class="nc" id="L789">        FileWriter ficOut = null;</span>
+        try {
+<span class="nc" id="L791">            final File ficTmp = File.createTempFile(&quot;obs&quot; + TEMP_FILES.size()</span>
+<span class="nc" id="L792">                    + &quot;m&quot;, null);</span>
+<span class="nc" id="L793">            ficTmp.deleteOnExit();</span>
+<span class="nc" id="L794">            TEMP_FILES.add(ficTmp);</span>
+<span class="nc" id="L795">            ficOut = new FileWriter(ficTmp);</span>
+<span class="nc" id="L796">        } catch (final IOException e) {</span>
+<span class="nc" id="L797">            error(e.toString());</span>
+        }
+
+<span class="nc" id="L800">        final BufferedReader in = new BufferedReader(ficIn);</span>
+<span class="nc" id="L801">        final BufferedWriter out = new BufferedWriter(ficOut);</span>
+        try {
+<span class="nc" id="L803">            String ligne = in.readLine();</span>
+<span class="nc bnc" id="L804" title="All 2 branches missed.">            while (ligne != null) {</span>
+<span class="nc" id="L805">                S_read++;</span>
+<span class="nc bnc" id="L806" title="All 2 branches missed.">                if (S_read % 10000 == 0) {</span>
+<span class="nc" id="L807">                    LOG.info(&quot;  ... {} games read ({} kept) ...&quot;, S_read, S_temporary);</span>
+                }
+
+<span class="nc" id="L810">                boolean valid = true;</span>
+<span class="nc" id="L811">                final String[] mvts = SPLITTER.split(ligne);</span>
+<span class="nc" id="L812">                MoveGenerator etat = BoardFactory.valueOf(FASTEST, STARTING);</span>
+<span class="nc bnc" id="L813" title="All 2 branches missed.">                for (int i = 0; i &lt; mvts.length - 1; i++) {</span>
+                    try {
+<span class="nc" id="L815">                        etat = etat.derive(</span>
+<span class="nc" id="L816">                                toMove(etat, toNormalizedSAN(mvts[i])), true);</span>
+<span class="nc" id="L817">                    } catch (final SANException e) {</span>
+<span class="nc" id="L818">                        valid = false;</span>
+<span class="nc" id="L819">                        S_invalid++;</span>
+<span class="nc" id="L820">                        break;</span>
+                    }
+                }
+<span class="nc bnc" id="L823" title="All 2 branches missed.">                if (valid) {</span>
+<span class="nc bnc" id="L824" title="All 2 branches missed.">                    if (etat.getValidMoves(etat.isWhiteActive()).length == 0) {</span>
+<span class="nc" id="L825">                        out.write(ligne);</span>
+<span class="nc" id="L826">                        out.newLine();</span>
+<span class="nc" id="L827">                        S_temporary++;</span>
+<span class="nc" id="L828">                    } else {</span>
+<span class="nc" id="L829">                        S_notRealMat++;</span>
+                    }
+                }
+<span class="nc" id="L832">                ligne = in.readLine();</span>
+            }
+
+<span class="nc" id="L835">            TEMP_FILES.remove(0).delete();</span>
+<span class="nc" id="L836">        } catch (final IOException e) {</span>
+<span class="nc" id="L837">            error(e.toString());</span>
+        } finally {
+            try {
+<span class="nc" id="L840">                in.close();</span>
+<span class="nc" id="L841">            } catch (final IOException e1) {</span>
+<span class="nc" id="L842">                LOG.trace(e1.toString());</span>
+            }
+            try {
+<span class="nc" id="L845">                out.close();</span>
+<span class="nc" id="L846">            } catch (final IOException e1) {</span>
+<span class="nc" id="L847">                LOG.trace(e1.toString());</span>
+            }
+        }
+<span class="nc" id="L850">    }</span>
+
+    /**
+     * Crée le fichier des ouvertures au format EPD.
+     *
+     * @param pChemin Chemin du fichier PGN en entrée.
+     */
+    private static void writeOpenings(final String pChemin) {
+<span class="nc" id="L858">        OutputStreamWriter ficOut = null;</span>
+        try {
+<span class="nc" id="L860">            ficOut = new OutputStreamWriter(new FileOutputStream(pChemin</span>
+<span class="nc" id="L861">                    + &quot;.epd&quot;));</span>
+<span class="nc" id="L862">        } catch (final IOException e) {</span>
+<span class="nc" id="L863">            error(e.toString());</span>
+        }
+
+<span class="nc" id="L866">        final BufferedWriter out = new BufferedWriter(ficOut);</span>
+        try {
+<span class="nc bnc" id="L868" title="All 2 branches missed.">            for (final Map.Entry&lt;String, Map&lt;String, Integer&gt;&gt; pos : POSITIONS</span>
+<span class="nc" id="L869">                    .entrySet()) {</span>
+                // Tri les coups possibles du meilleur au plus mauvais...
+<span class="nc" id="L871">                final List&lt;Map.Entry&lt;String, Integer&gt;&gt; mvts = new ArrayList&lt;&gt;(</span>
+<span class="nc" id="L872">                        pos.getValue().entrySet());</span>
+<span class="nc" id="L873">                mvts.sort(BEST_MOVE_SORTER);</span>
+                // Ne conserve que les 5 premiers bons...
+<span class="nc" id="L875">                final List&lt;Map.Entry&lt;String, Integer&gt;&gt; garde = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L876" title="All 2 branches missed.">                for (final Map.Entry&lt;String, Integer&gt; e : mvts) {</span>
+<span class="nc bnc" id="L877" title="All 2 branches missed.">                    if (e.getValue() &gt; 0) {</span>
+<span class="nc" id="L878">                        garde.add(e);</span>
+<span class="nc bnc" id="L879" title="All 2 branches missed.">                        if (garde.size() &gt;= 5) {</span>
+<span class="nc" id="L880">                            break;</span>
+                        }
+                    }
+                }
+                // Tri les mouvements conservés par ordre alphanumérique
+                // (contrainte du
+                // format EPD).
+<span class="nc" id="L887">                garde.sort(ALPHA_MOVE_SORTER);</span>
+<span class="nc bnc" id="L888" title="All 2 branches missed.">                if (garde.size() &gt; 0) {</span>
+<span class="nc" id="L889">                    S_openingsPositions++;</span>
+<span class="nc" id="L890">                    out.write(pos.getKey());</span>
+<span class="nc" id="L891">                    out.write(&quot; bm&quot;);</span>
+<span class="nc bnc" id="L892" title="All 2 branches missed.">                    for (final Map.Entry&lt;String, Integer&gt; mvt : garde) {</span>
+<span class="nc" id="L893">                        out.write(' ');</span>
+<span class="nc" id="L894">                        out.write(mvt.getKey());</span>
+                    }
+<span class="nc" id="L896">                    out.write(';');</span>
+<span class="nc" id="L897">                    out.newLine();</span>
+                }
+            }
+<span class="nc" id="L900">            out.close();</span>
+<span class="nc" id="L901">        } catch (final IOException e) {</span>
+            try {
+<span class="nc" id="L903">                out.close();</span>
+<span class="nc" id="L904">            } catch (final IOException e1) {</span>
+<span class="nc" id="L905">                LOG.trace(e1.toString());</span>
+            }
+<span class="nc" id="L907">            error(e.toString());</span>
+        }
+<span class="nc" id="L909">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

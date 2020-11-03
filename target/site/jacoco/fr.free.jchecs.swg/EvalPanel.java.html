@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EvalPanel.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">EvalPanel.java</span></div><h1>EvalPanel.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Component;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.util.Formatter;
+
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+import fr.free.jchecs.ai.Engine;
+import fr.free.jchecs.core.Game;
+import fr.free.jchecs.core.MoveGenerator;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+
+/**
+ * Composant affichant la valeur de l'évaluation de la position courante d'une
+ * partie.
+ *
+ * @author David Cotton
+ */
+final class EvalPanel implements PropertyChangeListener {
+    /**
+     * Composant graphique externe.
+     */
+    private final JComponent _component;
+
+    /**
+     * Partie liée au composant.
+     */
+    private final Game _game;
+
+    /**
+     * Label affichant la valeur de l'évaluation.
+     */
+    private final JLabel _eval;
+
+    /**
+     * Construit un nouveau composant d'affichage de l'évaluation de la
+     * position.
+     *
+     * @param pPartie Définition de partie liée au composant.
+     */
+<span class="nc" id="L64">    EvalPanel(final Game pPartie) {</span>
+<span class="nc" id="L65">        _game = pPartie;</span>
+
+<span class="nc" id="L67">        final JPanel fond = new JPanel();</span>
+<span class="nc" id="L68">        fond.setAlignmentX(Component.CENTER_ALIGNMENT);</span>
+<span class="nc" id="L69">        _eval = new JLabel(&quot;0.00&quot;);</span>
+<span class="nc" id="L70">        fond.add(_eval);</span>
+
+<span class="nc" id="L72">        _component = fond;</span>
+
+<span class="nc" id="L74">        _game.addPropertyChangeListener(&quot;position&quot;, this);</span>
+<span class="nc" id="L75">    }</span>
+
+    /**
+     * Renvoi le composant graphique affichable.
+     *
+     * @return Composant graphique.
+     */
+    JComponent getComponent() {
+<span class="nc" id="L83">        return _component;</span>
+    }
+
+    /**
+     * Réagit au changement dans la définition de la partie.
+     *
+     * @param pEvt Evènement signalant le changement.
+     */
+    @Override
+    public void propertyChange(final PropertyChangeEvent pEvt) {
+<span class="nc" id="L93">        final MoveGenerator disposition = _game.getBoard();</span>
+<span class="nc" id="L94">        boolean traitReference = disposition.isWhiteActive();</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">        final boolean traitAdversaire = !traitReference;</span>
+<span class="nc" id="L96">        Engine moteur = _game.getPlayer(traitAdversaire).getEngine();</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">        if (moteur == null) {</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">            moteur = _game.getPlayer(!traitAdversaire).getEngine();</span>
+<span class="nc" id="L99">            traitReference = traitAdversaire;</span>
+        }
+<span class="nc bnc" id="L101" title="All 2 branches missed.">        if (moteur == null) {</span>
+<span class="nc" id="L102">            _eval.setText(&quot;?.??&quot;);</span>
+<span class="nc" id="L103">        } else {</span>
+<span class="nc" id="L104">            final int note = moteur.getHeuristic().evaluate(disposition,</span>
+<span class="nc" id="L105">                    traitReference);</span>
+<span class="nc" id="L106">            final StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L107">            final Formatter formateur = new Formatter(sb);</span>
+            final String pointDeVue;
+<span class="nc bnc" id="L109" title="All 2 branches missed.">            if (traitReference) {</span>
+<span class="nc" id="L110">                pointDeVue = getI18NString(&quot;panel.eval.white&quot;);</span>
+<span class="nc" id="L111">            } else {</span>
+<span class="nc" id="L112">                pointDeVue = getI18NString(&quot;panel.eval.black&quot;);</span>
+            }
+<span class="nc" id="L114">            formateur.format(&quot;%+5.2f / %s&quot;, note / 100.0F, pointDeVue);</span>
+<span class="nc" id="L115">            _eval.setText(sb.toString());</span>
+        }
+<span class="nc" id="L117">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

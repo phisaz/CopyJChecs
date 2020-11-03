@@ -1,7 +1,7 @@
 organization=se2
 projectKey=phisaz_CopyJChecs
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.13499
+serverVersion=8.0.0.13994
 dashboardUrl=https://sonarcloud.io/dashboard?id=phisaz_CopyJChecs
-ceTaskId=AXVGGO8vX7hKjrsxDwTb
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXVGGO8vX7hKjrsxDwTb
+ceTaskId=AXWPACwxzZ5eZSwM2fk9
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXWPACwxzZ5eZSwM2fk9

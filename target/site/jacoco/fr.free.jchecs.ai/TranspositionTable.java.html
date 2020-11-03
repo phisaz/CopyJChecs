@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TranspositionTable.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">TranspositionTable.java</span></div><h1>TranspositionTable.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.util.Arrays;
+
+import fr.free.jchecs.core.Board;
+
+/**
+ * Classe implémentant la gestion d'une table de transposition intégrable dans
+ * un moteur d'I.A.
+ *
+ * @author David Cotton
+ */
+final class TranspositionTable {
+    /**
+     * Nombre maximum de collisions entre les clés avant l'abandon.
+     */
+    private static final int MAX_COLLISIONS = 3;
+
+    /**
+     * Identifiant d'une valeur de type &quot;ALPHA&quot;.
+     */
+    private static final int ALPHA = 0;
+
+    /**
+     * Identifiant d'une valeur de type &quot;BETA&quot;.
+     */
+    private static final int BETA = 1;
+
+    /**
+     * Identifiant d'une valeur de type &quot;EXACT&quot;.
+     */
+    private static final int EXACT = 2;
+
+    /**
+     * Tableau accueillant les clés de hachage identifiant les états de jeu.
+     */
+    private final int[] _hashCodes;
+
+    /**
+     * Tableau types d'éléments.
+     */
+    private final byte[] _types;
+
+    /**
+     * Tableau des profondeurs.
+     */
+    private final byte[] _depths;
+
+    /**
+     * Tableau des valeurs.
+     */
+    private final int[] _values;
+
+    /**
+     * Instancie une nouvelle table de transposition.
+     *
+     * @param pCapacite Taille maximale de la table de transposition.
+     */
+<span class="fc" id="L77">    TranspositionTable(final int pCapacite) {</span>
+<span class="fc" id="L78">        _hashCodes = new int[pCapacite];</span>
+<span class="fc" id="L79">        _types = new byte[pCapacite];</span>
+<span class="fc" id="L80">        _depths = new byte[pCapacite];</span>
+<span class="fc" id="L81">        _values = new int[pCapacite];</span>
+<span class="fc" id="L82">    }</span>
+
+    /**
+     * Vide la table de transposition.
+     */
+    void clear() {
+<span class="nc" id="L88">        Arrays.fill(_hashCodes, 0);</span>
+<span class="nc" id="L89">    }</span>
+
+    /**
+     * Renvoi l'éventuel valeur correspondant à un état de jeu dans le contexte
+     * de I.A. en cours.
+     *
+     * @param pEtat       Etat recherché.
+     * @param pProfondeur Profondeur du résulat.
+     * @param pAlpha      Valeur alpha.
+     * @param pBeta       Valeur beta.
+     * @return Valeur correspondante, ou null si inconnue.
+     */
+    Integer get(final Board pEtat, final int pProfondeur, final int pAlpha,
+                final int pBeta) {
+<span class="nc" id="L103">        final int cleCherchee = pEtat.hashCode();</span>
+<span class="nc" id="L104">        final int capacite = _hashCodes.length;</span>
+<span class="nc" id="L105">        int pos = Math.abs(cleCherchee % capacite);</span>
+<span class="nc" id="L106">        int cle = _hashCodes[pos];</span>
+<span class="nc bnc" id="L107" title="All 4 branches missed.">        for (int i = MAX_COLLISIONS; (cle != 0) &amp;&amp; (--i &gt;= 0); /*</span>
+                                                                 * Pré-décrémenté
+																 */) {
+<span class="nc bnc" id="L110" title="All 2 branches missed.">            if (cle == cleCherchee) {</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">                if (_depths[pos] &gt;= pProfondeur) {</span>
+<span class="nc" id="L112">                    final int type = _types[pos];</span>
+<span class="nc" id="L113">                    final int val = _values[pos];</span>
+<span class="nc bnc" id="L114" title="All 6 branches missed.">                    if ((type == EXACT) || ((type == ALPHA) &amp;&amp; (val &lt;= pAlpha))</span>
+<span class="nc bnc" id="L115" title="All 4 branches missed.">                            || ((type == BETA) &amp;&amp; (val &gt;= pBeta))) {</span>
+<span class="nc" id="L116">                        return val;</span>
+                    }
+                }
+                break;
+            }
+<span class="nc" id="L121">            pos++;</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">            if (pos &gt;= capacite) {</span>
+<span class="nc" id="L123">                pos -= capacite;</span>
+            }
+<span class="nc" id="L125">            cle = _hashCodes[pos];</span>
+        }
+
+<span class="nc" id="L128">        return null;</span>
+    }
+
+    /**
+     * Stocke la valeur donnée à un état dans la table de transposition.
+     *
+     * @param pEtat       Etat de jeu.
+     * @param pProfondeur Profondeur liée au résultat.
+     * @param pAlpha      Valeur alpha.
+     * @param pBeta       Valeur beta.
+     * @param pValeur     Valeur du résultat.
+     */
+    void put(final Board pEtat, final int pProfondeur, final int pAlpha,
+             final int pBeta, final int pValeur) {
+<span class="nc" id="L142">        final int cleEtat = pEtat.hashCode();</span>
+<span class="nc" id="L143">        final int capacite = _hashCodes.length;</span>
+<span class="nc" id="L144">        int pos = Math.abs(cleEtat % capacite);</span>
+<span class="nc" id="L145">        int cle = _hashCodes[pos];</span>
+<span class="nc bnc" id="L146" title="All 6 branches missed.">        for (int i = MAX_COLLISIONS; (cle != 0) &amp;&amp; (cle != cleEtat)</span>
+<span class="nc" id="L147">                &amp;&amp; (--i &gt;= 0); /*</span>
+								 * Pré- décrémenté
+								 */) {
+<span class="nc" id="L150">            pos++;</span>
+<span class="nc bnc" id="L151" title="All 2 branches missed.">            if (pos &gt;= capacite) {</span>
+<span class="nc" id="L152">                pos -= capacite;</span>
+            }
+<span class="nc" id="L154">            cle = _hashCodes[pos];</span>
+        }
+
+<span class="nc bnc" id="L157" title="All 6 branches missed.">        if ((cle == 0) || ((cle == cleEtat) &amp;&amp; (_depths[pos] &lt; pProfondeur))) {</span>
+<span class="nc" id="L158">            byte type = EXACT;</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">            if (pProfondeur &gt; 0) {</span>
+<span class="nc bnc" id="L160" title="All 2 branches missed.">                if (pValeur &gt; pBeta) {</span>
+<span class="nc" id="L161">                    type = BETA;</span>
+<span class="nc bnc" id="L162" title="All 2 branches missed.">                } else if (pValeur &lt; pAlpha) {</span>
+<span class="nc" id="L163">                    type = ALPHA;</span>
+                }
+            }
+
+<span class="nc" id="L167">            _hashCodes[pos] = cleEtat;</span>
+<span class="nc" id="L168">            _types[pos] = type;</span>
+<span class="nc" id="L169">            _depths[pos] = (byte) pProfondeur;</span>
+<span class="nc" id="L170">            _values[pos] = pValeur;</span>
+        }
+<span class="nc" id="L172">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

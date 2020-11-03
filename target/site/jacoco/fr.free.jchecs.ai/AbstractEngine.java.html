@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractEngine.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">AbstractEngine.java</span></div><h1>AbstractEngine.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.regex.Pattern;
+import java.util.zip.GZIPInputStream;
+
+import fr.free.jchecs.core.BoardFactory;
+import fr.free.jchecs.core.Move;
+import fr.free.jchecs.core.MoveGenerator;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import static fr.free.jchecs.core.BoardFactory.State.EMPTY;
+import static fr.free.jchecs.core.BoardFactory.Type.FASTEST;
+
+/**
+ * Implémentation de base des moteurs d'IA pour les échecs.
+ *
+ * @author David Cotton
+ */
+abstract class AbstractEngine implements Engine {
+    /**
+     * Générateur de nombres aléatoires.
+     */
+<span class="fc" id="L49">    static final Random RANDOMIZER = new Random();</span>
+
+    /**
+     * Valeur d'un Mat.
+     */
+    static final int MATE_VALUE = Integer.MIN_VALUE / 2;
+
+    /**
+     * Modèle de découpage des enregistrements des ouvertures suivant les ';'.
+     */
+<span class="fc" id="L59">    static final Pattern SPLITTER = Pattern.compile(&quot;;&quot;);</span>
+
+    /**
+     * Log de la classe.
+     */
+<span class="fc" id="L64">    private static final Logger LOG = LoggerFactory.getLogger(AbstractEngine.class);</span>
+
+    /**
+     * Durée maxi. d'attente d'une réponse du Web Service.
+     */
+    private static final long ELAPSED_TIME_LIMIT = 10000;
+
+    /**
+     * Buffer des ouvertures.
+     */
+    private static Map&lt;Integer, int[]&gt; S_openings;
+
+    static {
+<span class="fc" id="L77">        final Thread preload = new Thread(new Runnable() {</span>
+            /**
+             * Tâche de fond pour masquer le temps de chargement...
+             */
+            @Override
+            public void run() {
+<span class="fc" id="L83">                getFromOpenings(BoardFactory.valueOf(FASTEST, EMPTY));</span>
+<span class="fc" id="L84">            }</span>
+        });
+<span class="fc" id="L86">        preload.setPriority(Thread.MIN_PRIORITY);</span>
+<span class="fc" id="L87">        preload.start();</span>
+<span class="fc" id="L88">    }</span>
+
+    /**
+     * Limite basse de la profondeur de recherche.
+     */
+    private final int _minimalSearchDepth;
+
+    /**
+     * Limite haute de la profondeur de recherche.
+     */
+    private final int _maximalSearchDepth;
+
+    /**
+     * Temps total passé en traitement par le moteur.
+     */
+    private long _elapsedTime;
+
+    /**
+     * Nombre total de demi-coups évalué par le moteur.
+     */
+    private int _halfmoveCount;
+
+    /**
+     * Fonction d'évalutation utilisée par le moteur.
+     */
+    private Heuristic _heuristic;
+
+    /**
+     * Fonction de tri des mouvements.
+     */
+    private Comparator&lt;Move&gt; _moveSorter;
+
+    /**
+     * Drapeau signalant l'activation du web service de fin de partie.
+     */
+    private boolean _endgamesWSEnabled;
+
+    /**
+     * Drapeau signalant l'activation de la bibliothèque d'ouvertures.
+     */
+    private boolean _openingsEnabled;
+
+    /**
+     * Score du dernier mouvement.
+     */
+    private int _score;
+
+    /**
+     * Limite de la profondeur de recherche (en demi-coups).
+     */
+    private int _searchDepthLimit;
+
+    /**
+     * Instancie un nouveau moteur IA.
+     *
+     * @param pProfMin Limite basse de la profondeur de recherche (&gt;= 1).
+     * @param pProfMax Limite haute de la profondeur de recherche (&gt;= pProfMin).
+     * @param pProfDef Limite par défaut de la profondeur de recherche ([pProfMin,
+     *                 pProfMax]).
+     */
+<span class="fc" id="L148">    AbstractEngine(final int pProfMin, final int pProfMax,</span>
+                   final int pProfDef) {
+<span class="fc" id="L150">        _minimalSearchDepth = pProfMin;</span>
+<span class="fc" id="L151">        _maximalSearchDepth = pProfMax;</span>
+
+<span class="fc" id="L153">        setSearchDepthLimit(pProfDef);</span>
+
+<span class="fc" id="L155">        setHeuristic(new MobilityHeuristic());</span>
+
+<span class="fc" id="L157">        setOpeningsEnabled(true);</span>
+<span class="fc" id="L158">        setEndgamesWSEnabled(true);</span>
+<span class="fc" id="L159">    }</span>
+
+    /**
+     * Ajoute une durée (en ms) au temps total de traitement par le moteur.
+     *
+     * @param pDuree Duree en ms à ajouter.
+     */
+    private void addElapsedTime(final long pDuree) {
+<span class="nc" id="L167">        _elapsedTime += pDuree;</span>
+<span class="nc" id="L168">    }</span>
+
+    /**
+     * Ajoute un décompte de demi-coups au nombre de demi-coups évalués par le
+     * moteur.
+     *
+     * @param pNombre Nombre de demi-coups à ajouter.
+     */
+    final void addHalfmove(final int pNombre) {
+<span class="nc" id="L177">        _halfmoveCount += pNombre;</span>
+<span class="nc" id="L178">    }</span>
+
+    /**
+     * Renvoi le temps total passé en traitement par le moteur.
+     *
+     * @return Temps total de traitement par le moteur (en ms).
+     */
+    @Override
+    public final long getElapsedTime() {
+<span class="nc" id="L187">        return _elapsedTime;</span>
+    }
+
+    /**
+     * Renvoi le mouvement correspondant à une position dans la bibliothèque de
+     * fermeture.
+     *
+     * @param pEtat Etat du jeu.
+     * @return Mouvement correspondant (ou null)
+     */
+    final Move getFromEndgames(final MoveGenerator pEtat) {
+<span class="nc" id="L198">        final Move res = null;</span>
+
+<span class="nc" id="L200">        final EndgamesWSRequest wsRequest = new EndgamesWSRequest(pEtat);</span>
+<span class="nc" id="L201">        wsRequest.start();</span>
+        try {
+<span class="nc" id="L203">            wsRequest.join();</span>
+<span class="nc" id="L204">        } catch (final InterruptedException e) {</span>
+<span class="nc" id="L205">            LOG.trace(&quot;Request to endgames WebService interrupted.&quot;);</span>
+        }
+
+<span class="nc" id="L208">        return res;</span>
+    }
+
+    /**
+     * Renvoi le mouvement correspondant à une position dans la bibliothèque
+     * d'ouverture.
+     *
+     * @param pEtat Etat du jeu.
+     * @return Mouvement correspondant (ou null)
+     */
+    private static synchronized Move getFromOpenings(final MoveGenerator pEtat) {
+<span class="fc" id="L219">        Move res = null;</span>
+
+<span class="pc bpc" id="L221" title="1 of 2 branches missed.">        if (S_openings == null) {</span>
+<span class="fc" id="L222">            final InputStream is = Engine.class</span>
+<span class="fc" id="L223">                    .getResourceAsStream(&quot;jchecs.opn&quot;);</span>
+<span class="pc bpc" id="L224" title="1 of 2 branches missed.">            if (is != null) {</span>
+<span class="fc" id="L225">                S_openings = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L226">                DataInputStream in = null;</span>
+                try {
+<span class="fc" id="L228">                    in = new DataInputStream(new GZIPInputStream(is));</span>
+<span class="fc bfc" id="L229" title="All 2 branches covered.">                    while (in.available() &gt; 0) {</span>
+<span class="fc" id="L230">                        final int nb = in.readByte();</span>
+<span class="fc" id="L231">                        final int[] mvtsId = new int[nb];</span>
+<span class="fc" id="L232">                        final int cle = in.readInt();</span>
+<span class="fc bfc" id="L233" title="All 2 branches covered.">                        for (int i = 0; i &lt; nb; i++) {</span>
+<span class="fc" id="L234">                            mvtsId[i] = (in.readUnsignedShort() &lt;&lt; 8)</span>
+<span class="fc" id="L235">                                    + in.readUnsignedByte();</span>
+                        }
+<span class="fc" id="L237">                        S_openings.put(cle, mvtsId);</span>
+                    }
+<span class="pc" id="L239">                } catch (final IOException e) {</span>
+                    // Pas grave, le coup sera calculé...
+                } finally {
+<span class="pc bpc" id="L242" title="1 of 2 branches missed.">                    if (in != null) {</span>
+                        try {
+<span class="fc" id="L244">                            in.close();</span>
+<span class="pc" id="L245">                        } catch (final IOException e1) {</span>
+                            // On aura essayé :-)
+                        }
+                    }
+                }
+            }
+        }
+
+<span class="fc" id="L253">        int[] ids = null;</span>
+<span class="pc bpc" id="L254" title="1 of 2 branches missed.">        if (S_openings != null) {</span>
+<span class="fc" id="L255">            ids = S_openings.get(pEtat.hashCode());</span>
+        }
+<span class="pc bpc" id="L257" title="1 of 2 branches missed.">        if (ids != null) {</span>
+<span class="nc" id="L258">            res = Move.valueOf(ids[RANDOMIZER.nextInt(ids.length)]);</span>
+            // Les hashcodes n'étant pas infaïbles, il vaut mieux valider le
+            // mouvement
+            // obtenu...
+<span class="nc" id="L262">            boolean erreurHashcode = true;</span>
+<span class="nc bnc" id="L263" title="All 2 branches missed.">            for (final Move mvt : pEtat.getValidMoves(pEtat.isWhiteActive())) {</span>
+<span class="nc bnc" id="L264" title="All 2 branches missed.">                if (mvt.equals(res)) {</span>
+<span class="nc" id="L265">                    erreurHashcode = false;</span>
+<span class="nc" id="L266">                    break;</span>
+                }
+            }
+<span class="nc bnc" id="L269" title="All 2 branches missed.">            if (erreurHashcode) {</span>
+<span class="nc" id="L270">                res = null;</span>
+            }
+        }
+
+<span class="fc" id="L274">        return res;</span>
+    }
+
+    /**
+     * Renvoi le nombre total de demi-coups évalués par le moteur.
+     *
+     * @return Nombre total de demi-coups évalués par le moteur.
+     */
+    @Override
+    public final int getHalfmoveCount() {
+<span class="nc" id="L284">        return _halfmoveCount;</span>
+    }
+
+    /**
+     * Renvoi la fonction d'évaluation utilisée par le moteur.
+     *
+     * @return Fonction d'évaluation utilisée.
+     */
+    @Override
+    public final Heuristic getHeuristic() {
+<span class="nc" id="L294">        return _heuristic;</span>
+    }
+
+    /**
+     * Renvoi la limite haute de la profondeur de recherche supportées par le
+     * moteur.
+     *
+     * @return Limite haute de la profondeur de recherche (&gt;=
+     * getMinimalSearchDepth()).
+     */
+    @Override
+    public final int getMaximalSearchDepth() {
+<span class="nc" id="L306">        return _maximalSearchDepth;</span>
+    }
+
+    /**
+     * Renvoi la limite basse de la profondeur de recherche supportées par le
+     * moteur.
+     *
+     * @return Limite basse de la profondeur de recherche (&gt;= 1).
+     */
+    @Override
+    public final int getMinimalSearchDepth() {
+<span class="nc" id="L317">        return _minimalSearchDepth;</span>
+    }
+
+    /**
+     * Recherche un mouvement répondant à un état de l'échiquier.
+     *
+     * @param pEtat Etat de l'échiquier.
+     * @return Mouvement trouvé.
+     */
+    @Override
+    public final synchronized Move getMoveFor(final MoveGenerator pEtat) {
+<span class="nc" id="L328">        final long debut = System.currentTimeMillis();</span>
+
+<span class="nc" id="L330">        Move res = null;</span>
+
+<span class="nc" id="L332">        setScore(0);</span>
+<span class="nc" id="L333">        EndgamesWSRequest wsRequest = null;</span>
+
+<span class="nc bnc" id="L335" title="All 4 branches missed.">        if (_openingsEnabled &amp;&amp; (pEtat.getFullmoveNumber() &lt; 20)) {</span>
+<span class="nc" id="L336">            res = getFromOpenings(pEtat);</span>
+        }
+
+<span class="nc bnc" id="L339" title="All 2 branches missed.">        if (res == null) {</span>
+<span class="nc bnc" id="L340" title="All 4 branches missed.">            if (_endgamesWSEnabled &amp;&amp; (pEtat.getPiecesCount() &lt; 7)) {</span>
+<span class="nc" id="L341">                wsRequest = new EndgamesWSRequest(pEtat);</span>
+<span class="nc" id="L342">                wsRequest.start();</span>
+            }
+
+            // Calcul du meilleur coup...
+<span class="nc" id="L346">            final Move[] coups = pEtat.getValidMoves(pEtat.isWhiteActive());</span>
+
+<span class="nc" id="L348">            res = searchMoveFor(pEtat, coups);</span>
+
+<span class="nc bnc" id="L350" title="All 2 branches missed.">            if (wsRequest != null) {</span>
+                // ... mais préférer les éventuelles réponses du Web Service en
+                // fin de
+                // partie.
+<span class="nc" id="L354">                final long ecoule = System.currentTimeMillis() - debut;</span>
+<span class="nc bnc" id="L355" title="All 2 branches missed.">                if (ecoule &lt; ELAPSED_TIME_LIMIT) {</span>
+                    // Attendre un peu le Web Service si le moteur interne est
+                    // allé trop
+                    // vite.
+                    try {
+<span class="nc" id="L360">                        wsRequest.join(ELAPSED_TIME_LIMIT - ecoule);</span>
+<span class="nc" id="L361">                    } catch (final InterruptedException e) {</span>
+                        // Pas grave, on peut s'en passer.
+                    }
+                }
+
+<span class="nc" id="L366">                final Move mvt = wsRequest.getMove();</span>
+<span class="nc bnc" id="L367" title="All 2 branches missed.">                if (mvt != null) {</span>
+<span class="nc" id="L368">                    res = mvt;</span>
+                }
+            }
+        }
+
+<span class="nc" id="L373">        final long duree = System.currentTimeMillis() - debut;</span>
+<span class="nc" id="L374">        addElapsedTime(duree);</span>
+
+<span class="nc" id="L376">        return res;</span>
+    }
+
+    /**
+     * Renvoi la fonction de tri des mouvements.
+     *
+     * @return Fonction de tri des mouvements.
+     */
+    @Override
+    public final Comparator&lt;Move&gt; getMoveSorter() {
+<span class="nc" id="L386">        return _moveSorter;</span>
+    }
+
+    /**
+     * Renvoi le score obtenu par le dernier mouvement calculé.
+     *
+     * @return Score du dernier mouvement.
+     */
+    @Override
+    public final int getScore() {
+<span class="nc" id="L396">        return _score;</span>
+    }
+
+    /**
+     * Renvoi la valeur limite de la profondeur de recherche (en demi-coups).
+     *
+     * @return Limite de la profondeur de recherche ([getMinimalSearchDepth(),
+     * getMaximalSearchDepth()]).
+     */
+    @Override
+    public final int getSearchDepthLimit() {
+<span class="nc" id="L407">        return _searchDepthLimit;</span>
+    }
+
+    /**
+     * Indique si l'utilisation du web service de fin de partie est activée.
+     *
+     * @return &quot;true&quot; si le web service est utilisé, &quot;false&quot; sinon.
+     */
+    @Override
+    public final boolean isEndgamesWSEnabled() {
+<span class="nc" id="L417">        return _endgamesWSEnabled;</span>
+    }
+
+    /**
+     * Indique si l'utilisation de la bibliothèque d'ouvertures est activée.
+     *
+     * @return &quot;true&quot; si les ouvertures sont utilisées, &quot;false&quot; sinon.
+     */
+    @Override
+    public final boolean isOpeningsEnabled() {
+<span class="nc" id="L427">        return _openingsEnabled;</span>
+    }
+
+    /**
+     * Corps de la recherche du &quot;meilleur&quot; demi-coup pour un état de
+     * l'échiquier.
+     *
+     * @param pEtat  Etat de l'échiquier.
+     * @param pCoups Liste des mouvement initiaux valides.
+     * @return Mouvement trouvé.
+     */
+    protected abstract Move searchMoveFor(final MoveGenerator pEtat,
+                                          final Move[] pCoups);
+
+    /**
+     * Active / désactive l'utilisation du web service de fin de partie.
+     *
+     * @param pActif A &quot;true&quot; pour activer l'utilisation du web service, à &quot;false&quot;
+     *               sinon.
+     */
+    @Override
+    public final void setEndgamesWSEnabled(final boolean pActif) {
+<span class="fc" id="L449">        _endgamesWSEnabled = pActif;</span>
+<span class="fc" id="L450">    }</span>
+
+    /**
+     * Modifie la fonction d'évaluation utilisée par le moteur.
+     *
+     * @param pHeuristique Nouvelle fonction d'évaluation à utiliser.
+     */
+    @Override
+    public final void setHeuristic(final Heuristic pHeuristique) {
+<span class="fc" id="L459">        _heuristic = pHeuristique;</span>
+<span class="fc" id="L460">    }</span>
+
+    /**
+     * Modifie la fonction d'ordenancement des mouvements.
+     *
+     * @param pComparateur Nouvelle fonction de tri des mouvements.
+     */
+    @Override
+    public final void setMoveSorter(final Comparator&lt;Move&gt; pComparateur) {
+<span class="fc" id="L469">        _moveSorter = pComparateur;</span>
+<span class="fc" id="L470">    }</span>
+
+    /**
+     * Active / désactive l'utilisation de la bibliothèque d'ouvertures.
+     *
+     * @param pActif A &quot;true&quot; pour activer l'utilisation des ouvertures, à &quot;false&quot;
+     *               sinon.
+     */
+    @Override
+    public final void setOpeningsEnabled(final boolean pActif) {
+<span class="fc" id="L480">        _openingsEnabled = pActif;</span>
+<span class="fc" id="L481">    }</span>
+
+    /**
+     * Alimente le score obtenu par le dernier mouvement calculé.
+     *
+     * @param pScore Score du dernier mouvement.
+     */
+    final void setScore(final int pScore) {
+<span class="nc" id="L489">        _score = pScore;</span>
+<span class="nc" id="L490">    }</span>
+
+    /**
+     * Aliment la valeur de la limite de la profondeur de recherche (en
+     * demi-coups).
+     *
+     * @param pLimite Limite de la profondeur de recherche
+     *                ([getMinimalSearchDepth(), getMaximalSearchDepth()]).
+     */
+    @Override
+    public final void setSearchDepthLimit(final int pLimite) {
+<span class="fc" id="L501">        _searchDepthLimit = pLimite;</span>
+<span class="fc" id="L502">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

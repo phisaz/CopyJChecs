@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Square.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">Square.java</span></div><h1>Square.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.io.Serializable;
+
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+
+/**
+ * Description d'une cellule de l'échiquier.
+ * &lt;p&gt;
+ * Les instances de cette classe sont des &lt;b&gt;singletons immuables&lt;/b&gt; : classe
+ * sûre vis-à-vis des threads et permettant des comparaisons directes sur les
+ * références d'objets.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+public final class Square implements Comparable&lt;Square&gt;, Serializable {
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -5504534226984844152L;
+
+    /**
+     * Liste des coordonnées de cellules.
+     */
+    private static final Square[] SQUARES;
+
+    static {
+<span class="fc" id="L48">        SQUARES = new Square[FILE_COUNT * RANK_COUNT];</span>
+<span class="fc" id="L49">        int i = 0;</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        for (int y = 0; y &lt; RANK_COUNT; y++) {</span>
+<span class="fc bfc" id="L51" title="All 2 branches covered.">            for (int x = 0; x &lt; FILE_COUNT; x++) {</span>
+<span class="fc" id="L52">                SQUARES[i++] = new Square(x, y);</span>
+            }
+        }
+<span class="fc" id="L55">    }</span>
+
+    /**
+     * Colonne.
+     */
+    private final int _file;
+
+    /**
+     * Ligne.
+     */
+    private final int _rank;
+
+    /**
+     * Indice de la cellule.
+     */
+    private final transient int _index;
+
+    /**
+     * Chaine de description de la cellule.
+     */
+    private final transient String _string;
+
+    /**
+     * Chaine FEN identifiant la cellule.
+     */
+    private final transient String _fenString;
+
+    /**
+     * Instancie une nouvelle coordonnée.
+     *
+     * @param pColonne Colonne de la cellule (de 0 à 7).
+     * @param pLigne   Ligne de la colonne (de 0 à 7).
+     */
+<span class="fc" id="L88">    private Square(final int pColonne, final int pLigne) {</span>
+<span class="fc" id="L89">        _file = pColonne;</span>
+<span class="fc" id="L90">        _rank = pLigne;</span>
+<span class="fc" id="L91">        _index = pColonne + pLigne * RANK_COUNT;</span>
+
+<span class="fc" id="L93">        final StringBuilder sb = new StringBuilder(getClass().getSimpleName());</span>
+<span class="fc" id="L94">        sb.append(&quot;[file=&quot;).append((char) ('a' + getFile()));</span>
+<span class="fc" id="L95">        sb.append(&quot;,rank=&quot;).append((char) ('1' + getRank()));</span>
+<span class="fc" id="L96">        sb.append(']');</span>
+<span class="fc" id="L97">        _string = sb.toString();</span>
+
+<span class="fc" id="L99">        sb.delete(0, sb.length());</span>
+<span class="fc" id="L100">        sb.append((char) ('a' + getFile())).append((char) ('1' + getRank()));</span>
+<span class="fc" id="L101">        _fenString = sb.toString();</span>
+<span class="fc" id="L102">    }</span>
+
+    /**
+     * Fixe l'ordre de tri entre les cases.
+     *
+     * @param pCase Case avec laquelle comparer.
+     * @return -1 si pCase est inférieure, 0 si égale et 1 si supérieure.
+     * @see Comparable#compareTo(Object)
+     */
+    @Override
+    public int compareTo(final Square pCase) {
+<span class="pc bpc" id="L113" title="1 of 2 branches missed.">        if (pCase == null) {</span>
+<span class="nc" id="L114">            throw new NullPointerException();</span>
+        }
+
+<span class="fc" id="L117">        return getFENString().compareTo(pCase.getFENString());</span>
+    }
+
+    /**
+     * Teste l'égalité entre deux descriptions de cellules.
+     *
+     * @param pObjet Objet avec lequel comparer.
+     * @return Vrai si les deux objets sont égaux.
+     */
+    @Override
+    public boolean equals(final Object pObjet) {
+<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if (pObjet == this) {</span>
+<span class="nc" id="L129">            return true;</span>
+        }
+
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        if (!(pObjet instanceof Square)) {</span>
+<span class="nc" id="L133">            return false;</span>
+        }
+
+<span class="fc" id="L136">        final Square o = (Square) pObjet;</span>
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">        return _index == o._index;</span>
+    }
+
+    /**
+     * Renvoi la chaine FEN identifiant la cellule.
+     *
+     * @return Identifiant FEN.
+     */
+    public String getFENString() {
+<span class="fc" id="L146">        return _fenString;</span>
+    }
+
+    /**
+     * Renvoi la colonne de la cellule.
+     *
+     * @return Colonne de la cellule.
+     */
+    public int getFile() {
+<span class="fc" id="L155">        return _file;</span>
+    }
+
+    /**
+     * Renvoi l'indice de la cellule.
+     *
+     * @return Indece de la cellule (entre 0 et 63).
+     */
+    public int getIndex() {
+<span class="fc" id="L164">        return _index;</span>
+    }
+
+    /**
+     * Renvoi la ligne de la cellule.
+     *
+     * @return Ligne de la cellule.
+     */
+    public int getRank() {
+<span class="fc" id="L173">        return _rank;</span>
+    }
+
+    /**
+     * Surcharge du calcul de la clé de hachage.
+     *
+     * @return Clé de hachage.
+     */
+    @Override
+    public int hashCode() {
+<span class="nc" id="L183">        return _index;</span>
+    }
+
+    /**
+     * Résout la désérialisation d'un objet pour en garantir le comportement
+     * &quot;singleton&quot;.
+     *
+     * @return Instance correspondante dans la JVM.
+     */
+    private Object readResolve() {
+<span class="nc" id="L193">        return valueOf(getFile(), getRank());</span>
+    }
+
+    /**
+     * Renvoi une chaine représentant la cellule.
+     *
+     * @return Chaine représentant la case.
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L203">        return _string;</span>
+    }
+
+    /**
+     * Renvoi l'instance correspondant à un indice.
+     *
+     * @param pIndice Indice de la case (entre 0 et 63).
+     * @return Instance correspondante.
+     */
+    public static Square valueOf(final int pIndice) {
+<span class="fc" id="L213">        return SQUARES[pIndice];</span>
+    }
+
+    /**
+     * Renvoi l'instance correspondant à une notation FEN.
+     *
+     * @param pChaine Chaine FEN décrivant la case.
+     * @return Instance correspondante.
+     */
+    public static Square valueOf(final String pChaine) {
+<span class="pc bpc" id="L223" title="1 of 2 branches missed.">        if (pChaine == null) {</span>
+<span class="nc" id="L224">            throw new NullPointerException(&quot;Missing square string&quot;);</span>
+        }
+<span class="pc bpc" id="L226" title="1 of 2 branches missed.">        if (pChaine.length() != 2) {</span>
+<span class="nc" id="L227">            throw new IllegalArgumentException(&quot;Illegal square string [&quot;</span>
+<span class="nc" id="L228">                    + pChaine + ']');</span>
+        }
+
+<span class="fc" id="L231">        return valueOf(pChaine.charAt(0) - 'a', pChaine.charAt(1) - '1');</span>
+    }
+
+    /**
+     * Renvoi l'instance correspondant à une cellule.
+     *
+     * @param pColonne Colonne de la cellule (de 0 à 7).
+     * @param pLigne   Ligne de la colonne (de 0 à 7).
+     * @return Instance correspondante.
+     */
+    public static Square valueOf(final int pColonne, final int pLigne) {
+<span class="pc bpc" id="L242" title="1 of 4 branches missed.">        if ((pColonne &lt; 0) || (pColonne &gt;= FILE_COUNT)) {</span>
+<span class="fc" id="L243">            throw new IllegalArgumentException(&quot;Illegal file [&quot; + pColonne</span>
+<span class="fc" id="L244">                    + ']');</span>
+        }
+<span class="pc bpc" id="L246" title="1 of 4 branches missed.">        if ((pLigne &lt; 0) || (pLigne &gt;= RANK_COUNT)) {</span>
+<span class="fc" id="L247">            throw new IllegalArgumentException(&quot;Illegal rank [&quot; + pLigne + ']');</span>
+        }
+
+<span class="fc" id="L250">        return SQUARES[pColonne + pLigne * FILE_COUNT];</span>
+    }
+
+    /**
+     * Renvoi la liste des cases.
+     *
+     * @return Liste des cases.
+     */
+    public static Square[] values() {
+<span class="fc" id="L259">        final Square[] res = new Square[FILE_COUNT * RANK_COUNT];</span>
+<span class="fc" id="L260">        System.arraycopy(SQUARES, 0, res, 0, FILE_COUNT * RANK_COUNT);</span>
+
+<span class="fc" id="L262">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

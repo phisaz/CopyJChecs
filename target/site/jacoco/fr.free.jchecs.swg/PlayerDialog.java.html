@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PlayerDialog.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.swg</a> &gt; <span class="el_source">PlayerDialog.java</span></div><h1>PlayerDialog.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.swg;
+
+import java.awt.Component;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.swing.DefaultListCellRenderer;
+import javax.swing.Icon;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+import fr.free.jchecs.ai.Engine;
+import fr.free.jchecs.ai.EngineFactory;
+import fr.free.jchecs.core.Player;
+
+import static fr.free.jchecs.swg.ResourceUtils.getI18NString;
+import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
+
+/**
+ * Boite de dialogue permettant d'éditer les paramètres d'un joueur.
+ *
+ * @author David Cotton
+ */
+<span class="nc bnc" id="L54" title="All 2 branches missed.">final class PlayerDialog {</span>
+    /**
+     * Liste des définitions de types de joueurs.
+     */
+    private static final PlayerType[] PLAYER_TYPES;
+
+    static {
+<span class="nc" id="L61">        final List&lt;PlayerType&gt; liste = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L62">        liste.add(new PlayerType(getI18NString(&quot;label.player.human&quot;), true));</span>
+<span class="nc" id="L63">        final String[] noms = EngineFactory.getNames();</span>
+<span class="nc" id="L64">        Arrays.sort(noms);</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        for (final String n : noms) {</span>
+<span class="nc" id="L66">            liste.add(new PlayerType(n.substring(n.indexOf('.') + 1), false));</span>
+        }
+<span class="nc" id="L68">        PLAYER_TYPES = liste.toArray(new PlayerType[liste.size()]);</span>
+<span class="nc" id="L69">    }</span>
+
+    /**
+     * Classe utilitaire : ne pas instancier.
+     */
+    private PlayerDialog() {
+        // Rien de spécifique...
+    }
+
+    /**
+     * Affiche la boite de dialogue.
+     *
+     * @param pParent Composant parent de la boite de dialogue (peut être à null).
+     * @param pJoueur Définition du joueur à éditer.
+     */
+    static void showAboutDialog(final Component pParent, final Player pJoueur) {
+        final String icone;
+        final String suffixCle;
+<span class="nc bnc" id="L87" title="All 2 branches missed.">        if (pJoueur.isWhite()) {</span>
+<span class="nc" id="L88">            suffixCle = &quot;.white&quot;;</span>
+<span class="nc" id="L89">            icone = &quot;white22.png&quot;;</span>
+<span class="nc" id="L90">        } else {</span>
+<span class="nc" id="L91">            suffixCle = &quot;.black&quot;;</span>
+<span class="nc" id="L92">            icone = &quot;black22.png&quot;;</span>
+        }
+
+<span class="nc" id="L95">        final GridBagLayout gbl = new GridBagLayout();</span>
+<span class="nc" id="L96">        final GridBagConstraints gbc = new GridBagConstraints();</span>
+<span class="nc" id="L97">        final JPanel fond = new JPanel(gbl);</span>
+
+<span class="nc" id="L99">        final JLabel labType = new JLabel(getI18NString(&quot;dialog.players.type&quot;));</span>
+<span class="nc" id="L100">        gbc.anchor = GridBagConstraints.WEST;</span>
+<span class="nc" id="L101">        gbc.fill = GridBagConstraints.HORIZONTAL;</span>
+<span class="nc" id="L102">        gbc.ipadx = 8;</span>
+<span class="nc" id="L103">        gbl.setConstraints(labType, gbc);</span>
+<span class="nc" id="L104">        fond.add(labType);</span>
+
+<span class="nc" id="L106">        final JComboBox&lt;PlayerType&gt; comboTypes = new JComboBox&lt;&gt;(PLAYER_TYPES);</span>
+<span class="nc" id="L107">        comboTypes.setRenderer(new PlayerTypeRenderer());</span>
+<span class="nc" id="L108">        final String nom = pJoueur.getName();</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">        for (final PlayerType pt : PLAYER_TYPES) {</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">            if (pt.getName().equals(nom)) {</span>
+<span class="nc" id="L111">                comboTypes.setSelectedItem(pt);</span>
+<span class="nc" id="L112">                break;</span>
+            }
+        }
+<span class="nc" id="L115">        gbc.gridx = 1;</span>
+<span class="nc" id="L116">        gbl.setConstraints(comboTypes, gbc);</span>
+<span class="nc" id="L117">        fond.add(comboTypes);</span>
+
+<span class="nc" id="L119">        final JLabel labProf = new JLabel(getI18NString(&quot;dialog.players.depth&quot;));</span>
+<span class="nc" id="L120">        gbc.gridx = 0;</span>
+<span class="nc" id="L121">        gbc.gridy = 1;</span>
+<span class="nc" id="L122">        gbl.setConstraints(labProf, gbc);</span>
+<span class="nc" id="L123">        fond.add(labProf);</span>
+
+<span class="nc" id="L125">        final JSlider depthSlider = new JSlider();</span>
+<span class="nc" id="L126">        depthSlider.setMajorTickSpacing(1);</span>
+<span class="nc" id="L127">        depthSlider.setPaintLabels(true);</span>
+<span class="nc" id="L128">        depthSlider.setSnapToTicks(true);</span>
+<span class="nc" id="L129">        final Engine moteur = pJoueur.getEngine();</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">        if (moteur == null) {</span>
+<span class="nc" id="L131">            depthSlider.setMinimum(0);</span>
+<span class="nc" id="L132">            depthSlider.setValue(0);</span>
+<span class="nc" id="L133">            depthSlider.setMaximum(0);</span>
+<span class="nc" id="L134">        } else {</span>
+<span class="nc" id="L135">            depthSlider.setMinimum(moteur.getMinimalSearchDepth());</span>
+<span class="nc" id="L136">            depthSlider.setMaximum(moteur.getMaximalSearchDepth());</span>
+<span class="nc" id="L137">            depthSlider.setValue(moteur.getSearchDepthLimit());</span>
+        }
+<span class="nc" id="L139">        gbc.gridx = 1;</span>
+<span class="nc" id="L140">        gbl.setConstraints(depthSlider, gbc);</span>
+<span class="nc" id="L141">        fond.add(depthSlider);</span>
+
+<span class="nc" id="L143">        comboTypes.addItemListener(new ItemListener() {</span>
+            /**
+             * Réagit à la sélection dans la combo des types.
+             *
+             * @param pEvent
+             *            Evènement signalant la sélection.
+             */
+            @Override
+            public void itemStateChanged(final ItemEvent pEvent) {
+<span class="nc bnc" id="L152" title="All 2 branches missed.">                if (pEvent.getStateChange() == ItemEvent.SELECTED) {</span>
+<span class="nc" id="L153">                    final Object item = pEvent.getItem();</span>
+<span class="nc bnc" id="L154" title="All 2 branches missed.">                    if (item instanceof PlayerType) {</span>
+<span class="nc" id="L155">                        final PlayerType pt = (PlayerType) item;</span>
+<span class="nc" id="L156">                        final String n = pt.getName();</span>
+<span class="nc bnc" id="L157" title="All 2 branches missed.">                        if (pt.isHuman()) {</span>
+<span class="nc" id="L158">                            pJoueur.setEngine(null);</span>
+<span class="nc" id="L159">                            depthSlider.setMinimum(0);</span>
+<span class="nc" id="L160">                            depthSlider.setValue(0);</span>
+<span class="nc" id="L161">                            depthSlider.setMaximum(0);</span>
+<span class="nc" id="L162">                        } else {</span>
+<span class="nc" id="L163">                            final Engine m = EngineFactory</span>
+<span class="nc" id="L164">                                    .newInstance(&quot;jChecs.&quot; + n);</span>
+<span class="nc" id="L165">                            depthSlider.setMinimum(m.getMinimalSearchDepth());</span>
+<span class="nc" id="L166">                            depthSlider.setMaximum(m.getMaximalSearchDepth());</span>
+<span class="nc" id="L167">                            depthSlider.setValue(m.getSearchDepthLimit());</span>
+<span class="nc" id="L168">                            pJoueur.setEngine(m);</span>
+                        }
+<span class="nc" id="L170">                        pJoueur.setName(n);</span>
+<span class="nc" id="L171">                    } else {</span>
+<span class="nc bnc" id="L172" title="All 2 branches missed.">                        assert false;</span>
+                    }
+                }
+<span class="nc" id="L175">            }</span>
+        });
+
+<span class="nc" id="L178">        depthSlider.addChangeListener(new ChangeListener() {</span>
+            /**
+             * Réagit aux changements de profondeur de recherche.
+             *
+             * @param pEvent
+             *            Evènement signalant la modification.
+             */
+            @Override
+            public void stateChanged(final ChangeEvent pEvent) {
+<span class="nc bnc" id="L187" title="All 2 branches missed.">                if (!depthSlider.getValueIsAdjusting()) {</span>
+<span class="nc" id="L188">                    final Engine m = pJoueur.getEngine();</span>
+<span class="nc bnc" id="L189" title="All 2 branches missed.">                    if (m != null) {</span>
+<span class="nc" id="L190">                        m.setSearchDepthLimit(depthSlider.getValue());</span>
+                    }
+                }
+<span class="nc" id="L193">            }</span>
+        });
+
+<span class="nc" id="L196">        final JOptionPane op = new JOptionPane(fond, JOptionPane.PLAIN_MESSAGE,</span>
+<span class="nc" id="L197">                JOptionPane.DEFAULT_OPTION, getImageIcon(icone));</span>
+
+<span class="nc" id="L199">        final JDialog dialog = op.createDialog(pParent,</span>
+<span class="nc" id="L200">                getI18NString(&quot;dialog.players.title&quot; + suffixCle));</span>
+<span class="nc" id="L201">        dialog.pack();</span>
+<span class="nc" id="L202">        dialog.setResizable(false);</span>
+<span class="nc" id="L203">        dialog.setLocationRelativeTo(pParent);</span>
+<span class="nc" id="L204">        dialog.setVisible(true);</span>
+<span class="nc" id="L205">    }</span>
+
+    /**
+     * Description interne d'un type de joueur.
+     */
+    private static final class PlayerType {
+        /**
+         * Nom du type du joueur.
+         */
+        private final String _name;
+
+        /**
+         * Indicateur de type de joueur humain.
+         */
+        private final boolean _human;
+
+        /**
+         * Instancie une nouvelle desccription de type de joueur.
+         *
+         * @param pNom    Nom du type du joueur.
+         * @param pHumain Indicateur à vrai si le type correspond à &quot;Humain&quot;.
+         */
+<span class="nc" id="L227">        PlayerType(final String pNom, final boolean pHumain) {</span>
+<span class="nc" id="L228">            _name = pNom;</span>
+<span class="nc" id="L229">            _human = pHumain;</span>
+<span class="nc" id="L230">        }</span>
+
+        /**
+         * Renvoi le nom du type de joueur.
+         *
+         * @return Nom du type de joueur.
+         */
+        String getName() {
+<span class="nc" id="L238">            return _name;</span>
+        }
+
+        /**
+         * Indique si le typecorrespond à &quot;Humain&quot;.
+         *
+         * @return Vrai si c'est un type &quot;Humain&quot;.
+         */
+        boolean isHuman() {
+<span class="nc" id="L247">            return _human;</span>
+        }
+    }
+
+    /**
+     * Afficheur d'un type de joueur.
+     */
+    private static final class PlayerTypeRenderer extends
+            DefaultListCellRenderer {
+        /**
+         * Icône des types &quot;I.A.&quot;.
+         */
+<span class="nc" id="L259">        private static final Icon COMPUTER_ICON = getImageIcon(&quot;ai16.png&quot;);</span>
+
+        /**
+         * Icône des types &quot;Humain&quot;.
+         */
+<span class="nc" id="L264">        private static final Icon HUMAN_ICON = getImageIcon(&quot;human16.png&quot;);</span>
+
+        /**
+         * Identifiant de la classe pour la sérialisation.
+         */
+<span class="nc" id="L269">        private static final long serialVersionUID = 3936682708234009054L;</span>
+
+        /**
+         * Créé une nouvelle instance.
+         */
+<span class="nc" id="L274">        PlayerTypeRenderer() {</span>
+            // Rien de spécifique...
+<span class="nc" id="L276">        }</span>
+
+        /**
+         * Spécialisation de l'affichage des type de joueurs.
+         *
+         * @param pListe     Liste déroulante ciblée.
+         * @param pObjet     Objet correspondant à l'élément de la liste à afficher.
+         * @param pIndex     Indice de l'élément dans la liste.
+         * @param pSelection A vrai si l'élément est sélectionné.
+         * @param pFocus     A vrai si l'élément a le focus.
+         * @return Composant graphique à afficher.
+         */
+        @Override
+        public Component getListCellRendererComponent(final JList pListe,
+                                                      final Object pObjet, final int pIndex,
+                                                      final boolean pSelection, final boolean pFocus) {
+            final Component res;
+<span class="nc bnc" id="L293" title="All 2 branches missed.">            if (pObjet instanceof PlayerType) {</span>
+<span class="nc" id="L294">                final PlayerType pt = (PlayerType) pObjet;</span>
+<span class="nc" id="L295">                final JLabel lab = (JLabel) super.getListCellRendererComponent(</span>
+<span class="nc" id="L296">                        pListe, pt.getName(), pIndex, pSelection, pFocus);</span>
+<span class="nc bnc" id="L297" title="All 2 branches missed.">                if (pt.isHuman()) {</span>
+<span class="nc" id="L298">                    lab.setIcon(HUMAN_ICON);</span>
+<span class="nc" id="L299">                } else {</span>
+<span class="nc" id="L300">                    lab.setIcon(COMPUTER_ICON);</span>
+                }
+<span class="nc" id="L302">                res = lab;</span>
+<span class="nc" id="L303">            } else {</span>
+<span class="nc" id="L304">                res = super.getListCellRendererComponent(pListe, pObjet,</span>
+<span class="nc" id="L305">                        pIndex, pSelection, pFocus);</span>
+            }
+
+<span class="nc" id="L308">            return res;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

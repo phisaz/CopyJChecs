@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Piece.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.core</a> &gt; <span class="el_source">Piece.java</span></div><h1>Piece.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.core;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static fr.free.jchecs.core.PieceType.BISHOP;
+import static fr.free.jchecs.core.PieceType.KING;
+import static fr.free.jchecs.core.PieceType.KNIGHT;
+import static fr.free.jchecs.core.PieceType.PAWN;
+import static fr.free.jchecs.core.PieceType.QUEEN;
+import static fr.free.jchecs.core.PieceType.ROOK;
+
+/**
+ * Enumération des pièces.
+ * &lt;p&gt;
+ * Les instances de cette classe sont des &lt;b&gt;singletons immuables&lt;/b&gt; : classe
+ * sûre vis-à-vis des threads et permettant des comparaisons directes sur les
+ * références d'objets.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+public enum Piece {
+<span class="fc" id="L42">    /**</span>
+     * Fou noir.
+     */
+<span class="fc" id="L45">    BLACK_BISHOP('b', false, BISHOP),</span>
+
+<span class="fc" id="L47">    /**</span>
+     * Roi noir.
+     */
+<span class="fc" id="L50">    BLACK_KING('k', false, KING),</span>
+
+<span class="fc" id="L52">    /**</span>
+     * Cavalier noir.
+     */
+<span class="fc" id="L55">    BLACK_KNIGHT('n', false, KNIGHT),</span>
+
+<span class="fc" id="L57">    /**</span>
+     * Pion noir.
+     */
+<span class="fc" id="L60">    BLACK_PAWN('p', false, PAWN),</span>
+
+<span class="fc" id="L62">    /**</span>
+     * Reine noire.
+     */
+<span class="fc" id="L65">    BLACK_QUEEN('q', false, QUEEN),</span>
+
+<span class="fc" id="L67">    /**</span>
+     * Tour noire.
+     */
+<span class="fc" id="L70">    BLACK_ROOK('r', false, ROOK),</span>
+
+<span class="fc" id="L72">    /**</span>
+     * Fou blanc.
+     */
+<span class="fc" id="L75">    WHITE_BISHOP('B', true, BISHOP),</span>
+
+<span class="fc" id="L77">    /**</span>
+     * Roi blanc.
+     */
+<span class="fc" id="L80">    WHITE_KING('K', true, KING),</span>
+
+<span class="fc" id="L82">    /**</span>
+     * Cavalier blanc.
+     */
+<span class="fc" id="L85">    WHITE_KNIGHT('N', true, KNIGHT),</span>
+
+<span class="fc" id="L87">    /**</span>
+     * Pion blanc.
+     */
+<span class="fc" id="L90">    WHITE_PAWN('P', true, PAWN),</span>
+
+<span class="fc" id="L92">    /**</span>
+     * Reine blanche.
+     */
+<span class="fc" id="L95">    WHITE_QUEEN('Q', true, QUEEN),</span>
+
+<span class="fc" id="L97">    /**</span>
+     * Tour blanche.
+     */
+<span class="fc" id="L100">    WHITE_ROOK('R', true, ROOK);</span>
+
+    /**
+     * Transpositions lettres FEN / pièces.
+     */
+<span class="fc" id="L105">    private static final Map&lt;Character, Piece&gt; FEN_TO_PIECE = new HashMap&lt;&gt;();</span>
+
+    static {
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        for (final Piece p : values()) {</span>
+<span class="fc" id="L109">            FEN_TO_PIECE.put(p.getFENLetter(), p);</span>
+        }
+<span class="fc" id="L111">    }</span>
+
+    /**
+     * Caractère identifiant la pièce en notation FEN.
+     */
+    private final char _fenLetter;
+
+    /**
+     * Drapeau positionné à vrai si la pièce est blanche.
+     */
+    private final boolean _white;
+
+    /**
+     * Type de la piece.
+     */
+    private final PieceType _type;
+
+    /**
+     * Instancie une description de pièce.
+     *
+     * @param pLettre Caractère identifiant FEN.
+     * @param pBlanc  Drapeau à vrai pour une pièce blanche.
+     * @param pType   Type de la pièce.
+     */
+<span class="fc" id="L135">    Piece(final char pLettre, final boolean pBlanc,</span>
+          final PieceType pType) {
+<span class="fc" id="L137">        _fenLetter = pLettre;</span>
+<span class="fc" id="L138">        _white = pBlanc;</span>
+<span class="fc" id="L139">        _type = pType;</span>
+<span class="fc" id="L140">    }</span>
+
+    /**
+     * Renvoi le caractère FEN identifiant la pièce.
+     *
+     * @return Caractère FEN.
+     */
+    public char getFENLetter() {
+<span class="fc" id="L148">        return _fenLetter;</span>
+    }
+
+    /**
+     * Renvoi le type de la pièce.
+     *
+     * @return Type de la pièce.
+     */
+    public PieceType getType() {
+<span class="fc" id="L157">        return _type;</span>
+    }
+
+    /**
+     * Renvoi vrai si la pièce est blanche.
+     *
+     * @return Vrai si la pièce est blanche.
+     */
+    public boolean isWhite() {
+<span class="fc" id="L166">        return _white;</span>
+    }
+
+    /**
+     * Renvoi l'instance de pièce correspond à un caractère FEN.
+     *
+     * @param pLettre Caractère identifiant FEN.
+     * @return Pièce correspondante.
+     */
+    public static Piece valueOf(final char pLettre) {
+<span class="fc" id="L176">        return FEN_TO_PIECE.get(pLettre);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

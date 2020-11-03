@@ -21,7 +21,7 @@
         <sonar.organization>se2</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
          <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
-         <sonar.coverage.jacoco.xmlReportPaths>target/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+         <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
    
@@ -149,26 +149,30 @@
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
             </plugin>
-    <plugin>
-      <groupId>org.jacoco</groupId>
-      <artifactId>jacoco-maven-plugin</artifactId>
-      <version>0.8.7-SNAPSHOT</version>
-      <executions>
-		<execution>
-			<goals>
-				<goal>prepare-agent</goal>
-			</goals>
-		</execution>
-		<!-- attached to Maven test phase -->
-		<execution>
-			<id>report</id>
-			<phase>package</phase>
-			<goals>
-				<goal>report</goal>
-			</goals>
-		</execution>
-	</executions>
-    </plugin>
+   
+         <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.4</version>
+            <executions>
+                <execution>
+                <id>start-agent</id>
+                <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+                </execution>
+                <execution>
+                <id>generate-report</id>
+                <goals>
+                    <goal>report</goal>
+                </goals>
+                <configuration>
+                    <title>Coverage with JaCoCo</title>
+                </configuration>
+                </execution>
+            </executions>
+         </plugin>
+
         </plugins>
     </build>
 </project>

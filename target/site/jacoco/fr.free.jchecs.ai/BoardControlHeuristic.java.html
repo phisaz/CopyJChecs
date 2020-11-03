@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="it"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BoardControlHeuristic.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Coverage with JaCoCo</a> &gt; <a href="index.source.html" class="el_package">fr.free.jchecs.ai</a> &gt; <span class="el_source">BoardControlHeuristic.java</span></div><h1>BoardControlHeuristic.java</h1><pre class="source lang-java linenums">/*
+ jChecs: a simple Java chess game sample
+
+ Copyright (C) 2006-2017 by David Cotton
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+*/
+package fr.free.jchecs.ai;
+
+import fr.free.jchecs.core.MoveGenerator;
+import fr.free.jchecs.core.Piece;
+import fr.free.jchecs.core.PieceType;
+import fr.free.jchecs.core.Square;
+
+import static fr.free.jchecs.ai.AbstractEngine.MATE_VALUE;
+import static fr.free.jchecs.core.Constants.FILE_COUNT;
+import static fr.free.jchecs.core.Constants.RANK_COUNT;
+
+/**
+ * Fonction d'évaluation basée sur le matériel et la position des pièces
+ * présentes sur le plateau.
+ * &lt;p&gt;
+ * Classe sûre vis-à-vis des threads.
+ * &lt;/p&gt;
+ *
+ * @author David Cotton
+ */
+<span class="nc bnc" id="L39" title="All 2 branches missed.">final class BoardControlHeuristic implements Heuristic {</span>
+    /**
+     * Identifiant de la classe pour la sérialisation.
+     */
+    private static final long serialVersionUID = -7163145298434616262L;
+
+    /**
+     * Bonus/Malus d'un cavalier (blanc par défaut) en fonction de sa position.
+     */
+<span class="nc" id="L48">    private static final int[] KNIGHT_POSITIONS = { //</span>
+<span class="nc" id="L49">            -50, -30, -30, -30, -30, -30, -30, -50, // a1 ... h1</span>
+<span class="nc" id="L50">            -30, -20, -20, -20, -20, -20, -20, -30, // a2 ... h2</span>
+<span class="nc" id="L51">            -20, 0, 20, 20, 20, 20, 0, -20, // a3 ... h3</span>
+<span class="nc" id="L52">            -20, 0, 20, 20, 20, 20, 0, -20, // a4 ... h4</span>
+<span class="nc" id="L53">            -20, 0, 10, 20, 20, 10, 0, -20, // a5 ... h5</span>
+<span class="nc" id="L54">            -20, 0, 10, 10, 10, 10, 0, -20, // a6 ... h6</span>
+<span class="nc" id="L55">            -20, -10, 0, 0, 0, 0, -10, -20, // a7 ... h7</span>
+<span class="nc" id="L56">            -40, -20, -20, -20, -20, -20, -20, -40, // a8 ... h8</span>
+    };
+
+    /**
+     * Bonus/Malus d'un pion (blanc par défaut) en fonction de sa position.
+     */
+<span class="nc" id="L62">    private static final int[] PAWN_POSITIONS = {0, 0, 0, 0, 0, 0, 0, 0, // a1</span>
+            // ...
+            // h1
+<span class="nc" id="L65">            2, 2, 2, -2, -2, 2, 2, 2, // a2 ... h2</span>
+<span class="nc" id="L66">            -2, -2, -2, 4, 4, -2, -2, -2, // a3 ... h3</span>
+<span class="nc" id="L67">            0, 0, 0, 4, 4, 0, 0, 0, // a4 ... h4</span>
+<span class="nc" id="L68">            2, 4, 6, 8, 8, 6, 4, 2, // a5 ... h5</span>
+<span class="nc" id="L69">            4, 6, 8, 10, 10, 8, 6, 4, // a6 ... h6</span>
+<span class="nc" id="L70">            4, 6, 8, 10, 10, 8, 6, 4, // a7 ... h7</span>
+<span class="nc" id="L71">            500, 500, 500, 500, 500, 500, 500, 500, // a8 ... h8</span>
+    };
+
+    /**
+     * Bonus/Malus de base liés à la position d'une pièce (symétrique : adapté
+     * aux deux couleurs).
+     */
+<span class="nc" id="L78">    private static final int[] DEFAULT_POSITIONS = {0, 0, 0, 0, 0, 0, 0, 0, // a1</span>
+            // ...
+            // h1
+<span class="nc" id="L81">            0, 0, 0, 5, 5, 0, 0, 0, // a2 ... h2</span>
+<span class="nc" id="L82">            0, 0, 5, 5, 5, 5, 0, 0, // a3 ... h3</span>
+<span class="nc" id="L83">            0, 5, 5, 10, 10, 5, 5, 0, // a4 ... h4</span>
+<span class="nc" id="L84">            0, 5, 5, 10, 10, 5, 5, 0, // a5 ... h5</span>
+<span class="nc" id="L85">            0, 0, 5, 5, 5, 5, 0, 0, // a6 ... h6</span>
+<span class="nc" id="L86">            0, 0, 0, 5, 5, 0, 0, 0, // a7 ... h7</span>
+            0, 0, 0, 0, 0, 0, 0, 0, // a8 ... h8
+<span class="nc" id="L88">    };</span>
+
+    /**
+     * Crée une nouvelle instance.
+     */
+<span class="nc" id="L93">    BoardControlHeuristic() {</span>
+        // Rien de spécifique...
+<span class="nc" id="L95">    }</span>
+
+    /**
+     * Renvoi la valeur estimée d'un état du jeu, pour les fonctions de
+     * recherche du meilleur coup.
+     *
+     * @param pEtat  Etat du jeu.
+     * @param pTrait Positionné à &quot;true&quot; si l'on veut une évaluation du point de
+     *               vue des blancs.
+     * @return Valeur estimée.
+     * @see Heuristic#evaluate(MoveGenerator, boolean)
+     */
+    @Override
+    public int evaluate(final MoveGenerator pEtat, final boolean pTrait) {
+<span class="nc" id="L109">        int res = -pEtat.getHalfmoveCount();</span>
+
+<span class="nc bnc" id="L111" title="All 2 branches missed.">        for (final Square s : Square.values()) {</span>
+<span class="nc" id="L112">            final Piece piece = pEtat.getPieceAt(s);</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">            if (piece != null) {</span>
+<span class="nc" id="L114">                final boolean traitPiece = piece.isWhite();</span>
+<span class="nc" id="L115">                final PieceType typePiece = piece.getType();</span>
+<span class="nc" id="L116">                final int val = typePiece.getValue();</span>
+                final int pos;
+<span class="nc bnc" id="L118" title="All 5 branches missed.">                switch (typePiece) {</span>
+                    case BISHOP:
+                    case QUEEN:
+                    case ROOK:
+<span class="nc" id="L122">                        pos = DEFAULT_POSITIONS[s.getIndex()];</span>
+<span class="nc" id="L123">                        break;</span>
+                    case KING:
+<span class="nc bnc" id="L125" title="All 2 branches missed.">                        if ((traitPiece != pTrait)</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">                                &amp;&amp; (pEtat.getFullmoveNumber() &gt; 10)</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">                                &amp;&amp; pEtat.isInCheck(traitPiece)) {</span>
+<span class="nc bnc" id="L128" title="All 2 branches missed.">                            if (pEtat.getValidMoves(traitPiece).length == 0) {</span>
+                                // Malus pour un mat...
+<span class="nc" id="L130">                                pos = MATE_VALUE;</span>
+<span class="nc" id="L131">                            } else {</span>
+                                // Malus pour un échec...
+<span class="nc" id="L133">                                pos = -250;</span>
+                            }
+<span class="nc" id="L135">                        } else {</span>
+                            // Pas de valeur de position pour le roi.
+<span class="nc" id="L137">                            pos = 0;</span>
+                        }
+<span class="nc" id="L139">                        break;</span>
+                    case KNIGHT:
+<span class="nc bnc" id="L141" title="All 2 branches missed.">                        if (traitPiece) {</span>
+<span class="nc" id="L142">                            pos = KNIGHT_POSITIONS[s.getIndex()];</span>
+<span class="nc" id="L143">                        } else {</span>
+<span class="nc" id="L144">                            pos = KNIGHT_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
+<span class="nc" id="L145">                                    * FILE_COUNT + s.getFile()];</span>
+                        }
+<span class="nc" id="L147">                        break;</span>
+                    case PAWN:
+<span class="nc bnc" id="L149" title="All 2 branches missed.">                        if (traitPiece) {</span>
+<span class="nc" id="L150">                            pos = PAWN_POSITIONS[s.getIndex()];</span>
+<span class="nc" id="L151">                        } else {</span>
+<span class="nc" id="L152">                            pos = PAWN_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
+<span class="nc" id="L153">                                    * FILE_COUNT + s.getFile()];</span>
+                        }
+<span class="nc" id="L155">                        break;</span>
+                    default:
+<span class="nc bnc" id="L157" title="All 2 branches missed.">                        assert false;</span>
+<span class="nc" id="L158">                        pos = 0;</span>
+                }
+<span class="nc" id="L160">                final int score = val + pos;</span>
+<span class="nc bnc" id="L161" title="All 2 branches missed.">                if (traitPiece == pTrait) {</span>
+<span class="nc" id="L162">                    res += score;</span>
+<span class="nc" id="L163">                } else {</span>
+<span class="nc" id="L164">                    res -= score;</span>
+                }
+            }
+        }
+
+<span class="nc" id="L169">        return res;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
