@@ -1,9 +1,9 @@
-2020-10-21 15:46:01,783 WARN  [      main] fr.free.jchecs.swg.SwingUI                        :728  - Config unavailable.
-java.io.FileNotFoundException: /Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/jChecs.config (No such file or directory)
-	at java.io.FileInputStream.open0(Native Method)
-	at java.io.FileInputStream.open(FileInputStream.java:195)
-	at java.io.FileInputStream.<init>(FileInputStream.java:138)
-	at java.io.FileInputStream.<init>(FileInputStream.java:93)
-	at fr.free.jchecs.swg.SwingUI.initProperties(SwingUI.java:724)
-	at fr.free.jchecs.swg.SwingUI.<init>(SwingUI.java:421)
-	at fr.free.jchecs.swg.Start.main(Start.java:44)
+2020-11-05 10:59:28,111 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 0 nodes in 1ms <=> 0 nodes/s
+2020-11-05 10:59:32,319 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 403149 nodes in 850ms <=> 474292 nodes/s
+2020-11-05 10:59:36,224 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 801992 nodes in 1565ms <=> 512454 nodes/s
+2020-11-05 10:59:41,807 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 992219 nodes in 1993ms <=> 497851 nodes/s
+2020-11-05 10:59:47,766 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 1114484 nodes in 2224ms <=> 501116 nodes/s
+2020-11-05 10:59:54,307 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 1215926 nodes in 2375ms <=> 511968 nodes/s
+2020-11-05 11:00:31,443 ERROR [entQueue-0] fr.free.jchecs.swg.ExceptionHandler               :227  - java.lang.NullPointerException
+2020-11-05 11:00:31,688 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 1283152 nodes in 2537ms <=> 505775 nodes/s
+2020-11-05 15:00:23,260 INFO  [      main] fr.free.jchecs.swg.SwingUI                        :952  - NegaScoutEngine : 0 nodes in 0ms <=> 0 nodes/s
