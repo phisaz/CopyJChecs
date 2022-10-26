@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.free.jchecs.core.MoveGeneratorTest
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.987 s - in fr.free.jchecs.core.MoveGeneratorTest
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.658 s - in fr.free.jchecs.core.MoveGeneratorTest

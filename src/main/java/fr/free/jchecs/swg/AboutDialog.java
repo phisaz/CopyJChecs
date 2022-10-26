@@ -63,7 +63,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
  */
 final class AboutDialog {
     /**
-     * Panel principal de la boite de dialogue.
+     * Panel principal de la boite de dialogue .
      */
     private static JOptionPane S_optionPane;
 
@@ -73,7 +73,7 @@ final class AboutDialog {
     private static JComponent S_licensePanel;
 
     /**
-     * Classe utilitaire : ne pas instancier.
+     * Classe utilitaire : ne pas instancier .
      */
     private AboutDialog() {
         // Rien de spécifique...
@@ -102,7 +102,7 @@ final class AboutDialog {
 
     /**
      * Renvoi, après l'avoir construit si nécessaire, le panel principal de la
-     * boite de dialogue.
+     * boite de dialogue. 
      *
      * @return Panel principal de la boite de dialogue.
      */
@@ -185,7 +185,7 @@ final class AboutDialog {
     }
 
     /**
-     * Affiche la boite de dialogue.
+     * Affiche la boite de dialogue. 
      *
      * @param pParent Composant parent de la boite de dialogue (peut être à null).
      */

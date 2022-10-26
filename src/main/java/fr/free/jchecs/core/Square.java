@@ -104,7 +104,7 @@ public final class Square implements Comparable<Square>, Serializable {
     /**
      * Fixe l'ordre de tri entre les cases.
      *
-     * @param pCase Case avec laquelle comparer.
+     * @param pCase Case avec laquelle comparer. 
      * @return -1 si pCase est inférieure, 0 si égale et 1 si supérieure.
      * @see Comparable#compareTo(Object)
      */
