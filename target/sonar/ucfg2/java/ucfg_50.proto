@@ -1,11 +1,11 @@
 
-çfr.free.jchecs.swg.PlayerDialog$PlayerTypeRenderer#getListCellRendererComponent(Ljavax/swing/JList;Ljava/lang/Object;IZZ)Ljava/awt/Component;ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java° °(5"startingBlock*Å
-2ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ∞(ç
-ä
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ±(3
+çfr.free.jchecs.swg.PlayerDialog$PlayerTypeRenderer#getListCellRendererComponent(Ljavax/swing/JList;Ljava/lang/Object;IZZ)Ljava/awt/Component;c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java° °(5"startingBlock*˜
+2c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ∞(ﬂ
+‹
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ±(3
 %7java.awt.Component"~javax.swing.DefaultListCellRenderer#getListCellRendererComponent(Ljavax/swing/JList;Ljava/lang/Object;IZZ)Ljava/awt/Component;*
 ""*
 
@@ -14,102 +14,103 @@
 pObjetjava.lang.Object*
 ""*
 ""*
-""”
-–
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ±(3
+""•
+¢
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java∞ ±(3
 resjava.awt.Component"__id*
 
 %7java.awt.Component*
-1*Ú
-3ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaÆ Æ(‘
-—
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaÆ Æ(
+1*ñ
+3c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaÆ Æ(¶
+£
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaÆ Æ(
 resjava.awt.Component"__id*
 
 labjavax.swing.JLabel*
-1*Å
-startingBlockê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java°5 £(eﬂ
-‹
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java† †(
+1*õ
+startingBlockc
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java°5 £(e±
+Æ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java† †(
 %8"
 __annotate*
 java.lang.Override*
 
-pListejavax.swing.JList…
-∆
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java°B °(H
+pListejavax.swing.JListõ
+ò
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java°B °(H
 pListejavax.swing.JList"__annotation*
 
-%8ﬁ
-€
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java† †(
+%8∞
+≠
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java† †(
 %9"
 __annotate*
 java.lang.Override*
 
-pObjetjava.lang.Object»
-≈
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¢C ¢(I
+pObjetjava.lang.Objectö
+ó
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¢C ¢(I
 pObjetjava.lang.Object"__annotation*
 
 %9*
-7*Ñ
-4ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨ ¨(º
-π
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨  ¨(-
+7*˙
+4c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨ ¨(é
+ã
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨  ¨(-
 %5javax.swing.Icon"__id*
-""ß§
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨ ¨(.
+""˘ˆ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¨ ¨(.
 
 %6void"/javax.swing.JLabel#setIcon(Ljavax/swing/Icon;)V*
 
 labjavax.swing.JLabel*
 
 %5javax.swing.Icon2setIcon(Ljavax/swing/Icon;)*
-3*Ñ
-5ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™ ™(º
-π
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™  ™(*
+3*˙
+5c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™ ™(é
+ã
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™  ™(*
 %3javax.swing.Icon"__id*
-""ß§
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™ ™(+
+""˘ˆ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java™ ™(+
 
 %4void"/javax.swing.JLabel#setIcon(Ljavax/swing/Icon;)V*
 
 labjavax.swing.JLabel*
 
 %3javax.swing.Icon2setIcon(Ljavax/swing/Icon;)*
-3*≈
-6ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¶3 ¶(9Ï
-È
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¶ ¶(:0
+3*±
+
+6c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¶3 ¶(9æ
+ª
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¶ ¶(:0
 pt*fr.free.jchecs.swg.PlayerDialog$PlayerType"__id*
 
-pObjetjava.lang.Objectµ≤
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java®  ®(,
+pObjetjava.lang.ObjectáÑ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java®  ®(,
 %0java.lang.String"Ffr.free.jchecs.swg.PlayerDialog$PlayerType#getName()Ljava/lang/String;*2
 0
-pt*fr.free.jchecs.swg.PlayerDialog$PlayerType2	getName()â
-Ü
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaß, ®(I
+pt*fr.free.jchecs.swg.PlayerDialog$PlayerType2	getName()€
+ÿ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaß, ®(I
 %1java.awt.Component"~javax.swing.DefaultListCellRenderer#getListCellRendererComponent(Ljavax/swing/JList;Ljava/lang/Object;IZZ)Ljava/awt/Component;*
 ""*
 
@@ -118,33 +119,33 @@ __annotate*
 %0java.lang.String*
 ""*
 ""*
-""”
-–
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaß ®(J
+""•
+¢
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.javaß ®(J
 labjavax.swing.JLabel"__id*
 
-%1java.awt.Componentõò
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java© ©( 
+%1java.awt.ComponentÌÍ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java© ©( 
 %2boolean"5fr.free.jchecs.swg.PlayerDialog$PlayerType#isHuman()Z*2
 0
 pt*fr.free.jchecs.swg.PlayerDialog$PlayerType2	isHuman()*
 4
-5*‡
-7ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java§ §( ø
-º
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java§ §( 
+5*Ñ
+7c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java§ §( ë
+é
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java§ §( 
 resjava.awt.Component"__id*
 ""*
 2
-6*…
-1ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¥ ¥("∞
-ê
-É/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¥ ¥(
+6*Ì
+1c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¥ ¥("Ç
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java¥ ¥(
 
 resjava.awt.Component:
 pListejavax.swing.JList:

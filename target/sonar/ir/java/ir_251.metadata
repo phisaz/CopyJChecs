@@ -1,0 +1,4 @@
+fr.free.jchecs.swg.SettingsPanel#addCheckBox(Ljava/lang/String;Ljava/lang/String;)V
+javax.swing.JCheckBox#<init>(Ljava/lang/String;Z)V
+javax.swing.JCheckBox#instance-init#
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;

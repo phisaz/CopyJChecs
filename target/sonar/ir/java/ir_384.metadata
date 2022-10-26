@@ -1,0 +1,2 @@
+fr.free.jchecs.core.Game#getStartingPosition()Ljava/lang/String;
+fr.free.jchecs.core.FENUtils#toFEN(Lfr/free/jchecs/core/Board;)Ljava/lang/String;

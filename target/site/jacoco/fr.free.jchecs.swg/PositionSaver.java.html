@@ -61,7 +61,7 @@ final class PositionSaver implements Runnable {
 <span class="nc" id="L61">		JOptionPane.showMessageDialog(_ui.getMainFrame(),</span>
 <span class="nc" id="L62">				getI18NString(&quot;action.savePosition.error.message&quot;),</span>
 <span class="nc" id="L63">				getI18NString(&quot;action.savePosition.error.title&quot;),</span>
-<span class="nc" id="L64">				JOptionPane.ERROR_MESSAGE, ICON32);</span>
+				JOptionPane.ERROR_MESSAGE, ICON32);
 <span class="nc" id="L65">	}</span>
 
 	/**
@@ -76,7 +76,7 @@ final class PositionSaver implements Runnable {
 <span class="nc" id="L76">				out = new BufferedWriter(new FileWriter(fichier));</span>
 <span class="nc" id="L77">			} catch (final IOException e) {</span>
 <span class="nc" id="L78">				errorDialog();</span>
-			}
+<span class="nc" id="L79">			}</span>
 <span class="nc bnc" id="L80" title="All 2 branches missed.">			if (out != null) {</span>
 				try {
 <span class="nc" id="L82">					out.write(toFEN(_ui.getGame().getBoard()));</span>
@@ -87,8 +87,8 @@ final class PositionSaver implements Runnable {
 <span class="nc" id="L87">						out.close();</span>
 <span class="nc" id="L88">					} catch (final IOException e1) {</span>
 						// Tant pis, la fermeture de la JVM s'en chargera.
-					}
-				}
+<span class="nc" id="L90">					}</span>
+<span class="nc" id="L91">				}</span>
 			}
 		}
 <span class="nc" id="L94">	}</span>

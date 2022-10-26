@@ -1,0 +1,8 @@
+fr.free.jchecs.swg.TaskPanel#<init>()V
+javax.swing.BorderFactory#createEmptyBorder(IIII)Ljavax/swing/border/Border;
+java.awt.BorderLayout#<init>(II)V
+javax.swing.JScrollPane#<init>(Ljava/awt/Component;II)V
+javax.swing.JScrollPane#instance-init#
+java.awt.BorderLayout#instance-init#
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V

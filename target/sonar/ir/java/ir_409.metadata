@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.SwingUI#moved(Lfr/free/jchecs/swg/MoveEvent;)V
+java.lang.Object#notifyAll()V
+fr.free.jchecs.swg.MoveEvent#getMove()Lfr/free/jchecs/core/Move;

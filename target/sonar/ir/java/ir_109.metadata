@@ -1,0 +1,8 @@
+fr.free.jchecs.swg.BoardUI#<init>(Lfr/free/jchecs/core/Game;Lfr/free/jchecs/swg/PieceUI;)V
+fr.free.jchecs.swg.BoardUI$BoardMouseAdapter#<init>(Lfr/free/jchecs/swg/BoardUI;)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+fr.free.jchecs.swg.BoardUI#setBoard(Lfr/free/jchecs/core/MoveGenerator;)V
+fr.free.jchecs.swg.BoardUI#setCellSideLength(I)V
+fr.free.jchecs.swg.BoardUI$BoardMouseAdapter#instance-init#
+fr.free.jchecs.swg.BoardUI#clearState()V
+fr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;

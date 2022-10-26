@@ -1,0 +1,2 @@
+fr.free.jchecs.ai.KillerMoveSorter#get(Lfr/free/jchecs/core/Move;)I
+fr.free.jchecs.core.Move#equals(Ljava/lang/Object;)Z

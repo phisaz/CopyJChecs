@@ -1,0 +1,3 @@
+fr.free.jchecs.core.ArrayBoard#isInCheck(Z)Z
+fr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#isWhite()Z

@@ -1,0 +1,7 @@
+fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V
+java.awt.BorderLayout#<init>(II)V
+fr.free.jchecs.swg.TaskItem#getComponent()Ljavax/swing/JComponent;
+fr.free.jchecs.swg.TaskItem#getBestWidth()I
+java.awt.BorderLayout#instance-init#
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V

@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.BoardUI#setHighlightedMove(Lfr/free/jchecs/core/Move;)V
+fr.free.jchecs.swg.BoardUI#clearState()V

@@ -1,0 +1,2 @@
+fr.free.jchecs.ai.EngineFactory#newInstance()Lfr/free/jchecs/ai/Engine;
+fr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;

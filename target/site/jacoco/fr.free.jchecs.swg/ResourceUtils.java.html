@@ -64,8 +64,8 @@ final class ResourceUtils {
 <span class="nc" id="L64">                PROPERTIES.load(in);</span>
 <span class="nc" id="L65">            } catch (final IOException e) {</span>
 <span class="nc" id="L66">                throw new MissingResourceException(</span>
-<span class="nc" id="L67">                        &quot;Resource file loading error&quot;, null, null);</span>
-            }
+                        &quot;Resource file loading error&quot;, null, null);
+<span class="nc" id="L68">            }</span>
         }
     }
 
@@ -126,7 +126,7 @@ final class ResourceUtils {
 <span class="nc" id="L126">            final URL url = ResourceUtils.class.getResource(pCle);</span>
 <span class="nc bnc" id="L127" title="All 2 branches missed.">            if (url == null) {</span>
 <span class="nc" id="L128">                LOG.warn(&quot;ImageIcon [{}] not found.&quot;, pCle);</span>
-<span class="nc" id="L129">            } else {</span>
+            } else {
 <span class="nc" id="L130">                res = new ImageIcon(ResourceUtils.class.getResource(pCle));</span>
 <span class="nc" id="L131">                ICONS.put(pCle, res);</span>
             }

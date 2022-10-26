@@ -92,7 +92,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
     /**
      * Indicateur de position illegale.
      */
-<span class="nc" id="L95">    private static boolean S_illegalPosition;</span>
+    private static boolean S_illegalPosition;
 
     /**
      * Classe utilitaire : ne pas instancier.
@@ -108,22 +108,22 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
      */
     public static void main(final String[] pArgs) {
 <span class="nc" id="L110">        final BufferedReader in = new BufferedReader(new InputStreamReader(</span>
-<span class="nc" id="L111">                System.in));</span>
+                System.in));
 
-<span class="nc" id="L113">        while (true) {</span>
+        while (true) {
 <span class="nc" id="L114">            String commande = null;</span>
             try {
 <span class="nc" id="L116">                commande = in.readLine();</span>
 <span class="nc" id="L117">            } catch (final IOException e) {</span>
 <span class="nc" id="L118">                LOG.error(e.toString());</span>
-            }
+<span class="nc" id="L119">            }</span>
 <span class="nc bnc" id="L120" title="All 2 branches missed.">            if (commande == null) {</span>
 <span class="nc" id="L121">                LOG.error(&quot;Communication error.&quot;);</span>
 <span class="nc" id="L122">                System.exit(-1);</span>
-<span class="nc" id="L123">            } else {</span>
+            } else {
 <span class="nc" id="L124">                parseCommand(commande.trim());</span>
             }
-        }
+<span class="nc" id="L126">        }</span>
     }
 
     /**
@@ -153,11 +153,11 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc" id="L153">                etat = toBoard(fen);</span>
 <span class="nc" id="L154">            } catch (final FENException e) {</span>
                 // Géré par la suite...
-            }
+<span class="nc" id="L156">            }</span>
 <span class="nc bnc" id="L157" title="All 2 branches missed.">            if (etat == null) {</span>
 <span class="nc" id="L158">                S_illegalPosition = true;</span>
 <span class="nc" id="L159">                System.out.println(&quot;tellusererror Illegal position&quot;);</span>
-<span class="nc" id="L160">            } else {</span>
+            } else {
 <span class="nc" id="L161">                S_illegalPosition = false;</span>
 <span class="nc" id="L162">                GAME.resetTo(BoardFactory.valueOf(FASTEST, EMPTY)</span>
 <span class="nc" id="L163">                        .derive(etat));</span>
@@ -175,10 +175,10 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc" id="L175">                mvt = toMove(GAME.getBoard(), san);</span>
 <span class="nc" id="L176">            } catch (final SANException e) {</span>
                 // géré par la suite...
-            }
+<span class="nc" id="L178">            }</span>
 <span class="nc bnc" id="L179" title="All 4 branches missed.">            if ((mvt == null) || S_illegalPosition) {</span>
 <span class="nc" id="L180">                System.out.println(&quot;Illegal move: &quot; + xbSAN);</span>
-<span class="nc" id="L181">            } else {</span>
+            } else {
 <span class="nc" id="L182">                GAME.moveFromCurrent(mvt);</span>
 <span class="nc bnc" id="L183" title="All 2 branches missed.">                if (!S_forceMode) {</span>
 <span class="nc" id="L184">                    think();</span>
@@ -193,7 +193,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc bnc" id="L193" title="All 2 branches missed.">        } else if (&quot;go&quot;.equals(pCommande)) {</span>
 <span class="nc bnc" id="L194" title="All 2 branches missed.">            if (S_illegalPosition) {</span>
 <span class="nc" id="L195">                System.out.println(&quot;Error (illegal position): go&quot;);</span>
-<span class="nc" id="L196">            } else {</span>
+            } else {
 <span class="nc" id="L197">                S_forceMode = false;</span>
 <span class="nc" id="L198">                think();</span>
             }
@@ -213,7 +213,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
             // Rien à faire.
 <span class="nc bnc" id="L214" title="All 2 branches missed.">        } else if (&quot;xboard&quot;.equals(pCommande)) {</span>
 <span class="nc" id="L215">            System.out.println(APPLICATION_STRING + &quot; started in xboard mode.&quot;);</span>
-<span class="nc" id="L216">        } else {</span>
+        } else {
 <span class="nc" id="L217">            System.out.println(&quot;Error (unknown command): &quot; + pCommande);</span>
         }
 <span class="nc" id="L219">    }</span>
@@ -242,8 +242,8 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc bnc" id="L242" title="All 2 branches missed.">                            .getValue()) {</span>
 <span class="nc" id="L243">                        rep = &quot;1/2-1/2 {Drawn by 50 moves rule}&quot;;</span>
                     }
-                }
-<span class="nc" id="L246">                break;</span>
+<span class="nc" id="L245">                }</span>
+                break;
             case DRAWN_BY_TRIPLE_REPETITION:
 <span class="nc bnc" id="L248" title="All 2 branches missed.">                if (pAbandon) {</span>
                     // Ne chercher l'abandon que si l'on est en difficulté (une tour
@@ -255,8 +255,8 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc bnc" id="L255" title="All 2 branches missed.">                            .getValue()) {</span>
 <span class="nc" id="L256">                        rep = &quot;1/2-1/2 {Drawn by triple repetition}&quot;;</span>
                     }
-                }
-<span class="nc" id="L259">                break;</span>
+<span class="nc" id="L258">                }</span>
+                break;
             case IN_PROGRESS:
 <span class="nc" id="L261">                break;</span>
             case STALEMATE:

@@ -1,0 +1,10 @@
+fr.free.jchecs.swg.BoardUI#paint(Ljava/awt/Graphics;)V
+fr.free.jchecs.swg.BoardUI#getBoardBackground()Ljava/awt/Image;
+fr.free.jchecs.core.Move#getTo()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Move#getFrom()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)Z
+fr.free.jchecs.swg.BoardUI#getCellSideLength()I
+fr.free.jchecs.swg.BoardUI#getSideLength()I
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.swg.PieceUI#getImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;

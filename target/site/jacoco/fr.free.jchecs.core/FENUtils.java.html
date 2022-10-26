@@ -53,7 +53,7 @@ public final class FENUtils {
                                             final MutableBoard pEtat) throws FENException {
 <span class="pc bpc" id="L54" title="1 of 4 branches missed.">        if ((pChamp.length() != 1) || (&quot;bw&quot;.indexOf(pChamp.charAt(0)) &lt; 0)) {</span>
 <span class="fc" id="L55">            throw new FENException(&quot;Invalid FEN active color [&quot; + pChamp + ']',</span>
-<span class="fc" id="L56">                    null);</span>
+                    null);
         }
 
 <span class="fc bfc" id="L59" title="All 2 branches covered.">        pEtat.setWhiteActive(pChamp.charAt(0) == 'w');</span>
@@ -71,7 +71,7 @@ public final class FENUtils {
 <span class="fc" id="L71">        final int l = pChamp.length();</span>
 <span class="pc bpc" id="L72" title="1 of 4 branches missed.">        if ((l &lt; 1) || (l &gt; 4)) {</span>
 <span class="fc" id="L73">            throw new FENException(&quot;Invalid FEN castling field [&quot; + pChamp</span>
-<span class="fc" id="L74">                    + ']', null);</span>
+                    + ']', null);
         }
 
 <span class="fc" id="L77">        pEtat.setCastleLong(false, false);</span>
@@ -99,7 +99,7 @@ public final class FENUtils {
 <span class="fc" id="L99">                    break;</span>
                 default:
 <span class="fc" id="L101">                    throw new FENException(&quot;Invalid FEN castling field [&quot; + pChamp</span>
-<span class="fc" id="L102">                            + ']', null);</span>
+                            + ']', null);
             }
         }
 <span class="fc" id="L105">    }</span>
@@ -116,7 +116,7 @@ public final class FENUtils {
 <span class="fc" id="L116">        final int l = pChamp.length();</span>
 <span class="pc bpc" id="L117" title="1 of 4 branches missed.">        if ((l &lt; 1) || (l &gt; 2)) {</span>
 <span class="fc" id="L118">            throw new FENException(&quot;Invalid FEN 'en passant' field [&quot; + pChamp</span>
-<span class="fc" id="L119">                    + ']', null);</span>
+                    + ']', null);
         }
 
 <span class="pc bpc" id="L122" title="1 of 4 branches missed.">        if ((l != 1) || (pChamp.charAt(0) != '-')) {</span>
@@ -124,8 +124,8 @@ public final class FENUtils {
 <span class="fc" id="L124">                pEtat.setEnPassant(Square.valueOf(pChamp));</span>
 <span class="fc" id="L125">            } catch (final IllegalArgumentException e) {</span>
 <span class="fc" id="L126">                throw new FENException(&quot;Invalid FEN 'en passant' field [&quot;</span>
-<span class="fc" id="L127">                        + pChamp + ']', e);</span>
-            }
+                        + pChamp + ']', e);
+<span class="fc" id="L128">            }</span>
         }
 <span class="fc" id="L130">    }</span>
 
@@ -142,13 +142,13 @@ public final class FENUtils {
 <span class="fc" id="L142">            final int num = Integer.parseInt(pChamp);</span>
 <span class="fc bfc" id="L143" title="All 2 branches covered.">            if (num &lt;= 0) {</span>
 <span class="fc" id="L144">                throw new FENException(&quot;Invalid FEN fullmove number field [&quot;</span>
-<span class="fc" id="L145">                        + pChamp + ']', null);</span>
+                        + pChamp + ']', null);
             }
 <span class="fc" id="L147">            pEtat.setFullmoveNumber(num);</span>
 <span class="fc" id="L148">        } catch (final NumberFormatException e) {</span>
 <span class="fc" id="L149">            throw new FENException(&quot;Invalid FEN fullmove number field [&quot;</span>
-<span class="fc" id="L150">                    + pChamp + ']', e);</span>
-        }
+                    + pChamp + ']', e);
+<span class="fc" id="L151">        }</span>
 <span class="fc" id="L152">    }</span>
 
     /**
@@ -165,13 +165,13 @@ public final class FENUtils {
 <span class="fc" id="L165">            final int nb = Integer.parseInt(pChamp);</span>
 <span class="pc bpc" id="L166" title="1 of 4 branches missed.">            if ((nb &lt; 0) || (pChamp.length() == 0)) {</span>
 <span class="fc" id="L167">                throw new FENException(&quot;Invalid FEN halfmove clock field [&quot;</span>
-<span class="fc" id="L168">                        + pChamp + ']', null);</span>
+                        + pChamp + ']', null);
             }
 <span class="fc" id="L170">            pEtat.setHalfmoveCount(nb);</span>
 <span class="fc" id="L171">        } catch (final NumberFormatException e) {</span>
 <span class="fc" id="L172">            throw new FENException(&quot;Invalid FEN halfmove clock field [&quot;</span>
-<span class="fc" id="L173">                    + pChamp + ']', e);</span>
-        }
+                    + pChamp + ']', e);
+<span class="fc" id="L174">        }</span>
 <span class="fc" id="L175">    }</span>
 
     /**
@@ -190,7 +190,7 @@ public final class FENUtils {
 <span class="fc bfc" id="L190" title="All 2 branches covered.">            if (c == '/') {</span>
 <span class="pc bpc" id="L191" title="1 of 4 branches missed.">                if ((col != FILE_COUNT) || (rang &lt;= 0)) {</span>
 <span class="fc" id="L192">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
-<span class="fc" id="L193">                            + pChamp + ']', null);</span>
+                            + pChamp + ']', null);
                 }
 <span class="fc" id="L195">                rang--;</span>
 <span class="fc" id="L196">                col = 0;</span>
@@ -201,32 +201,32 @@ public final class FENUtils {
 <span class="fc" id="L201">                        pEtat.setPieceAt(null, Square.valueOf(col++, rang));</span>
 <span class="fc" id="L202">                    } catch (final IllegalArgumentException e) {</span>
 <span class="fc" id="L203">                        throw new FENException(</span>
-<span class="fc" id="L204">                                &quot;Invalid piece placement field [&quot; + pChamp</span>
-<span class="fc" id="L205">                                        + ']', e);</span>
-                    }
+                                &quot;Invalid piece placement field [&quot; + pChamp
+                                        + ']', e);
+<span class="fc" id="L206">                    }</span>
                 }
 <span class="fc" id="L208">            } else {</span>
 <span class="fc" id="L209">                final Piece p = Piece.valueOf(c);</span>
 <span class="fc bfc" id="L210" title="All 2 branches covered.">                if (p == null) {</span>
 <span class="fc" id="L211">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
-<span class="fc" id="L212">                            + pChamp + ']', null);</span>
+                            + pChamp + ']', null);
                 }
                 try {
 <span class="fc" id="L215">                    pEtat.setPieceAt(p, Square.valueOf(col, rang));</span>
-<span class="pc" id="L216">                } catch (final IllegalArgumentException e) {</span>
+<span class="nc" id="L216">                } catch (final IllegalArgumentException e) {</span>
 <span class="nc" id="L217">                    throw new FENException(&quot;Invalid piece placement field [&quot;</span>
-<span class="nc" id="L218">                            + pChamp + ']', e);</span>
-                }
+                            + pChamp + ']', e);
+<span class="fc" id="L219">                }</span>
 <span class="fc" id="L220">                col++;</span>
             }
 <span class="pc bpc" id="L222" title="1 of 2 branches missed.">            if (col &gt; FILE_COUNT) {</span>
 <span class="nc" id="L223">                throw new FENException(&quot;Invalid piece placement field [&quot;</span>
-<span class="nc" id="L224">                        + pChamp + ']', null);</span>
+                        + pChamp + ']', null);
             }
         }
 <span class="pc bpc" id="L227" title="2 of 4 branches missed.">        if ((col != FILE_COUNT) || (rang != 0)) {</span>
 <span class="nc" id="L228">            throw new FENException(&quot;Invalid piece placement field [&quot; + pChamp</span>
-<span class="nc" id="L229">                    + ']', null);</span>
+                    + ']', null);
         }
 <span class="fc" id="L231">    }</span>
 
@@ -307,7 +307,7 @@ public final class FENUtils {
 <span class="fc" id="L307">                final Piece p = pEtat.getPieceAt(Square.valueOf(x, y));</span>
 <span class="fc bfc" id="L308" title="All 2 branches covered.">                if (p == null) {</span>
 <span class="fc" id="L309">                    vide++;</span>
-<span class="fc" id="L310">                } else {</span>
+                } else {
 <span class="fc bfc" id="L311" title="All 2 branches covered.">                    if (vide &gt; 0) {</span>
 <span class="fc" id="L312">                        res.append((char) ('0' + vide));</span>
 <span class="fc" id="L313">                        vide = 0;</span>
@@ -327,7 +327,7 @@ public final class FENUtils {
         // Champ du trait
 <span class="fc bfc" id="L328" title="All 2 branches covered.">        if (pEtat.isWhiteActive()) {</span>
 <span class="fc" id="L329">            res.append('w');</span>
-<span class="fc" id="L330">        } else {</span>
+        } else {
 <span class="fc" id="L331">            res.append('b');</span>
         }
 <span class="fc" id="L333">        res.append(' ');</span>
@@ -359,7 +359,7 @@ public final class FENUtils {
 <span class="fc" id="L359">        final Square enPassant = pEtat.getEnPassant();</span>
 <span class="fc bfc" id="L360" title="All 2 branches covered.">        if (enPassant != null) {</span>
 <span class="fc" id="L361">            res.append(enPassant.getFENString());</span>
-<span class="fc" id="L362">        } else {</span>
+        } else {
 <span class="fc" id="L363">            res.append('-');</span>
         }
 

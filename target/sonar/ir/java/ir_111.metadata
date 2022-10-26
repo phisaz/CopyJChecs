@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.BoardUI#clearState()V
+java.awt.Cursor#getPredefinedCursor(I)Ljava/awt/Cursor;

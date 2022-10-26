@@ -1,0 +1,11 @@
+fr.free.jchecs.swg.BoardUI#mouseClicked(II)V
+fr.free.jchecs.core.Move#instance-init#
+fr.free.jchecs.swg.PromotionDialog#showPromotionDialog(Ljava/awt/Component;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/swg/PieceUI;)Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.swg.BoardUI#isAvailable(Lfr/free/jchecs/core/Square;)Z
+fr.free.jchecs.swg.BoardUI#setBoard(Lfr/free/jchecs/core/MoveGenerator;)V
+java.awt.Cursor#getDefaultCursor()Ljava/awt/Cursor;
+fr.free.jchecs.swg.BoardUI#fireMoveEvent(Lfr/free/jchecs/core/Move;)V
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Piece;)V
+fr.free.jchecs.swg.PieceUI#getCursor(Lfr/free/jchecs/core/Piece;)Ljava/awt/Cursor;
+fr.free.jchecs.swg.BoardUI#mouseOver(II)V

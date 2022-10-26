@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.AboutAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.AboutDialog#showAboutDialog(Ljava/awt/Component;)V
+fr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;

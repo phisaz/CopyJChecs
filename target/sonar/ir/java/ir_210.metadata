@@ -1,0 +1,5 @@
+fr.free.jchecs.core.FENUtils#parseFENCastling(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+java.lang.String#length()I
+fr.free.jchecs.core.FENException#instance-init#
+java.lang.String#charAt(I)C
+fr.free.jchecs.core.FENException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V

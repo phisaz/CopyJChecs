@@ -1,0 +1,12 @@
+fr.free.jchecs.swg.ExceptionHandler#makeTextReport(Ljava/lang/Throwable;)Ljava/lang/String;
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#<init>(Ljava/lang/String;)V
+fr.free.jchecs.core.Player#getEngine()Lfr/free/jchecs/ai/Engine;
+java.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.lang.StackTraceElement#toString()Ljava/lang/String;
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+fr.free.jchecs.core.Game#getFENPosition()Ljava/lang/String;
+java.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+java.lang.StringBuilder#toString()Ljava/lang/String;
+fr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;

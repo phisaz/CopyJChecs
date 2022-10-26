@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.PrintableBoard#print(Ljava/awt/Graphics;Ljava/awt/print/PageFormat;I)I
+fr.free.jchecs.swg.PrintableBoard#drawBoard(Ljava/awt/Graphics2D;)V

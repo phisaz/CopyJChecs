@@ -1,0 +1,4 @@
+fr.free.jchecs.swg.ResourceUtils#getImageIcon(Ljava/lang/String;)Ljavax/swing/ImageIcon;
+java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;
+javax.swing.ImageIcon#<init>(Ljava/net/URL;)V
+javax.swing.ImageIcon#instance-init#

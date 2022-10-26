@@ -1,0 +1,4 @@
+fr.free.jchecs.swg.PrintAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;
+fr.free.jchecs.swg.PrintPreviewDialog#showPrintPreviewDialog(Ljava/awt/Component;Lfr/free/jchecs/core/Game;)V

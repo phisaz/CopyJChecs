@@ -1,9 +1,76 @@
 
-2fr.free.jchecs.core.AbstractBoard#isWhiteActive()Zí
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javañ ñ(&"1*∏
-1í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaó ó("ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaó ó(
+-fr.free.jchecs.core.AbstractBoard#hashCode()Ie
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÑ Ñ("6*÷
+2e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(ô
+ñ
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+sfr.free.jchecs.core.Square"__id*
+""≈
+¬
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+sfr.free.jchecs.core.Square"
+__arrayGet*$
+"
+%1fr.free.jchecs.core.Square[]*
+""*
+4
+1*à
+3e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ â(á
+Ñ
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ â(-
+%3int[][]"__id*
+""Ω∫
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ. â(9	
+%4int"java.lang.Enum#ordinal()I* 
+
+pfr.free.jchecs.core.Piece2	ordinal()Ã…
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ; â(G	
+%5int"&fr.free.jchecs.core.Square#getIndex()I*!
+
+sfr.free.jchecs.core.Square2
+getIndex()*
+2*â
+4e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á(&ﬁ€
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á()
+%2fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*%#
+!fr.free.jchecs.core.AbstractBoard*!
+
+sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)≥
+∞
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á(*
+pfr.free.jchecs.core.Piece"__id*!
+
+%2fr.free.jchecs.core.Piece*
+2
+3*‚
+5e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü($
+Ì
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(-"
+%1fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+2*œ
+6e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÖ Ö(›⁄
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÖ Ö(	
+%0int"0fr.free.jchecs.core.AbstractBoard#zobristRoot()I*%#
+!fr.free.jchecs.core.AbstractBoard2zobristRoot()*
+5*€
+1e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaç ç("o
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaç ç(
 ""B%#
 !fr.free.jchecs.core.AbstractBoard

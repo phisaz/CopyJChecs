@@ -1,0 +1,9 @@
+fr.free.jchecs.swg.BoardUI#getBoardBackground()Ljava/awt/Image;
+java.lang.Character#toString(C)Ljava/lang/String;
+javax.swing.ImageIcon#<init>(Ljava/awt/Image;)V
+fr.free.jchecs.swg.ResourceUtils#getImageIcon(Ljava/lang/String;)Ljavax/swing/ImageIcon;
+java.awt.image.BufferedImage#instance-init#
+java.awt.image.BufferedImage#<init>(III)V
+javax.swing.ImageIcon#instance-init#
+fr.free.jchecs.swg.BoardUI#getCellSideLength()I
+fr.free.jchecs.swg.BoardUI#getSideLength()I

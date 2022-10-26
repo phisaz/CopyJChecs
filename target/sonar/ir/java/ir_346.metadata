@@ -1,0 +1,6 @@
+fr.free.jchecs.ai.EnhancedMiniMaxEngine#findMin(Lfr/free/jchecs/core/MoveGenerator;II)I
+java.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+fr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+fr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;
+fr.free.jchecs.ai.EnhancedMiniMaxEngine#findMax(Lfr/free/jchecs/core/MoveGenerator;II)I

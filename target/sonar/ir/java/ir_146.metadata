@@ -1,0 +1,2 @@
+fr.free.jchecs.core.X88Board#addBishopTargets(IZ)V
+fr.free.jchecs.core.Piece#isWhite()Z

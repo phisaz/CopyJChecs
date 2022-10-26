@@ -46,7 +46,7 @@ public final class EngineFactory {
 <span class="fc" id="L46">        registerEngine(&quot;jChecs.Debug&quot;, &quot;fr.free.jchecs.ai.DebugEngine&quot;);</span>
 <span class="fc" id="L47">        registerEngine(&quot;jChecs.MiniMax&quot;, &quot;fr.free.jchecs.ai.MiniMaxEngine&quot;);</span>
 <span class="fc" id="L48">        registerEngine(&quot;jChecs.MiniMax++&quot;,</span>
-<span class="fc" id="L49">                &quot;fr.free.jchecs.ai.EnhancedMiniMaxEngine&quot;);</span>
+                &quot;fr.free.jchecs.ai.EnhancedMiniMaxEngine&quot;);
 <span class="fc" id="L50">        registerEngine(&quot;jChecs.NegaScout&quot;, &quot;fr.free.jchecs.ai.NegaScoutEngine&quot;);</span>
 <span class="fc" id="L51">        registerEngine(&quot;jChecs.Random&quot;, &quot;fr.free.jchecs.ai.RandomEngine&quot;);</span>
 <span class="fc" id="L52">    }</span>
@@ -92,9 +92,9 @@ public final class EngineFactory {
 <span class="pc bpc" id="L92" title="1 of 2 branches missed.">        if (cls != null) {</span>
             try {
 <span class="fc" id="L94">                res = cls.newInstance();</span>
-<span class="pc" id="L95">            } catch (final InstantiationException | IllegalAccessException e) {</span>
+<span class="nc" id="L95">            } catch (final InstantiationException | IllegalAccessException e) {</span>
 <span class="nc" id="L96">                LOG.trace(e.toString());</span>
-            }
+<span class="fc" id="L97">            }</span>
         }
 
 <span class="pc bpc" id="L100" title="1 of 2 branches missed.">        if (res == null) {</span>
@@ -117,13 +117,13 @@ public final class EngineFactory {
 <span class="pc bpc" id="L117" title="2 of 4 branches missed.">            if ((classe != null) &amp;&amp; (Engine.class.isAssignableFrom(classe))) {</span>
 <span class="fc" id="L118">                INTERNAL_ENGINES.put(pNom, classe.asSubclass(Engine.class));</span>
             }
-<span class="pc" id="L120">        } catch (final ClassNotFoundException e) {</span>
+<span class="nc" id="L120">        } catch (final ClassNotFoundException e) {</span>
 <span class="nc" id="L121">            LOG.warn(&quot;Class [{}] not found for engine [{}].&quot;, pClasse, pNom);</span>
 <span class="nc" id="L122">        } catch (final ClassFormatError e) {</span>
             // Exception launched when a custom 404 HTTP error code is defined
             // on the applet's server.
 <span class="nc" id="L125">            LOG.warn(&quot;Class [{}] format error.&quot;, pClasse);</span>
-        }
+<span class="pc" id="L126">        }</span>
 <span class="fc" id="L127">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

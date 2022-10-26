@@ -1,16 +1,19 @@
 
-Bfr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaL L("1*¿
-1’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaM M(í
-ê
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaM M(
-%0fr.free.jchecs.swg.UI"__id*0*.%
-#fr.free.jchecs.swg.AbstractUIAction"
-_ui"´
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaM M(
+Ffr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaC C("1*à
+1e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(ýú
+e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(
+%0fr.free.jchecs.swg.UI"Bfr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;*'%
+#fr.free.jchecs.swg.AbstractUIAction2getUI()íê
+e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(%
+%1javax.swing.JFrame"8fr.free.jchecs.swg.UI#getMainFrame()Ljavax/swing/JFrame;*
 
-%0fr.free.jchecs.swg.UIB'%
+%0fr.free.jchecs.swg.UI2getMainFrame()"ƒ
+e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.javaD D(&
+
+%1javax.swing.JFrameB'%
 #fr.free.jchecs.swg.AbstractUIAction

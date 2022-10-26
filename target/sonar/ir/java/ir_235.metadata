@@ -1,0 +1,2 @@
+fr.free.jchecs.ai.TranspositionTable#get(Lfr/free/jchecs/core/Board;III)Ljava/lang/Integer;
+java.lang.Math#abs(I)I

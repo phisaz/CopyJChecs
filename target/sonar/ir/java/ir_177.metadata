@@ -1,0 +1,2 @@
+fr.free.jchecs.core.AbstractBoard#equals(Ljava/lang/Object;)Z
+fr.free.jchecs.core.AbstractBoard#equalsInternal(Lfr/free/jchecs/core/Board;)Z

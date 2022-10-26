@@ -1,15 +1,15 @@
 
-Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaX X($"9*²
-2Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(º
-·
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(
+Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaX X($"9*¨
+2a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(Œ
+‰
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(
 %6org.slf4j.Logger"__id*
-""ÙÖ
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(1
+""«¨
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javae e(1
 
 %7void"<org.slf4j.Logger#warn(Ljava/lang/String;Ljava/lang/Object;)V*
 
@@ -17,58 +17,58 @@ Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/
 Invalid engine [{}]*
 
 pNomjava.lang.String2*warn(Ljava/lang/String;Ljava/lang/Object;)*
-1*í
-4Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^('Î
-Ë
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^('
+1*‘
+4a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^(' 
+
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^('
 resfr.free.jchecs.ai.Engine"__id*
 
 %2	!capture!*
 2
-1*›
-7Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^(ÿü
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^('
+1*¿
+7a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^(ÑÎ
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java^ ^('
 %2	!capture!"/java.lang.Class#newInstance()Ljava/lang/Object;*
 
 clsjava.lang.Class2newInstance()*
-4*Ø
-9Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaY Y(Ã
-À
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaY Y(
+4*ò
+9a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaY Y(•
+’
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javaY Y(
 resfr.free.jchecs.ai.Engine"__id*
-""·
-´
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[, [(<
+""‰
+†
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[, [(<
 %0java.util.Map"__id*
-""è
-å
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[, [(F
+""º
+·
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[, [(F
 %1java.lang.Class"__mapGet*
 
 %0java.util.Map*
 
-pNomjava.lang.StringË
-È
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[ [(G
+pNomjava.lang.String
+š
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java[ [(G
 clsjava.lang.Class"__id*
 
 %1java.lang.Class*	
 2
 7
-1*Ë
-1Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javah h("´
-Ž
-ƒ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javah h(!
+1*ï
+1a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javah h("†
+a
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.javah h(!
 
 resfr.free.jchecs.ai.Engine:
 pNomjava.lang.StringB#"!

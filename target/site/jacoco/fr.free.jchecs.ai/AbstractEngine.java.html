@@ -145,8 +145,8 @@ abstract class AbstractEngine implements Engine {
      * @param pProfDef Limite par défaut de la profondeur de recherche ([pProfMin,
      *                 pProfMax]).
      */
-<span class="fc" id="L148">    AbstractEngine(final int pProfMin, final int pProfMax,</span>
-                   final int pProfDef) {
+    AbstractEngine(final int pProfMin, final int pProfMax,
+<span class="fc" id="L149">                   final int pProfDef) {</span>
 <span class="fc" id="L150">        _minimalSearchDepth = pProfMin;</span>
 <span class="fc" id="L151">        _maximalSearchDepth = pProfMax;</span>
 
@@ -203,7 +203,7 @@ abstract class AbstractEngine implements Engine {
 <span class="nc" id="L203">            wsRequest.join();</span>
 <span class="nc" id="L204">        } catch (final InterruptedException e) {</span>
 <span class="nc" id="L205">            LOG.trace(&quot;Request to endgames WebService interrupted.&quot;);</span>
-        }
+<span class="nc" id="L206">        }</span>
 
 <span class="nc" id="L208">        return res;</span>
     }
@@ -235,16 +235,16 @@ abstract class AbstractEngine implements Engine {
 <span class="fc" id="L235">                                    + in.readUnsignedByte();</span>
                         }
 <span class="fc" id="L237">                        S_openings.put(cle, mvtsId);</span>
-                    }
-<span class="pc" id="L239">                } catch (final IOException e) {</span>
+<span class="fc" id="L238">                    }</span>
+<span class="fc" id="L239">                } catch (final IOException e) {</span>
                     // Pas grave, le coup sera calculé...
                 } finally {
 <span class="pc bpc" id="L242" title="1 of 2 branches missed.">                    if (in != null) {</span>
                         try {
 <span class="fc" id="L244">                            in.close();</span>
-<span class="pc" id="L245">                        } catch (final IOException e1) {</span>
+<span class="nc" id="L245">                        } catch (final IOException e1) {</span>
                             // On aura essayé :-)
-                        }
+<span class="fc" id="L247">                        }</span>
                     }
                 }
             }
@@ -360,7 +360,7 @@ abstract class AbstractEngine implements Engine {
 <span class="nc" id="L360">                        wsRequest.join(ELAPSED_TIME_LIMIT - ecoule);</span>
 <span class="nc" id="L361">                    } catch (final InterruptedException e) {</span>
                         // Pas grave, on peut s'en passer.
-                    }
+<span class="nc" id="L363">                    }</span>
                 }
 
 <span class="nc" id="L366">                final Move mvt = wsRequest.getMove();</span>

@@ -1,0 +1,4 @@
+fr.free.jchecs.core.Game#resetTo(Lfr/free/jchecs/core/MoveGenerator;)V
+java.util.Timer#instance-init#
+java.util.Timer#<init>()V
+java.lang.System#currentTimeMillis()J

@@ -1,0 +1,11 @@
+fr.free.jchecs.core.MailboxBoard#getValidMoves(Z)[Lfr/free/jchecs/core/Move;
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Square#getIndex()I
+fr.free.jchecs.core.Move#instance-init#
+fr.free.jchecs.core.AbstractBoard#getEnPassant()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;)V
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Piece;)V
+java.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V

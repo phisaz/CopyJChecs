@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.AbstractUIAction#<init>(Ljava/lang/String;Lfr/free/jchecs/swg/UI;)V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+fr.free.jchecs.swg.ResourceUtils#getI18NChar(Ljava/lang/String;)C

@@ -1,0 +1,7 @@
+fr.free.jchecs.swg.Start#main([Ljava/lang/String;)V
+java.lang.Thread#setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+fr.free.jchecs.swg.SwingUI#<init>()V
+fr.free.jchecs.swg.SwingUI#instance-init#
+fr.free.jchecs.swg.ExceptionHandler#instance-init#
+fr.free.jchecs.swg.ExceptionHandler#setUI(Lfr/free/jchecs/swg/UI;)V
+fr.free.jchecs.swg.ExceptionHandler#<init>()V

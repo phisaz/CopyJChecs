@@ -1,0 +1,2 @@
+fr.free.jchecs.core.MailboxBoard#isInCheck(Z)Z
+fr.free.jchecs.core.MailboxBoard#isAttacked(Lfr/free/jchecs/core/Square;Z)Z

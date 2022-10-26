@@ -55,23 +55,23 @@ final class DebugEngine extends AbstractEngine {
     protected Move searchMoveFor(final MoveGenerator pEtat, final Move[] pCoups) {
 <span class="nc" id="L56">        final int l = pCoups.length;</span>
 <span class="nc" id="L57">        final Map&lt;Board, BoardScore&gt; echiquiersRang1 = new HashMap&lt;&gt;(</span>
-<span class="nc" id="L58">                l);</span>
+                l);
 <span class="nc" id="L59">        final Map&lt;Board, BoardScore&gt; echiquiersRang2 = new HashMap&lt;&gt;(</span>
-<span class="nc" id="L60">                l * 25);</span>
+                l * 25);
 <span class="nc" id="L61">        final List&lt;BoardScore&gt; echiquiersRang3 = new ArrayList&lt;&gt;(</span>
-<span class="nc" id="L62">                l * 25 * 25);</span>
+                l * 25 * 25);
 <span class="nc" id="L63">        Move res = pCoups[0];</span>
 <span class="nc" id="L64">        addHalfmove(l);</span>
 <span class="nc bnc" id="L65" title="All 2 branches missed.">        for (final Move mvt1 : pCoups) {</span>
 <span class="nc" id="L66">            final MoveGenerator etat1 = pEtat.derive(mvt1, true);</span>
 <span class="nc" id="L67">            echiquiersRang1.put(etat1, new BoardScore(mvt1, null,</span>
-<span class="nc" id="L68">                    Integer.MAX_VALUE));</span>
+                    Integer.MAX_VALUE));
 <span class="nc" id="L69">            final Move[] coups2 = etat1.getValidMoves(etat1.isWhiteActive());</span>
 <span class="nc" id="L70">            addHalfmove(coups2.length);</span>
 <span class="nc bnc" id="L71" title="All 2 branches missed.">            for (final Move mvt2 : coups2) {</span>
 <span class="nc" id="L72">                final MoveGenerator etat2 = etat1.derive(mvt2, true);</span>
 <span class="nc" id="L73">                echiquiersRang2.put(etat2, new BoardScore(mvt2, etat1,</span>
-<span class="nc" id="L74">                        Integer.MIN_VALUE));</span>
+                        Integer.MIN_VALUE));
 <span class="nc" id="L75">                final Move[] coups3 = etat2</span>
 <span class="nc" id="L76">                        .getValidMoves(etat2.isWhiteActive());</span>
 <span class="nc" id="L77">                addHalfmove(coups3.length);</span>
@@ -90,14 +90,14 @@ final class DebugEngine extends AbstractEngine {
 <span class="nc bnc" id="L90" title="All 2 branches missed.">            if (parent.getNote() &lt; bs.getNote()) {</span>
 <span class="nc" id="L91">                parent.setNote(bs.getNote());</span>
             }
-        }
+<span class="nc" id="L93">        }</span>
 
 <span class="nc bnc" id="L95" title="All 2 branches missed.">        for (final BoardScore bs : echiquiersRang2.values()) {</span>
 <span class="nc" id="L96">            final BoardScore parent = echiquiersRang1.get(bs.getParent());</span>
 <span class="nc bnc" id="L97" title="All 2 branches missed.">            if (parent.getNote() &gt; bs.getNote()) {</span>
 <span class="nc" id="L98">                parent.setNote(bs.getNote());</span>
             }
-        }
+<span class="nc" id="L100">        }</span>
 
 <span class="nc" id="L102">        int meilleur = Integer.MIN_VALUE;</span>
 <span class="nc bnc" id="L103" title="All 2 branches missed.">        for (final BoardScore bs : echiquiersRang1.values()) {</span>
@@ -105,7 +105,7 @@ final class DebugEngine extends AbstractEngine {
 <span class="nc" id="L105">                meilleur = bs.getNote();</span>
 <span class="nc" id="L106">                res = bs.getMove();</span>
             }
-        }
+<span class="nc" id="L108">        }</span>
 
 <span class="nc" id="L110">        setScore(meilleur);</span>
 

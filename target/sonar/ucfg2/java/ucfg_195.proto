@@ -1,90 +1,101 @@
 
-0fr.free.jchecs.core.AbstractBoard#zobristRoot()Ií
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaè è("9"10"12*—
-2í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¢ ¢(±
-Æ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¢ ¢(-	
-%8int"__id*
-""*
-1*‘
-4í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaü ü(±
-Æ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaü ü(,	
-%7int"__id*
+>fr.free.jchecs.core.AbstractBoard#toString()Ljava/lang/String;e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˜ ˜( "10*Ô
+2e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É(˙˜
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÉ É(
+%8java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+\n2	append(C)*
+7
+1*»
+4e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(”–
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(/
+
+%6char")fr.free.jchecs.core.Piece#getFENLetter()C* 
+
+pfr.free.jchecs.core.Piece2getFENLetter()Ä˝
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÄ Ä(0
+%7java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
+
+
+%6char2	append(C)*
+7*Î
+5e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˛ ˛(˘ˆ
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˛ ˛(#
+%5java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;* 
+
+resjava.lang.StringBuilder*
++2	append(C)*
+7*¬
+6e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸  ¸(*óî
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸  ¸(0
+%4fr.free.jchecs.core.Piece"Cfr.free.jchecs.core.Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;*%#
+!fr.free.jchecs.core.AbstractBoard*
+""*
+""2getPieceAt(II)≥
+∞
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¸ ¸(1
+pfr.free.jchecs.core.Piece"__id*!
+
+%4fr.free.jchecs.core.Piece*
+4
+5*¯
+7e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˚ ˚(É
+Ä
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˚  ˚(*	
+%3int"__id*
 ""*
 2
-1*◊
-6í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaú ú(±
+6*â
+10e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯" ¯(5¢ü
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯& ¯(3
+%0java.lang.StringBuilder"java.lang.StringBuilder¥
+±
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯" ¯(5
+%1"!java.lang.StringBuilder#<init>()V*
+
+%0java.lang.StringBuilder±
 Æ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaú ú('	
-%6int"__id*
-""*	
-2
-4
-1*“
-8í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaô ô(≥
-∞
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaô ô(%
-%3int[]"__id*
-""˜
-Ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaô& ô(0 
-%4fr.free.jchecs.core.Square"__id*5*3#
-!fr.free.jchecs.core.AbstractBoard"
-
-_enPassant˘ˆ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaô& ô(:	
-%5int"%fr.free.jchecs.core.Square#getFile()I*"
- 
-%4fr.free.jchecs.core.Square2	getFile()*
-2
-4
-6
-1*£
-9í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaò ò(˜
-Ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaò ò( 
-%2fr.free.jchecs.core.Square"__id*5*3#
-!fr.free.jchecs.core.AbstractBoard"
-
-_enPassant*
-2
-4
-6
-8
-1*“
-10í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javañ ñ(±
-Æ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javañ ñ(-	
-%1int"__id*
-""*
-9*÷
-12í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaì ì(±
-Æ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaì ì(,	
-%0int"__id*
-""*
-9
-10*∏
-1í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java• •("ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java• •(
-""B%#
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java¯ ¯(6
+resjava.lang.StringBuilder"__id*
+
+%0java.lang.StringBuilderÉ
+Ä
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java˙ ˙(	
+%2int"__id*
+""*
+7
+1*◊
+1e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(Ê„
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+%9java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;* 
+
+resjava.lang.StringBuilder2
+toString()"Å
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
+
+%9java.lang.StringB%#
 !fr.free.jchecs.core.AbstractBoard

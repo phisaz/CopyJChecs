@@ -1,0 +1,5 @@
+fr.free.jchecs.swg.SavePositionAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+javax.swing.SwingUtilities#invokeLater(Ljava/lang/Runnable;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.PositionSaver#<init>(Lfr/free/jchecs/swg/UI;)V
+fr.free.jchecs.swg.PositionSaver#instance-init#

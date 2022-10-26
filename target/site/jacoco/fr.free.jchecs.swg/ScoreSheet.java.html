@@ -51,12 +51,12 @@ final class ScoreSheet {
 <span class="nc" id="L51">        champ.setContentType(&quot;text/html&quot;);</span>
 <span class="nc" id="L52">        champ.setEditable(false);</span>
 <span class="nc" id="L53">        final JScrollPane fond = new JScrollPane(champ,</span>
-<span class="nc" id="L54">                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,</span>
-<span class="nc" id="L55">                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);</span>
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 <span class="nc" id="L56">        _component = fond;</span>
 <span class="nc" id="L57">        fond.getViewport().setPreferredSize(new Dimension(175, 250));</span>
 <span class="nc" id="L58">        pPartie.addPropertyChangeListener(&quot;position&quot;, new ScoreSheetListener(</span>
-<span class="nc" id="L59">                pPartie, champ));</span>
+                pPartie, champ));
 <span class="nc" id="L60">    }</span>
 
     /**
@@ -109,7 +109,7 @@ final class ScoreSheet {
 <span class="nc bnc" id="L109" title="All 2 branches missed.">                if (i % 2 == 0) {</span>
 <span class="nc" id="L110">                    debImp = &quot;&lt;b&gt;&quot;;</span>
 <span class="nc" id="L111">                    finImp = &quot;&lt;/b&gt;&quot;;</span>
-<span class="nc" id="L112">                } else {</span>
+                } else {
 <span class="nc" id="L113">                    debImp = &quot;&quot;;</span>
 <span class="nc" id="L114">                    finImp = &quot;&quot;;</span>
                 }
@@ -118,7 +118,7 @@ final class ScoreSheet {
 <span class="nc bnc" id="L118" title="All 2 branches missed.">                if (i == _game.getCurrentMoveIndex()) {</span>
 <span class="nc" id="L119">                    debShow = &quot;&lt;font bgcolor=#E0E0FF&gt;&lt;a name=\&quot;show\&quot;&gt;&quot;;</span>
 <span class="nc" id="L120">                    finShow = &quot;&lt;/a&gt;&lt;/font&gt;&quot;;</span>
-<span class="nc" id="L121">                } else {</span>
+                } else {
 <span class="nc" id="L122">                    debShow = &quot;&quot;;</span>
 <span class="nc" id="L123">                    finShow = &quot;&quot;;</span>
                 }

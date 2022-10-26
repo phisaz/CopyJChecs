@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.CapturesPanel#propertyChange(Ljava/beans/PropertyChangeEvent;)V
+fr.free.jchecs.swg.CapturesPanel#initCapturesPaint()V

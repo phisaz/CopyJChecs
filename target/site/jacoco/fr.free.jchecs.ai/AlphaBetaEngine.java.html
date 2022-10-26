@@ -68,7 +68,7 @@ final class AlphaBetaEngine extends AbstractEngine {
         final KillerMoveSorter killer;
 <span class="nc bnc" id="L69" title="All 2 branches missed.">        if (tri instanceof KillerMoveSorter) {</span>
 <span class="nc" id="L70">            killer = (KillerMoveSorter) tri;</span>
-<span class="nc" id="L71">        } else {</span>
+        } else {
 <span class="nc" id="L72">            killer = null;</span>
         }
 <span class="nc" id="L74">        Arrays.sort(coups, tri);</span>
@@ -76,7 +76,7 @@ final class AlphaBetaEngine extends AbstractEngine {
 <span class="nc" id="L76">        int alpha = pAlpha;</span>
 <span class="nc bnc" id="L77" title="All 2 branches missed.">        for (final Move mvt : coups) {</span>
 <span class="nc" id="L78">            final int note = -alphabeta(pEtat.derive(mvt, true),</span>
-<span class="nc" id="L79">                    pProfondeur - 1, -pBeta, -alpha);</span>
+                    pProfondeur - 1, -pBeta, -alpha);
 <span class="nc bnc" id="L80" title="All 2 branches missed.">            if (note &gt; res) {</span>
 <span class="nc" id="L81">                res = note;</span>
 <span class="nc bnc" id="L82" title="All 2 branches missed.">                if (res &gt; alpha) {</span>
@@ -113,7 +113,7 @@ final class AlphaBetaEngine extends AbstractEngine {
 <span class="nc bnc" id="L113" title="All 2 branches missed.">        for (final Move mvt : pCoups) {</span>
 <span class="nc" id="L114">            final MoveGenerator etat = pEtat.derive(mvt, true);</span>
 <span class="nc" id="L115">            final int note = -alphabeta(etat, getSearchDepthLimit() - 1,</span>
-<span class="nc" id="L116">                    MATE_VALUE, -alpha);</span>
+                    MATE_VALUE, -alpha);
 <span class="nc bnc" id="L117" title="All 6 branches missed.">            if ((note &gt; alpha) || ((note == alpha) &amp;&amp; RANDOMIZER.nextBoolean())) {</span>
                 // Un peu de hasard sert à partager les évaluations identiques :
                 // jeu

@@ -1,0 +1,14 @@
+fr.free.jchecs.ai.DebugEngine#searchMoveFor(Lfr/free/jchecs/core/MoveGenerator;[Lfr/free/jchecs/core/Move;)Lfr/free/jchecs/core/Move;
+java.util.HashMap#<init>(I)V
+fr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;
+java.util.ArrayList#instance-init#
+fr.free.jchecs.ai.DebugEngine$BoardScore#instance-init#
+fr.free.jchecs.ai.DebugEngine$BoardScore#getMove()Lfr/free/jchecs/core/Move;
+java.util.ArrayList#<init>(I)V
+fr.free.jchecs.ai.DebugEngine$BoardScore#<init>(Lfr/free/jchecs/core/Move;Lfr/free/jchecs/core/Board;I)V
+fr.free.jchecs.ai.AbstractEngine#setScore(I)V
+fr.free.jchecs.ai.DebugEngine$BoardScore#getNote()I
+fr.free.jchecs.ai.DebugEngine$BoardScore#getParent()Lfr/free/jchecs/core/Board;
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+java.util.HashMap#instance-init#
+fr.free.jchecs.ai.DebugEngine$BoardScore#setNote(I)V

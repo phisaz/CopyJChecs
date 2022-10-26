@@ -1,0 +1,2 @@
+fr.free.jchecs.ai.RandomEngine#searchMoveFor(Lfr/free/jchecs/core/MoveGenerator;[Lfr/free/jchecs/core/Move;)Lfr/free/jchecs/core/Move;
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V

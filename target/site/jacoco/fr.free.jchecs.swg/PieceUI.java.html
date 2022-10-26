@@ -48,19 +48,19 @@ final class PieceUI {
      * Correspondances pièce / curseur.
      */
 <span class="nc" id="L50">    private final Map&lt;Piece, Cursor&gt; _pieceToCursor = new EnumMap&lt;&gt;(</span>
-<span class="nc" id="L51">            Piece.class);</span>
+            Piece.class);
 
     /**
      * Correspondances pièce / image.
      */
 <span class="nc" id="L56">    private final Map&lt;Piece, Image&gt; _pieceToImage = new EnumMap&lt;&gt;(</span>
-<span class="nc" id="L57">            Piece.class);</span>
+            Piece.class);
 
     /**
      * Correspondances pièce / image.
      */
 <span class="nc" id="L62">    private final Map&lt;Piece, Image&gt; _pieceToSmallImage = new EnumMap&lt;&gt;(</span>
-<span class="nc" id="L63">            Piece.class);</span>
+            Piece.class);
 
     /**
      * Créé une nouvelle instance.
@@ -115,13 +115,13 @@ final class PieceUI {
 <span class="nc" id="L115">            final StringBuilder sb = new StringBuilder(pLF);</span>
 <span class="nc bnc" id="L116" title="All 2 branches missed.">            if (p.isWhite()) {</span>
 <span class="nc" id="L117">                sb.append('w');</span>
-<span class="nc" id="L118">            } else {</span>
+            } else {
 <span class="nc" id="L119">                sb.append('b');</span>
             }
 <span class="nc" id="L121">            sb.append(p.getFENLetter()).append(&quot;.png&quot;);</span>
 <span class="nc" id="L122">            final Image imgTmp = getImageIcon(sb.toString()).getImage();</span>
 <span class="nc" id="L123">            final BufferedImage img = new BufferedImage(pLongueur, pLongueur,</span>
-<span class="nc" id="L124">                    TYPE_INT_ARGB);</span>
+                    TYPE_INT_ARGB);
 <span class="nc" id="L125">            final Graphics2D g2d = img.createGraphics();</span>
             // getScaledInstance() est asynchrone : l'ImageIcon force une
             // synchronisation.
@@ -135,7 +135,7 @@ final class PieceUI {
 <span class="nc" id="L135">                            .toString(p.getFENLetter())));</span>
 <span class="nc" id="L136">            _pieceToImage.put(p, img);</span>
 <span class="nc" id="L137">            _pieceToSmallImage.put(</span>
-<span class="nc" id="L138">                    p,</span>
+                    p,
 <span class="nc" id="L139">                    new ImageIcon(imgTmp.getScaledInstance(demiLongueur,</span>
 <span class="nc" id="L140">                            demiLongueur, SCALE_SMOOTH)).getImage());</span>
         }

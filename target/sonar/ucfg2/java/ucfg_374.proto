@@ -1,46 +1,105 @@
 
-dfr.free.jchecs.core.MutableBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;("startingBlock*‚
-startingBlockè
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java; ;(/Ê
-„
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java: :(
-%3"
+Ñfr.free.jchecs.swg.EvenOddRowsRenderer#getTableCellRendererComponent(Ljavax/swing/JTable;Ljava/lang/Object;ZZII)Ljava/awt/Component;h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaC C(/"startingBlock*ç
+2h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaM M(ë
+é
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaM M(+
+%3java.awt.Color"__id*
+""ÑÅ
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaM M(,
+
+%4void"3java.awt.Component#setBackground(Ljava/awt/Color;)V*
+
+resjava.awt.Component*
+
+%3java.awt.Color2setBackground(Ljava/awt/Color;)*
+1*ç
+3h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaK K(ë
+é
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaK K(*
+%1java.awt.Color"__id*
+""ÑÅ
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaK K(+
+
+%2void"3java.awt.Component#setBackground(Ljava/awt/Color;)V*
+
+resjava.awt.Component*
+
+%1java.awt.Color2setBackground(Ljava/awt/Color;)*
+1*∂
+startingBlockh
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaC/ E(>∑
+¥
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaB B(
+
+%5"
 __annotate*
-java.lang.Override*%
-#
-pCasefr.free.jchecs.core.Square–
-Õ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java;) ;(.#
-pCasefr.free.jchecs.core.Square"__annotation*
+java.lang.Override*
+
+pTablejavax.swing.JTable°
+û
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaC= C(C
+pTablejavax.swing.JTable"__annotation*
 
-%3*
-1*ö	
-1è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(˘ˆ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <()	
-%0int"%fr.free.jchecs.core.Square#getFile()I*%
-#
-pCasefr.free.jchecs.core.Square2	getFile()˘ˆ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java<+ <(:	
-%1int"%fr.free.jchecs.core.Square#getRank()I*%
-#
-pCasefr.free.jchecs.core.Square2	getRank()“œ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(;
-%2fr.free.jchecs.core.Piece"Jfr.free.jchecs.core.MutableBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;*$"
- fr.free.jchecs.core.MutableBoard*
-	
-%0int*
-	
-%1int2getPieceAt(II)"µ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java< <(<!
-
-%2fr.free.jchecs.core.Piece:#
-pCasefr.free.jchecs.core.SquareB$"
- fr.free.jchecs.core.MutableBoard
+%5µ
+≤
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaB B(
+
+%6"
+__annotate*
+java.lang.Override*
+
+pObjetjava.lang.Objectü
+ú
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaD D(
+pObjetjava.lang.Object"__annotation*
+
+%6*
+5*†
+5h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaF F(¯
+ı
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaF G(1
+%0java.awt.Component"àjavax.swing.table.DefaultTableCellRenderer#getTableCellRendererComponent(Ljavax/swing/JTable;Ljava/lang/Object;ZZII)Ljava/awt/Component;*
+""*
+
+pTablejavax.swing.JTable*
+
+pObjetjava.lang.Object*
+""*
+""*
+""*
+""™
+ß
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaF G(2
+resjava.awt.Component"__id*
+
+%0java.awt.Component*	
+2
+3
+1*˜
+1h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaQ	 Q("á
+h
+^/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.javaQ Q(
+
+resjava.awt.Component:
+pTablejavax.swing.JTable:
+pObjetjava.lang.Object:
+"":
+"":
+"":
+""B*(
+&fr.free.jchecs.swg.EvenOddRowsRenderer

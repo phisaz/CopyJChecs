@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.PlayersPanel#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;
+fr.free.jchecs.swg.PlayerDialog#showAboutDialog(Ljava/awt/Component;Lfr/free/jchecs/core/Player;)V

@@ -1,0 +1,3 @@
+fr.free.jchecs.core.MutableBoard#setPieceAt(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;)V
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#getRank()I

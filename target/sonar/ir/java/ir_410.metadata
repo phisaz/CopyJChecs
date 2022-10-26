@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.SwingUI#resizeFrame()V
+fr.free.jchecs.swg.SwingUI#getMainFrame()Ljavax/swing/JFrame;
+fr.free.jchecs.swg.CapturesPanel#initCapturesPaint()V

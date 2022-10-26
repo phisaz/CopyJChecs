@@ -1,76 +1,9 @@
 
--fr.free.jchecs.core.AbstractBoard#hashCode()Ií
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÑ Ñ("6*‡
-2í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(«
-ƒ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
-sfr.free.jchecs.core.Square"__id*
-""Û
-
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(
-sfr.free.jchecs.core.Square"
-__arrayGet*$
-"
-%1fr.free.jchecs.core.Square[]*
-""*
-4
-1*¿
-3í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ â(µ
-≤
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ â(-
-%3int[][]"__id*
-""ÎË
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ. â(9	
-%4int"java.lang.Enum#ordinal()I* 
-
-pfr.free.jchecs.core.Piece2	ordinal()˙˜
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaâ; â(G	
-%5int"&fr.free.jchecs.core.Square#getIndex()I*!
-
-sfr.free.jchecs.core.Square2
-getIndex()*
-2*ì
-4í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á(&åâ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á()
-%2fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*%#
-!fr.free.jchecs.core.AbstractBoard*!
-
-sfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)·
-ﬁ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaá á(*
-pfr.free.jchecs.core.Piece"__id*!
-
-%2fr.free.jchecs.core.Piece*
-2
-3*æ
-5í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü($û
-õ
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÜ Ü(-"
-%1fr.free.jchecs.core.Square[]"@fr.free.jchecs.core.Square#values()[Lfr/free/jchecs/core/Square;*"
-fr.free.jchecs.core.Square*
-2*´
-6í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÖ Ö(ãà
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÖ Ö(	
-%0int"0fr.free.jchecs.core.AbstractBoard#zobristRoot()I*%#
-!fr.free.jchecs.core.AbstractBoard2zobristRoot()*
-5*∏
-1í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaç ç("ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaç ç(
+5fr.free.jchecs.core.AbstractBoard#getHalfmoveCount()Ie
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÛ Û(%"1*€
+1e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÙ Ù("o
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÙ Ù(
 ""B%#
 !fr.free.jchecs.core.AbstractBoard

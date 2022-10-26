@@ -46,14 +46,14 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
      * Bonus/Malus d'un cavalier (blanc par défaut) en fonction de sa position.
      */
 <span class="nc" id="L48">    private static final int[] KNIGHT_POSITIONS = { //</span>
-<span class="nc" id="L49">            -50, -30, -30, -30, -30, -30, -30, -50, // a1 ... h1</span>
-<span class="nc" id="L50">            -30, -20, -20, -20, -20, -20, -20, -30, // a2 ... h2</span>
-<span class="nc" id="L51">            -20, 0, 20, 20, 20, 20, 0, -20, // a3 ... h3</span>
-<span class="nc" id="L52">            -20, 0, 20, 20, 20, 20, 0, -20, // a4 ... h4</span>
-<span class="nc" id="L53">            -20, 0, 10, 20, 20, 10, 0, -20, // a5 ... h5</span>
-<span class="nc" id="L54">            -20, 0, 10, 10, 10, 10, 0, -20, // a6 ... h6</span>
-<span class="nc" id="L55">            -20, -10, 0, 0, 0, 0, -10, -20, // a7 ... h7</span>
-<span class="nc" id="L56">            -40, -20, -20, -20, -20, -20, -20, -40, // a8 ... h8</span>
+            -50, -30, -30, -30, -30, -30, -30, -50, // a1 ... h1
+            -30, -20, -20, -20, -20, -20, -20, -30, // a2 ... h2
+            -20, 0, 20, 20, 20, 20, 0, -20, // a3 ... h3
+            -20, 0, 20, 20, 20, 20, 0, -20, // a4 ... h4
+            -20, 0, 10, 20, 20, 10, 0, -20, // a5 ... h5
+            -20, 0, 10, 10, 10, 10, 0, -20, // a6 ... h6
+            -20, -10, 0, 0, 0, 0, -10, -20, // a7 ... h7
+            -40, -20, -20, -20, -20, -20, -20, -40, // a8 ... h8
     };
 
     /**
@@ -62,13 +62,13 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
 <span class="nc" id="L62">    private static final int[] PAWN_POSITIONS = {0, 0, 0, 0, 0, 0, 0, 0, // a1</span>
             // ...
             // h1
-<span class="nc" id="L65">            2, 2, 2, -2, -2, 2, 2, 2, // a2 ... h2</span>
-<span class="nc" id="L66">            -2, -2, -2, 4, 4, -2, -2, -2, // a3 ... h3</span>
-<span class="nc" id="L67">            0, 0, 0, 4, 4, 0, 0, 0, // a4 ... h4</span>
-<span class="nc" id="L68">            2, 4, 6, 8, 8, 6, 4, 2, // a5 ... h5</span>
-<span class="nc" id="L69">            4, 6, 8, 10, 10, 8, 6, 4, // a6 ... h6</span>
-<span class="nc" id="L70">            4, 6, 8, 10, 10, 8, 6, 4, // a7 ... h7</span>
-<span class="nc" id="L71">            500, 500, 500, 500, 500, 500, 500, 500, // a8 ... h8</span>
+            2, 2, 2, -2, -2, 2, 2, 2, // a2 ... h2
+            -2, -2, -2, 4, 4, -2, -2, -2, // a3 ... h3
+            0, 0, 0, 4, 4, 0, 0, 0, // a4 ... h4
+            2, 4, 6, 8, 8, 6, 4, 2, // a5 ... h5
+            4, 6, 8, 10, 10, 8, 6, 4, // a6 ... h6
+            4, 6, 8, 10, 10, 8, 6, 4, // a7 ... h7
+            500, 500, 500, 500, 500, 500, 500, 500, // a8 ... h8
     };
 
     /**
@@ -78,14 +78,14 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
 <span class="nc" id="L78">    private static final int[] DEFAULT_POSITIONS = {0, 0, 0, 0, 0, 0, 0, 0, // a1</span>
             // ...
             // h1
-<span class="nc" id="L81">            0, 0, 0, 5, 5, 0, 0, 0, // a2 ... h2</span>
-<span class="nc" id="L82">            0, 0, 5, 5, 5, 5, 0, 0, // a3 ... h3</span>
-<span class="nc" id="L83">            0, 5, 5, 10, 10, 5, 5, 0, // a4 ... h4</span>
-<span class="nc" id="L84">            0, 5, 5, 10, 10, 5, 5, 0, // a5 ... h5</span>
-<span class="nc" id="L85">            0, 0, 5, 5, 5, 5, 0, 0, // a6 ... h6</span>
-<span class="nc" id="L86">            0, 0, 0, 5, 5, 0, 0, 0, // a7 ... h7</span>
+            0, 0, 0, 5, 5, 0, 0, 0, // a2 ... h2
+            0, 0, 5, 5, 5, 5, 0, 0, // a3 ... h3
+            0, 5, 5, 10, 10, 5, 5, 0, // a4 ... h4
+            0, 5, 5, 10, 10, 5, 5, 0, // a5 ... h5
+            0, 0, 5, 5, 5, 5, 0, 0, // a6 ... h6
+            0, 0, 0, 5, 5, 0, 0, 0, // a7 ... h7
             0, 0, 0, 0, 0, 0, 0, 0, // a8 ... h8
-<span class="nc" id="L88">    };</span>
+    };
 
     /**
      * Crée une nouvelle instance.
@@ -128,11 +128,11 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
 <span class="nc bnc" id="L128" title="All 2 branches missed.">                            if (pEtat.getValidMoves(traitPiece).length == 0) {</span>
                                 // Malus pour un mat...
 <span class="nc" id="L130">                                pos = MATE_VALUE;</span>
-<span class="nc" id="L131">                            } else {</span>
+                            } else {
                                 // Malus pour un échec...
 <span class="nc" id="L133">                                pos = -250;</span>
                             }
-<span class="nc" id="L135">                        } else {</span>
+                        } else {
                             // Pas de valeur de position pour le roi.
 <span class="nc" id="L137">                            pos = 0;</span>
                         }
@@ -140,7 +140,7 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
                     case KNIGHT:
 <span class="nc bnc" id="L141" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L142">                            pos = KNIGHT_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L143">                        } else {</span>
+                        } else {
 <span class="nc" id="L144">                            pos = KNIGHT_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L145">                                    * FILE_COUNT + s.getFile()];</span>
                         }
@@ -148,7 +148,7 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
                     case PAWN:
 <span class="nc bnc" id="L149" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L150">                            pos = PAWN_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L151">                        } else {</span>
+                        } else {
 <span class="nc" id="L152">                            pos = PAWN_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L153">                                    * FILE_COUNT + s.getFile()];</span>
                         }
@@ -160,7 +160,7 @@ import static fr.free.jchecs.core.Constants.RANK_COUNT;
 <span class="nc" id="L160">                final int score = val + pos;</span>
 <span class="nc bnc" id="L161" title="All 2 branches missed.">                if (traitPiece == pTrait) {</span>
 <span class="nc" id="L162">                    res += score;</span>
-<span class="nc" id="L163">                } else {</span>
+                } else {
 <span class="nc" id="L164">                    res -= score;</span>
                 }
             }

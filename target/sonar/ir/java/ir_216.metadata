@@ -1,0 +1,4 @@
+fr.free.jchecs.core.AbstractMoveGenerator#<init>(Lfr/free/jchecs/core/Board;)V
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.AbstractMoveGenerator#setKingSquare(ZLfr/free/jchecs/core/Square;)V

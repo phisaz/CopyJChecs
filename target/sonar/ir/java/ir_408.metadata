@@ -1,0 +1,4 @@
+fr.free.jchecs.swg.SwingUI#getToolBar()Ljavax/swing/JToolBar;
+javax.swing.JToolBar#instance-init#
+javax.swing.JToolBar#<init>()V
+fr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;

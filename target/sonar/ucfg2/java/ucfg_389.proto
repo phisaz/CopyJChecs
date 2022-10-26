@@ -1,37 +1,51 @@
 
-;fr.free.jchecs.core.Game#getSANStrings()[Ljava/lang/String;ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÐ Ð(!"1*¼
-1ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(×
-Ô
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(
-%0java.util.List"__id*+*)
-fr.free.jchecs.core.Game"
-	_sanMoves×
-Ô
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(5
-%1java.util.List"__id*+*)
-fr.free.jchecs.core.Game"
-	_sanMovesÑÎ
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ, Ñ(<	
-%2int"java.util.List#size()I*
+Gfr.free.jchecs.core.Game#getMovesToCurrent()[Lfr/free/jchecs/core/Move;\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java³ ³(#"5*ˆ
+3\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java· ·(§
+¤
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java· ·(
+%1java.util.List"__id*(*&
+fr.free.jchecs.core.Game"
+_moves­
+ª
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java· ·("
+%2fr.free.jchecs.core.Move"
+__arrayGet*
 
-%1java.util.List2size()¼¹
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ! Ñ(=
-%3java.lang.String[]"java.lang.String[]º·
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(>
-%4java.lang.String[]">java.util.List#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*
-
-%0java.util.List*
-
-%3java.lang.String[]2toArray([Ljava/lang/Object;)"§
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÑ Ñ(?
-
-%4java.lang.String[]B
+%1java.util.List*
+""Â
+¿
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java· ·("
+%3"
+__arraySet*#
+!
+resfr.free.jchecs.core.Move[]*
+""* 
+
+%2fr.free.jchecs.core.Move*
+3
+1*¼
+5\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java´$ ´(0Ÿœ
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java´ ´(1 
+%0fr.free.jchecs.core.Move[]"fr.free.jchecs.core.Move[]®
+«
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java´ ´(2!
+resfr.free.jchecs.core.Move[]"__id*"
+ 
+%0fr.free.jchecs.core.Move[]*
+3
+1*ç
+1\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaº º("ƒ
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaº º(#
+!
+resfr.free.jchecs.core.Move[]B
 fr.free.jchecs.core.Game

@@ -1,0 +1,3 @@
+fr.free.jchecs.core.ArrayBoard#<init>(Lfr/free/jchecs/core/Board;)V
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#getRank()I

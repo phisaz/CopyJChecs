@@ -114,8 +114,8 @@ final class MiniMaxEngine extends AbstractEngine {
 <span class="nc bnc" id="L114" title="All 2 branches missed.">        for (final Move mvt : pCoups) {</span>
 <span class="nc" id="L115">            final MoveGenerator etat = pEtat.derive(mvt, true);</span>
 <span class="nc" id="L116">            final int note = findMin(etat, getSearchDepthLimit() - 1);</span>
-<span class="nc bnc" id="L117" title="All 2 branches missed.">            if ((note &gt; meilleur)</span>
-<span class="nc bnc" id="L118" title="All 4 branches missed.">                    || ((note == meilleur) &amp;&amp; RANDOMIZER.nextBoolean())) {</span>
+<span class="nc bnc" id="L117" title="All 4 branches missed.">            if ((note &gt; meilleur)</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">                    || ((note == meilleur) &amp;&amp; RANDOMIZER.nextBoolean())) {</span>
                 // Un peu de hasard sert à partager les évaluations identiques :
                 // jeu
                 // plus agréable.

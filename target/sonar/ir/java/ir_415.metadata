@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.SwingUI#stop()V
+fr.free.jchecs.swg.SwingUI#saveProperties()V
+java.lang.System#exit(I)V

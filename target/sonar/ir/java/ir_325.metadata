@@ -1,0 +1,5 @@
+fr.free.jchecs.swg.LoadGameAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+javax.swing.SwingUtilities#invokeLater(Ljava/lang/Runnable;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.GameLoader#instance-init#
+fr.free.jchecs.swg.GameLoader#<init>(Lfr/free/jchecs/swg/UI;)V

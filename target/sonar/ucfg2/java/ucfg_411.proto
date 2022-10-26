@@ -1,16 +1,16 @@
 
-:fr.free.jchecs.swg.SwingUI#getPositionFile()Ljava/io/File;Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaž ž("1*–
-1Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ Ÿ(Ý
-Ú
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ Ÿ(
-%0java.io.File"__id*1*/
-fr.free.jchecs.swg.SwingUI"
-_positionFile"£
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ Ÿ(
+6fr.free.jchecs.swg.SwingUI#getGameFile()Ljava/io/File;^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaù ù("1*Š
+1^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ú(¬
+©
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ú(
+%0java.io.File"__id*-*+
+fr.free.jchecs.swg.SwingUI"
+	_gameFile"v
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ú(
 
 %0java.io.FileB
 fr.free.jchecs.swg.SwingUI

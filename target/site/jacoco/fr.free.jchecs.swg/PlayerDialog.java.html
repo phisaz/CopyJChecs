@@ -51,7 +51,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
  *
  * @author David Cotton
  */
-<span class="nc bnc" id="L54" title="All 2 branches missed.">final class PlayerDialog {</span>
+final class PlayerDialog {
     /**
      * Liste des définitions de types de joueurs.
      */
@@ -87,7 +87,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
 <span class="nc bnc" id="L87" title="All 2 branches missed.">        if (pJoueur.isWhite()) {</span>
 <span class="nc" id="L88">            suffixCle = &quot;.white&quot;;</span>
 <span class="nc" id="L89">            icone = &quot;white22.png&quot;;</span>
-<span class="nc" id="L90">        } else {</span>
+        } else {
 <span class="nc" id="L91">            suffixCle = &quot;.black&quot;;</span>
 <span class="nc" id="L92">            icone = &quot;black22.png&quot;;</span>
         }
@@ -131,7 +131,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
 <span class="nc" id="L131">            depthSlider.setMinimum(0);</span>
 <span class="nc" id="L132">            depthSlider.setValue(0);</span>
 <span class="nc" id="L133">            depthSlider.setMaximum(0);</span>
-<span class="nc" id="L134">        } else {</span>
+        } else {
 <span class="nc" id="L135">            depthSlider.setMinimum(moteur.getMinimalSearchDepth());</span>
 <span class="nc" id="L136">            depthSlider.setMaximum(moteur.getMaximalSearchDepth());</span>
 <span class="nc" id="L137">            depthSlider.setValue(moteur.getSearchDepthLimit());</span>
@@ -140,7 +140,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
 <span class="nc" id="L140">        gbl.setConstraints(depthSlider, gbc);</span>
 <span class="nc" id="L141">        fond.add(depthSlider);</span>
 
-<span class="nc" id="L143">        comboTypes.addItemListener(new ItemListener() {</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">        comboTypes.addItemListener(new ItemListener() {</span>
             /**
              * Réagit à la sélection dans la combo des types.
              *
@@ -159,7 +159,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
 <span class="nc" id="L159">                            depthSlider.setMinimum(0);</span>
 <span class="nc" id="L160">                            depthSlider.setValue(0);</span>
 <span class="nc" id="L161">                            depthSlider.setMaximum(0);</span>
-<span class="nc" id="L162">                        } else {</span>
+                        } else {
 <span class="nc" id="L163">                            final Engine m = EngineFactory</span>
 <span class="nc" id="L164">                                    .newInstance(&quot;jChecs.&quot; + n);</span>
 <span class="nc" id="L165">                            depthSlider.setMinimum(m.getMinimalSearchDepth());</span>
@@ -266,7 +266,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
         /**
          * Identifiant de la classe pour la sérialisation.
          */
-<span class="nc" id="L269">        private static final long serialVersionUID = 3936682708234009054L;</span>
+        private static final long serialVersionUID = 3936682708234009054L;
 
         /**
          * Créé une nouvelle instance.
@@ -296,13 +296,13 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
 <span class="nc" id="L296">                        pListe, pt.getName(), pIndex, pSelection, pFocus);</span>
 <span class="nc bnc" id="L297" title="All 2 branches missed.">                if (pt.isHuman()) {</span>
 <span class="nc" id="L298">                    lab.setIcon(HUMAN_ICON);</span>
-<span class="nc" id="L299">                } else {</span>
+                } else {
 <span class="nc" id="L300">                    lab.setIcon(COMPUTER_ICON);</span>
                 }
 <span class="nc" id="L302">                res = lab;</span>
 <span class="nc" id="L303">            } else {</span>
 <span class="nc" id="L304">                res = super.getListCellRendererComponent(pListe, pObjet,</span>
-<span class="nc" id="L305">                        pIndex, pSelection, pFocus);</span>
+                        pIndex, pSelection, pFocus);
             }
 
 <span class="nc" id="L308">            return res;</span>

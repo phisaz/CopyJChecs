@@ -1,0 +1,3 @@
+fr.free.jchecs.core.ArrayBoard#hashCode()I
+fr.free.jchecs.core.AbstractBoard#zobristRoot()I
+java.lang.Enum#ordinal()I

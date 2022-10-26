@@ -1,22 +1,1071 @@
 
-*fr.free.jchecs.core.X88Board#isInCheck(Z)Zç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java»	 »	("1*·
-1ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java…	 …	(…∆
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java…	 …	(1 
-%0fr.free.jchecs.core.Square"Vfr.free.jchecs.core.AbstractMoveGenerator#getKingSquare(Z)Lfr/free/jchecs/core/Square;* 
-fr.free.jchecs.core.X88Board*
-""2getKingSquare(Z)‰·
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java…	 …	(=
-%1boolean"Gfr.free.jchecs.core.X88Board#isAttacked(Lfr/free/jchecs/core/Square;Z)Z* 
-fr.free.jchecs.core.X88Board*"
+Gfr.free.jchecs.core.X88Board#isAttacked(Lfr/free/jchecs/core/Square;Z)Z`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaû û("startingBlock*è
+24`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javañ	 ñ	(¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javañ	 ñ	('$
+%63fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javañ	+ ñ	(1$
+%64fr.free.jchecs.core.PieceType"__id*
+""*
+27
+21
+23*ª
+68`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java— —(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java— —('
+%26boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+64
+67*ø
+25`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaï	$ ï	(%»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaï	$ ï	(/
+%62boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+24
+27
+21*´
+26`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaî	 î	(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaî	 î	("
+%60fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaî	 î	(  
+%61fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%60fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaî	 î	( 
+pfr.free.jchecs.core.Piece"__id*"
  
-%0fr.free.jchecs.core.Square*
-""2)isAttacked(Lfr/free/jchecs/core/Square;Z)"ò
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java…	 …	(>
-"":
+%61fr.free.jchecs.core.Piece*
+25
+27
+21*Ù
+27`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaí	 í	(~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaì	 ì	(
+
+%59int"__id*
+""*
+26
+27
+21*Û
+28`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaë	 ë	((Ä
+~
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaë	 ë	((
+%58int[]"__id*
+""*
+27
+21*“
+29`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaå	 å	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaå	 å	(
+""*´
+70`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaŒ Œ(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaŒ Œ("
+%24fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaŒ Œ( 
+%25fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%24fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaŒ Œ(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%25fr.free.jchecs.core.Piece*
+68
+71
+64*Ù
+71`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÕ  Õ(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÕ& Õ()
+
+%23int"__id*
+""*
+68
+70
+64*ä
+73`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java   (ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java   (
+pfr.free.jchecs.core.Piece"__id*
+""*
+68
+71
+64*å
+30`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaã	" ã	(#ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaã	' ã	(,$
+%57fr.free.jchecs.core.PieceType"__id*
+""*
+28
+29*“
+74`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∆ ∆("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∆ ∆(
+""*≈
+31`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaä	  ä	(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaä	  ä	(+$
+%55fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaä	 ä	(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%55fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaã	 ã	($
+%56fr.free.jchecs.core.PieceType"__id*
+""*
+29
+30*å
+75`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≈  ≈(!ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≈% ≈(*$
+%22fr.free.jchecs.core.PieceType"__id*
+""*
+73
+74*ª
+32`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaâ	 â	(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaâ	 â	('
+%54boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+28
+31*≈
+76`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaƒ  ƒ(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaƒ  ƒ(+$
+%20fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaƒ ƒ(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%20fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≈ ≈($
+%21fr.free.jchecs.core.PieceType"__id*
+""*
+74
+75*ª
+77`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java√ √(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java√ √('
+%19boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+73
+76*´
+34`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÜ	 Ü	(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÜ	 Ü	("
+%52fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÜ	 Ü	( 
+%53fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%52fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÜ	 Ü	(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%53fr.free.jchecs.core.Piece*
+35
+28
+32*´
+79`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿("
+%17fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿( 
+%18fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%17fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%18fr.free.jchecs.core.Piece*
+80
+73
+77*Ù
+35`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÖ	  Ö	(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÖ	& Ö	()
+
+%51int"__id*
+""*
+28
+32
+34*ä
+37`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÇ	 Ç	(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÇ	 Ç	(
+pfr.free.jchecs.core.Piece"__id*
+""*
+35
+28
+32*“
+38`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˛ ˛("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˛ ˛(
+""*å
+39`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˝" ˝(#ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˝' ˝(,$
+%50fr.free.jchecs.core.PieceType"__id*
+""*
+37
+38*•
+100`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaü ü( «
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaü ü()	
+%0int"%fr.free.jchecs.core.Square#getRank()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getRank() «
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaü1 ü(A	
+%1int"%fr.free.jchecs.core.Square#getFile()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getFile()ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java† †(
+pfr.free.jchecs.core.Piece"__id*
+""*
+91
+95
+98*Ù
+80`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaø  ø(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaø& ø()
+
+%16int"__id*
+""*
+79
+73
+77*ä
+82`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaº º(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaº º(
+pfr.free.jchecs.core.Piece"__id*
+""*
+80
+73
+77*“
+83`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∏ ∏("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∏ ∏(
+""*å
+84`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑  ∑(!ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑% ∑(*$
+%15fr.free.jchecs.core.PieceType"__id*
+""*
+82
+83*≈
+40`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¸  ¸(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¸  ¸(+$
+%48fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¸ ¸(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%48fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˝ ˝($
+%49fr.free.jchecs.core.PieceType"__id*
+""*
+38
+39*≈
+85`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂  ∂(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂  ∂(+$
+%13fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂ ∂(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%13fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑ ∑($
+%14fr.free.jchecs.core.PieceType"__id*
+""*
+83
+84*ª
+41`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˚ ˚(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˚ ˚('
+%47boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+37
+40*ª
+86`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaµ µ(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaµ µ('
+%12boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+82
+85*´
+43`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¯ ¯(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¯ ¯("
+%45fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¯ ¯( 
+%46fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%45fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¯ ¯(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%46fr.free.jchecs.core.Piece*
+37
+41
+44*´
+88`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤("
+%10fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤( 
+%11fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%10fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%11fr.free.jchecs.core.Piece*
+82
+86
+89*Ù
+44`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˜  ˜(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java˜& ˜()
+
+%44int"__id*
+""*
+37
+41
+43*Û
+89`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java±  ±(#}
+{
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java±& ±()	
+%9int"__id*
+""*
+82
+86
+88*ä
+46`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÙ Ù(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÙ Ù(
+pfr.free.jchecs.core.Piece"__id*
+""*
+37
+41
+44*“
+47`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java ("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java (
+""*å
+48`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÔ" Ô(#ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÔ' Ô(,$
+%43fr.free.jchecs.core.PieceType"__id*
+""*
+46
+47*≈
+49`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÓ  Ó(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÓ  Ó(+$
+%41fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÓ Ó(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%41fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÔ Ô($
+%42fr.free.jchecs.core.PieceType"__id*
+""*
+47
+48*ä
+91`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ Æ(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ Æ(
+pfr.free.jchecs.core.Piece"__id*
+""*
+82
+86
+89*“
+92`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java™ ™("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java™ ™(
+""*ã
+93`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java©  ©(!ò
+ï
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java©% ©(*#
+%8fr.free.jchecs.core.PieceType"__id*
+""*
+91
+92*¬
+94`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java®  ®(!˚¯
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java®  ®(+#
+%6fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∂
+≥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java® ®(,"
+tfr.free.jchecs.core.PieceType"__id*%
+#
+%6fr.free.jchecs.core.PieceTypeò
+ï
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java© ©(#
+%7fr.free.jchecs.core.PieceType"__id*
+""*
+92
+93*ª
+50`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÌ Ì(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÌ Ì('
+%40boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+46
+49*∫
+95`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaß ß(«ƒ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaß ß('
+%5boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+91
+94*´
+52`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÍ Í(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÍ Í("
+%38fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÍ Í( 
+%39fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%38fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÍ Í(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%39fr.free.jchecs.core.Piece*
+46
+50
+53*ß
+97`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java§ §(Ω
+∫
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java§ §(!
+%3fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_piecesø
+º
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java§ §(
+%4fr.free.jchecs.core.Piece"
+__arrayGet*#
+!
+%3fr.free.jchecs.core.Piece[]*
+""Æ
+´
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java§ §(
+pfr.free.jchecs.core.Piece"__id*!
+
+%4fr.free.jchecs.core.Piece*
+91
+95
+98*Ù
+53`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÈ  È(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÈ& È()
+
+%37int"__id*
+""*
+46
+50
+52*Û
+98`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java£  £(#}
+{
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java£& £()	
+%2int"__id*
+""*
+91
+95
+97*Ó
+10`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	 Æ	(!~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	$ Æ	(.
+
+%77int"__id*
+""*
+9
+1*å
+11`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≠	$ ≠	(+æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≠	$ ≠	(+"
+%74fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≠	$ ≠	(6 
+%75fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%74fr.free.jchecs.core.Piece[]*
+""ï
+í
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≠	: ≠	(D 
+%76fr.free.jchecs.core.Piece"__id*
+""*
+8
+10*ä
+55`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÊ Ê(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÊ Ê(
+pfr.free.jchecs.core.Piece"__id*
+""*
+46
+50
+53*æ
+12`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¨	! ¨	('À»
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¨	! ¨	(1
+
+%73int"%fr.free.jchecs.core.Square#getFile()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getFile()*
+10
+11*“
+56`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‚ ‚("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‚ ‚(
+""*Ω
+13`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java™	 ™	(#À»
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java™	 ™	(-
+
+%72int"%fr.free.jchecs.core.Square#getRank()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getRank()*
+12
+1*å
+57`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java·" ·(#ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java·' ·(,$
+%36fr.free.jchecs.core.PieceType"__id*
+""*
+55
+56*≈
+58`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‡  ‡(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‡  ‡(+$
+%34fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‡ ‡(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%34fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java· ·($
+%35fr.free.jchecs.core.PieceType"__id*
+""*
+57
+56*ª
+59`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaﬂ ﬂ(»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaﬂ ﬂ('
+%33boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+58
+55*“
+16`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java£	 £	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java£	 £	( 
+""*í
+17`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¢	 ¢	(¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¢	 ¢	('$
+%70fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¢	+ ¢	(/$
+%71fr.free.jchecs.core.PieceType"__id*
+""*
+13
+16
+7
+20*¬
+18`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java°	$ °	(%»≈
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java°	$ °	(/
+%69boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+13
+17
+7
+20*Æ
+19`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java†	 †	(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java†	 †	("
+%67fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java†	 †	(  
+%68fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%67fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java†	 †	( 
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%68fr.free.jchecs.core.Piece*
+13
+18
+7
+20*—
+1`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaΩ	 Ω	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaΩ	 Ω	(
+""*—
+2`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∏	 ∏	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∏	 ∏	( 
+""*ä
+3`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	8 ∑	(?æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	8 ∑	(?"
+%88fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	8 ∑	(J 
+%89fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%88fr.free.jchecs.core.Piece[]*
+""ï
+í
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	N ∑	(X 
+%90fr.free.jchecs.core.Piece"__id*
+""*
+2
+1*ÿ
+startingBlock`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaû û(J∏
+µ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaù ù(
+%91"
+__annotate*
+java.lang.Override*&
+$
+pCiblefr.free.jchecs.core.Square¢
+ü
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaû+ û(1$
+pCiblefr.free.jchecs.core.Square"__annotation*
+
+%91*
+100*Ì
+4`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	 ∑	(!~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∑	$ ∑	(.
+
+%87int"__id*
+""*
+3
+1*ä
+5`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂	$ ∂	(+æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂	$ ∂	(+"
+%84fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂	$ ∂	(6 
+%85fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%84fr.free.jchecs.core.Piece[]*
+""ï
+í
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java∂	: ∂	(D 
+%86fr.free.jchecs.core.Piece"__id*
+""*
+2
+4*ª
+6`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaµ	! µ	('À»
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaµ	! µ	(1
+
+%83int"%fr.free.jchecs.core.Square#getFile()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getFile()*
+4
+5*ª
+7`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥	 ≥	(#À»
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥	 ≥	(-
+
+%81int"%fr.free.jchecs.core.Square#getRank()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getRank()~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¥	 ¥	(!
+
+%82int"__id*
+""*
+6
+1*—
+8`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaØ	 Ø	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaØ	 Ø	( 
+""*ä
+9`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	8 Æ	(?æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	8 Æ	(?"
+%78fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	8 Æ	(J 
+%79fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%78fr.free.jchecs.core.Piece[]*
+""ï
+í
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÆ	N Æ	(X 
+%80fr.free.jchecs.core.Piece"__id*
+""*
+8
+1*´
+61`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‹ ‹(æ
+ª
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‹ ‹("
+%31fr.free.jchecs.core.Piece[]"__id*-*+
+fr.free.jchecs.core.X88Board"	
+_pieces¡
+æ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‹ ‹( 
+%32fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%31fr.free.jchecs.core.Piece[]*
+""Ø
+¨
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‹ ‹(
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%32fr.free.jchecs.core.Piece*
+59
+62
+55*Ù
+62`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java€  €(#~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java€& €()
+
+%30int"__id*
+""*
+59
+61
+55*˜
+20`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaû	 û	(~
+|
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaü	 ü	(
+
+%66int"__id*
+""*
+13
+7
+19
+20*ä
+64`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÿ ÿ(ì
+ê
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaÿ ÿ(
+pfr.free.jchecs.core.Piece"__id*
+""*
+59
+62
+55*ˆ
+21`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaù	 ù	(&Ä
+~
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaù	 ù	(&
+%65int[]"__id*
+""*
+13
+7
+20*“
+65`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‘ ‘("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java‘ ‘(
+""*å
+66`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java”  ”(!ô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java”% ”(*$
+%29fr.free.jchecs.core.PieceType"__id*
+""*
+64
+65*“
+23`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaó	 ó	("j
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaó	 ó	( 
+""*≈
+67`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java“  “(!¸˘
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java“  “(+$
+%27fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∑
+¥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java“ “(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%27fr.free.jchecs.core.PieceTypeô
+ñ
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java” ”($
+%28fr.free.jchecs.core.PieceType"__id*
+""*
+65
+66:$
+pCiblefr.free.jchecs.core.Square:
 ""B 
 fr.free.jchecs.core.X88Board

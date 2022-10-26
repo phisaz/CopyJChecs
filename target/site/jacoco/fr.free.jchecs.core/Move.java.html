@@ -72,8 +72,8 @@ public final class Move implements Serializable {
      * @param pOrigine     Case à l'origine du mouvement.
      * @param pDestination Case finale du mouvement.
      */
-<span class="fc" id="L75">    public Move(final Piece pPiece, final Square pOrigine,</span>
-                final Square pDestination) {
+    public Move(final Piece pPiece, final Square pOrigine,
+<span class="fc" id="L76">                final Square pDestination) {</span>
 <span class="fc" id="L77">        _piece = pPiece;</span>
 <span class="fc" id="L78">        _from = pOrigine;</span>
 <span class="fc" id="L79">        _to = pDestination;</span>
@@ -89,8 +89,8 @@ public final class Move implements Serializable {
      * @param pDestination Case finale du mouvement.
      * @param pPrise       Pièce prise (ou null si aucune).
      */
-<span class="fc" id="L92">    public Move(final Piece pPiece, final Square pOrigine,</span>
-                final Square pDestination, final Piece pPrise) {
+    public Move(final Piece pPiece, final Square pOrigine,
+<span class="fc" id="L93">                final Square pDestination, final Piece pPrise) {</span>
 <span class="fc" id="L94">        _piece = pPiece;</span>
 <span class="fc" id="L95">        _from = pOrigine;</span>
 <span class="fc" id="L96">        _to = pDestination;</span>
@@ -107,9 +107,9 @@ public final class Move implements Serializable {
      * @param pPrise       Pièce prise (ou null si aucune).
      * @param pPromotion   Promotion (ou null si aucune).
      */
-<span class="fc" id="L110">    public Move(final Piece pPiece, final Square pOrigine,</span>
+    public Move(final Piece pPiece, final Square pOrigine,
                 final Square pDestination, final Piece pPrise,
-                final Piece pPromotion) {
+<span class="fc" id="L112">                final Piece pPromotion) {</span>
 <span class="fc" id="L113">        _piece = pPiece;</span>
 <span class="fc" id="L114">        _from = pOrigine;</span>
 <span class="fc" id="L115">        _to = pDestination;</span>
@@ -131,9 +131,9 @@ public final class Move implements Serializable {
 
 <span class="fc bfc" id="L132" title="All 2 branches covered.">        if (pObjet instanceof Move) {</span>
 <span class="fc" id="L133">            final Move m = (Move) pObjet;</span>
-<span class="pc bpc" id="L134" title="1 of 6 branches missed.">            return (_from == m._from) &amp;&amp; (_piece == m._piece) &amp;&amp; (_to == m._to)</span>
-<span class="pc bpc" id="L135" title="1 of 2 branches missed.">                    &amp;&amp; (_captured == m._captured)</span>
-<span class="fc bfc" id="L136" title="All 2 branches covered.">                    &amp;&amp; (_promotion == m._promotion);</span>
+<span class="pc bpc" id="L134" title="2 of 10 branches missed.">            return (_from == m._from) &amp;&amp; (_piece == m._piece) &amp;&amp; (_to == m._to)</span>
+                    &amp;&amp; (_captured == m._captured)
+                    &amp;&amp; (_promotion == m._promotion);
         }
 
 <span class="fc" id="L139">        return false;</span>
@@ -223,7 +223,7 @@ public final class Move implements Serializable {
     @Override
     public String toString() {
 <span class="fc" id="L225">        return getClass().getSimpleName() + &quot;[piece=&quot; + _piece + &quot;,from=&quot; + _from +</span>
-<span class="fc" id="L226">                &quot;,to=&quot; + _to + &quot;,captured=&quot; + _captured + &quot;,promotion=&quot; + _promotion + ']';</span>
+                &quot;,to=&quot; + _to + &quot;,captured=&quot; + _captured + &quot;,promotion=&quot; + _promotion + ']';
     }
 
     /**
@@ -241,14 +241,14 @@ public final class Move implements Serializable {
         final Piece cpt;
 <span class="fc bfc" id="L242" title="All 2 branches covered.">        if (idCpt &lt;= 0) {</span>
 <span class="fc" id="L243">            cpt = null;</span>
-<span class="fc" id="L244">        } else {</span>
+        } else {
 <span class="fc" id="L245">            cpt = Piece.values()[idCpt - 1];</span>
         }
 <span class="fc" id="L247">        final int idProm = pId &amp; 0xF;</span>
         final Piece prom;
 <span class="pc bpc" id="L249" title="1 of 2 branches missed.">        if (idProm &lt;= 0) {</span>
 <span class="fc" id="L250">            prom = null;</span>
-<span class="fc" id="L251">        } else {</span>
+        } else {
 <span class="nc" id="L252">            prom = Piece.values()[idProm - 1];</span>
         }
 

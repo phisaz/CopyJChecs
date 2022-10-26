@@ -1,0 +1,9 @@
+fr.free.jchecs.core.ArrayBoard#getKingTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.core.AbstractBoard#canCastleShort(Z)Z
+java.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+fr.free.jchecs.core.AbstractBoard#canCastleLong(Z)Z

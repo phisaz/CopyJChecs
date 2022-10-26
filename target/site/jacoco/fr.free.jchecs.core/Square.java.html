@@ -104,7 +104,7 @@ public final class Square implements Comparable&lt;Square&gt;, Serializable {
     /**
      * Fixe l'ordre de tri entre les cases.
      *
-     * @param pCase Case avec laquelle comparer.
+     * @param pCase Case avec laquelle comparer. 
      * @return -1 si pCase est inférieure, 0 si égale et 1 si supérieure.
      * @see Comparable#compareTo(Object)
      */
@@ -225,7 +225,7 @@ public final class Square implements Comparable&lt;Square&gt;, Serializable {
         }
 <span class="pc bpc" id="L226" title="1 of 2 branches missed.">        if (pChaine.length() != 2) {</span>
 <span class="nc" id="L227">            throw new IllegalArgumentException(&quot;Illegal square string [&quot;</span>
-<span class="nc" id="L228">                    + pChaine + ']');</span>
+                    + pChaine + ']');
         }
 
 <span class="fc" id="L231">        return valueOf(pChaine.charAt(0) - 'a', pChaine.charAt(1) - '1');</span>
@@ -241,7 +241,7 @@ public final class Square implements Comparable&lt;Square&gt;, Serializable {
     public static Square valueOf(final int pColonne, final int pLigne) {
 <span class="pc bpc" id="L242" title="1 of 4 branches missed.">        if ((pColonne &lt; 0) || (pColonne &gt;= FILE_COUNT)) {</span>
 <span class="fc" id="L243">            throw new IllegalArgumentException(&quot;Illegal file [&quot; + pColonne</span>
-<span class="fc" id="L244">                    + ']');</span>
+                    + ']');
         }
 <span class="pc bpc" id="L246" title="1 of 4 branches missed.">        if ((pLigne &lt; 0) || (pLigne &gt;= RANK_COUNT)) {</span>
 <span class="fc" id="L247">            throw new IllegalArgumentException(&quot;Illegal rank [&quot; + pLigne + ']');</span>

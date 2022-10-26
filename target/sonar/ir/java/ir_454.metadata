@@ -1,0 +1,11 @@
+fr.free.jchecs.swg.PlayersPanel#<init>(Lfr/free/jchecs/swg/UI;)V
+java.awt.GridLayout#<init>(II)V
+javax.swing.JButton#<init>(Ljava/lang/String;Ljavax/swing/Icon;)V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+java.awt.GridLayout#instance-init#
+fr.free.jchecs.core.Player#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V
+fr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;
+javax.swing.JButton#instance-init#
+fr.free.jchecs.core.Player#getName()Ljava/lang/String;

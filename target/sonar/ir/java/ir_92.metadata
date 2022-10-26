@@ -1,0 +1,5 @@
+fr.free.jchecs.core.Move#valueOf(I)Lfr/free/jchecs/core/Move;
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Move#instance-init#
+fr.free.jchecs.core.Piece#values()[Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Piece;)V

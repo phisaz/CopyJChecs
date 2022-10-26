@@ -1,0 +1,3 @@
+fr.free.jchecs.core.X88Board#equals(Ljava/lang/Object;)Z
+fr.free.jchecs.core.X88Board#hashCode()I
+fr.free.jchecs.core.AbstractBoard#equalsInternal(Lfr/free/jchecs/core/Board;)Z

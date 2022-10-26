@@ -1,0 +1,7 @@
+fr.free.jchecs.swg.CopyAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+java.awt.datatransfer.StringSelection#instance-init#
+fr.free.jchecs.core.FENUtils#toFEN(Lfr/free/jchecs/core/Board;)Ljava/lang/String;
+java.awt.datatransfer.StringSelection#<init>(Ljava/lang/String;)V
+java.awt.Toolkit#getDefaultToolkit()Ljava/awt/Toolkit;
+fr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;

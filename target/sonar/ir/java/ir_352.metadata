@@ -1,0 +1,3 @@
+fr.free.jchecs.tools.OpeningsBuilderStart#cln2epd(Ljava/lang/String;I)V
+fr.free.jchecs.tools.OpeningsBuilderStart#writeOpenings(Ljava/lang/String;)V
+fr.free.jchecs.tools.OpeningsBuilderStart#analyseGames(I)V

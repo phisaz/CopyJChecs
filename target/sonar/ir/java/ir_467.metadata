@@ -1,0 +1,4 @@
+fr.free.jchecs.core.Square#readResolve()Ljava/lang/Object;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getRank()I

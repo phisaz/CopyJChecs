@@ -116,7 +116,7 @@ final class LoadPositionAction extends AbstractUIAction {
 <span class="nc" id="L116">            JOptionPane.showMessageDialog(_ui.getMainFrame(),</span>
 <span class="nc" id="L117">                    getI18NString(&quot;action.loadPosition.error.message&quot;),</span>
 <span class="nc" id="L118">                    getI18NString(&quot;action.loadPosition.error.title&quot;),</span>
-<span class="nc" id="L119">                    JOptionPane.ERROR_MESSAGE, ICON32);</span>
+                    JOptionPane.ERROR_MESSAGE, ICON32);
 <span class="nc" id="L120">        }</span>
 
         /**
@@ -136,7 +136,7 @@ final class LoadPositionAction extends AbstractUIAction {
 <span class="nc" id="L136">                        in = new BufferedReader(new FileReader(fichier));</span>
 <span class="nc" id="L137">                    } catch (final FileNotFoundException e) {</span>
 <span class="nc" id="L138">                        errorDialog();</span>
-                    }
+<span class="nc" id="L139">                    }</span>
 
 <span class="nc bnc" id="L141" title="All 2 branches missed.">                    if (in != null) {</span>
 <span class="nc" id="L142">                        String ligne = null;</span>
@@ -154,8 +154,8 @@ final class LoadPositionAction extends AbstractUIAction {
 <span class="nc" id="L154">                            } catch (final IOException e1) {</span>
                                 // Tant pis, la fermeture de la JVM s'en
                                 // chargera.
-                            }
-                        }
+<span class="nc" id="L157">                            }</span>
+<span class="nc" id="L158">                        }</span>
 
 <span class="nc bnc" id="L160" title="All 2 branches missed.">                        if (ligne != null) {</span>
                             try {
@@ -166,7 +166,7 @@ final class LoadPositionAction extends AbstractUIAction {
 <span class="nc" id="L166">                                _ui.setPositionFile(fichier);</span>
 <span class="nc" id="L167">                            } catch (final FENException e) {</span>
 <span class="nc" id="L168">                                errorDialog();</span>
-                            }
+<span class="nc" id="L169">                            }</span>
                         }
                     }
                 }

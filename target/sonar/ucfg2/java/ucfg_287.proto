@@ -1,304 +1,16 @@
 
-Gfr.free.jchecs.ai.EndgamesWSRequest#getMove()Lfr/free/jchecs/core/Move;’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaY	 Y("11*¦
-2’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak! k('õ
-ò
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak! k(' 
-%26fr.free.jchecs.core.Board"__id*3*1%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_boardŒ‰
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak! k(7 
-%27fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*"
- 
-%26fr.free.jchecs.core.Board*#
-!
-srcfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)õ
-ò
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javal l( 
-%28fr.free.jchecs.core.Board"__id*3*1%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_boardŒ‰
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javal l(. 
-%29fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*"
- 
-%28fr.free.jchecs.core.Board*#
-!
-dstfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)ÓÐ
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak k( 
-%30fr.free.jchecs.core.Move"fr.free.jchecs.core.Move¬
-©
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak l(:
-%31"«fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Piece;)V*!
-
-%30fr.free.jchecs.core.Move*"
- 
-%27fr.free.jchecs.core.Piece*#
-!
-srcfr.free.jchecs.core.Square*#
-!
-dstfr.free.jchecs.core.Square*"
- 
-%29fr.free.jchecs.core.Piece*(
-&
-	promotionfr.free.jchecs.core.Pieceó
-ð
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javak l(:0%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_move"__id*!
-
-%30fr.free.jchecs.core.Move*
-1*Š
-3’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae g(0ê
-ç
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae g(0&
-	promotionfr.free.jchecs.core.Piece"__id*"
- 
-%22fr.free.jchecs.core.Piece*
-2*ž
-4’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaf. f(3ë
-è
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaf< g(/
-%25char"#java.lang.Character#toLowerCase(C)C*"
-java.lang.Character*
-""©
-¦
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaf. g(0 
-%24fr.free.jchecs.core.Piece"?fr.free.jchecs.core.Piece#valueOf(C)Lfr/free/jchecs/core/Piece;*"
-fr.free.jchecs.core.Piece*
-
-%25charä
-á
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaf. g(0 
-%22fr.free.jchecs.core.Piece"__id*"
- 
-%24fr.free.jchecs.core.Piece*
-3*©
-5’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaeG e(L¢
-Ÿ
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaeG f(+ 
-%23fr.free.jchecs.core.Piece"?fr.free.jchecs.core.Piece#valueOf(C)Lfr/free/jchecs/core/Piece;*"
-fr.free.jchecs.core.Piece*
-""ä
-á
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaeG f(+ 
-%22fr.free.jchecs.core.Piece"__id*"
- 
-%23fr.free.jchecs.core.Piece*
-3*§
-6’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae$ e(*õ
-ò
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae$ e(* 
-%19fr.free.jchecs.core.Board"__id*3*1%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_boardŒ‰
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae$ e(: 
-%20fr.free.jchecs.core.Piece"]fr.free.jchecs.core.Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;*"
- 
-%19fr.free.jchecs.core.Board*#
-!
-srcfr.free.jchecs.core.Square2(getPieceAt(Lfr/free/jchecs/core/Square;)ýú
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javae$ e(D
-%21boolean"$fr.free.jchecs.core.Piece#isWhite()Z*"
- 
-%20fr.free.jchecs.core.Piece2	isWhite()*
-4
-5*Û
-7’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javac# c((ä
-á
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javac# c(/
-%16java.lang.String"
-__arrayGet*
-
-evalsjava.lang.String[]*
-""îë
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javac# c(9
-%17char"java.lang.String#charAt(I)C*
-
-%16java.lang.String*22	charAt(I)àÝ
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javad d()
-
-%18int"java.lang.String#indexOf(I)I*
-BNQR*
-""2
-indexOf(I)*
-2
-6*Ú 
-8’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java\' \(0î
-ë
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java\' \(0
-%4java.lang.String"__id*6*4%
+Cfr.free.jchecs.ai.EndgamesWSRequest#getResponse()Ljava/lang/String;e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaO O("1*±
+1e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaP P(À
+½
+e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaP P(
+%0java.lang.String"__id*6*4%
 #fr.free.jchecs.ai.EndgamesWSRequest"
-	_response­ª
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java\' \(;
-%5java.lang.String[]"=java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;*
+	_response"
+e
+[/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaP P(
 
-%4java.lang.String*
-;2split(Ljava/lang/String;)×
-Ô
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java\ \(<
-evalsjava.lang.String[]"__id*
-
-%5java.lang.String[]¾
-»
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java]" ](,
-%6java.util.Random"__id*
-""ïì
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java]" ](B	
-%7int"java.util.Random#nextInt(I)I*
-
-%6java.util.Random*
-""2
-nextInt(I)ã
-à
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java_2 _(>
-%8java.lang.String"
-__arrayGet*
-
-evalsjava.lang.String[]*
-""•’
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java_2 _(N
-%9java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;*
-
-%8java.lang.String*2 *22substring(II)É
-Æ
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java_# _(O!
-%10fr.free.jchecs.core.Square"Rfr.free.jchecs.core.Square#valueOf(Ljava/lang/String;)Lfr/free/jchecs/core/Square;*"
-fr.free.jchecs.core.Square*
-
-%9java.lang.Stringæ
-ã
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java_ _(P!
-srcfr.free.jchecs.core.Square"__id*#
-!
-%10fr.free.jchecs.core.Squareä
-á
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java`2 `(>
-%11java.lang.String"
-__arrayGet*
-
-evalsjava.lang.String[]*
-""™–
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java`2 `(N
-%12java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;*
-
-%11java.lang.String*2*22substring(II)Ê
-Ç
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java`# `(O!
-%13fr.free.jchecs.core.Square"Rfr.free.jchecs.core.Square#valueOf(Ljava/lang/String;)Lfr/free/jchecs/core/Square;*"
-fr.free.jchecs.core.Square*
-
-%12java.lang.Stringæ
-ã
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java` `(P!
-dstfr.free.jchecs.core.Square"__id*#
-!
-%13fr.free.jchecs.core.SquareÎ
-Ë
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaa a('&
-	promotionfr.free.jchecs.core.Piece"__id*
-""ä
-á
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javab b( 
-%14java.lang.String"
-__arrayGet*
-
-evalsjava.lang.String[]*
-""åâ
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javab b()
-
-%15int"java.lang.String#length()I*
-
-%14java.lang.String2length()*
-2
-7*²
-9’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java[ [(î
-ë
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java[ [(
-%2java.lang.String"__id*6*4%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-	_responsež›
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java[ [(.
-%3boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-%2java.lang.String*	
-Error2startsWith(Ljava/lang/String;)*
-8
-1*’
-10’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaZ  Z()î
-ë
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaZ  Z()
-%1java.lang.String"__id*6*4%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-	_response*
-9
-1*—
-11’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaZ Z(ò
-ï
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javaZ Z(
-%0fr.free.jchecs.core.Move"__id*2*0%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_move*
-10
-1*É
-1’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javap p(ó
-ð
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javap p(
-%32fr.free.jchecs.core.Move"__id*2*0%
-#fr.free.jchecs.ai.EndgamesWSRequest"
-_move"¸
-’
-‡/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.javap p(!
-
-%32fr.free.jchecs.core.MoveB'%
+%0java.lang.StringB'%
 #fr.free.jchecs.ai.EndgamesWSRequest

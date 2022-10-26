@@ -100,15 +100,15 @@ final class EvalPanel implements PropertyChangeListener {
         }
 <span class="nc bnc" id="L101" title="All 2 branches missed.">        if (moteur == null) {</span>
 <span class="nc" id="L102">            _eval.setText(&quot;?.??&quot;);</span>
-<span class="nc" id="L103">        } else {</span>
+        } else {
 <span class="nc" id="L104">            final int note = moteur.getHeuristic().evaluate(disposition,</span>
-<span class="nc" id="L105">                    traitReference);</span>
+                    traitReference);
 <span class="nc" id="L106">            final StringBuilder sb = new StringBuilder();</span>
 <span class="nc" id="L107">            final Formatter formateur = new Formatter(sb);</span>
             final String pointDeVue;
 <span class="nc bnc" id="L109" title="All 2 branches missed.">            if (traitReference) {</span>
 <span class="nc" id="L110">                pointDeVue = getI18NString(&quot;panel.eval.white&quot;);</span>
-<span class="nc" id="L111">            } else {</span>
+            } else {
 <span class="nc" id="L112">                pointDeVue = getI18NString(&quot;panel.eval.black&quot;);</span>
             }
 <span class="nc" id="L114">            formateur.format(&quot;%+5.2f / %s&quot;, note / 100.0F, pointDeVue);</span>

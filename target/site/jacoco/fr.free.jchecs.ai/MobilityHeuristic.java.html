@@ -58,14 +58,14 @@ import static fr.free.jchecs.core.PieceType.PAWN;
      * Bonus/Malus d'un fou (blanc par défaut) en fonction de sa position.
      */
 <span class="fc" id="L60">    private static final int[] BISHOP_POSITIONS = {-5, -5, -5, -5, -5, -5, -5,</span>
-<span class="fc" id="L61">            -5, // a1 ... h1</span>
-<span class="fc" id="L62">            -5, 10, 5, 10, 10, 5, 10, -5, // a2 ... h2</span>
-<span class="fc" id="L63">            -5, 5, 3, 12, 12, 3, 5, -5, // a3 ... h3</span>
-<span class="fc" id="L64">            -5, 3, 12, 3, 3, 12, 3, -5, // a4 ... h4</span>
-<span class="fc" id="L65">            -5, 3, 12, 3, 3, 12, 3, -5, // a5 ... h5</span>
-<span class="fc" id="L66">            -5, 5, 3, 12, 12, 3, 5, -5, // a6 ... h6</span>
-<span class="fc" id="L67">            -5, 10, 5, 10, 10, 5, 10, -5, // a7 ... h7</span>
-<span class="fc" id="L68">            -5, -5, -5, -5, -5, -5, -5, -5, // a8 ... h8</span>
+            -5, // a1 ... h1
+            -5, 10, 5, 10, 10, 5, 10, -5, // a2 ... h2
+            -5, 5, 3, 12, 12, 3, 5, -5, // a3 ... h3
+            -5, 3, 12, 3, 3, 12, 3, -5, // a4 ... h4
+            -5, 3, 12, 3, 3, 12, 3, -5, // a5 ... h5
+            -5, 5, 3, 12, 12, 3, 5, -5, // a6 ... h6
+            -5, 10, 5, 10, 10, 5, 10, -5, // a7 ... h7
+            -5, -5, -5, -5, -5, -5, -5, -5, // a8 ... h8
     };
 
     /**
@@ -74,13 +74,13 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 <span class="fc" id="L74">    private static final int[] KING_POSITIONS = {2, 3, 5, -5, 0, -4, 6, 4, // a1</span>
             // ...
             // h1
-<span class="fc" id="L77">            -3, -3, -5, -5, -5, -5, -3, -3, // a2 ... h2</span>
-<span class="fc" id="L78">            -5, -5, -8, -8, -8, -8, -5, -5, // a3 ... h3</span>
-<span class="fc" id="L79">            -8, -8, -13, -13, -13, -13, -8, -8, // a4 ... h4</span>
-<span class="fc" id="L80">            -13, -13, -21, -21, -21, -21, -13, -13, // a5 ... h5</span>
-<span class="fc" id="L81">            -21, -21, -34, -34, -34, -34, -21, -21, // a6 ... h6</span>
-<span class="fc" id="L82">            -34, -34, -55, -55, -55, -55, -34, -34, // a7 ... h7</span>
-<span class="fc" id="L83">            -55, -55, -89, -89, -89, -89, -55, -55, // a8 ... h8</span>
+            -3, -3, -5, -5, -5, -5, -3, -3, // a2 ... h2
+            -5, -5, -8, -8, -8, -8, -5, -5, // a3 ... h3
+            -8, -8, -13, -13, -13, -13, -8, -8, // a4 ... h4
+            -13, -13, -21, -21, -21, -21, -13, -13, // a5 ... h5
+            -21, -21, -34, -34, -34, -34, -21, -21, // a6 ... h6
+            -34, -34, -55, -55, -55, -55, -34, -34, // a7 ... h7
+            -55, -55, -89, -89, -89, -89, -55, -55, // a8 ... h8
     };
 
     /**
@@ -88,28 +88,28 @@ import static fr.free.jchecs.core.PieceType.PAWN;
      * fin de partie.
      */
 <span class="fc" id="L90">    private static final int[] KING_END_POSITIONS = {-5, -3, -1, 0, 0, -1, -3,</span>
-<span class="fc" id="L91">            -5, // a1 ... h1</span>
-<span class="fc" id="L92">            -3, 5, 5, 5, 5, 5, 5, -3, // a2 ... h2</span>
-<span class="fc" id="L93">            -1, 5, 10, 10, 10, 10, 5, -1, // a3 ... h3</span>
-<span class="fc" id="L94">            0, 5, 10, 15, 15, 10, 5, 0, // a4 ... h4</span>
-<span class="fc" id="L95">            0, 5, 10, 15, 15, 10, 5, 0, // a5 ... h5</span>
-<span class="fc" id="L96">            -1, 5, 10, 10, 10, 10, 5, -1, // a6 ... h6</span>
-<span class="fc" id="L97">            -3, 5, 5, 5, 5, 5, 5, -3, // a7 ... h7</span>
-<span class="fc" id="L98">            -5, -3, -1, 0, 0, -1, -3, -5, // a8 ... h8</span>
+            -5, // a1 ... h1
+            -3, 5, 5, 5, 5, 5, 5, -3, // a2 ... h2
+            -1, 5, 10, 10, 10, 10, 5, -1, // a3 ... h3
+            0, 5, 10, 15, 15, 10, 5, 0, // a4 ... h4
+            0, 5, 10, 15, 15, 10, 5, 0, // a5 ... h5
+            -1, 5, 10, 10, 10, 10, 5, -1, // a6 ... h6
+            -3, 5, 5, 5, 5, 5, 5, -3, // a7 ... h7
+            -5, -3, -1, 0, 0, -1, -3, -5, // a8 ... h8
     };
 
     /**
      * Bonus/Malus d'un cavalier (blanc par défaut) en fonction de sa position.
      */
 <span class="fc" id="L104">    private static final int[] KNIGHT_POSITIONS = {-10, -5, -3, -1, -1, -3,</span>
-<span class="fc" id="L105">            -5, -10, // a1 ... h1</span>
-<span class="fc" id="L106">            -5, 0, 0, 3, 3, 0, 0, -5, // a2 ... h2</span>
-<span class="fc" id="L107">            -3, 0, 5, 5, 5, 5, 0, -3, // a3 ... h3</span>
-<span class="fc" id="L108">            -1, 1, 5, 10, 10, 5, 1, -1, // a4 ... h4</span>
-<span class="fc" id="L109">            -1, 1, 7, 12, 12, 7, 1, -1, // a5 ... h5</span>
-<span class="fc" id="L110">            -3, 0, 5, 7, 7, 5, 0, -3, // a6 ... h6</span>
-<span class="fc" id="L111">            -5, 0, 0, 3, 3, 0, 0, -5, // a7 ... h7</span>
-<span class="fc" id="L112">            -10, -5, -3, -1, -1, -3, -5, -10, // a8 ... h8</span>
+            -5, -10, // a1 ... h1
+            -5, 0, 0, 3, 3, 0, 0, -5, // a2 ... h2
+            -3, 0, 5, 5, 5, 5, 0, -3, // a3 ... h3
+            -1, 1, 5, 10, 10, 5, 1, -1, // a4 ... h4
+            -1, 1, 7, 12, 12, 7, 1, -1, // a5 ... h5
+            -3, 0, 5, 7, 7, 5, 0, -3, // a6 ... h6
+            -5, 0, 0, 3, 3, 0, 0, -5, // a7 ... h7
+            -10, -5, -3, -1, -1, -3, -5, -10, // a8 ... h8
     };
 
     /**
@@ -118,29 +118,29 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 <span class="fc" id="L118">    private static final int[] PAWN_POSITIONS = {0, 0, 0, 0, 0, 0, 0, 0, // a1</span>
             // ...
             // h1
-<span class="fc" id="L121">            0, 0, 0, -5, -5, 0, 0, 0, // a2 ... h2</span>
-<span class="fc" id="L122">            1, 2, 4, 4, 4, 3, 2, 1, // a3 ... h3</span>
-<span class="fc" id="L123">            2, 4, 7, 8, 8, 6, 4, 2, // a4 ... h4</span>
-<span class="fc" id="L124">            3, 6, 11, 12, 12, 9, 6, 3, // a5 ... h5</span>
-<span class="fc" id="L125">            4, 8, 12, 16, 16, 12, 8, 4, // a6 ... h6</span>
-<span class="fc" id="L126">            5, 10, 15, 20, 20, 15, 10, 5, // a7 ... h7</span>
-<span class="fc" id="L127">            100, 100, 100, 100, 100, 100, 100, 100, // a8 ... h9</span>
+            0, 0, 0, -5, -5, 0, 0, 0, // a2 ... h2
+            1, 2, 4, 4, 4, 3, 2, 1, // a3 ... h3
+            2, 4, 7, 8, 8, 6, 4, 2, // a4 ... h4
+            3, 6, 11, 12, 12, 9, 6, 3, // a5 ... h5
+            4, 8, 12, 16, 16, 12, 8, 4, // a6 ... h6
+            5, 10, 15, 20, 20, 15, 10, 5, // a7 ... h7
+            100, 100, 100, 100, 100, 100, 100, 100, // a8 ... h9
     };
 
     /**
      * Bonus/Malus d'une reine (blanche par défaut) en fonction de sa position.
      */
 <span class="fc" id="L133">    private static final int[] QUEEN_POSITIONS = {-5, -5, -5, 0, 0, -5, -5,</span>
-<span class="fc" id="L134">            -5, // a1</span>
+            -5, // a1
             // ...
             // h1
-<span class="fc" id="L137">            0, 0, 3, 3, 3, 0, 0, 0, // a2 ... h2</span>
-<span class="fc" id="L138">            0, 3, 3, 3, 3, 0, 0, 0, // a3 ... h3</span>
-<span class="fc" id="L139">            0, 0, 0, 5, 5, 0, 0, 0, // a4 ... h4</span>
-<span class="fc" id="L140">            0, 0, 0, 5, 5, 0, 0, 0, // a5 ... h5</span>
-<span class="fc" id="L141">            -5, -5, 0, 0, 0, 0, 0, 0, // a6 ... h6</span>
-<span class="fc" id="L142">            -5, -5, 0, 0, 0, 0, 0, 0, // a7 ... h7</span>
-<span class="fc" id="L143">            -5, -5, 0, 0, 0, 0, 0, 0, // a8 ... h8</span>
+            0, 0, 3, 3, 3, 0, 0, 0, // a2 ... h2
+            0, 3, 3, 3, 3, 0, 0, 0, // a3 ... h3
+            0, 0, 0, 5, 5, 0, 0, 0, // a4 ... h4
+            0, 0, 0, 5, 5, 0, 0, 0, // a5 ... h5
+            -5, -5, 0, 0, 0, 0, 0, 0, // a6 ... h6
+            -5, -5, 0, 0, 0, 0, 0, 0, // a7 ... h7
+            -5, -5, 0, 0, 0, 0, 0, 0, // a8 ... h8
     };
 
     /**
@@ -149,14 +149,14 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 <span class="fc" id="L149">    private static final int[] ROOK_POSITIONS = {0, 0, 0, 5, 5, 0, 0, 0, // a1</span>
             // ...
             // h1
-<span class="fc" id="L152">            -2, 0, 0, 0, 0, 0, 0, -2, // a2 ... h2</span>
-<span class="fc" id="L153">            -2, 0, 0, 0, 0, 0, 0, -2, // a3 ... h3</span>
-<span class="fc" id="L154">            -2, 0, 0, 0, 0, 0, 0, -2, // a4 ... h4</span>
-<span class="fc" id="L155">            -2, 0, 0, 0, 0, 0, 0, -2, // a5 ... h5</span>
-<span class="fc" id="L156">            -2, 0, 0, 0, 0, 0, 0, -2, // a6 ... h6</span>
-<span class="fc" id="L157">            10, 10, 10, 10, 10, 10, 10, 10, // a7 ... h7</span>
+            -2, 0, 0, 0, 0, 0, 0, -2, // a2 ... h2
+            -2, 0, 0, 0, 0, 0, 0, -2, // a3 ... h3
+            -2, 0, 0, 0, 0, 0, 0, -2, // a4 ... h4
+            -2, 0, 0, 0, 0, 0, 0, -2, // a5 ... h5
+            -2, 0, 0, 0, 0, 0, 0, -2, // a6 ... h6
+            10, 10, 10, 10, 10, 10, 10, 10, // a7 ... h7
             0, 0, 0, 0, 0, 0, 0, 0, // a8 ... h8
-<span class="fc" id="L159">    };</span>
+    };
 
     /**
      * Crée une nouvelle instance.
@@ -194,7 +194,7 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 <span class="nc bnc" id="L194" title="All 2 branches missed.">                        if (pionsTrait[idx] &gt; 1) {</span>
 <span class="nc" id="L195">                            res -= 5;</span>
                         }
-<span class="nc" id="L197">                    } else {</span>
+                    } else {
 <span class="nc" id="L198">                        pionsAdversaire[idx]++;</span>
 <span class="nc bnc" id="L199" title="All 2 branches missed.">                        if (pionsAdversaire[idx] &gt; 1) {</span>
 <span class="nc" id="L200">                            res += 5;</span>
@@ -216,13 +216,13 @@ import static fr.free.jchecs.core.PieceType.PAWN;
                     case BISHOP:
 <span class="nc bnc" id="L217" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L218">                            pos = BISHOP_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L219">                        } else {</span>
+                        } else {
 <span class="nc" id="L220">                            pos = BISHOP_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L221">                                    * FILE_COUNT + s.getFile()];</span>
                         }
 <span class="nc bnc" id="L223" title="All 2 branches missed.">                        if (nbPieces &gt;= MIDDLE_GAME) {</span>
 <span class="nc" id="L224">                            mob = pEtat.getBishopTargets(s, traitPiece).length * 4;</span>
-<span class="nc" id="L225">                        } else {</span>
+                        } else {
 <span class="nc" id="L226">                            mob = 0;</span>
                         }
 <span class="nc" id="L228">                        break;</span>
@@ -241,24 +241,24 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 
                             // Malus pour un échec...
 <span class="nc" id="L243">                            mob = -250;</span>
-<span class="nc" id="L244">                        } else {</span>
+                        } else {
                             final int idx;
 <span class="nc bnc" id="L246" title="All 2 branches missed.">                            if (traitPiece) {</span>
 <span class="nc" id="L247">                                idx = s.getIndex();</span>
-<span class="nc" id="L248">                            } else {</span>
+                            } else {
 <span class="nc" id="L249">                                idx = ((RANK_COUNT - 1) - s.getRank()) * FILE_COUNT</span>
 <span class="nc" id="L250">                                        + s.getFile();</span>
                             }
 <span class="nc bnc" id="L252" title="All 2 branches missed.">                            if (nbPieces &gt;= END_GAME) {</span>
 <span class="nc" id="L253">                                pos = KING_POSITIONS[idx];</span>
-<span class="nc" id="L254">                            } else {</span>
+                            } else {
 <span class="nc" id="L255">                                pos = KING_END_POSITIONS[idx];</span>
                             }
 <span class="nc bnc" id="L257" title="All 2 branches missed.">                            if ((pEtat.getFullmoveNumber() &lt;= 32)</span>
 <span class="nc bnc" id="L258" title="All 2 branches missed.">                                    &amp;&amp; pEtat.isCastled(traitPiece)) {</span>
                                 // Pour favoriser le roque en début de partie...
 <span class="nc" id="L260">                                mob = 25;</span>
-<span class="nc" id="L261">                            } else {</span>
+                            } else {
 <span class="nc" id="L262">                                mob = 0;</span>
                             }
                         }
@@ -266,26 +266,26 @@ import static fr.free.jchecs.core.PieceType.PAWN;
                     case KNIGHT:
 <span class="nc bnc" id="L267" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L268">                            pos = KNIGHT_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L269">                        } else {</span>
+                        } else {
 <span class="nc" id="L270">                            pos = KNIGHT_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L271">                                    * FILE_COUNT + s.getFile()];</span>
                         }
 <span class="nc bnc" id="L273" title="All 2 branches missed.">                        if (nbPieces &gt;= MIDDLE_GAME) {</span>
 <span class="nc" id="L274">                            mob = pEtat.getKnightTargets(s, traitPiece).length * 4;</span>
-<span class="nc" id="L275">                        } else {</span>
+                        } else {
 <span class="nc" id="L276">                            mob = 0;</span>
                         }
 <span class="nc" id="L278">                        break;</span>
                     case PAWN:
 <span class="nc bnc" id="L280" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L281">                            pos = PAWN_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L282">                        } else {</span>
+                        } else {
 <span class="nc" id="L283">                            pos = PAWN_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L284">                                    * FILE_COUNT + s.getFile()];</span>
                         }
 <span class="nc bnc" id="L286" title="All 2 branches missed.">                        if (nbPieces &gt; END_GAME) {</span>
 <span class="nc" id="L287">                            mob = 0;</span>
-<span class="nc" id="L288">                        } else {</span>
+                        } else {
 <span class="nc" id="L289">                            mob = pos;</span>
                         }
 <span class="nc" id="L291">                        break;</span>
@@ -293,28 +293,28 @@ import static fr.free.jchecs.core.PieceType.PAWN;
                         int posReine;
 <span class="nc bnc" id="L294" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L295">                            posReine = QUEEN_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L296">                        } else {</span>
+                        } else {
 <span class="nc" id="L297">                            posReine = QUEEN_POSITIONS[((RANK_COUNT - 1) - s</span>
 <span class="nc" id="L298">                                    .getRank()) * FILE_COUNT + s.getFile()];</span>
                         }
 <span class="nc bnc" id="L300" title="All 2 branches missed.">                        if (pEtat.getFullmoveNumber() &lt; 12) {</span>
                             // Essayer d'éviter de déplacer la reine trop tôt...
-<span class="nc bnc" id="L302" title="All 4 branches missed.">                            if ((traitPiece &amp;&amp; (s.getIndex() != 3))</span>
-<span class="nc bnc" id="L303" title="All 4 branches missed.">                                    || ((!traitPiece) &amp;&amp; (s.getIndex() != 59))) {</span>
+<span class="nc bnc" id="L302" title="All 6 branches missed.">                            if ((traitPiece &amp;&amp; (s.getIndex() != 3))</span>
+<span class="nc bnc" id="L303" title="All 2 branches missed.">                                    || ((!traitPiece) &amp;&amp; (s.getIndex() != 59))) {</span>
 <span class="nc" id="L304">                                posReine -= 30;</span>
                             }
                         }
 <span class="nc" id="L307">                        pos = posReine;</span>
 <span class="nc bnc" id="L308" title="All 4 branches missed.">                        if ((nbPieces &gt;= END_GAME) &amp;&amp; (nbPieces &lt;= MIDDLE_GAME)) {</span>
 <span class="nc" id="L309">                            mob = pEtat.getQueenTargets(s, traitPiece).length;</span>
-<span class="nc" id="L310">                        } else {</span>
+                        } else {
 <span class="nc" id="L311">                            mob = 0;</span>
                         }
 <span class="nc" id="L313">                        break;</span>
                     case ROOK:
 <span class="nc bnc" id="L315" title="All 2 branches missed.">                        if (traitPiece) {</span>
 <span class="nc" id="L316">                            pos = ROOK_POSITIONS[s.getIndex()];</span>
-<span class="nc" id="L317">                        } else {</span>
+                        } else {
 <span class="nc" id="L318">                            pos = ROOK_POSITIONS[((RANK_COUNT - 1) - s.getRank())</span>
 <span class="nc" id="L319">                                    * FILE_COUNT + s.getFile()];</span>
                         }
@@ -322,12 +322,12 @@ import static fr.free.jchecs.core.PieceType.PAWN;
                             final int nbPions;
 <span class="nc bnc" id="L323" title="All 2 branches missed.">                            if (traitPiece == pTrait) {</span>
 <span class="nc" id="L324">                                nbPions = pionsTrait[s.getFile()];</span>
-<span class="nc" id="L325">                            } else {</span>
+                            } else {
 <span class="nc" id="L326">                                nbPions = pionsAdversaire[s.getFile()];</span>
                             }
 <span class="nc bnc" id="L328" title="All 2 branches missed.">                            if (nbPions == 0) {</span>
 <span class="nc" id="L329">                                mob = 10;</span>
-<span class="nc" id="L330">                            } else {</span>
+                            } else {
 <span class="nc" id="L331">                                mob = 0;</span>
                             }
 <span class="nc" id="L333">                        } else {</span>
@@ -351,7 +351,7 @@ import static fr.free.jchecs.core.PieceType.PAWN;
 <span class="nc" id="L351">                final int score = mat + pos + mob + att;</span>
 <span class="nc bnc" id="L352" title="All 2 branches missed.">                if (traitPiece == pTrait) {</span>
 <span class="nc" id="L353">                    res += score;</span>
-<span class="nc" id="L354">                } else {</span>
+                } else {
 <span class="nc" id="L355">                    res -= score;</span>
                 }
             }

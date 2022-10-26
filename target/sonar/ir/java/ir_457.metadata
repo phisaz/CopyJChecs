@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.PlayersPanel#propertyChange(Ljava/beans/PropertyChangeEvent;)V
+fr.free.jchecs.core.Player#isWhite()Z
+fr.free.jchecs.core.Player#getName()Ljava/lang/String;

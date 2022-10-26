@@ -95,7 +95,7 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="nc" id="L95">                                        .newInstance(contenu));</span>
 <span class="nc" id="L96">                                joueur.setName(contenu</span>
 <span class="nc" id="L97">                                        .substring(APPLICATION_NAME.length() + 1));</span>
-<span class="nc" id="L98">                            } else {</span>
+                            } else {
 <span class="fc" id="L99">                                joueur.setEngine(null);</span>
 <span class="fc" id="L100">                                joueur.setName(contenu);</span>
                             }
@@ -106,7 +106,7 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="fc" id="L106">                                        .newInstance(contenu));</span>
 <span class="fc" id="L107">                                joueur.setName(contenu</span>
 <span class="fc" id="L108">                                        .substring(APPLICATION_NAME.length() + 1));</span>
-<span class="fc" id="L109">                            } else {</span>
+                            } else {
 <span class="fc" id="L110">                                joueur.setEngine(null);</span>
 <span class="fc" id="L111">                                joueur.setName(contenu);</span>
                             }
@@ -115,12 +115,12 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="fc" id="L115">                                final Board depart = toBoard(contenu);</span>
 <span class="fc" id="L116">                                res.resetTo(BoardFactory.valueOf(FASTEST,</span>
 <span class="fc" id="L117">                                        STARTING).derive(depart));</span>
-<span class="pc" id="L118">                            } catch (final FENException e) {</span>
+<span class="nc" id="L118">                            } catch (final FENException e) {</span>
 <span class="nc" id="L119">                                throw new PGNException(&quot;Invalid FEN tag&quot;, e);</span>
-                            }
+<span class="fc" id="L120">                            }</span>
                         }
                     }
-                } else {
+<span class="fc" id="L123">                } else {</span>
                     // Concaténation de la liste des mouvements...
 <span class="fc" id="L125">                    final StringBuilder sb = new StringBuilder();</span>
 <span class="fc bfc" id="L126" title="All 2 branches covered.">                    while (ligneLue != null) {</span>
@@ -144,7 +144,7 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="pc bpc" id="L144" title="3 of 6 branches missed.">                        if ((prof != 0) || (c == '+') || (c == '#')) {</span>
                             // Supprime les marqueurs d'échecs et de mat.
 <span class="nc" id="L146">                            sb.deleteCharAt(p);</span>
-<span class="nc" id="L147">                        } else {</span>
+                        } else {
 <span class="pc bpc" id="L148" title="1 of 2 branches missed.">                            if (c == 'O') {</span>
                                 // Convertir les &quot;o&quot; majuscules en zéro...
 <span class="nc" id="L150">                                sb.setCharAt(p, '0');</span>
@@ -154,7 +154,7 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="pc bpc" id="L154" title="2 of 4 branches missed.">                        if ((c == '}') || (c == ')')) {</span>
 <span class="nc" id="L155">                            prof--;</span>
                         }
-                    }
+<span class="fc" id="L157">                    }</span>
 <span class="fc" id="L158">                    p = 0;</span>
 <span class="fc bfc" id="L159" title="All 2 branches covered.">                    while (p &lt; sb.length()) {</span>
 <span class="fc" id="L160">                        final char c = sb.charAt(p);</span>
@@ -166,8 +166,8 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="fc" id="L166">                                deb--;</span>
                             }
 <span class="fc" id="L168">                            int fin = p + 1;</span>
-<span class="pc bpc" id="L169" title="1 of 4 branches missed.">                            while ((fin &lt; sb.length())</span>
-<span class="fc" id="L170">                                    &amp;&amp; ((&quot; .&quot;.indexOf(sb.charAt(fin))) &gt;= 0)) {</span>
+<span class="pc bpc" id="L169" title="1 of 2 branches missed.">                            while ((fin &lt; sb.length())</span>
+<span class="fc bfc" id="L170" title="All 2 branches covered.">                                    &amp;&amp; ((&quot; .&quot;.indexOf(sb.charAt(fin))) &gt;= 0)) {</span>
 <span class="fc" id="L171">                                fin++;</span>
                             }
 <span class="fc" id="L173">                            sb.delete(deb + 1, fin);</span>
@@ -182,7 +182,7 @@ import static fr.free.jchecs.core.SANUtils.toMove;
 <span class="nc" id="L182">                        } else {</span>
 <span class="fc" id="L183">                            p++;</span>
                         }
-                    }
+<span class="fc" id="L185">                    }</span>
 
 <span class="pc bpc" id="L187" title="1 of 2 branches missed.">                    for (final String mvt : SPLITTER.split(sb.toString())) {</span>
 <span class="pc bpc" id="L188" title="1 of 4 branches missed.">                        if (&quot;*&quot;.equals(mvt) || &quot;1-0&quot;.equals(mvt)</span>
@@ -193,19 +193,19 @@ import static fr.free.jchecs.core.SANUtils.toMove;
                             try {
 <span class="fc" id="L194">                                res.moveFromCurrent(toMove(res.getBoard(),</span>
 <span class="fc" id="L195">                                        toNormalizedSAN(mvt)));</span>
-<span class="pc" id="L196">                            } catch (final SANException e) {</span>
+<span class="nc" id="L196">                            } catch (final SANException e) {</span>
 <span class="nc" id="L197">                                throw new PGNException(&quot;Invalid PGN stream&quot;, e);</span>
-                            }
+<span class="fc" id="L198">                            }</span>
                         }
                     }
 
-<span class="nc" id="L202">                    break;</span>
+<span class="fc" id="L202">                    break;</span>
                 }
 <span class="fc" id="L204">                ligneLue = pFlux.readLine();</span>
-            }
+<span class="fc" id="L205">            }</span>
 <span class="nc" id="L206">        } catch (final IOException e) {</span>
 <span class="nc" id="L207">            throw new PGNException(&quot;PGN stream reading error&quot;, e);</span>
-        }
+<span class="fc" id="L208">        }</span>
 
 <span class="fc" id="L210">        return res;</span>
     }
@@ -233,8 +233,8 @@ import static fr.free.jchecs.core.SANUtils.toMove;
         }
 
         // Les suffixes d'annotations '?' et '!' ne font pas partie de SAN...
-<span class="pc bpc" id="L236" title="1 of 4 branches missed.">        while ((res.length() &gt; 0)</span>
-<span class="fc" id="L237">                &amp;&amp; (&quot;?!&quot;.indexOf(res.charAt(res.length() - 1)) &gt;= 0)) {</span>
+<span class="pc bpc" id="L236" title="1 of 2 branches missed.">        while ((res.length() &gt; 0)</span>
+<span class="fc bfc" id="L237" title="All 2 branches covered.">                &amp;&amp; (&quot;?!&quot;.indexOf(res.charAt(res.length() - 1)) &gt;= 0)) {</span>
 <span class="fc" id="L238">            res.deleteCharAt(res.length() - 1);</span>
         }
 
@@ -267,9 +267,9 @@ import static fr.free.jchecs.core.SANUtils.toMove;
         try {
 <span class="fc" id="L268">            final InetAddress lh = InetAddress.getLocalHost();</span>
 <span class="fc" id="L269">            site = lh.getHostName();</span>
-<span class="pc" id="L270">        } catch (final UnknownHostException e) {</span>
+<span class="nc" id="L270">        } catch (final UnknownHostException e) {</span>
             // Pas grave, on peut se passer de cette information...
-        }
+<span class="fc" id="L272">        }</span>
 <span class="fc" id="L273">        sb.append(&quot;[Site \&quot;&quot;).append(site).append(&quot;\&quot;]\n&quot;);</span>
 <span class="fc" id="L274">        sb.append(&quot;[Date \&quot;&quot;).append(formatPGNDate(new Date())).append(&quot;\&quot;]\n&quot;);</span>
 <span class="fc" id="L275">        sb.append(&quot;[Round \&quot;-\&quot;]\n&quot;);</span>

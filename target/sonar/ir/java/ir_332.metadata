@@ -1,0 +1,11 @@
+fr.free.jchecs.swg.ScoreSheet#<init>(Lfr/free/jchecs/core/Game;)V
+java.awt.Dimension#<init>(II)V
+javax.swing.JEditorPane#<init>()V
+java.awt.Dimension#instance-init#
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JScrollPane#<init>(Ljava/awt/Component;II)V
+fr.free.jchecs.swg.ScoreSheet$ScoreSheetListener#instance-init#
+javax.swing.JEditorPane#instance-init#
+javax.swing.JEditorPane#setContentType(Ljava/lang/String;)V
+javax.swing.JScrollPane#instance-init#
+fr.free.jchecs.swg.ScoreSheet$ScoreSheetListener#<init>(Lfr/free/jchecs/core/Game;Ljavax/swing/JEditorPane;)V

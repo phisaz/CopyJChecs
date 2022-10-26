@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.SwingUI#setPositionFile(Ljava/io/File;)V
+fr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;

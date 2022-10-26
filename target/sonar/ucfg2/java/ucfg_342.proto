@@ -1,17 +1,48 @@
 
-?fr.free.jchecs.swg.Clock#getComponent()Ljavax/swing/JComponent;à
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaã ã("1*ü
-1à
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaå å(‡
-›
-à
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaå å(
-%0javax.swing.JComponent"__id*,**
-fr.free.jchecs.swg.Clock"
+Gfr.free.jchecs.swg.Clock#formatDate(Ljava/util/Date;)Ljava/lang/String;Z
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.java ($"1*å
+1\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÄ: Ä(Cüú
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÄ) Ä(9 
+%0java.text.SimpleDateFormat"java.text.SimpleDateFormat–
+Õ
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÄ% Ä(D
+%1"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*"
+ 
+%0java.text.SimpleDateFormat*	
+H:mm:ssÆ
+´
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÄ Ä(E!
+sdfjava.text.SimpleDateFormat"__id*"
+ 
+%0java.text.SimpleDateFormat‰
+·
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÅ Å(3
+%2java.util.TimeZone"Fjava.util.TimeZone#getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;*"
+java.util.TimeZone*
+GMTäá
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÅ Å(4
 
-_component"´
-à
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaå å(
-
-%0javax.swing.JComponentB
+%3void"7java.text.DateFormat#setTimeZone(Ljava/util/TimeZone;)V*#
+!
+sdfjava.text.SimpleDateFormat*
+
+%2java.util.TimeZone2!setTimeZone(Ljava/util/TimeZone;)îë
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÉ É( 
+%4java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*#
+!
+sdfjava.text.SimpleDateFormat*
+
+pDatejava.util.Date2format(Ljava/util/Date;)"x
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.javaÉ É(!
+
+%4java.lang.String:
+pDatejava.util.DateB"
 fr.free.jchecs.swg.Clock

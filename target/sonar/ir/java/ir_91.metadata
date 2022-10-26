@@ -1,0 +1,3 @@
+fr.free.jchecs.core.Move#toString()Ljava/lang/String;
+java.lang.Object#getClass()Ljava/lang/Class;
+java.lang.Class#getSimpleName()Ljava/lang/String;

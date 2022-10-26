@@ -1,1508 +1,47 @@
 
-=fr.free.jchecs.swg.SwingUI#getMainFrame()Ljavax/swing/JFrame;ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÉ É("9*–â
-2ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú$ ú(4∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú$ ú(4
-%41java.lang.String"__id*
-""÷
-”
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú$ ú(:
-%42java.lang.String"__concat*
-
-%41java.lang.String*
-""∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaù ù()
-%43java.lang.String"__id*
-""È
-Ê
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú$ ù()
-%44java.lang.String"__concat*
-
-%42java.lang.String*
-
-%43java.lang.Stringøº
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ú(#
-%45javax.swing.JFrame"javax.swing.JFrameˇ
-¸
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ù(*
-%46".javax.swing.JFrame#<init>(Ljava/lang/String;)V*
-
-%45javax.swing.JFrame*
-
-%44java.lang.String·
-ﬁ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaú ù(*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame"__id*
-
-%45javax.swing.JFrame·
-ﬁ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaû û(
-%47javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrameµ
-≤
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaû$ û(3
-%48java.awt.Image"__id*
-""ß§
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaû û(4
-%49void"2javax.swing.JFrame#setIconImage(Ljava/awt/Image;)V*
-
-%47javax.swing.JFrame*
-
-%48java.awt.Image2setIconImage(Ljava/awt/Image;)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java† †(&
-%50java.lang.String"__id*
-""¥
-±
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java† †('
-%51javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
-fr.free.jchecs.swg.SwingUI*
-
-%50java.lang.StringÙÒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java† †(9
-%52void"!javax.swing.Action#setEnabled(Z)V*
-
-%51javax.swing.Action*
-""2setEnabled(Z)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java° °(*
-%53java.lang.String"__id*
-""¥
-±
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java° °(+
-%54javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
-fr.free.jchecs.swg.SwingUI*
-
-%53java.lang.StringÙÒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java° °(=
-%55void"!javax.swing.Action#setEnabled(Z)V*
-
-%54javax.swing.Action*
-""2setEnabled(Z)å
-â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java£" £(.
-%56javax.swing.JMenuBar"=fr.free.jchecs.swg.SwingUI#getMenuBar()Ljavax/swing/JMenuBar;*
-fr.free.jchecs.swg.SwingUI”
-–
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java£ £(/
-menujavax.swing.JMenuBar"__id*
-
-%56javax.swing.JMenuBar·
-ﬁ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java§ §(
-%57javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame∏µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java§ §((
-%58void"7javax.swing.JFrame#setJMenuBar(Ljavax/swing/JMenuBar;)V*
-
-%57javax.swing.JFrame*
-
-menujavax.swing.JMenuBar2#setJMenuBar(Ljavax/swing/JMenuBar;)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java•/ •(D
-%59java.lang.String"__id*
-""«ƒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java• •(E
-%60boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%59java.lang.String2&getBooleanProperty(Ljava/lang/String;)ÖÇ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java• •(F
-%61void"%javax.swing.JComponent#setVisible(Z)V*
-
-menujavax.swing.JMenuBar*
-
-%60boolean2setVisible(Z)≈¬
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaß/ ß(;
-%62java.awt.BorderLayout"java.awt.BorderLayoutÊ
-„
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaß+ ß(A
-%63"!java.awt.BorderLayout#<init>(II)V*
-
-%62java.awt.BorderLayout*2*2øº
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaß$ ß(*
-%64javax.swing.JPanel"javax.swing.JPanelä
-á
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaß  ß(B
-%65"4javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V*
-
-%64javax.swing.JPanel*
-
-%62java.awt.BorderLayoutœ
-Ã
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaß ß(C
-fondjavax.swing.JPanel"__id*
-
-%64javax.swing.JPanelå
-â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java©# ©(/
-%66javax.swing.JToolBar"=fr.free.jchecs.swg.SwingUI#getToolBar()Ljavax/swing/JToolBar;*
-fr.free.jchecs.swg.SwingUI‘
-—
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java© ©(0
-barrejavax.swing.JToolBar"__id*
-
-%66javax.swing.JToolBar∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java™0 ™(E
-%67java.lang.String"__id*
-""«ƒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java™ ™(F
-%68boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%67java.lang.String2&getBooleanProperty(Ljava/lang/String;)ÜÉ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java™ ™(G
-%69void"%javax.swing.JComponent#setVisible(Z)V*
-
-barrejavax.swing.JToolBar*
-
-%68boolean2setVisible(Z)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java´ ´(.
-%70java.lang.String"__id*
-""Â‚
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java´ ´(/
-%71void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*
-
-fondjavax.swing.JPanel*
-
-barrejavax.swing.JToolBar*
-
-%70java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)≈¬
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≠7 ≠(C
-%72java.awt.BorderLayout"java.awt.BorderLayoutÿ
-’
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≠3 ≠(E
-%73"java.awt.BorderLayout#<init>()V*
-
-%72java.awt.BorderLayoutøº
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≠, ≠(2
-%74javax.swing.JPanel"javax.swing.JPanelä
-á
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≠( ≠(F
-%75"4javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V*
-
-%74javax.swing.JPanel*
-
-%72java.awt.BorderLayout◊
-‘
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≠ ≠(G"
-cadreCentraljavax.swing.JPanel"__id*
-
-%74javax.swing.JPanel∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÆ4 Æ(F
-%76java.lang.String"__id*
-""«ƒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÆ! Æ(G
-%77boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%76java.lang.String2&getBooleanProperty(Ljava/lang/String;)
-Ì
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaØ Ø('
-%78 fr.free.jchecs.swg.CapturesPanel"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_capturesUpåâ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaØ Ø('
-%79void"-fr.free.jchecs.swg.CapturesPanel#setWhite(Z)V*)
-'
-%78 fr.free.jchecs.swg.CapturesPanel*
-""2setWhite(Z)
-Ì
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∞ ∞(('
-%80 fr.free.jchecs.swg.CapturesPanel"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_capturesUp≥∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∞ ∞(7
-%81javax.swing.JComponent"Gfr.free.jchecs.swg.CapturesPanel#getComponent()Ljavax/swing/JComponent;*)
-'
-%80 fr.free.jchecs.swg.CapturesPanel2getComponent()∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∞9 ∞(K
-%82java.lang.String"__id*
-""ÌÍ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∞ ∞(L
-%83void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*$
-"
-cadreCentraljavax.swing.JPanel*
-
-%81javax.swing.JComponent*
-
-%82java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)Á
-‰
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java± ±(!
-%84fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUIÜÉ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java± ±(&
-%85void"*fr.free.jchecs.swg.BoardUI#setFlipView(Z)V*#
-!
-%84fr.free.jchecs.swg.BoardUI*
-""2setFlipView(Z)Á
-‰
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≤ ≤(%!
-%86fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUI∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≤' ≤(:
-%87java.lang.String"__id*
-""ÒÓ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≤ ≤(;
-%88void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*$
-"
-cadreCentraljavax.swing.JPanel*#
-!
-%86fr.free.jchecs.swg.BoardUI*
-
-%87java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)Ú
-Ô
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≥ ≥('
-%89 fr.free.jchecs.swg.CapturesPanel"__id*1*/
-fr.free.jchecs.swg.SwingUI"
-_capturesDownåâ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≥ ≥((
-%90void"-fr.free.jchecs.swg.CapturesPanel#setWhite(Z)V*)
-'
-%89 fr.free.jchecs.swg.CapturesPanel*
-""2setWhite(Z)Ú
-Ô
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¥ ¥(*'
-%91 fr.free.jchecs.swg.CapturesPanel"__id*1*/
-fr.free.jchecs.swg.SwingUI"
-_capturesDown≥∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¥ ¥(9
-%92javax.swing.JComponent"Gfr.free.jchecs.swg.CapturesPanel#getComponent()Ljavax/swing/JComponent;*)
-'
-%91 fr.free.jchecs.swg.CapturesPanel2getComponent()∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¥; ¥(M
-%93java.lang.String"__id*
-""ÌÍ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¥ ¥(N
-%94void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*$
-"
-cadreCentraljavax.swing.JPanel*
-
-%92javax.swing.JComponent*
-
-%93java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∂@ ∂(V
-%95java.lang.String"__id*
-""«ƒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∂- ∂(W
-%96boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%95java.lang.String2&getBooleanProperty(Ljava/lang/String;)
-Ì
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∑ ∑('
-%97 fr.free.jchecs.swg.CapturesPanel"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_capturesUp≥∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∑ ∑(&
-%98javax.swing.JComponent"Gfr.free.jchecs.swg.CapturesPanel#getComponent()Ljavax/swing/JComponent;*)
-'
-%97 fr.free.jchecs.swg.CapturesPanel2getComponent()¸˘
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∑ ∑(C
-%99void"%javax.swing.JComponent#setVisible(Z)V*
-
-%98javax.swing.JComponent*
-""2setVisible(Z)Û
-
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∏ ∏((
-%100 fr.free.jchecs.swg.CapturesPanel"__id*1*/
-fr.free.jchecs.swg.SwingUI"
-_capturesDownµ≤
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∏ ∏((
-%101javax.swing.JComponent"Gfr.free.jchecs.swg.CapturesPanel#getComponent()Ljavax/swing/JComponent;**
-(
-%100 fr.free.jchecs.swg.CapturesPanel2getComponent()˛˚
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∏ ∏(E
-%102void"%javax.swing.JComponent#setVisible(Z)V* 
-
-%101javax.swing.JComponent*
-""2setVisible(Z)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∫# ∫(6
-%103java.lang.String"__id*
-""ÏÈ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∫ ∫(7
-%104void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*
-
-fondjavax.swing.JPanel*$
-"
-cadreCentraljavax.swing.JPanel*
+Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ Â(%"startingBlock*∂
+startingBlock^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ% Â(8©
+¶
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‰ ‰(
+%3"
+__annotate*
+java.lang.Override*
 
-%103java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)‘—
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaº% º(.$
-%105fr.free.jchecs.swg.TaskPanel"fr.free.jchecs.swg.TaskPanelË
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaº! º(0
-%106"&fr.free.jchecs.swg.TaskPanel#<init>()V*&
-$
-%105fr.free.jchecs.swg.TaskPanel‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaº º(1"
-tpfr.free.jchecs.swg.TaskPanel"__id*&
-$
-%105fr.free.jchecs.swg.TaskPanel∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ& Ω(6
-%107java.lang.String"__id*
-""⁄◊
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ< Ω(H'
-%108fr.free.jchecs.swg.PlayersPanel"fr.free.jchecs.swg.PlayersPanel•
-¢
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ8 Ω(N
-%109"@fr.free.jchecs.swg.PlayersPanel#<init>(Lfr/free/jchecs/swg/UI;)V*)
-'
-%108fr.free.jchecs.swg.PlayersPanel*
-fr.free.jchecs.swg.SwingUI≥∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ8 æ(#
-%110javax.swing.JComponent"Ffr.free.jchecs.swg.PlayersPanel#getComponent()Ljavax/swing/JComponent;*)
-'
-%108fr.free.jchecs.swg.PlayersPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaæ% æ(1
-%111javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ Ω(#
-%112fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ æ(2
-%113"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%112fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%107java.lang.String* 
-
-%110javax.swing.JComponent*
-
-%111javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaΩ æ(3
-%114void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%112fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø& ø(4
-%115java.lang.String"__id*
-""„
-‡
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø@ ø(E 
-%116fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_gameÃ…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø: ø(? 
-%117fr.free.jchecs.swg.Clock"fr.free.jchecs.swg.Clockû
-õ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø6 ø(F
-%118"<fr.free.jchecs.swg.Clock#<init>(Lfr/free/jchecs/core/Game;)V*"
- 
-%117fr.free.jchecs.swg.Clock*"
- 
-%116fr.free.jchecs.core.Game•¢
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø6 ¿(#
-%119javax.swing.JComponent"?fr.free.jchecs.swg.Clock#getComponent()Ljavax/swing/JComponent;*"
- 
-%117fr.free.jchecs.swg.Clock2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¿% ¿(/
-%120javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø ø(#
-%121fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø ¿(0
-%122"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%121fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%115java.lang.String* 
-
-%119javax.swing.JComponent*
-
-%120javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaø ¿(1
-%123void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%121fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¡& ¡(9
-%124java.lang.String"__id*
-""„
-‡
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¬# ¬(( 
-%125fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_game÷”
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¬ ¬("%
-%126fr.free.jchecs.swg.ScoreSheet"fr.free.jchecs.swg.ScoreSheet®
-•
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¬ ¬()
-%127"Afr.free.jchecs.swg.ScoreSheet#<init>(Lfr/free/jchecs/core/Game;)V*'
-%
-%126fr.free.jchecs.swg.ScoreSheet*"
- 
-%125fr.free.jchecs.core.GameØ¨
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¬ ¬(8
-%128javax.swing.JComponent"Dfr.free.jchecs.swg.ScoreSheet#getComponent()Ljavax/swing/JComponent;*'
-%
-%126fr.free.jchecs.swg.ScoreSheet2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¬: ¬(D
-%129javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¡ ¡(#
-%130fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¡ ¬(E
-%131"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%130fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%124java.lang.String* 
-
-%128javax.swing.JComponent*
-
-%129javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java¡ ¬(F
-%132void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%130fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√& √(3
-%133java.lang.String"__id*
-""„
-‡
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√C √(H 
-%134fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_game‘—
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√9 √(B$
-%135fr.free.jchecs.swg.EvalPanel"fr.free.jchecs.swg.EvalPanel¶
-£
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√5 √(I
-%136"@fr.free.jchecs.swg.EvalPanel#<init>(Lfr/free/jchecs/core/Game;)V*&
-$
-%135fr.free.jchecs.swg.EvalPanel*"
- 
-%134fr.free.jchecs.core.Game≠™
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√5 ƒ(#
-%137javax.swing.JComponent"Cfr.free.jchecs.swg.EvalPanel#getComponent()Ljavax/swing/JComponent;*&
-$
-%135fr.free.jchecs.swg.EvalPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaƒ% ƒ(.
-%138javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√ √(#
-%139fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√ ƒ(/
-%140"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%139fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%133java.lang.String* 
-
-%137javax.swing.JComponent*
-
-%138javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java√ ƒ(0
-%141void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%139fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈& ≈(7
-%142java.lang.String"__id*
-""„
-‡
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈F ≈(K 
-%143fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_game“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈= ≈(E#
-%144fr.free.jchecs.swg.Recorder"fr.free.jchecs.swg.Recorder§
-°
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈9 ≈(L
-%145"?fr.free.jchecs.swg.Recorder#<init>(Lfr/free/jchecs/core/Game;)V*%
-#
-%144fr.free.jchecs.swg.Recorder*"
- 
-%143fr.free.jchecs.core.Game´®
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈9 ∆(#
-%146javax.swing.JComponent"Bfr.free.jchecs.swg.Recorder#getComponent()Ljavax/swing/JComponent;*%
-#
-%144fr.free.jchecs.swg.Recorder2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java∆% ∆(0
-%147javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈ ≈(#
-%148fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈ ∆(1
-%149"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%148fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%142java.lang.String* 
-
-%146javax.swing.JComponent*
-
-%147javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java≈ ∆(2
-%150void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%148fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java«& «(7
-%151java.lang.String"__id*
-""‹Ÿ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java» »(%(
-%152 fr.free.jchecs.swg.SettingsPanel" fr.free.jchecs.swg.SettingsPanelß
-§
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java» »(+
-%153"Afr.free.jchecs.swg.SettingsPanel#<init>(Lfr/free/jchecs/swg/UI;)V**
-(
-%152 fr.free.jchecs.swg.SettingsPanel*
-fr.free.jchecs.swg.SwingUIµ≤
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java» »(:
-%154javax.swing.JComponent"Gfr.free.jchecs.swg.SettingsPanel#getComponent()Ljavax/swing/JComponent;**
-(
-%152 fr.free.jchecs.swg.SettingsPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java»< »(G
-%155javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java« «(#
-%156fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java« »(H
-%157"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%156fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%151java.lang.String* 
-
-%154javax.swing.JComponent*
-
-%155javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java« »(I
-%158void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%156fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…& …(1
-%159java.lang.String"__id*
-""–Õ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…7 …(>"
-%160fr.free.jchecs.swg.LFPanel"fr.free.jchecs.swg.LFPanelõ
-ò
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…3 …(D
-%161";fr.free.jchecs.swg.LFPanel#<init>(Lfr/free/jchecs/swg/UI;)V*$
-"
-%160fr.free.jchecs.swg.LFPanel*
-fr.free.jchecs.swg.SwingUI©¶
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…3  (#
-%162javax.swing.JComponent"Afr.free.jchecs.swg.LFPanel#getComponent()Ljavax/swing/JComponent;*$
-"
-%160fr.free.jchecs.swg.LFPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java %  (,
-%163javax.swing.Icon"__id*
-""“œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java… …(#
-%164fr.free.jchecs.swg.TaskItem"fr.free.jchecs.swg.TaskItem≥
-∞
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…  (-
-%165"xfr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V*%
-#
-%164fr.free.jchecs.swg.TaskItem*
-fr.free.jchecs.swg.SwingUI*
-
-%159java.lang.String* 
-
-%162javax.swing.JComponent*
-
-%163javax.swing.Icon—Œ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java…  (.
-%166void"@fr.free.jchecs.swg.TaskPanel#add(Lfr/free/jchecs/swg/TaskItem;)V*$
-"
-tpfr.free.jchecs.swg.TaskPanel*%
-#
-%164fr.free.jchecs.swg.TaskItem2"add(Lfr/free/jchecs/swg/TaskItem;)´®
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ À(&
-%167javax.swing.JComponent"Cfr.free.jchecs.swg.TaskPanel#getComponent()Ljavax/swing/JComponent;*$
-"
-tpfr.free.jchecs.swg.TaskPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ( À(9
-%168java.lang.String"__id*
-""ËÂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÀ À(:
-%169void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*
-
-fondjavax.swing.JPanel* 
-
-%167javax.swing.JComponent*
-
-%168java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)Í
-Á
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÕ Õ(#
-%170fr.free.jchecs.swg.FENPanel"__id*-*+
-fr.free.jchecs.swg.SwingUI"
-	_fenPanel´®
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÕ Õ($
-%171javax.swing.JComponent"Bfr.free.jchecs.swg.FENPanel#getComponent()Ljavax/swing/JComponent;*%
-#
-%170fr.free.jchecs.swg.FENPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŒ' Œ(8
-%172java.lang.String"__id*
-""…∆
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŒ Œ(9
-%173boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%172java.lang.String2&getBooleanProperty(Ljava/lang/String;)âÜ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÕ Œ(:
-%174void"%javax.swing.JComponent#setVisible(Z)V* 
-
-%171javax.swing.JComponent*
-
-%173boolean2setVisible(Z)Í
-Á
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaœ œ(#
-%175fr.free.jchecs.swg.FENPanel"__id*-*+
-fr.free.jchecs.swg.SwingUI"
-	_fenPanel´®
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaœ œ(-
-%176javax.swing.JComponent"Bfr.free.jchecs.swg.FENPanel#getComponent()Ljavax/swing/JComponent;*%
-#
-%175fr.free.jchecs.swg.FENPanel2getComponent()∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaœ/ œ(A
-%177java.lang.String"__id*
-""ËÂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaœ œ(B
-%178void"?java.awt.Container#add(Ljava/awt/Component;Ljava/lang/Object;)V*
-
-fondjavax.swing.JPanel* 
-
-%176javax.swing.JComponent*
-
-%177java.lang.String2+add(Ljava/awt/Component;Ljava/lang/Object;)‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java— —(
-%179javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame∫∑
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java— —(+
-%180void"8javax.swing.JFrame#setContentPane(Ljava/awt/Container;)V*
-
-%179javax.swing.JFrame*
-
-fondjavax.swing.JPanel2$setContentPane(Ljava/awt/Container;)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java” ”("
-%181fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUIÂ
-‚
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java”1 ”(<
-%182java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‘! ‘(2
-%183java.lang.String"__id*
-""œÃ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java”1 ‘(3
-%184java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%182java.util.Properties*
-
-%183java.lang.String2getProperty(Ljava/lang/String;)Å
-˛
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java”  ‘(4
-%185int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-%184java.lang.Stringçä
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java” ‘(5
-%186void")fr.free.jchecs.swg.BoardUI#setBoardLF(I)V*$
-"
-%181fr.free.jchecs.swg.BoardUI*
-
-%185int2setBoardLF(I)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java’ ’("
-%187fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUIÂ
-‚
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java’8 ’(C
-%188java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java÷! ÷(4
-%189java.lang.String"__id*
-""œÃ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java’8 ÷(5
-%190java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%188java.util.Properties*
-
-%189java.lang.String2getProperty(Ljava/lang/String;)Å
-˛
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java’' ÷(6
-%191int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-%190java.lang.Stringõò
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java’ ÷(7
-%192void"0fr.free.jchecs.swg.BoardUI#setCellSideLength(I)V*$
-"
-%187fr.free.jchecs.swg.BoardUI*
-
-%191int2setCellSideLength(I)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java◊ ◊("
-%193fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUI∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java◊> ◊(R
-%194java.lang.String"__id*
-""…∆
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java◊+ ◊(S
-%195boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%194java.lang.String2&getBooleanProperty(Ljava/lang/String;)ß§
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java◊ ◊(T
-%196void"4fr.free.jchecs.swg.BoardUI#setCoordinatesPainted(Z)V*$
-"
-%193fr.free.jchecs.swg.BoardUI*
-
-%195boolean2setCoordinatesPainted(Z)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÿ ÿ("
-%197fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUI∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÿ= ÿ(Y
-%198java.lang.String"__id*
-""…∆
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÿ* ÿ(Z
-%199boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%198java.lang.String2&getBooleanProperty(Ljava/lang/String;)•¢
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÿ ÿ([
-%200void"3fr.free.jchecs.swg.BoardUI#setHighlightLastMove(Z)V*$
-"
-%197fr.free.jchecs.swg.BoardUI*
-
-%199boolean2setHighlightLastMove(Z)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ Ÿ("
-%201fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUI∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ; Ÿ(T
-%202java.lang.String"__id*
-""…∆
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ( Ÿ(U
-%203boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%202java.lang.String2&getBooleanProperty(Ljava/lang/String;)°û
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaŸ Ÿ(V
-%204void"1fr.free.jchecs.swg.BoardUI#setHighlightValids(Z)V*$
-"
-%201fr.free.jchecs.swg.BoardUI*
-
-%203boolean2setHighlightValids(Z)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java⁄ ⁄("
-%205fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUIÂ
-‚
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java⁄2 ⁄(=
-%206java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java€! €(3
-%207java.lang.String"__id*
-""œÃ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java⁄2 €(4
-%208java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%206java.util.Properties*
-
-%207java.lang.String2getProperty(Ljava/lang/String;)Å
-˛
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java⁄! €(5
-%209int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-%208java.lang.Stringèå
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java⁄ €(6
-%210void"*fr.free.jchecs.swg.BoardUI#setPiecesLF(I)V*$
-"
-%205fr.free.jchecs.swg.BoardUI*
-
-%209int2setPiecesLF(I)Ë
-Â
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‹ ‹("
-%211fr.free.jchecs.swg.BoardUI"__id*,**
-fr.free.jchecs.swg.SwingUI"
-
-_boardUIËÂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‹ ‹(*
-%212void"Nfr.free.jchecs.swg.BoardUI#addMoveListener(Lfr/free/jchecs/swg/MoveListener;)V*$
-"
-%211fr.free.jchecs.swg.BoardUI*
-fr.free.jchecs.swg.SwingUI22addMoveListener(Lfr/free/jchecs/swg/MoveListener;)‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaﬁ ﬁ(
-%213javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame´
-®
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaﬂ. ﬂ(Q
-%214int"__id*
-""ôñ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaﬁ ﬂ(R
-%215void"/javax.swing.JFrame#setDefaultCloseOperation(I)V*
-
-%213javax.swing.JFrame*
-
-%214int2setDefaultCloseOperation(I)‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‡ ‡(
-%216javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java· ·()
-%217java.lang.String"__id*
-""∂
-≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java· ·(*
-%218javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
-fr.free.jchecs.swg.SwingUI*
-
-%217java.lang.StringÙÒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‡- ‡(>4
-%219,fr.free.jchecs.swg.SwingUI$MainWindowAdapter",fr.free.jchecs.swg.SwingUI$MainWindowAdapter∫
-∑
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‡) ·(+
-%220"Jfr.free.jchecs.swg.SwingUI$MainWindowAdapter#<init>(Ljavax/swing/Action;)V*6
-4
-%219,fr.free.jchecs.swg.SwingUI$MainWindowAdapter*
-
-%218javax.swing.ActionÌÍ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‡ ·(,
-%221void"Cjava.awt.Window#addWindowListener(Ljava/awt/event/WindowListener;)V*
-
-%216javax.swing.JFrame*6
-4
-%219,fr.free.jchecs.swg.SwingUI$MainWindowAdapter22addWindowListener(Ljava/awt/event/WindowListener;)È
-Ê
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‚ ‚(
-%222void")fr.free.jchecs.swg.SwingUI#resizeFrame()V*
-fr.free.jchecs.swg.SwingUI∏
-µ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‰ ‰("
-%223java.lang.String"__id*
-""∂
-≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‰ ‰(#
-%224javax.swing.Action"Lfr.free.jchecs.swg.SwingUI#getAction(Ljava/lang/String;)Ljavax/swing/Action;*
-fr.free.jchecs.swg.SwingUI*
-
-%223java.lang.String–Õ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ Â(#"
-%225java.awt.event.ActionEvent"java.awt.event.ActionEventµ
-≤
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ Â(2
-%226"Ijava.awt.event.ActionEvent#<init>(Ljava/lang/Object;ILjava/lang/String;)V*$
-"
-%225java.awt.event.ActionEvent*
-fr.free.jchecs.swg.SwingUI*2 *
-""ﬂ‹
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java‰ Â(3
-%227void"Ljava.awt.event.ActionListener#actionPerformed(Ljava/awt/event/ActionEvent;)V*
-
-%224javax.swing.Action*$
-"
-%225java.awt.event.ActionEvent2-actionPerformed(Ljava/awt/event/ActionEvent;)*
-1*¬
-3ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaï& ï(3∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javañ% ñ(5
-%30java.lang.String"__id*
-""÷
-”
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javañ% ñ(;
-%31java.lang.String"__concat*
-
-%30java.lang.String*
-""îë
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javañ> ñ(N
-%32java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*&
-$
-joueurfr.free.jchecs.core.Player2	getName()È
-Ê
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javañ% ñ(N
-%33java.lang.String"__concat*
-
-%31java.lang.String*
-
-%32java.lang.StringÃ
-…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaï& ñ(O
-%34fr.free.jchecs.ai.Engine"Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;*#"!
-fr.free.jchecs.ai.EngineFactory*
-
-%33java.lang.String›
-⁄
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaï ñ(P"
-moteurfr.free.jchecs.ai.Engine"__id*!
-
-%34fr.free.jchecs.ai.Engine‰
-·
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaó< ó(G
-%35java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaò% ò(A
-%36java.lang.String"__id*
-""Ã…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaó< ò(B
-%37java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%35java.util.Properties*
-
-%36java.lang.String2getProperty(Ljava/lang/String;)ˇ
-¸
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaó+ ò(C
-
-%38int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-%37java.lang.Stringõò
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaó ò(D
-%39void"0fr.free.jchecs.ai.Engine#setSearchDepthLimit(I)V*$
-"
-moteurfr.free.jchecs.ai.Engine*
-
-
-%38int2setSearchDepthLimit(I)’“
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaô ô((
-%40void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*$
-"
-moteurfr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-2*œ
-4ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaì ì(∑¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaì ì(&
-%29void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-2*¿
-5ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaê ê(‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaê ê(
-%21fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_gameØ¨
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaê ê(+!
-%22fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
-
-%21fr.free.jchecs.core.Game*
-""2getPlayer(Z)·
-ﬁ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaê ê(+$
-joueurfr.free.jchecs.core.Player"__id*#
-!
-%22fr.free.jchecs.core.Player‰
-·
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaë ë(&
-%23java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaë3 ë(N
-%24java.lang.String"__id*
-""Ã…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaë ë(O
-%25java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%23java.util.Properties*
-
-%24java.lang.String2getProperty(Ljava/lang/String;)∂≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaë ë(P
-%26void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-%25java.lang.String2setName(Ljava/lang/String;)∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaí# í(?
-%27java.lang.String"__id*
-""«ƒ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaí í(@
-%28boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%27java.lang.String2&getBooleanProperty(Ljava/lang/String;)*
-3
-4*¬
-6ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaä& ä(3∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaã% ã(5
-%10java.lang.String"__id*
-""÷
-”
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaã% ã(;
-%11java.lang.String"__concat*
-
-%10java.lang.String*
-""îë
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaã> ã(N
-%12java.lang.String"6fr.free.jchecs.core.Player#getName()Ljava/lang/String;*&
-$
-joueurfr.free.jchecs.core.Player2	getName()È
-Ê
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaã% ã(N
-%13java.lang.String"__concat*
-
-%11java.lang.String*
-
-%12java.lang.StringÃ
-…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaä& ã(O
-%14fr.free.jchecs.ai.Engine"Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;*#"!
-fr.free.jchecs.ai.EngineFactory*
-
-%13java.lang.String›
-⁄
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaä ã(P"
-moteurfr.free.jchecs.ai.Engine"__id*!
-
-%14fr.free.jchecs.ai.Engine‰
-·
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaå< å(G
-%15java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∑
-¥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaç% ç(A
-%16java.lang.String"__id*
-""Ã…
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaå< ç(B
-%17java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
-
-%15java.util.Properties*
-
-%16java.lang.String2getProperty(Ljava/lang/String;)ˇ
-¸
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaå+ ç(C
-
-%18int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*"
-java.lang.Integer*
-
-%17java.lang.Stringõò
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaå ç(D
-%19void"0fr.free.jchecs.ai.Engine#setSearchDepthLimit(I)V*$
-"
-moteurfr.free.jchecs.ai.Engine*
-
-
-%18int2setSearchDepthLimit(I)’“
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaé é((
-%20void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*$
-"
-moteurfr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-5*Œ
-7ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaà à(∂≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaà à(&
-
-%9void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-5*≤
-8ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÖ Ö(!·
-ﬁ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÖ Ö(!
-%1fr.free.jchecs.core.Game"__id*)*'
-fr.free.jchecs.swg.SwingUI"
-_game≠™
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÖ Ö(1 
-%2fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;* 
-
-%1fr.free.jchecs.core.Game*
-""2getPlayer(Z)‡
-›
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÖ Ö(2$
-joueurfr.free.jchecs.core.Player"__id*"
- 
-%2fr.free.jchecs.core.Player„
-‡
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÜ Ü(&
-%3java.util.Properties"__id*/*-
-fr.free.jchecs.swg.SwingUI"
-_properties∂
+pClejava.lang.Stringì
+ê
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÂ3 Â(7
+pClejava.lang.String"__annotation*
+
+%3*
+1*ô
+1^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(∂
 ≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÜ3 Ü(N
-%4java.lang.String"__id*
-""…∆
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÜ Ü(O
-%5java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(*
+%0java.util.Properties"__id*/*-
+fr.free.jchecs.swg.SwingUI"
+_propertiesûõ
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(<
+%1java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*
 
-%3java.util.Properties*
+%0java.util.Properties*
+
+pClejava.lang.String2getProperty(Ljava/lang/String;)Ô
+Ï
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(=
+%2java.lang.Boolean"@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;*"
+java.lang.Boolean*
 
-%4java.lang.String2getProperty(Ljava/lang/String;)¥±
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÜ Ü(P
-
-%6void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-%5java.lang.String2setName(Ljava/lang/String;)∂
-≥
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaá# á(?
-%7java.lang.String"__id*
-""≈¬
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaá á(@
-%8boolean"Bfr.free.jchecs.swg.SwingUI#getBooleanProperty(Ljava/lang/String;)Z*
-fr.free.jchecs.swg.SwingUI*
-
-%7java.lang.String2&getBooleanProperty(Ljava/lang/String;)*
-6
-7*˚
-9ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÑ Ñ(‡
-›
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÑ Ñ(
-%0javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame*
-8
-1*£
-1ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaË Ë(‚
-ﬂ
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaË Ë(
-%228javax.swing.JFrame"__id*.*,
-fr.free.jchecs.swg.SwingUI"
-
-_mainFrame"´
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaË Ë(
-
-%228javax.swing.JFrameB
+%1java.lang.String"h
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.javaÊ Ê(>
+"":
+pClejava.lang.StringB
 fr.free.jchecs.swg.SwingUI

@@ -1,29 +1,20 @@
 
-Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÃ Ã("2"1*©
-2ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å(æ
-ã
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( 
-%0fr.free.jchecs.core.Player"__id*.*,
-fr.free.jchecs.core.Game"
-_whitePlayer"¯
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÅ Å( "
- 
-%0fr.free.jchecs.core.Player*©
-1ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È(æ
-ã
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È( 
-%1fr.free.jchecs.core.Player"__id*.*,
-fr.free.jchecs.core.Game"
-_blackPlayer"¯
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaÈ È("
- 
-%1fr.free.jchecs.core.Player:
+)fr.free.jchecs.core.Game#getMovesCount()I\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaª ª("1*š
+1\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(§
+¤
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(
+%0java.util.List"__id*(*&
+fr.free.jchecs.core.Game"
+_moves¤¡
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(	
+%1int"java.util.List#size()I*
+
+%0java.util.List2size()"f
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(
 ""B
 fr.free.jchecs.core.Game

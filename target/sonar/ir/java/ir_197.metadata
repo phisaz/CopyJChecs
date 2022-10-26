@@ -1,0 +1,4 @@
+fr.free.jchecs.ai.HistorySorter#get(Lfr/free/jchecs/core/Move;)I
+fr.free.jchecs.core.Move#getTo()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Move#getFrom()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getIndex()I

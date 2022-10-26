@@ -1,0 +1,15 @@
+fr.free.jchecs.swg.SaveGameAsAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+javax.swing.filechooser.FileNameExtensionFilter#instance-init#
+javax.swing.SwingUtilities#invokeLater(Ljava/lang/Runnable;)V
+javax.swing.filechooser.FileNameExtensionFilter#<init>(Ljava/lang/String;[Ljava/lang/String;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.GameSaver#instance-init#
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+java.io.File#instance-init#
+java.io.File#<init>(Ljava/lang/String;)V
+fr.free.jchecs.swg.GameSaver#<init>(Lfr/free/jchecs/swg/UI;)V
+java.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+javax.swing.JFileChooser#<init>()V
+java.util.Locale#getDefault()Ljava/util/Locale;
+java.lang.String#endsWith(Ljava/lang/String;)Z
+javax.swing.JFileChooser#instance-init#

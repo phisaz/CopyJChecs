@@ -1,0 +1,7 @@
+fr.free.jchecs.ai.AbstractEngine#<init>(III)V
+fr.free.jchecs.ai.AbstractEngine#setSearchDepthLimit(I)V
+fr.free.jchecs.ai.MobilityHeuristic#instance-init#
+fr.free.jchecs.ai.AbstractEngine#setEndgamesWSEnabled(Z)V
+fr.free.jchecs.ai.MobilityHeuristic#<init>()V
+fr.free.jchecs.ai.AbstractEngine#setHeuristic(Lfr/free/jchecs/ai/Heuristic;)V
+fr.free.jchecs.ai.AbstractEngine#setOpeningsEnabled(Z)V

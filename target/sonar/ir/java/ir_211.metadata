@@ -1,0 +1,14 @@
+fr.free.jchecs.core.FENUtils#toBoard(Ljava/lang/String;)Lfr/free/jchecs/core/Board;
+fr.free.jchecs.core.MutableBoard#instance-init#
+fr.free.jchecs.core.FENUtils#parseFENPlacement(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+java.lang.NullPointerException#<init>(Ljava/lang/String;)V
+fr.free.jchecs.core.FENException#instance-init#
+fr.free.jchecs.core.FENUtils#parseFENHalfmove(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+fr.free.jchecs.core.FENUtils#parseFENActiveColor(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+fr.free.jchecs.core.FENUtils#parseFENFullmove(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+java.lang.String#split(Ljava/lang/String;)[Ljava/lang/String;
+fr.free.jchecs.core.FENUtils#parseFENCastling(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+fr.free.jchecs.core.FENUtils#parseFENEnPassant(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+fr.free.jchecs.core.FENException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+fr.free.jchecs.core.MutableBoard#<init>()V
+java.lang.NullPointerException#instance-init#

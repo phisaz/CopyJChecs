@@ -1,0 +1,2 @@
+fr.free.jchecs.core.MailboxBoard#addKnightTargets(IZ)V
+fr.free.jchecs.core.Piece#isWhite()Z

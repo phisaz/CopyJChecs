@@ -1,0 +1,14 @@
+fr.free.jchecs.swg.FENPanel#<init>(Lfr/free/jchecs/core/Game;)V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+javax.swing.JPanel#instance-init#
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+javax.swing.JTextField#<init>(Ljava/lang/String;)V
+javax.swing.JTextField#instance-init#
+java.awt.BorderLayout#<init>(II)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JLabel#instance-init#
+fr.free.jchecs.swg.FENPanel$FENPanelListener#instance-init#
+fr.free.jchecs.core.Game#getFENPosition()Ljava/lang/String;
+java.awt.BorderLayout#instance-init#
+fr.free.jchecs.swg.FENPanel$FENPanelListener#<init>(Lfr/free/jchecs/core/Game;Ljavax/swing/JTextField;)V
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V

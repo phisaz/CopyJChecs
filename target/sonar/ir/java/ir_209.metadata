@@ -1,0 +1,6 @@
+fr.free.jchecs.core.FENUtils#parseFENActiveColor(Ljava/lang/String;Lfr/free/jchecs/core/MutableBoard;)V
+java.lang.String#length()I
+java.lang.String#charAt(I)C
+fr.free.jchecs.core.FENException#instance-init#
+fr.free.jchecs.core.FENException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+java.lang.String#indexOf(I)I

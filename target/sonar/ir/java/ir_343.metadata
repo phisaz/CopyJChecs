@@ -1,0 +1,8 @@
+fr.free.jchecs.swg.Clock#setTimer(Lfr/free/jchecs/core/Game;Z)V
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.lang.StringBuilder#<init>()V
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+java.lang.StringBuilder#toString()Ljava/lang/String;
+fr.free.jchecs.core.Game#getTimer(Z)J
+fr.free.jchecs.swg.Clock#formatDate(Ljava/util/Date;)Ljava/lang/String;

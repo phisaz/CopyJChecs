@@ -1,44 +1,26 @@
 
-.fr.free.jchecs.core.X88Board#getPiecesCount()Iç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.javaº º("9*ˆ
-6ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¬ ¬(Î
-Ë
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¬ ¬(!
-%2fr.free.jchecs.core.Piece[]"__id*-*+
+Ffr.free.jchecs.core.X88Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤("1*Ô
+1`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(Ω
+∫
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(!
+%0fr.free.jchecs.core.Piece[]"__id*-*+
 fr.free.jchecs.core.X88Board"	
-_piecesÌ
-Í
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¬ ¬( 
-%3fr.free.jchecs.core.Piece"
+_piecesø
+º
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(.
+%1fr.free.jchecs.core.Piece"
 __arrayGet*#
 !
-%2fr.free.jchecs.core.Piece[]*
-""*
-7* 
-7ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¡ ¡(¨
-©
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¡  ¡(*	
-%1int"__id*
-""*
-6
-9* 
-9ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿(¨
-©
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¿ ¿(&	
-%0int"__id*
-""*
-7
-1*Æ
-1ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java… …("ò
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java… …(
+%0fr.free.jchecs.core.Piece[]*
+"""Ö
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(/!
+
+%1fr.free.jchecs.core.Piece:
+"":
 ""B 
 fr.free.jchecs.core.X88Board

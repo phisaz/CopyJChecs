@@ -1,0 +1,7 @@
+fr.free.jchecs.core.Game#instance-init#
+java.util.ArrayList#<init>()V
+java.beans.PropertyChangeSupport#instance-init#
+fr.free.jchecs.core.Player#instance-init#
+java.util.ArrayList#instance-init#
+java.beans.PropertyChangeSupport#<init>(Ljava/lang/Object;)V
+fr.free.jchecs.core.Player#<init>(Z)V

@@ -1,0 +1,2 @@
+fr.free.jchecs.tools.OpeningsBuilderStart#addGameToTemp(Ljava/lang/String;)V
+fr.free.jchecs.tools.OpeningsBuilderStart#flushTemp()V

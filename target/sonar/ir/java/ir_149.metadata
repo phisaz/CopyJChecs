@@ -1,0 +1,4 @@
+fr.free.jchecs.core.X88Board#addPawnTargets(IZ)V
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.AbstractBoard#getEnPassant()Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#isWhite()Z

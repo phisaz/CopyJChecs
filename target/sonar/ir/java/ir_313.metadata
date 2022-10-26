@@ -1,0 +1,2 @@
+fr.free.jchecs.core.MailboxBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.core.Square#getIndex()I

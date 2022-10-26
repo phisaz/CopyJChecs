@@ -1,0 +1,6 @@
+fr.free.jchecs.core.AbstractBoard#toString()Ljava/lang/String;
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#<init>()V
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+fr.free.jchecs.core.Piece#getFENLetter()C
+java.lang.StringBuilder#toString()Ljava/lang/String;

@@ -1,0 +1,16 @@
+fr.free.jchecs.swg.TaskItem#<init>(Lfr/free/jchecs/swg/UI;Ljava/lang/String;Ljavax/swing/JComponent;Ljavax/swing/Icon;)V
+javax.swing.UIManager#getFont(Ljava/lang/Object;)Ljava/awt/Font;
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+fr.free.jchecs.swg.TaskItem#setMouseOver(Z)V
+javax.swing.JLabel#<init>()V
+javax.swing.JPanel#instance-init#
+fr.free.jchecs.swg.TaskItem$TaskItemListener#instance-init#
+javax.swing.BorderFactory#createEmptyBorder(IIII)Ljavax/swing/border/Border;
+java.awt.BorderLayout#<init>()V
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+java.awt.BorderLayout#<init>(II)V
+fr.free.jchecs.swg.TaskItem#setFolded(Z)V
+fr.free.jchecs.swg.TaskItem$TaskItemListener#<init>(Lfr/free/jchecs/swg/TaskItem;)V
+javax.swing.JLabel#instance-init#
+java.awt.BorderLayout#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V

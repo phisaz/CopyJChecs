@@ -1,0 +1,5 @@
+fr.free.jchecs.ai.StaticMoveSorter#compare(Lfr/free/jchecs/core/Move;Lfr/free/jchecs/core/Move;)I
+fr.free.jchecs.core.PieceType#getValue()I
+fr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Move#getPiece()Lfr/free/jchecs/core/Piece;

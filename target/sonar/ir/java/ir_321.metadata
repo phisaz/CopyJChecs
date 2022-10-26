@@ -1,0 +1,6 @@
+fr.free.jchecs.core.MailboxBoard#isAttacked(Lfr/free/jchecs/core/Square;Z)Z
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Square#getIndex()I
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.Square#getRank()I

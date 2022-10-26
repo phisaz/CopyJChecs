@@ -1,0 +1,4 @@
+fr.free.jchecs.swg.ResetAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.core.Game#resetTo(Lfr/free/jchecs/core/MoveGenerator;)V
+fr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;

@@ -1,0 +1,13 @@
+fr.free.jchecs.swg.SwingUI#setBooleanProperty(Ljava/lang/String;Z)V
+fr.free.jchecs.swg.BoardUI#setHighlightLastMove(Z)V
+fr.free.jchecs.swg.CapturesPanel#getComponent()Ljavax/swing/JComponent;
+fr.free.jchecs.swg.SwingUI#getMenuBar()Ljavax/swing/JMenuBar;
+fr.free.jchecs.swg.SwingUI#resizeFrame()V
+java.lang.String#equals(Ljava/lang/Object;)Z
+fr.free.jchecs.swg.SwingUI#getToolBar()Ljavax/swing/JToolBar;
+java.lang.Boolean#toString(Z)Ljava/lang/String;
+fr.free.jchecs.swg.FENPanel#getComponent()Ljavax/swing/JComponent;
+fr.free.jchecs.swg.BoardUI#setHighlightValids(Z)V
+fr.free.jchecs.swg.BoardUI#setFlipView(Z)V
+fr.free.jchecs.swg.BoardUI#setCoordinatesPainted(Z)V
+fr.free.jchecs.swg.CapturesPanel#setWhite(Z)V

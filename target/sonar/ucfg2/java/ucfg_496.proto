@@ -1,0 +1,251 @@
+
+.fr.free.jchecs.ai.XBoardAdapter#testResult(Z)Zc
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java„ „(%"4*Ç
+2c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(í
+è
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(
+%24java.io.PrintStream"__id*
+""˝˙
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaë ë(#
+%25void"0java.io.PrintStream#println(Ljava/lang/String;)V*
+
+%24java.io.PrintStream*
+
+repjava.lang.String2println(Ljava/lang/String;)*
+1*°
+14c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@≠
+™
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÛ Û(@
+repjava.lang.String"__id*$"
+ 1/2-1/2 {Drawn by 50 moves rule}*
+2
+1*∑
+15c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4ñ
+ì
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(4
+%8fr.free.jchecs.core.Game"__id*
+""áÑ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ0 Ô(?'
+%9!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;* 
+
+%8fr.free.jchecs.core.Game2
+getBoard()≈
+¬
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÔ Ô(@*
+dispo!fr.free.jchecs.core.MoveGenerator"__id*)
+'
+%9!fr.free.jchecs.core.MoveGeneratoró
+î
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (
+%10fr.free.jchecs.ai.Engine"__id*
+""ÖÇ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java (-"
+%11fr.free.jchecs.ai.Heuristic"Dfr.free.jchecs.ai.Engine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*!
+
+%10fr.free.jchecs.ai.Engine2getHeuristic()„‡
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒ- Ò(B
+%12boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
+*
+dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()◊‘
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java Ò(C
+
+%13int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*$
+"
+%11fr.free.jchecs.ai.Heuristic*,
+*
+dispo!fr.free.jchecs.core.MoveGenerator*
+
+%12boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ò(J$
+%14fr.free.jchecs.core.PieceType"__id*
+""”–
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÒF Ú('
+
+%15int")fr.free.jchecs.core.PieceType#getValue()I*&
+$
+%14fr.free.jchecs.core.PieceType2
+getValue()*
+
+2
+14
+1*¨
+4c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(è
+å
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java‰ ‰(
+repjava.lang.String"__id*
+""ñ
+ì
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(
+%0fr.free.jchecs.core.Game"__id*
+""Å˛
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(*$
+%1fr.free.jchecs.core.Game$State"Cfr.free.jchecs.core.Game#getState()Lfr/free/jchecs/core/Game$State;* 
+
+%0fr.free.jchecs.core.Game2
+getState()æ
+ª
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÊ Ê(+&
+etatfr.free.jchecs.core.Game$State"__id*&
+$
+%1fr.free.jchecs.core.Game$Stateú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Ë($
+%2fr.free.jchecs.core.Game$State"__id*
+""ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÎ Î(&$
+%3fr.free.jchecs.core.Game$State"__id*
+""ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˜ ˜(+$
+%4fr.free.jchecs.core.Game$State"__id*
+""ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÑ Ñ($
+%5fr.free.jchecs.core.Game$State"__id*
+""ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ Ü($
+%6fr.free.jchecs.core.Game$State"__id*
+""ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ â($
+%7fr.free.jchecs.core.Game$State"__id*
+""*
+2
+15
+6
+17
+7
+11
+1*í
+17c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaË Í(û
+õ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÈ È()
+repjava.lang.String"__id*
+0-1 {Black mates}*
+2
+1*ë
+6c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaâ ã(û
+õ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaä ä()
+repjava.lang.String"__id*
+1-0 {White mates}*
+2
+1*ì
+7c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÜ à(†
+ù
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaá á(+
+repjava.lang.String"__id*
+1/2-1/2 {Stalemate}*
+2
+1*•
+10c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(D±
+Æ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaÄ Ä(D
+repjava.lang.String"__id*(&
+$1/2-1/2 {Drawn by triple repetition}*
+2
+1*ª
+11c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4ó
+î
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(4
+%16fr.free.jchecs.core.Game"__id*
+""âÜ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸0 ¸(?(
+%17!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;*!
+
+%16fr.free.jchecs.core.Game2
+getBoard()∆
+√
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java¸ ¸(@*
+dispo!fr.free.jchecs.core.MoveGenerator"__id**
+(
+%17!fr.free.jchecs.core.MoveGeneratoró
+î
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(
+%18fr.free.jchecs.ai.Engine"__id*
+""ÖÇ
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˝(-"
+%19fr.free.jchecs.ai.Heuristic"Dfr.free.jchecs.ai.Engine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;*!
+
+%18fr.free.jchecs.ai.Engine2getHeuristic()„‡
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛- ˛(B
+%20boolean"*fr.free.jchecs.core.Board#isWhiteActive()Z*,
+*
+dispo!fr.free.jchecs.core.MoveGenerator2isWhiteActive()◊‘
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˝ ˛(C
+
+%21int"Kfr.free.jchecs.ai.Heuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I*$
+"
+%19fr.free.jchecs.ai.Heuristic*,
+*
+dispo!fr.free.jchecs.core.MoveGenerator*
+
+%20boolean2.evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)ú
+ô
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˛(M$
+%22fr.free.jchecs.core.PieceType"__id*
+""”–
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java˛G ˇ('
+
+%23int")fr.free.jchecs.core.PieceType#getValue()I*&
+$
+%22fr.free.jchecs.core.PieceType2
+getValue()*
+
+2
+10
+1*◊
+1c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î("m
+c
+W/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.javaî î(
+"":
+""B#"!
+fr.free.jchecs.ai.XBoardAdapter

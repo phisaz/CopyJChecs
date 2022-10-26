@@ -1,0 +1,5 @@
+fr.free.jchecs.core.Square#compareTo(Lfr/free/jchecs/core/Square;)I
+java.lang.String#compareTo(Ljava/lang/String;)I
+java.lang.NullPointerException#<init>()V
+fr.free.jchecs.core.Square#getFENString()Ljava/lang/String;
+java.lang.NullPointerException#instance-init#

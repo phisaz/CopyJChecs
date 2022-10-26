@@ -1,0 +1,9 @@
+fr.free.jchecs.ai.NegaScoutEngine#negascout(Lfr/free/jchecs/core/MoveGenerator;IIII)I
+fr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.ai.TranspositionTable#put(Lfr/free/jchecs/core/Board;IIII)V
+fr.free.jchecs.ai.TranspositionTable#get(Lfr/free/jchecs/core/Board;III)Ljava/lang/Integer;
+java.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+fr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;
+fr.free.jchecs.ai.NegaScoutEngine#negascout(Lfr/free/jchecs/core/MoveGenerator;IIII)I
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+fr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;

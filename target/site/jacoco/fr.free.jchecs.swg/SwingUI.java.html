@@ -332,7 +332,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L332">        } catch (final UnsupportedAudioFileException | IOException | LineUnavailableException e) {</span>
 <span class="nc" id="L333">            LOG.error(&quot;Audio failed:&quot;, e);</span>
 <span class="nc" id="L334">            clip = null;</span>
-        }
+<span class="nc" id="L335">        }</span>
 <span class="nc" id="L336">        MOVE_SOUND = clip;</span>
 <span class="nc" id="L337">    }</span>
 
@@ -466,7 +466,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L466">                res = new SavePositionAction(this);</span>
 <span class="nc bnc" id="L467" title="All 2 branches missed.">            } else if (SAVE_POSITION_AS_ACTION.equals(pCle)) {</span>
 <span class="nc" id="L468">                res = new SavePositionAsAction(this);</span>
-<span class="nc" id="L469">            } else {</span>
+            } else {
 <span class="nc" id="L470">                LOG.warn(&quot;Unknown action [{}]&quot;, pCle);</span>
             }
 <span class="nc" id="L472">            _actions.put(pCle, res);</span>
@@ -518,7 +518,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L518">            joueur.setName(_properties.getProperty(PLAYER_WHITES_NAME_PROPERTY));</span>
 <span class="nc bnc" id="L519" title="All 2 branches missed.">            if (getBooleanProperty(PLAYER_WHITES_HUMAN_PROPERTY)) {</span>
 <span class="nc" id="L520">                joueur.setEngine(null);</span>
-<span class="nc" id="L521">            } else {</span>
+            } else {
 <span class="nc" id="L522">                final Engine moteur = EngineFactory</span>
 <span class="nc" id="L523">                        .newInstance(APPLICATION_NAME + '.' + joueur.getName());</span>
 <span class="nc" id="L524">                moteur.setSearchDepthLimit(Integer.parseInt(_properties</span>
@@ -529,7 +529,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L529">            joueur.setName(_properties.getProperty(PLAYER_BLACKS_NAME_PROPERTY));</span>
 <span class="nc bnc" id="L530" title="All 2 branches missed.">            if (getBooleanProperty(PLAYER_BLACKS_HUMAN_PROPERTY)) {</span>
 <span class="nc" id="L531">                joueur.setEngine(null);</span>
-<span class="nc" id="L532">            } else {</span>
+            } else {
 <span class="nc" id="L533">                final Engine moteur = EngineFactory</span>
 <span class="nc" id="L534">                        .newInstance(APPLICATION_NAME + '.' + joueur.getName());</span>
 <span class="nc" id="L535">                moteur.setSearchDepthLimit(Integer.parseInt(_properties</span>
@@ -610,7 +610,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L610">            resizeFrame();</span>
 
 <span class="nc" id="L612">            getAction(RESET_ACTION).actionPerformed(</span>
-<span class="nc" id="L613">                    new ActionEvent(this, 0, null));</span>
+                    new ActionEvent(this, 0, null));
         }
 
 <span class="nc" id="L616">        return _mainFrame;</span>
@@ -726,7 +726,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L726">        } catch (final IOException e) {</span>
             // Pas grave, on continue avec les valeurs par défaut...
 <span class="nc" id="L728">            LOG.warn(&quot;Config unavailable.&quot;, e);</span>
-        }
+<span class="nc" id="L729">        }</span>
 
 <span class="nc" id="L731">        final int hauteurEcran = Toolkit.getDefaultToolkit().getScreenSize().height;</span>
         final String taille;
@@ -734,7 +734,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L734">            taille = &quot;48&quot;;</span>
 <span class="nc bnc" id="L735" title="All 2 branches missed.">        } else if (hauteurEcran &gt; 925) {</span>
 <span class="nc" id="L736">            taille = &quot;80&quot;;</span>
-<span class="nc" id="L737">        } else {</span>
+        } else {
 <span class="nc" id="L738">            taille = &quot;64&quot;;</span>
         }
 <span class="nc" id="L740">        _properties.setProperty(CELLS_SIZE_PROPERTY, _properties.getProperty(CELLS_SIZE_PROPERTY, taille));</span>
@@ -806,7 +806,7 @@ final class SwingUI implements MoveListener, UI {
         String limite;
 <span class="nc bnc" id="L807" title="All 2 branches missed.">        if (moteur == null) {</span>
 <span class="nc" id="L808">            limite = &quot;0&quot;;</span>
-<span class="nc" id="L809">        } else {</span>
+        } else {
 <span class="nc" id="L810">            limite = Integer.toString(moteur.getSearchDepthLimit());</span>
         }
 <span class="nc" id="L812">        _properties.setProperty(PLAYER_WHITES_DEPTH_PROPERTY, limite);</span>
@@ -816,7 +816,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L816">        _properties.setProperty(PLAYER_BLACKS_NAME_PROPERTY, joueur.getName());</span>
 <span class="nc bnc" id="L817" title="All 2 branches missed.">        if (moteur == null) {</span>
 <span class="nc" id="L818">            limite = &quot;0&quot;;</span>
-<span class="nc" id="L819">        } else {</span>
+        } else {
 <span class="nc" id="L820">            limite = Integer.toString(moteur.getSearchDepthLimit());</span>
         }
 <span class="nc" id="L822">        _properties.setProperty(PLAYER_BLACKS_DEPTH_PROPERTY, limite);</span>
@@ -826,7 +826,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L826">        } catch (final IOException e) {</span>
             // Pas grave, on peut s'en passer...
 <span class="nc" id="L828">            LOG.error(&quot;Config not saved.&quot;, e);</span>
-        }
+<span class="nc" id="L829">        }</span>
 <span class="nc" id="L830">    }</span>
 
     /**
@@ -919,7 +919,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc" id="L919">        fenetre.setLocationRelativeTo(null);</span>
 <span class="nc" id="L920">        fenetre.setVisible(true);</span>
 
-<span class="nc" id="L922">        while (true) {</span>
+        while (true) {
 <span class="nc bnc" id="L923" title="All 2 branches missed.">            while (_game.getState() == IN_PROGRESS) {</span>
 <span class="nc" id="L924">                _lastMove = null;</span>
 
@@ -929,7 +929,7 @@ final class SwingUI implements MoveListener, UI {
 <span class="nc bnc" id="L929" title="All 2 branches missed.">                if (ia == null) {</span>
 <span class="nc" id="L930">                    _boardUI.setEnabled(true);</span>
 <span class="nc" id="L931">                    waitForMove();</span>
-<span class="nc" id="L932">                } else {</span>
+                } else {
 <span class="nc" id="L933">                    _boardUI.setEnabled(false);</span>
 <span class="nc" id="L934">                    _lastMove = ia.getMoveFor(plateau);</span>
                 }
@@ -953,13 +953,13 @@ final class SwingUI implements MoveListener, UI {
                 }
 
 <span class="nc" id="L955">                _game.moveFromCurrent(_lastMove);</span>
-            }
+<span class="nc" id="L956">            }</span>
 <span class="nc" id="L957">            _boardUI.setEnabled(false);</span>
             try {
 <span class="nc" id="L959">                Thread.sleep(250);</span>
 <span class="nc" id="L960">            } catch (final InterruptedException e) {</span>
 <span class="nc" id="L961">                LOG.warn(&quot;UI thread interrupted.&quot;, e);</span>
-            }
+<span class="nc" id="L962">            }</span>
         }
     }
 
@@ -985,7 +985,7 @@ final class SwingUI implements MoveListener, UI {
             }
 <span class="nc" id="L986">        } catch (final InterruptedException e) {</span>
 <span class="nc" id="L987">            LOG.warn(&quot;Move wait interrupted.&quot;, e);</span>
-        }
+<span class="nc" id="L988">        }</span>
 <span class="nc" id="L989">    }</span>
 
     /**

@@ -1,0 +1,13 @@
+fr.free.jchecs.swg.LFPanel#<init>(Lfr/free/jchecs/swg/UI;)V
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+javax.swing.JSpinner#instance-init#
+java.awt.GridLayout#<init>(II)V
+java.lang.Integer#parseInt(Ljava/lang/String;)I
+javax.swing.JLabel#instance-init#
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+java.awt.GridLayout#instance-init#
+javax.swing.SpinnerNumberModel#<init>(IIII)V
+javax.swing.JSpinner#<init>(Ljavax/swing/SpinnerModel;)V
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V
+javax.swing.SpinnerNumberModel#instance-init#

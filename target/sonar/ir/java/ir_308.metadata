@@ -1,0 +1,4 @@
+fr.free.jchecs.core.MailboxBoard#getAllTargets(Lfr/free/jchecs/core/Square;)[Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.MailboxBoard#addAllTargets(I)V
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getIndex()I

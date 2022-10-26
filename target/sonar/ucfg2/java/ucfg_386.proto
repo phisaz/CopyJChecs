@@ -1,20 +1,9 @@
 
-)fr.free.jchecs.core.Game#getMovesCount()Iˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.javaª ª("1*Ï
-1ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(Ô
-Ñ
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(
-%0java.util.List"__id*(*&
-fr.free.jchecs.core.Game"
-_movesÑÎ
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(	
-%1int"java.util.List#size()I*
-
-%0java.util.List2size()"“
-ˆ
-|/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java« «(
+/fr.free.jchecs.core.Game#getCurrentMoveIndex()I\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java˜ ˜(""1*É
+1\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java™ ™("f
+\
+P/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java™ ™( 
 ""B
 fr.free.jchecs.core.Game

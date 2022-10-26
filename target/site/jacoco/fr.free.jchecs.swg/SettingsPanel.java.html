@@ -88,13 +88,13 @@ final class SettingsPanel implements ChangeListener, ItemListener {
 <span class="nc" id="L88">        addCheckBox(&quot;panel.settings.showFEN&quot;, SHOW_FEN_PROPERTY);</span>
 <span class="nc" id="L89">        addCheckBox(&quot;panel.settings.highlightValids&quot;, HIGHLIGHT_VALIDS_PROPERTY);</span>
 <span class="nc" id="L90">        addCheckBox(&quot;panel.settings.highlightLastMove&quot;,</span>
-<span class="nc" id="L91">                HIGHLIGHT_LAST_MOVE_PROPERTY);</span>
+                HIGHLIGHT_LAST_MOVE_PROPERTY);
 <span class="nc" id="L92">        addCheckBox(&quot;panel.settings.flipView&quot;, FLIP_VIEW_PROPERTY);</span>
 <span class="nc" id="L93">        addCheckBox(&quot;panel.settings.enableSound&quot;, ENABLE_SOUNDS_PROPERTY);</span>
 
 <span class="nc" id="L95">        final JPanel modifTaille = new JPanel(new BorderLayout(4, 0));</span>
 <span class="nc" id="L96">        modifTaille.add(new JLabel(getI18NString(&quot;panel.settings.cellsSize&quot;)),</span>
-<span class="nc" id="L97">                BorderLayout.WEST);</span>
+                BorderLayout.WEST);
 <span class="nc" id="L98">        _cellSize = new JSlider(1, 5);</span>
 <span class="nc" id="L99">        _cellSize.setValue((Integer.parseInt(_ui</span>
 <span class="nc" id="L100">                .getProperty(CELLS_SIZE_PROPERTY)) - 40) / 8);</span>

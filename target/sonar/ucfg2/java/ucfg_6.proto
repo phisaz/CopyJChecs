@@ -1,50 +1,50 @@
 
-ofr.free.jchecs.ai.AbstractEngine#getFromEndgames(Lfr/free/jchecs/core/MoveGenerator;)Lfr/free/jchecs/core/Move;‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÅ Å("4*˜
-3‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(ùö
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(
+ofr.free.jchecs.ai.AbstractEngine#getFromEndgames(Lfr/free/jchecs/core/MoveGenerator;)Lfr/free/jchecs/core/Move;d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÅ Å("4*¼
+3d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(ËÈ
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaË Ë(
 
 %3void"java.lang.Thread#join()V*2
 0
 	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest2join()*
-1*‘
-4‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(Æ
-Ã
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(
+1*ý
+4d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(˜
+•
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÆ Æ(
 resfr.free.jchecs.core.Move"__id*
-""çä
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ0 È(A)
-%0#fr.free.jchecs.ai.EndgamesWSRequest"#fr.free.jchecs.ai.EndgamesWSRequestÂ
-¿
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ, È(H
+""¹¶
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ0 È(A)
+%0#fr.free.jchecs.ai.EndgamesWSRequest"#fr.free.jchecs.ai.EndgamesWSRequest”
+‘
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ, È(H
 %1"Hfr.free.jchecs.ai.EndgamesWSRequest#<init>(Lfr/free/jchecs/core/Board;)V*+
 )
 %0#fr.free.jchecs.ai.EndgamesWSRequest*,
 *
-pEtat!fr.free.jchecs.core.MoveGeneratorü
-ù
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ È(I0
+pEtat!fr.free.jchecs.core.MoveGeneratorÎ
+Ë
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÈ È(I0
 	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest"__id*+
 )
-%0#fr.free.jchecs.ai.EndgamesWSRequestûø
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÉ É(
+%0#fr.free.jchecs.ai.EndgamesWSRequestÍÊ
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÉ É(
 
 %2void"java.lang.Thread#start()V*2
 0
 	wsRequest#fr.free.jchecs.ai.EndgamesWSRequest2start()*
-3*Ñ
-1‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð("·
-‘
-„/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð(!
+3*õ
+1d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð("‰
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.javaÐ Ð(!
 
 resfr.free.jchecs.core.Move:*
 pEtat!fr.free.jchecs.core.MoveGeneratorB$"

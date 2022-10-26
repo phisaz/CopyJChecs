@@ -1,0 +1,13 @@
+fr.free.jchecs.swg.Recorder#<init>(Lfr/free/jchecs/core/Game;)V
+fr.free.jchecs.core.Game#getCurrentMoveIndex()I
+java.awt.GridLayout#<init>(II)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+fr.free.jchecs.core.Game#getMovesCount()I
+fr.free.jchecs.swg.Recorder$RecorderListener#<init>(Lfr/free/jchecs/core/Game;Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljavax/swing/JComponent;Ljavax/swing/JComponent;)V
+java.awt.GridLayout#instance-init#
+javax.swing.JButton#<init>(Ljavax/swing/Icon;)V
+fr.free.jchecs.swg.Recorder$RecorderListener#instance-init#
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V
+javax.swing.JButton#instance-init#

@@ -1,0 +1,7 @@
+fr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)I
+fr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)I
+java.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+fr.free.jchecs.ai.AbstractEngine#getHeuristic()Lfr/free/jchecs/ai/Heuristic;
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+fr.free.jchecs.ai.KillerMoveSorter#put(Lfr/free/jchecs/core/Move;)V
+fr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;

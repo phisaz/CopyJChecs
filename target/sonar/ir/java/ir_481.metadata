@@ -1,0 +1,7 @@
+fr.free.jchecs.ai.XBoardAdapter#think()V
+java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+fr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;
+fr.free.jchecs.ai.XBoardAdapter#testResult(Z)Z
+fr.free.jchecs.core.Game#moveFromCurrent(Lfr/free/jchecs/core/Move;)V
+fr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;
+fr.free.jchecs.core.SANUtils#toSAN(Lfr/free/jchecs/core/MoveGenerator;Lfr/free/jchecs/core/Move;)Ljava/lang/String;

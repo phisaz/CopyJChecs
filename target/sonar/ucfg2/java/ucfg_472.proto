@@ -1,9 +1,17 @@
 
-%fr.free.jchecs.core.Square#getRank()IŠ
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java¬ ¬("1*¨
-1Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java­ ­("•
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java­ ­(
-""B
+;fr.free.jchecs.core.Square#getFENString()Ljava/lang/String;^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java‘ ‘("1*“
+1^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java’ ’(±
+®
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java’ ’(
+%0java.lang.String"__id*.*,
+fr.free.jchecs.core.Square"
+
+_fenString"z
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java’ ’(
+
+%0java.lang.StringB
 fr.free.jchecs.core.Square

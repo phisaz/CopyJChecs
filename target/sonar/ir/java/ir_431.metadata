@@ -1,0 +1,3 @@
+fr.free.jchecs.core.ArrayBoard#derive(Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;
+fr.free.jchecs.core.ArrayBoard#instance-init#
+fr.free.jchecs.core.ArrayBoard#<init>(Lfr/free/jchecs/core/Board;)V

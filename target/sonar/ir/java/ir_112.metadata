@@ -1,0 +1,3 @@
+fr.free.jchecs.swg.BoardUI#fireMoveEvent(Lfr/free/jchecs/core/Move;)V
+fr.free.jchecs.swg.MoveEvent#instance-init#
+fr.free.jchecs.swg.MoveEvent#<init>(Ljava/lang/Object;Lfr/free/jchecs/core/Move;)V

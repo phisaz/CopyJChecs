@@ -1,0 +1,10 @@
+fr.free.jchecs.swg.AboutDialog#getLicensePanel()Ljavax/swing/JComponent;
+fr.free.jchecs.swg.AboutDialog$LicenseLoader#instance-init#
+java.lang.Class#getResource(Ljava/lang/String;)Ljava/net/URL;
+fr.free.jchecs.swg.AboutDialog$LicenseLoader#<init>(Ljavax/swing/JEditorPane;Ljava/net/URL;)V
+javax.swing.JEditorPane#<init>()V
+javax.swing.JEditorPane#instance-init#
+javax.swing.JEditorPane#setContentType(Ljava/lang/String;)V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+javax.swing.JScrollPane#instance-init#
+javax.swing.JScrollPane#<init>(Ljava/awt/Component;)V

@@ -1,0 +1,4 @@
+fr.free.jchecs.ai.RandomEngine#<init>()V
+fr.free.jchecs.ai.AbstractEngine#setMoveSorter(Ljava/util/Comparator;)V
+fr.free.jchecs.ai.StaticMoveSorter#instance-init#
+fr.free.jchecs.ai.StaticMoveSorter#<init>()V

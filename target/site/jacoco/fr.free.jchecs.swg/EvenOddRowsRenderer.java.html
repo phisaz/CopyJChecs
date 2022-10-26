@@ -68,12 +68,12 @@ final class EvenOddRowsRenderer extends DefaultTableCellRenderer {
 			final Object pObjet, final boolean pSelection,
 			final boolean pFocus, final int pLigne, final int pColonne) {
 <span class="nc" id="L70">		final Component res = super.getTableCellRendererComponent(pTable,</span>
-<span class="nc" id="L71">				pObjet, pSelection, pFocus, pLigne, pColonne);</span>
+				pObjet, pSelection, pFocus, pLigne, pColonne);
 
 <span class="nc bnc" id="L73" title="All 2 branches missed.">		if (!pSelection) {</span>
 <span class="nc bnc" id="L74" title="All 2 branches missed.">			if (pLigne % 2 == 0) {</span>
 <span class="nc" id="L75">				res.setBackground(ODD_BACKGROUND_COLOR);</span>
-<span class="nc" id="L76">			} else {</span>
+			} else {
 <span class="nc" id="L77">				res.setBackground(EVEN_BACKGROUND_COLOR);</span>
 			}
 		}

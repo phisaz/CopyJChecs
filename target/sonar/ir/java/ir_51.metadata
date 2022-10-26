@@ -1,0 +1,2 @@
+fr.free.jchecs.ai.KillerMoveSorter#clear()V
+java.util.Arrays#fill([Ljava/lang/Object;Ljava/lang/Object;)V

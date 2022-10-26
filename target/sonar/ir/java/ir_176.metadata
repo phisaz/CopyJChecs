@@ -1,0 +1,5 @@
+fr.free.jchecs.core.AbstractBoard#compareTo(Lfr/free/jchecs/core/Board;)I
+java.lang.Boolean#compareTo(Ljava/lang/Boolean;)I
+java.lang.Enum#compareTo(Ljava/lang/Enum;)I
+java.lang.Boolean#valueOf(Z)Ljava/lang/Boolean;
+fr.free.jchecs.core.Square#compareTo(Lfr/free/jchecs/core/Square;)I

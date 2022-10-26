@@ -1,0 +1,2 @@
+fr.free.jchecs.core.AbstractBoard#zobristRoot()I
+fr.free.jchecs.core.Square#getFile()I

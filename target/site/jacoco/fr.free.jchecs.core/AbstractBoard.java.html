@@ -239,7 +239,7 @@ abstract class AbstractBoard implements Board {
                         }
                     }
                 }
-            }
+<span class="fc" id="L242">            }</span>
         }
 
 <span class="fc" id="L245">        final Square ep = pEchiquier.getEnPassant();</span>
@@ -307,7 +307,7 @@ abstract class AbstractBoard implements Board {
 <span class="fc bfc" id="L307" title="All 2 branches covered.">        for (int y = RANK_COUNT; --y &gt;= 0; /* Pré-décrémenté */) {</span>
 <span class="fc bfc" id="L308" title="All 2 branches covered.">            for (int x = FILE_COUNT; --x &gt;= 0; /* Pré-décrémenté */) {</span>
 <span class="pc bpc" id="L309" title="1 of 2 branches missed.">                if (getPieceAt(x, y) != o.getPieceAt(x, y)) {</span>
-<span class="nc" id="L310">                    return false;</span>
+<span class="pc" id="L310">                    return false;</span>
                 }
             }
         }
@@ -421,7 +421,7 @@ abstract class AbstractBoard implements Board {
     void setCastleLong(final boolean pBlanc, final boolean pEtat) {
 <span class="fc bfc" id="L422" title="All 2 branches covered.">        if (pBlanc) {</span>
 <span class="fc" id="L423">            _whiteCastleLong = pEtat;</span>
-<span class="fc" id="L424">        } else {</span>
+        } else {
 <span class="fc" id="L425">            _blackCastleLong = pEtat;</span>
         }
 <span class="fc" id="L427">    }</span>
@@ -440,7 +440,7 @@ abstract class AbstractBoard implements Board {
     void setCastleShort(final boolean pBlanc, final boolean pEtat) {
 <span class="fc bfc" id="L441" title="All 2 branches covered.">        if (pBlanc) {</span>
 <span class="fc" id="L442">            _whiteCastleShort = pEtat;</span>
-<span class="fc" id="L443">        } else {</span>
+        } else {
 <span class="fc" id="L444">            _blackCastleShort = pEtat;</span>
         }
 <span class="fc" id="L446">    }</span>
@@ -508,7 +508,7 @@ abstract class AbstractBoard implements Board {
 <span class="fc" id="L508">                final Piece p = getPieceAt(x, y);</span>
 <span class="fc bfc" id="L509" title="All 2 branches covered.">                if (p == null) {</span>
 <span class="fc" id="L510">                    res.append('+');</span>
-<span class="fc" id="L511">                } else {</span>
+                } else {
 <span class="fc" id="L512">                    res.append(p.getFENLetter());</span>
                 }
             }

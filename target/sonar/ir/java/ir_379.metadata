@@ -1,0 +1,3 @@
+fr.free.jchecs.core.Game#getFENPosition()Ljava/lang/String;
+fr.free.jchecs.core.FENUtils#toFEN(Lfr/free/jchecs/core/Board;)Ljava/lang/String;
+fr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;

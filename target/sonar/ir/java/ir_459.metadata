@@ -1,0 +1,11 @@
+fr.free.jchecs.core.Square#<init>(II)V
+fr.free.jchecs.core.Square#getFile()I
+java.lang.Object#getClass()Ljava/lang/Class;
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#<init>(Ljava/lang/String;)V
+java.lang.StringBuilder#delete(II)Ljava/lang/StringBuilder;
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.lang.Class#getSimpleName()Ljava/lang/String;
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+fr.free.jchecs.core.Square#getRank()I
+java.lang.StringBuilder#toString()Ljava/lang/String;

@@ -1,0 +1,16 @@
+fr.free.jchecs.swg.PromotionDialog#showPromotionDialog(Ljava/awt/Component;Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/swg/PieceUI;)Lfr/free/jchecs/core/Piece;
+javax.swing.BoxLayout#<init>(Ljava/awt/Container;I)V
+java.awt.event.ActionEvent#instance-init#
+javax.swing.JPanel#<init>()V
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+javax.swing.JDialog#instance-init#
+javax.swing.ImageIcon#instance-init#
+java.awt.event.ActionEvent#<init>(Ljava/lang/Object;ILjava/lang/String;)V
+javax.swing.BoxLayout#instance-init#
+fr.free.jchecs.swg.PieceUI#getImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;
+javax.swing.JPanel#instance-init#
+javax.swing.ImageIcon#<init>(Ljava/awt/Image;)V
+fr.free.jchecs.core.Piece#isWhite()Z
+javax.swing.JDialog#<init>(Ljava/awt/Frame;Z)V
+javax.swing.JButton#<init>(Ljavax/swing/Icon;)V
+javax.swing.JButton#instance-init#

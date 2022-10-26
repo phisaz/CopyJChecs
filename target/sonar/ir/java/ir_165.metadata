@@ -1,0 +1,13 @@
+fr.free.jchecs.core.X88Board#getValidTargets(Lfr/free/jchecs/core/Square;)[Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.X88Board#addAllTargets(I)V
+fr.free.jchecs.core.Move#instance-init#
+fr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Piece;)V
+fr.free.jchecs.core.X88Board#isInCheck(Z)Z
+fr.free.jchecs.core.Move#<init>(Lfr/free/jchecs/core/Piece;Lfr/free/jchecs/core/Square;Lfr/free/jchecs/core/Square;)V
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.X88Board#derive(Lfr/free/jchecs/core/Move;Z)Lfr/free/jchecs/core/MoveGenerator;
+fr.free.jchecs.core.Square#getRank()I

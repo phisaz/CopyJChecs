@@ -132,16 +132,16 @@ final class EndgamesWSRequest extends Thread {
 <span class="fc" id="L132">                        cnx.getInputStream()));</span>
 <span class="fc" id="L133">                _response = in.readLine();</span>
 <span class="fc" id="L134">                cnx.disconnect();</span>
-<span class="pc" id="L135">            } catch (final IOException e) {</span>
+<span class="nc" id="L135">            } catch (final IOException e) {</span>
                 // Pas grave, on peut se passer de la bibliothèque de fins de
                 // parties.
             } finally {
 <span class="pc bpc" id="L139" title="1 of 2 branches missed.">                if (in != null) {</span>
                     try {
 <span class="fc" id="L141">                        in.close();</span>
-<span class="pc" id="L142">                    } catch (final IOException e) {</span>
+<span class="nc" id="L142">                    } catch (final IOException e) {</span>
                         // Quand ça ne veut pas...
-                    }
+<span class="fc" id="L144">                    }</span>
                 }
             }
         }

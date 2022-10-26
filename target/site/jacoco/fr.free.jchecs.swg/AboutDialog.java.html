@@ -63,7 +63,7 @@ import static fr.free.jchecs.swg.ResourceUtils.getImageIcon;
  */
 final class AboutDialog {
     /**
-     * Panel principal de la boite de dialogue.
+     * Panel principal de la boite de dialogue .
      */
     private static JOptionPane S_optionPane;
 
@@ -73,7 +73,7 @@ final class AboutDialog {
     private static JComponent S_licensePanel;
 
     /**
-     * Classe utilitaire : ne pas instancier.
+     * Classe utilitaire : ne pas instancier .
      */
     private AboutDialog() {
         // Rien de spécifique...
@@ -102,14 +102,14 @@ final class AboutDialog {
 
     /**
      * Renvoi, après l'avoir construit si nécessaire, le panel principal de la
-     * boite de dialogue.
+     * boite de dialogue. 
      *
      * @return Panel principal de la boite de dialogue.
      */
     private static synchronized JOptionPane getOptionPane() {
 <span class="nc bnc" id="L110" title="All 2 branches missed.">        if (S_optionPane == null) {</span>
 <span class="nc" id="L111">            final JTabbedPane onglets = new JTabbedPane(SwingConstants.TOP,</span>
-<span class="nc" id="L112">                    JTabbedPane.SCROLL_TAB_LAYOUT);</span>
+                    JTabbedPane.SCROLL_TAB_LAYOUT);
 
 <span class="nc" id="L114">            final JPanel auteur = new JPanel(new BorderLayout());</span>
 <span class="nc" id="L115">            final JLabel app = new JLabel(APPLICATION_NAME,</span>
@@ -119,14 +119,14 @@ final class AboutDialog {
 <span class="nc" id="L119">            auteur.add(app, BorderLayout.NORTH);</span>
 <span class="nc" id="L120">            final JPanel centre = new JPanel(new GridLayout(4, 1));</span>
 <span class="nc" id="L121">            final JLabel ver = new JLabel(&quot;v &quot; + APPLICATION_VERSION,</span>
-<span class="nc" id="L122">                    SwingConstants.CENTER);</span>
+                    SwingConstants.CENTER);
 <span class="nc" id="L123">            ver.setFont(ft.deriveFont(Font.BOLD, ft.getSize() * 1.5F));</span>
 <span class="nc" id="L124">            centre.add(ver);</span>
 <span class="nc" id="L125">            centre.add(new JLabel(&quot;© 2006-2017 - &quot; + APPLICATION_AUTHOR,</span>
-<span class="nc" id="L126">                    SwingConstants.CENTER));</span>
+                    SwingConstants.CENTER));
 <span class="nc" id="L127">            final JLabel traducteur = new JLabel(</span>
 <span class="nc" id="L128">                    getI18NString(&quot;dialog.about.translater&quot;),</span>
-<span class="nc" id="L129">                    SwingConstants.CENTER);</span>
+                    SwingConstants.CENTER);
 <span class="nc" id="L130">            traducteur.setFont(ft.deriveFont(Font.ITALIC));</span>
 <span class="nc" id="L131">            centre.add(traducteur);</span>
 <span class="nc bnc" id="L132" title="All 2 branches missed.">            if (Desktop.isDesktopSupported()</span>
@@ -138,10 +138,10 @@ final class AboutDialog {
 <span class="nc" id="L138">                boutonWeb.addActionListener(pEvt -&gt; {</span>
                     try {
 <span class="nc" id="L140">                        Desktop.getDesktop().browse(</span>
-<span class="nc" id="L141">                                new URI(APPLICATION_WEB));</span>
+                                new URI(APPLICATION_WEB));
 <span class="nc" id="L142">                    } catch (final IOException | URISyntaxException e) {</span>
                         // Pas grave : on peut se passer de l'accès au site Web...
-                    }
+<span class="nc" id="L144">                    }</span>
 <span class="nc" id="L145">                });</span>
 <span class="nc" id="L146">                panelWeb.add(boutonWeb);</span>
 <span class="nc" id="L147">                centre.add(panelWeb);</span>
@@ -158,7 +158,7 @@ final class AboutDialog {
 <span class="nc" id="L158">            remerciements.setOpaque(false);</span>
 <span class="nc" id="L159">            remerciements.setForeground(Color.DARK_GRAY);</span>
 <span class="nc" id="L160">            remerciements.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0,</span>
-<span class="nc" id="L161">                    Color.LIGHT_GRAY));</span>
+                    Color.LIGHT_GRAY));
 <span class="nc" id="L162">            auteur.add(remerciements, BorderLayout.SOUTH);</span>
 <span class="nc" id="L163">            onglets.add(getI18NString(&quot;dialog.about.author&quot;), auteur);</span>
 
@@ -173,9 +173,9 @@ final class AboutDialog {
 <span class="nc" id="L173">            proprietes.setRowSorter(new TableRowSorter&lt;&gt;(modele));</span>
 <span class="nc" id="L174">            proprietes.setShowHorizontalLines(false);</span>
 <span class="nc" id="L175">            proprietes.setDefaultRenderer(Object.class,</span>
-<span class="nc" id="L176">                    new EvenOddRowsRenderer());</span>
+                    new EvenOddRowsRenderer());
 <span class="nc" id="L177">            onglets.add(getI18NString(&quot;dialog.about.system&quot;), new JScrollPane(</span>
-<span class="nc" id="L178">                    proprietes));</span>
+                    proprietes));
 <span class="nc" id="L179">            onglets.setPreferredSize(new Dimension(450, 300));</span>
 
 <span class="nc" id="L181">            S_optionPane = new JOptionPane(onglets, JOptionPane.PLAIN_MESSAGE);</span>
@@ -185,7 +185,7 @@ final class AboutDialog {
     }
 
     /**
-     * Affiche la boite de dialogue.
+     * Affiche la boite de dialogue. 
      *
      * @param pParent Composant parent de la boite de dialogue (peut être à null).
      */
@@ -237,7 +237,7 @@ final class AboutDialog {
 <span class="nc" id="L237">            } catch (final IOException e) {</span>
 <span class="nc" id="L238">                _editorPane</span>
 <span class="nc" id="L239">                        .setText(&quot;&lt;center&gt;&lt;h3&gt;This program is under GPL.&lt;/h3&gt;&lt;/center&gt;&quot;);</span>
-            }
+<span class="nc" id="L240">            }</span>
 <span class="nc" id="L241">        }</span>
     }
 

@@ -1,15 +1,29 @@
 
-7fr.free.jchecs.core.AbstractMoveGenerator#isCastled(Z)Zò
-ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javas s(""2"1*ƒ
-2ò
-ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javau u( "£
-ò
-ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javau u(!
-""*ƒ
-1ò
-ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javax x("£
-ò
-ç/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javax x(
-"":
+Vfr.free.jchecs.core.AbstractMoveGenerator#getKingSquare(Z)Lfr/free/jchecs/core/Square;k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javad d("2"1*‰
+2k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(#›
+⁄
+k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f(# 
+%0fr.free.jchecs.core.Square"__id*C*A+
+)fr.free.jchecs.core.AbstractMoveGenerator"
+_whiteKingSquare"ë
+k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javaf f($"
+ 
+%0fr.free.jchecs.core.Square*‰
+1k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i(›
+⁄
+k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( 
+%1fr.free.jchecs.core.Square"__id*C*A+
+)fr.free.jchecs.core.AbstractMoveGenerator"
+_blackKingSquare"ë
+k
+a/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.javai i( "
+ 
+%1fr.free.jchecs.core.Square:
 ""B-+
 )fr.free.jchecs.core.AbstractMoveGenerator

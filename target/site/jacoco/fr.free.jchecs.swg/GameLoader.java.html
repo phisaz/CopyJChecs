@@ -83,7 +83,7 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L83">        JOptionPane.showMessageDialog(_ui.getMainFrame(),</span>
 <span class="nc" id="L84">                getI18NString(&quot;action.loadGame.error.message&quot;),</span>
 <span class="nc" id="L85">                getI18NString(&quot;action.loadGame.error.title&quot;),</span>
-<span class="nc" id="L86">                JOptionPane.ERROR_MESSAGE, ICON32);</span>
+                JOptionPane.ERROR_MESSAGE, ICON32);
 <span class="nc" id="L87">    }</span>
 
     /**
@@ -107,7 +107,7 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L107">                        in = new BufferedReader(new FileReader(fichier));</span>
 <span class="nc" id="L108">                    } catch (final FileNotFoundException e) {</span>
 <span class="nc" id="L109">                        errorDialog();</span>
-                    }
+<span class="nc" id="L110">                    }</span>
 
 <span class="nc bnc" id="L112" title="All 2 branches missed.">                    if (in != null) {</span>
                         try {
@@ -139,7 +139,7 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L139">                                        .getEngine());</span>
 <span class="nc" id="L140">                            } catch (final PGNException e) {</span>
 <span class="nc" id="L141">                                errorDialog();</span>
-                            }
+<span class="nc" id="L142">                            }</span>
 
 <span class="nc" id="L144">                            in.close();</span>
 <span class="nc" id="L145">                        } catch (final IOException e) {</span>
@@ -149,8 +149,8 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L149">                            } catch (final IOException e1) {</span>
                                 // Tant pis, la fermeture de la JVM s'en
                                 // chargera.
-                            }
-                        }
+<span class="nc" id="L152">                            }</span>
+<span class="nc" id="L153">                        }</span>
                     }
                 }
             }
@@ -194,18 +194,18 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L194">                cols.getColumn(4).setPreferredWidth(45);</span>
 <span class="nc" id="L195">                cols.getColumn(5).setPreferredWidth(90);</span>
 <span class="nc" id="L196">                liste.setDefaultRenderer(Object.class,</span>
-<span class="nc" id="L197">                        new EvenOddRowsRenderer());</span>
+                        new EvenOddRowsRenderer());
 <span class="nc" id="L198">                liste.setColumnSelectionAllowed(false);</span>
 <span class="nc" id="L199">                liste.setRowSelectionAllowed(true);</span>
 <span class="nc" id="L200">                liste.setRowSelectionInterval(0, 0);</span>
 
 <span class="nc" id="L202">                final Component fond = new JScrollPane(liste);</span>
 <span class="nc" id="L203">                fond.setPreferredSize(new Dimension(540, 175));</span>
-<span class="nc bnc" id="L204" title="All 2 branches missed.">                if (JOptionPane</span>
-<span class="nc" id="L205">                        .showConfirmDialog(pParent, fond,</span>
+<span class="nc" id="L204">                if (JOptionPane</span>
+<span class="nc bnc" id="L205" title="All 2 branches missed.">                        .showConfirmDialog(pParent, fond,</span>
 <span class="nc" id="L206">                                getI18NString(&quot;dialog.selectGame.title&quot;),</span>
-<span class="nc" id="L207">                                JOptionPane.OK_CANCEL_OPTION,</span>
-<span class="nc" id="L208">                                JOptionPane.PLAIN_MESSAGE) == JOptionPane.OK_OPTION) {</span>
+                                JOptionPane.OK_CANCEL_OPTION,
+                                JOptionPane.PLAIN_MESSAGE) == JOptionPane.OK_OPTION) {
 <span class="nc" id="L209">                    res = Integer.parseInt((String) modele.getValueAt(</span>
 <span class="nc" id="L210">                            liste.getSelectedRow(), 0));</span>
                 }
@@ -241,7 +241,7 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L241">                    in = new BufferedReader(new FileReader(pFichier));</span>
 <span class="nc" id="L242">                } catch (final FileNotFoundException e) {</span>
                     // Tant pis, on ne chargera rien...
-                }
+<span class="nc" id="L244">                }</span>
 
 <span class="nc bnc" id="L246" title="All 2 branches missed.">                if (in != null) {</span>
 <span class="nc" id="L247">                    int numLigne = 0;</span>
@@ -280,7 +280,7 @@ final class GameLoader implements Runnable {
                                 }
                             }
 <span class="nc" id="L282">                            ligne = in.readLine();</span>
-                        }
+<span class="nc" id="L283">                        }</span>
 <span class="nc bnc" id="L284" title="All 2 branches missed.">                        if (enreg != null) {</span>
 <span class="nc" id="L285">                            parties.add(enreg);</span>
                         }
@@ -293,8 +293,8 @@ final class GameLoader implements Runnable {
 <span class="nc" id="L293">                            in.close();</span>
 <span class="nc" id="L294">                        } catch (final IOException e1) {</span>
                             // Tant pis, la fermeture de la JVM s'en chargera.
-                        }
-                    }
+<span class="nc" id="L296">                        }</span>
+<span class="nc" id="L297">                    }</span>
                 }
 
 <span class="nc" id="L300">                _datas = parties.toArray(new String[parties.size()][]);</span>

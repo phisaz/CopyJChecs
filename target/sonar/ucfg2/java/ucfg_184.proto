@@ -1,9 +1,17 @@
 
-6fr.free.jchecs.core.AbstractBoard#getFullmoveNumber()Ií
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaË Ë(&"1*∏
-1í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÈ È("ù
-í
-Ö/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaÈ È(
-""B%#
+Lfr.free.jchecs.core.AbstractBoard#getEnPassant()Lfr/free/jchecs/core/Square;e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaﬁ ﬁ($"1*ƒ
+1e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaﬂ ﬂ(…
+∆
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaﬂ ﬂ( 
+%0fr.free.jchecs.core.Square"__id*5*3#
+!fr.free.jchecs.core.AbstractBoard"
+
+_enPassant"ã
+e
+Y/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.javaﬂ ﬂ("
+ 
+%0fr.free.jchecs.core.SquareB%#
 !fr.free.jchecs.core.AbstractBoard

@@ -1,0 +1,4 @@
+fr.free.jchecs.core.ArrayBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.core.ArrayBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;

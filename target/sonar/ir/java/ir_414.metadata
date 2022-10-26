@@ -1,0 +1,7 @@
+fr.free.jchecs.swg.SwingUI#setProperty(Ljava/lang/String;Ljava/lang/String;)V
+fr.free.jchecs.swg.BoardUI#setPiecesLF(I)V
+java.lang.Integer#parseInt(Ljava/lang/String;)I
+fr.free.jchecs.swg.SwingUI#resizeFrame()V
+java.lang.String#equals(Ljava/lang/Object;)Z
+fr.free.jchecs.swg.BoardUI#setCellSideLength(I)V
+fr.free.jchecs.swg.BoardUI#setBoardLF(I)V

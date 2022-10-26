@@ -1,0 +1,16 @@
+fr.free.jchecs.swg.SwingUI#<init>()V
+fr.free.jchecs.swg.BoardUI#<init>(Lfr/free/jchecs/core/Game;Lfr/free/jchecs/swg/PieceUI;)V
+fr.free.jchecs.swg.CapturesPanel#<init>(Lfr/free/jchecs/core/Game;Lfr/free/jchecs/swg/PieceUI;Z)V
+fr.free.jchecs.swg.SwingUI#initProperties()V
+fr.free.jchecs.swg.FENPanel#instance-init#
+fr.free.jchecs.swg.FENPanel#<init>(Lfr/free/jchecs/core/Game;)V
+java.util.Properties#instance-init#
+fr.free.jchecs.core.Game#<init>()V
+java.util.HashMap#<init>()V
+fr.free.jchecs.swg.PieceUI#instance-init#
+fr.free.jchecs.swg.BoardUI#instance-init#
+fr.free.jchecs.swg.CapturesPanel#instance-init#
+fr.free.jchecs.core.Game#instance-init#
+fr.free.jchecs.swg.PieceUI#<init>()V
+java.util.HashMap#instance-init#
+java.util.Properties#<init>()V

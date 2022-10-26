@@ -1,16 +1,34 @@
 
-@fr.free.jchecs.swg.MoveEvent#getMove()Lfr/free/jchecs/core/Move;‹
-€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java8 8("1*«
-1‹
-€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(ä
-á
-‹
-€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9	 9(
-%0fr.free.jchecs.core.Move"__id*+*)
-fr.free.jchecs.swg.MoveEvent"
-_move"°
-‹
-€/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java9 9( 
-
-%0fr.free.jchecs.core.MoveB 
-fr.free.jchecs.swg.MoveEvent
+Xfr.free.jchecs.swg.GameLoader$GameSelector$HeadersModel#getValueAt(II)Ljava/lang/Object;a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÂ Â($"1*Ÿ
+1a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÃ Ã(Ñ
+Î
+a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÃ Ã(
+%0java.lang.String[][]"__id*G*E9
+7fr.free.jchecs.swg.GameLoader$GameSelector$HeadersModel"
+_datas²
+¯
+a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÃ Ã(%
+%1java.lang.String[]"
+__arrayGet*
+
+%0java.lang.String[][]*
+""®
+«
+a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÃ Ã(/
+%2java.lang.String"
+__arrayGet*
+
+%1java.lang.String[]*
+"""}
+a
+U/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.javaÃ Ã(0
+
+%2java.lang.String:
+"":
+""B;9
+7fr.free.jchecs.swg.GameLoader$GameSelector$HeadersModel

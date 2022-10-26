@@ -1,0 +1,7 @@
+fr.free.jchecs.swg.PrintPreviewDialog#getOptionPane()Ljavax/swing/JOptionPane;
+java.awt.Dimension#<init>(II)V
+javax.swing.JOptionPane#instance-init#
+javax.swing.JOptionPane#<init>(Ljava/lang/Object;I)V
+java.awt.Dimension#instance-init#
+javax.swing.JPanel#<init>()V
+javax.swing.JPanel#instance-init#

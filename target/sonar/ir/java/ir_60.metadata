@@ -1,0 +1,4 @@
+fr.free.jchecs.ai.NegaScoutEngine#<init>()V
+fr.free.jchecs.ai.AbstractEngine#setMoveSorter(Ljava/util/Comparator;)V
+fr.free.jchecs.ai.KillerMoveSorter#<init>()V
+fr.free.jchecs.ai.KillerMoveSorter#instance-init#

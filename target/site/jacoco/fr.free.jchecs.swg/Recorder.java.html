@@ -109,7 +109,7 @@ final class Recorder {
 <span class="nc" id="L109">        _component = fond;</span>
 
 <span class="nc" id="L111">        final RecorderListener ecouteur = new RecorderListener(pPartie,</span>
-<span class="nc" id="L112">                premier, precedent, suivant, dernier);</span>
+                premier, precedent, suivant, dernier);
 
 <span class="nc" id="L114">        premier.addActionListener(ecouteur);</span>
 <span class="nc" id="L115">        precedent.addActionListener(ecouteur);</span>
@@ -166,9 +166,9 @@ final class Recorder {
          * @param pNext     Composant permettant d'aller au suivant.
          * @param pLast     Composant permettant d'aller à la fin.
          */
-<span class="nc" id="L169">        RecorderListener(final Game pGame, final JComponent pFirst,</span>
+        RecorderListener(final Game pGame, final JComponent pFirst,
                          final JComponent pPrevious, final JComponent pNext,
-                         final JComponent pLast) {
+<span class="nc" id="L171">                         final JComponent pLast) {</span>
 <span class="nc" id="L172">            _game = pGame;</span>
 <span class="nc" id="L173">            _first = pFirst;</span>
 <span class="nc" id="L174">            _previous = pPrevious;</span>

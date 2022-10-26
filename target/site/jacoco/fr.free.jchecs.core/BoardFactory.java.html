@@ -79,18 +79,18 @@ import java.lang.reflect.InvocationTargetException;
 <span class="fc" id="L79">        Class&lt;?&gt; cls = null;</span>
         try {
 <span class="fc" id="L81">            cls = Class.forName(pClassName);</span>
-<span class="pc" id="L82">        } catch (final ClassNotFoundException e1) {</span>
+<span class="nc" id="L82">        } catch (final ClassNotFoundException e1) {</span>
 <span class="nc" id="L83">            LOG.warn(&quot;Board class [{}] not found.&quot;, pClassName);</span>
-        }
+<span class="fc" id="L84">        }</span>
 <span class="pc bpc" id="L85" title="1 of 2 branches missed.">        if (cls != null) {</span>
 <span class="fc" id="L86">            Constructor&lt;?&gt; cst = null;</span>
             try {
 <span class="fc" id="L88">                cst = cls.getDeclaredConstructor(Board.class);</span>
-<span class="pc" id="L89">            } catch (final SecurityException e) {</span>
+<span class="nc" id="L89">            } catch (final SecurityException e) {</span>
 <span class="nc" id="L90">                LOG.warn(&quot;Security exception on class [[}].&quot;, pClassName);</span>
 <span class="nc" id="L91">            } catch (final NoSuchMethodException e) {</span>
 <span class="nc" id="L92">                LOG.warn(&quot;No such method: {}&quot;, e.getLocalizedMessage());</span>
-            }
+<span class="pc" id="L93">            }</span>
 <span class="pc bpc" id="L94" title="1 of 2 branches missed.">            if (cst != null) {</span>
                 Object o;
                 try {
@@ -98,9 +98,9 @@ import java.lang.reflect.InvocationTargetException;
 <span class="pc bpc" id="L98" title="1 of 2 branches missed.">                    if (o instanceof MoveGenerator) {</span>
 <span class="fc" id="L99">                        res = (MoveGenerator) o;</span>
                     }
-<span class="pc" id="L101">                } catch (final IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException e) {</span>
+<span class="nc" id="L101">                } catch (final IllegalArgumentException | InstantiationException | IllegalAccessException | InvocationTargetException e) {</span>
 <span class="nc" id="L102">                    LOG.warn(&quot;New instance creation failure.&quot;, e);</span>
-                }
+<span class="fc" id="L103">                }</span>
             }
         }
 
@@ -111,12 +111,12 @@ import java.lang.reflect.InvocationTargetException;
      * Enumération des états initiaux reconnus.
      */
 <span class="fc" id="L113">    public enum State {</span>
-<span class="fc" id="L114">        /**</span>
+        /**
          * Etat initial, sans pièces.
          */
 <span class="fc" id="L117">        EMPTY,</span>
 
-<span class="fc" id="L119">        /**</span>
+        /**
          * Etat initial standard.
          */
 <span class="fc" id="L122">        STARTING</span>
@@ -126,22 +126,22 @@ import java.lang.reflect.InvocationTargetException;
      * Enumération des types de représentation d'une partie disponibles.
      */
 <span class="fc" id="L128">    public enum Type {</span>
-<span class="fc" id="L129">        /**</span>
+        /**
          * Description basée sur un tableau à deux dimensions.
          */
 <span class="fc" id="L132">        ARRAY(&quot;fr.free.jchecs.core.ArrayBoard&quot;),</span>
 
-<span class="fc" id="L134">        /**</span>
+        /**
          * Description basée sur un tableau bordé, à une dimension.
          */
 <span class="fc" id="L137">        MAILBOX(&quot;fr.free.jchecs.core.MailboxBoard&quot;),</span>
 
-<span class="fc" id="L139">        /**</span>
+        /**
          * Description la plus rapide : actuellement équivalent à MAILBOX.
          */
 <span class="fc" id="L142">        FASTEST(&quot;fr.free.jchecs.core.MailboxBoard&quot;),</span>
 
-<span class="fc" id="L144">        /**</span>
+        /**
          * Description basée sur un tableau à une dimension avec indice filtré
          * par la valeur 0x88.
          */

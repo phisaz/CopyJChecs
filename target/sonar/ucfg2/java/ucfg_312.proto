@@ -1,49 +1,95 @@
 
-dfr.free.jchecs.core.MailboxBoard#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∑ ∑("startingBlock*Ë
-startingBlockë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∑ ∑(/Ë
-Â
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∂ ∂(
-%3"
-__annotate*
-java.lang.Override*%
-#
-pCasefr.free.jchecs.core.Square“
-œ
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∑) ∑(.#
-pCasefr.free.jchecs.core.Square"__annotation*
-
-%3*
-1*¿
-1ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∏ ∏(Û
-
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∏ ∏(!
-%0fr.free.jchecs.core.Piece[]"__id*1*/"
- fr.free.jchecs.core.MailboxBoard"	
-_pieces˝˙
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∏ ∏('	
-%1int"&fr.free.jchecs.core.Square#getIndex()I*%
-#
-pCasefr.free.jchecs.core.Square2
-getIndex()ˆ
+kfr.free.jchecs.core.MailboxBoard#getPawnTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaü ü(""startingBlock*¬
+2d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java© ©(Ñ
+Å
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java©( ©(6
+%4int[]"__id*
+""ˆ
 Û
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∏ ∏((
-%2fr.free.jchecs.core.Piece"
-__arrayGet*#
-!
-%0fr.free.jchecs.core.Piece[]*
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java© ©(: 
+%5fr.free.jchecs.core.Square"Afr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;*"
+fr.free.jchecs.core.Square*
+""Œ
+À
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java© ©(:
+%6"
+__arraySet*%
+#
+resfr.free.jchecs.core.Square[]*
+""*"
+ 
+%5fr.free.jchecs.core.Square*
+2
+1*‰
+startingBlockd
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaü" ü(OΩ
+∫
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaû û(
+%7"
+__annotate*
+java.lang.Override*(
+&
+pOriginefr.free.jchecs.core.Squareß
+§
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaü0 ü(8&
+pOriginefr.free.jchecs.core.Square"__annotation*
+
+%7*
+5*ö
+4d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java£" £(#“œ
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java• •(.	
+%1int"&fr.free.jchecs.core.Square#getIndex()I*(
+&
+pOriginefr.free.jchecs.core.Square2
+getIndex()Ê
+„
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java• •(7
+
+%2void"4fr.free.jchecs.core.MailboxBoard#addPawnTargets(IZ)V*$"
+ fr.free.jchecs.core.MailboxBoard*
 	
-%1int"∑
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java∏ ∏()!
-
-%2fr.free.jchecs.core.Piece:#
-pCasefr.free.jchecs.core.SquareB$"
+%1int*
+""´®
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaß ß(1"
+%3fr.free.jchecs.core.Square[]"fr.free.jchecs.core.Square[]∫
+∑
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaß ß(1#
+resfr.free.jchecs.core.Square[]"__id*$
+"
+%3fr.free.jchecs.core.Square[]*
+2
+1*î
+5d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java† †(ú
+ô
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java† †(#
+resfr.free.jchecs.core.Square[]"__id*
+""Ñ
+Å
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java¢ ¢($
+%0int[]"__id*
+""*
+4*˘
+1d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≠ ≠("ç
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≠ ≠(%
+#
+resfr.free.jchecs.core.Square[]:&
+pOriginefr.free.jchecs.core.Square:
+""B$"
  fr.free.jchecs.core.MailboxBoard

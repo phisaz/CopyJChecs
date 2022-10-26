@@ -1,9 +1,45 @@
 
-&fr.free.jchecs.core.Square#getIndex()Iä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java£ £("1*®
-1ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java§ §("ï
-ä
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java§ §(
-""B
+6fr.free.jchecs.core.Square#equals(Ljava/lang/Object;)Z\
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java ("startingBlock*Õ
+2^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaÖ Ö("h
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaÖ Ö(
+""*∫
+startingBlock\
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java (.©
+¶
+\
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java~ ~(
+%0"
+__annotate*
+java.lang.Override*
+
+pObjetjava.lang.Objectì
+ê
+\
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java' (-
+pObjetjava.lang.Object"__annotation*
+
+%0*	
+2
+4
+1*Õ
+4^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaÅ Å("h
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaÅ Å(
+""*¯
+1^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaà" à((®
+•
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaà à()
+ofr.free.jchecs.core.Square"__id*
+
+pObjetjava.lang.Object"h
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.javaâ â("
+"":
+pObjetjava.lang.ObjectB
 fr.free.jchecs.core.Square

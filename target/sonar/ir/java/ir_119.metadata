@@ -1,0 +1,5 @@
+fr.free.jchecs.swg.BoardUI#mouseOver(II)V
+fr.free.jchecs.core.Square#valueOf(II)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.swg.BoardUI#getCellSideLength()I
+fr.free.jchecs.swg.BoardUI#getSideLength()I

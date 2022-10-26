@@ -182,7 +182,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
             }
 <span class="fc bfc" id="L183" title="All 2 branches covered.">            if (pMouvement.getCaptured() == null) {</span>
 <span class="fc" id="L184">                res.setHalfmoveCount(getHalfmoveCount() + 1);</span>
-<span class="fc" id="L185">            } else {</span>
+            } else {
 <span class="fc" id="L186">                res.setHalfmoveCount(0);</span>
             }
         }
@@ -223,7 +223,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc bfc" id="L223" title="All 4 branches covered.">        if ((typePiece == PAWN) &amp;&amp; (dst == getEnPassant())) {</span>
 <span class="fc bfc" id="L224" title="All 2 branches covered.">            if (trait) {</span>
 <span class="fc" id="L225">                res._pieces[xDst][yDst - 1] = null;</span>
-<span class="fc" id="L226">            } else {</span>
+            } else {
 <span class="fc" id="L227">                res._pieces[xDst][yDst + 1] = null;</span>
             }
         }
@@ -234,8 +234,8 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L234">                    final Piece promotion = pMouvement.getPromotion();</span>
 <span class="fc bfc" id="L235" title="All 2 branches covered.">                    res._pieces[xDst][yDst] = promotion == null ? WHITE_QUEEN</span>
 <span class="fc" id="L236">                            : promotion;</span>
-                }
-<span class="fc" id="L238">            } else {</span>
+<span class="fc" id="L237">                }</span>
+            } else {
 <span class="fc bfc" id="L239" title="All 2 branches covered.">                if (yDst == 0) {</span>
 <span class="fc" id="L240">                    final Piece promotion = pMouvement.getPromotion();</span>
 <span class="fc bfc" id="L241" title="All 2 branches covered.">                    res._pieces[xDst][yDst] = promotion == null ? BLACK_QUEEN</span>
@@ -246,8 +246,8 @@ import static fr.free.jchecs.core.PieceType.ROOK;
         // Tient compte des interdictions de roquer que le mouvement peut
         // provoquer...
 <span class="fc bfc" id="L248" title="All 2 branches covered.">        if (canCastleShort(trait)) {</span>
-<span class="fc bfc" id="L249" title="All 2 branches covered.">            if ((typePiece == KING)</span>
-<span class="fc bfc" id="L250" title="All 4 branches covered.">                    || ((typePiece == ROOK) &amp;&amp; (xSrc == FILE_COUNT - 1))) {</span>
+<span class="fc bfc" id="L249" title="All 6 branches covered.">            if ((typePiece == KING)</span>
+                    || ((typePiece == ROOK) &amp;&amp; (xSrc == FILE_COUNT - 1))) {
 <span class="fc" id="L251">                res.setCastleShort(trait, false);</span>
             }
         }
@@ -268,7 +268,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc bfc" id="L268" title="All 4 branches covered.">                if ((ySrc == 1) &amp;&amp; (yDst == 3)) {</span>
 <span class="fc" id="L269">                    res.setEnPassant(Square.valueOf(xDst, 2));</span>
                 }
-<span class="fc" id="L271">            } else {</span>
+            } else {
 <span class="fc bfc" id="L272" title="All 4 branches covered.">                if ((ySrc == RANK_COUNT - 2) &amp;&amp; (yDst == RANK_COUNT - 4)) {</span>
 <span class="fc" id="L273">                    res.setEnPassant(Square.valueOf(xDst, RANK_COUNT - 3));</span>
                 }
@@ -348,7 +348,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
                 default:
 <span class="nc bnc" id="L349" title="All 2 branches missed.">                    assert false;</span>
             }
-        } else {
+<span class="fc" id="L351">        } else {</span>
 <span class="fc" id="L352">            res = new Square[0];</span>
         }
 
@@ -379,13 +379,13 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L379">            final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L380" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L381">                tmp[nb++] = Square.valueOf(xDst, yDst);</span>
-<span class="fc" id="L382">            } else {</span>
+            } else {
 <span class="fc bfc" id="L383" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L384">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
-<span class="fc" id="L386">                break;</span>
+                break;
             }
-        }
+<span class="fc" id="L388">        }</span>
 
         // Mouvements / prise vers le haut/droit...
 <span class="fc" id="L391">        xDst = xSrc;</span>
@@ -394,13 +394,13 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L394">            final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L395" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L396">                tmp[nb++] = Square.valueOf(xDst, yDst);</span>
-<span class="fc" id="L397">            } else {</span>
+            } else {
 <span class="fc bfc" id="L398" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L399">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
-<span class="fc" id="L401">                break;</span>
+                break;
             }
-        }
+<span class="fc" id="L403">        }</span>
 
         // Mouvements / prise vers le bas/gauche...
 <span class="fc" id="L406">        xDst = xSrc;</span>
@@ -409,13 +409,13 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L409">            final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L410" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L411">                tmp[nb++] = Square.valueOf(xDst, yDst);</span>
-<span class="fc" id="L412">            } else {</span>
+            } else {
 <span class="fc bfc" id="L413" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L414">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
-<span class="fc" id="L416">                break;</span>
+                break;
             }
-        }
+<span class="fc" id="L418">        }</span>
 
         // Mouvements / prise vers le bas/droit...
 <span class="fc" id="L421">        xDst = xSrc;</span>
@@ -424,13 +424,13 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L424">            final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L425" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L426">                tmp[nb++] = Square.valueOf(xDst, yDst);</span>
-<span class="fc" id="L427">            } else {</span>
+            } else {
 <span class="fc bfc" id="L428" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L429">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
-<span class="fc" id="L431">                break;</span>
+                break;
             }
-        }
+<span class="fc" id="L433">        }</span>
 
 <span class="fc" id="L435">        final Square[] res = new Square[nb];</span>
 <span class="fc" id="L436">        System.arraycopy(tmp, 0, res, 0, nb);</span>
@@ -457,25 +457,25 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc bfc" id="L457" title="All 2 branches covered.">        for (int i = kLength; --i &gt;= 0; /* Pré-décrémenté */) {</span>
 <span class="fc" id="L458">            final int xDst = xSrc + KING_MOVES[i];</span>
 <span class="fc" id="L459">            final int yDst = ySrc + KING_MOVES[(i + 2) % kLength];</span>
-<span class="fc bfc" id="L460" title="All 6 branches covered.">            if ((xDst &gt;= 0) &amp;&amp; (yDst &gt;= 0) &amp;&amp; (xDst &lt; FILE_COUNT)</span>
-<span class="fc bfc" id="L461" title="All 2 branches covered.">                    &amp;&amp; (yDst &lt; RANK_COUNT)) {</span>
+<span class="fc bfc" id="L460" title="All 8 branches covered.">            if ((xDst &gt;= 0) &amp;&amp; (yDst &gt;= 0) &amp;&amp; (xDst &lt; FILE_COUNT)</span>
+                    &amp;&amp; (yDst &lt; RANK_COUNT)) {
 <span class="fc" id="L462">                final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L463" title="All 4 branches covered.">                if ((p == null) || (p.isWhite() != pBlanc)) {</span>
 <span class="fc" id="L464">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
             }
-        }
+<span class="fc" id="L467">        }</span>
 <span class="fc bfc" id="L468" title="All 4 branches covered.">        if ((nb &gt; 0) &amp;&amp; (xSrc == 4)) {</span>
-<span class="fc bfc" id="L469" title="All 4 branches covered.">            if (canCastleShort(pBlanc) &amp;&amp; (_pieces[5][ySrc] == null)</span>
-<span class="fc bfc" id="L470" title="All 2 branches covered.">                    &amp;&amp; (_pieces[6][ySrc] == null)) {</span>
+<span class="fc bfc" id="L469" title="All 6 branches covered.">            if (canCastleShort(pBlanc) &amp;&amp; (_pieces[5][ySrc] == null)</span>
+                    &amp;&amp; (_pieces[6][ySrc] == null)) {
 <span class="fc" id="L471">                final Piece t = _pieces[FILE_COUNT - 1][ySrc];</span>
 <span class="fc bfc" id="L472" title="All 4 branches covered.">                if ((t != null) &amp;&amp; (t.getType() == ROOK)</span>
 <span class="pc bpc" id="L473" title="1 of 2 branches missed.">                        &amp;&amp; (t.isWhite() == pBlanc)) {</span>
 <span class="fc" id="L474">                    tmp[nb++] = Square.valueOf(6, ySrc);</span>
                 }
             }
-<span class="fc bfc" id="L477" title="All 4 branches covered.">            if (canCastleLong(pBlanc) &amp;&amp; (_pieces[3][ySrc] == null)</span>
-<span class="fc bfc" id="L478" title="All 4 branches covered.">                    &amp;&amp; (_pieces[2][ySrc] == null) &amp;&amp; (_pieces[1][ySrc] == null)) {</span>
+<span class="fc bfc" id="L477" title="All 8 branches covered.">            if (canCastleLong(pBlanc) &amp;&amp; (_pieces[3][ySrc] == null)</span>
+                    &amp;&amp; (_pieces[2][ySrc] == null) &amp;&amp; (_pieces[1][ySrc] == null)) {
 <span class="fc" id="L479">                final Piece t = _pieces[0][ySrc];</span>
 <span class="fc bfc" id="L480" title="All 4 branches covered.">                if ((t != null) &amp;&amp; (t.getType() == ROOK)</span>
 <span class="pc bpc" id="L481" title="1 of 2 branches missed.">                        &amp;&amp; (t.isWhite() == pBlanc)) {</span>
@@ -509,14 +509,14 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc bfc" id="L509" title="All 2 branches covered.">        for (int i = kLength; --i &gt;= 0; /* Pré-décrémenté */) {</span>
 <span class="fc" id="L510">            final int xDst = oX + KNIGHT_MOVES[i];</span>
 <span class="fc" id="L511">            final int yDst = oY + KNIGHT_MOVES[(i + 2) % kLength];</span>
-<span class="fc bfc" id="L512" title="All 6 branches covered.">            if ((xDst &gt;= 0) &amp;&amp; (yDst &gt;= 0) &amp;&amp; (xDst &lt; FILE_COUNT)</span>
-<span class="fc bfc" id="L513" title="All 2 branches covered.">                    &amp;&amp; (yDst &lt; RANK_COUNT)) {</span>
+<span class="fc bfc" id="L512" title="All 8 branches covered.">            if ((xDst &gt;= 0) &amp;&amp; (yDst &gt;= 0) &amp;&amp; (xDst &lt; FILE_COUNT)</span>
+                    &amp;&amp; (yDst &lt; RANK_COUNT)) {
 <span class="fc" id="L514">                final Piece p = _pieces[xDst][yDst];</span>
 <span class="fc bfc" id="L515" title="All 4 branches covered.">                if ((p == null) || (p.isWhite() != pBlanc)) {</span>
 <span class="fc" id="L516">                    tmp[nb++] = Square.valueOf(xDst, yDst);</span>
                 }
             }
-        }
+<span class="fc" id="L519">        }</span>
 
 <span class="fc" id="L521">        final Square[] res = new Square[nb];</span>
 <span class="fc" id="L522">        System.arraycopy(tmp, 0, res, 0, nb);</span>
@@ -567,16 +567,16 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L567">                        tmp[nb++] = cDest;</span>
                     }
                 }
-            }
-<span class="fc" id="L571">        } else {</span>
+<span class="fc" id="L570">            }</span>
+        } else {
 <span class="fc bfc" id="L572" title="All 2 branches covered.">            if (ySrc &gt; 0) {</span>
 <span class="fc" id="L573">                final int xSrc = pOrigine.getFile();</span>
                 // Mouvement de 1...
 <span class="fc bfc" id="L575" title="All 2 branches covered.">                if (_pieces[xSrc][ySrc - 1] == null) {</span>
 <span class="fc" id="L576">                    tmp[nb++] = Square.valueOf(xSrc, ySrc - 1);</span>
                     // Mouvement initial de 2
-<span class="fc bfc" id="L578" title="All 2 branches covered.">                    if ((ySrc == RANK_COUNT - 2)</span>
-<span class="fc bfc" id="L579" title="All 2 branches covered.">                            &amp;&amp; (_pieces[xSrc][RANK_COUNT - 4] == null)) {</span>
+<span class="fc bfc" id="L578" title="All 4 branches covered.">                    if ((ySrc == RANK_COUNT - 2)</span>
+                            &amp;&amp; (_pieces[xSrc][RANK_COUNT - 4] == null)) {
 <span class="fc" id="L580">                        tmp[nb++] = Square.valueOf(xSrc, RANK_COUNT - 4);</span>
                     }
                 }
@@ -696,11 +696,11 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L696">            final Piece p = _pieces[x][ySrc];</span>
 <span class="fc bfc" id="L697" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L698">                tmp[nb++] = Square.valueOf(x, ySrc);</span>
-<span class="fc" id="L699">            } else {</span>
+            } else {
 <span class="fc bfc" id="L700" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L701">                    tmp[nb++] = Square.valueOf(x, ySrc);</span>
                 }
-<span class="fc" id="L703">                break;</span>
+                break;
             }
         }
 
@@ -709,11 +709,11 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L709">            final Piece p = _pieces[x][ySrc];</span>
 <span class="fc bfc" id="L710" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L711">                tmp[nb++] = Square.valueOf(x, ySrc);</span>
-<span class="fc" id="L712">            } else {</span>
+            } else {
 <span class="fc bfc" id="L713" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L714">                    tmp[nb++] = Square.valueOf(x, ySrc);</span>
                 }
-<span class="fc" id="L716">                break;</span>
+                break;
             }
         }
 
@@ -722,11 +722,11 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L722">            final Piece p = _pieces[xSrc][y];</span>
 <span class="fc bfc" id="L723" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L724">                tmp[nb++] = Square.valueOf(xSrc, y);</span>
-<span class="fc" id="L725">            } else {</span>
+            } else {
 <span class="fc bfc" id="L726" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L727">                    tmp[nb++] = Square.valueOf(xSrc, y);</span>
                 }
-<span class="fc" id="L729">                break;</span>
+                break;
             }
         }
 
@@ -735,11 +735,11 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L735">            final Piece p = _pieces[xSrc][y];</span>
 <span class="fc bfc" id="L736" title="All 2 branches covered.">            if (p == null) {</span>
 <span class="fc" id="L737">                tmp[nb++] = Square.valueOf(xSrc, y);</span>
-<span class="fc" id="L738">            } else {</span>
+            } else {
 <span class="fc bfc" id="L739" title="All 2 branches covered.">                if (p.isWhite() != pBlanc) {</span>
 <span class="fc" id="L740">                    tmp[nb++] = Square.valueOf(xSrc, y);</span>
                 }
-<span class="fc" id="L742">                break;</span>
+                break;
             }
         }
 
@@ -771,10 +771,10 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L771">                        final PieceType pieceType = p.getType();</span>
 <span class="fc bfc" id="L772" title="All 4 branches covered.">                        if ((pieceType != PAWN) || (dst != getEnPassant())) {</span>
 <span class="fc" id="L773">                            prise = _pieces[dst.getFile()][dst.getRank()];</span>
-<span class="fc" id="L774">                        } else {</span>
+                        } else {
 <span class="fc bfc" id="L775" title="All 2 branches covered.">                            if (pTrait) {</span>
 <span class="fc" id="L776">                                prise = _pieces[dst.getFile()][dst.getRank() - 1];</span>
-<span class="fc" id="L777">                            } else {</span>
+                            } else {
 <span class="fc" id="L778">                                prise = _pieces[dst.getFile()][dst.getRank() + 1];</span>
                             }
                         }
@@ -783,27 +783,27 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc bfc" id="L783" title="All 2 branches covered.">                        if (pieceType == PAWN) {</span>
 <span class="fc bfc" id="L784" title="All 4 branches covered.">                            if (pTrait &amp;&amp; (dst.getRank() == 7)) {</span>
 <span class="fc" id="L785">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L786">                                        WHITE_QUEEN);</span>
+                                        WHITE_QUEEN);
 <span class="fc" id="L787">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L788">                                        WHITE_ROOK);</span>
+                                        WHITE_ROOK);
 <span class="fc" id="L789">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L790">                                        WHITE_BISHOP);</span>
+                                        WHITE_BISHOP);
 <span class="fc" id="L791">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L792">                                        WHITE_KNIGHT);</span>
+                                        WHITE_KNIGHT);
 <span class="fc bfc" id="L793" title="All 4 branches covered.">                            } else if ((!pTrait) &amp;&amp; (dst.getRank() == 0)) {</span>
 <span class="fc" id="L794">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L795">                                        BLACK_QUEEN);</span>
+                                        BLACK_QUEEN);
 <span class="fc" id="L796">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L797">                                        BLACK_ROOK);</span>
+                                        BLACK_ROOK);
 <span class="fc" id="L798">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L799">                                        BLACK_BISHOP);</span>
+                                        BLACK_BISHOP);
 <span class="fc" id="L800">                                tmp[nb++] = new Move(p, orig, dst, prise,</span>
-<span class="fc" id="L801">                                        BLACK_KNIGHT);</span>
+                                        BLACK_KNIGHT);
                             }
                         }
                     }
                 }
-            }
+<span class="fc" id="L806">            }</span>
         }
 
 <span class="fc" id="L809">        final Move[] res = new Move[nb];</span>
@@ -844,9 +844,9 @@ import static fr.free.jchecs.core.PieceType.ROOK;
                             // intermédiaire...
 <span class="fc bfc" id="L845" title="All 2 branches covered.">                            if (isInCheck(trait)</span>
 <span class="fc" id="L846">                                    || derive(</span>
-<span class="fc" id="L847">                                    new Move(piece, pOrigine,</span>
+                                    new Move(piece, pOrigine,
 <span class="fc" id="L848">                                            Square.valueOf(</span>
-<span class="fc" id="L849">                                                    4 - (delta / 2),</span>
+                                                    4 - (delta / 2),
 <span class="fc" id="L850">                                                    cible.getRank())),</span>
 <span class="fc bfc" id="L851" title="All 2 branches covered.">                                    false).isInCheck(trait)) {</span>
 <span class="fc" id="L852">                                continue;</span>
@@ -856,7 +856,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 
 <span class="fc" id="L857">                    tmp[nb++] = cible;</span>
                 }
-            }
+<span class="fc" id="L859">            }</span>
 
 <span class="fc" id="L861">            final Square[] res = new Square[nb];</span>
 <span class="fc" id="L862">            System.arraycopy(tmp, 0, res, 0, nb);</span>
@@ -880,9 +880,9 @@ import static fr.free.jchecs.core.PieceType.ROOK;
 <span class="fc" id="L880">                    final Piece p = _pieces[x][y];</span>
 <span class="fc bfc" id="L881" title="All 2 branches covered.">                    if (p != null) {</span>
 <span class="fc" id="L882">                        h ^= ZOBRIST_PIECE_POSITION[p.ordinal()][x + y</span>
-<span class="fc" id="L883">                                * FILE_COUNT];</span>
+                                * FILE_COUNT];
                     }
-                }
+<span class="fc" id="L885">                }</span>
             }
 <span class="fc" id="L887">            _hashCode = h;</span>
         }
@@ -1041,15 +1041,15 @@ import static fr.free.jchecs.core.PieceType.ROOK;
         // Pions...
 <span class="fc bfc" id="L1042" title="All 2 branches covered.">        if (pCouleur) {</span>
 <span class="fc bfc" id="L1043" title="All 2 branches covered.">            if (ySrc &gt; 1) {</span>
-<span class="fc bfc" id="L1044" title="All 4 branches covered.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[xSrc - 1][ySrc - 1] == WHITE_PAWN))</span>
-<span class="pc bpc" id="L1045" title="1 of 4 branches missed.">                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[xSrc + 1][ySrc - 1] == WHITE_PAWN))) {</span>
+<span class="pc bpc" id="L1044" title="1 of 8 branches missed.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[xSrc - 1][ySrc - 1] == WHITE_PAWN))</span>
+                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[xSrc + 1][ySrc - 1] == WHITE_PAWN))) {
 <span class="fc" id="L1046">                    return true;</span>
                 }
             }
         } else {
 <span class="fc bfc" id="L1050" title="All 2 branches covered.">            if (ySrc &lt; RANK_COUNT - 2) {</span>
-<span class="fc bfc" id="L1051" title="All 4 branches covered.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[xSrc - 1][ySrc + 1] == BLACK_PAWN))</span>
-<span class="pc bpc" id="L1052" title="1 of 4 branches missed.">                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[xSrc + 1][ySrc + 1] == BLACK_PAWN))) {</span>
+<span class="pc bpc" id="L1051" title="1 of 8 branches missed.">                if (((xSrc &gt; 0) &amp;&amp; (_pieces[xSrc - 1][ySrc + 1] == BLACK_PAWN))</span>
+                        || ((xSrc &lt; FILE_COUNT - 1) &amp;&amp; (_pieces[xSrc + 1][ySrc + 1] == BLACK_PAWN))) {
 <span class="fc" id="L1053">                    return true;</span>
                 }
             }
@@ -1082,7 +1082,7 @@ import static fr.free.jchecs.core.PieceType.ROOK;
                         }
                     }
                 }
-            }
+<span class="fc" id="L1085">            }</span>
         }
 
 <span class="fc" id="L1088">        return false;</span>

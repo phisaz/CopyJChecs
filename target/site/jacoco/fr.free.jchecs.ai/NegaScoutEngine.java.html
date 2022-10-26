@@ -35,7 +35,7 @@ final class NegaScoutEngine extends AbstractEngine {
      * Table de transposition.
      */
 <span class="fc" id="L37">    private static final TranspositionTable TRANSPOSITIONS = new TranspositionTable(</span>
-<span class="fc" id="L38">            1000000);</span>
+            1000000);
 
     /**
      * Instancie un nouveau moteur IA Negascout.
@@ -59,7 +59,7 @@ final class NegaScoutEngine extends AbstractEngine {
     private int negascout(final MoveGenerator pEtat, final int pProfondeur,
                           final int pAlpha, final int pBeta, final int pLimite) {
 <span class="nc" id="L61">        final Integer resultat = TRANSPOSITIONS.get(pEtat, pProfondeur, pAlpha,</span>
-<span class="nc" id="L62">                pBeta);</span>
+                pBeta);
 <span class="nc bnc" id="L63" title="All 2 branches missed.">        if (resultat != null) {</span>
 <span class="nc" id="L64">            return resultat;</span>
         }
@@ -88,7 +88,7 @@ final class NegaScoutEngine extends AbstractEngine {
         final ContextSorter ctx;
 <span class="nc bnc" id="L89" title="All 2 branches missed.">        if (tri instanceof ContextSorter) {</span>
 <span class="nc" id="L90">            ctx = (ContextSorter) tri;</span>
-<span class="nc" id="L91">        } else {</span>
+        } else {
 <span class="nc" id="L92">            ctx = null;</span>
         }
 <span class="nc" id="L94">        Arrays.sort(coups, tri);</span>
@@ -101,21 +101,21 @@ final class NegaScoutEngine extends AbstractEngine {
 <span class="nc bnc" id="L101" title="All 6 branches missed.">            if (((pProfondeur == 1) &amp;&amp; ((l &lt;= 3) || (mvt.getCaptured() != null)))</span>
 <span class="nc bnc" id="L102" title="All 2 branches missed.">                    || etat.isInCheck(etat.isWhiteActive())) {</span>
 <span class="nc" id="L103">                limite = -1;</span>
-<span class="nc" id="L104">            } else {</span>
+            } else {
 <span class="nc" id="L105">                limite = 0;</span>
             }
             int note;
 <span class="nc bnc" id="L108" title="All 2 branches missed.">            if (i == 0) {</span>
 <span class="nc" id="L109">                note = -negascout(etat, pProfondeur - 1, -pBeta, -alpha, limite);</span>
-<span class="nc" id="L110">            } else {</span>
+            } else {
 <span class="nc" id="L111">                note = -negascout(etat, pProfondeur - 1, -alpha - 1, -alpha,</span>
-<span class="nc" id="L112">                        limite);</span>
+                        limite);
             }
 <span class="nc bnc" id="L114" title="All 2 branches missed.">            if (note &gt; res) {</span>
-<span class="nc bnc" id="L115" title="All 6 branches missed.">                if ((i &gt; 0) &amp;&amp; (alpha &lt; note) &amp;&amp; (note &lt; pBeta)</span>
-<span class="nc bnc" id="L116" title="All 2 branches missed.">                        &amp;&amp; (pProfondeur &gt; limite + 2)) {</span>
+<span class="nc bnc" id="L115" title="All 8 branches missed.">                if ((i &gt; 0) &amp;&amp; (alpha &lt; note) &amp;&amp; (note &lt; pBeta)</span>
+                        &amp;&amp; (pProfondeur &gt; limite + 2)) {
 <span class="nc" id="L117">                    note = -negascout(etat, pProfondeur - 1, -pBeta, -note,</span>
-<span class="nc" id="L118">                            limite);</span>
+                            limite);
                 }
 <span class="nc" id="L120">                res = note;</span>
 <span class="nc bnc" id="L121" title="All 2 branches missed.">                if (res &gt; alpha) {</span>
@@ -124,7 +124,7 @@ final class NegaScoutEngine extends AbstractEngine {
 <span class="nc bnc" id="L124" title="All 2 branches missed.">                        if (ctx != null) {</span>
 <span class="nc" id="L125">                            ctx.put(mvt);</span>
                         }
-<span class="nc" id="L127">                        break;</span>
+                        break;
                     }
                 }
             }
@@ -153,7 +153,7 @@ final class NegaScoutEngine extends AbstractEngine {
 <span class="nc bnc" id="L153" title="All 2 branches missed.">        for (final Move mvt : pCoups) {</span>
 <span class="nc" id="L154">            final MoveGenerator etat = pEtat.derive(mvt, true);</span>
 <span class="nc" id="L155">            final int note = -negascout(etat, getSearchDepthLimit() - 1,</span>
-<span class="nc" id="L156">                    MATE_VALUE, -alpha, 0);</span>
+                    MATE_VALUE, -alpha, 0);
 <span class="nc bnc" id="L157" title="All 6 branches missed.">            if ((note &gt; alpha) || ((note == alpha) &amp;&amp; RANDOMIZER.nextBoolean())) {</span>
                 // Un peu de hasard sert à partager les évaluations identiques :
                 // jeu

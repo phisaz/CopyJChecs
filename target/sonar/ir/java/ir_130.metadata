@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.BoardUI#setPiecesLF(I)V
+fr.free.jchecs.swg.PieceUI#initialize(ILjava/lang/String;)V

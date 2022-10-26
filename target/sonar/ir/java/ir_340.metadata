@@ -1,0 +1,9 @@
+fr.free.jchecs.swg.Clock#<init>(Lfr/free/jchecs/core/Game;)V
+java.awt.GridLayout#<init>(II)V
+fr.free.jchecs.swg.Clock#setTimer(Lfr/free/jchecs/core/Game;Z)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JLabel#instance-init#
+javax.swing.JLabel#<init>()V
+java.awt.GridLayout#instance-init#
+javax.swing.JPanel#instance-init#
+javax.swing.JPanel#<init>(Ljava/awt/LayoutManager;)V

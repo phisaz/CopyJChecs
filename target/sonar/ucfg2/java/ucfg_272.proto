@@ -1,9 +1,17 @@
 
-'fr.free.jchecs.swg.TaskItem#isFolded()Zã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.java¢ ¢("1*™
-1ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.java£ £("ñ
-ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.java£ £(
-""B
+Bfr.free.jchecs.swg.TaskItem#getComponent()Ljavax/swing/JComponent;_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaô ô("1*§
+1_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(π
+∂
+_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(
+%0javax.swing.JComponent"__id*/*-
+fr.free.jchecs.swg.TaskItem"
+
+_component"Å
+_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(
+
+%0javax.swing.JComponentB
 fr.free.jchecs.swg.TaskItem

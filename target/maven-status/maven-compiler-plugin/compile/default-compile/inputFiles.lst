@@ -1,86 +1,86 @@
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ResetAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PieceType.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/NegaScoutEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Player.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/UI.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PasteAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ExceptionHandler.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameSaver.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/Heuristic.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/ContextSorter.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LoadGameAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Piece.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SavePositionAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Constants.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintableBoard.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Board.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/FENUtils.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MoveGenerator.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/RandomEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/SANException.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvalPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/KillerMoveSorter.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayersPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ExitAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/FENException.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/SANUtils.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNException.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveListener.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SaveGameAsAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/CopyAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ResourceUtils.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Recorder.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/TranspositionTable.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/HelpAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SettingsPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/FENPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SaveGameAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LoadPositionAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ScoreSheet.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/Engine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PromotionDialog.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PositionSaver.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SavePositionAsAction.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LFPanel.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Start.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/DebugEngine.java
-/Users/antoniovetro/REPOSITORY GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EnhancedMiniMaxEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Square.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LFPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutDialog.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayersPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/ContextSorter.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameSaver.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MinimalHeuristic.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/FENUtils.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveEvent.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PromotionDialog.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Constants.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Start.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Clock.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNException.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MobilityHeuristic.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Piece.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/Heuristic.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Player.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AbstractEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/KillerMoveSorter.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/BoardControlHeuristic.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ExceptionHandler.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ResourceUtils.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractBoard.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AbstractUIAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/Engine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ExitAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/GameLoader.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LoadPositionAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SaveGameAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/SANUtils.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ScoreSheet.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/NegaScoutEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/MiniMaxEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PieceUI.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SwingUI.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Game.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PasteAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Move.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PositionSaver.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/tools/OpeningsBuilderStart.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/AboutAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/RandomEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/FENPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MoveGenerator.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/HelpAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/Board.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SettingsPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvalPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/MoveListener.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintPreviewDialog.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/ResetAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PlayerDialog.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/FENException.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SavePositionAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MutableBoard.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SavePositionAsAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/PrintableBoard.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/TranspositionTable.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EngineFactory.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/UI.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/CapturesPanel.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PieceType.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/AbstractMoveGenerator.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/Recorder.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/XBoardAdapter.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/SaveGameAsAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/EvenOddRowsRenderer.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/HistorySorter.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/CopyAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/SANException.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/EndgamesWSRequest.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/LoadGameAction.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/AlphaBetaEngine.java
+/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/ai/DebugEngine.java

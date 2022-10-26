@@ -1,26 +1,26 @@
 
-Afr.free.jchecs.swg.BoardUI#getPreferredSize()Ljava/awt/Dimension;Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaò ò(%"1*Í
-1Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(&è
-å
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó((	
+Afr.free.jchecs.swg.BoardUI#getPreferredSize()Ljava/awt/Dimension;^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaò ò(%"1*ë
+1^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó(&»
+¸
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaó ó((	
 %0int"+fr.free.jchecs.swg.BoardUI#getSideLength()I*
-fr.free.jchecs.swg.BoardUI¾»
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô(
-%1java.awt.Dimension"java.awt.Dimensionâ
-ß
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô((
+fr.free.jchecs.swg.BoardUI‘Ž
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô(
+%1java.awt.Dimension"java.awt.Dimensionµ
+²
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô((
 %2"java.awt.Dimension#<init>(II)V*
 
 %1java.awt.Dimension*
 ""*
-"""©
-Š
-~/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô()
+"""|
+^
+R/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/BoardUI.javaô ô()
 
 %1java.awt.DimensionB
 fr.free.jchecs.swg.BoardUI

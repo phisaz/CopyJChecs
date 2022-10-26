@@ -1,111 +1,88 @@
 
-~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaK! K(,"18*Ë
-13è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaV! V(%…
-∆
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaV V(&$
-cstjava.lang.reflect.Constructor"__id*
-""*
-12*˚
-3è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javac. c(/ﬁ
-€
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javac c(/(
-res!fr.free.jchecs.core.MoveGenerator"__id*
-
-ojava.lang.Object*
-1*Ó
-15è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+Ã
-…
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
-clsjava.lang.Class"__id*
-
-%0java.lang.Class*
-13
-1*Â
-4è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6≈
-¬
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
-ojava.lang.Object"__id*
-
-%9	!capture!*
-3
-1*ç
-5è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(Ì
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaa a(6
-%9	!capture!"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*&
-$
-cstjava.lang.reflect.Constructor*,
-*
-pInitialStatefr.free.jchecs.core.Board2 newInstance([Ljava/lang/Object;)*
-4*¿
-17è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(°
-û
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaQ Q(+
-%0java.lang.Class"<java.lang.Class#forName(Ljava/lang/String;)Ljava/lang/Class;*"
-java.lang.Class* 
-
-
-pClassNamejava.lang.String*
-15*◊
-6è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(∫
-∑
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java_ _(
-ojava.lang.Object"__id*
-""*
-5*™
-18è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M( Õ
- 
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaM M(!(
+úfr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java4  4('"2*‡
+2b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java5 5( ü
+ú
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java5 5(!(
 res!fr.free.jchecs.core.MoveGenerator"__id*
-""ª
-∏
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaO O(
-clsjava.lang.Class"__id*
-""*
-17*à
-8è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=Ë
-Â
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=$
-cstjava.lang.reflect.Constructor"__id*%
-#
-%3java.lang.reflect.Constructor*
-6
-1*Å
-12è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(„‡
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaX X(=#
-%3java.lang.reflect.Constructor"Yjava.lang.Class#getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*
+""£
+†
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java7 7(,
+%0&fr.free.jchecs.core.BoardFactory$State"__id*
+""£
+†
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java: :(,
+%1&fr.free.jchecs.core.BoardFactory$State"__id*
+""*	
+4
+5
+1*‹
+4b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java: <(âÜ
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java;" ;(6
+%5java.lang.String"Ffr.free.jchecs.core.BoardFactory$Type#getClassName()Ljava/lang/String;*0
+.
+pType%fr.free.jchecs.core.BoardFactory$Type2getClassName()û
+õ
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java;8 ;(K'
+%6!fr.free.jchecs.core.MoveGenerator"__id*
+""˚
+¯
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java; ;(L'
+%7!fr.free.jchecs.core.MoveGenerator"~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;*$""
+ fr.free.jchecs.core.BoardFactory*
 
-clsjava.lang.Class*
-""2*getDeclaredConstructor([Ljava/lang/Class;)*
-8*÷
-1è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javak k("æ
-è
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javak k(*
+%5java.lang.String*)
+'
+%6!fr.free.jchecs.core.MoveGenerator¬
+ø
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java; ;(L(
+res!fr.free.jchecs.core.MoveGenerator"__id*)
+'
+%7!fr.free.jchecs.core.MoveGenerator*
+1*‹
+5b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java7 9(âÜ
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java8" 8(6
+%2java.lang.String"Ffr.free.jchecs.core.BoardFactory$Type#getClassName()Ljava/lang/String;*0
+.
+pType%fr.free.jchecs.core.BoardFactory$Type2getClassName()û
+õ
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java88 8(H'
+%3!fr.free.jchecs.core.MoveGenerator"__id*
+""˚
+¯
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java8 8(I'
+%4!fr.free.jchecs.core.MoveGenerator"~fr.free.jchecs.core.BoardFactory#newInstance(Ljava/lang/String;Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;*$""
+ fr.free.jchecs.core.BoardFactory*
+
+%2java.lang.String*)
+'
+%3!fr.free.jchecs.core.MoveGenerator¬
+ø
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.java8 8(I(
+res!fr.free.jchecs.core.MoveGenerator"__id*)
+'
+%4!fr.free.jchecs.core.MoveGenerator*
+1*˙
+1b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaA A("ê
+b
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/BoardFactory.javaA A(*
 (
-res!fr.free.jchecs.core.MoveGenerator:
-
-pClassNamejava.lang.String:*
-pInitialStatefr.free.jchecs.core.BoardB$""
+res!fr.free.jchecs.core.MoveGenerator:.
+pType%fr.free.jchecs.core.BoardFactory$Type:/
+pEtat&fr.free.jchecs.core.BoardFactory$StateB$""
  fr.free.jchecs.core.BoardFactory

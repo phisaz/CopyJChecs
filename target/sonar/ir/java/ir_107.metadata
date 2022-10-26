@@ -1,0 +1,8 @@
+fr.free.jchecs.ai.AlphaBetaEngine#searchMoveFor(Lfr/free/jchecs/core/MoveGenerator;[Lfr/free/jchecs/core/Move;)Lfr/free/jchecs/core/Move;
+fr.free.jchecs.ai.AlphaBetaEngine#alphabeta(Lfr/free/jchecs/core/MoveGenerator;III)I
+java.util.Arrays#sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+fr.free.jchecs.ai.AbstractEngine#getSearchDepthLimit()I
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+fr.free.jchecs.ai.AbstractEngine#setScore(I)V
+fr.free.jchecs.ai.AbstractEngine#getMoveSorter()Ljava/util/Comparator;
+fr.free.jchecs.ai.KillerMoveSorter#clear()V

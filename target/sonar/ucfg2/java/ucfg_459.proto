@@ -1,142 +1,1181 @@
 
-afr.free.jchecs.ai.StaticMoveSorter#compare(Lfr/free/jchecs/core/Move;Lfr/free/jchecs/core/Move;)Ië
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8 8("startingBlock*∂
-2ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java@ @("ú
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java@ @(
-""*§
-startingBlockë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8 8(:Á
-‰
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java7 7(
-%12"
-__annotate*
-java.lang.Override*#
-!
-pMvt1fr.free.jchecs.core.Move—
-Œ
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java8" 8('!
-pMvt1fr.free.jchecs.core.Move"__annotation*
-
-%12Á
-‰
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java7 7(
-%13"
-__annotate*
-java.lang.Override*#
-!
-pMvt2fr.free.jchecs.core.Move—
-Œ
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java84 8(9!
-pMvt2fr.free.jchecs.core.Move"__annotation*
-
-%13*
-8*∂
-4ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java> >("ú
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java> >(
-""*ˆ
-6ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(©¶
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(#
-%2fr.free.jchecs.core.Piece">fr.free.jchecs.core.Move#getPiece()Lfr/free/jchecs/core/Piece;*#
-!
-pMvt2fr.free.jchecs.core.Move2
-getPiece()Æ´
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(-#
-%3fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*!
-
-%2fr.free.jchecs.core.Piece2	getType()Ä˝
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(8	
-%4int")fr.free.jchecs.core.PieceType#getValue()I*%
-#
-%3fr.free.jchecs.core.PieceType2
-getValue()©¶
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(K
-%5fr.free.jchecs.core.Piece">fr.free.jchecs.core.Move#getPiece()Lfr/free/jchecs/core/Piece;*#
-!
-pMvt1fr.free.jchecs.core.Move2
-getPiece()Æ´
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(U#
-%6fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*!
-
-%5fr.free.jchecs.core.Piece2	getType()Ä˝
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java<; <(`	
-%7int")fr.free.jchecs.core.PieceType#getValue()I*%
-#
-%6fr.free.jchecs.core.PieceType2
-getValue()"ú
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java< <(a
-""*Ÿ	
-8ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9("Ø¨
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9(0
-%0fr.free.jchecs.core.Piece"Afr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;*#
-!
-pMvt1fr.free.jchecs.core.Move2getCaptured()Â
-‚
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java9 9(1#
-prise1fr.free.jchecs.core.Piece"__id*!
-
-%0fr.free.jchecs.core.PieceØ¨
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java: :(0
-%1fr.free.jchecs.core.Piece"Afr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;*#
-!
-pMvt2fr.free.jchecs.core.Move2getCaptured()Â
-‚
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.java: :(1#
-prise2fr.free.jchecs.core.Piece"__id*!
-
-%1fr.free.jchecs.core.Piece*
-2
-4
-6
-1*©
-1ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(≤Ø
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(#
-%8fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*%
-#
-prise2fr.free.jchecs.core.Piece2	getType()Ä˝
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(*	
-%9int")fr.free.jchecs.core.PieceType#getValue()I*%
-#
-%8fr.free.jchecs.core.PieceType2
-getValue()≥∞
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC- C(=$
-%10fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;*%
-#
-prise1fr.free.jchecs.core.Piece2	getType()Çˇ
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC- C(H
-
-%11int")fr.free.jchecs.core.PieceType#getValue()I*&
+Ifr.free.jchecs.core.ArrayBoard#isAttacked(Lfr/free/jchecs/core/Square;Z)Zb
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÖ Ö("startingBlock*Ç
+24b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÑ Ñ(É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÑ Ñ(
+%75int[]"__id*
+""*
+7
+10
+22
+11
+1*ø
+68b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaƒ ƒ( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaƒ ƒ('
+%35boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+64
+67*÷
+25b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˛ ˛("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˛ ˛( 
+""*ï
+26b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˝ ˝(˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˝ ˝('$
+%73fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˝+ ˝(1$
+%74fr.free.jchecs.core.PieceType"__id*
+""*
+24
+25
+32*√
+27b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¸$ ¸(% «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¸$ ¸(/
+%72boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+24
+26
+32*Å
+28b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˚ ˚(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˚ ˚($
+%69fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˚ ˚("
+%70fr.free.jchecs.core.Piece[]"
+__arrayGet*&
 $
-%10fr.free.jchecs.core.PieceType2
-getValue()"ú
-ë
-Ü/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/ai/StaticMoveSorter.javaC C(I
-"":!
-pMvt1fr.free.jchecs.core.Move:!
-pMvt2fr.free.jchecs.core.MoveB&$
-"fr.free.jchecs.ai.StaticMoveSorter
+%69fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˚ ˚(! 
+%71fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%70fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˚ ˚(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%71fr.free.jchecs.core.Piece*
+24
+27
+32*˘
+29b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˙= ˙(>Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˙A ˙(K
+
+%68int"__id*
+""*
+24
+28
+32*Å
+70b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¬ ¬(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¬ ¬($
+%32fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¬ ¬("
+%33fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%32fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¬ ¬(! 
+%34fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%33fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¬ ¬(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%34fr.free.jchecs.core.Piece*
+68
+70
+64*˘
+30b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˙) ˙(*Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˙- ˙(7
+
+%67int"__id*
+""*
+24
+29
+32*é
+74b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaΩ Ω(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaΩ Ω(
+pfr.free.jchecs.core.Piece"__id*
+""*
+68
+70
+64*÷
+75b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaπ π("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaπ π(
+""*Ç
+32b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¯ ¯(É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¯ ¯(#
+%65int[]"__id*
+""É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java˘ ˘(#
+%66int[]"__id*
+""*
+24
+30
+32*ê
+76b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∏  ∏(!õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∏% ∏(*$
+%31fr.free.jchecs.core.PieceType"__id*
+""*
+74
+75*Õ
+77b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∑  ∑(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∑  ∑(+$
+%29fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∑ ∑(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%29fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∏ ∏($
+%30fr.free.jchecs.core.PieceType"__id*
+""*
+75
+76*ø
+78b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∂ ∂( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∂ ∂('
+%28boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+74
+77*¯
+34b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaˆ ˆ("É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaˆ ˆ("
+%64int[]"__id*
+""*
+24
+32*÷
+35b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÒ Ò("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÒ Ò(
+""*ê
+36b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java" (#õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java' (,$
+%63fr.free.jchecs.core.PieceType"__id*
+""*
+35
+34*Õ
+37b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÔ  Ô(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÔ  Ô(+$
+%61fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÔ Ô(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%61fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java ($
+%62fr.free.jchecs.core.PieceType"__id*
+""*
+35
+36*ø
+38b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÓ Ó( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÓ Ó('
+%60boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+37
+34*¯
+100b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaô ô(
+}
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaô ô(	
+%9int"__id*
+""*
+92
+96
+98*à
+101b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javañ ñ(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javañ ñ(
+pfr.free.jchecs.core.Piece"__id*
+""*
+100*◊
+102b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaí í("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaí í(
+""*í
+103b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaë  ë(!ö
+ó
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaë% ë(*#
+%8fr.free.jchecs.core.PieceType"__id*
+""*
+
+101
+102*Õ
+104b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê  ê(!˝˙
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê  ê(+#
+%6fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()∏
+µ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaê ê(,"
+tfr.free.jchecs.core.PieceType"__id*%
+#
+%6fr.free.jchecs.core.PieceTypeö
+ó
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaë ë(#
+%7fr.free.jchecs.core.PieceType"__id*
+""*
+
+102
+103*¡
+105b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaè è(…∆
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaè è('
+%5boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+
+101
+104*ˇ
+107b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaç ç(√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaç ç(#
+%2fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces≈
+¬
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaç ç(!
+%3fr.free.jchecs.core.Piece[]"
+__arrayGet*%
+#
+%2fr.free.jchecs.core.Piece[][]*
+""¡
+æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaç ç("
+%4fr.free.jchecs.core.Piece"
+__arrayGet*#
+!
+%3fr.free.jchecs.core.Piece[]*
+""∞
+≠
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaç ç("
+pfr.free.jchecs.core.Piece"__id*!
+
+%4fr.free.jchecs.core.Piece*
+101
+105
+107*˘
+80b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¥ ¥(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¥ ¥($
+%25fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¥ ¥("
+%26fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%25fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¥ ¥(" 
+%27fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%26fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¥ ¥("
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%27fr.free.jchecs.core.Piece*
+82*˘
+82b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java≥ ≥(Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java≥ ≥(
+
+%24int"__id*
+""*
+80
+74
+78*Ü
+83b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∞ ∞(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∞ ∞(
+pfr.free.jchecs.core.Piece"__id*
+""*
+82*÷
+84b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¨ ¨("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¨ ¨(
+""*˘
+40b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÏ Ï(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÏ Ï($
+%57fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÏ Ï("
+%58fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%57fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÏ Ï(! 
+%59fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%58fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÏ Ï(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%59fr.free.jchecs.core.Piece*
+43*ê
+85b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java´  ´(!õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java´% ´(*$
+%23fr.free.jchecs.core.PieceType"__id*
+""*
+83
+84*Õ
+86b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java™  ™(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java™  ™(+$
+%21fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java™ ™(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%21fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java´ ´($
+%22fr.free.jchecs.core.PieceType"__id*
+""*
+84
+85*ø
+87b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java© ©( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java© ©('
+%20boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+83
+86*˘
+43b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÎ Î(Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÎ Î(
+
+%56int"__id*
+""*
+38
+40
+34*Ü
+44b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÁ Á(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÁ Á(
+pfr.free.jchecs.core.Piece"__id*
+""*
+43*Å
+89b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaß ß(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaß ß($
+%17fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaß ß("
+%18fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%17fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaß ß(" 
+%19fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%18fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaß ß("
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%19fr.free.jchecs.core.Piece*
+83
+87
+89*÷
+45b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java„ „("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java„ „(
+""*ê
+46b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‚" ‚(#õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‚' ‚(,$
+%55fr.free.jchecs.core.PieceType"__id*
+""*
+44
+45*Õ
+47b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java·  ·(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java·  ·(+$
+%53fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java· ·(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%53fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‚ ‚($
+%54fr.free.jchecs.core.PieceType"__id*
+""*
+46
+45*ø
+48b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‡ ‡( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‡ ‡('
+%52boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+47
+44*∞
+110b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÜ Ü(Ã…
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÜ Ü()	
+%0int"%fr.free.jchecs.core.Square#getFile()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getFile()Ã…
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaá á()	
+%1int"%fr.free.jchecs.core.Square#getRank()I*&
+$
+pCiblefr.free.jchecs.core.Square2	getRank()ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â(
+pfr.free.jchecs.core.Piece"__id*
+""*
+101
+105
+107*é
+92b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java£ £(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java£ £(
+pfr.free.jchecs.core.Piece"__id*
+""*
+83
+87
+89*÷
+93b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaü ü("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaü ü(
+""*ê
+94b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaû  û(!õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaû% û(*$
+%16fr.free.jchecs.core.PieceType"__id*
+""*
+92
+93*˘
+50b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaﬁ ﬁ(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaﬁ ﬁ($
+%49fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaﬁ ﬁ("
+%50fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%49fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaﬁ ﬁ(! 
+%51fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%50fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaﬁ ﬁ(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%51fr.free.jchecs.core.Piece*
+53*Õ
+95b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaù  ù(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaù  ù(+$
+%14fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaù ù(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%14fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaû û($
+%15fr.free.jchecs.core.PieceType"__id*
+""*
+93
+94*ø
+96b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú ú( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú ú('
+%13boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+92
+95*˘
+52b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java›$ ›(%Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java›( ›(2
+
+%48int"__id*
+""*
+48
+50
+44*˘
+53b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java› ›(Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java› ›(
+
+%47int"__id*
+""*
+48
+52
+44*˙
+98b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö($
+%10fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö("
+%11fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%10fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö(" 
+%12fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%11fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö("
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%12fr.free.jchecs.core.Piece*
+100*Û
+10b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï ï(!Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï$ ï(.
+
+%90int"__id*
+""*
+9
+1*Ü
+54b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaŸ Ÿ(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaŸ Ÿ(
+pfr.free.jchecs.core.Piece"__id*
+""*
+53*‚
+11b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaî$ î(+ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaî$ î(+$
+%86fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaî$ î(5"
+%87fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%86fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaî$ î(? 
+%88fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%87fr.free.jchecs.core.Piece[]*
+""ó
+î
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaîC î(M 
+%89fr.free.jchecs.core.Piece"__id*
+""*
+8
+10*÷
+55b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java’ ’("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java’ ’(
+""*ê
+56b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‘" ‘(#õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‘' ‘(,$
+%46fr.free.jchecs.core.PieceType"__id*
+""*
+54
+55*Õ
+57b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java”  ”(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java”  ”(+$
+%44fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java” ”(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%44fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java‘ ‘($
+%45fr.free.jchecs.core.PieceType"__id*
+""*
+55
+56*ø
+58b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java“ “( «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java“ “('
+%43boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+57
+54*÷
+15b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaå å("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaå å( 
+""*ü
+16b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaã ã(˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaã ã('$
+%84fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaã+ ã(/$
+%85fr.free.jchecs.core.PieceType"__id*
+""*
+15
+7
+10
+22
+11
+1*Õ
+17b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaä$ ä(% «
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaä$ ä(/
+%83boolean"$fr.free.jchecs.core.Piece#isWhite()Z* 
+
+pfr.free.jchecs.core.Piece2	isWhite()*
+16
+7
+10
+22
+11
+1*ã
+18b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â($
+%80fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â("
+%81fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%80fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â(! 
+%82fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%81fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaâ â(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%82fr.free.jchecs.core.Piece*
+17
+7
+10
+22
+11
+1*É
+19b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaà= à(>Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaàA à(K
+
+%79int"__id*
+""*
+18
+7
+10
+22
+11
+1*’
+1b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¢ ¢("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java¢ ¢(
+""*’
+2b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaù ù("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaù ù( 
+""*Ê
+3b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú8 ú(?≈
+¬
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú8 ú(?%
+%101fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces…
+∆
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú8 ú(I#
+%102fr.free.jchecs.core.Piece[]"
+__arrayGet*'
+%
+%101fr.free.jchecs.core.Piece[][]*
+""≈
+¬
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú8 ú(S!
+%103fr.free.jchecs.core.Piece"
+__arrayGet*%
+#
+%102fr.free.jchecs.core.Piece[]*
+""ò
+ï
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaúW ú(a!
+%104fr.free.jchecs.core.Piece"__id*
+""*
+2
+1*‡
+startingBlockb
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÖ Ö(Jª
+∏
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÑ Ñ(
+%105"
+__annotate*
+java.lang.Override*&
+$
+pCiblefr.free.jchecs.core.Square•
+¢
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÖ+ Ö(1$
+pCiblefr.free.jchecs.core.Square"__annotation*
+
+%105*
+110*Û
+4b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú ú(!Å
+
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaú$ ú(.
+%100int"__id*
+""*
+3
+1*‡
+5b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaõ$ õ(+ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaõ$ õ(+$
+%96fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaõ$ õ(5"
+%97fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%96fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaõ$ õ(? 
+%98fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%97fr.free.jchecs.core.Piece[]*
+""ó
+î
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaõC õ(M 
+%99fr.free.jchecs.core.Piece"__id*
+""*
+2
+4*ı
+7b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö(Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaö ö(!
+
+%95int"__id*
+""*	
+4
+5
+1*’
+8b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javañ ñ("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javañ ñ( 
+""*‡
+9b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï8 ï(?ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï8 ï(?$
+%91fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï8 ï(I"
+%92fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%91fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaï8 ï(S 
+%93fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%92fr.free.jchecs.core.Piece[]*
+""ó
+î
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaïW ï(a 
+%94fr.free.jchecs.core.Piece"__id*
+""*
+8
+1*Å
+60b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java– –(ƒ
+¡
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java– –($
+%40fr.free.jchecs.core.Piece[][]"__id*/*- 
+fr.free.jchecs.core.ArrayBoard"	
+_pieces«
+ƒ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java– –("
+%41fr.free.jchecs.core.Piece[]"
+__arrayGet*&
+$
+%40fr.free.jchecs.core.Piece[][]*
+""√
+¿
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java– –(! 
+%42fr.free.jchecs.core.Piece"
+__arrayGet*$
+"
+%41fr.free.jchecs.core.Piece[]*
+""±
+Æ
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java– –(!
+pfr.free.jchecs.core.Piece"__id*"
+ 
+%42fr.free.jchecs.core.Piece*
+58
+62
+54*˘
+62b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaœ œ(Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaœ  œ(*
+
+%39int"__id*
+""*
+58
+60
+54*É
+20b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaà) à(*Ä
+~
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaà- à(7
+
+%78int"__id*
+""*
+7
+19
+10
+22
+11
+1*é
+64b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÀ À(ï
+í
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÀ À(
+pfr.free.jchecs.core.Piece"__id*
+""*
+58
+62
+54*÷
+65b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java« «("l
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java« «(
+""*å
+22b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÜ Ü(É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaÜ Ü(!
+%76int[]"__id*
+""É
+Ä
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.javaá á(!
+%77int[]"__id*
+""*
+7
+20
+10
+22
+11
+1*ê
+66b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∆" ∆(#õ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∆' ∆(,$
+%38fr.free.jchecs.core.PieceType"__id*
+""*
+64
+65*Õ
+67b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java≈  ≈(!˛˚
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java≈  ≈(+$
+%36fr.free.jchecs.core.PieceType"Bfr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;* 
+
+pfr.free.jchecs.core.Piece2	getType()π
+∂
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java≈ ≈(,"
+tfr.free.jchecs.core.PieceType"__id*&
+$
+%36fr.free.jchecs.core.PieceTypeõ
+ò
+b
+V/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/ArrayBoard.java∆ ∆($
+%37fr.free.jchecs.core.PieceType"__id*
+""*
+65
+66:$
+pCiblefr.free.jchecs.core.Square:
+""B" 
+fr.free.jchecs.core.ArrayBoard

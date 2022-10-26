@@ -1,0 +1,5 @@
+fr.free.jchecs.core.X88Board#getPawnTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getRank()I
+fr.free.jchecs.core.X88Board#addPawnTargets(IZ)V

@@ -51,7 +51,7 @@ final class FENPanel {
 <span class="nc" id="L51">        final JPanel fond = new JPanel(new BorderLayout(4, 4));</span>
 
 <span class="nc" id="L53">        fond.add(new JLabel(getI18NString(&quot;panel.fen.title&quot;)),</span>
-<span class="nc" id="L54">                BorderLayout.WEST);</span>
+                BorderLayout.WEST);
 <span class="nc" id="L55">        final JTextField champ = new JTextField(pPartie.getFENPosition());</span>
 <span class="nc" id="L56">        champ.setEditable(false);</span>
 <span class="nc" id="L57">        fond.add(champ, BorderLayout.CENTER);</span>
@@ -59,7 +59,7 @@ final class FENPanel {
 <span class="nc" id="L59">        _component = fond;</span>
 
 <span class="nc" id="L61">        pPartie.addPropertyChangeListener(&quot;position&quot;, new FENPanelListener(</span>
-<span class="nc" id="L62">                pPartie, champ));</span>
+                pPartie, champ));
 <span class="nc" id="L63">    }</span>
 
     /**

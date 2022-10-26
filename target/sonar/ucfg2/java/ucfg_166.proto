@@ -1,26 +1,52 @@
 
-Ffr.free.jchecs.core.X88Board#getPieceAt(II)Lfr/free/jchecs/core/Piece;ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≤ ≤("1*ß
-1ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(Î
-Ë
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(!
+`fr.free.jchecs.core.X88Board#getPieceAt(Lfr/free/jchecs/core/Square;)Lfr/free/jchecs/core/Piece;`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java• •("startingBlock*“
+startingBlock`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java• •(/∂
+≥
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java§ §(
+%4"
+__annotate*
+java.lang.Override*%
+#
+pCasefr.free.jchecs.core.Square†
+ù
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java•) •(.#
+pCasefr.free.jchecs.core.Square"__annotation*
+
+%4*
+1*á
+1`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶ ¶(Ω
+∫
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶ ¶(!
 %0fr.free.jchecs.core.Piece[]"__id*-*+
 fr.free.jchecs.core.X88Board"	
-_piecesÌ
-Í
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(.
-%1fr.free.jchecs.core.Piece"
+_pieces…∆
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶ ¶(&	
+%1int"%fr.free.jchecs.core.Square#getRank()I*%
+#
+pCasefr.free.jchecs.core.Square2	getRank()…∆
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶. ¶(=	
+%2int"%fr.free.jchecs.core.Square#getFile()I*%
+#
+pCasefr.free.jchecs.core.Square2	getFile()ø
+º
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶ ¶(>
+%3fr.free.jchecs.core.Piece"
 __arrayGet*#
 !
 %0fr.free.jchecs.core.Piece[]*
-"""≥
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java≥ ≥(/!
+"""Ö
+`
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/X88Board.java¶ ¶(?!
 
-%1fr.free.jchecs.core.Piece:
-"":
-""B 
+%3fr.free.jchecs.core.Piece:#
+pCasefr.free.jchecs.core.SquareB 
 fr.free.jchecs.core.X88Board

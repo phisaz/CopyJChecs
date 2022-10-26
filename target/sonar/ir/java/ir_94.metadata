@@ -1,0 +1,6 @@
+fr.free.jchecs.swg.CapturesPanel#<init>(Lfr/free/jchecs/core/Game;Lfr/free/jchecs/swg/PieceUI;Z)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JLabel#instance-init#
+javax.swing.BorderFactory#createLoweredBevelBorder()Ljavax/swing/border/Border;
+fr.free.jchecs.swg.CapturesPanel#initCapturesPaint()V
+javax.swing.JLabel#<init>()V

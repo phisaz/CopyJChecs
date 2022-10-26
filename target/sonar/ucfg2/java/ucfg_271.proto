@@ -1,17 +1,9 @@
 
-Bfr.free.jchecs.swg.TaskItem#getComponent()Ljavax/swing/JComponent;ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaô ô("1*´
-1ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(Ê
-„
-ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(
-%0javax.swing.JComponent"__id*/*-
-fr.free.jchecs.swg.TaskItem"
-
-_component"Æ
-ã
-/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaö ö(
-
-%0javax.swing.JComponentB
++fr.free.jchecs.swg.TaskItem#getBestWidth()I_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaê ê("1*œ
+1_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaë ë("i
+_
+S/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/swg/TaskItem.javaë ë(
+""B
 fr.free.jchecs.swg.TaskItem

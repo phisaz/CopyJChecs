@@ -1,0 +1,2 @@
+fr.free.jchecs.core.Game#getCurrentMove()Lfr/free/jchecs/core/Move;
+fr.free.jchecs.core.Game#getCurrentMoveIndex()I

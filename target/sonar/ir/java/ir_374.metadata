@@ -1,0 +1,3 @@
+fr.free.jchecs.core.Game#<init>()V
+fr.free.jchecs.core.Game#resetTo(Lfr/free/jchecs/core/MoveGenerator;)V
+fr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;

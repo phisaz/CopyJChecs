@@ -1,0 +1,3 @@
+fr.free.jchecs.core.Player#instance-init#
+java.beans.PropertyChangeSupport#instance-init#
+java.beans.PropertyChangeSupport#<init>(Ljava/lang/Object;)V

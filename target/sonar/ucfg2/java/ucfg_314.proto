@@ -1,40 +1,31 @@
 
-2fr.free.jchecs.core.MailboxBoard#getPiecesCount()Ië
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaŒ Œ("5*Ü
-4ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java“ “(Û
-
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java“ “(!
-%2fr.free.jchecs.core.Piece[]"__id*1*/"
+Jfr.free.jchecs.core.MailboxBoard#getPieceAt(II)Lfr/free/jchecs/core/Piece;d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.javaƒ ƒ("1*á
+1d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≈ ≈(≈
+¬
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≈ ≈(!
+%0fr.free.jchecs.core.Piece[]"__id*1*/"
  fr.free.jchecs.core.MailboxBoard"	
-_piecesÒ
-Ó
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java“ “(
-%3fr.free.jchecs.core.Piece"
+_piecesÅ
+
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≈+ ≈(5	
+%1int"__id*
+""√
+¿
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≈ ≈(6
+%2fr.free.jchecs.core.Piece"
 __arrayGet*#
 !
-%2fr.free.jchecs.core.Piece[]*
-""*
-5*Ö
-5ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java— —(∞
-≠
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java— —(&	
-%0int"__id*
-""∞
-≠
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java—) —(3	
-%1int"__id*
-""*
-4
-1*∂
-1ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java◊ ◊("ú
-ë
-Ñ/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java◊ ◊(
+%0fr.free.jchecs.core.Piece[]*
+"""â
+d
+X/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/MailboxBoard.java≈ ≈(7!
+
+%2fr.free.jchecs.core.Piece:
+"":
 ""B$"
  fr.free.jchecs.core.MailboxBoard

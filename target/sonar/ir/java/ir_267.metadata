@@ -1,0 +1,5 @@
+fr.free.jchecs.swg.ExitAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.ResourceUtils#getI18NString(Ljava/lang/String;)Ljava/lang/String;
+fr.free.jchecs.swg.AbstractUIAction#getMainFrame()Ljavax/swing/JFrame;
+javax.swing.JOptionPane#showConfirmDialog(Ljava/awt/Component;Ljava/lang/Object;Ljava/lang/String;IILjavax/swing/Icon;)I

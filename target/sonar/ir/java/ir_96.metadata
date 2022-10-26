@@ -1,0 +1,6 @@
+fr.free.jchecs.swg.CapturesPanel#initCapturesPaint()V
+fr.free.jchecs.core.Move#getCaptured()Lfr/free/jchecs/core/Piece;
+javax.swing.ImageIcon#<init>(Ljava/awt/Image;)V
+fr.free.jchecs.swg.PieceUI#getSmallImage(Lfr/free/jchecs/core/Piece;)Ljava/awt/Image;
+fr.free.jchecs.core.Piece#isWhite()Z
+javax.swing.ImageIcon#instance-init#

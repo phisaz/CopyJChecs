@@ -111,11 +111,11 @@ final class TranspositionTable {
 <span class="nc bnc" id="L111" title="All 2 branches missed.">                if (_depths[pos] &gt;= pProfondeur) {</span>
 <span class="nc" id="L112">                    final int type = _types[pos];</span>
 <span class="nc" id="L113">                    final int val = _values[pos];</span>
-<span class="nc bnc" id="L114" title="All 6 branches missed.">                    if ((type == EXACT) || ((type == ALPHA) &amp;&amp; (val &lt;= pAlpha))</span>
-<span class="nc bnc" id="L115" title="All 4 branches missed.">                            || ((type == BETA) &amp;&amp; (val &gt;= pBeta))) {</span>
+<span class="nc bnc" id="L114" title="All 10 branches missed.">                    if ((type == EXACT) || ((type == ALPHA) &amp;&amp; (val &lt;= pAlpha))</span>
+                            || ((type == BETA) &amp;&amp; (val &gt;= pBeta))) {
 <span class="nc" id="L116">                        return val;</span>
                     }
-                }
+<span class="nc" id="L118">                }</span>
                 break;
             }
 <span class="nc" id="L121">            pos++;</span>
@@ -143,8 +143,8 @@ final class TranspositionTable {
 <span class="nc" id="L143">        final int capacite = _hashCodes.length;</span>
 <span class="nc" id="L144">        int pos = Math.abs(cleEtat % capacite);</span>
 <span class="nc" id="L145">        int cle = _hashCodes[pos];</span>
-<span class="nc bnc" id="L146" title="All 6 branches missed.">        for (int i = MAX_COLLISIONS; (cle != 0) &amp;&amp; (cle != cleEtat)</span>
-<span class="nc" id="L147">                &amp;&amp; (--i &gt;= 0); /*</span>
+<span class="nc" id="L146">        for (int i = MAX_COLLISIONS; (cle != 0) &amp;&amp; (cle != cleEtat)</span>
+<span class="nc bnc" id="L147" title="All 6 branches missed.">                &amp;&amp; (--i &gt;= 0); /*</span>
 								 * Pré- décrémenté
 								 */) {
 <span class="nc" id="L150">            pos++;</span>

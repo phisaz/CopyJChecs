@@ -1,0 +1,6 @@
+fr.free.jchecs.swg.EvalPanel#<init>(Lfr/free/jchecs/core/Game;)V
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+fr.free.jchecs.core.Game#addPropertyChangeListener(Ljava/lang/String;Ljava/beans/PropertyChangeListener;)V
+javax.swing.JPanel#<init>()V
+javax.swing.JLabel#instance-init#
+javax.swing.JPanel#instance-init#

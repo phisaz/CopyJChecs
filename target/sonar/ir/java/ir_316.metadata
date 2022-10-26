@@ -1,0 +1,5 @@
+fr.free.jchecs.core.MailboxBoard#getQueenTargets(Lfr/free/jchecs/core/Square;Z)[Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.MailboxBoard#addRookTargets(IZ)V
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Square#getIndex()I
+fr.free.jchecs.core.MailboxBoard#addBishopTargets(IZ)V

@@ -1,0 +1,4 @@
+fr.free.jchecs.ai.MinimalHeuristic#evaluate(Lfr/free/jchecs/core/MoveGenerator;Z)I
+fr.free.jchecs.core.PieceType#getValue()I
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Piece#isWhite()Z

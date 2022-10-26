@@ -39,7 +39,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
     /**
      * Temps (en ms) alloué à un joueur, pour une partie.
      */
-<span class="fc" id="L42">    private static final long GAME_DURATION = 15 * 60 * 1000;</span>
+    private static final long GAME_DURATION = 15 * 60 * 1000;
 
     /**
      * Valeur courante du compteur de temps des noirs.
@@ -55,7 +55,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
      * Support des propriétés liées.
      */
 <span class="fc" id="L57">    private final PropertyChangeSupport _propertyChangeSupport = new PropertyChangeSupport(</span>
-<span class="fc" id="L58">            this);</span>
+            this);
 
     /**
      * Valeur courante du compteur de temps des blancs.
@@ -232,15 +232,15 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="nc bnc" id="L232" title="All 2 branches missed.">            if (etat.isInCheck(trait)) {</span>
 <span class="nc bnc" id="L233" title="All 2 branches missed.">                if (trait) {</span>
 <span class="nc" id="L234">                    res = State.BLACK_MATES;</span>
-<span class="nc" id="L235">                } else {</span>
+                } else {
 <span class="nc" id="L236">                    res = State.WHITE_MATES;</span>
                 }
-<span class="nc" id="L238">            } else {</span>
+            } else {
 <span class="nc" id="L239">                res = State.STALEMATE;</span>
             }
 <span class="pc bpc" id="L241" title="1 of 2 branches missed.">        } else if (etat.getHalfmoveCount() &gt; 50) {</span>
 <span class="nc" id="L242">            res = State.DRAWN_BY_50_MOVE_RULE;</span>
-<span class="nc" id="L243">        } else {</span>
+        } else {
 <span class="fc" id="L244">            final MoveGenerator enCours = getBoard();</span>
 <span class="fc" id="L245">            int rep = 0;</span>
 <span class="fc bfc" id="L246" title="All 2 branches covered.">            for (int i = 0; i &lt; _currentPosition; i++) {</span>
@@ -378,7 +378,7 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
     public void removePropertyChangeListener(final String pPropriete,
                                              final PropertyChangeListener pEcouteur) {
 <span class="nc" id="L380">        _propertyChangeSupport.removePropertyChangeListener(pPropriete,</span>
-<span class="nc" id="L381">                pEcouteur);</span>
+                pEcouteur);
 <span class="nc" id="L382">    }</span>
 
     /**
@@ -412,47 +412,47 @@ import static fr.free.jchecs.core.SANUtils.toSAN;
 <span class="fc" id="L412">                    final long time = System.currentTimeMillis();</span>
 <span class="pc bpc" id="L413" title="1 of 2 branches missed.">                    if (getBoard().isWhiteActive()) {</span>
 <span class="nc" id="L414">                        _whiteTimer -= time - _lastTimerTick;</span>
-<span class="nc" id="L415">                    } else {</span>
+                    } else {
 <span class="fc" id="L416">                        _blackTimer -= time - _lastTimerTick;</span>
                     }
 <span class="fc" id="L418">                    _lastTimerTick = time;</span>
 <span class="fc" id="L419">                    _propertyChangeSupport.firePropertyChange(&quot;timer&quot;, null,</span>
-<span class="fc" id="L420">                            null);</span>
+                            null);
                 }
 <span class="fc" id="L422">            }</span>
-<span class="fc" id="L423">        }, 250, 1000);</span>
+        }, 250, 1000);
 <span class="fc" id="L424">    }</span>
 
     /**
      * Enumération des états possibles d'une partie.
      */
 <span class="fc" id="L429">    public enum State {</span>
-<span class="fc" id="L430">        /**</span>
+        /**
          * En cours.
          */
 <span class="fc" id="L433">        IN_PROGRESS,</span>
 
-<span class="fc" id="L435">        /**</span>
+        /**
          * Victoire des noirs.
          */
 <span class="fc" id="L438">        BLACK_MATES,</span>
 
-<span class="fc" id="L440">        /**</span>
+        /**
          * Victoire des blancs.
          */
 <span class="fc" id="L443">        WHITE_MATES,</span>
 
-<span class="fc" id="L445">        /**</span>
+        /**
          * Pat.
          */
 <span class="fc" id="L448">        STALEMATE,</span>
 
-<span class="fc" id="L450">        /**</span>
+        /**
          * Terminée suite à la répétition de la même position 3 fois ou plus.
          */
 <span class="fc" id="L453">        DRAWN_BY_TRIPLE_REPETITION,</span>
 
-<span class="fc" id="L455">        /**</span>
+        /**
          * Terminée par la règle des 50 coups.
          */
 <span class="fc" id="L458">        DRAWN_BY_50_MOVE_RULE</span>

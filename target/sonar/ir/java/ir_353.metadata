@@ -1,0 +1,2 @@
+fr.free.jchecs.tools.OpeningsBuilderStart#error(Ljava/lang/Throwable;)V
+java.lang.System#exit(I)V

@@ -1,0 +1,7 @@
+fr.free.jchecs.core.MailboxBoard#addKingTargets(IZ)V
+fr.free.jchecs.core.Square#getFile()I
+fr.free.jchecs.core.Square#valueOf(I)Lfr/free/jchecs/core/Square;
+fr.free.jchecs.core.Piece#getType()Lfr/free/jchecs/core/PieceType;
+fr.free.jchecs.core.Piece#isWhite()Z
+fr.free.jchecs.core.AbstractBoard#canCastleShort(Z)Z
+fr.free.jchecs.core.AbstractBoard#canCastleLong(Z)Z

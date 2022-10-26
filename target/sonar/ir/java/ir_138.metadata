@@ -1,0 +1,5 @@
+fr.free.jchecs.swg.SaveGameAction#actionPerformed(Ljava/awt/event/ActionEvent;)V
+fr.free.jchecs.swg.GameSaver#<init>(Lfr/free/jchecs/swg/UI;)V
+javax.swing.SwingUtilities#invokeLater(Ljava/lang/Runnable;)V
+fr.free.jchecs.swg.AbstractUIAction#getUI()Lfr/free/jchecs/swg/UI;
+fr.free.jchecs.swg.GameSaver#instance-init#

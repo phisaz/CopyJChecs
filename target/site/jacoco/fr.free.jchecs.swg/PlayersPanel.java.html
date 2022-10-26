@@ -122,8 +122,8 @@ final class PlayersPanel implements ActionListener, PropertyChangeListener {
     public void actionPerformed(final ActionEvent pEvent) {
 <span class="nc" id="L123">        final Object src = pEvent.getSource();</span>
 <span class="nc bnc" id="L124" title="All 2 branches missed.">        if (src instanceof JComponent) {</span>
-<span class="nc" id="L125">            PlayerDialog.showAboutDialog((JComponent) src, _ui.getGame()</span>
-<span class="nc bnc" id="L126" title="All 2 branches missed.">                    .getPlayer(src == _whiteName));</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">            PlayerDialog.showAboutDialog((JComponent) src, _ui.getGame()</span>
+<span class="nc" id="L126">                    .getPlayer(src == _whiteName));</span>
         }
 <span class="nc" id="L128">    }</span>
 
@@ -149,7 +149,7 @@ final class PlayersPanel implements ActionListener, PropertyChangeListener {
 <span class="nc" id="L149">            final Player joueur = (Player) src;</span>
 <span class="nc bnc" id="L150" title="All 2 branches missed.">            if (joueur.isWhite()) {</span>
 <span class="nc" id="L151">                _whiteName.setText(joueur.getName());</span>
-<span class="nc" id="L152">            } else {</span>
+            } else {
 <span class="nc" id="L153">                _blackName.setText(joueur.getName());</span>
             }
         }

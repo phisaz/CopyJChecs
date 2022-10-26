@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.PrintableBoard#paintComponent(Ljava/awt/Graphics;)V
+fr.free.jchecs.swg.PrintableBoard#drawBoard(Ljava/awt/Graphics2D;)V

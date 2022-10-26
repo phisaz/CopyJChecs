@@ -91,19 +91,19 @@ final class BoardUI extends JComponent {
      * Couleur de mise en évidence d'un mouvement.
      */
 <span class="nc" id="L93">    private static final Color HIGHLIGHTED_MOVE_COLOR = new Color(160, 160,</span>
-<span class="nc" id="L94">            216, 192);</span>
+            216, 192);
 
     /**
      * Type de ligne pour la mise en évidence d'un mouvement.
      */
 <span class="nc" id="L99">    private static final Stroke HIGHLIGHTED_MOVE_STROKE = new BasicStroke(4,</span>
-<span class="nc" id="L100">            BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);</span>
+            BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
 
     /**
      * Liste des objets à l'écoute des mouvements déclenchés par le composant.
      */
 <span class="nc" id="L105">    private final List&lt;MoveListener&gt; _moveListeners = new ArrayList&lt;&gt;(</span>
-<span class="nc" id="L106">            2);</span>
+            2);
 
     /**
      * Objet chargé du rendu des pièces.
@@ -243,7 +243,7 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L243">        final MoveEvent evt = new MoveEvent(this, pMouvement);</span>
 <span class="nc bnc" id="L244" title="All 2 branches missed.">        for (final MoveListener l : _moveListeners) {</span>
 <span class="nc" id="L245">            l.moved(evt);</span>
-        }
+<span class="nc" id="L246">        }</span>
 <span class="nc" id="L247">    }</span>
 
     /**
@@ -267,27 +267,27 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L267">                    dimCase, dimCase, SCALE_SMOOTH)).getImage();</span>
 <span class="nc" id="L268">            final int cote = getSideLength();</span>
 <span class="nc" id="L269">            final BufferedImage fond = new BufferedImage(cote, cote,</span>
-<span class="nc" id="L270">                    TYPE_INT_RGB);</span>
+                    TYPE_INT_RGB);
 <span class="nc" id="L271">            final Graphics2D g2d = fond.createGraphics();</span>
 <span class="nc bnc" id="L272" title="All 2 branches missed.">            if (_borderThickness &gt; 0) {</span>
 <span class="nc" id="L273">                g2d.drawImage(caseNoire, _borderThickness - dimCase,</span>
-<span class="nc" id="L274">                        _borderThickness - dimCase, null);</span>
+                        _borderThickness - dimCase, null);
 <span class="nc" id="L275">                g2d.drawImage(caseNoire, cote - _borderThickness, cote</span>
-<span class="nc" id="L276">                        - _borderThickness, null);</span>
+                        - _borderThickness, null);
 <span class="nc" id="L277">                g2d.drawImage(caseBlanche, cote - _borderThickness,</span>
-<span class="nc" id="L278">                        _borderThickness - dimCase, null);</span>
+                        _borderThickness - dimCase, null);
 <span class="nc" id="L279">                g2d.drawImage(caseBlanche, _borderThickness - dimCase, cote</span>
-<span class="nc" id="L280">                        - _borderThickness, null);</span>
+                        - _borderThickness, null);
 
 <span class="nc" id="L282">                g2d.setColor(Color.WHITE);</span>
 <span class="nc" id="L283">                g2d.fillRect(_borderThickness, 0, cote - 2 * _borderThickness,</span>
-<span class="nc" id="L284">                        _borderThickness);</span>
+                        _borderThickness);
 <span class="nc" id="L285">                g2d.fillRect(_borderThickness, cote - _borderThickness, cote</span>
-<span class="nc" id="L286">                        - 2 * _borderThickness, _borderThickness);</span>
+                        - 2 * _borderThickness, _borderThickness);
 <span class="nc" id="L287">                g2d.fillRect(0, _borderThickness, _borderThickness, cote - 2</span>
-<span class="nc" id="L288">                        * _borderThickness);</span>
+                        * _borderThickness);
 <span class="nc" id="L289">                g2d.fillRect(cote - _borderThickness, _borderThickness,</span>
-<span class="nc" id="L290">                        _borderThickness, cote - 2 * _borderThickness);</span>
+                        _borderThickness, cote - 2 * _borderThickness);
             }
 
 <span class="nc" id="L293">            boolean blanc = true;</span>
@@ -295,7 +295,7 @@ final class BoardUI extends JComponent {
 <span class="nc bnc" id="L295" title="All 2 branches missed.">                for (int x = _borderThickness; x &lt; (cote - dimCase); x += dimCase) {</span>
 <span class="nc bnc" id="L296" title="All 2 branches missed.">                    if (blanc) {</span>
 <span class="nc" id="L297">                        g2d.drawImage(caseBlanche, x, y, null);</span>
-<span class="nc" id="L298">                    } else {</span>
+                    } else {
 <span class="nc" id="L299">                        g2d.drawImage(caseNoire, x, y, null);</span>
                     }
 <span class="nc bnc" id="L301" title="All 2 branches missed.">                    blanc = !blanc;</span>
@@ -318,30 +318,30 @@ final class BoardUI extends JComponent {
                     final char cCol;
 <span class="nc bnc" id="L319" title="All 2 branches missed.">                    if (_flipView) {</span>
 <span class="nc" id="L320">                        cCol = (char) ('h' - i);</span>
-<span class="nc" id="L321">                    } else {</span>
+                    } else {
 <span class="nc" id="L322">                        cCol = (char) ('a' + i);</span>
                     }
 <span class="nc" id="L324">                    final String col = Character.toString(cCol);</span>
 <span class="nc" id="L325">                    final int dxCol = _borderThickness</span>
 <span class="nc" id="L326">                            + (dimCase - fm.charWidth(cCol)) / 2;</span>
 <span class="nc" id="L327">                    g2d.drawString(col, i * dimCase + dxCol, _borderThickness</span>
-<span class="nc" id="L328">                            - dyCol - 3);</span>
+                            - dyCol - 3);
 <span class="nc" id="L329">                    g2d.drawString(col, i * dimCase + dxCol, cote - dyCol - 4);</span>
                 }
 <span class="nc" id="L331">                final int dyLig = _borderThickness + (dimCase - hFonte) / 2</span>
-<span class="nc" id="L332">                        + hFonte - 1;</span>
+                        + hFonte - 1;
 <span class="nc bnc" id="L333" title="All 2 branches missed.">                for (int i = RANK_COUNT - 1; i &gt;= 0; i--) {</span>
                     final char cLig;
 <span class="nc bnc" id="L335" title="All 2 branches missed.">                    if (_flipView) {</span>
 <span class="nc" id="L336">                        cLig = (char) ('1' + i);</span>
-<span class="nc" id="L337">                    } else {</span>
+                    } else {
 <span class="nc" id="L338">                        cLig = (char) (('0' + RANK_COUNT) - i);</span>
                     }
 <span class="nc" id="L340">                    final String lig = Character.toString(cLig);</span>
 <span class="nc" id="L341">                    final int dxLig = (_borderThickness - fm.charWidth(cLig)) / 2;</span>
 <span class="nc" id="L342">                    g2d.drawString(lig, dxLig, i * dimCase + dyLig);</span>
 <span class="nc" id="L343">                    g2d.drawString(lig, cote - _borderThickness + dxLig, i</span>
-<span class="nc" id="L344">                            * dimCase + dyLig);</span>
+                            * dimCase + dyLig);
                 }
             }
 <span class="nc" id="L347">            g2d.dispose();</span>
@@ -408,25 +408,25 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L408">            return;</span>
         }
 
-<span class="nc bnc" id="L411" title="All 4 branches missed.">        if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
-<span class="nc bnc" id="L412" title="All 2 branches missed.">                &amp;&amp; (_availableTargets.length != 0)) {</span>
+<span class="nc bnc" id="L411" title="All 6 branches missed.">        if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
+                &amp;&amp; (_availableTargets.length != 0)) {
 <span class="nc" id="L413">            _selectedSquare = _overSquare;</span>
 <span class="nc" id="L414">            setCursor(_pieceUI.getCursor(_board.getPieceAt(_selectedSquare)));</span>
 <span class="nc" id="L415">            repaint();</span>
-<span class="nc" id="L416">        } else {</span>
+        } else {
 <span class="nc bnc" id="L417" title="All 2 branches missed.">            if (_selectedSquare != null) {</span>
 <span class="nc bnc" id="L418" title="All 4 branches missed.">                if ((_availableTargets != null) &amp;&amp; (isAvailable(_overSquare))) {</span>
 <span class="nc" id="L419">                    final Piece pieceSrc = _board.getPieceAt(_selectedSquare);</span>
 <span class="nc" id="L420">                    Piece promotion = null;</span>
 <span class="nc" id="L421">                    final int rankDst = _overSquare.getRank();</span>
-<span class="nc bnc" id="L422" title="All 4 branches missed.">                    if (((pieceSrc == Piece.WHITE_PAWN) &amp;&amp; (rankDst == RANK_COUNT - 1))</span>
-<span class="nc bnc" id="L423" title="All 4 branches missed.">                            || ((pieceSrc == Piece.BLACK_PAWN) &amp;&amp; (rankDst == 0))) {</span>
+<span class="nc bnc" id="L422" title="All 8 branches missed.">                    if (((pieceSrc == Piece.WHITE_PAWN) &amp;&amp; (rankDst == RANK_COUNT - 1))</span>
+                            || ((pieceSrc == Piece.BLACK_PAWN) &amp;&amp; (rankDst == 0))) {
 <span class="nc" id="L424">                        promotion = PromotionDialog.showPromotionDialog(this,</span>
-<span class="nc" id="L425">                                pieceSrc, _pieceUI);</span>
+                                pieceSrc, _pieceUI);
                     }
 <span class="nc" id="L427">                    final Move mvt = new Move(pieceSrc, _selectedSquare,</span>
 <span class="nc" id="L428">                            _overSquare, _board.getPieceAt(_overSquare),</span>
-<span class="nc" id="L429">                            promotion);</span>
+                            promotion);
 <span class="nc" id="L430">                    setBoard(_board.derive(mvt, true));</span>
 <span class="nc" id="L431">                    fireMoveEvent(mvt);</span>
                 }
@@ -452,18 +452,18 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L452">        Square cellule = null;</span>
 <span class="nc bnc" id="L453" title="All 4 branches missed.">        if ((pX &gt; _borderThickness) &amp;&amp; (pY &gt; _borderThickness)) {</span>
 <span class="nc" id="L454">            final int cote = getSideLength();</span>
-<span class="nc bnc" id="L455" title="All 2 branches missed.">            if ((pX &lt; cote - _borderThickness)</span>
-<span class="nc bnc" id="L456" title="All 2 branches missed.">                    &amp;&amp; (pY &lt; cote - _borderThickness)) {</span>
+<span class="nc bnc" id="L455" title="All 4 branches missed.">            if ((pX &lt; cote - _borderThickness)</span>
+                    &amp;&amp; (pY &lt; cote - _borderThickness)) {
 <span class="nc" id="L457">                final int dimCase = getCellSideLength();</span>
 <span class="nc bnc" id="L458" title="All 2 branches missed.">                if (_flipView) {</span>
 <span class="nc" id="L459">                    cellule = Square.valueOf(FILE_COUNT</span>
-<span class="nc" id="L460">                            - (pX - _borderThickness - 1) / dimCase - 1, (pY</span>
-<span class="nc" id="L461">                            - _borderThickness - 1)</span>
-<span class="nc" id="L462">                            / dimCase);</span>
-<span class="nc" id="L463">                } else {</span>
+                            - (pX - _borderThickness - 1) / dimCase - 1, (pY
+                            - _borderThickness - 1)
+                            / dimCase);
+                } else {
 <span class="nc" id="L464">                    cellule = Square.valueOf((pX - _borderThickness - 1)</span>
-<span class="nc" id="L465">                            / dimCase, RANK_COUNT - (pY - _borderThickness - 1)</span>
-<span class="nc" id="L466">                            / dimCase - 1);</span>
+                            / dimCase, RANK_COUNT - (pY - _borderThickness - 1)
+                            / dimCase - 1);
                 }
             }
         }
@@ -505,29 +505,29 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L505">                g2d.drawLine(_borderThickness</span>
 <span class="nc" id="L506">                                + (FILE_COUNT - src.getFile() - 1) * dimCase</span>
 <span class="nc" id="L507">                                + demieCase, _borderThickness + src.getRank() * dimCase</span>
-<span class="nc" id="L508">                                + demieCase,</span>
+                                + demieCase,
 <span class="nc" id="L509">                        _borderThickness + (FILE_COUNT - dst.getFile() - 1)</span>
-<span class="nc" id="L510">                                * dimCase + demieCase,</span>
+                                * dimCase + demieCase,
 <span class="nc" id="L511">                        _borderThickness + dst.getRank() * dimCase + demieCase);</span>
-<span class="nc" id="L512">            } else {</span>
+            } else {
 <span class="nc" id="L513">                g2d.drawLine(_borderThickness + src.getFile() * dimCase</span>
-<span class="nc" id="L514">                                + demieCase,</span>
+                                + demieCase,
 <span class="nc" id="L515">                        _borderThickness + (RANK_COUNT - src.getRank() - 1)</span>
-<span class="nc" id="L516">                                * dimCase + demieCase,</span>
+                                * dimCase + demieCase,
 <span class="nc" id="L517">                        _borderThickness + dst.getFile() * dimCase + demieCase,</span>
 <span class="nc" id="L518">                        _borderThickness + (RANK_COUNT - dst.getRank() - 1)</span>
-<span class="nc" id="L519">                                * dimCase + demieCase);</span>
+                                * dimCase + demieCase);
             }
         }
 
 <span class="nc bnc" id="L523" title="All 2 branches missed.">        if (_overSquare != null) {</span>
-<span class="nc bnc" id="L524" title="All 4 branches missed.">            if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
-<span class="nc bnc" id="L525" title="All 2 branches missed.">                    &amp;&amp; (_availableTargets.length != 0)) {</span>
+<span class="nc bnc" id="L524" title="All 6 branches missed.">            if ((_selectedSquare == null) &amp;&amp; (_availableTargets != null)</span>
+                    &amp;&amp; (_availableTargets.length != 0)) {
 <span class="nc" id="L526">                g2d.setColor(OVER_ENABLED_COLOR);</span>
 <span class="nc bnc" id="L527" title="All 4 branches missed.">            } else if ((_selectedSquare != null) &amp;&amp; (_availableTargets != null)</span>
 <span class="nc bnc" id="L528" title="All 2 branches missed.">                    &amp;&amp; (isAvailable(_overSquare))) {</span>
 <span class="nc" id="L529">                g2d.setColor(OVER_ENABLED_COLOR);</span>
-<span class="nc" id="L530">            } else {</span>
+            } else {
 <span class="nc" id="L531">                g2d.setColor(OVER_DISABLED_COLOR);</span>
             }
 
@@ -538,7 +538,7 @@ final class BoardUI extends JComponent {
 <span class="nc bnc" id="L538" title="All 2 branches missed.">            if (_flipView) {</span>
 <span class="nc" id="L539">                dx = _borderThickness + (FILE_COUNT - cX - 1) * dimCase + 1;</span>
 <span class="nc" id="L540">                dy = _borderThickness + cY * dimCase + 1;</span>
-<span class="nc" id="L541">            } else {</span>
+            } else {
 <span class="nc" id="L542">                dx = _borderThickness + cX * dimCase + 1;</span>
 <span class="nc" id="L543">                dy = _borderThickness + (RANK_COUNT - cY - 1) * dimCase + 1;</span>
             }
@@ -546,10 +546,10 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L546">                final int cote = getSideLength();</span>
 <span class="nc" id="L547">                g2d.fillRect(1, dy, _borderThickness - 1, dimCase - 1);</span>
 <span class="nc" id="L548">                g2d.fillRect(cote - _borderThickness, dy, _borderThickness - 1,</span>
-<span class="nc" id="L549">                        dimCase - 1);</span>
+                        dimCase - 1);
 <span class="nc" id="L550">                g2d.fillRect(dx, 1, dimCase - 1, _borderThickness - 1);</span>
 <span class="nc" id="L551">                g2d.fillRect(dx, cote - _borderThickness, dimCase - 1,</span>
-<span class="nc" id="L552">                        _borderThickness - 1);</span>
+                        _borderThickness - 1);
             }
 
 <span class="nc" id="L555">            g2d.fillRect(dx, dy, dimCase - 1, dimCase - 1);</span>
@@ -559,16 +559,16 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L559">            g2d.setColor(SELECTED_COLOR);</span>
 <span class="nc bnc" id="L560" title="All 2 branches missed.">            if (_flipView) {</span>
 <span class="nc" id="L561">                g2d.fillRect(</span>
-<span class="nc" id="L562">                        _borderThickness</span>
+                        _borderThickness
 <span class="nc" id="L563">                                + (FILE_COUNT - _selectedSquare.getFile() - 1)</span>
-<span class="nc" id="L564">                                * dimCase + 1, _borderThickness</span>
+                                * dimCase + 1, _borderThickness
 <span class="nc" id="L565">                                + _selectedSquare.getRank() * dimCase + 1,</span>
-<span class="nc" id="L566">                        dimCase - 1, dimCase - 1);</span>
-<span class="nc" id="L567">            } else {</span>
+                        dimCase - 1, dimCase - 1);
+            } else {
 <span class="nc" id="L568">                g2d.fillRect(_borderThickness + _selectedSquare.getFile()</span>
-<span class="nc" id="L569">                        * dimCase + 1, _borderThickness</span>
+                        * dimCase + 1, _borderThickness
 <span class="nc" id="L570">                        + (RANK_COUNT - _selectedSquare.getRank() - 1)</span>
-<span class="nc" id="L571">                        * dimCase + 1, dimCase - 1, dimCase - 1);</span>
+                        * dimCase + 1, dimCase - 1, dimCase - 1);
             }
         }
 
@@ -580,11 +580,11 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L580">                    g2d.fillRect(_borderThickness</span>
 <span class="nc" id="L581">                                    + (FILE_COUNT - c.getFile() - 1) * dimCase + 1,</span>
 <span class="nc" id="L582">                            _borderThickness + c.getRank() * dimCase + 1,</span>
-<span class="nc" id="L583">                            dimCase - 1, dimCase - 1);</span>
-<span class="nc" id="L584">                } else {</span>
+                            dimCase - 1, dimCase - 1);
+                } else {
 <span class="nc" id="L585">                    g2d.fillRect(_borderThickness + c.getFile() * dimCase + 1,</span>
 <span class="nc" id="L586">                            _borderThickness + (RANK_COUNT - c.getRank() - 1)</span>
-<span class="nc" id="L587">                                    * dimCase + 1, dimCase - 1, dimCase - 1);</span>
+                                    * dimCase + 1, dimCase - 1, dimCase - 1);
                 }
             }
 <span class="nc" id="L590">            final Piece p = _board.getPieceAt(c);</span>
@@ -593,11 +593,11 @@ final class BoardUI extends JComponent {
 <span class="nc" id="L593">                    g2d.drawImage(_pieceUI.getImage(p), _borderThickness</span>
 <span class="nc" id="L594">                                    + (FILE_COUNT - c.getFile() - 1) * dimCase,</span>
 <span class="nc" id="L595">                            _borderThickness + c.getRank() * dimCase, null);</span>
-<span class="nc" id="L596">                } else {</span>
+                } else {
 <span class="nc" id="L597">                    g2d.drawImage(_pieceUI.getImage(p),</span>
 <span class="nc" id="L598">                            _borderThickness + c.getFile() * dimCase,</span>
 <span class="nc" id="L599">                            _borderThickness + (RANK_COUNT - c.getRank() - 1)</span>
-<span class="nc" id="L600">                                    * dimCase, null);</span>
+                                    * dimCase, null);
                 }
             }
         }
@@ -646,7 +646,7 @@ final class BoardUI extends JComponent {
     void setCoordinatesPainted(final boolean pAffiche) {
 <span class="nc bnc" id="L647" title="All 2 branches missed.">        if (pAffiche) {</span>
 <span class="nc" id="L648">            _borderThickness = DEFAULT_BORDER_THICKNESS;</span>
-<span class="nc" id="L649">        } else {</span>
+        } else {
 <span class="nc" id="L650">            _borderThickness = 0;</span>
         }
 

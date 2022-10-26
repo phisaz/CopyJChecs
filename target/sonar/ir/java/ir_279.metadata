@@ -1,0 +1,5 @@
+fr.free.jchecs.ai.MiniMaxEngine#searchMoveFor(Lfr/free/jchecs/core/MoveGenerator;[Lfr/free/jchecs/core/Move;)Lfr/free/jchecs/core/Move;
+fr.free.jchecs.ai.MiniMaxEngine#findMin(Lfr/free/jchecs/core/MoveGenerator;I)I
+fr.free.jchecs.ai.AbstractEngine#getSearchDepthLimit()I
+fr.free.jchecs.ai.AbstractEngine#addHalfmove(I)V
+fr.free.jchecs.ai.AbstractEngine#setScore(I)V

@@ -1,838 +1,29 @@
 
-Wfr.free.jchecs.core.PGNUtils#toGame(Ljava/io/BufferedReader;)Lfr/free/jchecs/core/Game;ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaN N("131*Ø
-25ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaº º(èå
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaº º(+
-%71boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-**
-
-mvtjava.lang.String2equals(Ljava/lang/Object;)*
-23
-1*Ù
-26ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª, ª(Iÿ’
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª, ª(I
-%70java.lang.String[]"Jjava.util.regex.Pattern#split(Ljava/lang/CharSequence;)[Ljava/lang/String;* 
-
-%68java.util.regex.Pattern*
-
-%69java.lang.String2split(Ljava/lang/CharSequence;)*
-7*
-27ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª, ª(4¡
-æ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª, ª(4
-%68java.util.regex.Pattern"__id*
-""èå
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª; ª(H
-%69java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*
-
-sbjava.lang.StringBuilder2
-toString()*
-26* 
-29ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaµ µ(≠™
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaµ µ(1
-%67java.lang.StringBuilder";java.lang.StringBuilder#delete(II)Ljava/lang/StringBuilder;*
-
-sbjava.lang.StringBuilder*
-""*
-""2
-delete(II)*
-55*™
-130ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaR R(#çä
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaR R(.
-%2java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*!
-
-pFluxjava.io.BufferedReader2
-readLine()*
-129*•
-131ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaO O(#À»
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaO O(!
-%0fr.free.jchecs.core.Game"fr.free.jchecs.core.Game›
-⁄
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaO O(#
-%1""fr.free.jchecs.core.Game#<init>()V* 
-
-%0fr.free.jchecs.core.Game⁄
-◊
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaO O($
-resfr.free.jchecs.core.Game"__id* 
-
-%0fr.free.jchecs.core.Game*
-130*•
-70ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaä' ä()Ä˝
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaä' ä(3
-%53char"*java.lang.AbstractStringBuilder#charAt(I)C*
-
-sbjava.lang.StringBuilder*
-""2	charAt(I)*
-61
-72
-63*ñ
-72ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaâ â(ıÚ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaâ â(*
-
-%52int")java.lang.AbstractStringBuilder#length()I*
-
-sbjava.lang.StringBuilder2length()*
-70
-55*Û
-74ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÑ Ñ(3“
-œ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÑ Ñ(3
-ligneLuejava.lang.String"__id*
-
-%51java.lang.String*
-81
-72*≠
-75ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÑ# Ñ((êç
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÑ# Ñ(3
-%51java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*!
-
-pFluxjava.io.BufferedReader2
-readLine()*
-74*ç
-32ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≤' ≤(HÏ
-È
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≤' ≤(H
-%66boolean"java.lang.Character#isDigit(C)Z*"
-java.lang.Character*
-
-%65char*
-35
-29*¯
-76ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ. É(3€ÿ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ É(4
-%50java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;* 
-
-%49java.lang.StringBuilder*
-
-lignejava.lang.String2append(Ljava/lang/String;)*
-75*ù
-33ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≤' ≤(0Ä˝
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≤9 ≤(G
-%65char"*java.lang.AbstractStringBuilder#charAt(I)C*
-
-sbjava.lang.StringBuilder*
-""2	charAt(I)*
-32*¿
-77ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ É(£†
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÉ É(&
-%49java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*
-
-sbjava.lang.StringBuilder*
-""2	append(C)*
-76*ñ
-35ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java±$ ±('ıÚ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java±* ±(5
-
-%64int")java.lang.AbstractStringBuilder#length()I*
-
-sbjava.lang.StringBuilder2length()*
-29
-33* 
-38ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≠ ≠(≠™
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java≠ ≠(3
-%63java.lang.StringBuilder";java.lang.StringBuilder#delete(II)Ljava/lang/StringBuilder;*
-
-sbjava.lang.StringBuilder*
-""*
-""2
-delete(II)*
-55*Ì
-100ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javai  i(&—
-Œ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javai1 j(=
-%28fr.free.jchecs.ai.Engine"Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;*#"!
-fr.free.jchecs.ai.EngineFactory*
-
-contenujava.lang.String*
-99*»
-102ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javag g(F‚
-ﬂ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javag g(F$
-joueurfr.free.jchecs.core.Player"__id*#
-!
-%24fr.free.jchecs.core.Player∏
-µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javah3 h(C
-%25java.lang.String"__id*
-""◊
-‘
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javah3 h(I
-%26java.lang.String"__concat*
-
-%25java.lang.String*
-""≠™
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javah  h(J
-%27boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-contenujava.lang.String*
-
-%26java.lang.String2startsWith(Ljava/lang/String;)*	
-95
-100*Õ
-103ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javag2 g(5∞≠
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javag2 g(E!
-%24fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
-
-resfr.free.jchecs.core.Game*
-""2getPlayer(Z)*
-102*¿
-105ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaf# f((üú
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaf# f(@
-%23boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*
-	[White \"2startsWith(Ljava/lang/String;)*	
-103
-93*÷
-106ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javad  d(&ª∏
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javad  d(7
-%22void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-contenujava.lang.String2setName(Ljava/lang/String;)*
-5*ç
-80ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java (/Õ
- 
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java (/
-lignejava.lang.String"__id*
-
-%47java.lang.Stringûõ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÄ Ä(6
-%48boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*
-
-[Event2startsWith(Ljava/lang/String;)*
-72
-77*’
-107ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javac  c(&∏µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javac  c(6
-%21void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-106*ò
-81ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java  ((˝˙
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java  (/
-%47java.lang.String")java.lang.String#trim()Ljava/lang/String;*
-
-ligneLuejava.lang.String2trim()*
-80*“
-108ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java`  a(R∑¥
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java`  a(R
-%20void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-%19java.lang.String2setName(Ljava/lang/String;)*
-5*≠
-109ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaaO a(Pêç
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java`/ a(Q
-%19java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*
-
-contenujava.lang.String*
-""2substring(I)*
-108*˜
-83ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java} }(Aÿ
-’
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java} }(A
-sbjava.lang.StringBuilder"__id* 
-
-%45java.lang.StringBuilder*
-81
-72*≈
-84ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java}- }(@ «
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java}1 }(>
-%45java.lang.StringBuilder"java.lang.StringBuilder›
-⁄
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java}- }(@
-%46"!java.lang.StringBuilder#<init>()V* 
-
-%45java.lang.StringBuilder*
-83*Å
-41ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java™) ™(E‡›
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java™) ™(E
-
-%62int"java.lang.String#indexOf(I)I*
- .*
-
-%61char2
-indexOf(I)*
-38
-44*ù
-42ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java™) ™(-Ä˝
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java™6 ™(D
-%61char"*java.lang.AbstractStringBuilder#charAt(I)C*
-
-sbjava.lang.StringBuilder*
-""2	charAt(I)*
-41*˝
-87ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javat  u(A„‡
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javat  u(A
-%42void"Ffr.free.jchecs.core.Game#resetTo(Lfr/free/jchecs/core/MoveGenerator;)V*!
-
-resfr.free.jchecs.core.Game**
-(
-%41!fr.free.jchecs.core.MoveGenerator2,resetTo(Lfr/free/jchecs/core/MoveGenerator;)*
-5*∏
-88ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javau9 u(?ùö
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javat, u(@(
-%41!fr.free.jchecs.core.MoveGenerator"hfr.free.jchecs.core.MoveGenerator#derive(Lfr/free/jchecs/core/Board;)Lfr/free/jchecs/core/MoveGenerator;**
-(
-%40!fr.free.jchecs.core.MoveGenerator*%
-#
-departfr.free.jchecs.core.Board2#derive(Lfr/free/jchecs/core/Board;)*
-87*ñ
-44ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java©$ ©('ıÚ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java©* ©(5
-
-%60int")java.lang.AbstractStringBuilder#length()I*
-
-sbjava.lang.StringBuilder2length()*
-38
-42*Ä
-
-89ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javas  s(F‡
-›
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javas  s(F#
-departfr.free.jchecs.core.Board"__id*"
+Nfr.free.jchecs.core.PGNUtils#formatPGNDate(Ljava/util/Date;)Ljava/lang/String;^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaB B('"1*Û
+1^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaC$ C(0°û
+^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaC C(# 
+%0java.text.SimpleDateFormat"java.text.SimpleDateFormat’
+“
+^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaC C(1
+%1"6java.text.SimpleDateFormat#<init>(Ljava/lang/String;)V*"
  
-%37fr.free.jchecs.core.BoardÕ
- 
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javatA t(H,
-%38%fr.free.jchecs.core.BoardFactory$Type"__id*
-""Œ
-À
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javau( u(0-
-%39&fr.free.jchecs.core.BoardFactory$State"__id*
-""·
-ﬁ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javat, u(1(
-%40!fr.free.jchecs.core.MoveGenerator"úfr.free.jchecs.core.BoardFactory#valueOf(Lfr/free/jchecs/core/BoardFactory$Type;Lfr/free/jchecs/core/BoardFactory$State;)Lfr/free/jchecs/core/MoveGenerator;*$""
- fr.free.jchecs.core.BoardFactory*.
-,
-%38%fr.free.jchecs.core.BoardFactory$Type*/
--
-%39&fr.free.jchecs.core.BoardFactory$State*
-88*ç
-48ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java•' •(HÏ
-È
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java•' •(H
-%59boolean"java.lang.Character#isDigit(C)Z*"
-java.lang.Character*
-
-%58char*
-49
-44*ù
-49ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java•' •(0Ä˝
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java•9 •(G
-%58char"*java.lang.AbstractStringBuilder#charAt(I)C*
-
-sbjava.lang.StringBuilder*
-""2	charAt(I)*
-48*∂
-110ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java`  `(&∏
-µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaa3 a(C
-%17java.lang.String"__id*
-""ﬁ€
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaa3 a(L
+%0java.text.SimpleDateFormat*
 
-%18int"java.lang.String#length()I*
+yyyy.MM.ddïí
+^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaC C(?
+%2java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*"
+ 
+%0java.text.SimpleDateFormat*
 
-%17java.lang.String2length()*
-109*
-111ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java^  _(>”–
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java^  _(>
-%16void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*!
-
-%15fr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-110*Ó
-112ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java^  ^(&—
-Œ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java^1 _(=
-%15fr.free.jchecs.ai.Engine"Yfr.free.jchecs.ai.EngineFactory#newInstance(Ljava/lang/String;)Lfr/free/jchecs/ai/Engine;*#"!
-fr.free.jchecs.ai.EngineFactory*
-
-contenujava.lang.String*
-111*…
-114ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java\ \(G‚
-ﬂ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java\ \(G$
-joueurfr.free.jchecs.core.Player"__id*#
-!
-%11fr.free.jchecs.core.Player∏
-µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java]3 ](C
-%12java.lang.String"__id*
-""◊
-‘
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java]3 ](I
-%13java.lang.String"__concat*
-
-%12java.lang.String*
-""≠™
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java]  ](J
-%14boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-contenujava.lang.String*
-
-%13java.lang.String2startsWith(Ljava/lang/String;)*
-
-112
-107*Õ
-115ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java\2 \(5∞≠
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java\2 \(F!
-%11fr.free.jchecs.core.Player"Afr.free.jchecs.core.Game#getPlayer(Z)Lfr/free/jchecs/core/Player;*!
-
-resfr.free.jchecs.core.Game*
-""2getPlayer(Z)*
-114*í
-117ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY Z(=Œ
-À
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY Z(=
-contenujava.lang.String"__id*
+pDatejava.util.Date2format(Ljava/util/Date;)"z
+^
+T/Users/avetro/REPO-GITHUB/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaC C(@
 
-%9java.lang.Stringüú
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java[ [(9
-%10boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*
-	[Black \"2startsWith(Ljava/lang/String;)*
-
-115
-105*‰
-90ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javas5 s(<…
-∆
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javas5 s(E 
-%37fr.free.jchecs.core.Board"Sfr.free.jchecs.core.FENUtils#toBoard(Ljava/lang/String;)Lfr/free/jchecs/core/Board;* "
-fr.free.jchecs.core.FENUtils*
-
-contenujava.lang.String*
-89*ì
-118ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY/ Z(<ˆÛ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY/ Z(<
-%9java.lang.String")java.lang.String#trim()Ljava/lang/String;*
-
-%8java.lang.String2trim()*
-117*π
-119ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY/ Z(5úô
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY/ Z(5
-%8java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;*
-
-lignejava.lang.String*
-""*
-	
-%7int2substring(II)*
-118*ª
-93ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaq# q((ùö
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaq# q(>
-%36boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*	
-[FEN \"2startsWith(Ljava/lang/String;)*
-5
-90*’
-94ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javao  o(&ª∏
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javao  o(7
-%35void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-contenujava.lang.String2setName(Ljava/lang/String;)*
-5*”
-95ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javan  n(&∏µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javan  n(6
-%34void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-""2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-94*—
-96ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javak  l(R∑¥
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javak  l(R
-%33void"7fr.free.jchecs.core.Player#setName(Ljava/lang/String;)V*&
-$
-joueurfr.free.jchecs.core.Player*
-
-%32java.lang.String2setName(Ljava/lang/String;)*
-5*´
-97ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javalO l(Pêç
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javak/ l(Q
-%32java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*
-
-contenujava.lang.String*
-""2substring(I)*
-96*©
-53ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java†' †()Ä˝
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java†' †(3
-%57char"*java.lang.AbstractStringBuilder#charAt(I)C*
-
-sbjava.lang.StringBuilder*
-""2	charAt(I)*
-35
-49
-55
-44*¥
-98ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javak  k(&∏
-µ
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javal3 l(C
-%30java.lang.String"__id*
-""ﬁ€
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javal3 l(L
-
-%31int"java.lang.String#length()I*
-
-%30java.lang.String2length()*
-97*ˆ
-10ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬  √(>⁄◊
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬  √(>
-%79void"Efr.free.jchecs.core.Game#moveFromCurrent(Lfr/free/jchecs/core/Move;)V*!
-
-resfr.free.jchecs.core.Game*!
-
-%78fr.free.jchecs.core.Move2+moveFromCurrent(Lfr/free/jchecs/core/Move;)*
-7*Ó
-99ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javai  j(>”–
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javai  j(>
-%29void"Afr.free.jchecs.core.Player#setEngine(Lfr/free/jchecs/ai/Engine;)V*&
-$
-joueurfr.free.jchecs.core.Player*!
-
-%28fr.free.jchecs.ai.Engine2%setEngine(Lfr/free/jchecs/ai/Engine;)*
-98*∞
-11ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬4 √(=ì
-ê
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬4 √(=
-%78fr.free.jchecs.core.Move"tfr.free.jchecs.core.SANUtils#toMove(Lfr/free/jchecs/core/MoveGenerator;Ljava/lang/String;)Lfr/free/jchecs/core/Move;* "
-fr.free.jchecs.core.SANUtils**
-(
-%76!fr.free.jchecs.core.MoveGenerator*
-
-%77java.lang.String*
-10*ñ
-55ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(ıÚ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaü ü(*
-
-%56int")java.lang.AbstractStringBuilder#length()I*
-
-sbjava.lang.StringBuilder2length()*
-27
-53*⁄
-12ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java√( √(7Ω
-∫
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java√( √(<
-%77java.lang.String"Rfr.free.jchecs.core.PGNUtils#toNormalizedSAN(Ljava/lang/String;)Ljava/lang/String;* "
-fr.free.jchecs.core.PGNUtils*
-
-mvtjava.lang.String*
-11*—
-13ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬  ¬(#¥±
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¬; ¬(I(
-%76!fr.free.jchecs.core.MoveGenerator"Ffr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;*!
-
-resfr.free.jchecs.core.Game2
-getBoard()*
-12*Ä
-16ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¿ ¿(‡›
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java¿ ¿((
-
-%75int"java.lang.String#length()I*
-
-mvtjava.lang.String2length()*
-13
-7*µ
-19ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaΩ8 Ω(Aïí
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaΩ8 Ω(M
-%74boolean",java.lang.String#equals(Ljava/lang/Object;)Z*	
-1/2-1/2*
-
-mvtjava.lang.String2equals(Ljava/lang/Object;)*
-16
-1*´
-120ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaY/ Y(4éã
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaZ  Z(4	
-%7int"-java.lang.String#indexOf(Ljava/lang/String;)I*
-
-lignejava.lang.String*
-\"]2indexOf(Ljava/lang/String;)*
-119*…
-1ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java“ “("≥
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.java“ “(!
-
-resfr.free.jchecs.core.Game*¥
-122ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaX) X(.îë
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaX) X(>
-%6boolean".java.lang.String#endsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*
-\"]2endsWith(Ljava/lang/String;)*
-5
-120*Æ
-124ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaW' W(,éã
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaW' W(;	
-%5int"-java.lang.String#indexOf(Ljava/lang/String;)I*
-
-lignejava.lang.String*
- \"2indexOf(Ljava/lang/String;)*
-5
-122*Ú
-4ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÃ Ã(+“
-œ
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÃ Ã(+
-ligneLuejava.lang.String"__id*
-
-%82java.lang.String*
-127
-1*Ü
-126ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaT T(/Ã
-…
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaT T(/
-lignejava.lang.String"__id*
-
-%3java.lang.Stringñì
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaU U()
-%4boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*
-
-lignejava.lang.String*
-[2startsWith(Ljava/lang/String;)*	
-124
-84*´
-5ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÃ Ã( êç
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaÃ Ã(+
-%82java.lang.String"3java.io.BufferedReader#readLine()Ljava/lang/String;*!
-
-pFluxjava.io.BufferedReader2
-readLine()*
-4*ô
-127ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaT T('¸˘
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaT T(.
-%3java.lang.String")java.lang.String#trim()Ljava/lang/String;*
-
-ligneLuejava.lang.String2trim()*
-126*π
-7ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª ª()∫
-∑
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª ª()
-mvtjava.lang.String"__id*
-""›
-⁄
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaª ª()
-mvtjava.lang.String"
-__arrayGet*
-
-%70java.lang.String[]*
-""*
-25
-1*Ô
-129ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaR R(/œ
-Ã
-ã
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaR R(/
-ligneLuejava.lang.String"__id*
-
-%2java.lang.String*
-127
-1*≠
-61ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javañ  ñ("êç
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javañ  ñ(4
-%55void".java.lang.AbstractStringBuilder#setCharAt(IC)V*
-
-sbjava.lang.StringBuilder*
-""*
-""2setCharAt(IC)*
-72*Ã
-63ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaí í(Ø¨
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaí í(.
-%54java.lang.StringBuilder"@java.lang.StringBuilder#deleteCharAt(I)Ljava/lang/StringBuilder;*
-
-sbjava.lang.StringBuilder*
-""2deleteCharAt(I)*
-72*±
-21ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaΩ# Ω((ëé
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaΩ# Ω(4
-%73boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-0-1*
-
-mvtjava.lang.String2equals(Ljava/lang/Object;)*
-19
-1*±
-23ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaº/ º(4ëé
-ç
-Ä/Users/antoniovetro/nextcloud-nexa/DIDATTICA/SW-ENG-2/sample-projects/CopyJChecs/src/main/java/fr/free/jchecs/core/PGNUtils.javaº/ º(@
-%72boolean",java.lang.String#equals(Ljava/lang/Object;)Z*
-1-0*
-
-mvtjava.lang.String2equals(Ljava/lang/Object;)*
-21
-1:
-pFluxjava.io.BufferedReaderB "
+%2java.lang.String:
+pDatejava.util.DateB "
 fr.free.jchecs.core.PGNUtils

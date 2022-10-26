@@ -1,0 +1,2 @@
+fr.free.jchecs.core.Game#getState()Lfr/free/jchecs/core/Game$State;
+fr.free.jchecs.core.Game#getBoard()Lfr/free/jchecs/core/MoveGenerator;

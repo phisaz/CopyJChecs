@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.PrintableBoard#drawBoard(Ljava/awt/Graphics2D;)V
+java.lang.Object#getClass()Ljava/lang/Class;

@@ -1,0 +1,3 @@
+fr.free.jchecs.core.MailboxBoard#equals(Ljava/lang/Object;)Z
+fr.free.jchecs.core.MailboxBoard#hashCode()I
+fr.free.jchecs.core.AbstractBoard#equalsInternal(Lfr/free/jchecs/core/Board;)Z

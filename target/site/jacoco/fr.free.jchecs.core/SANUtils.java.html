@@ -58,7 +58,7 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
                     + &quot;([a-h]([1-8]|[18][BKNQR])(\\+{1,2}|#|\\(=\\))?)|&quot;
                     + &quot;([a-h]x[a-h]((([1-8]|[18][BKNQR])(\\+{1,2}|#|\\(=\\))?)|&quot;
                     + &quot;([36](\\+{1,2}|#|\\(=\\))? e\\.p\\.)))|&quot;
-<span class="fc" id="L61">                    + &quot;([BKNQR][a-h]?[1-8]?x?[a-h][1-8](\\+{1,2}|#|\\(=\\))?)$&quot;);</span>
+                    + &quot;([BKNQR][a-h]?[1-8]?x?[a-h][1-8](\\+{1,2}|#|\\(=\\))?)$&quot;);
 
     /**
      * Classe utilitaire : ne pas instancier.
@@ -113,13 +113,13 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="fc bfc" id="L113" title="All 2 branches covered.">        if (Character.isLowerCase(c)) {</span>
 <span class="fc bfc" id="L114" title="All 2 branches covered.">            if (trait) {</span>
 <span class="fc" id="L115">                piece = WHITE_PAWN;</span>
-<span class="fc" id="L116">            } else {</span>
+            } else {
 <span class="fc" id="L117">                piece = BLACK_PAWN;</span>
             }
-<span class="fc" id="L119">        } else {</span>
+        } else {
 <span class="fc bfc" id="L120" title="All 2 branches covered.">            if (trait) {</span>
 <span class="fc" id="L121">                piece = Piece.valueOf(c);</span>
-<span class="fc" id="L122">            } else {</span>
+            } else {
 <span class="fc" id="L123">                piece = Piece.valueOf(Character.toLowerCase(c));</span>
             }
 <span class="fc" id="L125">            posSrc++;</span>
@@ -153,8 +153,8 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="fc" id="L153">            return mvts.get(0);</span>
         }
 
-<span class="pc bpc" id="L156" title="1 of 2 branches missed.">        if ((mvts.size() &gt; 1)</span>
-<span class="pc bpc" id="L157" title="1 of 6 branches missed.">                &amp;&amp; (((piece == BLACK_PAWN) &amp;&amp; (dst.getRank() == 0)) || ((piece == WHITE_PAWN) &amp;&amp; (dst</span>
+<span class="pc bpc" id="L156" title="1 of 4 branches missed.">        if ((mvts.size() &gt; 1)</span>
+<span class="pc bpc" id="L157" title="1 of 4 branches missed.">                &amp;&amp; (((piece == BLACK_PAWN) &amp;&amp; (dst.getRank() == 0)) || ((piece == WHITE_PAWN) &amp;&amp; (dst</span>
 <span class="pc bpc" id="L158" title="1 of 2 branches missed.">                .getRank() == 7)))) {</span>
             // Supprime les ambiguités dues aux promotions...
 <span class="fc" id="L160">            posDst = pSAN.length() - 1;</span>
@@ -170,7 +170,7 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="fc" id="L170">                        mvts.remove(i);</span>
                     }
                 }
-<span class="fc" id="L173">            } else {</span>
+            } else {
 <span class="nc bnc" id="L174" title="All 2 branches missed.">                for (int i = mvts.size() - 1; i &gt;= 0; i--) {</span>
 <span class="nc bnc" id="L175" title="All 2 branches missed.">                    if (mvts.get(i).getPromotion() != null) {</span>
 <span class="nc" id="L176">                        mvts.remove(i);</span>
@@ -212,7 +212,7 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="nc" id="L212">            throw new SANException(&quot;Ambiguous SAN string [&quot; + pSAN + ']', null);</span>
 <span class="pc bpc" id="L213" title="1 of 2 branches missed.">        } else if (l &lt; 1) {</span>
 <span class="nc" id="L214">            throw new SANException(&quot;Illegal SAN string context [&quot; + pSAN + ']',</span>
-<span class="nc" id="L215">                    null);</span>
+                    null);
         }
 
 <span class="fc" id="L218">        return mvts.get(0);</span>
@@ -251,7 +251,7 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="nc bnc" id="L251" title="All 2 branches missed.">            if (xSrc &gt; xDst) {</span>
 <span class="nc" id="L252">                sb.append(&quot;-0&quot;);</span>
             }
-<span class="nc" id="L254">        } else {</span>
+        } else {
             // Normal...
 <span class="fc" id="L256">            sb.append(t.getSANLetter());</span>
 
@@ -303,18 +303,18 @@ import static fr.free.jchecs.core.PieceType.QUEEN;
 <span class="pc bpc" id="L303" title="1 of 2 branches missed.">                if (dst == pEtat.getEnPassant()) {</span>
                     // ... de la prise en passant...
 <span class="nc" id="L305">                    sb.append(&quot; e.p.&quot;);</span>
-<span class="nc" id="L306">                } else {</span>
+                } else {
                     // ... ou de la promotion...
 <span class="fc" id="L308">                    final int yDst = dst.getRank();</span>
-<span class="pc bpc" id="L309" title="1 of 4 branches missed.">                    if ((trait &amp;&amp; (yDst == RANK_COUNT - 1))</span>
-<span class="fc bfc" id="L310" title="All 4 branches covered.">                            || ((!trait) &amp;&amp; (yDst == 0))) {</span>
+<span class="pc bpc" id="L309" title="1 of 8 branches missed.">                    if ((trait &amp;&amp; (yDst == RANK_COUNT - 1))</span>
+                            || ((!trait) &amp;&amp; (yDst == 0))) {
                         // Le '=' n'est pas dans la version de SAN de la FIDE :
                         // sb.append('=');
 <span class="fc" id="L313">                        final Piece promotion = pMouvement.getPromotion();</span>
 <span class="pc bpc" id="L314" title="1 of 2 branches missed.">                        if (promotion == null) {</span>
 <span class="nc bnc" id="L315" title="All 2 branches missed.">                            assert false;</span>
 <span class="nc" id="L316">                            sb.append(QUEEN.getSANLetter());</span>
-<span class="nc" id="L317">                        } else {</span>
+                        } else {
 <span class="fc" id="L318">                            final PieceType promotionType = promotion.getType();</span>
 <span class="pc bpc" id="L319" title="1 of 2 branches missed.">                            if (promotionType != PAWN) {</span>
 <span class="fc" id="L320">                                sb.append(promotionType.getSANLetter());</span>

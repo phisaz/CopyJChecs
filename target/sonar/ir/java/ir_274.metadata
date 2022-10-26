@@ -1,0 +1,2 @@
+fr.free.jchecs.swg.TaskItem#setMouseOver(Z)V
+javax.swing.UIManager#getColor(Ljava/lang/Object;)Ljava/awt/Color;

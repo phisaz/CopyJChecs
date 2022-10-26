@@ -1,0 +1,2 @@
+fr.free.jchecs.core.X88Board#isInCheck(Z)Z
+fr.free.jchecs.core.X88Board#isAttacked(Lfr/free/jchecs/core/Square;Z)Z
