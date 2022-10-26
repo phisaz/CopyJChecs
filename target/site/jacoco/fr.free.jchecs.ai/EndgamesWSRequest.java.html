@@ -97,7 +97,7 @@ final class EndgamesWSRequest extends Thread {
 <span class="fc" id="L97">                Piece promotion = null;</span>
 <span class="pc bpc" id="L98" title="1 of 2 branches missed.">                if (evals[choix].length() &gt;= 7) {</span>
 <span class="fc" id="L99">                    final char c = evals[choix].charAt(6);</span>
-<span class="fc bfc" id="L100" title="All 2 branches covered.">                    if (&quot;BNQR&quot;.indexOf(c) &gt;= 0) {</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">                    if (&quot;BNQR&quot;.indexOf(c) &gt;= 0) {</span>
 <span class="pc bpc" id="L101" title="1 of 2 branches missed.">                        promotion = _board.getPieceAt(src).isWhite() ? Piece</span>
 <span class="pc" id="L102">                                .valueOf(c) : Piece.valueOf(Character</span>
 <span class="fc" id="L103">                                .toLowerCase(c));</span>

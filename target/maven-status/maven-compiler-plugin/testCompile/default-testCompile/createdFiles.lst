@@ -1,6 +1,7 @@
 fr/free/jchecs/core/BoardBench.class
 fr/free/jchecs/core/MoveTest.class
 fr/free/jchecs/core/MoveGeneratorTest.class
+fr/free/jchecs/ai/EndgamesWSRequestTest.class
 fr/free/jchecs/tools/CodingBench.class
 fr/free/jchecs/core/SANUtilsTest.class
 fr/free/jchecs/ai/HeuristicsBench.class
